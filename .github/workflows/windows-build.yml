@@ -79,15 +79,15 @@ jobs:
           $ver = "${{ steps.version.outputs.VERSION }}"
           $iss = "$env:GITHUB_WORKSPACE\desktop\packaging\installer.iss"
           $outdir = "$env:GITHUB_WORKSPACE\desktop\packaging\dist"
-          # Run iscc from the packaging dir so relative paths resolve correctly
-          Push-Location "$env:GITHUB_WORKSPACE\desktop\packaging"
-          iscc /Q "/DMyAppVersion=$ver" installer.iss
-          Pop-Location
-          # Installer lands in desktop/packaging/ next to the .iss file
+          # Pass absolute DistDir so Inno Setup can find the source files
+          $distDir = "$env:GITHUB_WORKSPACE\desktop\packaging\dist\GPL Platform"
+          Write-Host "DistDir: $distDir"
+          Write-Host "DistDir exists: $(Test-Path $distDir)"
+          iscc /Q "/DMyAppVersion=$ver" "/DDistDir=$distDir" "$iss"
+          # Installer lands next to the .iss file — move it to dist/
           $installer = "$env:GITHUB_WORKSPACE\desktop\packaging\GPLPlatform_Setup_v$ver.exe"
           if (-not (Test-Path $installer)) { Write-Error "Installer not found at $installer"; exit 1 }
-          # Move it into dist/
-          Move-Item $installer $outdir
+          Move-Item $installer "$outdir\GPLPlatform_Setup_v$ver.exe"
           Write-Host "Installer OK"
         shell: pwsh
 
