@@ -1,0 +1,41 @@
+{
+  "id": "aterm:supply_chain_lead_times_order_count_by_item_subcategory_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_lead_times_order_count_by_item_subcategory_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "lead_times",
+    "measure": "order_count",
+    "state": "all",
+    "scope": "by_item_subcategory",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Circuit Protection": 132.0,
+    "Conduit & Fittings": 95.0,
+    "Hand Protection": 156.0,
+    "Hex Bolts": 399.0,
+    "Hydraulic Components": 33.0,
+    "Industrial Drums": 140.0,
+    "Machine Oils": 112.0,
+    "O-Rings": 218.0,
+    "Pallets": 52.0,
+    "Protective Cushioning": 136.0,
+    "Shipping Boxes": 228.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(order_count) FROM supply_chain_lead_times_ERP_snapshot JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY item_subcategory)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total order count of lead_timess by item subcategory?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

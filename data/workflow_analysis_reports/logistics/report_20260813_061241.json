@@ -1,0 +1,63 @@
+{
+  "vertical": "logistics",
+  "models_used": [
+    "gpt4o"
+  ],
+  "total": 1,
+  "passed": 0,
+  "flagged": 1,
+  "failed": 0,
+  "errors": 0,
+  "results": [
+    {
+      "canonical_id": "logistics_cargo_items_average_declared_value_currency",
+      "source_goal": "What is the average declared value per cargo_items?",
+      "formula_line": "logistics_cargo_items_average_declared_value_currency = {logistics_cargo_items_declared_value_currency} / {logistics_cargo_items_count}",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.6667,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.6667,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": false
+          },
+          "check_reasoning": {
+            "C1": "The formula uses division, which matches the calculation of an average.",
+            "C2": "The dependencies represent the total declared value and count, which are correct for this average calculation.",
+            "C3": "Both dependencies and the composed metric use the 'all_time' time scope, which is aligned.",
+            "C4": "The composed metric and its dependencies are all unfiltered, maintaining consistency.",
+            "C5": "There is no check for division by zero if the cargo_items count is zero, posing a risk.",
+            "C6": "The result unit should be 'currency per cargo item', indicating it's an average, not just 'currency'."
+          },
+          "flags": [
+            "Potential division by zero risk if logistics_cargo_items_count is zero.",
+            "Result unit should be clarified as 'currency per cargo item'."
+          ],
+          "reasoning": "The formula is mostly correct but lacks division-by-zero protection and a clear result unit.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 4171
+        }
+      },
+      "all_flags": [
+        "Potential division by zero risk if logistics_cargo_items_count is zero.",
+        "Result unit should be clarified as 'currency per cargo item'."
+      ],
+      "analyzed_at": "2026-08-13T06:12:41Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    }
+  ],
+  "error_details": [],
+  "run_at": "2026-08-13T06:12:41Z"
+}

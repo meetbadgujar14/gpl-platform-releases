@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_returns_min_return_value_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_returns_min_return_value_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "returns",
+    "measure": "min_return_value",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 356.0,
+  "formula_line": "MEASURE('supply_chain_returns_ERP_record', 'MIN', 'return_value', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:37Z",
+  "usage_count": 0,
+  "source_goal": "What is the min return value across all returnss?",
+  "wave": 2,
+  "operator": "MEASURE",
+  "verified_at": "2026-09-02T06:49:03Z"
+}

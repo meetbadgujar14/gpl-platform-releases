@@ -1,0 +1,41 @@
+{
+  "id": "aterm:supply_chain_lead_times_max_lead_time_days_by_item_subcategory_days",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_lead_times_max_lead_time_days_by_item_subcategory_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "lead_times",
+    "measure": "max_lead_time_days",
+    "state": "all",
+    "scope": "by_item_subcategory",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Circuit Protection": 7.8,
+    "Conduit & Fittings": 12.6,
+    "Hand Protection": 6.1,
+    "Hex Bolts": 16.4,
+    "Hydraulic Components": 18.7,
+    "Industrial Drums": 22.1,
+    "Machine Oils": 9.7,
+    "O-Rings": 5.4,
+    "Pallets": 15.9,
+    "Protective Cushioning": 28.5,
+    "Shipping Boxes": 20.8
+  },
+  "formula_line": "MEASURE_GROUPED(MAX(avg_lead_time_days) FROM supply_chain_lead_times_ERP_snapshot JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY item_subcategory)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total max lead time days of lead_timess by item subcategory?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

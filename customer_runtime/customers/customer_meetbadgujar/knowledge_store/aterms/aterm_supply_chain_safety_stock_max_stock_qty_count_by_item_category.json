@@ -1,0 +1,40 @@
+{
+  "id": "aterm:supply_chain_safety_stock_max_stock_qty_count_by_item_category",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_safety_stock_max_stock_qty_count_by_item_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "safety_stock",
+    "measure": "max_stock_qty",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_item_category"
+  },
+  "oracle_value": {
+    "Automation Hardware": 18.0,
+    "Bearings": 380.0,
+    "Electrical Components": 45.0,
+    "Fasteners": 1800.0,
+    "Filtration": 85.0,
+    "Fluid Power Components": 320.0,
+    "Lubricants": 160.0,
+    "Packaging Materials": 2400.0,
+    "Pneumatic Components": 55.0,
+    "Seals & Gaskets": 220.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_safety_stock_ERP_snapshot', 'MAX', 'safety_stock_qty', 'item_category', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "What is the total max stock qty of safety_stocks by item category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:07Z"
+}

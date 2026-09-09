@@ -1,0 +1,430 @@
+{
+  "package_name": "supply_chain_v1_20260902_064908",
+  "vertical": "supply_chain",
+  "package_version": "v1",
+  "engine_version": "1.0",
+  "created_at": "2026-09-02T06:49:15Z",
+  "metric_count": 2066,
+  "locked_count": 2066,
+  "lock_rate": 100.0,
+  "composition_rules_count": 254,
+  "atoms_included": [
+    "supply_chain_suppliers_ERP_dimension",
+    "supply_chain_warehouse_locations_WMS_dimension",
+    "supply_chain_purchase_orders_ERP_record",
+    "supply_chain_purchase_order_lines_ERP_record",
+    "supply_chain_shipments_WMS_record",
+    "supply_chain_shipment_lines_WMS_record",
+    "supply_chain_goods_receipts_ERP_record",
+    "supply_chain_inventory_levels_WMS_state",
+    "supply_chain_supplier_performance_ERP_snapshot",
+    "supply_chain_demand_forecasts_ERP_snapshot",
+    "supply_chain_procurement_spend_ERP_record",
+    "supply_chain_lead_times_ERP_snapshot",
+    "supply_chain_items_ERP_dimension",
+    "supply_chain_warehouses_WMS_dimension",
+    "supply_chain_inventory_transactions_WMS_event",
+    "supply_chain_stock_transfers_WMS_record",
+    "supply_chain_purchase_requisitions_ERP_record",
+    "supply_chain_supplier_contracts_ERP_record",
+    "supply_chain_quality_inspections_ERP_record",
+    "supply_chain_carrier_performance_WMS_snapshot",
+    "supply_chain_returns_ERP_record",
+    "supply_chain_inventory_aging_WMS_snapshot",
+    "supply_chain_reorder_proposals_ERP_record",
+    "supply_chain_carriers_WMS_dimension",
+    "supply_chain_supplier_items_ERP_dimension",
+    "supply_chain_buyers_ERP_dimension",
+    "supply_chain_cost_centers_ERP_dimension",
+    "supply_chain_invoices_ERP_record",
+    "supply_chain_invoice_lines_ERP_record",
+    "supply_chain_order_fulfillment_WMS_event",
+    "supply_chain_safety_stock_ERP_snapshot",
+    "supply_chain_shrinkage_events_WMS_event",
+    "supply_chain_inbound_delivery_schedule_ERP_record",
+    "retail_shopify_customers_CRM_dimension",
+    "retail_shopify_products_ERP_dimension",
+    "retail_shopify_product_variants_ERP_dimension",
+    "retail_shopify_collections_ERP_dimension",
+    "retail_shopify_locations_ERP_dimension",
+    "retail_shopify_staff_ERP_dimension",
+    "retail_shopify_discount_codes_ERP_dimension",
+    "retail_shopify_shipping_zones_ERP_dimension",
+    "retail_shopify_sales_channels_ERP_dimension",
+    "retail_shopify_vendors_ERP_dimension",
+    "retail_shopify_orders_ERP_record",
+    "retail_shopify_order_line_items_ERP_record",
+    "retail_shopify_refunds_ERP_record",
+    "retail_shopify_refund_line_items_ERP_record",
+    "retail_shopify_payments_ERP_record",
+    "retail_shopify_fulfillments_ERP_record",
+    "retail_shopify_draft_orders_ERP_record",
+    "retail_shopify_gift_cards_ERP_record",
+    "retail_shopify_returns_ERP_record",
+    "retail_shopify_purchase_orders_ERP_record",
+    "retail_shopify_purchase_order_lines_ERP_record",
+    "retail_shopify_disputes_ERP_record",
+    "retail_shopify_inventory_levels_WMS_state",
+    "retail_shopify_order_status_history_ERP_state",
+    "retail_shopify_customer_account_status_CRM_state",
+    "retail_shopify_cart_events_API_event",
+    "retail_shopify_checkout_events_API_event",
+    "retail_shopify_page_views_API_event",
+    "retail_shopify_inventory_adjustments_WMS_event",
+    "retail_shopify_price_change_events_ERP_event",
+    "retail_shopify_daily_sales_summary_ERP_snapshot",
+    "retail_shopify_weekly_inventory_snapshot_WMS_snapshot",
+    "retail_shopify_monthly_customer_cohort_CRM_snapshot",
+    "retail_shopify_product_performance_snapshot_ERP_snapshot",
+    "supply_chain_financials_ERP_record"
+  ],
+  "validation": {
+    "missing_dep_count": 0,
+    "schema_issue_count": 950,
+    "ready_to_deploy": true
+  },
+  "data_requirements": [
+    {
+      "atom_canonical_id": "supply_chain_suppliers_ERP_dimension",
+      "suggested_filename": "supply_chain_suppliers_ERP_dimension.csv",
+      "column_count": 26
+    },
+    {
+      "atom_canonical_id": "supply_chain_warehouse_locations_WMS_dimension",
+      "suggested_filename": "supply_chain_warehouse_locations_WMS_dimension.csv",
+      "column_count": 11
+    },
+    {
+      "atom_canonical_id": "supply_chain_purchase_orders_ERP_record",
+      "suggested_filename": "supply_chain_purchase_orders_ERP_record.csv",
+      "column_count": 11
+    },
+    {
+      "atom_canonical_id": "supply_chain_purchase_order_lines_ERP_record",
+      "suggested_filename": "supply_chain_purchase_order_lines_ERP_record.csv",
+      "column_count": 15
+    },
+    {
+      "atom_canonical_id": "supply_chain_shipments_WMS_record",
+      "suggested_filename": "supply_chain_shipments_WMS_record.csv",
+      "column_count": 12
+    },
+    {
+      "atom_canonical_id": "supply_chain_shipment_lines_WMS_record",
+      "suggested_filename": "supply_chain_shipment_lines_WMS_record.csv",
+      "column_count": 9
+    },
+    {
+      "atom_canonical_id": "supply_chain_goods_receipts_ERP_record",
+      "suggested_filename": "supply_chain_goods_receipts_ERP_record.csv",
+      "column_count": 11
+    },
+    {
+      "atom_canonical_id": "supply_chain_inventory_levels_WMS_state",
+      "suggested_filename": "supply_chain_inventory_levels_WMS_state.csv",
+      "column_count": 11
+    },
+    {
+      "atom_canonical_id": "supply_chain_supplier_performance_ERP_snapshot",
+      "suggested_filename": "supply_chain_supplier_performance_ERP_snapshot.csv",
+      "column_count": 11
+    },
+    {
+      "atom_canonical_id": "supply_chain_demand_forecasts_ERP_snapshot",
+      "suggested_filename": "supply_chain_demand_forecasts_ERP_snapshot.csv",
+      "column_count": 10
+    },
+    {
+      "atom_canonical_id": "supply_chain_procurement_spend_ERP_record",
+      "suggested_filename": "supply_chain_procurement_spend_ERP_record.csv",
+      "column_count": 11
+    },
+    {
+      "atom_canonical_id": "supply_chain_lead_times_ERP_snapshot",
+      "suggested_filename": "supply_chain_lead_times_ERP_snapshot.csv",
+      "column_count": 10
+    },
+    {
+      "atom_canonical_id": "supply_chain_items_ERP_dimension",
+      "suggested_filename": "supply_chain_items_ERP_dimension.csv",
+      "column_count": 13
+    },
+    {
+      "atom_canonical_id": "supply_chain_warehouses_WMS_dimension",
+      "suggested_filename": "supply_chain_warehouses_WMS_dimension.csv",
+      "column_count": 11
+    },
+    {
+      "atom_canonical_id": "supply_chain_inventory_transactions_WMS_event",
+      "suggested_filename": "supply_chain_inventory_transactions_WMS_event.csv",
+      "column_count": 13
+    },
+    {
+      "atom_canonical_id": "supply_chain_stock_transfers_WMS_record",
+      "suggested_filename": "supply_chain_stock_transfers_WMS_record.csv",
+      "column_count": 12
+    },
+    {
+      "atom_canonical_id": "supply_chain_purchase_requisitions_ERP_record",
+      "suggested_filename": "supply_chain_purchase_requisitions_ERP_record.csv",
+      "column_count": 12
+    },
+    {
+      "atom_canonical_id": "supply_chain_supplier_contracts_ERP_record",
+      "suggested_filename": "supply_chain_supplier_contracts_ERP_record.csv",
+      "column_count": 12
+    },
+    {
+      "atom_canonical_id": "supply_chain_quality_inspections_ERP_record",
+      "suggested_filename": "supply_chain_quality_inspections_ERP_record.csv",
+      "column_count": 12
+    },
+    {
+      "atom_canonical_id": "supply_chain_carrier_performance_WMS_snapshot",
+      "suggested_filename": "supply_chain_carrier_performance_WMS_snapshot.csv",
+      "column_count": 12
+    },
+    {
+      "atom_canonical_id": "supply_chain_returns_ERP_record",
+      "suggested_filename": "supply_chain_returns_ERP_record.csv",
+      "column_count": 12
+    },
+    {
+      "atom_canonical_id": "supply_chain_inventory_aging_WMS_snapshot",
+      "suggested_filename": "supply_chain_inventory_aging_WMS_snapshot.csv",
+      "column_count": 13
+    },
+    {
+      "atom_canonical_id": "supply_chain_reorder_proposals_ERP_record",
+      "suggested_filename": "supply_chain_reorder_proposals_ERP_record.csv",
+      "column_count": 13
+    },
+    {
+      "atom_canonical_id": "supply_chain_carriers_WMS_dimension",
+      "suggested_filename": "supply_chain_carriers_WMS_dimension.csv",
+      "column_count": 11
+    },
+    {
+      "atom_canonical_id": "supply_chain_supplier_items_ERP_dimension",
+      "suggested_filename": "supply_chain_supplier_items_ERP_dimension.csv",
+      "column_count": 11
+    },
+    {
+      "atom_canonical_id": "supply_chain_buyers_ERP_dimension",
+      "suggested_filename": "supply_chain_buyers_ERP_dimension.csv",
+      "column_count": 9
+    },
+    {
+      "atom_canonical_id": "supply_chain_cost_centers_ERP_dimension",
+      "suggested_filename": "supply_chain_cost_centers_ERP_dimension.csv",
+      "column_count": 9
+    },
+    {
+      "atom_canonical_id": "supply_chain_invoices_ERP_record",
+      "suggested_filename": "supply_chain_invoices_ERP_record.csv",
+      "column_count": 14
+    },
+    {
+      "atom_canonical_id": "supply_chain_invoice_lines_ERP_record",
+      "suggested_filename": "supply_chain_invoice_lines_ERP_record.csv",
+      "column_count": 13
+    },
+    {
+      "atom_canonical_id": "supply_chain_order_fulfillment_WMS_event",
+      "suggested_filename": "supply_chain_order_fulfillment_WMS_event.csv",
+      "column_count": 12
+    },
+    {
+      "atom_canonical_id": "supply_chain_safety_stock_ERP_snapshot",
+      "suggested_filename": "supply_chain_safety_stock_ERP_snapshot.csv",
+      "column_count": 12
+    },
+    {
+      "atom_canonical_id": "supply_chain_shrinkage_events_WMS_event",
+      "suggested_filename": "supply_chain_shrinkage_events_WMS_event.csv",
+      "column_count": 12
+    },
+    {
+      "atom_canonical_id": "supply_chain_inbound_delivery_schedule_ERP_record",
+      "suggested_filename": "supply_chain_inbound_delivery_schedule_ERP_record.csv",
+      "column_count": 13
+    },
+    {
+      "atom_canonical_id": "retail_shopify_customers_CRM_dimension",
+      "suggested_filename": "retail_shopify_customers_CRM_dimension.csv",
+      "column_count": 12
+    },
+    {
+      "atom_canonical_id": "retail_shopify_products_ERP_dimension",
+      "suggested_filename": "retail_shopify_products_ERP_dimension.csv",
+      "column_count": 10
+    },
+    {
+      "atom_canonical_id": "retail_shopify_product_variants_ERP_dimension",
+      "suggested_filename": "retail_shopify_product_variants_ERP_dimension.csv",
+      "column_count": 13
+    },
+    {
+      "atom_canonical_id": "retail_shopify_collections_ERP_dimension",
+      "suggested_filename": "retail_shopify_collections_ERP_dimension.csv",
+      "column_count": 8
+    },
+    {
+      "atom_canonical_id": "retail_shopify_locations_ERP_dimension",
+      "suggested_filename": "retail_shopify_locations_ERP_dimension.csv",
+      "column_count": 10
+    },
+    {
+      "atom_canonical_id": "retail_shopify_staff_ERP_dimension",
+      "suggested_filename": "retail_shopify_staff_ERP_dimension.csv",
+      "column_count": 8
+    },
+    {
+      "atom_canonical_id": "retail_shopify_discount_codes_ERP_dimension",
+      "suggested_filename": "retail_shopify_discount_codes_ERP_dimension.csv",
+      "column_count": 10
+    },
+    {
+      "atom_canonical_id": "retail_shopify_shipping_zones_ERP_dimension",
+      "suggested_filename": "retail_shopify_shipping_zones_ERP_dimension.csv",
+      "column_count": 7
+    },
+    {
+      "atom_canonical_id": "retail_shopify_sales_channels_ERP_dimension",
+      "suggested_filename": "retail_shopify_sales_channels_ERP_dimension.csv",
+      "column_count": 7
+    },
+    {
+      "atom_canonical_id": "retail_shopify_vendors_ERP_dimension",
+      "suggested_filename": "retail_shopify_vendors_ERP_dimension.csv",
+      "column_count": 8
+    },
+    {
+      "atom_canonical_id": "retail_shopify_orders_ERP_record",
+      "suggested_filename": "retail_shopify_orders_ERP_record.csv",
+      "column_count": 15
+    },
+    {
+      "atom_canonical_id": "retail_shopify_order_line_items_ERP_record",
+      "suggested_filename": "retail_shopify_order_line_items_ERP_record.csv",
+      "column_count": 14
+    },
+    {
+      "atom_canonical_id": "retail_shopify_refunds_ERP_record",
+      "suggested_filename": "retail_shopify_refunds_ERP_record.csv",
+      "column_count": 10
+    },
+    {
+      "atom_canonical_id": "retail_shopify_refund_line_items_ERP_record",
+      "suggested_filename": "retail_shopify_refund_line_items_ERP_record.csv",
+      "column_count": 10
+    },
+    {
+      "atom_canonical_id": "retail_shopify_payments_ERP_record",
+      "suggested_filename": "retail_shopify_payments_ERP_record.csv",
+      "column_count": 10
+    },
+    {
+      "atom_canonical_id": "retail_shopify_fulfillments_ERP_record",
+      "suggested_filename": "retail_shopify_fulfillments_ERP_record.csv",
+      "column_count": 10
+    },
+    {
+      "atom_canonical_id": "retail_shopify_draft_orders_ERP_record",
+      "suggested_filename": "retail_shopify_draft_orders_ERP_record.csv",
+      "column_count": 10
+    },
+    {
+      "atom_canonical_id": "retail_shopify_gift_cards_ERP_record",
+      "suggested_filename": "retail_shopify_gift_cards_ERP_record.csv",
+      "column_count": 10
+    },
+    {
+      "atom_canonical_id": "retail_shopify_returns_ERP_record",
+      "suggested_filename": "retail_shopify_returns_ERP_record.csv",
+      "column_count": 11
+    },
+    {
+      "atom_canonical_id": "retail_shopify_purchase_orders_ERP_record",
+      "suggested_filename": "retail_shopify_purchase_orders_ERP_record.csv",
+      "column_count": 10
+    },
+    {
+      "atom_canonical_id": "retail_shopify_purchase_order_lines_ERP_record",
+      "suggested_filename": "retail_shopify_purchase_order_lines_ERP_record.csv",
+      "column_count": 10
+    },
+    {
+      "atom_canonical_id": "retail_shopify_disputes_ERP_record",
+      "suggested_filename": "retail_shopify_disputes_ERP_record.csv",
+      "column_count": 10
+    },
+    {
+      "atom_canonical_id": "retail_shopify_inventory_levels_WMS_state",
+      "suggested_filename": "retail_shopify_inventory_levels_WMS_state.csv",
+      "column_count": 9
+    },
+    {
+      "atom_canonical_id": "retail_shopify_order_status_history_ERP_state",
+      "suggested_filename": "retail_shopify_order_status_history_ERP_state.csv",
+      "column_count": 8
+    },
+    {
+      "atom_canonical_id": "retail_shopify_customer_account_status_CRM_state",
+      "suggested_filename": "retail_shopify_customer_account_status_CRM_state.csv",
+      "column_count": 9
+    },
+    {
+      "atom_canonical_id": "retail_shopify_cart_events_API_event",
+      "suggested_filename": "retail_shopify_cart_events_API_event.csv",
+      "column_count": 9
+    },
+    {
+      "atom_canonical_id": "retail_shopify_checkout_events_API_event",
+      "suggested_filename": "retail_shopify_checkout_events_API_event.csv",
+      "column_count": 9
+    },
+    {
+      "atom_canonical_id": "retail_shopify_page_views_API_event",
+      "suggested_filename": "retail_shopify_page_views_API_event.csv",
+      "column_count": 10
+    },
+    {
+      "atom_canonical_id": "retail_shopify_inventory_adjustments_WMS_event",
+      "suggested_filename": "retail_shopify_inventory_adjustments_WMS_event.csv",
+      "column_count": 9
+    },
+    {
+      "atom_canonical_id": "retail_shopify_price_change_events_ERP_event",
+      "suggested_filename": "retail_shopify_price_change_events_ERP_event.csv",
+      "column_count": 9
+    },
+    {
+      "atom_canonical_id": "retail_shopify_daily_sales_summary_ERP_snapshot",
+      "suggested_filename": "retail_shopify_daily_sales_summary_ERP_snapshot.csv",
+      "column_count": 11
+    },
+    {
+      "atom_canonical_id": "retail_shopify_weekly_inventory_snapshot_WMS_snapshot",
+      "suggested_filename": "retail_shopify_weekly_inventory_snapshot_WMS_snapshot.csv",
+      "column_count": 9
+    },
+    {
+      "atom_canonical_id": "retail_shopify_monthly_customer_cohort_CRM_snapshot",
+      "suggested_filename": "retail_shopify_monthly_customer_cohort_CRM_snapshot.csv",
+      "column_count": 10
+    },
+    {
+      "atom_canonical_id": "retail_shopify_product_performance_snapshot_ERP_snapshot",
+      "suggested_filename": "retail_shopify_product_performance_snapshot_ERP_snapshot.csv",
+      "column_count": 11
+    },
+    {
+      "atom_canonical_id": "supply_chain_financials_ERP_record",
+      "suggested_filename": "supply_chain_financials_ERP_record.csv",
+      "column_count": 14
+    }
+  ],
+  "signature": null,
+  "signature_algorithm": "HMAC-SHA256 (not yet implemented — added with customer runtime)"
+}

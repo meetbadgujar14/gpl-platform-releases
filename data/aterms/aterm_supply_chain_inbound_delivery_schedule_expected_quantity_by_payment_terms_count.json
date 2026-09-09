@@ -1,0 +1,33 @@
+{
+  "id": "aterm:supply_chain_inbound_delivery_schedule_expected_quantity_by_payment_terms_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inbound_delivery_schedule_expected_quantity_by_payment_terms_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inbound_delivery_schedule",
+    "measure": "expected_quantity",
+    "state": "all",
+    "scope": "by_payment_terms",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Net 30": 35130.0,
+    "Net 45": 11850.0,
+    "Net 60": 15790.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(expected_quantity) FROM supply_chain_inbound_delivery_schedule_ERP_record JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY payment_terms)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:50Z",
+  "usage_count": 0,
+  "source_goal": "What is the total expected quantity of inbound_delivery_schedules by payment terms?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:52Z"
+}

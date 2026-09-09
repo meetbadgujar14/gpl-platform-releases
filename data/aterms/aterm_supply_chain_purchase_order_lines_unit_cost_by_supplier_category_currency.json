@@ -1,0 +1,40 @@
+{
+  "id": "aterm:supply_chain_purchase_order_lines_unit_cost_by_supplier_category_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_purchase_order_lines_unit_cost_by_supplier_category_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "purchase_order_lines",
+    "measure": "unit_cost",
+    "state": "all",
+    "scope": "by_supplier_category",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Agricultural Products": 7.15,
+    "Chemicals": 681.0,
+    "Electronic Components": 222.45,
+    "Fasteners & Hardware": 72.0,
+    "MRO Supplies": 34.2,
+    "Machined Parts": 579.8,
+    "Packaging": 71.85,
+    "Plastics & Polymers": 2.1,
+    "Raw Materials": 240.85,
+    "Textiles": 181.35
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(unit_cost) FROM supply_chain_purchase_order_lines_ERP_record JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY supplier_category)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:47Z",
+  "usage_count": 0,
+  "source_goal": "What is the total unit cost of purchase_order_liness by supplier category?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:49Z"
+}

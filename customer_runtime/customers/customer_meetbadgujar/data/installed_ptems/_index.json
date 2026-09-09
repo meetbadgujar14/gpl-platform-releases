@@ -1,0 +1,37 @@
+{
+  "report_ceo_supply_chain_weekly_supplier_risk_scorecard": {
+    "canonical_id": "report_ceo_supply_chain_weekly_supplier_risk_scorecard",
+    "title": "Supplier Risk & Quality Scorecard",
+    "description": "Weekly CEO-level view of supplier reliability, quality acceptance, defect exposure, and lead time volatility to identify at-risk supply relationships before they impact operations.",
+    "version": 1,
+    "installed_at": "2026-09-07T10:44:30Z"
+  },
+  "report_owner_retail_sales_performance_monthly": {
+    "canonical_id": "report_owner_retail_sales_performance_monthly",
+    "title": "Retail Sales Performance Report",
+    "description": "Monthly sales overview — total revenue, orders, gross margin, top products, top cities, and channel breakdown.",
+    "version": 1,
+    "installed_at": "2026-09-07T14:12:35Z"
+  },
+  "report_cfo_supply_chain_monthly_procurement_spend_audit": {
+    "canonical_id": "report_cfo_supply_chain_monthly_procurement_spend_audit",
+    "title": "procurement spend audit & payables health report",
+    "description": "Monthly CFO-level deep dive into procurement spend obligations, tax and discount capture, payables aging (overdue vs paid vs pending), unit cost trends, and purchase order liability exposure — enabling tighter cash flow control and vendor payment governance.",
+    "version": 1,
+    "installed_at": "2026-09-07T14:12:45Z"
+  },
+  "report_coo_supply_chain_adhoc_receiving_quality_audit": {
+    "canonical_id": "report_coo_supply_chain_adhoc_receiving_quality_audit",
+    "title": "Inbound Receiving & Goods Quality Audit Report",
+    "description": "Ad-hoc deep-dive into inbound goods receipt performance, acceptance vs. rejection rates, damaged line items, and inventory impact — enabling the COO to pinpoint quality failures at the receiving dock and take corrective action with suppliers.",
+    "version": 1,
+    "installed_at": "2026-09-07T14:12:49Z"
+  },
+  "report_ops_supply_chain_daily_warehouse_capacity_utilization": {
+    "canonical_id": "report_ops_supply_chain_daily_warehouse_capacity_utilization",
+    "title": "warehouse capacity & inventory utilization report",
+    "description": "Daily operational view of warehouse capacity consumption, inventory availability, reorder triggers, and stock reservation pressure across all warehouse locations.",
+    "version": 1,
+    "installed_at": "2026-09-07T14:12:51Z"
+  }
+}

@@ -1,0 +1,382 @@
+{
+  "id": "ptem:report_cfo_supply_chain_monthly_procurement_spend_audit",
+  "canonical_id": "report_cfo_supply_chain_monthly_procurement_spend_audit",
+  "type": "Ptem",
+  "version": 1,
+  "meta": {
+    "title": "procurement spend audit & payables health report",
+    "description": "Monthly CFO-level deep dive into procurement spend obligations, tax and discount capture, payables aging (overdue vs paid vs pending), unit cost trends, and purchase order liability exposure — enabling tighter cash flow control and vendor payment governance.",
+    "audience_label": "CFO / Finance Director / VP Finance",
+    "verticals": [
+      "supply_chain"
+    ],
+    "tags": [
+      "procurement",
+      "spend",
+      "payables",
+      "cash-flow",
+      "audit",
+      "cfo",
+      "financial-governance"
+    ],
+    "install_count": 1340,
+    "rating": 4.6,
+    "created_at": "2026-08-21T05:35:27Z",
+    "created_by": "factory_llm_generator"
+  },
+  "slots": {
+    "format": "report",
+    "audience": "cfo",
+    "scope": "supply_chain",
+    "frequency": "monthly",
+    "depth": "comprehensive",
+    "period": "month_to_date"
+  },
+  "required_oracles": [
+    {
+      "canonical_id": "supply_chain_procurement_spend_spend_amount_currency",
+      "label": "Total Procurement Spend",
+      "format": "currency",
+      "currency_symbol": "USD",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_procurement_spend_tax_amount_currency",
+      "label": "Total Tax Amount",
+      "format": "currency",
+      "currency_symbol": "USD",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_procurement_spend_discount_amount_currency",
+      "label": "Total Discount Captured",
+      "format": "currency",
+      "currency_symbol": "USD",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_procurement_spend_count",
+      "label": "Total Procurement Transactions",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_procurement_spend_count_overdue",
+      "label": "Overdue Payables",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_procurement_spend_count_paid",
+      "label": "Paid Transactions",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_procurement_spend_count_pending",
+      "label": "Pending Payables",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_purchase_orders_total_amount_currency",
+      "label": "Total PO Commitment Value",
+      "format": "currency",
+      "currency_symbol": "USD",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_purchase_orders_total_line_items_currency",
+      "label": "Total PO Line Item Value",
+      "format": "currency",
+      "currency_symbol": "USD",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_purchase_orders_count_pending_approval",
+      "label": "POs Pending Approval",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_purchase_orders_count_open",
+      "label": "Open Purchase Orders",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_purchase_orders_count_cancelled",
+      "label": "Cancelled Purchase Orders",
+      "format": "count",
+      "required": false
+    },
+    {
+      "canonical_id": "supply_chain_purchase_order_lines_unit_cost_currency",
+      "label": "Avg Unit Cost",
+      "format": "currency",
+      "currency_symbol": "USD",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_purchase_order_lines_line_total_currency",
+      "label": "Total PO Line Value",
+      "format": "currency",
+      "currency_symbol": "USD",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_purchase_order_lines_count_partially_received",
+      "label": "Partially Received Lines",
+      "format": "count",
+      "required": false
+    },
+    {
+      "canonical_id": "supply_chain_supplier_performance_total_spend_currency",
+      "label": "Supplier Total Spend",
+      "format": "currency",
+      "currency_symbol": "USD",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_suppliers_count_active",
+      "label": "Active Suppliers",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_suppliers_count_on_hold",
+      "label": "Suppliers on Hold",
+      "format": "count",
+      "required": false
+    }
+  ],
+  "sections": [
+    {
+      "id": "header",
+      "type": "header",
+      "title": "Procurement Spend Audit & Payables Health Report",
+      "oracles": [],
+      "config": {
+        "show_status_pill": true,
+        "subtitle": "Monthly financial governance review of procurement obligations, payables aging, and PO liability exposure"
+      }
+    },
+    {
+      "id": "spend_kpis",
+      "type": "kpi_grid",
+      "title": "Spend & Payables Snapshot",
+      "oracles": [
+        "supply_chain_procurement_spend_spend_amount_currency",
+        "supply_chain_procurement_spend_tax_amount_currency",
+        "supply_chain_procurement_spend_discount_amount_currency",
+        "supply_chain_procurement_spend_count",
+        "supply_chain_procurement_spend_count_overdue",
+        "supply_chain_procurement_spend_count_paid",
+        "supply_chain_procurement_spend_count_pending",
+        "supply_chain_suppliers_count_active"
+      ],
+      "config": {
+        "columns": 4,
+        "show_rag_status": true,
+        "highlight_overdue": true
+      }
+    },
+    {
+      "id": "payables_aging_chart",
+      "type": "bar_chart",
+      "title": "Payables Status Distribution (Overdue / Pending / Paid)",
+      "oracles": [
+        "supply_chain_procurement_spend_count_overdue",
+        "supply_chain_procurement_spend_count_pending",
+        "supply_chain_procurement_spend_count_paid"
+      ],
+      "config": {
+        "max_bars": 3,
+        "color": "red_amber_green",
+        "show_values": true,
+        "stacked": false
+      }
+    },
+    {
+      "id": "po_liability_kpis",
+      "type": "kpi_grid",
+      "title": "Purchase Order Liability & Approval Backlog",
+      "oracles": [
+        "supply_chain_purchase_orders_total_amount_currency",
+        "supply_chain_purchase_orders_total_line_items_currency",
+        "supply_chain_purchase_orders_count_pending_approval",
+        "supply_chain_purchase_orders_count_open",
+        "supply_chain_purchase_orders_count_cancelled",
+        "supply_chain_purchase_order_lines_unit_cost_currency",
+        "supply_chain_purchase_order_lines_line_total_currency",
+        "supply_chain_purchase_order_lines_count_partially_received"
+      ],
+      "config": {
+        "columns": 4,
+        "show_rag_status": true
+      }
+    },
+    {
+      "id": "po_commitment_chart",
+      "type": "bar_chart",
+      "title": "PO Commitment vs Line Item Value by Status",
+      "oracles": [
+        "supply_chain_purchase_orders_total_amount_currency",
+        "supply_chain_purchase_orders_total_line_items_currency"
+      ],
+      "config": {
+        "max_bars": 6,
+        "color": "blue",
+        "grouped": true,
+        "show_values": true
+      }
+    },
+    {
+      "id": "unit_cost_trend_chart",
+      "type": "line_chart",
+      "title": "Monthly Unit Cost & Line Total Trend",
+      "oracles": [
+        "supply_chain_purchase_order_lines_unit_cost_currency",
+        "supply_chain_purchase_order_lines_line_total_currency"
+      ],
+      "config": {
+        "color": "purple",
+        "show_data_points": true,
+        "period_granularity": "month"
+      }
+    },
+    {
+      "id": "supplier_spend_kpis",
+      "type": "kpi_grid",
+      "title": "Supplier Spend & Vendor Health",
+      "oracles": [
+        "supply_chain_supplier_performance_total_spend_currency",
+        "supply_chain_suppliers_count_active",
+        "supply_chain_suppliers_count_on_hold"
+      ],
+      "config": {
+        "columns": 3,
+        "show_rag_status": true
+      }
+    },
+    {
+      "id": "supplier_spend_chart",
+      "type": "bar_chart",
+      "title": "Top Supplier Spend Concentration",
+      "oracles": [
+        "supply_chain_supplier_performance_total_spend_currency"
+      ],
+      "config": {
+        "max_bars": 10,
+        "color": "teal",
+        "sort": "descending",
+        "show_values": true
+      }
+    },
+    {
+      "id": "discount_tax_chart",
+      "type": "bar_chart",
+      "title": "Tax Burden vs Discount Capture (Monthly Comparison)",
+      "oracles": [
+        "supply_chain_procurement_spend_tax_amount_currency",
+        "supply_chain_procurement_spend_discount_amount_currency"
+      ],
+      "config": {
+        "max_bars": 6,
+        "color": "orange",
+        "grouped": true,
+        "show_values": true
+      }
+    },
+    {
+      "id": "narrative",
+      "type": "narrative",
+      "title": "CFO Financial Commentary",
+      "oracles": [],
+      "config": {
+        "sections": [
+          "spend_obligations",
+          "payables_risk",
+          "po_liability_exposure",
+          "discount_capture_efficiency",
+          "supplier_concentration_risk",
+          "recommended_actions"
+        ]
+      }
+    },
+    {
+      "id": "audit",
+      "type": "audit_trail",
+      "title": "Oracle Data Sources",
+      "oracles": [],
+      "config": {
+        "show_last_refreshed": true,
+        "show_oracle_ids": true
+      }
+    },
+    {
+      "id": "footer",
+      "type": "footer",
+      "title": "",
+      "oracles": [],
+      "config": {
+        "show_page_numbers": true,
+        "show_confidentiality_notice": true
+      }
+    }
+  ],
+  "narrative": {
+    "enabled": true,
+    "audience_tone": "financial",
+    "max_words": 280,
+    "structure": [
+      "observation",
+      "context",
+      "driver",
+      "implication",
+      "action"
+    ],
+    "highlight_thresholds": true,
+    "focus_areas": [
+      "overdue payables as percentage of total spend",
+      "discount capture rate vs tax exposure",
+      "PO approval backlog value at risk",
+      "supplier spend concentration",
+      "partially received lines impacting cash settlement"
+    ]
+  },
+  "delivery": {
+    "formats": [
+      "html",
+      "pdf"
+    ],
+    "filename_template": "cfo_procurement_spend_audit_{date}"
+  },
+  "coverage": {
+    "total": 18,
+    "available": 18,
+    "missing": 0,
+    "available_ids": [
+      "supply_chain_procurement_spend_spend_amount_currency",
+      "supply_chain_procurement_spend_tax_amount_currency",
+      "supply_chain_procurement_spend_discount_amount_currency",
+      "supply_chain_procurement_spend_count",
+      "supply_chain_procurement_spend_count_overdue",
+      "supply_chain_procurement_spend_count_paid",
+      "supply_chain_procurement_spend_count_pending",
+      "supply_chain_purchase_orders_total_amount_currency",
+      "supply_chain_purchase_orders_total_line_items_currency",
+      "supply_chain_purchase_orders_count_pending_approval",
+      "supply_chain_purchase_orders_count_open",
+      "supply_chain_purchase_orders_count_cancelled",
+      "supply_chain_purchase_order_lines_unit_cost_currency",
+      "supply_chain_purchase_order_lines_line_total_currency",
+      "supply_chain_purchase_order_lines_count_partially_received",
+      "supply_chain_supplier_performance_total_spend_currency",
+      "supply_chain_suppliers_count_active",
+      "supply_chain_suppliers_count_on_hold"
+    ],
+    "missing_oracles": [],
+    "status": "READY"
+  }
+}

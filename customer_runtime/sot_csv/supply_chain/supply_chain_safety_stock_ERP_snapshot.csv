@@ -1,0 +1,26 @@
+item_id,warehouse_id,snapshot_date,item_name,item_category,safety_stock_qty,reorder_point_qty,max_stock_qty,economic_order_qty,avg_daily_demand,demand_variability,review_cycle
+ITM-4821,WH-3047,2026-09-01,Ball Bearing 6205-2RS 25mm,Bearings,320,580,2400,750,42.5,0.18,Monthly
+ITM-7293,WH-1182,2026-09-01,PLC Controller Module Siemens S7-1200,Filtration,1500,3200,12000,4000,215.0,0.12,Weekly
+ITM-5560,WH-3047,2026-09-01,Ball Bearing 6205-2RS 25mm,Packaging Materials,85,160,600,200,11.2,0.25,Bi-Weekly
+ITM-9134,WH-5510,2026-09-01,Polyethylene Packing Foam 24x24,Fasteners,600,1100,4500,1200,78.4,0.15,Bi-Weekly
+ITM-3371,WH-2298,2026-09-01,HEPA Filter Cartridge Type-C,Fluid Power Components,45,90,350,100,6.3,0.31,Monthly
+ITM-6847,WH-1182,2026-09-01,Stainless Steel Hex Bolt M12x80,Bearings,220,420,1800,500,29.7,0.19,Weekly
+ITM-2015,WH-5510,2026-09-01,Industrial Lubricant 5L ISO 46,Bearings,2400,5000,20000,6000,335.0,0.1,Monthly
+ITM-8462,WH-3047,2026-08-15,HEPA Filter Cartridge Type-C,Fasteners,380,720,3000,900,51.8,0.16,Bi-Weekly
+ITM-1739,WH-2298,2026-08-15,HEPA Filter Cartridge Type-C,Fasteners,130,260,1000,300,18.5,0.22,Monthly
+ITM-5560,WH-2298,2026-08-01,Industrial Grade Hydraulic Hose 1/2in,Pneumatic Components,70,140,550,180,9.8,0.28,Monthly
+ITM-4821,WH-1182,2026-07-01,Industrial Grade Hydraulic Hose 1/2in,Fasteners,290,540,2200,700,39.2,0.2,Bi-Weekly
+ITM-7293,WH-5510,2026-07-01,Ball Bearing 6205-2RS 25mm,Packaging Materials,1800,3500,14000,4500,240.0,0.11,Weekly
+ITM-3982,WH-3047,2026-06-01,Polyethylene Packing Foam 24x24,Seals & Gaskets,18,35,120,40,2.4,0.42,Weekly
+ITM-6123,WH-1182,2026-06-01,Stretch Wrap Film 20in x 1000ft,Lubricants,900,1800,7200,2000,122.0,0.09,Bi-Weekly
+ITM-8462,WH-2298,2026-05-01,Polyethylene Packing Foam 24x24,Packaging Materials,350,680,2800,850,48.5,0.17,Monthly
+ITM-2015,WH-3047,2026-05-01,Corrugated Box 18x12x10,Fasteners,2100,4500,18000,5500,298.0,0.12,Bi-Weekly
+ITM-9876,WH-5510,2026-04-01,Corrugated Box 18x12x10,Packaging Materials,55,105,420,120,7.5,0.29,Bi-Weekly
+ITM-1739,WH-5510,2026-04-01,Industrial Grade Hydraulic Hose 1/2in,Fluid Power Components,160,310,1200,360,22.0,0.21,Monthly
+ITM-3371,WH-1182,2026-03-01,Stretch Wrap Film 20in x 1000ft,Lubricants,38,78,300,90,5.5,0.35,Monthly
+ITM-6847,WH-3047,2026-03-01,Corrugated Box 18x12x10,Fasteners,195,380,1600,460,27.1,0.2,Weekly
+ITM-3982,WH-2298,2026-02-01,Servo Motor 24V DC 150W,Seals & Gaskets,15,30,100,35,2.1,0.45,Weekly
+ITM-6123,WH-5510,2026-01-01,Servo Motor 24V DC 150W,Packaging Materials,840,1650,6800,1900,114.0,0.1,Bi-Weekly
+ITM-9876,WH-1182,2025-11-01,Servo Motor 24V DC 150W,Filtration,48,95,380,110,6.8,0.32,Weekly
+ITM-4821,WH-5510,2025-08-01,Polyethylene Packing Foam 24x24,Fasteners,270,510,2000,650,36.8,0.22,Weekly
+ITM-9134,WH-2298,2025-01-15,PLC Controller Module Siemens S7-1200,Bearings,520,980,4000,1100,70.2,0.16,Monthly

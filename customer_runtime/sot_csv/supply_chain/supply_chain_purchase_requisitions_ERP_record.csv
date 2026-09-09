@@ -1,0 +1,26 @@
+requisition_id,requisition_date,item_id,requested_by,department,requisition_status,quantity_requested,estimated_unit_cost,estimated_total_cost,po_id,approved_by,is_approved
+REQ-7234,2026-09-01,ITM-4821,Priya Nambiar,Logistics,Pending,150,42.5,6375.0,PO-9341,Sandra Whitfield,true
+REQ-8815,2026-09-01,ITM-3302,Darius Okonkwo,Quality Assurance,Under Review,200,18.75,3750.0,,Sandra Whitfield,false
+REQ-5509,2026-09-01,ITM-7714,Sonja Bergstrom,Maintenance,Cancelled,75,310.0,23250.0,PO-8827,Marcus Chen,false
+REQ-6173,2026-09-01,ITM-2256,Tomás Reyes,Quality Assurance,Approved,40,87.0,3480.0,,Felix Oduya,false
+REQ-9047,2026-09-01,ITM-5530,Aisha Kamara,Quality Assurance,Completed,500,5.2,2600.0,PO-7712,Felix Oduya,true
+REQ-3381,2026-09-01,ITM-6643,Nathan Kowalski,Logistics,Under Review,10,1250.0,12500.0,,Sandra Whitfield,false
+REQ-4462,2026-09-01,ITM-1198,Mei-Lin Fong,Procurement,Cancelled,30,475.0,14250.0,PO-6654,Felix Oduya,false
+REQ-2890,2026-08-22,ITM-3875,Alejandro Vega,Maintenance,Approved,300,22.0,6600.0,PO-5531,Felix Oduya,false
+REQ-7741,2026-08-15,ITM-9912,Brenda Okoro,Procurement,Cancelled,1000,3.8,3800.0,PO-4498,Sandra Whitfield,false
+REQ-1156,2026-08-07,ITM-4430,Hiroshi Tanaka,R&D,Under Review,60,540.0,32400.0,PO-3375,Marcus Chen,false
+REQ-5028,2026-07-29,ITM-7701,Latoya Simmons,Quality Assurance,Pending,25,890.0,22250.0,,Marcus Chen,true
+REQ-6634,2026-07-14,ITM-2289,Patrick Gallagher,Maintenance,Completed,80,115.5,9240.0,PO-2263,Marcus Chen,true
+REQ-3317,2026-07-03,ITM-5567,Ingrid Halvorsen,Quality Assurance,Cancelled,5,3200.0,16000.0,PO-1142,Marcus Chen,true
+REQ-8802,2026-06-18,ITM-8845,Rajiv Mehta,R&D,Cancelled,120,67.25,8070.0,PO-9908,Marcus Chen,true
+REQ-4591,2026-06-05,ITM-1123,Carmen Fuentes,Warehouse Operations,Under Review,250,29.0,7250.0,PO-8874,Sandra Whitfield,false
+REQ-2278,2026-05-21,ITM-6698,Kwame Asante,Warehouse Operations,Cancelled,400,11.4,4560.0,PO-7761,Sandra Whitfield,true
+REQ-9963,2026-05-08,ITM-3341,Diana Petrov,Maintenance,Cancelled,15,720.0,10800.0,,Felix Oduya,false
+REQ-7125,2026-04-17,ITM-9954,Samuel Osei,Procurement,Completed,600,6.75,4050.0,PO-6630,Sandra Whitfield,false
+REQ-3844,2026-04-02,ITM-4477,Yuki Nakamura,Manufacturing,Completed,45,195.0,8775.0,PO-5517,Marcus Chen,false
+REQ-6507,2026-03-14,ITM-7723,Fatima Al-Rashid,Maintenance,Cancelled,8,2100.0,16800.0,PO-4404,Felix Oduya,true
+REQ-1893,2026-02-27,ITM-2214,Ethan Blackwood,Procurement,Approved,90,58.0,5220.0,PO-3381,Sandra Whitfield,true
+REQ-5472,2026-01-30,ITM-5589,Olga Petrenko,Logistics,Completed,175,34.5,6037.5,PO-2258,Marcus Chen,true
+REQ-8339,2025-11-12,ITM-8812,Jorge Mendes,Manufacturing,Completed,220,16.0,3520.0,PO-1125,Marcus Chen,true
+REQ-2761,2025-07-08,ITM-1167,Chioma Eze,Warehouse Operations,Pending,50,430.0,21500.0,PO-9892,Felix Oduya,false
+REQ-4108,2025-02-19,ITM-6621,Liam O'Sullivan,Logistics,Cancelled,350,9.6,3360.0,PO-8849,Felix Oduya,true

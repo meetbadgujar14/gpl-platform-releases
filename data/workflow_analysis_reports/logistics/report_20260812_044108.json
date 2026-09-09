@@ -1,0 +1,56 @@
+{
+  "vertical": "logistics",
+  "models_used": [
+    "claude",
+    "gpt4o"
+  ],
+  "total": 10,
+  "passed": 0,
+  "flagged": 0,
+  "failed": 0,
+  "errors": 10,
+  "results": [],
+  "error_details": [
+    {
+      "canonical_id": "logistics_cargo_items_average_declared_value_currency",
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+    },
+    {
+      "canonical_id": "logistics_cargo_items_average_quantity_count",
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+    },
+    {
+      "canonical_id": "logistics_cargo_items_average_volume_cbm_count",
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+    },
+    {
+      "canonical_id": "logistics_cargo_items_average_weight_kg_count",
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+    },
+    {
+      "canonical_id": "logistics_cargo_items_growth_declared_value_this_month_percent",
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+    },
+    {
+      "canonical_id": "logistics_cargo_items_growth_quantity_this_month_percent",
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+    },
+    {
+      "canonical_id": "logistics_cargo_items_growth_volume_cbm_this_month_percent",
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+    },
+    {
+      "canonical_id": "logistics_cargo_items_growth_weight_kg_this_month_percent",
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+    },
+    {
+      "canonical_id": "logistics_carriers_average_contract_rate_per_km_percent",
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+    },
+    {
+      "canonical_id": "logistics_carriers_growth_contract_rate_per_km_this_month_percent",
+      "error": "\"Could not resolve authentication method. Expected one of api_key, auth_token, or credentials to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted\""
+    }
+  ],
+  "run_at": "2026-08-12T04:41:08Z"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_procurement_spend_count_paid_ytd",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_procurement_spend_count_paid_ytd",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "procurement_spend",
+    "measure": "count",
+    "state": "Paid",
+    "scope": "total",
+    "time": "ytd",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 21.0,
+  "formula_line": "MEASURE_YTD('supply_chain_procurement_spend_ERP_record', 'transaction_date', 'COUNT_DISTINCT', 'spend_transaction_id', [{'field': 'payment_status', 'op': '=', 'value': 'Paid'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution_stable",
+  "created_at": "2026-09-01T07:44:38Z",
+  "usage_count": 0,
+  "source_goal": "How many Paid procurement_spends are there ytd?",
+  "wave": 3,
+  "operator": "MEASURE_YTD",
+  "verified_at": "2026-09-01T07:54:56Z"
+}

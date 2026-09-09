@@ -1,0 +1,43 @@
+{
+  "id": "aterm:supply_chain_supplier_items_minimum_order_qty_count_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_supplier_items_minimum_order_qty_count_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "supplier_items",
+    "measure": "minimum_order_qty",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2024-12": 750.0,
+    "2025-06": 10.0,
+    "2025-09": 250.0,
+    "2025-11": 80.0,
+    "2026-01": 150.0,
+    "2026-02": 30.0,
+    "2026-03": 1000.0,
+    "2026-04": 5.0,
+    "2026-05": 500.0,
+    "2026-06": 10.0,
+    "2026-07": 75.0,
+    "2026-08": 200.0,
+    "2026-09": 175.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_supplier_items_ERP_dimension', 'SUM', 'minimum_order_qty', None, [], None, None, None, {'date_col': 'effective_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "What is the total minimum order qty of supplier_itemss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:07Z"
+}

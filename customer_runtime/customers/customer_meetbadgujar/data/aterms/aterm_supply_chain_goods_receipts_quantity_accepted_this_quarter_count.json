@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_goods_receipts_quantity_accepted_this_quarter_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_goods_receipts_quantity_accepted_this_quarter_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "goods_receipts",
+    "measure": "quantity_accepted",
+    "state": "all",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 17465.0,
+  "formula_line": "MEASURE_QUARTER_FIXED('supply_chain_goods_receipts_ERP_record', 'receipt_date', 'SUM', 'quantity_accepted', 'this_quarter', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:38Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quantity accepted of goods_receiptss this quarter?",
+  "wave": 3,
+  "operator": "MEASURE_QUARTER_FIXED",
+  "verified_at": "2026-09-02T06:49:04Z"
+}

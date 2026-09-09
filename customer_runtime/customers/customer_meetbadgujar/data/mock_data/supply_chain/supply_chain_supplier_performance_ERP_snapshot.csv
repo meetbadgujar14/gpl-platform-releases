@@ -1,0 +1,29 @@
+supplier_id,period_start_date,period_type,supplier_name,supplier_category,total_orders,on_time_delivery_rate,quality_acceptance_rate,avg_lead_time_days,total_spend,defect_rate
+SUP-4821,2026-09-01,monthly,Okafor Electronics Group,Raw Materials,142,94.7,98.2,4.3,387500,1.8
+SUP-7364,2026-09-01,annual,Meridian Industrial Supply,Raw Materials,89,88.3,96.5,7.1,524800,3.5
+SUP-2193,2026-09-01,quarterly,Alvarez & Sons Manufacturing,Electronics,217,91.2,97.8,5.6,1243000,2.2
+SUP-5508,2026-09-01,monthly,Pacific Rim Logistics,Raw Materials,63,97.1,99.1,3.2,98400,0.9
+SUP-8847,2026-09-01,annual,Northern Star Packaging,Raw Materials,178,85.6,94.3,12.8,2876000,5.7
+SUP-3312,2026-09-01,monthly,Meridian Industrial Supply,Raw Materials,44,93.2,98.7,6.4,316200,1.3
+SUP-6691,2026-09-01,annual,Singh Precision Parts,Packaging,305,96.4,99.3,4.8,1875000,0.7
+SUP-4821,2026-08-01,quarterly,Singh Precision Parts,Transportation,138,92.8,97.9,4.5,371200,2.1
+SUP-7364,2026-08-01,annual,Cascade Chemical Co.,Transportation,94,87.6,95.9,7.4,541600,4.1
+SUP-2193,2026-08-01,monthly,Northern Star Packaging,Hardware,224,90.5,97.2,5.9,1289000,2.8
+SUP-8847,2026-08-01,quarterly,Volkov Steel Works,Hardware,165,83.1,93.7,13.2,2654000,6.3
+SUP-5508,2026-07-01,quarterly,Northern Star Packaging,Transportation,71,96.8,99.4,3.0,107300,0.6
+SUP-6691,2026-07-01,monthly,Alvarez & Sons Manufacturing,Components,298,95.9,99.1,4.9,1832000,0.9
+SUP-3312,2026-07-01,monthly,Pacific Rim Logistics,Packaging,51,90.7,97.8,6.9,342100,2.2
+SUP-1047,2026-07-01,annual,Pacific Rim Logistics,Packaging,412,98.1,99.6,2.7,218400,0.4
+SUP-9023,2026-04-01,monthly,Northern Star Packaging,Hardware,186,86.4,95.1,9.8,1876500,4.9
+SUP-4821,2026-04-01,monthly,Meridian Industrial Supply,Hardware,401,93.6,98.1,4.4,1094700,1.9
+SUP-2193,2026-04-01,quarterly,Northern Star Packaging,Chemicals,648,89.7,96.8,6.1,3714000,3.2
+SUP-1047,2026-04-01,annual,Meridian Industrial Supply,Packaging,1187,97.8,99.5,2.9,632800,0.5
+SUP-7364,2026-01-01,annual,Tanaka Fasteners Ltd.,Transportation,271,84.9,94.6,8.3,1587000,5.4
+SUP-8847,2026-01-01,monthly,Singh Precision Parts,Transportation,502,82.4,92.8,14.1,8214000,7.2
+SUP-6691,2026-01-01,monthly,Pacific Rim Logistics,Components,891,95.3,98.9,5.1,5492000,1.1
+SUP-9023,2025-10-01,annual,Meridian Industrial Supply,Hardware,174,85.2,94.3,10.4,1743000,5.7
+SUP-3312,2025-10-01,monthly,Pacific Rim Logistics,Chemicals,138,91.3,97.6,7.2,924600,2.4
+SUP-5508,2025-07-01,monthly,Alvarez & Sons Manufacturing,Chemicals,198,95.6,98.8,3.4,289700,1.2
+SUP-1047,2025-07-01,annual,Cascade Chemical Co.,Components,1053,97.2,99.3,3.1,574200,0.7
+SUP-4821,2025-01-01,quarterly,Pacific Rim Logistics,Chemicals,1624,91.8,97.4,4.7,4328000,2.6
+SUP-8847,2025-01-01,annual,Cascade Chemical Co.,Packaging,1987,80.7,91.6,15.3,32480000,8.4

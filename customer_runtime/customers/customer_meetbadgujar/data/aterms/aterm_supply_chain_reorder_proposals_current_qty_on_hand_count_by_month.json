@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_reorder_proposals_current_qty_on_hand_count_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_reorder_proposals_current_qty_on_hand_count_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "reorder_proposals",
+    "measure": "current_qty_on_hand",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2024-12": 105.0,
+    "2025-08": 510.0,
+    "2025-11": 60.0,
+    "2026-01": 305.0,
+    "2026-02": 152.0,
+    "2026-03": 65.0,
+    "2026-04": 590.0,
+    "2026-05": 88.0,
+    "2026-06": 365.0,
+    "2026-07": 225.0,
+    "2026-08": 255.0,
+    "2026-09": 865.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_reorder_proposals_ERP_record', 'SUM', 'current_qty_on_hand', None, [], None, None, None, {'date_col': 'proposal_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "What is the total current qty on hand of reorder_proposalss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

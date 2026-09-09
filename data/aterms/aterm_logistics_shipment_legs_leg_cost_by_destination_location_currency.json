@@ -1,0 +1,40 @@
+{
+  "id": "aterm:logistics_shipment_legs_leg_cost_by_destination_location_currency",
+  "type": "Aterm",
+  "canonical_id": "logistics_shipment_legs_leg_cost_by_destination_location_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "shipment_legs",
+    "measure": "leg_cost",
+    "state": "all",
+    "scope": "by_destination_location",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Dallas, TX": 5523.6,
+    "Denver, CO": 5236.8,
+    "Minneapolis, MN": 2934.6,
+    "Nashville, TN": 3169.3,
+    "New Orleans, LA": 1893.3,
+    "Portland, OR": 28195.3,
+    "San Antonio, TX": 2496.1,
+    "San Francisco, CA": 5939.1,
+    "Seattle, WA": 2966.5,
+    "Washington, DC": 7704.2
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(leg_cost) FROM logistics_shipment_legs_ERP_record JOIN logistics_routes_MANUAL_dimension ON route_id=route_id GROUP BY destination_location)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:17Z",
+  "usage_count": 0,
+  "source_goal": "What is the total leg cost of shipment_legss by destination location?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:45Z"
+}

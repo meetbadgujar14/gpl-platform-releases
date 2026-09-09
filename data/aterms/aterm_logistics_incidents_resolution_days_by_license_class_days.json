@@ -1,0 +1,33 @@
+{
+  "id": "aterm:logistics_incidents_resolution_days_by_license_class_days",
+  "type": "Aterm",
+  "canonical_id": "logistics_incidents_resolution_days_by_license_class_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "incidents",
+    "measure": "resolution_days",
+    "state": "all",
+    "scope": "by_license_class",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Class A CDL": 336.0,
+    "Class B CDL": 66.0,
+    "Class C": 155.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(resolution_days) FROM logistics_incidents_ERP_record JOIN logistics_drivers_MANUAL_dimension ON driver_id=driver_id GROUP BY license_class)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:18Z",
+  "usage_count": 0,
+  "source_goal": "What is the total resolution days of incidentss by license class?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:45Z"
+}

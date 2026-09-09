@@ -1,0 +1,33 @@
+{
+  "id": "aterm:supply_chain_invoice_lines_quantity_invoiced_by_supplier_tier_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_invoice_lines_quantity_invoiced_by_supplier_tier_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "invoice_lines",
+    "measure": "quantity_invoiced",
+    "state": "all",
+    "scope": "by_supplier_tier",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Tier 1": 5900.0,
+    "Tier 2": 6490.0,
+    "Tier 3": 1325.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(quantity_invoiced) FROM supply_chain_invoice_lines_ERP_record JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY supplier_tier)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:49Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quantity invoiced of invoice_liness by supplier tier?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:51Z"
+}

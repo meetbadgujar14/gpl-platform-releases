@@ -1,0 +1,45 @@
+{
+  "wave": "E",
+  "goal_count": 2,
+  "generated_at": "2026-09-02T06:44:34Z",
+  "goals": [
+    {
+      "goal": "Which buyer has the highest active purchase order count relative to their spend limit to flag overexposure risk?",
+      "canonical_id": "supply_chain_buyers_active_po_count_all_max_all_time_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "buyers",
+        "measure": "active_po_count",
+        "state": "all",
+        "scope": "max",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_buyer"
+      },
+      "wave": "E",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "Which item has the highest return value this quarter to recommend product quality investigation?",
+      "canonical_id": "supply_chain_returns_return_value_all_max_this_quarter_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "return_value",
+        "state": "all",
+        "scope": "max",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "by_item"
+      },
+      "wave": "E",
+      "complexity": "KPI",
+      "join": null
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_returns_return_value_all_max_this_quarter_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_returns_return_value_all_max_this_quarter_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "returns",
+    "measure": "return_value",
+    "state": "all",
+    "scope": "max",
+    "time": "this_quarter",
+    "unit": "currency",
+    "series": "by_item"
+  },
+  "oracle_value": {},
+  "formula_line": "MEASURE_GROUPED('supply_chain_returns_ERP_record', 'SUM', 'return_value', group_by_col='item', filters=None)",
+  "exec_formula": "MEASURE_GROUPED('supply_chain_returns_ERP_record', 'SUM', 'return_value', group_by_col='item', filters=None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-02T06:49:02Z",
+  "usage_count": 0,
+  "source_goal": "Which item has the highest return value this quarter to recommend product quality investigation?",
+  "wave": "E",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_GROUPED steps=5",
+  "wizard_steps": 5,
+  "verified_at": "2026-09-02T06:49:08Z"
+}

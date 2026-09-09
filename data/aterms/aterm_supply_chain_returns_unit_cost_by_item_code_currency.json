@@ -1,0 +1,43 @@
+{
+  "id": "aterm:supply_chain_returns_unit_cost_by_item_code_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_returns_unit_cost_by_item_code_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "returns",
+    "measure": "unit_cost",
+    "state": "all",
+    "scope": "by_item_code",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "BELT-V-B68": 1344.1,
+    "BOX-CORR-121008": 841.1,
+    "BRG-DG-6205RS": 210.0,
+    "CHEM-IPA-99-1L": 1250.0,
+    "COND-PVC-0750": 178.9,
+    "ELEC-CB-20A-1P": 18.9,
+    "FILT-HYD-010M": 267.3,
+    "ORING-EPDM-050": 27.4,
+    "PALT-WOOD-4840": 209.0,
+    "PPE-GLOVE-NIT-L": 145.5,
+    "VALV-GATE-02-150": 112.0,
+    "WIRE-CU-AWG12-500": 1250.0,
+    "WRAP-STR-18-1500": 1177.45
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(unit_cost) FROM supply_chain_returns_ERP_record JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY item_code)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total unit cost of returnss by item code?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:51Z"
+}

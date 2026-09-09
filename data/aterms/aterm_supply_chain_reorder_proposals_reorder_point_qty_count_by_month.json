@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_reorder_proposals_reorder_point_qty_count_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_reorder_proposals_reorder_point_qty_count_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "reorder_proposals",
+    "measure": "reorder_point_qty",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2024-01": 200.0,
+    "2024-02": 250.0,
+    "2024-03": 370.0,
+    "2024-04": 380.0,
+    "2024-05": 375.0,
+    "2024-06": 280.0,
+    "2024-07": 650.0,
+    "2024-08": 300.0,
+    "2024-09": 295.0,
+    "2024-10": 450.0,
+    "2024-11": 360.0,
+    "2024-12": 130.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(reorder_point_qty) FROM supply_chain_reorder_proposals_ERP_record GROUP BY BUCKET(proposal_date, month))",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:51Z",
+  "usage_count": 0,
+  "source_goal": "What is the total reorder point qty of reorder_proposalss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:52Z"
+}

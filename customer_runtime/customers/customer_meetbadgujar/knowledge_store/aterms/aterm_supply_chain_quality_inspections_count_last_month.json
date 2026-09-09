@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_quality_inspections_count_last_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_quality_inspections_count_last_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "quality_inspections",
+    "measure": "count",
+    "state": "all",
+    "scope": "total",
+    "time": "last_month",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 4.0,
+  "formula_line": "MEASURE_MONTH_FIXED('supply_chain_quality_inspections_ERP_record', 'inspection_date', 'COUNT_DISTINCT', 'inspection_id', 'last_month', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:38Z",
+  "usage_count": 0,
+  "source_goal": "How many quality_inspectionss are there last month?",
+  "wave": 3,
+  "operator": "MEASURE_MONTH_FIXED",
+  "verified_at": "2026-09-02T06:49:05Z"
+}

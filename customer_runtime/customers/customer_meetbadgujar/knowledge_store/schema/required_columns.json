@@ -1,0 +1,6011 @@
+{
+  "supply_chain_suppliers_ERP_dimension": {
+    "description": "Required CSV for dimension entity",
+    "suggested_filename": "supply_chain_suppliers_ERP_dimension.csv",
+    "grain_keys": [
+      "supplier_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "dimension",
+    "required_columns": [
+      {
+        "name": "supplier_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "supplier_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "supplier_category",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "country",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "region",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "payment_terms",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_preferred",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "onboarded_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "supplier_tier",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "id",
+        "role": "primary_key",
+        "type": "number",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "as_of",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "item",
+        "role": "dimension",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "warehouse",
+        "role": "dimension",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "lot",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_on_hand",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_allocated",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "unit_cost",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "ownership",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "expiry_date",
+        "role": "dimension",
+        "type": "date",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "received_date",
+        "role": "dimension",
+        "type": "date",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "category",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "terms",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "lead_time_days",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "reliability_score",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_warehouse_locations_WMS_dimension": {
+    "description": "Required CSV for dimension entity",
+    "suggested_filename": "supply_chain_warehouse_locations_WMS_dimension.csv",
+    "grain_keys": [
+      "location_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "dimension",
+    "required_columns": [
+      {
+        "name": "location_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "warehouse_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_warehouses_WMS_dimension"
+      },
+      {
+        "name": "warehouse_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "zone",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "aisle",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "bin",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "location_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "country",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "capacity_units",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_active",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "created_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_purchase_orders_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "supply_chain_purchase_orders_ERP_record.csv",
+    "grain_keys": [
+      "po_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "po_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "supplier_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_suppliers_ERP_dimension"
+      },
+      {
+        "name": "po_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "expected_delivery_date",
+        "role": "dimension",
+        "type": "date",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "po_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "currency",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_amount",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_line_items",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "buyer_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_buyers_ERP_dimension"
+      },
+      {
+        "name": "department",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_emergency",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_purchase_order_lines_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "supply_chain_purchase_order_lines_ERP_record.csv",
+    "grain_keys": [
+      "po_line_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "po_line_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "po_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_purchase_orders_ERP_record"
+      },
+      {
+        "name": "item_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_items_ERP_dimension"
+      },
+      {
+        "name": "po_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "supplier_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_suppliers_ERP_dimension"
+      },
+      {
+        "name": "quantity_ordered",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_received",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "unit_cost",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "line_total",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "unit_of_measure",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "line_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "id",
+        "role": "primary_key",
+        "type": "number",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "line",
+        "role": "dimension",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "purchase_order",
+        "role": "dimension",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "item",
+        "role": "dimension",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_shipments_WMS_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "supply_chain_shipments_WMS_record.csv",
+    "grain_keys": [
+      "shipment_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "shipment_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "po_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_purchase_orders_ERP_record"
+      },
+      {
+        "name": "supplier_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_suppliers_ERP_dimension"
+      },
+      {
+        "name": "shipment_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "expected_arrival_date",
+        "role": "dimension",
+        "type": "date",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "actual_arrival_date",
+        "role": "dimension",
+        "type": "date",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "destination_warehouse_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_warehouses_WMS_dimension"
+      },
+      {
+        "name": "carrier",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "shipment_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "freight_cost",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_weight_kg",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_late",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_shipment_lines_WMS_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "supply_chain_shipment_lines_WMS_record.csv",
+    "grain_keys": [
+      "shipment_line_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "shipment_line_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "shipment_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_shipments_WMS_record"
+      },
+      {
+        "name": "po_line_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_purchase_order_lines_ERP_record"
+      },
+      {
+        "name": "item_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_items_ERP_dimension"
+      },
+      {
+        "name": "shipment_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_shipped",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_damaged",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "unit_of_measure",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "line_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_goods_receipts_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "supply_chain_goods_receipts_ERP_record.csv",
+    "grain_keys": [
+      "receipt_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "receipt_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "po_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_purchase_orders_ERP_record"
+      },
+      {
+        "name": "shipment_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_shipments_WMS_record"
+      },
+      {
+        "name": "supplier_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_suppliers_ERP_dimension"
+      },
+      {
+        "name": "receipt_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "warehouse_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_warehouses_WMS_dimension"
+      },
+      {
+        "name": "quantity_received",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_accepted",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_rejected",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "receipt_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_quality_passed",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_inventory_levels_WMS_state": {
+    "description": "Required CSV for state entity",
+    "suggested_filename": "supply_chain_inventory_levels_WMS_state.csv",
+    "grain_keys": [
+      "item_id",
+      "location_id"
+    ],
+    "dedup_sort_col": "snapshot_date",
+    "record_type": "state",
+    "required_columns": [
+      {
+        "name": "item_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": "supply_chain_items_ERP_dimension"
+      },
+      {
+        "name": "location_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": "supply_chain_warehouse_locations_WMS_dimension"
+      },
+      {
+        "name": "snapshot_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "warehouse_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_warehouses_WMS_dimension"
+      },
+      {
+        "name": "item_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "item_category",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_on_hand",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_reserved",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_available",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "reorder_point",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_below_reorder",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_supplier_performance_ERP_snapshot": {
+    "description": "Required CSV for snapshot entity",
+    "suggested_filename": "supply_chain_supplier_performance_ERP_snapshot.csv",
+    "grain_keys": [
+      "supplier_id",
+      "period_start_date"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "snapshot",
+    "required_columns": [
+      {
+        "name": "supplier_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": "supply_chain_suppliers_ERP_dimension"
+      },
+      {
+        "name": "period_start_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "period_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "supplier_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "supplier_category",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_orders",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "on_time_delivery_rate",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quality_acceptance_rate",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "avg_lead_time_days",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_spend",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "defect_rate",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_demand_forecasts_ERP_snapshot": {
+    "description": "Required CSV for snapshot entity",
+    "suggested_filename": "supply_chain_demand_forecasts_ERP_snapshot.csv",
+    "grain_keys": [
+      "item_id",
+      "forecast_period_date"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "snapshot",
+    "required_columns": [
+      {
+        "name": "item_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": "supply_chain_items_ERP_dimension"
+      },
+      {
+        "name": "forecast_period_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "item_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "item_category",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "forecast_method",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "period_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "forecasted_quantity",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "actual_quantity",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "forecast_error",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "forecast_accuracy_rate",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_procurement_spend_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "supply_chain_procurement_spend_ERP_record.csv",
+    "grain_keys": [
+      "spend_transaction_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "spend_transaction_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "po_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_purchase_orders_ERP_record"
+      },
+      {
+        "name": "supplier_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_suppliers_ERP_dimension"
+      },
+      {
+        "name": "transaction_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "spend_category",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "cost_center",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_cost_centers_ERP_dimension"
+      },
+      {
+        "name": "currency",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "spend_amount",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "tax_amount",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "discount_amount",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "payment_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_lead_times_ERP_snapshot": {
+    "description": "Required CSV for snapshot entity",
+    "suggested_filename": "supply_chain_lead_times_ERP_snapshot.csv",
+    "grain_keys": [
+      "supplier_id",
+      "item_id",
+      "period_start_date"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "snapshot",
+    "required_columns": [
+      {
+        "name": "supplier_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": "supply_chain_suppliers_ERP_dimension"
+      },
+      {
+        "name": "item_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": "supply_chain_items_ERP_dimension"
+      },
+      {
+        "name": "period_start_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "supplier_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "item_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "item_category",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "avg_lead_time_days",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "min_lead_time_days",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "max_lead_time_days",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "order_count",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_items_ERP_dimension": {
+    "description": "Required CSV for dimension entity",
+    "suggested_filename": "supply_chain_items_ERP_dimension.csv",
+    "grain_keys": [
+      "item_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "dimension",
+    "required_columns": [
+      {
+        "name": "item_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "item_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "item_code",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "item_category",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "item_subcategory",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "unit_of_measure",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "standard_cost",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "lead_time_days",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "reorder_point",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "safety_stock_qty",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_active",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "item_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "created_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_warehouses_WMS_dimension": {
+    "description": "Required CSV for dimension entity",
+    "suggested_filename": "supply_chain_warehouses_WMS_dimension.csv",
+    "grain_keys": [
+      "warehouse_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "dimension",
+    "required_columns": [
+      {
+        "name": "warehouse_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "warehouse_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "warehouse_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "country",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "region",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "city",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_capacity_sqm",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_capacity_units",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_active",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "manager_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "opened_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_inventory_transactions_WMS_event": {
+    "description": "Required CSV for event entity",
+    "suggested_filename": "supply_chain_inventory_transactions_WMS_event.csv",
+    "grain_keys": [
+      "transaction_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "event",
+    "required_columns": [
+      {
+        "name": "transaction_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "transaction_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "transaction_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "item_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_items_ERP_dimension"
+      },
+      {
+        "name": "location_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_warehouse_locations_WMS_dimension"
+      },
+      {
+        "name": "warehouse_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_warehouses_WMS_dimension"
+      },
+      {
+        "name": "quantity_change",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_before",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_after",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "unit_cost",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_cost_impact",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "reference_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "created_by",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_stock_transfers_WMS_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "supply_chain_stock_transfers_WMS_record.csv",
+    "grain_keys": [
+      "transfer_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "transfer_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "transfer_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "item_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_items_ERP_dimension"
+      },
+      {
+        "name": "from_warehouse_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_warehouses_WMS_dimension"
+      },
+      {
+        "name": "to_warehouse_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_warehouses_WMS_dimension"
+      },
+      {
+        "name": "transfer_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_requested",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_shipped",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_received",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "transfer_cost",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "expected_arrival_date",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_urgent",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_purchase_requisitions_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "supply_chain_purchase_requisitions_ERP_record.csv",
+    "grain_keys": [
+      "requisition_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "requisition_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "requisition_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "item_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_items_ERP_dimension"
+      },
+      {
+        "name": "requested_by",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "department",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "requisition_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_requested",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "estimated_unit_cost",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "estimated_total_cost",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "po_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_purchase_orders_ERP_record"
+      },
+      {
+        "name": "approved_by",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_approved",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_supplier_contracts_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "supply_chain_supplier_contracts_ERP_record.csv",
+    "grain_keys": [
+      "contract_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "contract_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "supplier_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_suppliers_ERP_dimension"
+      },
+      {
+        "name": "contract_start_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "contract_end_date",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "contract_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "contract_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "contracted_value",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "committed_spend_amount",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "payment_terms_days",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "currency",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "category",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_auto_renew",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_quality_inspections_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "supply_chain_quality_inspections_ERP_record.csv",
+    "grain_keys": [
+      "inspection_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "inspection_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "inspection_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "receipt_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_goods_receipts_ERP_record"
+      },
+      {
+        "name": "supplier_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_suppliers_ERP_dimension"
+      },
+      {
+        "name": "item_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_items_ERP_dimension"
+      },
+      {
+        "name": "inspection_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "inspection_result",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_inspected",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_defective",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "defect_rate",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "inspector_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_passed",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_carrier_performance_WMS_snapshot": {
+    "description": "Required CSV for snapshot entity",
+    "suggested_filename": "supply_chain_carrier_performance_WMS_snapshot.csv",
+    "grain_keys": [
+      "carrier_id",
+      "period_start_date"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "snapshot",
+    "required_columns": [
+      {
+        "name": "carrier_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": "supply_chain_carriers_WMS_dimension"
+      },
+      {
+        "name": "period_start_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "carrier_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "carrier_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "period_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_shipments",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "on_time_delivery_rate",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "damage_rate",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "avg_transit_days",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_freight_cost",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_weight_kg",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "claim_count",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_returns_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "supply_chain_returns_ERP_record.csv",
+    "grain_keys": [
+      "return_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "return_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "return_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "supplier_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_suppliers_ERP_dimension"
+      },
+      {
+        "name": "item_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_items_ERP_dimension"
+      },
+      {
+        "name": "receipt_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_goods_receipts_ERP_record"
+      },
+      {
+        "name": "return_reason",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "return_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_returned",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "unit_cost",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "return_value",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "credit_amount",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_credit_received",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_inventory_aging_WMS_snapshot": {
+    "description": "Required CSV for snapshot entity",
+    "suggested_filename": "supply_chain_inventory_aging_WMS_snapshot.csv",
+    "grain_keys": [
+      "item_id",
+      "warehouse_id",
+      "snapshot_date"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "snapshot",
+    "required_columns": [
+      {
+        "name": "item_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": "supply_chain_items_ERP_dimension"
+      },
+      {
+        "name": "warehouse_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": "supply_chain_warehouses_WMS_dimension"
+      },
+      {
+        "name": "snapshot_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "item_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "item_category",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "age_bucket",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "qty_0_30_days",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "qty_31_90_days",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "qty_91_180_days",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "qty_over_180_days",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_qty_on_hand",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_inventory_value",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "slow_moving_value",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_reorder_proposals_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "supply_chain_reorder_proposals_ERP_record.csv",
+    "grain_keys": [
+      "proposal_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "proposal_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "proposal_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "item_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_items_ERP_dimension"
+      },
+      {
+        "name": "supplier_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_suppliers_ERP_dimension"
+      },
+      {
+        "name": "warehouse_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_warehouses_WMS_dimension"
+      },
+      {
+        "name": "proposal_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "proposal_source",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "current_qty_on_hand",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "reorder_point_qty",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "proposed_order_qty",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "estimated_total_cost",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "po_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_purchase_orders_ERP_record"
+      },
+      {
+        "name": "is_auto_generated",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_carriers_WMS_dimension": {
+    "description": "Required CSV for dimension entity",
+    "suggested_filename": "supply_chain_carriers_WMS_dimension.csv",
+    "grain_keys": [
+      "carrier_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "dimension",
+    "required_columns": [
+      {
+        "name": "carrier_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "carrier_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "carrier_code",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "carrier_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "country",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "service_level",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "contract_rate_usd",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "avg_transit_days",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_preferred",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_active",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "onboarded_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_supplier_items_ERP_dimension": {
+    "description": "Required CSV for dimension entity",
+    "suggested_filename": "supply_chain_supplier_items_ERP_dimension.csv",
+    "grain_keys": [
+      "supplier_item_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "dimension",
+    "required_columns": [
+      {
+        "name": "supplier_item_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "supplier_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_suppliers_ERP_dimension"
+      },
+      {
+        "name": "item_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_items_ERP_dimension"
+      },
+      {
+        "name": "supplier_part_number",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "negotiated_unit_cost",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "minimum_order_qty",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "lead_time_days",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "currency",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_preferred_supplier",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_active",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "effective_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_buyers_ERP_dimension": {
+    "description": "Required CSV for dimension entity",
+    "suggested_filename": "supply_chain_buyers_ERP_dimension.csv",
+    "grain_keys": [
+      "buyer_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "dimension",
+    "required_columns": [
+      {
+        "name": "buyer_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "buyer_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "email",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "department",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "category_responsibility",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "spend_limit",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "active_po_count",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_active",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "hire_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_cost_centers_ERP_dimension": {
+    "description": "Required CSV for dimension entity",
+    "suggested_filename": "supply_chain_cost_centers_ERP_dimension.csv",
+    "grain_keys": [
+      "cost_center_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "dimension",
+    "required_columns": [
+      {
+        "name": "cost_center_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "cost_center_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "cost_center_code",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "department",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "business_unit",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "region",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "annual_budget",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_active",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "created_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_invoices_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "supply_chain_invoices_ERP_record.csv",
+    "grain_keys": [
+      "invoice_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "invoice_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "supplier_invoice_number",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "po_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_purchase_orders_ERP_record"
+      },
+      {
+        "name": "supplier_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_suppliers_ERP_dimension"
+      },
+      {
+        "name": "invoice_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "due_date",
+        "role": "dimension",
+        "type": "date",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "invoice_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "currency",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "gross_amount",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "tax_amount",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "discount_amount",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "net_amount",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "days_to_pay",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_3way_matched",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_invoice_lines_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "supply_chain_invoice_lines_ERP_record.csv",
+    "grain_keys": [
+      "invoice_line_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "invoice_line_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "invoice_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_invoices_ERP_record"
+      },
+      {
+        "name": "po_line_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_purchase_order_lines_ERP_record"
+      },
+      {
+        "name": "item_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_items_ERP_dimension"
+      },
+      {
+        "name": "supplier_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_suppliers_ERP_dimension"
+      },
+      {
+        "name": "invoice_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_invoiced",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "unit_price",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "line_amount",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "price_variance",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_variance",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "line_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "unit_of_measure",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_order_fulfillment_WMS_event": {
+    "description": "Required CSV for event entity",
+    "suggested_filename": "supply_chain_order_fulfillment_WMS_event.csv",
+    "grain_keys": [
+      "fulfillment_event_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "event",
+    "required_columns": [
+      {
+        "name": "fulfillment_event_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "event_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "order_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "warehouse_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_warehouses_WMS_dimension"
+      },
+      {
+        "name": "item_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_items_ERP_dimension"
+      },
+      {
+        "name": "event_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "fulfillment_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_requested",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_fulfilled",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "fulfillment_rate",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "processing_time_mins",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "operator_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_safety_stock_ERP_snapshot": {
+    "description": "Required CSV for snapshot entity",
+    "suggested_filename": "supply_chain_safety_stock_ERP_snapshot.csv",
+    "grain_keys": [
+      "item_id",
+      "warehouse_id",
+      "snapshot_date"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "snapshot",
+    "required_columns": [
+      {
+        "name": "item_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": "supply_chain_items_ERP_dimension"
+      },
+      {
+        "name": "warehouse_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": "supply_chain_warehouses_WMS_dimension"
+      },
+      {
+        "name": "snapshot_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "item_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "item_category",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "safety_stock_qty",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "reorder_point_qty",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "max_stock_qty",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "economic_order_qty",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "avg_daily_demand",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "demand_variability",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "review_cycle",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_shrinkage_events_WMS_event": {
+    "description": "Required CSV for event entity",
+    "suggested_filename": "supply_chain_shrinkage_events_WMS_event.csv",
+    "grain_keys": [
+      "shrinkage_event_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "event",
+    "required_columns": [
+      {
+        "name": "shrinkage_event_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "event_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "item_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_items_ERP_dimension"
+      },
+      {
+        "name": "warehouse_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_warehouses_WMS_dimension"
+      },
+      {
+        "name": "location_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_warehouse_locations_WMS_dimension"
+      },
+      {
+        "name": "shrinkage_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "discovered_by",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_lost",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "unit_cost",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_cost_impact",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_recovered",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "reference_count_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_inbound_delivery_schedule_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "supply_chain_inbound_delivery_schedule_ERP_record.csv",
+    "grain_keys": [
+      "schedule_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "schedule_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "po_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_purchase_orders_ERP_record"
+      },
+      {
+        "name": "supplier_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_suppliers_ERP_dimension"
+      },
+      {
+        "name": "warehouse_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "supply_chain_warehouses_WMS_dimension"
+      },
+      {
+        "name": "scheduled_delivery_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "confirmed_delivery_date",
+        "role": "dimension",
+        "type": "date",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "actual_delivery_date",
+        "role": "dimension",
+        "type": "date",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "schedule_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "dock_door",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "expected_quantity",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "expected_pallets",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "days_early_late",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_on_time",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_customers_CRM_dimension": {
+    "description": "Required CSV for dimension entity",
+    "suggested_filename": "retail_shopify_customers_CRM_dimension.csv",
+    "grain_keys": [
+      "customer_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "dimension",
+    "required_columns": [
+      {
+        "name": "customer_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "email",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "first_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "last_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "phone",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "city",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "country_code",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "accepts_marketing",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "customer_created_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "total_orders",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_spent",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "customer_tags",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_products_ERP_dimension": {
+    "description": "Required CSV for dimension entity",
+    "suggested_filename": "retail_shopify_products_ERP_dimension.csv",
+    "grain_keys": [
+      "product_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "dimension",
+    "required_columns": [
+      {
+        "name": "product_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "title",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "vendor",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "product_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "product_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "tags",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "product_created_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "variant_count",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "published_at",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "handle",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_product_variants_ERP_dimension": {
+    "description": "Required CSV for dimension entity",
+    "suggested_filename": "retail_shopify_product_variants_ERP_dimension.csv",
+    "grain_keys": [
+      "variant_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "dimension",
+    "required_columns": [
+      {
+        "name": "variant_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "product_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_products_ERP_dimension"
+      },
+      {
+        "name": "sku",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "title",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "option1",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "option2",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "price",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "compare_at_price",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "cost_per_item",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "weight_grams",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "variant_created_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "taxable",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "requires_shipping",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_collections_ERP_dimension": {
+    "description": "Required CSV for dimension entity",
+    "suggested_filename": "retail_shopify_collections_ERP_dimension.csv",
+    "grain_keys": [
+      "collection_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "dimension",
+    "required_columns": [
+      {
+        "name": "collection_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "title",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "collection_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "handle",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "published_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "sort_order",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "rules_condition",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "product_count",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_locations_ERP_dimension": {
+    "description": "Required CSV for dimension entity",
+    "suggested_filename": "retail_shopify_locations_ERP_dimension.csv",
+    "grain_keys": [
+      "location_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "dimension",
+    "required_columns": [
+      {
+        "name": "location_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "location_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "address1",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "city",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "province_code",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "country_code",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_active",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "fulfills_online_orders",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "location_created_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "active_inventory_count",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_staff_ERP_dimension": {
+    "description": "Required CSV for dimension entity",
+    "suggested_filename": "retail_shopify_staff_ERP_dimension.csv",
+    "grain_keys": [
+      "staff_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "dimension",
+    "required_columns": [
+      {
+        "name": "staff_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "email",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "first_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "last_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "role",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_active",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "staff_created_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "account_count",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_discount_codes_ERP_dimension": {
+    "description": "Required CSV for dimension entity",
+    "suggested_filename": "retail_shopify_discount_codes_ERP_dimension.csv",
+    "grain_keys": [
+      "discount_code_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "dimension",
+    "required_columns": [
+      {
+        "name": "discount_code_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "price_rule_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "code",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "discount_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "value",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "starts_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "ends_at",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "usage_limit",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "times_used",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_active",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_shipping_zones_ERP_dimension": {
+    "description": "Required CSV for dimension entity",
+    "suggested_filename": "retail_shopify_shipping_zones_ERP_dimension.csv",
+    "grain_keys": [
+      "shipping_zone_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "dimension",
+    "required_columns": [
+      {
+        "name": "shipping_zone_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "zone_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "countries",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "profile_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "min_order_subtotal",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "rate_count",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "zone_created_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_sales_channels_ERP_dimension": {
+    "description": "Required CSV for dimension entity",
+    "suggested_filename": "retail_shopify_sales_channels_ERP_dimension.csv",
+    "grain_keys": [
+      "channel_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "dimension",
+    "required_columns": [
+      {
+        "name": "channel_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "channel_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "channel_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_active",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "channel_created_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "order_count",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_revenue",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_vendors_ERP_dimension": {
+    "description": "Required CSV for dimension entity",
+    "suggested_filename": "retail_shopify_vendors_ERP_dimension.csv",
+    "grain_keys": [
+      "vendor_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "dimension",
+    "required_columns": [
+      {
+        "name": "vendor_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "vendor_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "contact_email",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "country_code",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "payment_terms",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "vendor_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "vendor_created_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "active_product_count",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_orders_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "retail_shopify_orders_ERP_record.csv",
+    "grain_keys": [
+      "order_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "order_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "order_number",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "customer_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_customers_CRM_dimension"
+      },
+      {
+        "name": "channel_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_sales_channels_ERP_dimension"
+      },
+      {
+        "name": "financial_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "fulfillment_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "order_created_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "subtotal_price",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_discounts",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_shipping",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_tax",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_price",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "currency",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "discount_code",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "shipping_country",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_order_line_items_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "retail_shopify_order_line_items_ERP_record.csv",
+    "grain_keys": [
+      "line_item_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "line_item_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "order_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_orders_ERP_record"
+      },
+      {
+        "name": "product_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_products_ERP_dimension"
+      },
+      {
+        "name": "variant_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_product_variants_ERP_dimension"
+      },
+      {
+        "name": "sku",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "product_title",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "variant_title",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "order_created_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "quantity",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "unit_price",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "line_total_price",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "line_discount_amount",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "fulfillment_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "requires_shipping",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_refunds_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "retail_shopify_refunds_ERP_record.csv",
+    "grain_keys": [
+      "refund_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "refund_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "order_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_orders_ERP_record"
+      },
+      {
+        "name": "refund_reason",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "restock",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "refunded_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "refund_subtotal",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "refund_shipping",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "refund_tax",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "refund_total",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "staff_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_staff_ERP_dimension"
+      }
+    ]
+  },
+  "retail_shopify_refund_line_items_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "retail_shopify_refund_line_items_ERP_record.csv",
+    "grain_keys": [
+      "refund_line_item_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "refund_line_item_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "refund_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_refunds_ERP_record"
+      },
+      {
+        "name": "order_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_orders_ERP_record"
+      },
+      {
+        "name": "line_item_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_order_line_items_ERP_record"
+      },
+      {
+        "name": "variant_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_product_variants_ERP_dimension"
+      },
+      {
+        "name": "refunded_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "quantity",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "subtotal",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_tax",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "restock_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_payments_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "retail_shopify_payments_ERP_record.csv",
+    "grain_keys": [
+      "transaction_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "transaction_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "order_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_orders_ERP_record"
+      },
+      {
+        "name": "transaction_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "gateway",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "processed_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "amount",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "currency",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "payment_method",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "error_code",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_fulfillments_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "retail_shopify_fulfillments_ERP_record.csv",
+    "grain_keys": [
+      "fulfillment_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "fulfillment_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "order_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_orders_ERP_record"
+      },
+      {
+        "name": "location_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_locations_ERP_dimension"
+      },
+      {
+        "name": "fulfillment_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "tracking_company",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "tracking_number",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "fulfilled_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "shipment_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "items_count",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "shipping_cost",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_draft_orders_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "retail_shopify_draft_orders_ERP_record.csv",
+    "grain_keys": [
+      "draft_order_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "draft_order_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "customer_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_customers_CRM_dimension"
+      },
+      {
+        "name": "staff_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_staff_ERP_dimension"
+      },
+      {
+        "name": "draft_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "draft_created_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "converted_order_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_orders_ERP_record"
+      },
+      {
+        "name": "subtotal_price",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_price",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_tax",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "line_items_count",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_gift_cards_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "retail_shopify_gift_cards_ERP_record.csv",
+    "grain_keys": [
+      "gift_card_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "gift_card_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "customer_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_customers_CRM_dimension"
+      },
+      {
+        "name": "order_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_orders_ERP_record"
+      },
+      {
+        "name": "masked_code",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "gift_card_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "currency",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "issued_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "initial_value",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "balance",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "times_used",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_returns_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "retail_shopify_returns_ERP_record.csv",
+    "grain_keys": [
+      "return_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "return_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "order_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_orders_ERP_record"
+      },
+      {
+        "name": "customer_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_customers_CRM_dimension"
+      },
+      {
+        "name": "return_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "return_reason",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "return_requested_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "return_received_at",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "resolution_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "items_returned",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "return_value",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "days_to_resolution",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_purchase_orders_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "retail_shopify_purchase_orders_ERP_record.csv",
+    "grain_keys": [
+      "po_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "po_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "vendor_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_vendors_ERP_dimension"
+      },
+      {
+        "name": "location_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_locations_ERP_dimension"
+      },
+      {
+        "name": "po_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "po_created_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "expected_arrival_date",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_cost",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_units_ordered",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_units_received",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "currency",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_purchase_order_lines_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "retail_shopify_purchase_order_lines_ERP_record.csv",
+    "grain_keys": [
+      "po_line_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "po_line_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "po_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_purchase_orders_ERP_record"
+      },
+      {
+        "name": "variant_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_product_variants_ERP_dimension"
+      },
+      {
+        "name": "sku",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "po_created_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_ordered",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_received",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "unit_cost",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "line_total_cost",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "line_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_disputes_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "retail_shopify_disputes_ERP_record.csv",
+    "grain_keys": [
+      "dispute_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "dispute_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "order_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_orders_ERP_record"
+      },
+      {
+        "name": "transaction_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_payments_ERP_record"
+      },
+      {
+        "name": "dispute_reason",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "dispute_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "dispute_initiated_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "response_due_date",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "disputed_amount",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "currency",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "evidence_submitted",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_inventory_levels_WMS_state": {
+    "description": "Required CSV for state entity",
+    "suggested_filename": "retail_shopify_inventory_levels_WMS_state.csv",
+    "grain_keys": [
+      "variant_id",
+      "location_id"
+    ],
+    "dedup_sort_col": "updated_at",
+    "record_type": "state",
+    "required_columns": [
+      {
+        "name": "variant_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": "retail_shopify_product_variants_ERP_dimension"
+      },
+      {
+        "name": "location_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": "retail_shopify_locations_ERP_dimension"
+      },
+      {
+        "name": "sku",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "location_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "updated_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_on_hand",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_committed",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_available",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_incoming",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_order_status_history_ERP_state": {
+    "description": "Required CSV for state entity",
+    "suggested_filename": "retail_shopify_order_status_history_ERP_state.csv",
+    "grain_keys": [
+      "order_id",
+      "status_updated_at"
+    ],
+    "dedup_sort_col": "status_updated_at",
+    "record_type": "state",
+    "required_columns": [
+      {
+        "name": "order_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": "retail_shopify_orders_ERP_record"
+      },
+      {
+        "name": "financial_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "fulfillment_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "order_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "status_updated_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "days_open",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_price",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "customer_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_customers_CRM_dimension"
+      }
+    ]
+  },
+  "retail_shopify_customer_account_status_CRM_state": {
+    "description": "Required CSV for state entity",
+    "suggested_filename": "retail_shopify_customer_account_status_CRM_state.csv",
+    "grain_keys": [
+      "customer_id",
+      "status_updated_at"
+    ],
+    "dedup_sort_col": "status_updated_at",
+    "record_type": "state",
+    "required_columns": [
+      {
+        "name": "customer_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": "retail_shopify_customers_CRM_dimension"
+      },
+      {
+        "name": "account_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "loyalty_tier",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "marketing_opt_in",
+        "role": "flag",
+        "type": "boolean",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "status_updated_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "days_since_last_order",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "lifetime_orders",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "lifetime_spend",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "loyalty_points_balance",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_cart_events_API_event": {
+    "description": "Required CSV for event entity",
+    "suggested_filename": "retail_shopify_cart_events_API_event.csv",
+    "grain_keys": [
+      "cart_event_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "event",
+    "required_columns": [
+      {
+        "name": "cart_event_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "session_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "customer_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_customers_CRM_dimension"
+      },
+      {
+        "name": "event_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "variant_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_product_variants_ERP_dimension"
+      },
+      {
+        "name": "event_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "quantity",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "cart_value_at_event",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "device_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_checkout_events_API_event": {
+    "description": "Required CSV for event entity",
+    "suggested_filename": "retail_shopify_checkout_events_API_event.csv",
+    "grain_keys": [
+      "checkout_event_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "event",
+    "required_columns": [
+      {
+        "name": "checkout_event_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "checkout_token",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "customer_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_customers_CRM_dimension"
+      },
+      {
+        "name": "checkout_step",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "event_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "cart_total",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "items_count",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "device_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "payment_gateway",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_page_views_API_event": {
+    "description": "Required CSV for event entity",
+    "suggested_filename": "retail_shopify_page_views_API_event.csv",
+    "grain_keys": [
+      "page_view_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "event",
+    "required_columns": [
+      {
+        "name": "page_view_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "session_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "customer_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_customers_CRM_dimension"
+      },
+      {
+        "name": "page_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "product_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_products_ERP_dimension"
+      },
+      {
+        "name": "traffic_source",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "device_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "viewed_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "time_on_page_seconds",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "view_count",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_inventory_adjustments_WMS_event": {
+    "description": "Required CSV for event entity",
+    "suggested_filename": "retail_shopify_inventory_adjustments_WMS_event.csv",
+    "grain_keys": [
+      "adjustment_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "event",
+    "required_columns": [
+      {
+        "name": "adjustment_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "variant_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_product_variants_ERP_dimension"
+      },
+      {
+        "name": "location_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_locations_ERP_dimension"
+      },
+      {
+        "name": "adjustment_reason",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "reference_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "adjusted_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_delta",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_after",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "staff_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_staff_ERP_dimension"
+      }
+    ]
+  },
+  "retail_shopify_price_change_events_ERP_event": {
+    "description": "Required CSV for event entity",
+    "suggested_filename": "retail_shopify_price_change_events_ERP_event.csv",
+    "grain_keys": [
+      "price_change_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "event",
+    "required_columns": [
+      {
+        "name": "price_change_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "variant_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_product_variants_ERP_dimension"
+      },
+      {
+        "name": "product_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_products_ERP_dimension"
+      },
+      {
+        "name": "change_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "staff_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": "retail_shopify_staff_ERP_dimension"
+      },
+      {
+        "name": "changed_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "old_price",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "new_price",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "price_change_amount",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_daily_sales_summary_ERP_snapshot": {
+    "description": "Required CSV for snapshot entity",
+    "suggested_filename": "retail_shopify_daily_sales_summary_ERP_snapshot.csv",
+    "grain_keys": [
+      "snapshot_date",
+      "channel_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "snapshot",
+    "required_columns": [
+      {
+        "name": "snapshot_date",
+        "role": "primary_key",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "channel_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": "retail_shopify_sales_channels_ERP_dimension"
+      },
+      {
+        "name": "snapshot_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "orders_count",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "gross_revenue",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_refunds",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "net_revenue",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_discounts",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_tax",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "units_sold",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "avg_order_value",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_weekly_inventory_snapshot_WMS_snapshot": {
+    "description": "Required CSV for snapshot entity",
+    "suggested_filename": "retail_shopify_weekly_inventory_snapshot_WMS_snapshot.csv",
+    "grain_keys": [
+      "snapshot_week",
+      "variant_id",
+      "location_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "snapshot",
+    "required_columns": [
+      {
+        "name": "snapshot_week",
+        "role": "primary_key",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "variant_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": "retail_shopify_product_variants_ERP_dimension"
+      },
+      {
+        "name": "location_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": "retail_shopify_locations_ERP_dimension"
+      },
+      {
+        "name": "sku",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "snapshot_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_on_hand",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_available",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "units_sold_prior_week",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "weeks_of_supply",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_monthly_customer_cohort_CRM_snapshot": {
+    "description": "Required CSV for snapshot entity",
+    "suggested_filename": "retail_shopify_monthly_customer_cohort_CRM_snapshot.csv",
+    "grain_keys": [
+      "cohort_month",
+      "snapshot_month"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "snapshot",
+    "required_columns": [
+      {
+        "name": "cohort_month",
+        "role": "primary_key",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "snapshot_month",
+        "role": "primary_key",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "snapshot_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "cohort_size",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "active_customers",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "retention_rate",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_revenue",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "avg_order_value",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "cumulative_ltv",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "months_since_acquisition",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "retail_shopify_product_performance_snapshot_ERP_snapshot": {
+    "description": "Required CSV for snapshot entity",
+    "suggested_filename": "retail_shopify_product_performance_snapshot_ERP_snapshot.csv",
+    "grain_keys": [
+      "snapshot_month",
+      "product_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "snapshot",
+    "required_columns": [
+      {
+        "name": "snapshot_month",
+        "role": "primary_key",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "product_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": "retail_shopify_products_ERP_dimension"
+      },
+      {
+        "name": "snapshot_at",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "product_title",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "product_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "units_sold",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "gross_revenue",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "refund_amount",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "page_views",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "conversion_rate",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "gross_margin_pct",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_financials_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "supply_chain_financials_ERP_record.csv",
+    "grain_keys": [
+      "transaction_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "transaction_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "product_category",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "units_sold",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "unit_selling_price",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "unit_cost_of_goods",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "revenue",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "cost_of_goods_sold",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "gross_profit",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "gross_profit_margin",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "operating_expenses",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "operating_profit",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "net_profit",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "net_profit_margin",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+item_id,location_id,snapshot_date,warehouse_id,item_name,item_category,quantity_on_hand,quantity_reserved,quantity_available,reorder_point,is_below_reorder
+ITM-4821,LOC-2931,2026-09-01,WH-1042,HDPE Storage Container 5gal,Electrical Components,340,85,255,150,true
+ITM-4821,LOC-3847,2026-09-01,WH-2075,Nitrile Examination Gloves Box,Labeling & Identification,120,45,75,150,true
+ITM-7293,LOC-1124,2026-09-01,WH-1042,Carbon Steel Pipe 2in x 10ft,Mechanical Components,58,20,38,25,false
+ITM-7293,LOC-5561,2026-08-15,WH-3088,Polyethylene Foam Sheet 2in,Labeling & Identification,18,10,8,25,true
+ITM-3356,LOC-9012,2026-09-01,WH-2075,HDPE Storage Container 5gal,Storage & Containers,2400,600,1800,500,true
+ITM-3356,LOC-4423,2026-09-01,WH-1042,Hydraulic Pump Assembly,Pneumatic & Fluid Control,380,200,180,500,true
+ITM-6148,LOC-7734,2026-07-22,WH-3088,Corrugated Shipping Box 18x12,Personal Protective Equipment,9500,1200,8300,2000,false
+ITM-6148,LOC-2931,2026-09-01,WH-1042,Polyethylene Foam Sheet 2in,Personal Protective Equipment,1450,300,1150,2000,false
+ITM-9027,LOC-1124,2026-06-10,WH-1042,Polyethylene Foam Sheet 2in,Storage & Containers,74,30,44,40,false
+ITM-9027,LOC-3847,2026-09-01,WH-2075,Nitrile Examination Gloves Box,Electrical Components,22,15,7,40,false
+ITM-5514,LOC-5561,2026-09-01,WH-3088,Conveyor Belt Roller 6in,Storage & Containers,820,140,680,300,true
+ITM-5514,LOC-9012,2026-04-18,WH-2075,Conveyor Belt Roller 6in,Storage & Containers,210,80,130,300,false
+ITM-2873,LOC-7734,2026-09-01,WH-3088,Hydraulic Pump Assembly,Fasteners & Hardware,135,40,95,60,true
+ITM-2873,LOC-4423,2026-09-01,WH-1042,Lithium-Ion Battery Pack 48V,Storage & Containers,48,25,23,60,true
+ITM-8802,LOC-1124,2026-09-01,WH-1042,Corrugated Shipping Box 18x12,Electrical Components,960,200,760,400,true
+ITM-8802,LOC-5561,2026-03-05,WH-3088,Anti-Static Bubble Wrap Roll,Packaging Materials,310,90,220,400,false
+ITM-1190,LOC-9012,2026-09-01,WH-2075,Thermal Transfer Label 4x6,Packaging Materials,475,110,365,200,false
+ITM-1190,LOC-2931,2026-09-01,WH-1042,Polyethylene Foam Sheet 2in,Electrical Components,165,60,105,200,true
+ITM-3740,LOC-7734,2026-02-14,WH-3088,Carbon Steel Pipe 2in x 10ft,Storage & Containers,290,75,215,100,true
+ITM-3740,LOC-3847,2025-11-20,WH-2075,Conveyor Belt Roller 6in,Labeling & Identification,85,30,55,100,true
+ITM-6633,LOC-4423,2026-09-01,WH-1042,Hydraulic Pump Assembly,Mechanical Components,18500,3000,15500,5000,true
+ITM-6633,LOC-1124,2025-08-07,WH-1042,Pneumatic Valve 3-Way 1/4in,Labeling & Identification,4200,800,3400,5000,true
+ITM-5087,LOC-9012,2026-09-01,WH-2075,Industrial Safety Gloves,Packaging Materials,88,22,66,30,true
+ITM-5087,LOC-5561,2025-10-14,WH-3088,Corrugated Shipping Box 18x12,Labeling & Identification,14,8,6,30,true
+ITM-4409,LOC-2931,2026-09-01,WH-1042,Corrugated Shipping Box 18x12,Mechanical Components,550,120,430,200,true
+ITM-4409,LOC-7734,2025-09-30,WH-3088,Nitrile Examination Gloves Box,Storage & Containers,145,50,95,200,false
+ITM-7761,LOC-3847,2026-09-01,WH-2075,Carbon Steel Pipe 2in x 10ft,Storage & Containers,32,8,24,10,false
+ITM-7761,LOC-4423,2026-09-01,WH-1042,Thermal Transfer Label 4x6,Raw Materials,6,4,2,10,false

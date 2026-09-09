@@ -1,0 +1,39 @@
+{
+  "id": "aterm:logistics_carriers_contract_rate_per_km_percent_by_carrier_country",
+  "type": "Aterm",
+  "canonical_id": "logistics_carriers_contract_rate_per_km_percent_by_carrier_country",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "carriers",
+    "measure": "contract_rate_per_km",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "by_carrier_country"
+  },
+  "oracle_value": {
+    "Australia": 2.1,
+    "Canada": 1.92,
+    "France": 1.23,
+    "Germany": 3.41,
+    "India": 0.94,
+    "Japan": 6.75,
+    "Spain": 1.47,
+    "Sweden": 3.88,
+    "USA": 5.23
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(contract_rate_per_km) FROM logistics_carriers_MANUAL_dimension GROUP BY carrier_country)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:18Z",
+  "usage_count": 0,
+  "source_goal": "What is the total contract rate per km of carrierss by carrier country?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:46Z"
+}

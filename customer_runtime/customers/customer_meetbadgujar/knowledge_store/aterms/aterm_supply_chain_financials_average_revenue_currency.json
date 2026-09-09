@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_financials_average_revenue_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_financials_average_revenue_currency",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "financials",
+    "measure": "average_revenue",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 63829.03636363637,
+  "formula_line": "supply_chain_financials_average_revenue_currency = {supply_chain_financials_revenue_currency} / ({supply_chain_financials_count} if {supply_chain_financials_count} != 0 else 1)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-09-02T06:49:02Z",
+  "usage_count": 0,
+  "source_goal": "What is the average revenue per financials?",
+  "wave": 5,
+  "depends_on": [
+    "supply_chain_financials_revenue_currency",
+    "supply_chain_financials_count"
+  ],
+  "dep_values": {
+    "supply_chain_financials_revenue_currency": 1404238.8,
+    "supply_chain_financials_count": 22.0
+  },
+  "verified_at": "2026-09-02T06:49:08Z"
+}

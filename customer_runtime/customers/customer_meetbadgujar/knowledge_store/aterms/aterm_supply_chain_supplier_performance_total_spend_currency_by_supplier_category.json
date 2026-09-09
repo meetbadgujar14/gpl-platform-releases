@@ -1,0 +1,37 @@
+{
+  "id": "aterm:supply_chain_supplier_performance_total_spend_currency_by_supplier_category",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_supplier_performance_total_spend_currency_by_supplier_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "supplier_performance",
+    "measure": "total_spend",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_supplier_category"
+  },
+  "oracle_value": {
+    "Chemicals": 1582900.0,
+    "Components": 15445000.0,
+    "Electronics": 46224000.0,
+    "Hardware": 1425400.0,
+    "Packaging": 495400.0,
+    "Raw Materials": 6272900.0,
+    "Transportation": 6181400.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_supplier_performance_ERP_snapshot', 'SUM', 'total_spend', 'supplier_category', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "What is the total total spend of supplier_performances by supplier category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

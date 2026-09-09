@@ -1,0 +1,1114 @@
+[
+  {
+    "from_atom": "retail_shopify_product_variants_ERP_dimension",
+    "from_field": "product_id",
+    "to_atom": "retail_shopify_products_ERP_dimension",
+    "to_field": "product_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:37:11.880007Z"
+  },
+  {
+    "from_atom": "retail_shopify_orders_ERP_record",
+    "from_field": "customer_id",
+    "to_atom": "retail_shopify_customers_CRM_dimension",
+    "to_field": "customer_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:37:16.009506Z"
+  },
+  {
+    "from_atom": "retail_shopify_orders_ERP_record",
+    "from_field": "channel_id",
+    "to_atom": "retail_shopify_sales_channels_ERP_dimension",
+    "to_field": "channel_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:37:19.744093Z"
+  },
+  {
+    "from_atom": "retail_shopify_order_line_items_ERP_record",
+    "from_field": "order_id",
+    "to_atom": "retail_shopify_orders_ERP_record",
+    "to_field": "order_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:37:22.437568Z"
+  },
+  {
+    "from_atom": "retail_shopify_order_line_items_ERP_record",
+    "from_field": "product_id",
+    "to_atom": "retail_shopify_products_ERP_dimension",
+    "to_field": "product_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:37:25.099598Z"
+  },
+  {
+    "from_atom": "retail_shopify_order_line_items_ERP_record",
+    "from_field": "variant_id",
+    "to_atom": "retail_shopify_product_variants_ERP_dimension",
+    "to_field": "variant_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:37:27.971597Z"
+  },
+  {
+    "from_atom": "retail_shopify_refunds_ERP_record",
+    "from_field": "order_id",
+    "to_atom": "retail_shopify_orders_ERP_record",
+    "to_field": "order_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:37:30.627242Z"
+  },
+  {
+    "from_atom": "retail_shopify_refunds_ERP_record",
+    "from_field": "staff_id",
+    "to_atom": "retail_shopify_staff_ERP_dimension",
+    "to_field": "staff_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:37:33.389799Z"
+  },
+  {
+    "from_atom": "retail_shopify_refund_line_items_ERP_record",
+    "from_field": "refund_id",
+    "to_atom": "retail_shopify_refunds_ERP_record",
+    "to_field": "refund_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:37:36.259107Z"
+  },
+  {
+    "from_atom": "retail_shopify_refund_line_items_ERP_record",
+    "from_field": "order_id",
+    "to_atom": "retail_shopify_orders_ERP_record",
+    "to_field": "order_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:37:38.965014Z"
+  },
+  {
+    "from_atom": "retail_shopify_refund_line_items_ERP_record",
+    "from_field": "variant_id",
+    "to_atom": "retail_shopify_product_variants_ERP_dimension",
+    "to_field": "variant_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:37:42.610972Z"
+  },
+  {
+    "from_atom": "retail_shopify_payments_ERP_record",
+    "from_field": "order_id",
+    "to_atom": "retail_shopify_orders_ERP_record",
+    "to_field": "order_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:37:46.394837Z"
+  },
+  {
+    "from_atom": "retail_shopify_fulfillments_ERP_record",
+    "from_field": "order_id",
+    "to_atom": "retail_shopify_orders_ERP_record",
+    "to_field": "order_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:37:49.265919Z"
+  },
+  {
+    "from_atom": "retail_shopify_fulfillments_ERP_record",
+    "from_field": "location_id",
+    "to_atom": "retail_shopify_locations_ERP_dimension",
+    "to_field": "location_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:37:52.527905Z"
+  },
+  {
+    "from_atom": "retail_shopify_draft_orders_ERP_record",
+    "from_field": "customer_id",
+    "to_atom": "retail_shopify_customers_CRM_dimension",
+    "to_field": "customer_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:37:56.356907Z"
+  },
+  {
+    "from_atom": "retail_shopify_draft_orders_ERP_record",
+    "from_field": "staff_id",
+    "to_atom": "retail_shopify_staff_ERP_dimension",
+    "to_field": "staff_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:37:59.609865Z"
+  },
+  {
+    "from_atom": "retail_shopify_gift_cards_ERP_record",
+    "from_field": "customer_id",
+    "to_atom": "retail_shopify_customers_CRM_dimension",
+    "to_field": "customer_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:38:02.583268Z"
+  },
+  {
+    "from_atom": "retail_shopify_gift_cards_ERP_record",
+    "from_field": "order_id",
+    "to_atom": "retail_shopify_orders_ERP_record",
+    "to_field": "order_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:38:05.462230Z"
+  },
+  {
+    "from_atom": "retail_shopify_returns_ERP_record",
+    "from_field": "order_id",
+    "to_atom": "retail_shopify_orders_ERP_record",
+    "to_field": "order_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:38:08.720330Z"
+  },
+  {
+    "from_atom": "retail_shopify_returns_ERP_record",
+    "from_field": "customer_id",
+    "to_atom": "retail_shopify_customers_CRM_dimension",
+    "to_field": "customer_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:38:11.469696Z"
+  },
+  {
+    "from_atom": "retail_shopify_purchase_orders_ERP_record",
+    "from_field": "vendor_id",
+    "to_atom": "retail_shopify_vendors_ERP_dimension",
+    "to_field": "vendor_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:38:15.379646Z"
+  },
+  {
+    "from_atom": "retail_shopify_purchase_orders_ERP_record",
+    "from_field": "location_id",
+    "to_atom": "retail_shopify_locations_ERP_dimension",
+    "to_field": "location_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:38:18.280996Z"
+  },
+  {
+    "from_atom": "retail_shopify_purchase_order_lines_ERP_record",
+    "from_field": "po_id",
+    "to_atom": "retail_shopify_purchase_orders_ERP_record",
+    "to_field": "po_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:38:22.443101Z"
+  },
+  {
+    "from_atom": "retail_shopify_purchase_order_lines_ERP_record",
+    "from_field": "variant_id",
+    "to_atom": "retail_shopify_product_variants_ERP_dimension",
+    "to_field": "variant_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:38:25.686068Z"
+  },
+  {
+    "from_atom": "retail_shopify_disputes_ERP_record",
+    "from_field": "order_id",
+    "to_atom": "retail_shopify_orders_ERP_record",
+    "to_field": "order_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:38:28.787552Z"
+  },
+  {
+    "from_atom": "retail_shopify_disputes_ERP_record",
+    "from_field": "transaction_id",
+    "to_atom": "retail_shopify_payments_ERP_record",
+    "to_field": "transaction_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:38:37.119532Z"
+  },
+  {
+    "from_atom": "retail_shopify_inventory_levels_WMS_state",
+    "from_field": "variant_id",
+    "to_atom": "retail_shopify_product_variants_ERP_dimension",
+    "to_field": "variant_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:38:43.695447Z"
+  },
+  {
+    "from_atom": "retail_shopify_inventory_levels_WMS_state",
+    "from_field": "location_id",
+    "to_atom": "retail_shopify_locations_ERP_dimension",
+    "to_field": "location_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:38:46.620458Z"
+  },
+  {
+    "from_atom": "retail_shopify_order_status_history_ERP_state",
+    "from_field": "order_id",
+    "to_atom": "retail_shopify_orders_ERP_record",
+    "to_field": "order_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:38:50.600613Z"
+  },
+  {
+    "from_atom": "retail_shopify_order_status_history_ERP_state",
+    "from_field": "customer_id",
+    "to_atom": "retail_shopify_customers_CRM_dimension",
+    "to_field": "customer_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:38:53.642595Z"
+  },
+  {
+    "from_atom": "retail_shopify_customer_account_status_CRM_state",
+    "from_field": "customer_id",
+    "to_atom": "retail_shopify_customers_CRM_dimension",
+    "to_field": "customer_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:38:56.856812Z"
+  },
+  {
+    "from_atom": "retail_shopify_cart_events_API_event",
+    "from_field": "customer_id",
+    "to_atom": "retail_shopify_customers_CRM_dimension",
+    "to_field": "customer_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:39:00.974577Z"
+  },
+  {
+    "from_atom": "retail_shopify_cart_events_API_event",
+    "from_field": "variant_id",
+    "to_atom": "retail_shopify_product_variants_ERP_dimension",
+    "to_field": "variant_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:39:04.940080Z"
+  },
+  {
+    "from_atom": "retail_shopify_checkout_events_API_event",
+    "from_field": "customer_id",
+    "to_atom": "retail_shopify_customers_CRM_dimension",
+    "to_field": "customer_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:39:09.011771Z"
+  },
+  {
+    "from_atom": "retail_shopify_page_views_API_event",
+    "from_field": "customer_id",
+    "to_atom": "retail_shopify_customers_CRM_dimension",
+    "to_field": "customer_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:39:11.858027Z"
+  },
+  {
+    "from_atom": "retail_shopify_page_views_API_event",
+    "from_field": "product_id",
+    "to_atom": "retail_shopify_products_ERP_dimension",
+    "to_field": "product_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:39:15.789728Z"
+  },
+  {
+    "from_atom": "retail_shopify_inventory_adjustments_WMS_event",
+    "from_field": "variant_id",
+    "to_atom": "retail_shopify_product_variants_ERP_dimension",
+    "to_field": "variant_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:39:19.173798Z"
+  },
+  {
+    "from_atom": "retail_shopify_inventory_adjustments_WMS_event",
+    "from_field": "location_id",
+    "to_atom": "retail_shopify_locations_ERP_dimension",
+    "to_field": "location_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:39:22.455523Z"
+  },
+  {
+    "from_atom": "retail_shopify_inventory_adjustments_WMS_event",
+    "from_field": "staff_id",
+    "to_atom": "retail_shopify_staff_ERP_dimension",
+    "to_field": "staff_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:39:25.630681Z"
+  },
+  {
+    "from_atom": "retail_shopify_price_change_events_ERP_event",
+    "from_field": "variant_id",
+    "to_atom": "retail_shopify_product_variants_ERP_dimension",
+    "to_field": "variant_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:39:28.895662Z"
+  },
+  {
+    "from_atom": "retail_shopify_price_change_events_ERP_event",
+    "from_field": "product_id",
+    "to_atom": "retail_shopify_products_ERP_dimension",
+    "to_field": "product_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:39:31.957894Z"
+  },
+  {
+    "from_atom": "retail_shopify_price_change_events_ERP_event",
+    "from_field": "staff_id",
+    "to_atom": "retail_shopify_staff_ERP_dimension",
+    "to_field": "staff_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:39:35.466651Z"
+  },
+  {
+    "from_atom": "retail_shopify_daily_sales_summary_ERP_snapshot",
+    "from_field": "channel_id",
+    "to_atom": "retail_shopify_sales_channels_ERP_dimension",
+    "to_field": "channel_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:39:38.854065Z"
+  },
+  {
+    "from_atom": "retail_shopify_weekly_inventory_snapshot_WMS_snapshot",
+    "from_field": "variant_id",
+    "to_atom": "retail_shopify_product_variants_ERP_dimension",
+    "to_field": "variant_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:39:42.838735Z"
+  },
+  {
+    "from_atom": "retail_shopify_weekly_inventory_snapshot_WMS_snapshot",
+    "from_field": "location_id",
+    "to_atom": "retail_shopify_locations_ERP_dimension",
+    "to_field": "location_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:39:46.414942Z"
+  },
+  {
+    "from_atom": "retail_shopify_product_performance_snapshot_ERP_snapshot",
+    "from_field": "product_id",
+    "to_atom": "retail_shopify_products_ERP_dimension",
+    "to_field": "product_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T05:39:49.603609Z"
+  },
+  {
+    "from_atom": "retail_shopify_refund_line_items_ERP_record",
+    "from_field": "line_item_id",
+    "to_atom": "retail_shopify_order_line_items_ERP_record",
+    "to_field": "line_item_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:31:54.029145Z"
+  },
+  {
+    "from_atom": "retail_shopify_draft_orders_ERP_record",
+    "from_field": "converted_order_id",
+    "to_atom": "retail_shopify_orders_ERP_record",
+    "to_field": "order_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:31:54.080971Z"
+  },
+  {
+    "from_atom": "logistics_vehicles_MANUAL_dimension",
+    "from_field": "carrier_id",
+    "to_atom": "logistics_carriers_MANUAL_dimension",
+    "to_field": "carrier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:18.475252Z"
+  },
+  {
+    "from_atom": "logistics_drivers_MANUAL_dimension",
+    "from_field": "carrier_id",
+    "to_atom": "logistics_carriers_MANUAL_dimension",
+    "to_field": "carrier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:18.511543Z"
+  },
+  {
+    "from_atom": "logistics_shipments_ERP_record",
+    "from_field": "carrier_id",
+    "to_atom": "logistics_carriers_MANUAL_dimension",
+    "to_field": "carrier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:18.553945Z"
+  },
+  {
+    "from_atom": "logistics_shipments_ERP_record",
+    "from_field": "route_id",
+    "to_atom": "logistics_routes_MANUAL_dimension",
+    "to_field": "route_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:18.607705Z"
+  },
+  {
+    "from_atom": "logistics_shipments_ERP_record",
+    "from_field": "origin_warehouse_id",
+    "to_atom": "logistics_warehouses_MANUAL_dimension",
+    "to_field": "warehouse_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:18.665909Z"
+  },
+  {
+    "from_atom": "logistics_cargo_items_ERP_record",
+    "from_field": "shipment_id",
+    "to_atom": "logistics_shipments_ERP_record",
+    "to_field": "shipment_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:18.707245Z"
+  },
+  {
+    "from_atom": "logistics_customs_declarations_ERP_record",
+    "from_field": "shipment_id",
+    "to_atom": "logistics_shipments_ERP_record",
+    "to_field": "shipment_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:18.751874Z"
+  },
+  {
+    "from_atom": "logistics_warehouse_inventory_WMS_state",
+    "from_field": "warehouse_id",
+    "to_atom": "logistics_warehouses_MANUAL_dimension",
+    "to_field": "warehouse_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:18.795798Z"
+  },
+  {
+    "from_atom": "logistics_freight_orders_ERP_record",
+    "from_field": "shipment_id",
+    "to_atom": "logistics_shipments_ERP_record",
+    "to_field": "shipment_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:32.457996Z"
+  },
+  {
+    "from_atom": "logistics_freight_orders_ERP_record",
+    "from_field": "carrier_id",
+    "to_atom": "logistics_carriers_MANUAL_dimension",
+    "to_field": "carrier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:32.571278Z"
+  },
+  {
+    "from_atom": "logistics_freight_orders_ERP_record",
+    "from_field": "vehicle_id",
+    "to_atom": "logistics_vehicles_MANUAL_dimension",
+    "to_field": "vehicle_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:32.708251Z"
+  },
+  {
+    "from_atom": "logistics_shipment_legs_ERP_record",
+    "from_field": "shipment_id",
+    "to_atom": "logistics_shipments_ERP_record",
+    "to_field": "shipment_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:32.776277Z"
+  },
+  {
+    "from_atom": "logistics_shipment_legs_ERP_record",
+    "from_field": "carrier_id",
+    "to_atom": "logistics_carriers_MANUAL_dimension",
+    "to_field": "carrier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:32.815819Z"
+  },
+  {
+    "from_atom": "logistics_shipment_legs_ERP_record",
+    "from_field": "route_id",
+    "to_atom": "logistics_routes_MANUAL_dimension",
+    "to_field": "route_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:32.857497Z"
+  },
+  {
+    "from_atom": "logistics_shipment_legs_ERP_record",
+    "from_field": "vehicle_id",
+    "to_atom": "logistics_vehicles_MANUAL_dimension",
+    "to_field": "vehicle_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:32.899942Z"
+  },
+  {
+    "from_atom": "logistics_delivery_events_WMS_event",
+    "from_field": "shipment_id",
+    "to_atom": "logistics_shipments_ERP_record",
+    "to_field": "shipment_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:32.943582Z"
+  },
+  {
+    "from_atom": "logistics_delivery_events_WMS_event",
+    "from_field": "leg_id",
+    "to_atom": "logistics_shipment_legs_ERP_record",
+    "to_field": "leg_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:32.987993Z"
+  },
+  {
+    "from_atom": "logistics_vehicle_trips_WMS_event",
+    "from_field": "vehicle_id",
+    "to_atom": "logistics_vehicles_MANUAL_dimension",
+    "to_field": "vehicle_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:33.033925Z"
+  },
+  {
+    "from_atom": "logistics_vehicle_trips_WMS_event",
+    "from_field": "driver_id",
+    "to_atom": "logistics_drivers_MANUAL_dimension",
+    "to_field": "driver_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:42.065197Z"
+  },
+  {
+    "from_atom": "logistics_vehicle_trips_WMS_event",
+    "from_field": "freight_order_id",
+    "to_atom": "logistics_freight_orders_ERP_record",
+    "to_field": "freight_order_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:42.151506Z"
+  },
+  {
+    "from_atom": "logistics_fuel_consumption_WMS_record",
+    "from_field": "vehicle_id",
+    "to_atom": "logistics_vehicles_MANUAL_dimension",
+    "to_field": "vehicle_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:42.204092Z"
+  },
+  {
+    "from_atom": "logistics_fuel_consumption_WMS_record",
+    "from_field": "trip_id",
+    "to_atom": "logistics_vehicle_trips_WMS_event",
+    "to_field": "trip_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:42.256139Z"
+  },
+  {
+    "from_atom": "logistics_incidents_ERP_record",
+    "from_field": "shipment_id",
+    "to_atom": "logistics_shipments_ERP_record",
+    "to_field": "shipment_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:42.300588Z"
+  },
+  {
+    "from_atom": "logistics_incidents_ERP_record",
+    "from_field": "vehicle_id",
+    "to_atom": "logistics_vehicles_MANUAL_dimension",
+    "to_field": "vehicle_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:42.403806Z"
+  },
+  {
+    "from_atom": "logistics_incidents_ERP_record",
+    "from_field": "driver_id",
+    "to_atom": "logistics_drivers_MANUAL_dimension",
+    "to_field": "driver_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-21T06:33:42.443098Z"
+  },
+  {
+    "from_atom": "supply_chain_purchase_orders_ERP_record",
+    "from_field": "supplier_id",
+    "to_atom": "supply_chain_suppliers_ERP_dimension",
+    "to_field": "supplier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:40.385005Z"
+  },
+  {
+    "from_atom": "supply_chain_purchase_orders_ERP_record",
+    "from_field": "buyer_id",
+    "to_atom": "supply_chain_buyers_ERP_dimension",
+    "to_field": "buyer_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:40.459005Z"
+  },
+  {
+    "from_atom": "supply_chain_purchase_order_lines_ERP_record",
+    "from_field": "po_id",
+    "to_atom": "supply_chain_purchase_orders_ERP_record",
+    "to_field": "po_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:40.518004Z"
+  },
+  {
+    "from_atom": "supply_chain_purchase_order_lines_ERP_record",
+    "from_field": "item_id",
+    "to_atom": "supply_chain_items_ERP_dimension",
+    "to_field": "item_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:40.590041Z"
+  },
+  {
+    "from_atom": "supply_chain_purchase_order_lines_ERP_record",
+    "from_field": "supplier_id",
+    "to_atom": "supply_chain_suppliers_ERP_dimension",
+    "to_field": "supplier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:40.659007Z"
+  },
+  {
+    "from_atom": "supply_chain_shipments_WMS_record",
+    "from_field": "po_id",
+    "to_atom": "supply_chain_purchase_orders_ERP_record",
+    "to_field": "po_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:40.741233Z"
+  },
+  {
+    "from_atom": "supply_chain_shipments_WMS_record",
+    "from_field": "supplier_id",
+    "to_atom": "supply_chain_suppliers_ERP_dimension",
+    "to_field": "supplier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:40.820008Z"
+  },
+  {
+    "from_atom": "supply_chain_shipments_WMS_record",
+    "from_field": "destination_warehouse_id",
+    "to_atom": "supply_chain_warehouses_WMS_dimension",
+    "to_field": "warehouse_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:40.885005Z"
+  },
+  {
+    "from_atom": "supply_chain_shipment_lines_WMS_record",
+    "from_field": "shipment_id",
+    "to_atom": "supply_chain_shipments_WMS_record",
+    "to_field": "shipment_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:40.959006Z"
+  },
+  {
+    "from_atom": "supply_chain_shipment_lines_WMS_record",
+    "from_field": "po_line_id",
+    "to_atom": "supply_chain_purchase_order_lines_ERP_record",
+    "to_field": "po_line_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:41.027006Z"
+  },
+  {
+    "from_atom": "supply_chain_shipment_lines_WMS_record",
+    "from_field": "item_id",
+    "to_atom": "supply_chain_items_ERP_dimension",
+    "to_field": "item_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:41.109006Z"
+  },
+  {
+    "from_atom": "supply_chain_goods_receipts_ERP_record",
+    "from_field": "po_id",
+    "to_atom": "supply_chain_purchase_orders_ERP_record",
+    "to_field": "po_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:41.191619Z"
+  },
+  {
+    "from_atom": "supply_chain_goods_receipts_ERP_record",
+    "from_field": "shipment_id",
+    "to_atom": "supply_chain_shipments_WMS_record",
+    "to_field": "shipment_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:41.259618Z"
+  },
+  {
+    "from_atom": "supply_chain_goods_receipts_ERP_record",
+    "from_field": "supplier_id",
+    "to_atom": "supply_chain_suppliers_ERP_dimension",
+    "to_field": "supplier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:41.339622Z"
+  },
+  {
+    "from_atom": "supply_chain_goods_receipts_ERP_record",
+    "from_field": "warehouse_id",
+    "to_atom": "supply_chain_warehouses_WMS_dimension",
+    "to_field": "warehouse_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:41.415619Z"
+  },
+  {
+    "from_atom": "supply_chain_inventory_levels_WMS_state",
+    "from_field": "item_id",
+    "to_atom": "supply_chain_items_ERP_dimension",
+    "to_field": "item_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:41.485620Z"
+  },
+  {
+    "from_atom": "supply_chain_inventory_levels_WMS_state",
+    "from_field": "location_id",
+    "to_atom": "supply_chain_warehouse_locations_WMS_dimension",
+    "to_field": "location_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:41.547620Z"
+  },
+  {
+    "from_atom": "supply_chain_inventory_levels_WMS_state",
+    "from_field": "warehouse_id",
+    "to_atom": "supply_chain_warehouses_WMS_dimension",
+    "to_field": "warehouse_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:41.618618Z"
+  },
+  {
+    "from_atom": "supply_chain_warehouse_locations_WMS_dimension",
+    "from_field": "warehouse_id",
+    "to_atom": "supply_chain_warehouses_WMS_dimension",
+    "to_field": "warehouse_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:52.155052Z"
+  },
+  {
+    "from_atom": "supply_chain_supplier_performance_ERP_snapshot",
+    "from_field": "supplier_id",
+    "to_atom": "supply_chain_suppliers_ERP_dimension",
+    "to_field": "supplier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:52.202048Z"
+  },
+  {
+    "from_atom": "supply_chain_demand_forecasts_ERP_snapshot",
+    "from_field": "item_id",
+    "to_atom": "supply_chain_items_ERP_dimension",
+    "to_field": "item_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:52.246049Z"
+  },
+  {
+    "from_atom": "supply_chain_procurement_spend_ERP_record",
+    "from_field": "po_id",
+    "to_atom": "supply_chain_purchase_orders_ERP_record",
+    "to_field": "po_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:52.293048Z"
+  },
+  {
+    "from_atom": "supply_chain_procurement_spend_ERP_record",
+    "from_field": "supplier_id",
+    "to_atom": "supply_chain_suppliers_ERP_dimension",
+    "to_field": "supplier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:52.345053Z"
+  },
+  {
+    "from_atom": "supply_chain_lead_times_ERP_snapshot",
+    "from_field": "supplier_id",
+    "to_atom": "supply_chain_suppliers_ERP_dimension",
+    "to_field": "supplier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:52.394053Z"
+  },
+  {
+    "from_atom": "supply_chain_lead_times_ERP_snapshot",
+    "from_field": "item_id",
+    "to_atom": "supply_chain_items_ERP_dimension",
+    "to_field": "item_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:37:52.434049Z"
+  },
+  {
+    "from_atom": "supply_chain_inventory_transactions_WMS_event",
+    "from_field": "item_id",
+    "to_atom": "supply_chain_items_ERP_dimension",
+    "to_field": "item_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:08.146277Z"
+  },
+  {
+    "from_atom": "supply_chain_inventory_transactions_WMS_event",
+    "from_field": "location_id",
+    "to_atom": "supply_chain_warehouse_locations_WMS_dimension",
+    "to_field": "location_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:08.294295Z"
+  },
+  {
+    "from_atom": "supply_chain_inventory_transactions_WMS_event",
+    "from_field": "warehouse_id",
+    "to_atom": "supply_chain_warehouses_WMS_dimension",
+    "to_field": "warehouse_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:08.379279Z"
+  },
+  {
+    "from_atom": "supply_chain_stock_transfers_WMS_record",
+    "from_field": "item_id",
+    "to_atom": "supply_chain_items_ERP_dimension",
+    "to_field": "item_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:08.462427Z"
+  },
+  {
+    "from_atom": "supply_chain_stock_transfers_WMS_record",
+    "from_field": "from_warehouse_id",
+    "to_atom": "supply_chain_warehouses_WMS_dimension",
+    "to_field": "warehouse_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:08.530282Z"
+  },
+  {
+    "from_atom": "supply_chain_stock_transfers_WMS_record",
+    "from_field": "to_warehouse_id",
+    "to_atom": "supply_chain_warehouses_WMS_dimension",
+    "to_field": "warehouse_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:08.611491Z"
+  },
+  {
+    "from_atom": "supply_chain_purchase_requisitions_ERP_record",
+    "from_field": "item_id",
+    "to_atom": "supply_chain_items_ERP_dimension",
+    "to_field": "item_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:08.695280Z"
+  },
+  {
+    "from_atom": "supply_chain_purchase_requisitions_ERP_record",
+    "from_field": "po_id",
+    "to_atom": "supply_chain_purchase_orders_ERP_record",
+    "to_field": "po_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:08.770280Z"
+  },
+  {
+    "from_atom": "supply_chain_supplier_contracts_ERP_record",
+    "from_field": "supplier_id",
+    "to_atom": "supply_chain_suppliers_ERP_dimension",
+    "to_field": "supplier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:08.888368Z"
+  },
+  {
+    "from_atom": "supply_chain_quality_inspections_ERP_record",
+    "from_field": "receipt_id",
+    "to_atom": "supply_chain_goods_receipts_ERP_record",
+    "to_field": "receipt_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:08.962279Z"
+  },
+  {
+    "from_atom": "supply_chain_quality_inspections_ERP_record",
+    "from_field": "supplier_id",
+    "to_atom": "supply_chain_suppliers_ERP_dimension",
+    "to_field": "supplier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:09.033279Z"
+  },
+  {
+    "from_atom": "supply_chain_quality_inspections_ERP_record",
+    "from_field": "item_id",
+    "to_atom": "supply_chain_items_ERP_dimension",
+    "to_field": "item_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:09.106278Z"
+  },
+  {
+    "from_atom": "supply_chain_carrier_performance_WMS_snapshot",
+    "from_field": "carrier_id",
+    "to_atom": "supply_chain_carriers_WMS_dimension",
+    "to_field": "carrier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:25.048105Z"
+  },
+  {
+    "from_atom": "supply_chain_returns_ERP_record",
+    "from_field": "supplier_id",
+    "to_atom": "supply_chain_suppliers_ERP_dimension",
+    "to_field": "supplier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:25.127103Z"
+  },
+  {
+    "from_atom": "supply_chain_returns_ERP_record",
+    "from_field": "item_id",
+    "to_atom": "supply_chain_items_ERP_dimension",
+    "to_field": "item_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:25.196104Z"
+  },
+  {
+    "from_atom": "supply_chain_returns_ERP_record",
+    "from_field": "receipt_id",
+    "to_atom": "supply_chain_goods_receipts_ERP_record",
+    "to_field": "receipt_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:25.260106Z"
+  },
+  {
+    "from_atom": "supply_chain_inventory_aging_WMS_snapshot",
+    "from_field": "item_id",
+    "to_atom": "supply_chain_items_ERP_dimension",
+    "to_field": "item_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:25.341103Z"
+  },
+  {
+    "from_atom": "supply_chain_inventory_aging_WMS_snapshot",
+    "from_field": "warehouse_id",
+    "to_atom": "supply_chain_warehouses_WMS_dimension",
+    "to_field": "warehouse_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:25.404103Z"
+  },
+  {
+    "from_atom": "supply_chain_reorder_proposals_ERP_record",
+    "from_field": "item_id",
+    "to_atom": "supply_chain_items_ERP_dimension",
+    "to_field": "item_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:25.462103Z"
+  },
+  {
+    "from_atom": "supply_chain_reorder_proposals_ERP_record",
+    "from_field": "supplier_id",
+    "to_atom": "supply_chain_suppliers_ERP_dimension",
+    "to_field": "supplier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:25.533105Z"
+  },
+  {
+    "from_atom": "supply_chain_reorder_proposals_ERP_record",
+    "from_field": "warehouse_id",
+    "to_atom": "supply_chain_warehouses_WMS_dimension",
+    "to_field": "warehouse_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:25.603133Z"
+  },
+  {
+    "from_atom": "supply_chain_reorder_proposals_ERP_record",
+    "from_field": "po_id",
+    "to_atom": "supply_chain_purchase_orders_ERP_record",
+    "to_field": "po_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:25.669112Z"
+  },
+  {
+    "from_atom": "supply_chain_supplier_items_ERP_dimension",
+    "from_field": "supplier_id",
+    "to_atom": "supply_chain_suppliers_ERP_dimension",
+    "to_field": "supplier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:25.720120Z"
+  },
+  {
+    "from_atom": "supply_chain_supplier_items_ERP_dimension",
+    "from_field": "item_id",
+    "to_atom": "supply_chain_items_ERP_dimension",
+    "to_field": "item_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:25.772136Z"
+  },
+  {
+    "from_atom": "supply_chain_invoices_ERP_record",
+    "from_field": "po_id",
+    "to_atom": "supply_chain_purchase_orders_ERP_record",
+    "to_field": "po_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:45.824749Z"
+  },
+  {
+    "from_atom": "supply_chain_invoices_ERP_record",
+    "from_field": "supplier_id",
+    "to_atom": "supply_chain_suppliers_ERP_dimension",
+    "to_field": "supplier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:45.903934Z"
+  },
+  {
+    "from_atom": "supply_chain_invoice_lines_ERP_record",
+    "from_field": "invoice_id",
+    "to_atom": "supply_chain_invoices_ERP_record",
+    "to_field": "invoice_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:45.967930Z"
+  },
+  {
+    "from_atom": "supply_chain_invoice_lines_ERP_record",
+    "from_field": "po_line_id",
+    "to_atom": "supply_chain_purchase_order_lines_ERP_record",
+    "to_field": "po_line_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:46.055933Z"
+  },
+  {
+    "from_atom": "supply_chain_invoice_lines_ERP_record",
+    "from_field": "item_id",
+    "to_atom": "supply_chain_items_ERP_dimension",
+    "to_field": "item_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:46.136932Z"
+  },
+  {
+    "from_atom": "supply_chain_invoice_lines_ERP_record",
+    "from_field": "supplier_id",
+    "to_atom": "supply_chain_suppliers_ERP_dimension",
+    "to_field": "supplier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:46.214934Z"
+  },
+  {
+    "from_atom": "supply_chain_order_fulfillment_WMS_event",
+    "from_field": "warehouse_id",
+    "to_atom": "supply_chain_warehouses_WMS_dimension",
+    "to_field": "warehouse_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:46.286931Z"
+  },
+  {
+    "from_atom": "supply_chain_order_fulfillment_WMS_event",
+    "from_field": "item_id",
+    "to_atom": "supply_chain_items_ERP_dimension",
+    "to_field": "item_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:46.373932Z"
+  },
+  {
+    "from_atom": "supply_chain_safety_stock_ERP_snapshot",
+    "from_field": "item_id",
+    "to_atom": "supply_chain_items_ERP_dimension",
+    "to_field": "item_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:46.449931Z"
+  },
+  {
+    "from_atom": "supply_chain_safety_stock_ERP_snapshot",
+    "from_field": "warehouse_id",
+    "to_atom": "supply_chain_warehouses_WMS_dimension",
+    "to_field": "warehouse_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:46.527929Z"
+  },
+  {
+    "from_atom": "supply_chain_shrinkage_events_WMS_event",
+    "from_field": "item_id",
+    "to_atom": "supply_chain_items_ERP_dimension",
+    "to_field": "item_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:46.612918Z"
+  },
+  {
+    "from_atom": "supply_chain_shrinkage_events_WMS_event",
+    "from_field": "warehouse_id",
+    "to_atom": "supply_chain_warehouses_WMS_dimension",
+    "to_field": "warehouse_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:46.686934Z"
+  },
+  {
+    "from_atom": "supply_chain_shrinkage_events_WMS_event",
+    "from_field": "location_id",
+    "to_atom": "supply_chain_warehouse_locations_WMS_dimension",
+    "to_field": "location_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:46.752917Z"
+  },
+  {
+    "from_atom": "supply_chain_inbound_delivery_schedule_ERP_record",
+    "from_field": "po_id",
+    "to_atom": "supply_chain_purchase_orders_ERP_record",
+    "to_field": "po_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:46.839918Z"
+  },
+  {
+    "from_atom": "supply_chain_inbound_delivery_schedule_ERP_record",
+    "from_field": "supplier_id",
+    "to_atom": "supply_chain_suppliers_ERP_dimension",
+    "to_field": "supplier_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:46.921917Z"
+  },
+  {
+    "from_atom": "supply_chain_inbound_delivery_schedule_ERP_record",
+    "from_field": "warehouse_id",
+    "to_atom": "supply_chain_warehouses_WMS_dimension",
+    "to_field": "warehouse_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:46.988917Z"
+  },
+  {
+    "from_atom": "supply_chain_procurement_spend_ERP_record",
+    "from_field": "cost_center",
+    "to_atom": "supply_chain_cost_centers_ERP_dimension",
+    "to_field": "cost_center_id",
+    "use_for_goals": true,
+    "created_at": "2026-07-22T10:38:55.873885Z"
+  }
+]

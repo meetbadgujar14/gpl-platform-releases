@@ -1,0 +1,37 @@
+{
+  "id": "aterm:supply_chain_cost_centers_annual_budget_count_by_region",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_cost_centers_annual_budget_count_by_region",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "cost_centers",
+    "measure": "annual_budget",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_region"
+  },
+  "oracle_value": {
+    "Asia Pacific": 5670000.0,
+    "Central US": 7340000.0,
+    "East US": 3180000.0,
+    "Europe": 6120000.0,
+    "Global": 1475000.0,
+    "North America": 11230000.0,
+    "West US": 3960000.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_cost_centers_ERP_dimension', 'SUM', 'annual_budget', 'region', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "What is the total annual budget of cost_centerss by region?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:07Z"
+}

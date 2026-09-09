@@ -1,0 +1,40 @@
+{
+  "id": "aterm:supply_chain_safety_stock_reorder_point_qty_count_by_item_category",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_safety_stock_reorder_point_qty_count_by_item_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "safety_stock",
+    "measure": "reorder_point_qty",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_item_category"
+  },
+  "oracle_value": {
+    "Automation Hardware": 65.0,
+    "Bearings": 1400.0,
+    "Electrical Components": 168.0,
+    "Fasteners": 6700.0,
+    "Filtration": 300.0,
+    "Fluid Power Components": 1630.0,
+    "Lubricants": 570.0,
+    "Packaging Materials": 15030.0,
+    "Pneumatic Components": 200.0,
+    "Seals & Gaskets": 800.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_safety_stock_ERP_snapshot', 'SUM', 'reorder_point_qty', 'item_category', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "What is the total reorder point qty of safety_stocks by item category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:07Z"
+}

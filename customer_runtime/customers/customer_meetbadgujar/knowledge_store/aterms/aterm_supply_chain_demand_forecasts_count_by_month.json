@@ -1,0 +1,41 @@
+{
+  "id": "aterm:supply_chain_demand_forecasts_count_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_demand_forecasts_count_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "demand_forecasts",
+    "measure": "count",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2025-09": 1.0,
+    "2025-10": 2.0,
+    "2025-11": 1.0,
+    "2025-12": 1.0,
+    "2026-01": 2.0,
+    "2026-03": 2.0,
+    "2026-05": 3.0,
+    "2026-06": 3.0,
+    "2026-07": 4.0,
+    "2026-08": 5.0,
+    "2026-09": 7.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_demand_forecasts_ERP_snapshot', 'COUNT_DISTINCT', 'item_id', None, [], None, None, None, {'date_col': 'forecast_period_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "How many demand_forecastss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

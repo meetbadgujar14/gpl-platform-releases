@@ -1,0 +1,21 @@
+item_id,item_name,item_code,item_category,item_subcategory,unit_of_measure,standard_cost,lead_time_days,reorder_point,safety_stock_qty,is_active,item_status,created_date
+ITM-4821,Industrial Grade Hydraulic Hose 1/2 inch,HYD-HOSE-0500,MRO Supplies,Hydraulic Components,FT,4.75,7,500,150,True,Active,2023-02-14
+ITM-7394,Stainless Steel Hex Bolt M10x50,BOLT-SS-M1050,Fasteners,Hex Bolts,EA,0.38,5,2000,500,True,Active,2022-09-07
+ITM-2056,Polypropylene Drum 55-Gallon,DRUM-PP-55G,Packaging,Industrial Drums,EA,28.5,14,100,30,True,Active,2023-05-22
+ITM-9173,Bearing Deep Groove 6205-2RS,BRG-DG-6205RS,Mechanical Components,Bearings,EA,6.95,10,300,80,True,Active,2022-11-30
+ITM-3648,Nitrile Gloves Large Box of 100,PPE-GLOVE-NIT-L,Safety & PPE,Hand Protection,BX,12.4,4,150,50,True,Active,2023-01-18
+ITM-5812,PVC Conduit 3/4 inch 10ft,COND-PVC-0750,Electrical,Conduit & Fittings,EA,3.2,6,400,100,True,Active,2023-03-09
+ITM-1247,Lubricating Oil ISO 46 5L,OIL-LUB-ISO46-5L,Lubricants & Chemicals,Machine Oils,CTN,42.0,8,60,20,True,Active,2022-07-15
+ITM-6389,Corrugated Cardboard Box 12x10x8,BOX-CORR-121008,Packaging,Shipping Boxes,EA,0.85,5,3000,800,True,Active,2023-06-04
+ITM-8740,Allen Key Set Metric 9-Piece,TOOL-ALLEN-9PC-M,Tools & Equipment,Hand Tools,SET,14.75,12,50,15,False,Discontinued,2021-04-20
+ITM-2931,O-Ring EPDM 50mm ID,ORING-EPDM-050,Seals & Gaskets,O-Rings,EA,0.62,9,1000,300,True,Active,2023-08-11
+ITM-5067,Safety Helmet Class E Yellow,PPE-HELM-CE-YLW,Safety & PPE,Head Protection,EA,18.3,7,80,25,True,Active,2023-04-27
+ITM-7216,Copper Wire AWG 12 Spool 500ft,WIRE-CU-AWG12-500,Electrical,Wiring & Cable,RL,87.5,15,40,12,True,Active,2022-12-03
+ITM-3405,Pallet Stretch Wrap 18in x 1500ft,WRAP-STR-18-1500,Packaging,Stretch Film,RL,22.1,4,200,60,True,Active,2023-07-19
+ITM-9854,V-Belt Type B-68,BELT-V-B68,Mechanical Components,Drive Belts,EA,11.25,11,120,35,True,Active,2022-10-08
+ITM-4172,Isopropyl Alcohol 99% 1L Bottle,CHEM-IPA-99-1L,Lubricants & Chemicals,Solvents & Cleaners,EA,9.8,6,180,50,False,On Hold,2023-02-28
+ITM-6603,Circuit Breaker 20A Single Pole,ELEC-CB-20A-1P,Electrical,Circuit Protection,EA,7.45,10,250,75,True,Active,2023-09-14
+ITM-1589,Plastic Bubble Wrap 12in x 100ft,WRAP-BUB-12-100,Packaging,Protective Cushioning,RL,16.6,5,250,70,True,Active,2024-01-06
+ITM-8327,Gate Valve 2 inch 150LB Flanged,VALV-GATE-02-150,Fluid Control,Gate Valves,EA,64.0,21,25,8,True,Active,2022-08-23
+ITM-2764,Pallet Wood Standard 48x40,PALT-WOOD-4840,Warehouse Supplies,Pallets,EA,11.9,3,500,150,True,Active,2024-03-15
+ITM-5941,Filter Element Hydraulic 10 Micron,FILT-HYD-010M,MRO Supplies,Filtration,EA,23.75,13,90,28,True,Active,2023-11-02

@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_shipment_lines_average_quantity_damaged_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shipment_lines_average_quantity_damaged_count",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shipment_lines",
+    "measure": "average_quantity_damaged",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 3.8823529411764706,
+  "formula_line": "supply_chain_shipment_lines_average_quantity_damaged_count = {supply_chain_shipment_lines_quantity_damaged_count} / ({supply_chain_shipment_lines_count} if {supply_chain_shipment_lines_count} != 0 else 1)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-09-01T07:54:53Z",
+  "usage_count": 0,
+  "source_goal": "What is the average quantity damaged per shipment_lines?",
+  "wave": 5,
+  "depends_on": [
+    "supply_chain_shipment_lines_quantity_damaged_count",
+    "supply_chain_shipment_lines_count"
+  ],
+  "dep_values": {
+    "supply_chain_shipment_lines_quantity_damaged_count": 132.0,
+    "supply_chain_shipment_lines_count": 34.0
+  },
+  "verified_at": "2026-09-02T06:49:07Z"
+}

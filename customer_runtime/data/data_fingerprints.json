@@ -1,0 +1,38 @@
+{
+  "supply_chain/purchase_order_line": {
+    "sha256": "9654c0c89e9a9f4ab11826e1f330b78ea369b4f286dd2b40fb8c9af816075e4d",
+    "table": "purchase_order_line",
+    "vertical": "supply_chain",
+    "updated_at": "2026-09-01T06:58:03Z"
+  },
+  "retail_shopify/claim": {
+    "sha256": "09810cc1a5f9a40e27c6638e7eb50ba48a5256df5838acec1d2175e97a606719",
+    "table": "claim",
+    "vertical": "retail_shopify",
+    "updated_at": "2026-09-01T06:58:03Z"
+  },
+  "retail_shopify/purchase_order": {
+    "sha256": "c3d5135d4bde22cd9164d0465f1194bd47c4c90e112764cee03bbe3e1ab5abe9",
+    "table": "purchase_order",
+    "vertical": "retail_shopify",
+    "updated_at": "2026-09-01T06:58:03Z"
+  },
+  "supply_chain/supply_chain_inventory": {
+    "sha256": "adb1430fc6ff96e06afbdc2049f5fe361a1f9765ede63614a4a6c0611ea882f4",
+    "table": "supply_chain_inventory",
+    "vertical": "supply_chain",
+    "updated_at": "2026-09-01T09:20:35Z"
+  },
+  "supply_chain/supply_chain_supplier": {
+    "sha256": "34180320608c1cfee73a04b4993b17e3efb429efc3e1496e118bf3176f390f79",
+    "table": "supply_chain_supplier",
+    "vertical": "supply_chain",
+    "updated_at": "2026-09-01T10:34:50Z"
+  },
+  "supply_chain/supply_chain_financials": {
+    "sha256": "a80af10ea2f55b101fa38dbf7cd084495bd1cba193863d51f474a27c9fe9049a",
+    "table": "supply_chain_financials",
+    "vertical": "supply_chain",
+    "updated_at": "2026-09-02T06:29:24Z"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "aterm:logistics_carriers_contract_rate_per_km_percent_by_carrier_type",
+  "type": "Aterm",
+  "canonical_id": "logistics_carriers_contract_rate_per_km_percent_by_carrier_type",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "carriers",
+    "measure": "contract_rate_per_km",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "by_carrier_type"
+  },
+  "oracle_value": {
+    "Air Freight": 6.75,
+    "Full Truckload": 8.2,
+    "Intermodal": 5.79,
+    "Less Than Truckload": 4.959999999999999,
+    "Rail Freight": 1.23
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(contract_rate_per_km) FROM logistics_carriers_MANUAL_dimension GROUP BY carrier_type)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:18Z",
+  "usage_count": 0,
+  "source_goal": "What is the total contract rate per km of carrierss by carrier type?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:46Z"
+}

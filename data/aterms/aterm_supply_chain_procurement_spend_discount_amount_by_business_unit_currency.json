@@ -1,0 +1,34 @@
+{
+  "id": "aterm:supply_chain_procurement_spend_discount_amount_by_business_unit_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_procurement_spend_discount_amount_by_business_unit_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "procurement_spend",
+    "measure": "discount_amount",
+    "state": "all",
+    "scope": "by_business_unit",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "International Trade": 9287.0,
+    "Supply Chain Analytics": 102.4,
+    "Supply Chain Operations": 21390.0,
+    "Transportation Management": 2613.8
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(discount_amount) FROM supply_chain_procurement_spend_ERP_record JOIN supply_chain_cost_centers_ERP_dimension ON cost_center=cost_center_id GROUP BY business_unit)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total discount amount of procurement_spends by business unit?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

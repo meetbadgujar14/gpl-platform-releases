@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_inbound_delivery_schedule_expected_quantity_by_department_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inbound_delivery_schedule_expected_quantity_by_department_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inbound_delivery_schedule",
+    "measure": "expected_quantity",
+    "state": "all",
+    "scope": "by_department",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Facilities": 26860.0,
+    "IT": 1500.0,
+    "Maintenance": 3900.0,
+    "Manufacturing": 10570.0,
+    "Operations": 11750.0,
+    "Procurement": 8190.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(expected_quantity) FROM supply_chain_inbound_delivery_schedule_ERP_record JOIN supply_chain_purchase_orders_ERP_record ON po_id=po_id GROUP BY department)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:50Z",
+  "usage_count": 0,
+  "source_goal": "What is the total expected quantity of inbound_delivery_schedules by department?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:52Z"
+}

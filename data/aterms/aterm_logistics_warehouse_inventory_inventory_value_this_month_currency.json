@@ -1,0 +1,31 @@
+{
+  "id": "aterm:logistics_warehouse_inventory_inventory_value_this_month_currency",
+  "type": "Aterm",
+  "canonical_id": "logistics_warehouse_inventory_inventory_value_this_month_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "warehouse_inventory",
+    "measure": "inventory_value",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_SNAPSHOT_DEDUPED_MONTH('logistics_warehouse_inventory_WMS_state', 'snapshot_date', 'snapshot_date', ['inventory_id', 'snapshot_date'], 'SUM', 'inventory_value', 'this_month', None)",
+  "exec_formula": "MEASURE_SNAPSHOT_DEDUPED_MONTH('logistics_warehouse_inventory_WMS_state', 'snapshot_date', 'snapshot_date', ['inventory_id', 'snapshot_date'], 'SUM', 'inventory_value', 'this_month', None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_wizard_execution",
+  "created_at": "2026-08-07T05:42:27Z",
+  "usage_count": 0,
+  "source_goal": "What is the total inventory value of warehouse_inventorys this month?",
+  "wave": 3,
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_SNAPSHOT_DEDUPED_MONTH steps=5",
+  "wizard_steps": 5
+}

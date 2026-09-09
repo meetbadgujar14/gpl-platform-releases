@@ -1,0 +1,21 @@
+item_id,item_name,item_code,item_category,item_subcategory,unit_of_measure,standard_cost,lead_time_days,reorder_point,safety_stock_qty,is_active,item_status,created_date
+ITM-7342,Aluminium Extrusion Profile 2m,HYD-HOSE-3/4,Filtration,Filter Cartridges,KG,48.75,14,150,50,false,Active,2026-09-01
+ITM-2891,Stainless Steel Hex Bolt M12,BOLT-SS-M12,Electronics,Pumps,BOX,12.3,7,500,200,true,Under Review,2026-09-01
+ITM-5614,Thermal Insulation Blanket 1m x 2m,PKG-FILM-500,Insulation,Steel,ROLL,87.5,10,80,30,false,Discontinued,2026-09-01
+ITM-3078,Activated Carbon Filter Cartridge,ECU-400-MOD,Filtration,Control Units,KG,312.0,21,40,15,false,Discontinued,2026-08-14
+ITM-9156,Carbon Steel Sheet 3mm 1200x2400,GSK-NIT-6IN,Raw Materials,Shrink Wrap,MTR,9.85,12,300,100,false,Under Review,2026-08-22
+ITM-4427,Stainless Steel Hex Bolt M12,FLT-AC-10IN,Seals & Gaskets,Valves,PR,54.2,18,120,40,true,Under Review,2026-07-30
+ITM-6803,Industrial Lubricant ISO 46 20L,ALU-EXT-2MTR,Piping,Aluminium,PR,22.6,20,200,75,false,Under Review,2026-07-05
+ITM-1193,HDPE Pipe 50mm DN,SLV-PNE-24V,Piping,Shrink Wrap,ROLL,138.9,25,60,20,false,Discontinued,2026-06-17
+ITM-8542,PVC Shrink Wrap Sleeve 100mm,BOX-CORR-L,Raw Materials,Control Units,KG,3.15,5,1000,400,true,Under Review,2026-06-01
+ITM-2367,Carbon Steel Sheet 3mm 1200x2400,BRG-6204-2RS,Fluid Handling,Control Units,KG,17.45,9,250,80,true,Discontinued,2026-05-19
+ITM-7019,Centrifugal Pump 2HP 60Hz,PIPE-HDPE-50,Pneumatics,Control Units,ROLL,11.8,16,400,150,false,Under Review,2026-04-10
+ITM-3854,Bearing Deep Groove 6204-2RS,INS-BLK-1X2,Packaging Materials,Control Units,EA,65.0,13,90,30,true,Discontinued,2026-03-25
+ITM-6281,Industrial Grade Hydraulic Hose,BAT-LI-48V20,Labelling & Tracking,Steel,PR,485.0,35,25,10,false,Discontinued,2026-03-08
+ITM-9403,Nitrile Rubber Gasket 6-inch,LUB-ISO46-20,Safety Equipment,Conveyor Systems,MTR,94.5,8,60,25,false,Under Review,2026-02-14
+ITM-5137,Conveyor Belt Rubber Type B 500mm,CVB-RBR-500,Filtration,Steel,PR,73.2,28,100,35,false,Under Review,2026-01-22
+ITM-4768,Pneumatic Solenoid Valve 24VDC,GLV-CUT-D-MD,Pneumatics,Conveyor Systems,BOX,18.75,6,200,80,false,Active,2026-01-07
+ITM-8290,Centrifugal Pump 2HP 60Hz,STL-SHT-3MM,Insulation,Aluminium,ROLL,142.0,22,50,20,false,Active,2025-11-18
+ITM-1576,Thermal Insulation Blanket 1m x 2m,LBL-RFID-PAL,Filtration,Cartons & Boxes,MTR,29.9,11,180,60,false,Active,2025-08-30
+ITM-3312,Safety Gloves Cut Level D Medium,PMP-CEN-2HP,Seals & Gaskets,Cartons & Boxes,KG,875.0,45,10,4,true,Discontinued,2025-06-12
+ITM-7684,HDPE Pipe 50mm DN,SHR-PVC-100,Consumables,Stretch Film,KG,5.6,7,600,200,true,Discontinued,2025-01-15

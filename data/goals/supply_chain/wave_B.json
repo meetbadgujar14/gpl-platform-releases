@@ -1,0 +1,197 @@
+{
+  "wave": "B",
+  "goal_count": 10,
+  "generated_at": "2026-09-07T05:50:23Z",
+  "goals": [
+    {
+      "goal": "What is the total invoice net amount for disputed invoices this quarter?",
+      "canonical_id": "supply_chain_invoices_net_amount_disputed_this_quarter_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "net_amount",
+        "state": "Disputed",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total net amount of invoices under review this month?",
+      "canonical_id": "supply_chain_invoices_net_amount_under_review_this_month_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "net_amount",
+        "state": "Under Review",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total return value of completed returns year to date?",
+      "canonical_id": "supply_chain_returns_return_value_completed_ytd_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "return_value",
+        "state": "Completed",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total credit amount issued for completed returns this quarter?",
+      "canonical_id": "supply_chain_returns_credit_amount_completed_this_quarter_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "credit_amount",
+        "state": "Completed",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total freight cost for all shipments delivered this quarter?",
+      "canonical_id": "supply_chain_shipments_freight_cost_delivered_this_quarter_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipments",
+        "measure": "freight_cost",
+        "state": "Delivered",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total freight cost broken down by carrier year to date?",
+      "canonical_id": "supply_chain_shipments_freight_cost_all_ytd_currency_by_carrier_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipments",
+        "measure": "freight_cost",
+        "state": "all",
+        "scope": "by_carrier",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "by_carrier"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total discount amount captured on paid invoices year to date?",
+      "canonical_id": "supply_chain_invoices_discount_amount_paid_ytd_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "discount_amount",
+        "state": "Paid",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total tax amount billed on approved invoices this quarter?",
+      "canonical_id": "supply_chain_invoices_tax_amount_approved_this_quarter_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "tax_amount",
+        "state": "Approved",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total invoice gross amount broken down by supplier this quarter?",
+      "canonical_id": "supply_chain_invoices_gross_amount_all_this_quarter_currency_by_supplier_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "gross_amount",
+        "state": "all",
+        "scope": "by_supplier",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "by_supplier"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the monthly trend of total invoice net amount paid year to date?",
+      "canonical_id": "supply_chain_invoices_net_amount_paid_ytd_currency_by_month_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "net_amount",
+        "state": "Paid",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    }
+  ]
+}

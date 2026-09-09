@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_safety_stock_demand_variability_this_quarter_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_safety_stock_demand_variability_this_quarter_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "safety_stock",
+    "measure": "demand_variability",
+    "state": "all",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 2.27,
+  "formula_line": "MEASURE_QUARTER_FIXED('supply_chain_safety_stock_ERP_snapshot', 'snapshot_date', 'SUM', 'demand_variability', 'this_quarter', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "What is the total demand variability of safety_stocks this quarter?",
+  "wave": 3,
+  "operator": "MEASURE_QUARTER_FIXED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "aterm:logistics_warehouse_inventory_growth_inventory_value_this_month_percent",
+  "type": "Aterm",
+  "canonical_id": "logistics_warehouse_inventory_growth_inventory_value_this_month_percent",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "warehouse_inventory",
+    "measure": "growth_inventory_value",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "logistics_warehouse_inventory_growth_inventory_value_this_month_percent = (({logistics_warehouse_inventory_inventory_value_this_month_currency} - {logistics_warehouse_inventory_inventory_value_last_month_currency}) / abs({logistics_warehouse_inventory_inventory_value_last_month_currency}) * 100) if {logistics_warehouse_inventory_inventory_value_last_month_currency} != 0 else 0",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-08-07T05:45:31Z",
+  "usage_count": 0,
+  "source_goal": "What is the month over month growth in inventory value for warehouse_inventorys?",
+  "wave": 6,
+  "depends_on": [
+    "logistics_warehouse_inventory_inventory_value_this_month_currency",
+    "logistics_warehouse_inventory_inventory_value_last_month_currency"
+  ],
+  "dep_values": {
+    "logistics_warehouse_inventory_inventory_value_this_month_currency": 0.0,
+    "logistics_warehouse_inventory_inventory_value_last_month_currency": 0.0
+  }
+}

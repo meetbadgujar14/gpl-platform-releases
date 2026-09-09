@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Inbound Receiving & Goods Quality Audit Report</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f0f4f8;color:#111;line-height:1.5;padding:20px;min-height:100vh}
+
+/* ── Hero Header ── */
+.rpt-hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 55%,#1e40af 100%);border-radius:12px;padding:20px 28px;margin-bottom:16px;color:#fff;position:relative;overflow:hidden}
+.rpt-hero::before{content:'';position:absolute;top:-60px;right:-60px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.03)}
+.rpt-hero::after{content:'';position:absolute;bottom:-80px;right:80px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.025)}
+.hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
+.hero-brand{font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:4px}
+.hero-title{font-size:20px;font-weight:800;line-height:1.15;margin-bottom:4px;color:#fff;letter-spacing:-.3px}
+.hero-desc{font-size:11px;color:rgba(255,255,255,.6);max-width:540px;margin-bottom:10px;line-height:1.6}
+.hero-pills{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.hero-status{display:inline-flex;align-items:center;gap:5px;padding:4px 12px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:.04em}
+.hero-meta{text-align:right;flex-shrink:0;font-size:10px;color:rgba(255,255,255,.5);line-height:1.8}
+.hero-meta strong{color:#fff;font-weight:700;font-size:13px;display:block}
+.hero-customer{font-size:9px;color:rgba(255,255,255,.25);margin-top:2px;letter-spacing:.04em}
+
+/* ── Section wrapper ── */
+.sec{background:#fff;border-radius:12px;padding:18px 22px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,.06);border:1px solid #e5e7eb}
+.sec-label{font-size:9px;font-weight:700;color:#93c5fd;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;border-bottom:2px solid #dbeafe;padding-bottom:8px}
+
+/* ── KPI Cards ── */
+.kg{display:grid;gap:10px}
+.kc{background:#fff;border:1px solid #dbeafe;border-radius:10px;padding:14px 16px;position:relative;border-top:3px solid #1e40af}
+.kc-red{border-top-color:#dc2626!important;border-color:#fca5a5!important}
+.kc-yellow{border-top-color:#d97706!important;border-color:#fde68a!important}
+.kv{font-size:22px;font-weight:900;color:#1e3a8a;line-height:1;margin-bottom:3px;letter-spacing:-.5px}
+.kl{font-size:10px;color:#64748b;font-weight:600;letter-spacing:.03em}
+.ktrend{font-size:10px;font-weight:700;margin-top:6px;padding:2px 7px;border-radius:4px;display:inline-block}
+.ktrend-up{color:#059669;background:#ecfdf5}
+.ktrend-down{color:#dc2626;background:#fef2f2}
+.ktrend-neutral{color:#6b7280;background:#f1f5f9}
+
+/* ── Chart grid — 2-col ── */
+.cg{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:14px}
+.cc{background:#fff;border-radius:12px;padding:18px 22px;box-shadow:0 1px 4px rgba(0,0,0,.06);border:1px solid #e5e7eb}
+.cc-label{font-size:9px;font-weight:700;color:#93c5fd;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;border-bottom:2px solid #dbeafe;padding-bottom:8px}
+
+/* ── Alert / exec summary ── */
+.exec-summary{background:#fff;border-radius:12px;padding:16px 22px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,.06);border:1px solid #e5e7eb}
+.alert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;margin-top:12px}
+.alert-card{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;background:#eff6ff;border-radius:8px;border-left:3px solid #1e40af}
+.alert-icon{font-size:15px;flex-shrink:0;margin-top:1px}
+.alert-label{font-size:11px;color:#1e40af;font-weight:600;margin-bottom:2px}
+.alert-val{font-size:13px;font-weight:800;color:#1e3a8a}
+
+/* ── Insight cards ── */
+.ic-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.ic{display:flex;gap:14px;padding:12px 16px;background:#eff6ff;border-radius:8px;border-left:3px solid #1e40af}
+.ic-num{font-size:22px;font-weight:900;color:#bfdbfe;flex-shrink:0;line-height:1.1}
+.ic-title{font-size:12px;font-weight:700;color:#1e3a8a;margin-bottom:3px}
+.ic-text{font-size:12px;color:#374151;line-height:1.55}
+.actions-sec{margin-top:12px;padding-top:12px;border-top:1px solid #dbeafe}
+.actions-title{font-size:10px;font-weight:700;color:#1e40af;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+.actions-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px}
+.actions-list li{font-size:12px;color:#1e3a8a;padding:7px 12px 7px 28px;background:#dbeafe;border-radius:6px;position:relative}
+.actions-list li::before{content:'→';position:absolute;left:10px;color:#1e40af;font-weight:700}
+
+/* ── Leaderboard table ── */
+.dt{width:100%;border-collapse:collapse;font-size:12px}
+.dt thead tr{background:#eff6ff}
+.dt th{padding:8px 10px;text-align:left;font-size:9px;color:#1e40af;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-bottom:2px solid #dbeafe}
+.dt td{padding:8px 10px;border-top:1px solid #f1f5f9;color:#374151;vertical-align:middle}
+.tn{color:#1e3a8a;font-weight:600}
+.rk{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;font-size:10px;font-weight:700}
+
+/* ── Audit / Oracle Sources ── */
+.audit-wrap{background:#fff;border-radius:12px;border:1px solid #e5e7eb;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,.06);overflow:hidden}
+.audit-toggle{list-style:none;padding:12px 22px;font-size:10px;font-weight:700;color:#1e40af;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:#eff6ff}
+.audit-toggle::-webkit-details-marker{display:none}
+.audit-toggle:hover{background:#dbeafe}
+.audit-ct{font-weight:400;color:#93c5fd}
+.audit-body{padding:0 22px 14px}
+.ar{display:grid;grid-template-columns:1fr 1fr 2fr auto;gap:8px;align-items:center;padding:7px 0;border-top:1px solid #f1f5f9;font-size:11px}
+.ar:first-child{border-top:none}
+.aid{font-family:monospace;font-size:9px;color:#93c5fd;word-break:break-all}
+.albl{color:#374151;font-weight:500}
+.aval{color:#6b7280}
+.aok{background:#dbeafe;color:#1e40af;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700}
+.ana{color:#d1d5db;font-size:10px}
+
+/* ── Footer ── */
+.rpt-foot{display:flex;justify-content:space-between;align-items:center;padding:12px 0 2px;border-top:1px solid #dbeafe;margin-top:4px}
+.rpt-ft{font-size:10px;color:#93c5fd}
+.rpt-badge{font-size:9px;font-weight:700;background:#1e40af;color:#fff;padding:3px 14px;border-radius:20px;letter-spacing:.07em}
+
+@media print{
+  @page{size:A4 landscape;margin:10mm}
+  body{background:#fff;padding:8px}
+  .rpt-hero{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  .sec,.cc,.audit-wrap{box-shadow:none!important}
+  .audit-wrap{display:none}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ── HERO HEADER ────────────────────────────────────────────────── -->
+<div class="rpt-hero">
+  <div class="hero-top">
+    <div>
+      <div class="hero-brand">GPL — Presentation Compiler</div>
+      <div class="hero-title">Inbound Receiving & Goods Quality Audit Report</div>
+      <div class="hero-desc">Ad-hoc deep-dive into inbound goods receipt performance, acceptance vs. rejection rates, damaged line items, and inventory impact — enabling the COO to pinpoint quality failures at the receiving dock and take corrective action with suppliers.</div>
+      <div class="hero-pills">
+        <span class="hero-status" style="background:rgba(5,150,105,.18);color:#6ee7b7">
+          ● All Systems Normal
+        </span>
+        <span style="font-size:10px;color:rgba(255,255,255,.35)">07 Sep 2026</span>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <strong>COO / Operations Leadership</strong>
+      <div>customer_meetbadgujar</div>
+      <div class="hero-customer">report_coo_supply_chain_adhoc_receiving_quality_audit</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="sec kpi-sec"><div class="sec-label">Goods Receipt Overview</div><div class="kg" style="grid-template-columns:repeat(4,1fr)"><div class="kc"><div class="kv">28</div><div class="kl">Total Goods Receipts</div></div><div class="kc"><div class="kv">22</div><div class="kl">Fully Completed Receipts</div></div><div class="kc"><div class="kv">4</div><div class="kl">Partially Accepted Receipts</div></div><div class="kc"><div class="kv">2</div><div class="kl">Rejected Receipts</div></div></div></div><div class="sec kpi-sec"><div class="sec-label">Unit-Level Acceptance & Rejection</div><div class="kg" style="grid-template-columns:repeat(4,1fr)"><div class="kc"><div class="kv">34,535</div><div class="kl">Total Units Received</div></div><div class="kc"><div class="kv">33,015</div><div class="kl">Total Units Accepted</div></div><div class="kc"><div class="kv">1,520</div><div class="kl">Total Units Rejected</div></div><div class="kc"><div class="kv">132</div><div class="kl">Total Damaged Units</div></div></div></div><div class="sec kpi-sec"><div class="sec-label">Supplier Quality Indicators</div><div class="kg" style="grid-template-columns:repeat(3,1fr)"><div class="kc"><div class="kv">97%</div><div class="kl">Supplier Quality Acceptance Rate</div></div><div class="kc"><div class="kv">3%</div><div class="kl">Supplier Defect Rate</div></div><div class="kc"><div class="kv">91%</div><div class="kl">On-Time Delivery Rate</div></div></div></div><div class="sec kpi-sec"><div class="sec-label">Inventory Impact of Receiving Shortfalls</div><div class="kg" style="grid-template-columns:repeat(3,1fr)"><div class="kc"><div class="kv">41,395</div><div class="kl">Inventory On Hand</div></div><div class="kc"><div class="kv">34,028</div><div class="kl">Available Inventory</div></div><div class="kc"><div class="kv">USD2,507</div><div class="kl">Standard Unit Cost (Rejected Exposure)</div></div></div></div>
+<div class="cg"><div class="cc"><div class="cc-label">Goods Receipts by Status</div><div class="cc-body"><svg viewBox="0 0 480 126" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:126px;overflow:visible"><style>.bl{font:11px system-ui;fill:#374151}.bv{font:700 11px system-ui;fill:#111}.ax{font:9px system-ui;fill:#9ca3af}</style><text x="0" y="26" class="bl">Fully Completed Rece</text><rect x="140" y="14" width="300" height="26" rx="4" fill="#3b82f6" opacity=".88"/><text x="447" y="26" class="bv">22</text><text x="0" y="60" class="bl">Partially Accepted R</text><rect x="140" y="48" width="54" height="26" rx="4" fill="#3b82f6" opacity=".88"/><text x="201" y="60" class="bv">4</text><text x="0" y="94" class="bl">Rejected Receipts</text><rect x="140" y="82" width="27" height="26" rx="4" fill="#3b82f6" opacity=".88"/><text x="174" y="94" class="bv">2</text></svg></div></div><div class="cc"><div class="cc-label">Units Received → Accepted vs. Rejected</div><div class="cc-body"><svg viewBox="0 0 480 126" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:126px;overflow:visible"><style>.bl{font:11px system-ui;fill:#374151}.bv{font:700 11px system-ui;fill:#111}.ax{font:9px system-ui;fill:#9ca3af}</style><text x="0" y="26" class="bl">Total Units Received</text><rect x="140" y="14" width="300" height="26" rx="4" fill="#3b82f6" opacity=".88"/><text x="447" y="26" class="bv">34.5k</text><text x="0" y="60" class="bl">Total Units Accepted</text><rect x="140" y="48" width="286" height="26" rx="4" fill="#3b82f6" opacity=".88"/><text x="433" y="60" class="bv">33.0k</text><text x="0" y="94" class="bl">Total Units Rejected</text><rect x="140" y="82" width="13" height="26" rx="4" fill="#3b82f6" opacity=".88"/><text x="160" y="94" class="bv">1.5k</text></svg></div></div><div class="cc"><div class="cc-label">Damaged Units vs. Total Shipped</div><div class="cc-body"><svg viewBox="0 0 480 92" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:92px;overflow:visible"><style>.bl{font:11px system-ui;fill:#374151}.bv{font:700 11px system-ui;fill:#111}.ax{font:9px system-ui;fill:#9ca3af}</style><text x="0" y="26" class="bl">Total Units Shipped</text><rect x="140" y="14" width="300" height="26" rx="4" fill="#3b82f6" opacity=".88"/><text x="447" y="26" class="bv">13.5k</text><text x="0" y="60" class="bl">Total Damaged Units</text><rect x="140" y="48" width="4" height="26" rx="4" fill="#3b82f6" opacity=".88"/><text x="151" y="60" class="bv">132</text></svg></div></div><div class="cc"><div class="cc-label">Supplier Quality vs. Defect Rates</div><div class="cc-body"><svg viewBox="0 0 480 92" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:92px;overflow:visible"><style>.bl{font:11px system-ui;fill:#374151}.bv{font:700 11px system-ui;fill:#111}.ax{font:9px system-ui;fill:#9ca3af}</style><text x="0" y="26" class="bl">Supplier Quality Acc</text><rect x="140" y="14" width="300" height="26" rx="4" fill="#3b82f6" opacity=".88"/><text x="447" y="26" class="bv">97</text><text x="0" y="60" class="bl">Supplier Defect Rate</text><rect x="140" y="48" width="8" height="26" rx="4" fill="#3b82f6" opacity=".88"/><text x="155" y="60" class="bv">3</text></svg></div></div></div>
+<div class="sec insights-sec"><div class="sec-label">Key Findings</div><div class="ic-grid"><div class="ic" style="border-left:4px solid #1e40af"><div class="ic-num" style="color:#1e40af">01</div><div class="ic-body"><div class="ic-title">A quality breach requiring immediate attention is present in this period's inbound activity.</div><div class="ic-text">Of 28 total goods receipts processed, 2 were fully rejected and 4 were partially accepted, meaning 21% of receipts did not clear cleanly. At the unit level, 1,520 units out of 34,535 received were rejected, compounding a supplier defect rate of 3% and placing USD 2,507 in standard cost exposure on rejected inventory alone. The on-time delivery rate of 91% adds further pressure, meaning nearly 1 in 10 shipments arrived late, and 2 purchase order lines remain partially received against 11,865 units ordered with only 11,155 confirmed received, leaving a 710-unit shortfall outstanding.</div></div></div><div class="ic" style="border-left:4px solid #2563eb"><div class="ic-num" style="color:#2563eb">02</div><div class="ic-body"><div class="ic-title">This performance is below acceptable thresholds.</div><div class="ic-text">The primary driver is supplier quality, with a 3% defect rate generating 132 damaged units across shipment lines and forcing the partial or full rejection of 6 receipts. While the 97% acceptance rate appears adequate, the absolute volume of 1,520 rejected units against available inventory of 34,028 out of 41,395 on hand signals that nearly 7,367 units are currently unavailable, likely tied to quarantine or quality holds.</div></div></div><div class="ic" style="border-left:4px solid #3b82f6"><div class="ic-num" style="color:#3b82f6">03</div><div class="ic-body"><div class="ic-title">The business risk is stock availability tightening if rejected and held inventory is not resolved quickly.</div><div class="ic-text">The required action is to formally dispute the 2 rejected receipts with the responsible suppliers this week and escalate the 710-unit PO shortfall for expedited fulfillment.</div></div></div></div><div class="actions-sec"><div class="actions-title">Recommended Actions</div><ul class="actions-list"><li>The required action is to formally dispute the 2 rejected receipts with the responsible suppliers this week and escalate the 710-unit PO shortfall for expedited fulfillment.</li></ul></div></div>
+<details class="audit-wrap"><summary class="audit-toggle">Oracle Sources <span class="audit-ct">(20 metrics)</span></summary><div class="audit-body"><div class="ar"><div class="aid">supply_chain_goods_receipts_count</div><div class="albl">Total Goods Receipts</div><div class="aval">28</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_goods_receipts_count_completed</div><div class="albl">Fully Completed Receipts</div><div class="aval">22</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_goods_receipts_count_partially_accepted</div><div class="albl">Partially Accepted Receipts</div><div class="aval">4</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_goods_receipts_count_rejected</div><div class="albl">Rejected Receipts</div><div class="aval">2</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_goods_receipts_quantity_received_count</div><div class="albl">Total Units Received</div><div class="aval">34,535</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_goods_receipts_quantity_accepted_count</div><div class="albl">Total Units Accepted</div><div class="aval">33,015</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_goods_receipts_quantity_rejected_count</div><div class="albl">Total Units Rejected</div><div class="aval">1,520</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_shipment_lines_count_damaged</div><div class="albl">Damaged Shipment Lines</div><div class="aval">N/A</div><span class="ana">—</span></div><div class="ar"><div class="aid">supply_chain_shipment_lines_quantity_damaged_count</div><div class="albl">Total Damaged Units</div><div class="aval">132</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_shipment_lines_quantity_shipped_count</div><div class="albl">Total Units Shipped</div><div class="aval">13,510</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_shipment_lines_count_partially_received</div><div class="albl">Partially Received Shipment Lines</div><div class="aval">1</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_supplier_performance_quality_acceptance_rate_percent</div><div class="albl">Supplier Quality Acceptance Rate</div><div class="aval">97%</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_supplier_performance_defect_rate_percent</div><div class="albl">Supplier Defect Rate</div><div class="aval">3%</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_supplier_performance_on_time_delivery_rate_percent</div><div class="albl">On-Time Delivery Rate</div><div class="aval">91%</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_inventory_levels_quantity_on_hand_count</div><div class="albl">Inventory On Hand</div><div class="aval">41,395</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_inventory_levels_quantity_available_count</div><div class="albl">Available Inventory</div><div class="aval">34,028</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_purchase_order_lines_count_partially_received</div><div class="albl">PO Lines Partially Received</div><div class="aval">2</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_purchase_order_lines_quantity_ordered_count</div><div class="albl">Total Units Ordered</div><div class="aval">11,865</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_purchase_order_lines_quantity_received_count</div><div class="albl">Total Units Received vs Ordered</div><div class="aval">11,155</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_items_standard_cost_currency</div><div class="albl">Standard Unit Cost (Rejected Exposure)</div><div class="aval">USD2,507</div><span class="aok">✓</span></div></div></details>
+
+<div class="rpt-foot">
+  <span class="rpt-ft">GPL · All values from verified customer data</span>
+  <span class="rpt-badge">GPL CERTIFIED</span>
+</div>
+
+</body>
+</html>

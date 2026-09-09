@@ -1,0 +1,38 @@
+{
+  "id": "aterm:logistics_shipment_legs_leg_cost_by_carrier_country_currency",
+  "type": "Aterm",
+  "canonical_id": "logistics_shipment_legs_leg_cost_by_carrier_country_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "shipment_legs",
+    "measure": "leg_cost",
+    "state": "all",
+    "scope": "by_carrier_country",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Australia": 3136.4,
+    "Canada": 9051.9,
+    "France": 4492.9,
+    "Germany": 4812.7,
+    "Japan": 7183.150000000001,
+    "Spain": 10337.65,
+    "Sweden": 3444.4,
+    "USA": 23599.7
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(leg_cost) FROM logistics_shipment_legs_ERP_record JOIN logistics_carriers_MANUAL_dimension ON carrier_id=carrier_id GROUP BY carrier_country)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:17Z",
+  "usage_count": 0,
+  "source_goal": "What is the total leg cost of shipment_legss by carrier country?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:45Z"
+}

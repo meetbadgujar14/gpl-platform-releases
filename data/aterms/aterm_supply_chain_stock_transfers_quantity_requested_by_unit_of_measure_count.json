@@ -1,0 +1,34 @@
+{
+  "id": "aterm:supply_chain_stock_transfers_quantity_requested_by_unit_of_measure_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_stock_transfers_quantity_requested_by_unit_of_measure_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "stock_transfers",
+    "measure": "quantity_requested",
+    "state": "all",
+    "scope": "by_unit_of_measure",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "BX": 870.0,
+    "EA": 7795.0,
+    "FT": 3160.0,
+    "RL": 2825.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(quantity_requested) FROM supply_chain_stock_transfers_WMS_record JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY unit_of_measure)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quantity requested of stock_transferss by unit of measure?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

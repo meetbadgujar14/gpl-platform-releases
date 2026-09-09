@@ -1,0 +1,39 @@
+{
+  "id": "aterm:supply_chain_inventory_aging_total_inventory_value_currency_by_item_category",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_aging_total_inventory_value_currency_by_item_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_aging",
+    "measure": "total_inventory_value",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_item_category"
+  },
+  "oracle_value": {
+    "Electronics": 363900.0,
+    "Filtration": 66600.0,
+    "Fluid Control": 233100.0,
+    "Hardware": 28075.8,
+    "Industrial Supplies": 48600.0,
+    "Material Handling": 135800.0,
+    "Mechanical Components": 539470.5,
+    "Packaging Materials": 74595.0,
+    "Safety Equipment": 58350.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_inventory_aging_WMS_snapshot', 'SUM', 'total_inventory_value', 'item_category', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "What is the total total inventory value of inventory_agings by item category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

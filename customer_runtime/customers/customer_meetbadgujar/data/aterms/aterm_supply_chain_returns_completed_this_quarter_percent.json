@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_returns_completed_this_quarter_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_returns_completed_this_quarter_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "returns",
+    "measure": "count",
+    "state": "Completed",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "RATIO: MEASURE_QUARTER_FIXED('supply_chain_returns_ERP_record', 'return_date', 'COUNT_DISTINCT', 'return_id', 'this_quarter', [{'field': 'return_status', 'op': '=', 'value': 'Completed'}]) / MEASURE_QUARTER_FIXED('supply_chain_returns_ERP_record', 'return_date', 'COUNT_DISTINCT', 'return_id', 'this_quarter', None) * 100",
+  "exec_formula": "((MEASURE_QUARTER_FIXED('supply_chain_returns_ERP_record', 'return_date', 'COUNT_DISTINCT', 'return_id', 'this_quarter', [{'field': 'return_status', 'op': '=', 'value': 'Completed'}])) / (MEASURE_QUARTER_FIXED('supply_chain_returns_ERP_record', 'return_date', 'COUNT_DISTINCT', 'return_id', 'this_quarter', None)) * 100) if (MEASURE_QUARTER_FIXED('supply_chain_returns_ERP_record', 'return_date', 'COUNT_DISTINCT', 'return_id', 'this_quarter', None)) else 0.0",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-09-01T10:58:05Z",
+  "usage_count": 0,
+  "source_goal": "What is the return completion rate this quarter?",
+  "wave": "A",
+  "via_llm": true,
+  "llm_reasoning": "wizard/RATIO_FILTERED steps=9",
+  "wizard_steps": 9,
+  "verified_at": "2026-09-02T06:49:08Z"
+}

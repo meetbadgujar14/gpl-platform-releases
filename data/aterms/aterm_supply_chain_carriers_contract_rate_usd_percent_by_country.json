@@ -1,0 +1,37 @@
+{
+  "id": "aterm:supply_chain_carriers_contract_rate_usd_percent_by_country",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_carriers_contract_rate_usd_percent_by_country",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "carriers",
+    "measure": "contract_rate_usd",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "by_country"
+  },
+  "oracle_value": {
+    "Canada": 7250.0,
+    "China": 4100.0,
+    "Germany": 3400.0,
+    "Mexico": 1420.0,
+    "Sweden": 890.0,
+    "UK": 42.8,
+    "USA": 4956.25
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(contract_rate_usd) FROM supply_chain_carriers_WMS_dimension GROUP BY country)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:51Z",
+  "usage_count": 0,
+  "source_goal": "What is the total contract rate usd of carrierss by country?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:52Z"
+}

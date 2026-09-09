@@ -1,0 +1,39 @@
+{
+  "id": "aterm:supply_chain_returns_return_value_by_item_category_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_returns_return_value_by_item_category_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "returns",
+    "measure": "return_value",
+    "state": "all",
+    "scope": "by_item_category",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Electrical": 7083.9,
+    "Fluid Control": 2128.0,
+    "Lubricants & Chemicals": 5000.0,
+    "MRO Supplies": 1603.8,
+    "Mechanical Components": 14092.9,
+    "Packaging": 14181.7,
+    "Safety & PPE": 1746.0,
+    "Seals & Gaskets": 822.0,
+    "Warehouse Supplies": 3883.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(return_value) FROM supply_chain_returns_ERP_record JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY item_category)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total return value of returnss by item category?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:51Z"
+}

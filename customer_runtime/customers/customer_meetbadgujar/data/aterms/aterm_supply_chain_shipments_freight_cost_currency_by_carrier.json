@@ -1,0 +1,40 @@
+{
+  "id": "aterm:supply_chain_shipments_freight_cost_currency_by_carrier",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shipments_freight_cost_currency_by_carrier",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shipments",
+    "measure": "freight_cost",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_carrier"
+  },
+  "oracle_value": {
+    "ABF Freight": 26352.350000000002,
+    "Estes Express Lines": 4890.6,
+    "FedEx Freight": 7411.299999999999,
+    "Meridian Transport Solutions": 11841.5,
+    "Old Dominion Freight": 11630.5,
+    "Pacific Rim Logistics": 6195.0,
+    "R+L Carriers": 2980.4,
+    "Saia LTL Freight": 7840.15,
+    "UPS Supply Chain": 6727.05,
+    "XPO Logistics": 15697.4
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_shipments_WMS_record', 'SUM', 'freight_cost', 'carrier', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T09:43:57Z",
+  "usage_count": 0,
+  "source_goal": "What is the total freight cost of shipmentss by carrier?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:07Z"
+}

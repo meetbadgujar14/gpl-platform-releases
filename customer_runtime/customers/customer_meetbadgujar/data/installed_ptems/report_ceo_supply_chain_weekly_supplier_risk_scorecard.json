@@ -1,0 +1,406 @@
+{
+  "id": "ptem:report_ceo_supply_chain_weekly_supplier_risk_scorecard",
+  "canonical_id": "report_ceo_supply_chain_weekly_supplier_risk_scorecard",
+  "type": "Ptem",
+  "version": 1,
+  "meta": {
+    "title": "Supplier Risk & Quality Scorecard",
+    "description": "Weekly CEO-level view of supplier reliability, quality acceptance, defect exposure, and lead time volatility to identify at-risk supply relationships before they impact operations.",
+    "audience_label": "CEO / Owner / Executive",
+    "verticals": [
+      "supply_chain"
+    ],
+    "tags": [
+      "supplier",
+      "risk",
+      "quality",
+      "scorecard",
+      "lead-time",
+      "strategic"
+    ],
+    "install_count": 1340,
+    "rating": 4.7,
+    "created_at": "2026-08-21T05:35:27Z",
+    "created_by": "factory_llm_generator"
+  },
+  "slots": {
+    "format": "report",
+    "audience": "ceo",
+    "scope": "supply_chain",
+    "frequency": "weekly",
+    "depth": "comprehensive",
+    "period": "rolling_7_days"
+  },
+  "required_oracles": [
+    {
+      "canonical_id": "supply_chain_suppliers_count",
+      "label": "Total Suppliers",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_suppliers_count_active",
+      "label": "Active Suppliers",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_suppliers_count_on_hold",
+      "label": "Suppliers On Hold",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_suppliers_count_inactive",
+      "label": "Inactive Suppliers",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_supplier_performance_count",
+      "label": "Suppliers with Performance Data",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_supplier_performance_on_time_delivery_rate_percent",
+      "label": "On-Time Delivery Rate",
+      "format": "percent",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_supplier_performance_quality_acceptance_rate_percent",
+      "label": "Quality Acceptance Rate",
+      "format": "percent",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_supplier_performance_defect_rate_percent",
+      "label": "Supplier Defect Rate",
+      "format": "percent",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_supplier_performance_avg_lead_time_days_days",
+      "label": "Avg Supplier Lead Time",
+      "format": "days",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_supplier_performance_total_spend_currency",
+      "label": "Total Supplier Spend",
+      "format": "currency",
+      "currency_symbol": "USD",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_supplier_performance_total_orders_currency",
+      "label": "Total Supplier Orders Value",
+      "format": "currency",
+      "currency_symbol": "USD",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_lead_times_min_lead_time_days_days",
+      "label": "Minimum Lead Time",
+      "format": "days",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_lead_times_max_lead_time_days_days",
+      "label": "Maximum Lead Time",
+      "format": "days",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_lead_times_order_count_count",
+      "label": "Orders with Lead Time Tracked",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_goods_receipts_count_rejected",
+      "label": "Rejected Goods Receipts",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_goods_receipts_count_partially_accepted",
+      "label": "Partially Accepted Receipts",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_goods_receipts_quantity_rejected_count",
+      "label": "Total Quantity Rejected",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_goods_receipts_quantity_accepted_count",
+      "label": "Total Quantity Accepted",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_purchase_orders_count_pending_approval",
+      "label": "POs Pending Approval",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_purchase_orders_count_cancelled",
+      "label": "Cancelled Purchase Orders",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_procurement_spend_spend_amount_currency",
+      "label": "Procurement Spend Amount",
+      "format": "currency",
+      "currency_symbol": "USD",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_procurement_spend_count_overdue",
+      "label": "Overdue Procurement Items",
+      "format": "count",
+      "required": true
+    }
+  ],
+  "sections": [
+    {
+      "id": "header",
+      "type": "header",
+      "title": "Supplier Risk & Quality Scorecard",
+      "oracles": [],
+      "config": {
+        "show_status_pill": true,
+        "subtitle": "Weekly supplier reliability, quality, and lead time risk summary"
+      }
+    },
+    {
+      "id": "kpis_supplier_health",
+      "type": "kpi_grid",
+      "title": "Supplier Network Health",
+      "oracles": [
+        "supply_chain_suppliers_count",
+        "supply_chain_suppliers_count_active",
+        "supply_chain_suppliers_count_on_hold",
+        "supply_chain_suppliers_count_inactive"
+      ],
+      "config": {
+        "columns": 4,
+        "show_rag_status": true
+      }
+    },
+    {
+      "id": "kpis_performance",
+      "type": "kpi_grid",
+      "title": "Supplier Performance KPIs",
+      "oracles": [
+        "supply_chain_supplier_performance_on_time_delivery_rate_percent",
+        "supply_chain_supplier_performance_quality_acceptance_rate_percent",
+        "supply_chain_supplier_performance_defect_rate_percent",
+        "supply_chain_supplier_performance_avg_lead_time_days_days",
+        "supply_chain_supplier_performance_total_spend_currency",
+        "supply_chain_procurement_spend_count_overdue"
+      ],
+      "config": {
+        "columns": 3,
+        "show_rag_status": true,
+        "highlight_thresholds": {
+          "supply_chain_supplier_performance_on_time_delivery_rate_percent": {
+            "red_below": 85,
+            "amber_below": 92
+          },
+          "supply_chain_supplier_performance_defect_rate_percent": {
+            "red_above": 5,
+            "amber_above": 2
+          },
+          "supply_chain_supplier_performance_quality_acceptance_rate_percent": {
+            "red_below": 90,
+            "amber_below": 95
+          }
+        }
+      }
+    },
+    {
+      "id": "chart_delivery_vs_quality",
+      "type": "bar_chart",
+      "title": "On-Time Delivery Rate vs Quality Acceptance Rate by Supplier",
+      "oracles": [
+        "supply_chain_supplier_performance_on_time_delivery_rate_percent",
+        "supply_chain_supplier_performance_quality_acceptance_rate_percent"
+      ],
+      "config": {
+        "max_bars": 10,
+        "color": "blue",
+        "group_by": "supplier",
+        "show_target_line": true,
+        "target_value": 95
+      }
+    },
+    {
+      "id": "chart_defect_spend",
+      "type": "bar_chart",
+      "title": "Defect Rate vs Total Spend by Supplier",
+      "oracles": [
+        "supply_chain_supplier_performance_defect_rate_percent",
+        "supply_chain_supplier_performance_total_spend_currency"
+      ],
+      "config": {
+        "max_bars": 10,
+        "color": "red",
+        "group_by": "supplier",
+        "dual_axis": true
+      }
+    },
+    {
+      "id": "kpis_receipt_quality",
+      "type": "kpi_grid",
+      "title": "Goods Receipt Quality Summary",
+      "oracles": [
+        "supply_chain_goods_receipts_count_rejected",
+        "supply_chain_goods_receipts_count_partially_accepted",
+        "supply_chain_goods_receipts_quantity_rejected_count",
+        "supply_chain_goods_receipts_quantity_accepted_count"
+      ],
+      "config": {
+        "columns": 4,
+        "show_rag_status": true
+      }
+    },
+    {
+      "id": "chart_lead_time_spread",
+      "type": "bar_chart",
+      "title": "Lead Time Spread: Min vs Max by Supplier",
+      "oracles": [
+        "supply_chain_lead_times_min_lead_time_days_days",
+        "supply_chain_lead_times_max_lead_time_days_days"
+      ],
+      "config": {
+        "max_bars": 10,
+        "color": "amber",
+        "group_by": "supplier",
+        "show_variance": true
+      }
+    },
+    {
+      "id": "chart_po_risk",
+      "type": "bar_chart",
+      "title": "Purchase Order Risk: Pending Approval & Cancellations",
+      "oracles": [
+        "supply_chain_purchase_orders_count_pending_approval",
+        "supply_chain_purchase_orders_count_cancelled"
+      ],
+      "config": {
+        "max_bars": 8,
+        "color": "orange",
+        "group_by": "supplier"
+      }
+    },
+    {
+      "id": "risk_table",
+      "type": "table",
+      "title": "At-Risk Supplier Summary",
+      "oracles": [
+        "supply_chain_supplier_performance_on_time_delivery_rate_percent",
+        "supply_chain_supplier_performance_defect_rate_percent",
+        "supply_chain_supplier_performance_avg_lead_time_days_days",
+        "supply_chain_supplier_performance_total_spend_currency",
+        "supply_chain_goods_receipts_count_rejected",
+        "supply_chain_procurement_spend_count_overdue"
+      ],
+      "config": {
+        "sortable": true,
+        "highlight_risk_rows": true,
+        "risk_flag_conditions": {
+          "defect_rate_above": 3,
+          "on_time_delivery_below": 90,
+          "lead_time_days_above": 30
+        },
+        "max_rows": 15
+      }
+    },
+    {
+      "id": "narrative",
+      "type": "narrative",
+      "title": "Executive Risk Summary",
+      "oracles": [],
+      "config": {}
+    },
+    {
+      "id": "audit",
+      "type": "audit_trail",
+      "title": "Oracle Sources",
+      "oracles": [],
+      "config": {}
+    },
+    {
+      "id": "footer",
+      "type": "footer",
+      "title": "",
+      "oracles": [],
+      "config": {}
+    }
+  ],
+  "narrative": {
+    "enabled": true,
+    "audience_tone": "strategic",
+    "max_words": 220,
+    "structure": [
+      "observation",
+      "context",
+      "driver",
+      "implication",
+      "action"
+    ],
+    "highlight_thresholds": true,
+    "focus_areas": [
+      "suppliers with defect rate above 3%",
+      "on-time delivery below 90%",
+      "lead time variance outliers",
+      "high-spend suppliers with quality risk",
+      "overdue procurement and pending approvals"
+    ]
+  },
+  "delivery": {
+    "formats": [
+      "html",
+      "pdf"
+    ],
+    "filename_template": "supplier_risk_quality_scorecard_weekly_{date}"
+  },
+  "coverage": {
+    "total": 22,
+    "available": 22,
+    "missing": 0,
+    "available_ids": [
+      "supply_chain_suppliers_count",
+      "supply_chain_suppliers_count_active",
+      "supply_chain_suppliers_count_on_hold",
+      "supply_chain_suppliers_count_inactive",
+      "supply_chain_supplier_performance_count",
+      "supply_chain_supplier_performance_on_time_delivery_rate_percent",
+      "supply_chain_supplier_performance_quality_acceptance_rate_percent",
+      "supply_chain_supplier_performance_defect_rate_percent",
+      "supply_chain_supplier_performance_avg_lead_time_days_days",
+      "supply_chain_supplier_performance_total_spend_currency",
+      "supply_chain_supplier_performance_total_orders_currency",
+      "supply_chain_lead_times_min_lead_time_days_days",
+      "supply_chain_lead_times_max_lead_time_days_days",
+      "supply_chain_lead_times_order_count_count",
+      "supply_chain_goods_receipts_count_rejected",
+      "supply_chain_goods_receipts_count_partially_accepted",
+      "supply_chain_goods_receipts_quantity_rejected_count",
+      "supply_chain_goods_receipts_quantity_accepted_count",
+      "supply_chain_purchase_orders_count_pending_approval",
+      "supply_chain_purchase_orders_count_cancelled",
+      "supply_chain_procurement_spend_spend_amount_currency",
+      "supply_chain_procurement_spend_count_overdue"
+    ],
+    "missing_oracles": [],
+    "status": "READY"
+  }
+}

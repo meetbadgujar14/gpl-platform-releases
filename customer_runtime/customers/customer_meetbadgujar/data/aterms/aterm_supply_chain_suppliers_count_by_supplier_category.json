@@ -1,0 +1,41 @@
+{
+  "id": "aterm:supply_chain_suppliers_count_by_supplier_category",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_count_by_supplier_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "count",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_supplier_category"
+  },
+  "oracle_value": {
+    "Chemicals": 1.0,
+    "Cold Storage & Logistics": 1.0,
+    "Components & Parts": 2.0,
+    "Electronics": 1.0,
+    "Freight & Transportation": 2.0,
+    "IT & Technology": 1.0,
+    "MRO": 1.0,
+    "Packaging": 2.0,
+    "Raw Materials": 2.0,
+    "Safety & Compliance": 1.0,
+    "Textiles & Fabric": 1.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_suppliers_ERP_dimension', 'COUNT_DISTINCT', 'supplier_id', 'supplier_category', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "How many supplierss by supplier category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

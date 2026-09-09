@@ -1,0 +1,149 @@
+{
+  "context_id": "retail_shopify",
+  "context_name": "Retail / Shopify",
+  "generated_at": "2026-09-01T06:58:07.284352+00:00",
+  "primary_date_field": {
+    "table": "retail_shopify_payments_ERP_record",
+    "column": "expected_date"
+  },
+  "filters": [
+    {
+      "id": "period",
+      "type": "date_range",
+      "table": "retail_shopify_payments_ERP_record",
+      "column": "expected_date"
+    }
+  ],
+  "kpis": [
+    {
+      "id": "total_retail_shopify_order_status_history_ERP_state",
+      "title": "Total Order Status History",
+      "type": "simple",
+      "table": "retail_shopify_order_status_history_ERP_state",
+      "column": "id",
+      "aggregation": "count",
+      "format": "number"
+    },
+    {
+      "id": "total_retail_shopify_payments_ERP_record",
+      "title": "Total Payments",
+      "type": "simple",
+      "table": "retail_shopify_payments_ERP_record",
+      "column": "id",
+      "aggregation": "count",
+      "format": "number"
+    },
+    {
+      "id": "chargeback_rate_retail_shopify_order_status_history_ERP_state",
+      "title": "Chargeback Rate",
+      "type": "ratio",
+      "table": "retail_shopify_order_status_history_ERP_state",
+      "numerator": {
+        "column": "id",
+        "aggregation": "count_where",
+        "filter_column": "type",
+        "filter_value": "chargeback"
+      },
+      "denominator": {
+        "column": "id",
+        "aggregation": "count"
+      },
+      "format": "percent"
+    },
+    {
+      "id": "approved_rate_retail_shopify_order_status_history_ERP_state",
+      "title": "Approved Rate",
+      "type": "ratio",
+      "table": "retail_shopify_order_status_history_ERP_state",
+      "numerator": {
+        "column": "id",
+        "aggregation": "count_where",
+        "filter_column": "status",
+        "filter_value": "approved"
+      },
+      "denominator": {
+        "column": "id",
+        "aggregation": "count"
+      },
+      "format": "percent"
+    },
+    {
+      "id": "cancelled_rate_retail_shopify_payments_ERP_record",
+      "title": "Cancelled Rate",
+      "type": "ratio",
+      "table": "retail_shopify_payments_ERP_record",
+      "numerator": {
+        "column": "id",
+        "aggregation": "count_where",
+        "filter_column": "status",
+        "filter_value": "cancelled"
+      },
+      "denominator": {
+        "column": "id",
+        "aggregation": "count"
+      },
+      "format": "percent"
+    },
+    {
+      "id": "total_supplier_retail_shopify_order_status_history_ERP_state",
+      "title": "Total Supplier",
+      "type": "simple",
+      "table": "retail_shopify_order_status_history_ERP_state",
+      "column": "supplier",
+      "aggregation": "sum",
+      "format": "number"
+    }
+  ],
+  "charts": [
+    {
+      "id": "type_distribution_retail_shopify_order_status_history_ERP_state",
+      "title": "Type Distribution",
+      "type": "donut",
+      "table": "retail_shopify_order_status_history_ERP_state",
+      "dimension": "type",
+      "dimension_type": "status",
+      "measure": "id",
+      "aggregation": "count"
+    },
+    {
+      "id": "status_distribution_retail_shopify_order_status_history_ERP_state",
+      "title": "Status Distribution",
+      "type": "donut",
+      "table": "retail_shopify_order_status_history_ERP_state",
+      "dimension": "status",
+      "dimension_type": "status",
+      "measure": "id",
+      "aggregation": "count"
+    },
+    {
+      "id": "status_distribution_retail_shopify_payments_ERP_record",
+      "title": "Status Distribution",
+      "type": "donut",
+      "table": "retail_shopify_payments_ERP_record",
+      "dimension": "status",
+      "dimension_type": "status",
+      "measure": "id",
+      "aggregation": "count"
+    },
+    {
+      "id": "retail_shopify_order_status_history_ERP_state_over_time",
+      "title": "Order Status History Over Time",
+      "type": "line",
+      "table": "retail_shopify_order_status_history_ERP_state",
+      "dimension": "date",
+      "dimension_type": "date",
+      "measure": "id",
+      "aggregation": "count"
+    },
+    {
+      "id": "retail_shopify_payments_ERP_record_over_time",
+      "title": "Payments Over Time",
+      "type": "line",
+      "table": "retail_shopify_payments_ERP_record",
+      "dimension": "date",
+      "dimension_type": "date",
+      "measure": "id",
+      "aggregation": "count"
+    }
+  ]
+}

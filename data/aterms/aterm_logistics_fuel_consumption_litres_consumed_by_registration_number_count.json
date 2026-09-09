@@ -1,0 +1,43 @@
+{
+  "id": "aterm:logistics_fuel_consumption_litres_consumed_by_registration_number_count",
+  "type": "Aterm",
+  "canonical_id": "logistics_fuel_consumption_litres_consumed_by_registration_number_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "fuel_consumption",
+    "measure": "litres_consumed",
+    "state": "all",
+    "scope": "by_registration_number",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "AZ-1485-LMN": 334.6,
+    "CA-7734-PQR": 601.8000000000001,
+    "CO-5567-RST": 670.8,
+    "FL-2295-WXY": 189.6,
+    "GA-6079-KNO": 586.0,
+    "IL-3316-HIJ": 495.5,
+    "MN-2957-BCD": 298.5,
+    "NC-7364-XYZ": 781.2,
+    "NY-8842-EFG": 587.9,
+    "OH-5130-ABD": 278.1,
+    "OR-8842-GIJ": 349.3,
+    "TX-4821-KLM": 475.0,
+    "WA-9203-OPQ": 198.4
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(litres_consumed) FROM logistics_fuel_consumption_WMS_record JOIN logistics_vehicles_MANUAL_dimension ON vehicle_id=vehicle_id GROUP BY registration_number)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:17Z",
+  "usage_count": 0,
+  "source_goal": "What is the total litres consumed of fuel_consumptions by registration number?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:45Z"
+}

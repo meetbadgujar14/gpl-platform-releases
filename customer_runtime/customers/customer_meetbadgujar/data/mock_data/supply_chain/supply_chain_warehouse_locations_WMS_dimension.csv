@@ -1,0 +1,6 @@
+location_id,warehouse_id,warehouse_name,zone,aisle,bin,location_type,country,capacity_units,is_active,created_date
+LOC-7423,WH-3081,Meridian Fulfillment Hub,A,C-11,B-07-08C,Pick Face,USA,240,true,2026-09-01
+LOC-5891,WH-4452,Northgate Logistics Warehouse,B,A-04,A-04-12B,Pick Face,USA,80,false,2026-07-14
+LOC-2347,WH-3081,Pacific Rim Distribution Center,D,A-04,B-07-08C,Bulk Storage,UK,160,false,2026-03-22
+LOC-9014,WH-6673,Pacific Rim Distribution Center,C,A-01,B-07-08C,Overstock,UK,320,true,2025-04-09
+LOC-6182,WH-4452,Meridian Fulfillment Hub,A,B-07,C-11-03A,Pick Face,Canada,500,true,2026-01-30

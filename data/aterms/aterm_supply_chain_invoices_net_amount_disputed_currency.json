@@ -1,0 +1,31 @@
+{
+  "id": "aterm:supply_chain_invoices_net_amount_disputed_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_invoices_net_amount_disputed_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "invoices",
+    "measure": "net_amount",
+    "state": "Disputed",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 138288.0,
+  "formula_line": "MEASURE('supply_chain_invoices_ERP_record', 'SUM', 'net_amount', [{'field': 'invoice_status', 'op': '=', 'value': 'Disputed'}])",
+  "exec_formula": "MEASURE('supply_chain_invoices_ERP_record', 'SUM', 'net_amount', [{'field': 'invoice_status', 'op': '=', 'value': 'Disputed'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_wizard_execution",
+  "created_at": "2026-08-10T06:53:58Z",
+  "usage_count": 0,
+  "source_goal": "What is the total value of disputed invoices currently under review?",
+  "wave": "B",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE steps=5",
+  "wizard_steps": 5
+}

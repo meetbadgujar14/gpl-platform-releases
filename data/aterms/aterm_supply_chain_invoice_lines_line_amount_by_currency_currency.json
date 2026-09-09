@@ -1,0 +1,33 @@
+{
+  "id": "aterm:supply_chain_invoice_lines_line_amount_by_currency_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_invoice_lines_line_amount_by_currency_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "invoice_lines",
+    "measure": "line_amount",
+    "state": "all",
+    "scope": "by_currency",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "EUR": 58775.0,
+    "GBP": 188070.0,
+    "USD": 366762.5
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(line_amount) FROM supply_chain_invoice_lines_ERP_record JOIN supply_chain_invoices_ERP_record ON invoice_id=invoice_id GROUP BY currency)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:49Z",
+  "usage_count": 0,
+  "source_goal": "What is the total line amount of invoice_liness by currency?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:51Z"
+}

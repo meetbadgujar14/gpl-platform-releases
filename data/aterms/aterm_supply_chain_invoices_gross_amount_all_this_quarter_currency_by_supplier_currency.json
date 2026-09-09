@@ -1,0 +1,31 @@
+{
+  "id": "aterm:supply_chain_invoices_gross_amount_all_this_quarter_currency_by_supplier_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_invoices_gross_amount_all_this_quarter_currency_by_supplier_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "invoices",
+    "measure": "gross_amount",
+    "state": "all",
+    "scope": "by_supplier",
+    "time": "this_quarter",
+    "unit": "currency",
+    "series": "by_supplier"
+  },
+  "oracle_value": {},
+  "formula_line": "MEASURE_GROUPED('supply_chain_invoices_ERP_record', 'SUM', 'gross_amount', group_by_col='supplier', filters=None)",
+  "exec_formula": "MEASURE_GROUPED('supply_chain_invoices_ERP_record', 'SUM', 'gross_amount', group_by_col='supplier', filters=None)",
+  "verified": true,
+  "ai_locked": false,
+  "lock_method": "llm_wizard",
+  "verify_reason": "LLM_WIZARD_execution",
+  "created_at": "2026-09-07T05:56:47Z",
+  "usage_count": 0,
+  "source_goal": "What is the total invoice gross amount broken down by supplier this quarter?",
+  "wave": "B",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_GROUPED steps=5",
+  "wizard_steps": 5
+}

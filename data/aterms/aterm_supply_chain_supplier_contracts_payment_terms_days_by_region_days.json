@@ -1,0 +1,34 @@
+{
+  "id": "aterm:supply_chain_supplier_contracts_payment_terms_days_by_region_days",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_supplier_contracts_payment_terms_days_by_region_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "supplier_contracts",
+    "measure": "payment_terms_days",
+    "state": "all",
+    "scope": "by_region",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Asia-Pacific": 105.0,
+    "Europe": 120.0,
+    "Middle East & Africa": 30.0,
+    "North America": 720.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(payment_terms_days) FROM supply_chain_supplier_contracts_ERP_record JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY region)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total payment terms days of supplier_contractss by region?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

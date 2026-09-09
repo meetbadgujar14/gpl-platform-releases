@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_inbound_delivery_schedule_days_early_late_days",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inbound_delivery_schedule_days_early_late_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inbound_delivery_schedule",
+    "measure": "days_early_late",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": 18.0,
+  "formula_line": "MEASURE('supply_chain_inbound_delivery_schedule_ERP_record', 'SUM', 'days_early_late', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:37Z",
+  "usage_count": 0,
+  "source_goal": "What is the total days early late of inbound_delivery_schedules?",
+  "wave": 1,
+  "operator": "MEASURE",
+  "verified_at": "2026-09-02T06:49:02Z"
+}

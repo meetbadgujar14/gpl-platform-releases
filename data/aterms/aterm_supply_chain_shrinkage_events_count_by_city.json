@@ -1,0 +1,34 @@
+{
+  "id": "aterm:supply_chain_shrinkage_events_count_by_city",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shrinkage_events_count_by_city",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shrinkage_events",
+    "measure": "count",
+    "state": "all",
+    "scope": "by_city",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Los Angeles": 2.0,
+    "Nanjing": 12.0,
+    "Nottingham": 6.0,
+    "Sydney": 5.0
+  },
+  "formula_line": "MEASURE_GROUPED(COUNT_DISTINCT(shrinkage_event_id) FROM supply_chain_shrinkage_events_WMS_event JOIN supply_chain_warehouses_WMS_dimension ON warehouse_id=warehouse_id GROUP BY city)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:50Z",
+  "usage_count": 0,
+  "source_goal": "How many shrinkage_eventss by city?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:52Z"
+}

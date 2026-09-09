@@ -1,0 +1,43 @@
+{
+  "id": "aterm:supply_chain_inventory_transactions_total_cost_impact_by_item_subcategory_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_transactions_total_cost_impact_by_item_subcategory_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_transactions",
+    "measure": "total_cost_impact",
+    "state": "all",
+    "scope": "by_item_subcategory",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Circuit Protection": -8398.0,
+    "Conduit & Fittings": -2925.0,
+    "Drive Belts": 73780.0,
+    "Filtration": -3760.0,
+    "Gate Valves": 12975.0,
+    "Hand Tools": 67353.5,
+    "Head Protection": 19552.5,
+    "Hex Bolts": -1160.0,
+    "Industrial Drums": 30520.0,
+    "Machine Oils": -8686.5,
+    "Solvents & Cleaners": 157316.6,
+    "Stretch Film": 25122.0,
+    "Wiring & Cable": -10192.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(total_cost_impact) FROM supply_chain_inventory_transactions_WMS_event JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY item_subcategory)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total total cost impact of inventory_transactionss by item subcategory?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

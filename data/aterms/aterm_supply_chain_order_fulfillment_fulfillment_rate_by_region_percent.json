@@ -1,0 +1,35 @@
+{
+  "id": "aterm:supply_chain_order_fulfillment_fulfillment_rate_by_region_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_order_fulfillment_fulfillment_rate_by_region_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "order_fulfillment",
+    "measure": "fulfillment_rate",
+    "state": "all",
+    "scope": "by_region",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "East Midlands": 100.0,
+    "Jiangsu": 100.0,
+    "New South Wales": 1181.88,
+    "North Rhine-Westphalia": 664.0,
+    "West Coast": 178.75
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(fulfillment_rate) FROM supply_chain_order_fulfillment_WMS_event JOIN supply_chain_warehouses_WMS_dimension ON warehouse_id=warehouse_id GROUP BY region)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:50Z",
+  "usage_count": 0,
+  "source_goal": "What is the total fulfillment rate of order_fulfillments by region?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:51Z"
+}

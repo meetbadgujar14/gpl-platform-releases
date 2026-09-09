@@ -1,0 +1,43 @@
+{
+  "id": "aterm:supply_chain_inbound_delivery_schedule_expected_quantity_count_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inbound_delivery_schedule_expected_quantity_count_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inbound_delivery_schedule",
+    "measure": "expected_quantity",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2024-10": 840.0,
+    "2024-12": 1470.0,
+    "2025-08": 730.0,
+    "2025-11": 2060.0,
+    "2026-01": 930.0,
+    "2026-02": 1640.0,
+    "2026-03": 510.0,
+    "2026-04": 2750.0,
+    "2026-05": 2990.0,
+    "2026-06": 2010.0,
+    "2026-07": 3230.0,
+    "2026-08": 3130.0,
+    "2026-09": 9550.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_inbound_delivery_schedule_ERP_record', 'SUM', 'expected_quantity', None, [], None, None, None, {'date_col': 'scheduled_delivery_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "What is the total expected quantity of inbound_delivery_schedules by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:07Z"
+}

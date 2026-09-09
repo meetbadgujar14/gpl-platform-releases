@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_stock_transfers_transfer_cost_currency_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_stock_transfers_transfer_cost_currency_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "stock_transfers",
+    "measure": "transfer_cost",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2025-09": 1230.0,
+    "2025-10": 2520.25,
+    "2025-12": 1980.0,
+    "2026-01": 1560.5,
+    "2026-02": 5640.75,
+    "2026-03": 2700.0,
+    "2026-04": 3315.25,
+    "2026-05": 4140.5,
+    "2026-06": 3825.75,
+    "2026-07": 6975.25,
+    "2026-08": 7591.25,
+    "2026-09": 5225.5
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_stock_transfers_WMS_record', 'SUM', 'transfer_cost', None, [], None, None, None, {'date_col': 'transfer_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "What is the total transfer cost of stock_transferss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "aterm:logistics_fuel_consumption_average_cost_per_litre_currency",
+  "type": "Aterm",
+  "canonical_id": "logistics_fuel_consumption_average_cost_per_litre_currency",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "fuel_consumption",
+    "measure": "average_cost_per_litre",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 1.4489285714285713,
+  "formula_line": "logistics_fuel_consumption_average_cost_per_litre_currency = {logistics_fuel_consumption_cost_per_litre_currency} / {logistics_fuel_consumption_count}",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-07-22T09:51:18Z",
+  "usage_count": 0,
+  "source_goal": "What is the average cost per litre per fuel_consumption?",
+  "wave": 5,
+  "depends_on": [
+    "logistics_fuel_consumption_cost_per_litre_currency",
+    "logistics_fuel_consumption_count"
+  ],
+  "dep_values": {
+    "logistics_fuel_consumption_cost_per_litre_currency": 40.57,
+    "logistics_fuel_consumption_count": 28.0
+  },
+  "verified_at": "2026-07-22T12:18:46Z"
+}

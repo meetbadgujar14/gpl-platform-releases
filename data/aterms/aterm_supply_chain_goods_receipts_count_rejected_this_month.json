@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_goods_receipts_count_rejected_this_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_goods_receipts_count_rejected_this_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "goods_receipts",
+    "measure": "count",
+    "state": "Rejected",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_MONTH_FIXED(COUNT_DISTINCT(receipt_id) FROM supply_chain_goods_receipts_ERP_record WHERE receipt_date IN 2026-07 WHERE receipt_status=Rejected)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-07-22T12:17:44Z",
+  "usage_count": 0,
+  "source_goal": "How many Rejected goods_receiptss are there this month?",
+  "wave": 3,
+  "operator": "MEASURE_MONTH_FIXED",
+  "verified_at": "2026-07-22T12:18:48Z"
+}

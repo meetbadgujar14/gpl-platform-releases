@@ -1,0 +1,37 @@
+{
+  "id": "aterm:supply_chain_cost_centers_count_by_region",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_cost_centers_count_by_region",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "cost_centers",
+    "measure": "count",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_region"
+  },
+  "oracle_value": {
+    "Asia Pacific": 1.0,
+    "Central US": 1.0,
+    "East US": 1.0,
+    "Europe": 1.0,
+    "Global": 1.0,
+    "North America": 4.0,
+    "West US": 1.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_cost_centers_ERP_dimension', 'COUNT_DISTINCT', 'cost_center_id', 'region', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "How many cost_centerss by region?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:07Z"
+}

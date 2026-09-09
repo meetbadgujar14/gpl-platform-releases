@@ -1,0 +1,16 @@
+buyer_id,buyer_name,email,department,category_responsibility,spend_limit,active_po_count,is_active,hire_date
+BYR-4821,Brianna Osei,m.delgado@nexusmanufacturing.com,Supply Chain,Chemical & Adhesives,750000,14,false,2026-09-01
+BYR-7364,Brianna Osei,p.nambiar@meridianlogistics.com,Supply Chain,Plastics & Polymers,420000,9,false,2026-09-01
+BYR-2193,Fatima Ouedraogo,d.okonkwo@atlanticrimgroup.com,Operations,Logistics & Warehousing,1200000,22,false,2026-09-01
+BYR-5507,Carlos Meléndez,i.haugen@nordicsupplyco.com,Finance & Procurement,Indirect Goods & Services,310000,7,false,2026-07-15
+BYR-8849,Marcus Delgado,t.ferreira@pacificrimlogistics.com,Finance & Procurement,Electronics & Components,980000,18,false,2026-06-03
+BYR-3376,Angela Whitfield,a.whitfield@keystoneindustrial.com,Supply Chain,Raw Materials,560000,11,true,2026-05-20
+BYR-6041,Derek Okonkwo,y.alrashid@crescentmfg.com,Operations,Chemical & Adhesives,2500000,5,false,2026-04-11
+BYR-9182,Angela Whitfield,s.vo@apexsupplychain.com,Procurement,Transportation & Freight,275000,16,true,2026-03-08
+BYR-1654,Derek Okonkwo,r.kowalski@greatlakesdistrib.com,Procurement,Capital Equipment,890000,20,true,2026-02-14
+BYR-4459,Marcus Delgado,f.ouedraogo@saheltradegroup.com,Supply Chain,Plastics & Polymers,630000,13,false,2026-01-27
+BYR-7718,Priya Nambiar,j.estrella@suncoastprocure.com,Procurement,Indirect Goods & Services,445000,8,true,2025-11-05
+BYR-2887,Yusuf Al-Rashid,l.meishan@alphacomponentscorp.com,Supply Chain,Capital Equipment,1750000,27,true,2025-08-19
+BYR-5233,Carlos Meléndez,b.osei@vantageoperations.com,Operations,IT Hardware & Software,820000,6,true,2025-05-30
+BYR-8095,Carlos Meléndez,c.melendez@ironbridgesupply.com,Supply Chain,Indirect Goods & Services,1100000,19,false,2025-02-11
+BYR-3602,Yusuf Al-Rashid,n.brennan@summitprocurementllc.com,Supply Chain,IT Hardware & Software,195000,10,false,2024-10-22

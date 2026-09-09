@@ -1,0 +1,41 @@
+{
+  "id": "aterm:supply_chain_inventory_levels_quantity_on_hand_count_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_levels_quantity_on_hand_count_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_levels",
+    "measure": "quantity_on_hand",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2025-08": 4200.0,
+    "2025-09": 145.0,
+    "2025-10": 14.0,
+    "2025-11": 85.0,
+    "2026-02": 290.0,
+    "2026-03": 310.0,
+    "2026-04": 210.0,
+    "2026-06": 74.0,
+    "2026-07": 9500.0,
+    "2026-08": 18.0,
+    "2026-09": 26549.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_inventory_levels_WMS_state', 'SUM', 'quantity_on_hand', None, [], None, None, None, {'date_col': 'snapshot_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quantity on hand of inventory_levelss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

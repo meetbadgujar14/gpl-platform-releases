@@ -1,0 +1,11 @@
+cost_center_id,cost_center_name,cost_center_code,department,business_unit,region,annual_budget,is_active,created_date
+CC-4821,Pacific Northwest Distribution Hub,SC-DIST-PNW,Distribution,Supply Chain Operations,Pacific Northwest,4750000,True,2022-03-15
+CC-7364,Southeast Procurement Center,SC-PROC-SE,Procurement,Strategic Sourcing,Southeast,2980000,True,2021-08-22
+CC-1953,Midwest Warehouse Operations,SC-WH-MW,Warehousing,Supply Chain Operations,Midwest,6120000,True,2020-11-04
+CC-5507,Northeast Logistics Planning,SC-LOG-NE,Logistics,Transportation Management,Northeast,3450000,True,2023-01-10
+CC-8839,Southwest Inventory Control,SC-INV-SW,Inventory Management,Supply Chain Operations,Southwest,1875000,False,2021-05-17
+CC-3276,Global Supplier Relations,SC-SUPP-GL,Vendor Management,Strategic Sourcing,Global,5340000,True,2022-09-28
+CC-6142,APAC Import Coordination,SC-IMP-APAC,Import/Export,International Trade,Asia Pacific,7890000,True,2020-06-30
+CC-9415,Central Demand Planning,SC-DPL-CN,Demand Planning,Supply Chain Analytics,Central,2210000,True,2023-04-05
+CC-2688,European Freight Management,SC-FRT-EU,Freight,Transportation Management,Europe,9630000,False,2019-12-12
+CC-7031,North America Quality Assurance,SC-QA-NA,Quality Assurance,Supply Chain Operations,North America,3115000,True,2022-07-19

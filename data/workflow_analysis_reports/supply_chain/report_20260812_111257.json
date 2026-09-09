@@ -1,0 +1,99 @@
+{
+  "vertical": "supply_chain",
+  "models_used": [
+    "gpt4o"
+  ],
+  "total": 2,
+  "passed": 2,
+  "flagged": 0,
+  "failed": 0,
+  "errors": 0,
+  "results": [
+    {
+      "canonical_id": "supply_chain_items_average_safety_stock_qty_count",
+      "source_goal": "What is the average safety stock qty per items?",
+      "formula_line": "supply_chain_items_average_safety_stock_qty_count = {supply_chain_items_safety_stock_qty_count} / ({supply_chain_items_count} if {supply_chain_items_count} != 0 else 1)",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The division operation is appropriate to calculate an average.",
+            "C2": "The formula correctly uses total safety stock and item count for the average.",
+            "C3": "Both dependencies use the 'all_time' time scope, aligning with the composed metric.",
+            "C4": "There are no state filters on the dependencies, matching the composed metric's filter.",
+            "C5": "Division-by-zero is handled with an 'if count != 0 else 1' guard.",
+            "C6": "The result is a ratio of safety stock to items, so the unit is count and makes sense."
+          },
+          "flags": [],
+          "reasoning": "All checks pass with correct use of dependencies and appropriate operations for the average calculation.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 4196
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T11:12:52Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_lead_times_average_max_lead_time_days_days",
+      "source_goal": "What is the average max lead time days per lead_times?",
+      "formula_line": "supply_chain_lead_times_average_max_lead_time_days_days = {supply_chain_lead_times_max_lead_time_days_days} / ({supply_chain_lead_times_count} if {supply_chain_lead_times_count} != 0 else 1)",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses division to calculate an average, which matches the business question.",
+            "C2": "The formula uses total max lead time days and count which are the correct components for averaging.",
+            "C3": "The dependencies share the 'all_time' time scope, matching the main metric.",
+            "C4": "There are no state filters in dependencies or the main formula, ensuring alignment.",
+            "C5": "The formula includes a division-by-zero guard by using a conditional check.",
+            "C6": "The result unit is 'days', which makes sense for averaging 'max lead time days'."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly computes the average max lead time days using appropriate building blocks and guards against division by zero, with full alignment in time scope and state filter.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 5207
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T11:12:57Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    }
+  ],
+  "error_details": [],
+  "run_at": "2026-08-12T11:12:57Z"
+}

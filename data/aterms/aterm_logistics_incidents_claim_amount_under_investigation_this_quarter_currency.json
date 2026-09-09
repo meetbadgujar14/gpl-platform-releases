@@ -1,0 +1,31 @@
+{
+  "id": "aterm:logistics_incidents_claim_amount_under_investigation_this_quarter_currency",
+  "type": "Aterm",
+  "canonical_id": "logistics_incidents_claim_amount_under_investigation_this_quarter_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "incidents",
+    "measure": "claim_amount",
+    "state": "Under Investigation",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_QUARTER_FIXED('logistics_incidents_ERP_record', 'incident_date', 'SUM', 'claim_amount', 'this_quarter', [{'field': 'incident_status', 'op': '=', 'value': 'Under Investigation'}])",
+  "exec_formula": "MEASURE_QUARTER_FIXED('logistics_incidents_ERP_record', 'incident_date', 'SUM', 'claim_amount', 'this_quarter', [{'field': 'incident_status', 'op': '=', 'value': 'Under Investigation'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_wizard_execution",
+  "created_at": "2026-08-10T06:51:30Z",
+  "usage_count": 0,
+  "source_goal": "What is the total claim amount across all incidents currently under investigation — quantifying unresolved financial liability?",
+  "wave": "B",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_QUARTER_FIXED steps=7",
+  "wizard_steps": 7
+}

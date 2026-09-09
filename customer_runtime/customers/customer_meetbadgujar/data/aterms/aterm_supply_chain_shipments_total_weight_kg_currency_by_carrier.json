@@ -1,0 +1,40 @@
+{
+  "id": "aterm:supply_chain_shipments_total_weight_kg_currency_by_carrier",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shipments_total_weight_kg_currency_by_carrier",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shipments",
+    "measure": "total_weight_kg",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_carrier"
+  },
+  "oracle_value": {
+    "ABF Freight": 20426.8,
+    "Estes Express Lines": 3680.45,
+    "FedEx Freight": 5555.9,
+    "Meridian Transport Solutions": 8149.4,
+    "Old Dominion Freight": 8382.4,
+    "Pacific Rim Logistics": 4113.3,
+    "R+L Carriers": 1845.7,
+    "Saia LTL Freight": 6310.7,
+    "UPS Supply Chain": 4165.0,
+    "XPO Logistics": 11201.8
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_shipments_WMS_record', 'SUM', 'total_weight_kg', 'carrier', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T09:43:57Z",
+  "usage_count": 0,
+  "source_goal": "What is the total total weight kg of shipmentss by carrier?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:07Z"
+}

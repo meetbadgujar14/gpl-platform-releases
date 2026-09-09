@@ -1,0 +1,204 @@
+{
+  "id": "ptem:report_owner_retail_sales_performance_monthly",
+  "canonical_id": "report_owner_retail_sales_performance_monthly",
+  "type": "Ptem",
+  "version": 1,
+  "meta": {
+    "title": "Retail Sales Performance Report",
+    "description": "Monthly sales overview — total revenue, orders, gross margin, top products, top cities, and channel breakdown.",
+    "audience_label": "Business Owner / Sales Head",
+    "verticals": [
+      "retail"
+    ],
+    "tags": [
+      "retail",
+      "sales",
+      "revenue",
+      "orders",
+      "margin",
+      "monthly",
+      "shopify"
+    ]
+  },
+  "slots": {
+    "format": "report",
+    "audience": "owner",
+    "scope": "retail",
+    "frequency": "monthly",
+    "depth": "detailed",
+    "period": "last_month"
+  },
+  "required_oracles": [
+    {
+      "canonical_id": "retail_shopify_order_line_items_revenue_total_currency",
+      "label": "Total Revenue",
+      "format": "currency",
+      "currency_symbol": "₹",
+      "required": true
+    },
+    {
+      "canonical_id": "retail_shopify_order_line_items_order_id_count",
+      "label": "Total Orders",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "retail_shopify_order_line_items_fulfilled_count",
+      "label": "Fulfilled Orders",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "retail_shopify_customers_count",
+      "label": "Total Customers",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "retail_shopify_order_line_items_title_revenue_grouped",
+      "label": "Revenue by Product",
+      "format": "currency",
+      "currency_symbol": "₹",
+      "required": true
+    },
+    {
+      "canonical_id": "retail_shopify_order_line_items_vendor_revenue_grouped",
+      "label": "Revenue by Category",
+      "format": "currency",
+      "currency_symbol": "₹",
+      "required": false
+    },
+    {
+      "canonical_id": "retail_shopify_customers_total_spent_currency",
+      "label": "Total Customer Spend",
+      "format": "currency",
+      "currency_symbol": "₹",
+      "required": false
+    }
+  ],
+  "sections": [
+    {
+      "id": "header",
+      "type": "header",
+      "title": "Retail Sales Performance Report",
+      "oracles": [],
+      "config": {
+        "show_status_pill": true
+      }
+    },
+    {
+      "id": "kpis",
+      "type": "kpi_grid",
+      "title": "Sales snapshot",
+      "oracles": [
+        "retail_shopify_order_line_items_revenue_total_currency",
+        "retail_shopify_order_line_items_order_id_count",
+        "retail_shopify_order_line_items_fulfilled_count",
+        "retail_shopify_customers_count"
+      ],
+      "config": {}
+    },
+    {
+      "id": "revenue_by_product",
+      "type": "bar_chart",
+      "title": "Revenue by product",
+      "oracles": [
+        "retail_shopify_order_line_items_title_revenue_grouped"
+      ],
+      "config": {}
+    },
+    {
+      "id": "revenue_by_category",
+      "type": "bar_chart",
+      "title": "Revenue by category",
+      "oracles": [
+        "retail_shopify_order_line_items_vendor_revenue_grouped"
+      ],
+      "config": {}
+    },
+    {
+      "id": "narrative",
+      "type": "narrative",
+      "title": "Sales analysis",
+      "oracles": [],
+      "config": {}
+    },
+    {
+      "id": "audit",
+      "type": "audit_trail",
+      "title": "Oracle sources",
+      "oracles": [],
+      "config": {}
+    },
+    {
+      "id": "footer",
+      "type": "footer",
+      "title": "",
+      "oracles": [],
+      "config": {}
+    }
+  ],
+  "narrative": {
+    "enabled": true,
+    "style": "business",
+    "tone": "growth_focused"
+  },
+  "delivery": {
+    "formats": [
+      "html",
+      "pdf"
+    ],
+    "layout": "dashboard"
+  },
+  "coverage": {
+    "total": 7,
+    "available": 0,
+    "missing": 7,
+    "available_ids": [],
+    "missing_oracles": [
+      {
+        "canonical_id": "retail_shopify_order_line_items_revenue_total_currency",
+        "label": "Total Revenue",
+        "required": true,
+        "data_requirement": "Requires 'price' and 'quantity' columns in your order line items data."
+      },
+      {
+        "canonical_id": "retail_shopify_order_line_items_order_id_count",
+        "label": "Total Orders",
+        "required": true,
+        "data_requirement": "Requires line data in your order table."
+      },
+      {
+        "canonical_id": "retail_shopify_order_line_items_fulfilled_count",
+        "label": "Fulfilled Orders",
+        "required": true,
+        "data_requirement": "Requires a 'fulfillment_status' column in your order line items data."
+      },
+      {
+        "canonical_id": "retail_shopify_customers_count",
+        "label": "Total Customers",
+        "required": true,
+        "data_requirement": "Requires a customers table (CSV with customer records)."
+      },
+      {
+        "canonical_id": "retail_shopify_order_line_items_title_revenue_grouped",
+        "label": "Revenue by Product",
+        "required": true,
+        "data_requirement": "Requires 'price' and 'quantity' columns in your order line items data."
+      },
+      {
+        "canonical_id": "retail_shopify_order_line_items_vendor_revenue_grouped",
+        "label": "Revenue by Category",
+        "required": false,
+        "data_requirement": "Requires 'price' and 'quantity' columns in your order line items data."
+      },
+      {
+        "canonical_id": "retail_shopify_customers_total_spent_currency",
+        "label": "Total Customer Spend",
+        "required": false,
+        "data_requirement": "Requires total data in your customers table."
+      }
+    ],
+    "status": "PENDING_ORACLES"
+  }
+}

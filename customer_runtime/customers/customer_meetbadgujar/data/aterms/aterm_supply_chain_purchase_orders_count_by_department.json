@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_purchase_orders_count_by_department",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_purchase_orders_count_by_department",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "purchase_orders",
+    "measure": "count",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_department"
+  },
+  "oracle_value": {
+    "Facilities": 5.0,
+    "IT": 4.0,
+    "Logistics": 4.0,
+    "Manufacturing": 5.0,
+    "Operations": 5.0,
+    "Procurement": 5.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_purchase_orders_ERP_record', 'COUNT_DISTINCT', 'po_id', 'department', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "How many purchase_orderss by department?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

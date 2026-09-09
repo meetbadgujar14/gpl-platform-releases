@@ -1,0 +1,43 @@
+{
+  "id": "aterm:supply_chain_inventory_transactions_count_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_transactions_count_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_transactions",
+    "measure": "count",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2024-11": 1.0,
+    "2025-09": 1.0,
+    "2025-10": 1.0,
+    "2025-12": 1.0,
+    "2026-01": 1.0,
+    "2026-02": 1.0,
+    "2026-03": 2.0,
+    "2026-04": 1.0,
+    "2026-05": 1.0,
+    "2026-06": 2.0,
+    "2026-07": 2.0,
+    "2026-08": 2.0,
+    "2026-09": 7.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_inventory_transactions_WMS_event', 'COUNT_DISTINCT', 'transaction_id', None, [], None, None, None, {'date_col': 'transaction_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "How many inventory_transactionss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

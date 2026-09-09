@@ -1,0 +1,40 @@
+{
+  "id": "aterm:supply_chain_shipments_count_by_carrier",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shipments_count_by_carrier",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shipments",
+    "measure": "count",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_carrier"
+  },
+  "oracle_value": {
+    "ABF Freight": 5.0,
+    "Estes Express Lines": 1.0,
+    "FedEx Freight": 2.0,
+    "Meridian Transport Solutions": 3.0,
+    "Old Dominion Freight": 3.0,
+    "Pacific Rim Logistics": 2.0,
+    "R+L Carriers": 1.0,
+    "Saia LTL Freight": 1.0,
+    "UPS Supply Chain": 3.0,
+    "XPO Logistics": 4.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_shipments_WMS_record', 'COUNT_DISTINCT', 'shipment_id', 'carrier', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T09:43:57Z",
+  "usage_count": 0,
+  "source_goal": "How many shipmentss by carrier?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:07Z"
+}

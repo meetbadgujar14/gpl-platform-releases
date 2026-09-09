@@ -1,0 +1,6 @@
+warehouse_id,warehouse_name,warehouse_type,country,region,city,total_capacity_sqm,total_capacity_units,is_active,manager_name,opened_date
+WH-4821,Meridian Cold Storage Facility,Distribution,Germany,Ontario,Barcelona,28400,142000,false,Amara Singh,2026-09-01
+WH-7365,Pacific Rim Distribution Center,Cold Storage,United States,West Coast,Düsseldorf,11750,58000,true,DeShawn Holloway,2026-03-14
+WH-2094,Heartland Fulfillment Hub,Cold Storage,Germany,North Rhine-Westphalia,Barcelona,34900,210000,false,Kenji Watanabe,2026-06-22
+WH-5537,Heartland Fulfillment Hub,Distribution,Germany,Midwest,Düsseldorf,9200,44500,false,Tobias Brandt,2025-11-08
+WH-8813,Iberian Cross-Dock Terminal,Fulfillment,Spain,Midwest,Düsseldorf,47600,310000,true,Kenji Watanabe,2024-12-03

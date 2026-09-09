@@ -1,0 +1,121 @@
+{
+  "wave": "C",
+  "goal_count": 6,
+  "generated_at": "2026-09-02T06:44:34Z",
+  "goals": [
+    {
+      "goal": "What is the total freight cost and total weight shipped broken down by carrier this quarter?",
+      "canonical_id": "supply_chain_shipments_freight_cost_by_carrier_this_quarter_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipments",
+        "measure": "freight_cost",
+        "state": "all",
+        "scope": "by_carrier",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "by_carrier"
+      },
+      "wave": "C",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the invoice status breakdown (Paid, Pending, Disputed, Under Review, Approved) by supplier showing total net amount this quarter?",
+      "canonical_id": "supply_chain_invoices_net_amount_by_supplier_this_quarter_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "net_amount",
+        "state": "all",
+        "scope": "by_supplier",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "by_status"
+      },
+      "wave": "C",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total return value and credit amount broken down by supplier year to date?",
+      "canonical_id": "supply_chain_returns_return_value_by_supplier_ytd_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "return_value",
+        "state": "all",
+        "scope": "by_supplier",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "by_supplier"
+      },
+      "wave": "C",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the gross profit margin compared to operating profit margin broken down by month year to date?",
+      "canonical_id": "supply_chain_financials_gross_profit_margin_by_month_ytd_percent",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "gross_profit_margin",
+        "state": "all",
+        "scope": "by_month",
+        "time": "ytd",
+        "unit": "percent",
+        "series": "by_month"
+      },
+      "wave": "C",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the month-by-month trend of revenue, cost of goods sold, and gross profit this year to date?",
+      "canonical_id": "supply_chain_financials_gross_profit_by_month_ytd_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "gross_profit",
+        "state": "all",
+        "scope": "by_month",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "wave": "C",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "Which buyer has the highest active purchase order count relative to their spend limit this quarter?",
+      "canonical_id": "supply_chain_buyers_active_po_count_by_buyer_this_quarter_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "buyers",
+        "measure": "active_po_count",
+        "state": "all",
+        "scope": "max",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "by_buyer"
+      },
+      "wave": "C",
+      "complexity": "KPI",
+      "join": null
+    }
+  ]
+}

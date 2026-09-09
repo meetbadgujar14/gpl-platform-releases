@@ -1,0 +1,42 @@
+{
+  "id": "aterm:logistics_fuel_consumption_fuel_cost_currency_by_month",
+  "type": "Aterm",
+  "canonical_id": "logistics_fuel_consumption_fuel_cost_currency_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "fuel_consumption",
+    "measure": "fuel_cost",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2024-01": 525.39,
+    "2024-02": 812.04,
+    "2024-03": 758.04,
+    "2024-04": 1081.2600000000002,
+    "2024-05": 621.36,
+    "2024-06": 646.95,
+    "2024-07": 842.3599999999999,
+    "2024-08": 758.06,
+    "2024-09": 434.48,
+    "2024-10": 945.1800000000001,
+    "2024-11": 587.16,
+    "2024-12": 451.58
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(fuel_cost) FROM logistics_fuel_consumption_WMS_record GROUP BY BUCKET(record_date, month))",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:18Z",
+  "usage_count": 0,
+  "source_goal": "What is the total fuel cost of fuel_consumptions by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:46Z"
+}

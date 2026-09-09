@@ -1,0 +1,142 @@
+{
+  "context_id": "supply_chain",
+  "context_name": "Supply Chain",
+  "generated_at": "2026-09-02T06:29:38.399816+00:00",
+  "primary_date_field": {
+    "table": "supply_chain_suppliers_ERP_dimension",
+    "column": "onboarded_date"
+  },
+  "filters": [
+    {
+      "id": "period",
+      "type": "date_range",
+      "table": "supply_chain_suppliers_ERP_dimension",
+      "column": "onboarded_date"
+    }
+  ],
+  "kpis": [
+    {
+      "id": "total_purchase_order_lines",
+      "title": "Total Purchase Order Lines",
+      "type": "simple",
+      "table": "supply_chain_purchase_order_lines_ERP_record",
+      "column": "id",
+      "aggregation": "count",
+      "format": "number",
+      "numerator": null,
+      "denominator": null
+    },
+    {
+      "id": "total_quantity_ordered",
+      "title": "Total Quantity Ordered",
+      "type": "simple",
+      "table": "supply_chain_purchase_order_lines_ERP_record",
+      "column": "quantity_ordered",
+      "aggregation": "sum",
+      "format": "number",
+      "numerator": null,
+      "denominator": null
+    },
+    {
+      "id": "total_revenue",
+      "title": "Total Revenue",
+      "type": "simple",
+      "table": "supply_chain_financials",
+      "column": "revenue",
+      "aggregation": "sum",
+      "format": "currency",
+      "numerator": null,
+      "denominator": null
+    },
+    {
+      "id": "avg_gross_profit_margin",
+      "title": "Avg Gross Profit Margin",
+      "type": "simple",
+      "table": "supply_chain_financials",
+      "column": "gross_profit_margin",
+      "aggregation": "avg",
+      "format": "percent",
+      "numerator": null,
+      "denominator": null
+    },
+    {
+      "id": "avg_reliability_score",
+      "title": "Avg Supplier Reliability Score",
+      "type": "simple",
+      "table": "supply_chain_suppliers_ERP_dimension",
+      "column": "reliability_score",
+      "aggregation": "avg",
+      "format": "decimal",
+      "numerator": null,
+      "denominator": null
+    },
+    {
+      "id": "total_suppliers",
+      "title": "Total Suppliers",
+      "type": "simple",
+      "table": "supply_chain_suppliers_ERP_dimension",
+      "column": "id",
+      "aggregation": "count",
+      "format": "number",
+      "numerator": null,
+      "denominator": null
+    }
+  ],
+  "charts": [
+    {
+      "id": "reliability_score_by_name_supply_chain_suppliers_ERP_dimension",
+      "title": "Reliability Score by Supplier",
+      "type": "bar",
+      "table": "supply_chain_suppliers_ERP_dimension",
+      "dimension": "name",
+      "dimension_type": "category",
+      "measure": "reliability_score",
+      "aggregation": "sum",
+      "format": "number"
+    },
+    {
+      "id": "category_distribution_supply_chain_suppliers_ERP_dimension",
+      "title": "Supplier Category Distribution",
+      "type": "donut",
+      "table": "supply_chain_suppliers_ERP_dimension",
+      "dimension": "category",
+      "dimension_type": "status",
+      "measure": "id",
+      "aggregation": "count",
+      "format": "number"
+    },
+    {
+      "id": "product_category_distribution_supply_chain_financials",
+      "title": "Product Category Distribution",
+      "type": "donut",
+      "table": "supply_chain_financials",
+      "dimension": "product_category",
+      "dimension_type": "status",
+      "measure": "transaction_id",
+      "aggregation": "count",
+      "format": "number"
+    },
+    {
+      "id": "units_sold_supply_chain_financials_over_time",
+      "title": "Units Sold Over Time",
+      "type": "line",
+      "table": "supply_chain_financials",
+      "dimension": "date",
+      "dimension_type": "date",
+      "measure": "units_sold",
+      "aggregation": "sum",
+      "format": "number"
+    },
+    {
+      "id": "revenue_supply_chain_financials_over_time",
+      "title": "Revenue Over Time",
+      "type": "line",
+      "table": "supply_chain_financials",
+      "dimension": "date",
+      "dimension_type": "date",
+      "measure": "revenue",
+      "aggregation": "sum",
+      "format": "currency"
+    }
+  ]
+}

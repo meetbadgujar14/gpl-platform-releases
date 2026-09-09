@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_lead_times_max_lead_time_days_ytd_days",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_lead_times_max_lead_time_days_ytd_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "lead_times",
+    "measure": "max_lead_time_days",
+    "state": "all",
+    "scope": "total",
+    "time": "ytd",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": 38.2,
+  "formula_line": "MEASURE_YTD('supply_chain_lead_times_ERP_snapshot', 'period_start_date', 'MAX', 'avg_lead_time_days', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:38Z",
+  "usage_count": 0,
+  "source_goal": "What is the total max lead time days of lead_timess ytd?",
+  "wave": 3,
+  "operator": "MEASURE_YTD",
+  "verified_at": "2026-09-02T06:49:04Z"
+}

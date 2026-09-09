@@ -1,0 +1,41 @@
+{
+  "id": "aterm:supply_chain_shipments_total_weight_kg_by_supplier_category_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shipments_total_weight_kg_by_supplier_category_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shipments",
+    "measure": "total_weight_kg",
+    "state": "all",
+    "scope": "by_supplier_category",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Agricultural Products": 5870.6,
+    "Chemicals": 13091.099999999999,
+    "Electronic Components": 620.0,
+    "Logistics": 9200.5,
+    "MRO Supplies": 1980.0,
+    "Machined Parts": 12311.400000000001,
+    "Metal Fabrication": 5646.4,
+    "Plastics & Polymers": 7550.299999999999,
+    "Raw Materials": 9161.800000000001,
+    "Safety & PPE": 1720.8,
+    "Textiles": 3450.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(total_weight_kg) FROM supply_chain_shipments_WMS_record JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY supplier_category)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:47Z",
+  "usage_count": 0,
+  "source_goal": "What is the total total weight kg of shipmentss by supplier category?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:49Z"
+}

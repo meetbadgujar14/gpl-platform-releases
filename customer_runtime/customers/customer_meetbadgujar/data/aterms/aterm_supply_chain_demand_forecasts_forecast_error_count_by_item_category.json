@@ -1,0 +1,37 @@
+{
+  "id": "aterm:supply_chain_demand_forecasts_forecast_error_count_by_item_category",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_demand_forecasts_forecast_error_count_by_item_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "demand_forecasts",
+    "measure": "forecast_error",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_item_category"
+  },
+  "oracle_value": {
+    "Electrical": 165.0,
+    "Hardware": -140.0,
+    "Material Handling": -12.0,
+    "Mechanical Components": -20.0,
+    "Packaging": 320.0,
+    "Raw Materials": 206.0,
+    "Safety & PPE": -160.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_demand_forecasts_ERP_snapshot', 'SUM', 'forecast_error', 'item_category', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "What is the total forecast error of demand_forecastss by item category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

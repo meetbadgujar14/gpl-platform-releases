@@ -1,0 +1,11 @@
+carrier_id,carrier_name,carrier_code,carrier_type,country,service_level,contract_rate_usd,avg_transit_days,is_preferred,is_active,onboarded_date
+CRR-7342,Coastal Express Shipping,PRL,Rail Freight,Canada,Economy,1850.0,4.5,false,true,2026-09-01
+CRR-4819,Euro Bridge Logistics GmbH,MFS,Ocean Freight,Canada,Priority,620.5,2.0,true,false,2026-09-01
+CRR-2956,Pacific Rim Logistics,NGC,Ocean Freight,Spain,Economy,4250.0,1.0,false,true,2026-07-14
+CRR-6183,Summit Peak Haulage,CES,Parcel,Germany,Priority,145.75,3.5,false,true,2026-05-22
+CRR-3507,Apex Last Mile Delivery,ITOF,Air Freight,Spain,Priority,3100.0,18.0,false,true,2026-03-09
+CRR-8874,Summit Peak Haulage,SPH,Parcel,USA,Standard,2200.0,5.0,true,false,2026-02-17
+CRR-1295,Transpacific Alliance Shipping,EBL,Full Truckload,Japan,Express,980.0,7.5,true,true,2025-11-03
+CRR-5638,Transpacific Alliance Shipping,ALMD,Rail Freight,Canada,Priority,210.0,1.5,false,true,2025-08-29
+CRR-9021,Transpacific Alliance Shipping,TAS,Parcel,Canada,Express,4700.0,22.0,false,true,2025-06-11
+CRR-3364,Pacific Rim Logistics,CDI,Rail Freight,Canada,Economy,875.25,2.5,true,true,2025-01-18

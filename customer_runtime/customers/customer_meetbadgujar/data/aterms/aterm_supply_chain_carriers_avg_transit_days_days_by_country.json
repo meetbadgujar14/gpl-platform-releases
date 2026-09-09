@@ -1,0 +1,35 @@
+{
+  "id": "aterm:supply_chain_carriers_avg_transit_days_days_by_country",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_carriers_avg_transit_days_days_by_country",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "carriers",
+    "measure": "avg_transit_days",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "days",
+    "series": "by_country"
+  },
+  "oracle_value": {
+    "Canada": 1.0,
+    "Germany": 7.5,
+    "Japan": 22.0,
+    "Spain": 18.0,
+    "USA": 3.1666666666666665
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_carriers_WMS_dimension', 'AVG', 'avg_transit_days', 'country', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "What is the total avg transit days of carrierss by country?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:07Z"
+}

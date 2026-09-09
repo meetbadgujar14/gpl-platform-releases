@@ -1,0 +1,83 @@
+{
+  "wave": "C",
+  "goal_count": 4,
+  "generated_at": "2026-07-21T11:34:12Z",
+  "goals": [
+    {
+      "goal": "What is the overall shipment health breakdown — count of shipments in each state (Delivered, In Transit, Delayed, Processing, Cancelled) — for an executive pipeline view?",
+      "canonical_id": "logistics_shipments_count_by_state_all_time_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "wave": "C",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the incident portfolio summary — total claim amount and count broken down by incident state — providing executive visibility into unresolved operational risk?",
+      "canonical_id": "logistics_incidents_claim_amount_by_state_ytd_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "claim_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "C",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the driver workforce composition by employment type — count of Full-Time, Part-Time, and Contract drivers — for workforce planning overview?",
+      "canonical_id": "logistics_drivers_count_by_state_all_time_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "logistics",
+        "entity": "drivers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "wave": "C",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the combined freight cost versus insurance cost ratio across all delivered shipments — revealing the total landed cost composition?",
+      "canonical_id": "logistics_shipments_freight_cost_insurance_cost_ratio_delivered_ytd_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "freight_cost",
+        "state": "Delivered",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "C",
+      "complexity": "KPI",
+      "join": null
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_purchase_order_lines_quantity_ordered_count_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_purchase_order_lines_quantity_ordered_count_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "purchase_order_lines",
+    "measure": "quantity_ordered",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2025-07": 320.0,
+    "2025-09": 1000.0,
+    "2025-11": 60.0,
+    "2026-01": 400.0,
+    "2026-02": 80.0,
+    "2026-03": 2500.0,
+    "2026-04": 350.0,
+    "2026-05": 600.0,
+    "2026-06": 150.0,
+    "2026-07": 3800.0,
+    "2026-08": 115.0,
+    "2026-09": 2490.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_purchase_order_lines_ERP_record', 'SUM', 'quantity_ordered', None, [], None, None, None, {'date_col': 'po_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quantity ordered of purchase_order_liness by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

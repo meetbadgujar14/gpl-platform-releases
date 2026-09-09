@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_shipments_total_weight_kg_currency_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shipments_total_weight_kg_currency_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shipments",
+    "measure": "total_weight_kg",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2025-09": 3175.9,
+    "2025-10": 2540.65,
+    "2025-12": 6310.7,
+    "2026-01": 4485.2,
+    "2026-02": 3739.1499999999996,
+    "2026-03": 4601.0,
+    "2026-04": 11570.85,
+    "2026-05": 3631.2000000000003,
+    "2026-06": 8155.85,
+    "2026-07": 5381.95,
+    "2026-08": 15880.25,
+    "2026-09": 4358.75
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_shipments_WMS_record', 'SUM', 'total_weight_kg', None, [], None, None, None, {'date_col': 'shipment_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "What is the total total weight kg of shipmentss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

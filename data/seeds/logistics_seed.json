@@ -1,0 +1,398 @@
+{
+  "domain": "logistics",
+  "version": "1.0",
+  "generated_at": "2026-07-20T05:34:26Z",
+  "generated_from_atoms": [
+    "logistics_freight_orders_ERP_record",
+    "logistics_fuel_consumption_WMS_record",
+    "logistics_vehicle_trips_WMS_event",
+    "logistics_shipments_ERP_record",
+    "logistics_shipment_legs_ERP_record",
+    "logistics_warehouse_inventory_WMS_state",
+    "logistics_vehicles_MANUAL_dimension",
+    "logistics_cargo_items_ERP_record",
+    "logistics_delivery_events_WMS_event",
+    "logistics_incidents_ERP_record",
+    "logistics_customs_declarations_ERP_record",
+    "logistics_carriers_MANUAL_dimension",
+    "logistics_drivers_MANUAL_dimension",
+    "logistics_warehouses_MANUAL_dimension",
+    "logistics_routes_MANUAL_dimension"
+  ],
+  "entities": {
+    "carriers": {
+      "atom": "logistics_carriers_MANUAL_dimension",
+      "record_type": "dimension",
+      "grain_key": "carrier_id",
+      "time_col": "created_date",
+      "measures": [
+        "contract_rate_per_km"
+      ],
+      "states": [],
+      "dimensions": [
+        "carrier_name",
+        "carrier_type",
+        "carrier_country",
+        "service_tier"
+      ]
+    },
+    "warehouses": {
+      "atom": "logistics_warehouses_MANUAL_dimension",
+      "record_type": "dimension",
+      "grain_key": "warehouse_id",
+      "time_col": "opened_date",
+      "measures": [
+        "total_capacity_sqm"
+      ],
+      "states": [],
+      "dimensions": [
+        "warehouse_name",
+        "warehouse_type",
+        "country",
+        "city"
+      ]
+    },
+    "routes": {
+      "atom": "logistics_routes_MANUAL_dimension",
+      "record_type": "dimension",
+      "grain_key": "route_id",
+      "time_col": "created_date",
+      "measures": [
+        "distance_km",
+        "standard_transit_days"
+      ],
+      "states": [],
+      "dimensions": [
+        "route_name",
+        "origin_location",
+        "destination_location",
+        "transport_mode"
+      ]
+    },
+    "vehicles": {
+      "atom": "logistics_vehicles_MANUAL_dimension",
+      "record_type": "dimension",
+      "grain_key": "vehicle_id",
+      "time_col": "commissioned_date",
+      "measures": [
+        "payload_capacity_kg"
+      ],
+      "states": [],
+      "dimensions": [
+        "vehicle_type",
+        "registration_number",
+        "carrier_id",
+        "fuel_type"
+      ]
+    },
+    "drivers": {
+      "atom": "logistics_drivers_MANUAL_dimension",
+      "record_type": "dimension",
+      "grain_key": "driver_id",
+      "time_col": "hire_date",
+      "measures": [
+        "total_trips_completed"
+      ],
+      "states": [
+        "Contract",
+        "Full-Time",
+        "Part-Time"
+      ],
+      "dimensions": [
+        "driver_name",
+        "carrier_id",
+        "license_class"
+      ]
+    },
+    "shipments": {
+      "atom": "logistics_shipments_ERP_record",
+      "record_type": "record",
+      "grain_key": "shipment_id",
+      "time_col": "booked_date",
+      "measures": [
+        "total_weight_kg",
+        "freight_cost",
+        "insurance_cost",
+        "planned_delivery_days"
+      ],
+      "states": [
+        "Cancelled",
+        "Delayed",
+        "Delivered",
+        "In Transit",
+        "Processing"
+      ],
+      "dimensions": [
+        "carrier_id",
+        "route_id",
+        "origin_warehouse_id",
+        "transport_mode"
+      ]
+    },
+    "freight_orders": {
+      "atom": "logistics_freight_orders_ERP_record",
+      "record_type": "record",
+      "grain_key": "freight_order_id",
+      "time_col": "order_date",
+      "measures": [
+        "agreed_cost",
+        "actual_cost",
+        "distance_km"
+      ],
+      "states": [
+        "Cancelled",
+        "Delivered",
+        "In Transit",
+        "Pending"
+      ],
+      "dimensions": [
+        "shipment_id",
+        "carrier_id",
+        "vehicle_id",
+        "origin_location",
+        "destination_location"
+      ]
+    },
+    "cargo_items": {
+      "atom": "logistics_cargo_items_ERP_record",
+      "record_type": "record",
+      "grain_key": "cargo_item_id",
+      "time_col": "created_date",
+      "measures": [
+        "weight_kg",
+        "volume_cbm",
+        "declared_value",
+        "quantity"
+      ],
+      "states": [],
+      "dimensions": [
+        "shipment_id",
+        "item_type",
+        "commodity_category"
+      ]
+    },
+    "shipment_legs": {
+      "atom": "logistics_shipment_legs_ERP_record",
+      "record_type": "record",
+      "grain_key": "leg_id",
+      "time_col": "planned_departure_date",
+      "measures": [
+        "leg_distance_km",
+        "leg_cost",
+        "actual_transit_hours"
+      ],
+      "states": [
+        "cancelled",
+        "completed",
+        "in_transit",
+        "pending"
+      ],
+      "dimensions": [
+        "shipment_id",
+        "carrier_id",
+        "route_id",
+        "vehicle_id",
+        "leg_sequence"
+      ]
+    },
+    "delivery_events": {
+      "atom": "logistics_delivery_events_WMS_event",
+      "record_type": "event",
+      "grain_key": "event_id",
+      "time_col": "event_date",
+      "measures": [
+        "delay_hours",
+        "event_count"
+      ],
+      "states": [],
+      "dimensions": [
+        "shipment_id",
+        "leg_id",
+        "event_type",
+        "location_name",
+        "country"
+      ]
+    },
+    "vehicle_trips": {
+      "atom": "logistics_vehicle_trips_WMS_event",
+      "record_type": "event",
+      "grain_key": "trip_id",
+      "time_col": "trip_date",
+      "measures": [
+        "distance_km",
+        "duration_hours",
+        "trip_cost"
+      ],
+      "states": [
+        "cancelled",
+        "completed",
+        "delayed",
+        "in_transit"
+      ],
+      "dimensions": [
+        "vehicle_id",
+        "driver_id",
+        "freight_order_id",
+        "origin_location",
+        "destination_location"
+      ]
+    },
+    "fuel_consumption": {
+      "atom": "logistics_fuel_consumption_WMS_record",
+      "record_type": "record",
+      "grain_key": "fuel_record_id",
+      "time_col": "record_date",
+      "measures": [
+        "litres_consumed",
+        "fuel_cost",
+        "cost_per_litre",
+        "co2_kg_emitted",
+        "distance_km"
+      ],
+      "states": [],
+      "dimensions": [
+        "vehicle_id",
+        "trip_id",
+        "fuel_type",
+        "country"
+      ]
+    },
+    "customs_declarations": {
+      "atom": "logistics_customs_declarations_ERP_record",
+      "record_type": "record",
+      "grain_key": "declaration_id",
+      "time_col": "declaration_date",
+      "measures": [
+        "declared_value",
+        "duties_amount",
+        "taxes_amount",
+        "clearance_days"
+      ],
+      "states": [
+        "Cleared",
+        "Held",
+        "Rejected",
+        "Under Review"
+      ],
+      "dimensions": [
+        "shipment_id",
+        "declaration_type",
+        "country_of_origin",
+        "destination_country"
+      ]
+    },
+    "incidents": {
+      "atom": "logistics_incidents_ERP_record",
+      "record_type": "record",
+      "grain_key": "incident_id",
+      "time_col": "incident_date",
+      "measures": [
+        "estimated_loss_value",
+        "claim_amount",
+        "resolution_days"
+      ],
+      "states": [
+        "Closed",
+        "In Progress",
+        "Resolved",
+        "Under Investigation"
+      ],
+      "dimensions": [
+        "shipment_id",
+        "vehicle_id",
+        "driver_id",
+        "incident_type",
+        "incident_severity"
+      ]
+    },
+    "warehouse_inventory": {
+      "atom": "logistics_warehouse_inventory_WMS_state",
+      "record_type": "state",
+      "grain_key": "inventory_id",
+      "time_col": "snapshot_date",
+      "measures": [
+        "quantity_on_hand",
+        "quantity_reserved",
+        "quantity_available",
+        "inventory_value"
+      ],
+      "states": [],
+      "dimensions": [
+        "warehouse_id",
+        "sku_code",
+        "commodity_category",
+        "storage_zone"
+      ]
+    }
+  },
+  "cross_domain_refs": [],
+  "kpi_definitions": [
+    {
+      "name": "freight_cost_per_km",
+      "description": "Average freight cost incurred per kilometer across all shipments.",
+      "formula": "{logistics_shipments_freight_cost_currency} / {logistics_freight_orders_distance_km_count}",
+      "unit": "currency",
+      "depends_on": [
+        "logistics_shipments_freight_cost_currency",
+        "logistics_freight_orders_distance_km_count"
+      ]
+    },
+    {
+      "name": "on_time_delivery_rate",
+      "description": "Proportion of shipments delivered without delay out of all completed shipments.",
+      "formula": "{logistics_shipments_count_delivered} / ({logistics_shipments_count_delivered} + {logistics_shipments_count_delayed})",
+      "unit": "percent",
+      "depends_on": [
+        "logistics_shipments_count_delivered",
+        "logistics_shipments_count_delayed"
+      ]
+    },
+    {
+      "name": "fuel_efficiency_km_per_litre",
+      "description": "Average kilometers traveled per litre of fuel consumed across all vehicle trips.",
+      "formula": "{logistics_fuel_consumption_distance_km_count} / {logistics_fuel_consumption_litres_consumed_count}",
+      "unit": "ratio",
+      "depends_on": [
+        "logistics_fuel_consumption_distance_km_count",
+        "logistics_fuel_consumption_litres_consumed_count"
+      ]
+    },
+    {
+      "name": "customs_clearance_success_rate",
+      "description": "Percentage of customs declarations that were successfully cleared out of all declarations.",
+      "formula": "{logistics_customs_declarations_count_cleared} / {logistics_customs_declarations_count}",
+      "unit": "percent",
+      "depends_on": [
+        "logistics_customs_declarations_count_cleared",
+        "logistics_customs_declarations_count"
+      ]
+    },
+    {
+      "name": "freight_order_cost_variance_rate",
+      "description": "Ratio of actual freight order cost to agreed cost, indicating budget adherence.",
+      "formula": "{logistics_freight_orders_actual_cost_currency} / {logistics_freight_orders_agreed_cost_currency}",
+      "unit": "ratio",
+      "depends_on": [
+        "logistics_freight_orders_actual_cost_currency",
+        "logistics_freight_orders_agreed_cost_currency"
+      ]
+    }
+  ],
+  "time_scopes": [
+    "all_time",
+    "this_month",
+    "last_month",
+    "this_quarter",
+    "ytd"
+  ],
+  "series_axes": [
+    "by_month",
+    "by_transport_mode",
+    "by_carrier_type",
+    "by_carrier_country",
+    "by_commodity_category",
+    "by_origin_location",
+    "by_destination_location",
+    "by_fuel_type"
+  ]
+}

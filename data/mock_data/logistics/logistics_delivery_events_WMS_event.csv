@@ -1,0 +1,32 @@
+event_id,shipment_id,leg_id,event_type,location_name,country,is_exception,delay_hours,event_count,event_date
+EVT-84721,SHP-47839,LEG-9235,Picked,Chicago Distribution Center,USA,False,0,1,2024-01-15
+EVT-39054,SHP-47839,LEG-1782,Departed,Los Angeles Port Terminal,USA,False,1.5,1,2024-01-17
+EVT-57283,SHP-47839,LEG-5731,In Transit,Memphis Freight Hub,USA,False,0,2,2024-02-03
+EVT-12948,SHP-83401,LEG-8796,Customs Hold,Frankfurt Airport Customs,Germany,True,18,1,2024-02-10
+EVT-73619,SHP-47839,LEG-8823,Delivered,Paris Central Warehouse,France,False,0,1,2024-02-14
+EVT-45802,SHP-69357,LEG-8796,Exception - Damaged,Rotterdam Seaport,Netherlands,True,36,1,2024-02-18
+EVT-96371,SHP-36285,LEG-9235,Arrived,Singapore Changi Cargo,Singapore,False,2,1,2024-03-01
+EVT-28540,SHP-69357,LEG-4387,Picked,Toronto Logistics Park,Canada,False,0,3,2024-03-05
+EVT-61473,SHP-74182,LEG-8796,Out for Delivery,Tokyo Distribution Hub,Japan,False,0.5,1,2024-03-12
+EVT-83024,SHP-11748,LEG-8796,Returned,Seoul Incheon Freight Center,South Korea,True,48,1,2024-03-20
+EVT-14759,SHP-47839,LEG-8796,Departed,Sydney International Airport,Australia,False,3,2,2024-04-02
+EVT-50917,SHP-93016,LEG-8796,Customs Cleared,Dubai International Customs,UAE,False,6,1,2024-04-08
+EVT-72831,SHP-47839,LEG-9162,Delivered,Mexico City Fulfillment Center,Mexico,False,0,1,2024-04-15
+EVT-39248,SHP-76219,LEG-8796,In Transit,São Paulo Cargo Terminal,Brazil,False,4,2,2024-04-22
+EVT-86502,SHP-69357,LEG-1782,Exception - Missing Docs,Mumbai Port Authority,India,True,24,1,2024-05-03
+EVT-21674,SHP-87463,LEG-8796,Arrived,Johannesburg Cargo Hub,South Africa,False,0,1,2024-05-11
+EVT-94385,SHP-43726,LEG-4658,Picked,Dallas Fort Worth Logistics Center,USA,False,0,4,2024-05-19
+EVT-67123,SHP-11748,LEG-1782,Departed,Amsterdam Schiphol Cargo,Netherlands,False,1,1,2024-06-01
+EVT-48906,SHP-69357,LEG-8796,Exception - Weather Delay,Miami Port Terminal,USA,True,12,1,2024-06-10
+EVT-35271,SHP-50934,LEG-1563,Delivered,London Heathrow Cargo Center,UK,False,0,1,2024-06-18
+EVT-79043,SHP-83401,LEG-1054,Out for Delivery,Shanghai Port Logistics Zone,China,False,2.5,2,2024-07-04
+EVT-52184,SHP-69357,LEG-8796,Customs Hold,Milan Malpensa Customs,Italy,True,30,1,2024-07-12
+EVT-18637,SHP-36285,LEG-8796,In Transit,Houston Intermodal Yard,USA,False,0,3,2024-07-22
+EVT-63509,SHP-69357,LEG-4658,Arrived,Kuala Lumpur Air Cargo Terminal,Malaysia,False,1,1,2024-08-05
+EVT-90724,SHP-50934,LEG-4658,Returned,Vancouver Port Authority,Canada,True,60,1,2024-08-14
+EVT-41862,SHP-69357,LEG-9374,Delivered,Phoenix Distribution Warehouse,USA,False,0,1,2024-08-22
+EVT-27395,SHP-50934,LEG-5084,Exception - Address Error,Brussels National Airport Cargo,Belgium,True,8,1,2024-09-03
+EVT-58047,SHP-52843,LEG-9374,Picked,Seattle Southside Warehouse,USA,False,0,2,2024-09-15
+EVT-33781,SHP-36285,LEG-5084,Departed,Helsinki Cargo Terminal,Finland,False,2,1,2024-10-01
+EVT-75629,SHP-47839,LEG-8796,In Transit,Guadalajara Regional Hub,Mexico,False,5,2,2024-10-18
+EVT-10483,SHP-69357,LEG-1782,Customs Cleared,Antwerp Port Customs Office,Belgium,False,7,1,2024-11-05

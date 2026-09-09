@@ -1,0 +1,57 @@
+{
+  "vertical": "supply_chain",
+  "models_used": [
+    "gpt4o"
+  ],
+  "total": 1,
+  "passed": 1,
+  "flagged": 0,
+  "failed": 0,
+  "errors": 0,
+  "results": [
+    {
+      "canonical_id": "supply_chain_inventory_aging_growth_qty_0_30_days_this_month_percent",
+      "source_goal": "What is the month over month growth in qty 0 30 days for inventory_agings?",
+      "formula_line": "supply_chain_inventory_aging_growth_qty_0_30_days_this_month_percent = (({supply_chain_inventory_aging_qty_0_30_days_this_month_days} - {supply_chain_inventory_aging_qty_0_30_days_last_month_days}) / abs({supply_chain_inventory_aging_qty_0_30_days_last_month_days}) * 100) if {supply_chain_inventory_aging_qty_0_30_days_last_month_days} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses subtraction and division for calculating growth, which matches the business question.",
+            "C2": "The dependencies accurately represent this month's and last month's quantities for the calculation.",
+            "C3": "Both dependencies have time scopes that correspond to this month and last month, matching the metric's time scope.",
+            "C4": "The metric and the dependencies are all unfiltered for state, aligning perfectly.",
+            "C5": "The formula has a division-by-zero guard in place, ensuring safe operation.",
+            "C6": "The operation results in a growth rate expressed as a percentage, which aligns with the given unit."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly calculates month-over-month growth in percentage for the specified inventory aging quantities, adhering to all requirements.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 17029
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T09:55:14Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    }
+  ],
+  "error_details": [],
+  "run_at": "2026-08-12T09:55:14Z"
+}

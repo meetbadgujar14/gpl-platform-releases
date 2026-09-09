@@ -1,0 +1,35 @@
+{
+  "id": "aterm:supply_chain_warehouses_total_capacity_units_currency_by_region",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_warehouses_total_capacity_units_currency_by_region",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "warehouses",
+    "measure": "total_capacity_units",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_region"
+  },
+  "oracle_value": {
+    "Catalonia": 44500.0,
+    "Midwest": 210000.0,
+    "North Rhine-Westphalia": 310000.0,
+    "Ontario": 58000.0,
+    "West Coast": 142000.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_warehouses_WMS_dimension', 'SUM', 'total_capacity_units', 'region', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "What is the total total capacity units of warehousess by region?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

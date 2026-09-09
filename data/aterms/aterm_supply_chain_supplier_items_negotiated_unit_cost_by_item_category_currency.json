@@ -1,0 +1,38 @@
+{
+  "id": "aterm:supply_chain_supplier_items_negotiated_unit_cost_by_item_category_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_supplier_items_negotiated_unit_cost_by_item_category_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "supplier_items",
+    "measure": "negotiated_unit_cost",
+    "state": "all",
+    "scope": "by_item_category",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Electrical": 1304.35,
+    "Lubricants & Chemicals": 0.03,
+    "MRO Supplies": 305.74,
+    "Mechanical Components": 313.28,
+    "Packaging": 4887.8099999999995,
+    "Safety & PPE": 14.6,
+    "Tools & Equipment": 638.0,
+    "Warehouse Supplies": 52.3
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(negotiated_unit_cost) FROM supply_chain_supplier_items_ERP_dimension JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY item_category)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:49Z",
+  "usage_count": 0,
+  "source_goal": "What is the total negotiated unit cost of supplier_itemss by item category?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:51Z"
+}

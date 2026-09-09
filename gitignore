@@ -1,0 +1,74 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Logs
+logs/
+*.log
+
+# Factory-generated outputs (rebuilt by the compiler — do not commit)
+data/aterms/
+data/canonical_index.json
+data/lock_registry.json
+data/data_fingerprints.json
+data/sessions.json
+data/workflow_analysis_reports/
+
+# Customer runtime — per-customer data (never commit real data)
+customer_runtime/customers/
+customer_runtime/data/customer_enums.json
+customer_runtime/data/data_fingerprints.json
+customer_runtime/data/field_values.json
+customer_runtime/data/aterms/
+customer_runtime/data/goals/
+customer_runtime/data/dialects/
+customer_runtime/data/seeds/
+customer_runtime/data/mock_data/
+customer_runtime/knowledge_store/
+customer_runtime/sot_csv/
+customer_runtime/packages/
+
+# Customer-side session and SOT data
+customer/sot_csv/
+customer/sessions/
+customer/knowledge_store/
+customers.json
+
+# Mock data (large, regeneratable via mock_data_agent)
+mock_data/
+
+# Packages / local installs
+packages/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/

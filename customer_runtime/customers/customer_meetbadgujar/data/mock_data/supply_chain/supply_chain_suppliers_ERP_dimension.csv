@@ -1,0 +1,16 @@
+supplier_id,supplier_name,supplier_category,country,region,payment_terms,status,is_preferred,onboarded_date,supplier_tier
+SUP-4821,Equinox Safety Products,Cold Storage & Logistics,MX,Latin America,Net 30,Inactive,false,2026-09-01,Tier 1
+SUP-7364,Solaris Packaging Solutions,Freight & Transportation,GB,Latin America,Net 30,Under Review,true,2026-09-01,Tier 2
+SUP-2195,Vantage Point MRO Services,Safety & Compliance,US,Asia-Pacific,Net 45,Inactive,true,2026-09-01,Tier 1
+SUP-5047,Ironclad Steel Works,MRO,FR,Europe,Net 30,Inactive,false,2026-07-14,Tier 2
+SUP-8832,Amber Valley Chemical Works,Components & Parts,FR,Asia-Pacific,Net 30,Under Review,true,2026-06-22,Tier 1
+SUP-3619,Meridian Industrial Supplies,Safety & Compliance,DE,Europe,Net 60,Active,false,2026-05-09,Tier 2
+SUP-1473,Helios Energy Components,Freight & Transportation,DE,Latin America,Net 30,Active,true,2026-04-17,Tier 3
+SUP-6908,Helios Energy Components,Components & Parts,US,Latin America,Net 30,Active,false,2026-03-05,Tier 2
+SUP-2384,Durango Plastics Corp.,IT & Technology,MX,Europe,Net 45,Inactive,true,2026-02-28,Tier 1
+SUP-9051,Nordvik Manufacturing Group,Chemicals,GB,Asia-Pacific,Net 30,Inactive,false,2026-01-12,Tier 1
+SUP-7726,Stonebridge Textiles Inc.,Safety & Compliance,MX,North America,Net 60,Active,false,2025-11-03,Tier 2
+SUP-4403,Pinnacle Cold Chain Logistics,Safety & Compliance,MX,North America,Net 60,Under Review,false,2025-08-19,Tier 1
+SUP-5584,Ironclad Steel Works,Components & Parts,GB,Asia-Pacific,Net 30,Inactive,false,2025-06-07,Tier 2
+SUP-8167,Equinox Safety Products,MRO,DE,Asia-Pacific,Net 60,Under Review,true,2025-03-24,Tier 1
+SUP-3290,Helios Energy Components,IT & Technology,MX,Europe,Net 30,Under Review,false,2024-10-11,Tier 3

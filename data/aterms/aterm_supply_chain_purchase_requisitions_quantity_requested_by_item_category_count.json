@@ -1,0 +1,37 @@
+{
+  "id": "aterm:supply_chain_purchase_requisitions_quantity_requested_by_item_category_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_purchase_requisitions_quantity_requested_by_item_category_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "purchase_requisitions",
+    "measure": "quantity_requested",
+    "state": "all",
+    "scope": "by_item_category",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Electrical": 900.0,
+    "Fluid Control": 550.0,
+    "Lubricants & Chemicals": 438.0,
+    "Mechanical Components": 900.0,
+    "Packaging": 85.0,
+    "Safety & PPE": 1160.0,
+    "Tools & Equipment": 180.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(quantity_requested) FROM supply_chain_purchase_requisitions_ERP_record JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY item_category)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quantity requested of purchase_requisitionss by item category?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

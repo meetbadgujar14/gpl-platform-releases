@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_supplier_items_min_lead_time_days_days",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_supplier_items_min_lead_time_days_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "supplier_items",
+    "measure": "min_lead_time_days",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": 5.0,
+  "formula_line": "MEASURE('supply_chain_supplier_items_ERP_dimension', 'MIN', 'lead_time_days', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:37Z",
+  "usage_count": 0,
+  "source_goal": "What is the min lead time days across all supplier_itemss?",
+  "wave": 2,
+  "operator": "MEASURE",
+  "verified_at": "2026-09-02T06:49:03Z"
+}

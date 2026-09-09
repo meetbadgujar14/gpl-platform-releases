@@ -1,0 +1,35 @@
+vehicle_id,driver_id,vehicle_type,capacity_kg,current_location,fuel_consumption_kmpl,trip_status,distance_km,maintenance_status
+VH-4821,DRV-7134,Heavy Truck,18000,"Chicago, IL",4.2,In Transit,342,Operational
+VH-3067,DRV-2849,Refrigerated Van,5500,"Dallas, TX",6.8,Completed,217,Operational
+VH-9153,DRV-5612,Light Van,1200,"Atlanta, GA",10.3,Completed,88,Scheduled Service
+VH-6274,DRV-9031,Semi-Trailer,24000,"Los Angeles, CA",3.6,Loading,0,Operational
+VH-1839,DRV-4407,Flatbed Truck,15000,"Houston, TX",4.9,In Transit,561,Operational
+VH-7425,DRV-3318,Box Truck,7500,"Phoenix, AZ",7.1,Completed,193,Operational
+VH-5581,DRV-8824,Tanker,20000,"Denver, CO",3.9,In Transit,428,Operational
+VH-2963,DRV-6155,Light Van,1400,"Seattle, WA",9.8,Completed,74,Under Repair
+VH-8347,DRV-1293,Heavy Truck,17500,"Miami, FL",4.4,Idle,0,Operational
+VH-4019,DRV-7760,Refrigerated Van,4800,"Portland, OR",6.5,Completed,155,Operational
+VH-6632,DRV-5049,Semi-Trailer,26000,"Nashville, TN",3.5,In Transit,812,Operational
+VH-3784,DRV-2187,Box Truck,6800,"Minneapolis, MN",7.4,Completed,241,Scheduled Service
+VH-9507,DRV-8632,Flatbed Truck,14000,"Kansas City, MO",5.1,Loading,0,Operational
+VH-1246,DRV-3974,Tanker,22000,"Salt Lake City, UT",3.7,Completed,376,Operational
+VH-7813,DRV-6481,Light Van,1100,"Columbus, OH",11.2,In Transit,63,Operational
+VH-5290,DRV-9347,Heavy Truck,19000,"Detroit, MI",4.1,Completed,489,Operational
+VH-8076,DRV-1658,Box Truck,8200,"Charlotte, NC",6.9,Idle,0,Under Repair
+VH-2418,DRV-4823,Semi-Trailer,25000,"Indianapolis, IN",3.8,In Transit,634,Operational
+VH-6891,DRV-7205,Refrigerated Van,5200,"San Antonio, TX",6.6,Completed,302,Operational
+VH-3152,DRV-5539,Flatbed Truck,16500,"Las Vegas, NV",4.7,Completed,278,Scheduled Service
+VH-4763,DRV-2096,Light Van,1300,"San Diego, CA",10.7,In Transit,112,Operational
+VH-9284,DRV-8411,Heavy Truck,20500,"Memphis, TN",4.3,Completed,523,Operational
+VH-1597,DRV-3762,Tanker,21000,"Baltimore, MD",3.8,Loading,0,Operational
+VH-7039,DRV-6914,Box Truck,7100,"Albuquerque, NM",7.8,Completed,187,Operational
+VH-5648,DRV-1482,Semi-Trailer,23500,"Oklahoma City, OK",3.6,In Transit,748,Operational
+VH-2371,DRV-9128,Refrigerated Van,4500,"Louisville, KY",6.9,Completed,134,Under Repair
+VH-8924,DRV-4267,Flatbed Truck,13500,"Richmond, VA",5.3,Completed,209,Operational
+VH-6105,DRV-7843,Heavy Truck,18500,"Tucson, AZ",4.0,Idle,0,Scheduled Service
+VH-3896,DRV-5371,Light Van,950,"Raleigh, NC",11.8,In Transit,57,Operational
+VH-4537,DRV-2635,Box Truck,9000,"New Orleans, LA",6.7,Completed,317,Operational
+VH-7682,DRV-8059,Tanker,19500,"Birmingham, AL",4.1,Completed,446,Operational
+VH-1064,DRV-3509,Semi-Trailer,27000,"Jacksonville, FL",3.4,In Transit,695,Operational
+VH-9731,DRV-6728,Refrigerated Van,5800,"Sacramento, CA",6.4,Loading,0,Operational
+VH-5319,DRV-1946,Flatbed Truck,16000,"St. Louis, MO",4.8,Completed,384,Scheduled Service

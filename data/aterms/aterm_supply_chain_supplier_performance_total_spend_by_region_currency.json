@@ -1,0 +1,35 @@
+{
+  "id": "aterm:supply_chain_supplier_performance_total_spend_by_region_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_supplier_performance_total_spend_by_region_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "supplier_performance",
+    "measure": "total_spend",
+    "state": "all",
+    "scope": "by_region",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Asia-Pacific": 8097900.0,
+    "Europe": 15189600.0,
+    "Latin America": 10132200.0,
+    "Middle East & Africa": 9214800.0,
+    "North America": 11194500.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(total_spend) FROM supply_chain_supplier_performance_ERP_snapshot JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY region)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:47Z",
+  "usage_count": 0,
+  "source_goal": "What is the total total spend of supplier_performances by region?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

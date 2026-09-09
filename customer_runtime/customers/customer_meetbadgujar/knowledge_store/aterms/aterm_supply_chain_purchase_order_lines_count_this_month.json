@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_purchase_order_lines_count_this_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_purchase_order_lines_count_this_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "purchase_order_lines",
+    "measure": "count",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 5.0,
+  "formula_line": "MEASURE_MONTH_FIXED('supply_chain_purchase_order_lines_ERP_record', 'po_date', 'COUNT_DISTINCT', 'po_line_id', 'this_month', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:37Z",
+  "usage_count": 0,
+  "source_goal": "How many purchase_order_liness are there this month?",
+  "wave": 3,
+  "operator": "MEASURE_MONTH_FIXED",
+  "verified_at": "2026-09-02T06:49:03Z"
+}

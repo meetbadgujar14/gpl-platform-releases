@@ -1,0 +1,39 @@
+{
+  "id": "aterm:logistics_carriers_count_by_carrier_country",
+  "type": "Aterm",
+  "canonical_id": "logistics_carriers_count_by_carrier_country",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "carriers",
+    "measure": "count",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_carrier_country"
+  },
+  "oracle_value": {
+    "Australia": 1.0,
+    "Canada": 1.0,
+    "France": 1.0,
+    "Germany": 1.0,
+    "India": 1.0,
+    "Japan": 1.0,
+    "Spain": 1.0,
+    "Sweden": 1.0,
+    "USA": 2.0
+  },
+  "formula_line": "MEASURE_GROUPED(COUNT_DISTINCT(carrier_id) FROM logistics_carriers_MANUAL_dimension GROUP BY carrier_country)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:18Z",
+  "usage_count": 0,
+  "source_goal": "How many carrierss by carrier country?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:46Z"
+}

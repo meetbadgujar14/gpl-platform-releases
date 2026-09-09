@@ -1,0 +1,29 @@
+declaration_id,shipment_id,declaration_type,clearance_status,country_of_origin,destination_country,declared_value,duties_amount,taxes_amount,clearance_days,declaration_date
+CDEC-58342,SHP-74182,Import,Cleared,China,United States,142500.0,17100.0,11400.0,4,2024-01-15
+CDEC-71293,SHP-18540,Export,Cleared,United States,Germany,89750.0,0.0,14360.0,2,2024-02-03
+CDEC-34817,SHP-18540,Import,Under Review,Vietnam,Canada,63200.0,7584.0,8216.0,9,2024-02-19
+CDEC-92645,SHP-93016,Transit,Cleared,South Korea,Netherlands,218300.0,10915.0,41477.0,3,2024-03-07
+CDEC-15784,SHP-67523,Import,Held,India,United Kingdom,47800.0,9560.0,9560.0,14,2024-03-22
+CDEC-68429,SHP-44859,Export,Cleared,Germany,Brazil,175600.0,26340.0,31608.0,5,2024-04-11
+CDEC-23951,SHP-22691,Import,Cleared,Japan,Australia,312400.0,15620.0,31240.0,6,2024-04-28
+CDEC-87162,SHP-18540,Re-Export,Cleared,Mexico,United States,54900.0,0.0,4392.0,2,2024-05-14
+CDEC-40538,SHP-87463,Import,Rejected,Taiwan,France,98100.0,11772.0,19620.0,18,2024-05-29
+CDEC-76304,SHP-91053,Export,Cleared,Canada,China,267500.0,13375.0,0.0,3,2024-06-10
+CDEC-52817,SHP-83401,Import,Cleared,Thailand,United States,83600.0,12540.0,6688.0,5,2024-06-25
+CDEC-19473,SHP-18540,Transit,Cleared,Singapore,United Arab Emirates,156800.0,4704.0,0.0,2,2024-07-08
+CDEC-63748,SHP-87463,Import,Under Review,Indonesia,Netherlands,121400.0,18210.0,23066.0,11,2024-07-23
+CDEC-31589,SHP-15926,Export,Cleared,United Kingdom,South Africa,74300.0,7430.0,11888.0,4,2024-08-05
+CDEC-84926,SHP-62714,Import,Cleared,China,Canada,198700.0,23844.0,25831.0,6,2024-08-19
+CDEC-47251,SHP-38472,Re-Import,Cleared,France,France,38500.0,0.0,7315.0,3,2024-09-01
+CDEC-90134,SHP-44859,Import,Held,Pakistan,Germany,56200.0,11240.0,10678.0,21,2024-09-14
+CDEC-26783,SHP-18540,Export,Cleared,Australia,Japan,143900.0,7195.0,0.0,3,2024-09-30
+CDEC-58916,SHP-67523,Import,Cleared,Brazil,United States,229600.0,27552.0,18368.0,7,2024-10-12
+CDEC-73462,SHP-52843,Transit,Under Review,Malaysia,Belgium,88400.0,6628.0,16796.0,8,2024-10-27
+CDEC-41695,SHP-97615,Import,Cleared,Italy,United States,167300.0,20076.0,13384.0,5,2024-11-08
+CDEC-85274,SHP-74182,Export,Cleared,United States,Mexico,92100.0,0.0,7368.0,2,2024-11-22
+CDEC-17348,SHP-62714,Import,Cleared,South Korea,United Kingdom,284700.0,28470.0,56940.0,6,2024-12-05
+CDEC-62893,SHP-11748,Re-Export,Cleared,Netherlands,Nigeria,51800.0,10360.0,4144.0,4,2024-12-18
+CDEC-39517,SHP-55174,Import,Rejected,Turkey,Germany,73400.0,14680.0,13946.0,16,2025-01-09
+CDEC-54182,SHP-18540,Import,Cleared,China,United States,109500.0,13140.0,8760.0,5,2025-01-24
+CDEC-28746,SHP-87463,Export,Cleared,South Korea,India,186200.0,9310.0,0.0,3,2025-02-10
+CDEC-96031,SHP-18540,Import,Under Review,Vietnam,United States,134800.0,20220.0,10784.0,10,2025-02-26

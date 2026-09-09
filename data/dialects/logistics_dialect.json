@@ -1,0 +1,4568 @@
+{
+  "domain": "logistics",
+  "version": "2.0",
+  "generated_at": "2026-07-20T05:39:39Z",
+  "generated_from_seed": "logistics_seed.json",
+  "coverage": 0.955,
+  "vocabulary": {
+    "entity": [
+      {
+        "term": "carriers",
+        "canonical": "carriers",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "carriers list",
+        "canonical": "carriers",
+        "weight": 0.85,
+        "source": "structural"
+      },
+      {
+        "term": "carriers master",
+        "canonical": "carriers",
+        "weight": 0.85,
+        "source": "structural"
+      },
+      {
+        "term": "warehouses",
+        "canonical": "warehouses",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "warehouses list",
+        "canonical": "warehouses",
+        "weight": 0.85,
+        "source": "structural"
+      },
+      {
+        "term": "warehouses master",
+        "canonical": "warehouses",
+        "weight": 0.85,
+        "source": "structural"
+      },
+      {
+        "term": "routes",
+        "canonical": "routes",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "routes list",
+        "canonical": "routes",
+        "weight": 0.85,
+        "source": "structural"
+      },
+      {
+        "term": "routes master",
+        "canonical": "routes",
+        "weight": 0.85,
+        "source": "structural"
+      },
+      {
+        "term": "vehicles",
+        "canonical": "vehicles",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "vehicles list",
+        "canonical": "vehicles",
+        "weight": 0.85,
+        "source": "structural"
+      },
+      {
+        "term": "vehicles master",
+        "canonical": "vehicles",
+        "weight": 0.85,
+        "source": "structural"
+      },
+      {
+        "term": "drivers",
+        "canonical": "drivers",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "drivers list",
+        "canonical": "drivers",
+        "weight": 0.85,
+        "source": "structural"
+      },
+      {
+        "term": "drivers master",
+        "canonical": "drivers",
+        "weight": 0.85,
+        "source": "structural"
+      },
+      {
+        "term": "shipments",
+        "canonical": "shipments",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "freight_orders",
+        "canonical": "freight_orders",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "cargo_items",
+        "canonical": "cargo_items",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "shipment_legs",
+        "canonical": "shipment_legs",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "delivery_events",
+        "canonical": "delivery_events",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "vehicle_trips",
+        "canonical": "vehicle_trips",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "fuel_consumption",
+        "canonical": "fuel_consumption",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "fuel_consumptions",
+        "canonical": "fuel_consumption",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "customs_declarations",
+        "canonical": "customs_declarations",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "incidents",
+        "canonical": "incidents",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "warehouse_inventory",
+        "canonical": "warehouse_inventory",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "warehouse_inventories",
+        "canonical": "warehouse_inventory",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "current warehouse_inventory",
+        "canonical": "warehouse_inventory",
+        "weight": 0.95,
+        "source": "structural"
+      },
+      {
+        "term": "active warehouse_inventory",
+        "canonical": "warehouse_inventory",
+        "weight": 0.9,
+        "source": "structural"
+      },
+      {
+        "term": "carrier",
+        "canonical": "carriers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "shipping carrier",
+        "canonical": "carriers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "transport carrier",
+        "canonical": "carriers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "freight carrier",
+        "canonical": "carriers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "haulier",
+        "canonical": "carriers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "hauler",
+        "canonical": "carriers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "transporter",
+        "canonical": "carriers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "shipping company",
+        "canonical": "carriers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "warehouse",
+        "canonical": "warehouses",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "storage facility",
+        "canonical": "warehouses",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "distribution center",
+        "canonical": "warehouses",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "fulfillment center",
+        "canonical": "warehouses",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "depot",
+        "canonical": "warehouses",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "warehouse facility",
+        "canonical": "warehouses",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "storage warehouse",
+        "canonical": "warehouses",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "logistics center",
+        "canonical": "warehouses",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "route",
+        "canonical": "routes",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "shipping route",
+        "canonical": "routes",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "shipping routes",
+        "canonical": "routes",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "delivery route",
+        "canonical": "routes",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "delivery routes",
+        "canonical": "routes",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "transport route",
+        "canonical": "routes",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "transport routes",
+        "canonical": "routes",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "truck",
+        "canonical": "vehicles",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "trucks",
+        "canonical": "vehicles",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "fleet",
+        "canonical": "vehicles",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "transport vehicle",
+        "canonical": "vehicles",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "transport vehicles",
+        "canonical": "vehicles",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "delivery vehicle",
+        "canonical": "vehicles",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "delivery vehicles",
+        "canonical": "vehicles",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "rig",
+        "canonical": "vehicles",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "driver",
+        "canonical": "drivers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "truck driver",
+        "canonical": "drivers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "truck drivers",
+        "canonical": "drivers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "trucker",
+        "canonical": "drivers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "truckers",
+        "canonical": "drivers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "operator",
+        "canonical": "drivers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "operators",
+        "canonical": "drivers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "shipment",
+        "canonical": "shipments",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "delivery",
+        "canonical": "shipments",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "deliveries",
+        "canonical": "shipments",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "consignment",
+        "canonical": "shipments",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "consignments",
+        "canonical": "shipments",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "dispatch",
+        "canonical": "shipments",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "dispatches",
+        "canonical": "shipments",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "shipment order",
+        "canonical": "shipments",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "freight orders",
+        "canonical": "freight_orders",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "freight bookings",
+        "canonical": "freight_orders",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "cargo orders",
+        "canonical": "freight_orders",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "shipping orders",
+        "canonical": "freight_orders",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "transport orders",
+        "canonical": "freight_orders",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "haulage orders",
+        "canonical": "freight_orders",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "freight requests",
+        "canonical": "freight_orders",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "cargo bookings",
+        "canonical": "freight_orders",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "cargo",
+        "canonical": "cargo_items",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "goods",
+        "canonical": "cargo_items",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "freight",
+        "canonical": "cargo_items",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "items",
+        "canonical": "cargo_items",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "packages",
+        "canonical": "cargo_items",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "parcels",
+        "canonical": "cargo_items",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "loads",
+        "canonical": "cargo_items",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "cargo units",
+        "canonical": "cargo_items",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "shipment legs",
+        "canonical": "shipment_legs",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "leg",
+        "canonical": "shipment_legs",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "legs",
+        "canonical": "shipment_legs",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "transit leg",
+        "canonical": "shipment_legs",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "transit legs",
+        "canonical": "shipment_legs",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "shipping leg",
+        "canonical": "shipment_legs",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "shipping legs",
+        "canonical": "shipment_legs",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "journey leg",
+        "canonical": "shipment_legs",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "delivery events",
+        "canonical": "delivery_events",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "delivery updates",
+        "canonical": "delivery_events",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "delivery milestones",
+        "canonical": "delivery_events",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "delivery status events",
+        "canonical": "delivery_events",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "shipment events",
+        "canonical": "delivery_events",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "shipment status updates",
+        "canonical": "delivery_events",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "delivery activities",
+        "canonical": "delivery_events",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "delivery tracking events",
+        "canonical": "delivery_events",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "trips",
+        "canonical": "vehicle_trips",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "vehicle trips",
+        "canonical": "vehicle_trips",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "truck trips",
+        "canonical": "vehicle_trips",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "hauls",
+        "canonical": "vehicle_trips",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "runs",
+        "canonical": "vehicle_trips",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "delivery runs",
+        "canonical": "vehicle_trips",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "transport runs",
+        "canonical": "vehicle_trips",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "freight runs",
+        "canonical": "vehicle_trips",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "fuel usage",
+        "canonical": "fuel_consumption",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "fuel use",
+        "canonical": "fuel_consumption",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "fuel consumption",
+        "canonical": "fuel_consumption",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "gas consumption",
+        "canonical": "fuel_consumption",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "gasoline usage",
+        "canonical": "fuel_consumption",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "diesel usage",
+        "canonical": "fuel_consumption",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "fuel burn",
+        "canonical": "fuel_consumption",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "fuel burned",
+        "canonical": "fuel_consumption",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "customs declarations",
+        "canonical": "customs_declarations",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "customs docs",
+        "canonical": "customs_declarations",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "customs documentation",
+        "canonical": "customs_declarations",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "customs filing",
+        "canonical": "customs_declarations",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "customs forms",
+        "canonical": "customs_declarations",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "customs paperwork",
+        "canonical": "customs_declarations",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "customs submission",
+        "canonical": "customs_declarations",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "import declaration",
+        "canonical": "customs_declarations",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "warehouse stock",
+        "canonical": "warehouse_inventory",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "stock levels",
+        "canonical": "warehouse_inventory",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "warehouse inventory",
+        "canonical": "warehouse_inventory",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "stock on hand",
+        "canonical": "warehouse_inventory",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "available inventory",
+        "canonical": "warehouse_inventory",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "warehouse stock levels",
+        "canonical": "warehouse_inventory",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "inventory levels",
+        "canonical": "warehouse_inventory",
+        "weight": 0.95,
+        "source": "ai"
+      }
+    ],
+    "state": [
+      {
+        "term": "contract",
+        "canonical": "Contract",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "contract drivers",
+        "canonical": "Contract",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "drivers contract",
+        "canonical": "Contract",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "full-time",
+        "canonical": "Full-Time",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "full-time drivers",
+        "canonical": "Full-Time",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "drivers full-time",
+        "canonical": "Full-Time",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "part-time",
+        "canonical": "Part-Time",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "part-time drivers",
+        "canonical": "Part-Time",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "drivers part-time",
+        "canonical": "Part-Time",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "cancelled",
+        "canonical": "Cancelled",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "cancelled shipments",
+        "canonical": "Cancelled",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "shipments cancelled",
+        "canonical": "Cancelled",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "delayed",
+        "canonical": "Delayed",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "delayed shipments",
+        "canonical": "Delayed",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "shipments delayed",
+        "canonical": "Delayed",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "delivered",
+        "canonical": "Delivered",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "delivered shipments",
+        "canonical": "Delivered",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "shipments delivered",
+        "canonical": "Delivered",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "in transit",
+        "canonical": "In Transit",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "in transit shipments",
+        "canonical": "In Transit",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "shipments in transit",
+        "canonical": "In Transit",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "processing",
+        "canonical": "Processing",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "processing shipments",
+        "canonical": "Processing",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "shipments processing",
+        "canonical": "Processing",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "cancelled freight_orders",
+        "canonical": "Cancelled",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "freight_orders cancelled",
+        "canonical": "Cancelled",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "delivered freight_orders",
+        "canonical": "Delivered",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "freight_orders delivered",
+        "canonical": "Delivered",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "in transit freight_orders",
+        "canonical": "In Transit",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "freight_orders in transit",
+        "canonical": "In Transit",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "pending",
+        "canonical": "Pending",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "pending freight_orders",
+        "canonical": "Pending",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "freight_orders pending",
+        "canonical": "Pending",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "cancelled shipment_legs",
+        "canonical": "cancelled",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "shipment_legs cancelled",
+        "canonical": "cancelled",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "completed",
+        "canonical": "completed",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "completed shipment_legs",
+        "canonical": "completed",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "shipment_legs completed",
+        "canonical": "completed",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "in_transit",
+        "canonical": "in_transit",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "in_transit shipment_legs",
+        "canonical": "in_transit",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "shipment_legs in_transit",
+        "canonical": "in_transit",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "pending shipment_legs",
+        "canonical": "pending",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "shipment_legs pending",
+        "canonical": "pending",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "cancelled vehicle_trips",
+        "canonical": "cancelled",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips cancelled",
+        "canonical": "cancelled",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "completed vehicle_trips",
+        "canonical": "completed",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips completed",
+        "canonical": "completed",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "delayed vehicle_trips",
+        "canonical": "delayed",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips delayed",
+        "canonical": "delayed",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "in_transit vehicle_trips",
+        "canonical": "in_transit",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips in_transit",
+        "canonical": "in_transit",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "cleared",
+        "canonical": "Cleared",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "cleared customs_declarations",
+        "canonical": "Cleared",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "customs_declarations cleared",
+        "canonical": "Cleared",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "held",
+        "canonical": "Held",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "held customs_declarations",
+        "canonical": "Held",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "customs_declarations held",
+        "canonical": "Held",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "rejected",
+        "canonical": "Rejected",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "rejected customs_declarations",
+        "canonical": "Rejected",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "customs_declarations rejected",
+        "canonical": "Rejected",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "under review",
+        "canonical": "Under Review",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "under review customs_declarations",
+        "canonical": "Under Review",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "customs_declarations under review",
+        "canonical": "Under Review",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "closed",
+        "canonical": "Closed",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "closed incidents",
+        "canonical": "Closed",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "incidents closed",
+        "canonical": "Closed",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "in progress",
+        "canonical": "In Progress",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "in progress incidents",
+        "canonical": "In Progress",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "incidents in progress",
+        "canonical": "In Progress",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "resolved",
+        "canonical": "Resolved",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "resolved incidents",
+        "canonical": "Resolved",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "incidents resolved",
+        "canonical": "Resolved",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "under investigation",
+        "canonical": "Under Investigation",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "under investigation incidents",
+        "canonical": "Under Investigation",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "incidents under investigation",
+        "canonical": "Under Investigation",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "contractor",
+        "canonical": "Contract",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "contract worker",
+        "canonical": "Contract",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "contracted",
+        "canonical": "Contract",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "freelance",
+        "canonical": "Contract",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "freelancer",
+        "canonical": "Contract",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "full time",
+        "canonical": "Full-Time",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "fulltime",
+        "canonical": "Full-Time",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "permanent",
+        "canonical": "Full-Time",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "salaried",
+        "canonical": "Full-Time",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "regular",
+        "canonical": "Full-Time",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "part time",
+        "canonical": "Part-Time",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "pt",
+        "canonical": "Part-Time",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "part-timer",
+        "canonical": "Part-Time",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "part timer",
+        "canonical": "Part-Time",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "half time",
+        "canonical": "Part-Time",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "canceled",
+        "canonical": "Cancelled",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "cancellation",
+        "canonical": "Cancelled",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "called off",
+        "canonical": "Cancelled",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "scrapped",
+        "canonical": "Cancelled",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "aborted",
+        "canonical": "Cancelled",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "late",
+        "canonical": "Delayed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "behind schedule",
+        "canonical": "Delayed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "overdue",
+        "canonical": "Delayed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "held up",
+        "canonical": "Delayed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "postponed",
+        "canonical": "Delayed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "complete",
+        "canonical": "Delivered",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "done",
+        "canonical": "Delivered",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "received",
+        "canonical": "Delivered",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "on the way",
+        "canonical": "In Transit",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "en route",
+        "canonical": "In Transit",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "out for delivery",
+        "canonical": "In Transit",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "shipped",
+        "canonical": "In Transit",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "in movement",
+        "canonical": "In Transit",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "being processed",
+        "canonical": "Processing",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "in process",
+        "canonical": "Processing",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "pending processing",
+        "canonical": "Processing",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "order processing",
+        "canonical": "Processing",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "preparing",
+        "canonical": "Processing",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "void",
+        "canonical": "Cancelled",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "voided",
+        "canonical": "Cancelled",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "arrived",
+        "canonical": "Delivered",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "fulfiled",
+        "canonical": "Delivered",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "moving",
+        "canonical": "In Transit",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "awaiting",
+        "canonical": "Pending",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "not yet started",
+        "canonical": "Pending",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "queued",
+        "canonical": "Pending",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "on hold",
+        "canonical": "Pending",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "waiting",
+        "canonical": "Pending",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "terminated",
+        "canonical": "cancelled",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "finished",
+        "canonical": "completed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "awaiting dispatch",
+        "canonical": "pending",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "running late",
+        "canonical": "delayed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "traveling",
+        "canonical": "in_transit",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "approved",
+        "canonical": "Cleared",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "passed",
+        "canonical": "Cleared",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "released",
+        "canonical": "Cleared",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "customs cleared",
+        "canonical": "Cleared",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "cleared through customs",
+        "canonical": "Cleared",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "detained",
+        "canonical": "Held",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "stopped",
+        "canonical": "Held",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "withheld",
+        "canonical": "Held",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "blocked",
+        "canonical": "Held",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "denied",
+        "canonical": "Rejected",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "refused",
+        "canonical": "Rejected",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "declined",
+        "canonical": "Rejected",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "not approved",
+        "canonical": "Rejected",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "turned down",
+        "canonical": "Rejected",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "pending clearance",
+        "canonical": "Under Review",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "awaiting review",
+        "canonical": "Under Review",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "in review",
+        "canonical": "Under Review",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "under inspection",
+        "canonical": "Under Review",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "shut",
+        "canonical": "Closed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "active",
+        "canonical": "In Progress",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "ongoing",
+        "canonical": "In Progress",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "being handled",
+        "canonical": "In Progress",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "currently being worked on",
+        "canonical": "In Progress",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "open",
+        "canonical": "In Progress",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "fixed",
+        "canonical": "Resolved",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "issue resolved",
+        "canonical": "Resolved",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "problem resolved",
+        "canonical": "Resolved",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "being looked into",
+        "canonical": "Under Investigation",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "being investigated",
+        "canonical": "Under Investigation",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "investigation ongoing",
+        "canonical": "Under Investigation",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "looking into it",
+        "canonical": "Under Investigation",
+        "weight": 0.9,
+        "source": "ai"
+      }
+    ],
+    "measure": [
+      {
+        "term": "count",
+        "canonical": "count",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "how many",
+        "canonical": "count",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "number of",
+        "canonical": "count",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "total",
+        "canonical": "sum",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "sum",
+        "canonical": "sum",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "amount",
+        "canonical": "sum",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "average",
+        "canonical": "avg",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "avg",
+        "canonical": "avg",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "mean",
+        "canonical": "avg",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "maximum",
+        "canonical": "max",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "max",
+        "canonical": "max",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "highest",
+        "canonical": "max",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "minimum",
+        "canonical": "min",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "min",
+        "canonical": "min",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "lowest",
+        "canonical": "min",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "rate",
+        "canonical": "rate",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "ratio",
+        "canonical": "ratio",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "percent",
+        "canonical": "percent",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "growth",
+        "canonical": "growth",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "change",
+        "canonical": "change",
+        "weight": 1.0,
+        "source": "global"
+      }
+    ],
+    "column_hints": [
+      {
+        "term": "distance_km",
+        "canonical": "distance_km",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "distance km",
+        "canonical": "distance_km",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "standard_transit",
+        "canonical": "standard_transit_days",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "standard transit",
+        "canonical": "standard_transit_days",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "total_weight_kg",
+        "canonical": "total_weight_kg",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "total weight kg",
+        "canonical": "total_weight_kg",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "freight_cost",
+        "canonical": "freight_cost",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "freight cost",
+        "canonical": "freight_cost",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "insurance_cost",
+        "canonical": "insurance_cost",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "insurance cost",
+        "canonical": "insurance_cost",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "planned_delivery",
+        "canonical": "planned_delivery_days",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "planned delivery",
+        "canonical": "planned_delivery_days",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "agreed_cost",
+        "canonical": "agreed_cost",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "agreed cost",
+        "canonical": "agreed_cost",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "actual_cost",
+        "canonical": "actual_cost",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "actual cost",
+        "canonical": "actual_cost",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "weight_kg",
+        "canonical": "weight_kg",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "weight kg",
+        "canonical": "weight_kg",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "volume_cbm",
+        "canonical": "volume_cbm",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "volume cbm",
+        "canonical": "volume_cbm",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "declared",
+        "canonical": "declared_value",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "quantity",
+        "canonical": "quantity",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "leg_distance_km",
+        "canonical": "leg_distance_km",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "leg distance km",
+        "canonical": "leg_distance_km",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "leg_cost",
+        "canonical": "leg_cost",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "leg cost",
+        "canonical": "leg_cost",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "actual_transit",
+        "canonical": "actual_transit_hours",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "actual transit",
+        "canonical": "actual_transit_hours",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "delay",
+        "canonical": "delay_hours",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "event",
+        "canonical": "event_count",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "duration",
+        "canonical": "duration_hours",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "trip_cost",
+        "canonical": "trip_cost",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "trip cost",
+        "canonical": "trip_cost",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "litres_consumed",
+        "canonical": "litres_consumed",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "litres consumed",
+        "canonical": "litres_consumed",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "fuel_cost",
+        "canonical": "fuel_cost",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "fuel cost",
+        "canonical": "fuel_cost",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "cost_per_litre",
+        "canonical": "cost_per_litre",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "cost per litre",
+        "canonical": "cost_per_litre",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "co2_kg_emitted",
+        "canonical": "co2_kg_emitted",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "co2 kg emitted",
+        "canonical": "co2_kg_emitted",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "duties",
+        "canonical": "duties_amount",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "taxes",
+        "canonical": "taxes_amount",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "clearance",
+        "canonical": "clearance_days",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "estimated_loss",
+        "canonical": "estimated_loss_value",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "estimated loss",
+        "canonical": "estimated_loss_value",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "claim",
+        "canonical": "claim_amount",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "resolution",
+        "canonical": "resolution_days",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "quantity_on_hand",
+        "canonical": "quantity_on_hand",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "quantity on hand",
+        "canonical": "quantity_on_hand",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "quantity_reserved",
+        "canonical": "quantity_reserved",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "quantity reserved",
+        "canonical": "quantity_reserved",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "quantity_available",
+        "canonical": "quantity_available",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "quantity available",
+        "canonical": "quantity_available",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "inventory",
+        "canonical": "inventory_value",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "contract rate per km",
+        "canonical": "contract_rate_per_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "contracted rate per kilometer",
+        "canonical": "contract_rate_per_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "carrier contract rate",
+        "canonical": "contract_rate_per_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "rate per kilometer",
+        "canonical": "contract_rate_per_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "per km rate",
+        "canonical": "contract_rate_per_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "kilometer rate",
+        "canonical": "contract_rate_per_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "total capacity in square meters",
+        "canonical": "total_capacity_sqm",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "warehouse capacity",
+        "canonical": "total_capacity_sqm",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "storage capacity",
+        "canonical": "total_capacity_sqm",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "total storage space",
+        "canonical": "total_capacity_sqm",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "warehouse size",
+        "canonical": "total_capacity_sqm",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "total floor space",
+        "canonical": "total_capacity_sqm",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "distance",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "route distance",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "km",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "kilometers",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "kilometres",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "route length",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "standard transit days",
+        "canonical": "standard_transit_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "transit days",
+        "canonical": "standard_transit_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "standard shipping days",
+        "canonical": "standard_transit_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "transit time",
+        "canonical": "standard_transit_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "standard delivery days",
+        "canonical": "standard_transit_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "shipping days",
+        "canonical": "standard_transit_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "payload capacity",
+        "canonical": "payload_capacity_kg",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "carrying capacity",
+        "canonical": "payload_capacity_kg",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "load capacity",
+        "canonical": "payload_capacity_kg",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "weight capacity",
+        "canonical": "payload_capacity_kg",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "cargo capacity",
+        "canonical": "payload_capacity_kg",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "maximum load",
+        "canonical": "payload_capacity_kg",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "total trips completed",
+        "canonical": "total_trips_completed",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "trips completed",
+        "canonical": "total_trips_completed",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "number of trips",
+        "canonical": "total_trips_completed",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "total deliveries made",
+        "canonical": "total_trips_completed",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "completed trips",
+        "canonical": "total_trips_completed",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "trips finished",
+        "canonical": "total_trips_completed",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "total weight",
+        "canonical": "total_weight_kg",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "weight in kilograms",
+        "canonical": "total_weight_kg",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "shipment weight",
+        "canonical": "total_weight_kg",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "total kg",
+        "canonical": "total_weight_kg",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "weight of shipments",
+        "canonical": "total_weight_kg",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "gross weight",
+        "canonical": "total_weight_kg",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "shipping cost",
+        "canonical": "freight_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "transportation cost",
+        "canonical": "freight_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "freight charge",
+        "canonical": "freight_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "shipping charge",
+        "canonical": "freight_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "delivery cost",
+        "canonical": "freight_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "shipment insurance",
+        "canonical": "insurance_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "cargo insurance cost",
+        "canonical": "insurance_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "freight insurance",
+        "canonical": "insurance_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "insurance expense",
+        "canonical": "insurance_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "shipping insurance cost",
+        "canonical": "insurance_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "planned delivery days",
+        "canonical": "planned_delivery_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "expected delivery time",
+        "canonical": "planned_delivery_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "estimated delivery duration",
+        "canonical": "planned_delivery_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "scheduled delivery days",
+        "canonical": "planned_delivery_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "delivery lead time",
+        "canonical": "planned_delivery_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "planned transit days",
+        "canonical": "planned_delivery_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "contract cost",
+        "canonical": "agreed_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "agreed freight cost",
+        "canonical": "agreed_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "contracted freight rate",
+        "canonical": "agreed_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "agreed rate",
+        "canonical": "agreed_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "negotiated cost",
+        "canonical": "agreed_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "real cost",
+        "canonical": "actual_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "true cost",
+        "canonical": "actual_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "actual freight cost",
+        "canonical": "actual_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "distance traveled",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "distance covered",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "weight",
+        "canonical": "weight_kg",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "cargo weight",
+        "canonical": "weight_kg",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "item weight",
+        "canonical": "weight_kg",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "kg",
+        "canonical": "weight_kg",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "volume",
+        "canonical": "volume_cbm",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "cubic meters",
+        "canonical": "volume_cbm",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "cbm",
+        "canonical": "volume_cbm",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "cubic volume",
+        "canonical": "volume_cbm",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "cargo volume",
+        "canonical": "volume_cbm",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "shipment volume",
+        "canonical": "volume_cbm",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "declared value",
+        "canonical": "declared_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "declared cargo value",
+        "canonical": "declared_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "stated value",
+        "canonical": "declared_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "declared shipment value",
+        "canonical": "declared_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "customs declared value",
+        "canonical": "declared_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "declared goods value",
+        "canonical": "declared_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "qty",
+        "canonical": "quantity",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "number of items",
+        "canonical": "quantity",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "item count",
+        "canonical": "quantity",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "how many items",
+        "canonical": "quantity",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "total items",
+        "canonical": "quantity",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "leg distance",
+        "canonical": "leg_distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "distance per leg",
+        "canonical": "leg_distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "leg kilometers",
+        "canonical": "leg_distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "distance traveled per leg",
+        "canonical": "leg_distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "segment distance",
+        "canonical": "leg_distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "route leg distance",
+        "canonical": "leg_distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "leg expense",
+        "canonical": "leg_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "segment cost",
+        "canonical": "leg_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "route segment cost",
+        "canonical": "leg_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "leg charge",
+        "canonical": "leg_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "shipment leg cost",
+        "canonical": "leg_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "actual transit hours",
+        "canonical": "actual_transit_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "actual transit time",
+        "canonical": "actual_transit_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "real transit hours",
+        "canonical": "actual_transit_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "actual shipping hours",
+        "canonical": "actual_transit_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "actual travel time",
+        "canonical": "actual_transit_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "real travel hours",
+        "canonical": "actual_transit_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "delay hours",
+        "canonical": "delay_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "delivery delay",
+        "canonical": "delay_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "hours delayed",
+        "canonical": "delay_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "late delivery hours",
+        "canonical": "delay_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "shipment delay",
+        "canonical": "delay_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "delivery latency",
+        "canonical": "delay_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "number of delivery events",
+        "canonical": "event_count",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "delivery event count",
+        "canonical": "event_count",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "total delivery events",
+        "canonical": "event_count",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "how many delivery events",
+        "canonical": "event_count",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "delivery event volume",
+        "canonical": "event_count",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "count of delivery events",
+        "canonical": "event_count",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "kilometers driven",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "trip distance",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "kilometers traveled",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "mileage",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "trip duration",
+        "canonical": "duration_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "travel time",
+        "canonical": "duration_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "journey time",
+        "canonical": "duration_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "trip length",
+        "canonical": "duration_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "travel duration",
+        "canonical": "duration_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "journey duration",
+        "canonical": "duration_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "cost per trip",
+        "canonical": "trip_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "trip expense",
+        "canonical": "trip_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "travel cost",
+        "canonical": "trip_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "journey cost",
+        "canonical": "trip_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "trip spend",
+        "canonical": "trip_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel used",
+        "canonical": "litres_consumed",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel spent",
+        "canonical": "litres_consumed",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel expense",
+        "canonical": "fuel_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel spend",
+        "canonical": "fuel_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel expenditure",
+        "canonical": "fuel_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel bill",
+        "canonical": "fuel_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "cost of fuel",
+        "canonical": "fuel_cost",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel cost per litre",
+        "canonical": "cost_per_litre",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "price per litre",
+        "canonical": "cost_per_litre",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "cost per liter",
+        "canonical": "cost_per_litre",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel price per liter",
+        "canonical": "cost_per_litre",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel rate",
+        "canonical": "cost_per_litre",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "co2 emissions",
+        "canonical": "co2_kg_emitted",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "carbon emissions",
+        "canonical": "co2_kg_emitted",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "carbon output",
+        "canonical": "co2_kg_emitted",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "co2 output",
+        "canonical": "co2_kg_emitted",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "emissions output",
+        "canonical": "co2_kg_emitted",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "carbon footprint",
+        "canonical": "co2_kg_emitted",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel usage per kilometer",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel efficiency",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "miles per gallon",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel burn rate",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "consumption per distance",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel cost per km",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "customs value",
+        "canonical": "declared_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "declaration value",
+        "canonical": "declared_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "declared customs value",
+        "canonical": "declared_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "shipment declared value",
+        "canonical": "declared_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "customs declared amount",
+        "canonical": "declared_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "customs duties",
+        "canonical": "duties_amount",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "import duties",
+        "canonical": "duties_amount",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "duty amount",
+        "canonical": "duties_amount",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "tariff amount",
+        "canonical": "duties_amount",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "customs charges",
+        "canonical": "duties_amount",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "import charges",
+        "canonical": "duties_amount",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "customs taxes",
+        "canonical": "taxes_amount",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "import taxes",
+        "canonical": "taxes_amount",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "export taxes",
+        "canonical": "taxes_amount",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "customs duties amount",
+        "canonical": "taxes_amount",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "clearance time",
+        "canonical": "clearance_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "customs clearance days",
+        "canonical": "clearance_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "days to clear customs",
+        "canonical": "clearance_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "clearance duration",
+        "canonical": "clearance_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "customs processing time",
+        "canonical": "clearance_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "time to clear",
+        "canonical": "clearance_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "estimated loss value",
+        "canonical": "estimated_loss_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "loss value",
+        "canonical": "estimated_loss_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "projected loss",
+        "canonical": "estimated_loss_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "expected loss",
+        "canonical": "estimated_loss_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "anticipated loss",
+        "canonical": "estimated_loss_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "claim amount",
+        "canonical": "claim_amount",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "claims",
+        "canonical": "claim_amount",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "claim value",
+        "canonical": "claim_amount",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "incident claims",
+        "canonical": "claim_amount",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "claim costs",
+        "canonical": "claim_amount",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "total claims",
+        "canonical": "claim_amount",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "resolution time",
+        "canonical": "resolution_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "days to resolve",
+        "canonical": "resolution_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "time to resolve",
+        "canonical": "resolution_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "how long to fix",
+        "canonical": "resolution_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "resolution duration",
+        "canonical": "resolution_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "days to close",
+        "canonical": "resolution_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "current stock",
+        "canonical": "quantity_on_hand",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "units in stock",
+        "canonical": "quantity_on_hand",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "inventory on hand",
+        "canonical": "quantity_on_hand",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "reserved quantity",
+        "canonical": "quantity_reserved",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "quantity on hold",
+        "canonical": "quantity_reserved",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "held inventory",
+        "canonical": "quantity_reserved",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "reserved stock",
+        "canonical": "quantity_reserved",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "inventory reserved",
+        "canonical": "quantity_reserved",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "stock reserved",
+        "canonical": "quantity_reserved",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "available quantity",
+        "canonical": "quantity_available",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "stock available",
+        "canonical": "quantity_available",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "available stock",
+        "canonical": "quantity_available",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "units available",
+        "canonical": "quantity_available",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "available units",
+        "canonical": "quantity_available",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "inventory value",
+        "canonical": "inventory_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "stock value",
+        "canonical": "inventory_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "warehouse value",
+        "canonical": "inventory_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "inventory worth",
+        "canonical": "inventory_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "stock worth",
+        "canonical": "inventory_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "total inventory value",
+        "canonical": "inventory_value",
+        "weight": 0.85,
+        "source": "ai"
+      }
+    ],
+    "time": [
+      {
+        "term": "all_time",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "all time",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "ever",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "total",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "overall",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "all",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "to date",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "this_month",
+        "canonical": "this_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "this month",
+        "canonical": "this_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "current month",
+        "canonical": "this_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "month to date",
+        "canonical": "this_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "mtd",
+        "canonical": "this_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "last_month",
+        "canonical": "last_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "last month",
+        "canonical": "last_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "previous month",
+        "canonical": "last_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "this_quarter",
+        "canonical": "this_quarter",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "this quarter",
+        "canonical": "this_quarter",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "current quarter",
+        "canonical": "this_quarter",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "quarter to date",
+        "canonical": "this_quarter",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "qtd",
+        "canonical": "this_quarter",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "ytd",
+        "canonical": "ytd",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "year to date",
+        "canonical": "ytd",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "this year",
+        "canonical": "ytd",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "current year",
+        "canonical": "ytd",
+        "weight": 1.0,
+        "source": "seed"
+      }
+    ],
+    "scope": [
+      {
+        "term": "by_month",
+        "canonical": "by_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by month",
+        "canonical": "by_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per month",
+        "canonical": "by_month",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by month",
+        "canonical": "by_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_transport_mode",
+        "canonical": "by_transport_mode",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by transport mode",
+        "canonical": "by_transport_mode",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per transport mode",
+        "canonical": "by_transport_mode",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by transport mode",
+        "canonical": "by_transport_mode",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_carrier_type",
+        "canonical": "by_carrier_type",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by carrier type",
+        "canonical": "by_carrier_type",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per carrier type",
+        "canonical": "by_carrier_type",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by carrier type",
+        "canonical": "by_carrier_type",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_carrier_country",
+        "canonical": "by_carrier_country",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by carrier country",
+        "canonical": "by_carrier_country",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per carrier country",
+        "canonical": "by_carrier_country",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by carrier country",
+        "canonical": "by_carrier_country",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_commodity_category",
+        "canonical": "by_commodity_category",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by commodity category",
+        "canonical": "by_commodity_category",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per commodity category",
+        "canonical": "by_commodity_category",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by commodity category",
+        "canonical": "by_commodity_category",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_origin_location",
+        "canonical": "by_origin_location",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by origin location",
+        "canonical": "by_origin_location",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per origin location",
+        "canonical": "by_origin_location",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by origin location",
+        "canonical": "by_origin_location",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_destination_location",
+        "canonical": "by_destination_location",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by destination location",
+        "canonical": "by_destination_location",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per destination location",
+        "canonical": "by_destination_location",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by destination location",
+        "canonical": "by_destination_location",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_fuel_type",
+        "canonical": "by_fuel_type",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by fuel type",
+        "canonical": "by_fuel_type",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per fuel type",
+        "canonical": "by_fuel_type",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by fuel type",
+        "canonical": "by_fuel_type",
+        "weight": 1.0,
+        "source": "seed"
+      }
+    ],
+    "kpi": [
+      {
+        "term": "freight_cost_per_km",
+        "canonical": "freight_cost_per_km",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "freight cost per km",
+        "canonical": "freight_cost_per_km",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "on_time_delivery_rate",
+        "canonical": "on_time_delivery_rate",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "on time delivery rate",
+        "canonical": "on_time_delivery_rate",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "fuel_efficiency_km_per_litre",
+        "canonical": "fuel_efficiency_km_per_litre",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "fuel efficiency km per litre",
+        "canonical": "fuel_efficiency_km_per_litre",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "customs_clearance_success_rate",
+        "canonical": "customs_clearance_success_rate",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "customs clearance success rate",
+        "canonical": "customs_clearance_success_rate",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "freight_order_cost_variance_rate",
+        "canonical": "freight_order_cost_variance_rate",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "freight order cost variance rate",
+        "canonical": "freight_order_cost_variance_rate",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "what is our freight cost per km",
+        "canonical": "freight_cost_per_km",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "show freight cost per km",
+        "canonical": "freight_cost_per_km",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "get freight cost per km",
+        "canonical": "freight_cost_per_km",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "what is our on time delivery rate",
+        "canonical": "on_time_delivery_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "show on time delivery rate",
+        "canonical": "on_time_delivery_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "get on time delivery rate",
+        "canonical": "on_time_delivery_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "what is our fuel efficiency km per litre",
+        "canonical": "fuel_efficiency_km_per_litre",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "show fuel efficiency km per litre",
+        "canonical": "fuel_efficiency_km_per_litre",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "get fuel efficiency km per litre",
+        "canonical": "fuel_efficiency_km_per_litre",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "what is our customs clearance success rate",
+        "canonical": "customs_clearance_success_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "show customs clearance success rate",
+        "canonical": "customs_clearance_success_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "get customs clearance success rate",
+        "canonical": "customs_clearance_success_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "what is our freight order cost variance rate",
+        "canonical": "freight_order_cost_variance_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "show freight order cost variance rate",
+        "canonical": "freight_order_cost_variance_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "get freight order cost variance rate",
+        "canonical": "freight_order_cost_variance_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      }
+    ]
+  },
+  "aliases": {
+    "entity_aliases": {
+      "carriers": [
+        "carrier",
+        "shipping carrier",
+        "transport carrier",
+        "freight carrier",
+        "haulier",
+        "hauler",
+        "transporter",
+        "shipping company"
+      ],
+      "warehouses": [
+        "warehouse",
+        "storage facility",
+        "distribution center",
+        "fulfillment center",
+        "depot",
+        "warehouse facility",
+        "storage warehouse",
+        "logistics center"
+      ],
+      "routes": [
+        "route",
+        "shipping route",
+        "shipping routes",
+        "delivery route",
+        "delivery routes",
+        "transport route",
+        "transport routes"
+      ],
+      "vehicles": [
+        "truck",
+        "trucks",
+        "fleet",
+        "transport vehicle",
+        "transport vehicles",
+        "delivery vehicle",
+        "delivery vehicles",
+        "rig"
+      ],
+      "drivers": [
+        "driver",
+        "truck driver",
+        "truck drivers",
+        "trucker",
+        "truckers",
+        "operator",
+        "operators"
+      ],
+      "shipments": [
+        "shipment",
+        "delivery",
+        "deliveries",
+        "consignment",
+        "consignments",
+        "dispatch",
+        "dispatches",
+        "shipment order"
+      ],
+      "freight_orders": [
+        "freight orders",
+        "freight bookings",
+        "cargo orders",
+        "shipping orders",
+        "transport orders",
+        "haulage orders",
+        "freight requests",
+        "cargo bookings"
+      ],
+      "cargo_items": [
+        "cargo",
+        "goods",
+        "freight",
+        "items",
+        "packages",
+        "parcels",
+        "loads",
+        "cargo units"
+      ],
+      "shipment_legs": [
+        "shipment legs",
+        "leg",
+        "legs",
+        "transit leg",
+        "transit legs",
+        "shipping leg",
+        "shipping legs",
+        "journey leg"
+      ],
+      "delivery_events": [
+        "delivery events",
+        "delivery updates",
+        "delivery milestones",
+        "delivery status events",
+        "shipment events",
+        "shipment status updates",
+        "delivery activities",
+        "delivery tracking events"
+      ],
+      "vehicle_trips": [
+        "trips",
+        "vehicle trips",
+        "truck trips",
+        "hauls",
+        "runs",
+        "delivery runs",
+        "transport runs",
+        "freight runs"
+      ],
+      "fuel_consumption": [
+        "fuel usage",
+        "fuel use",
+        "fuel consumption",
+        "gas consumption",
+        "gasoline usage",
+        "diesel usage",
+        "fuel burn",
+        "fuel burned"
+      ],
+      "customs_declarations": [
+        "customs declarations",
+        "customs docs",
+        "customs documentation",
+        "customs filing",
+        "customs forms",
+        "customs paperwork",
+        "customs submission",
+        "import declaration"
+      ],
+      "warehouse_inventory": [
+        "warehouse stock",
+        "stock levels",
+        "warehouse inventory",
+        "stock on hand",
+        "available inventory",
+        "warehouse stock levels",
+        "inventory levels"
+      ]
+    },
+    "state_synonyms": {
+      "Contract": [
+        "contractor",
+        "contract worker",
+        "contracted",
+        "freelance",
+        "freelancer"
+      ],
+      "Full-Time": [
+        "full time",
+        "fulltime",
+        "permanent",
+        "salaried",
+        "regular"
+      ],
+      "Part-Time": [
+        "part time",
+        "pt",
+        "part-timer",
+        "part timer",
+        "half time"
+      ],
+      "Cancelled": [
+        "void",
+        "voided"
+      ],
+      "Delayed": [
+        "late",
+        "behind schedule",
+        "overdue",
+        "held up",
+        "postponed"
+      ],
+      "Delivered": [
+        "arrived",
+        "fulfiled"
+      ],
+      "In Transit": [
+        "moving"
+      ],
+      "Processing": [
+        "being processed",
+        "in process",
+        "pending processing",
+        "order processing",
+        "preparing"
+      ],
+      "Pending": [
+        "awaiting",
+        "not yet started",
+        "queued",
+        "on hold",
+        "waiting"
+      ],
+      "cancelled": [
+        "terminated"
+      ],
+      "completed": [
+        "finished"
+      ],
+      "pending": [
+        "awaiting dispatch"
+      ],
+      "delayed": [
+        "running late"
+      ],
+      "in_transit": [
+        "traveling"
+      ],
+      "Cleared": [
+        "approved",
+        "passed",
+        "released",
+        "customs cleared",
+        "cleared through customs"
+      ],
+      "Held": [
+        "detained",
+        "stopped",
+        "withheld",
+        "blocked"
+      ],
+      "Rejected": [
+        "denied",
+        "refused",
+        "declined",
+        "not approved",
+        "turned down"
+      ],
+      "Under Review": [
+        "pending clearance",
+        "awaiting review",
+        "in review",
+        "under inspection"
+      ],
+      "Closed": [
+        "shut"
+      ],
+      "In Progress": [
+        "active",
+        "ongoing",
+        "being handled",
+        "currently being worked on",
+        "open"
+      ],
+      "Resolved": [
+        "fixed",
+        "issue resolved",
+        "problem resolved"
+      ],
+      "Under Investigation": [
+        "being looked into",
+        "being investigated",
+        "investigation ongoing",
+        "looking into it"
+      ]
+    },
+    "measure_synonyms": {
+      "contract_rate_per_km": [
+        "contract rate per km",
+        "contracted rate per kilometer",
+        "carrier contract rate",
+        "rate per kilometer",
+        "per km rate",
+        "kilometer rate"
+      ],
+      "total_capacity_sqm": [
+        "total capacity in square meters",
+        "warehouse capacity",
+        "storage capacity",
+        "total storage space",
+        "warehouse size",
+        "total floor space"
+      ],
+      "distance_km": [
+        "fuel usage per kilometer",
+        "fuel efficiency",
+        "miles per gallon",
+        "fuel burn rate",
+        "consumption per distance",
+        "fuel cost per km"
+      ],
+      "standard_transit_days": [
+        "standard transit days",
+        "transit days",
+        "standard shipping days",
+        "transit time",
+        "standard delivery days",
+        "shipping days"
+      ],
+      "payload_capacity_kg": [
+        "payload capacity",
+        "carrying capacity",
+        "load capacity",
+        "weight capacity",
+        "cargo capacity",
+        "maximum load"
+      ],
+      "total_trips_completed": [
+        "total trips completed",
+        "trips completed",
+        "number of trips",
+        "total deliveries made",
+        "completed trips",
+        "trips finished"
+      ],
+      "total_weight_kg": [
+        "total weight",
+        "weight in kilograms",
+        "shipment weight",
+        "total kg",
+        "weight of shipments",
+        "gross weight"
+      ],
+      "freight_cost": [
+        "shipping cost",
+        "transportation cost",
+        "freight charge",
+        "shipping charge",
+        "delivery cost"
+      ],
+      "insurance_cost": [
+        "shipment insurance",
+        "cargo insurance cost",
+        "freight insurance",
+        "insurance expense",
+        "shipping insurance cost"
+      ],
+      "planned_delivery_days": [
+        "planned delivery days",
+        "expected delivery time",
+        "estimated delivery duration",
+        "scheduled delivery days",
+        "delivery lead time",
+        "planned transit days"
+      ],
+      "agreed_cost": [
+        "contract cost",
+        "agreed freight cost",
+        "contracted freight rate",
+        "agreed rate",
+        "negotiated cost"
+      ],
+      "actual_cost": [
+        "real cost",
+        "true cost",
+        "actual freight cost"
+      ],
+      "weight_kg": [
+        "weight",
+        "cargo weight",
+        "item weight",
+        "kg"
+      ],
+      "volume_cbm": [
+        "volume",
+        "cubic meters",
+        "cbm",
+        "cubic volume",
+        "cargo volume",
+        "shipment volume"
+      ],
+      "declared_value": [
+        "customs value",
+        "declaration value",
+        "declared customs value",
+        "shipment declared value",
+        "customs declared amount"
+      ],
+      "quantity": [
+        "qty",
+        "number of items",
+        "item count",
+        "how many items",
+        "total items"
+      ],
+      "leg_distance_km": [
+        "leg distance",
+        "distance per leg",
+        "leg kilometers",
+        "distance traveled per leg",
+        "segment distance",
+        "route leg distance"
+      ],
+      "leg_cost": [
+        "leg expense",
+        "segment cost",
+        "route segment cost",
+        "leg charge",
+        "shipment leg cost"
+      ],
+      "actual_transit_hours": [
+        "actual transit hours",
+        "actual transit time",
+        "real transit hours",
+        "actual shipping hours",
+        "actual travel time",
+        "real travel hours"
+      ],
+      "delay_hours": [
+        "delay hours",
+        "delivery delay",
+        "hours delayed",
+        "late delivery hours",
+        "shipment delay",
+        "delivery latency"
+      ],
+      "event_count": [
+        "number of delivery events",
+        "delivery event count",
+        "total delivery events",
+        "how many delivery events",
+        "delivery event volume",
+        "count of delivery events"
+      ],
+      "duration_hours": [
+        "trip duration",
+        "travel time",
+        "journey time",
+        "trip length",
+        "travel duration",
+        "journey duration"
+      ],
+      "trip_cost": [
+        "cost per trip",
+        "trip expense",
+        "travel cost",
+        "journey cost",
+        "trip spend"
+      ],
+      "litres_consumed": [
+        "fuel used",
+        "fuel spent"
+      ],
+      "fuel_cost": [
+        "fuel expense",
+        "fuel spend",
+        "fuel expenditure",
+        "fuel bill",
+        "cost of fuel"
+      ],
+      "cost_per_litre": [
+        "fuel cost per litre",
+        "price per litre",
+        "cost per liter",
+        "fuel price per liter",
+        "fuel rate"
+      ],
+      "co2_kg_emitted": [
+        "co2 emissions",
+        "carbon emissions",
+        "carbon output",
+        "co2 output",
+        "emissions output",
+        "carbon footprint"
+      ],
+      "duties_amount": [
+        "customs duties",
+        "import duties",
+        "duty amount",
+        "tariff amount",
+        "customs charges",
+        "import charges"
+      ],
+      "taxes_amount": [
+        "customs taxes",
+        "import taxes",
+        "export taxes",
+        "customs duties amount"
+      ],
+      "clearance_days": [
+        "clearance time",
+        "customs clearance days",
+        "days to clear customs",
+        "clearance duration",
+        "customs processing time",
+        "time to clear"
+      ],
+      "estimated_loss_value": [
+        "estimated loss value",
+        "loss value",
+        "projected loss",
+        "expected loss",
+        "anticipated loss"
+      ],
+      "claim_amount": [
+        "claim amount",
+        "claims",
+        "claim value",
+        "incident claims",
+        "claim costs",
+        "total claims"
+      ],
+      "resolution_days": [
+        "resolution time",
+        "days to resolve",
+        "time to resolve",
+        "how long to fix",
+        "resolution duration",
+        "days to close"
+      ],
+      "quantity_on_hand": [
+        "current stock",
+        "units in stock",
+        "inventory on hand"
+      ],
+      "quantity_reserved": [
+        "reserved quantity",
+        "quantity on hold",
+        "held inventory",
+        "reserved stock",
+        "inventory reserved",
+        "stock reserved"
+      ],
+      "quantity_available": [
+        "available quantity",
+        "stock available",
+        "available stock",
+        "units available",
+        "available units"
+      ],
+      "inventory_value": [
+        "inventory value",
+        "stock value",
+        "warehouse value",
+        "inventory worth",
+        "stock worth",
+        "total inventory value"
+      ]
+    }
+  },
+  "meta": {
+    "phase_a_entries": 668,
+    "grounding_violations": 0,
+    "total_entries": 668,
+    "coverage": 0.955
+  }
+}

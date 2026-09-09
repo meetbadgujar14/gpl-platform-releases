@@ -1,0 +1,35 @@
+{
+  "id": "aterm:logistics_warehouse_inventory_growth_quantity_available_this_month_percent",
+  "type": "Aterm",
+  "canonical_id": "logistics_warehouse_inventory_growth_quantity_available_this_month_percent",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "warehouse_inventory",
+    "measure": "growth_quantity_available",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "logistics_warehouse_inventory_growth_quantity_available_this_month_percent = (({logistics_warehouse_inventory_quantity_available_this_month_count} - {logistics_warehouse_inventory_quantity_available_last_month_count}) / abs({logistics_warehouse_inventory_quantity_available_last_month_count}) * 100) if {logistics_warehouse_inventory_quantity_available_last_month_count} != 0 else 0",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-08-07T05:45:31Z",
+  "usage_count": 0,
+  "source_goal": "What is the month over month growth in quantity available for warehouse_inventorys?",
+  "wave": 6,
+  "depends_on": [
+    "logistics_warehouse_inventory_quantity_available_this_month_count",
+    "logistics_warehouse_inventory_quantity_available_last_month_count"
+  ],
+  "dep_values": {
+    "logistics_warehouse_inventory_quantity_available_this_month_count": 0.0,
+    "logistics_warehouse_inventory_quantity_available_last_month_count": 0.0
+  }
+}

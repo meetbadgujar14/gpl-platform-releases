@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_inbound_delivery_schedule_min_expected_quantity_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inbound_delivery_schedule_min_expected_quantity_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inbound_delivery_schedule",
+    "measure": "min_expected_quantity",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 760.0,
+  "formula_line": "MEASURE(MIN(expected_quantity) FROM supply_chain_inbound_delivery_schedule_ERP_record)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-07-22T12:17:44Z",
+  "usage_count": 0,
+  "source_goal": "What is the min expected quantity across all inbound_delivery_schedules?",
+  "wave": 2,
+  "operator": "MEASURE",
+  "verified_at": "2026-07-22T12:18:47Z"
+}

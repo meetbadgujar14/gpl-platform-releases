@@ -1,0 +1,39 @@
+{
+  "id": "aterm:supply_chain_shipment_lines_count_by_actual_arrival_date",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shipment_lines_count_by_actual_arrival_date",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shipment_lines",
+    "measure": "count",
+    "state": "all",
+    "scope": "by_actual_arrival_date",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "": 7.0,
+    "2024-03-29": 1.0,
+    "2024-04-11": 2.0,
+    "2024-05-03": 11.0,
+    "2024-06-07": 3.0,
+    "2024-09-28": 1.0,
+    "2024-11-05": 1.0,
+    "2024-11-19": 7.0,
+    "2025-01-13": 1.0
+  },
+  "formula_line": "MEASURE_GROUPED(COUNT_DISTINCT(shipment_line_id) FROM supply_chain_shipment_lines_WMS_record JOIN supply_chain_shipments_WMS_record ON shipment_id=shipment_id GROUP BY actual_arrival_date)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:47Z",
+  "usage_count": 0,
+  "source_goal": "How many shipment_liness by actual arrival date?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:49Z"
+}

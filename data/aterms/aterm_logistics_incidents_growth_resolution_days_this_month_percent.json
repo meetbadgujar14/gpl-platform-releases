@@ -1,0 +1,36 @@
+{
+  "id": "aterm:logistics_incidents_growth_resolution_days_this_month_percent",
+  "type": "Aterm",
+  "canonical_id": "logistics_incidents_growth_resolution_days_this_month_percent",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "incidents",
+    "measure": "growth_resolution_days",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "logistics_incidents_growth_resolution_days_this_month_percent = (({logistics_incidents_resolution_days_this_month_days} - {logistics_incidents_resolution_days_last_month_days}) / abs({logistics_incidents_resolution_days_last_month_days}) * 100) if {logistics_incidents_resolution_days_last_month_days} != 0 else 0",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-07-22T09:51:18Z",
+  "usage_count": 0,
+  "source_goal": "What is the month over month growth in resolution days for incidentss?",
+  "wave": 6,
+  "depends_on": [
+    "logistics_incidents_resolution_days_this_month_days",
+    "logistics_incidents_resolution_days_last_month_days"
+  ],
+  "dep_values": {
+    "logistics_incidents_resolution_days_this_month_days": 0.0,
+    "logistics_incidents_resolution_days_last_month_days": 0.0
+  },
+  "verified_at": "2026-07-22T12:18:46Z"
+}

@@ -1,0 +1,1603 @@
+{
+  "wave": 1,
+  "goal_count": 84,
+  "generated_at": "2026-07-21T11:32:53Z",
+  "goals": [
+    {
+      "goal": "How many carrierss are there?",
+      "canonical_id": "logistics_carriers_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "carriers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total contract rate per km of carrierss?",
+      "canonical_id": "logistics_carriers_contract_rate_per_km_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "carriers",
+        "measure": "contract_rate_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many warehousess are there?",
+      "canonical_id": "logistics_warehouses_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouses",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total capacity sqm of warehousess?",
+      "canonical_id": "logistics_warehouses_total_capacity_sqm_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouses",
+        "measure": "total_capacity_sqm",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many routess are there?",
+      "canonical_id": "logistics_routes_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of routess?",
+      "canonical_id": "logistics_routes_distance_km_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total standard transit days of routess?",
+      "canonical_id": "logistics_routes_standard_transit_days_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "standard_transit_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many vehicless are there?",
+      "canonical_id": "logistics_vehicles_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicles",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total payload capacity kg of vehicless?",
+      "canonical_id": "logistics_vehicles_payload_capacity_kg_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicles",
+        "measure": "payload_capacity_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many driverss are there?",
+      "canonical_id": "logistics_drivers_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "drivers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Contract driverss are there?",
+      "canonical_id": "logistics_drivers_count_contract",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "drivers",
+        "measure": "count",
+        "state": "Contract",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Full-Time driverss are there?",
+      "canonical_id": "logistics_drivers_count_full_time",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "drivers",
+        "measure": "count",
+        "state": "Full-Time",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Part-Time driverss are there?",
+      "canonical_id": "logistics_drivers_count_part_time",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "drivers",
+        "measure": "count",
+        "state": "Part-Time",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total trips completed of driverss?",
+      "canonical_id": "logistics_drivers_total_trips_completed_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "drivers",
+        "measure": "total_trips_completed",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many shipmentss are there?",
+      "canonical_id": "logistics_shipments_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Cancelled shipmentss are there?",
+      "canonical_id": "logistics_shipments_count_cancelled",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "count",
+        "state": "Cancelled",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Delayed shipmentss are there?",
+      "canonical_id": "logistics_shipments_count_delayed",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "count",
+        "state": "Delayed",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Delivered shipmentss are there?",
+      "canonical_id": "logistics_shipments_count_delivered",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "count",
+        "state": "Delivered",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many In Transit shipmentss are there?",
+      "canonical_id": "logistics_shipments_count_in_transit",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "count",
+        "state": "In Transit",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Processing shipmentss are there?",
+      "canonical_id": "logistics_shipments_count_processing",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "count",
+        "state": "Processing",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total weight kg of shipmentss?",
+      "canonical_id": "logistics_shipments_total_weight_kg_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "total_weight_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total freight cost of shipmentss?",
+      "canonical_id": "logistics_shipments_freight_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "freight_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total insurance cost of shipmentss?",
+      "canonical_id": "logistics_shipments_insurance_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "insurance_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total planned delivery days of shipmentss?",
+      "canonical_id": "logistics_shipments_planned_delivery_days_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "planned_delivery_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many freight_orderss are there?",
+      "canonical_id": "logistics_freight_orders_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Cancelled freight_orderss are there?",
+      "canonical_id": "logistics_freight_orders_count_cancelled",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "count",
+        "state": "Cancelled",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Delivered freight_orderss are there?",
+      "canonical_id": "logistics_freight_orders_count_delivered",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "count",
+        "state": "Delivered",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many In Transit freight_orderss are there?",
+      "canonical_id": "logistics_freight_orders_count_in_transit",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "count",
+        "state": "In Transit",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Pending freight_orderss are there?",
+      "canonical_id": "logistics_freight_orders_count_pending",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "count",
+        "state": "Pending",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total agreed cost of freight_orderss?",
+      "canonical_id": "logistics_freight_orders_agreed_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "agreed_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total actual cost of freight_orderss?",
+      "canonical_id": "logistics_freight_orders_actual_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "actual_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of freight_orderss?",
+      "canonical_id": "logistics_freight_orders_distance_km_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many cargo_itemss are there?",
+      "canonical_id": "logistics_cargo_items_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total weight kg of cargo_itemss?",
+      "canonical_id": "logistics_cargo_items_weight_kg_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "weight_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total volume cbm of cargo_itemss?",
+      "canonical_id": "logistics_cargo_items_volume_cbm_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "volume_cbm",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total declared value of cargo_itemss?",
+      "canonical_id": "logistics_cargo_items_declared_value_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "declared_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity of cargo_itemss?",
+      "canonical_id": "logistics_cargo_items_quantity_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "quantity",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many shipment_legss are there?",
+      "canonical_id": "logistics_shipment_legs_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many cancelled shipment_legss are there?",
+      "canonical_id": "logistics_shipment_legs_count_cancelled",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "count",
+        "state": "cancelled",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many completed shipment_legss are there?",
+      "canonical_id": "logistics_shipment_legs_count_completed",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "count",
+        "state": "completed",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many in_transit shipment_legss are there?",
+      "canonical_id": "logistics_shipment_legs_count_in_transit",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "count",
+        "state": "in_transit",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many pending shipment_legss are there?",
+      "canonical_id": "logistics_shipment_legs_count_pending",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "count",
+        "state": "pending",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total leg distance km of shipment_legss?",
+      "canonical_id": "logistics_shipment_legs_leg_distance_km_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "leg_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total leg cost of shipment_legss?",
+      "canonical_id": "logistics_shipment_legs_leg_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "leg_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total actual transit hours of shipment_legss?",
+      "canonical_id": "logistics_shipment_legs_actual_transit_hours_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "actual_transit_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many delivery_eventss are there?",
+      "canonical_id": "logistics_delivery_events_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay hours of delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_delay_hours_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total event count of delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_event_count_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "event_count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many vehicle_tripss are there?",
+      "canonical_id": "logistics_vehicle_trips_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many cancelled vehicle_tripss are there?",
+      "canonical_id": "logistics_vehicle_trips_count_cancelled",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "cancelled",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many completed vehicle_tripss are there?",
+      "canonical_id": "logistics_vehicle_trips_count_completed",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "completed",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many delayed vehicle_tripss are there?",
+      "canonical_id": "logistics_vehicle_trips_count_delayed",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "delayed",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many in_transit vehicle_tripss are there?",
+      "canonical_id": "logistics_vehicle_trips_count_in_transit",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "in_transit",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_distance_km_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total duration hours of vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_duration_hours_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "duration_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total trip cost of vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_trip_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "trip_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many fuel_consumptions are there?",
+      "canonical_id": "logistics_fuel_consumption_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total litres consumed of fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_litres_consumed_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "litres_consumed",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total fuel cost of fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_fuel_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "fuel_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total cost per litre of fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_cost_per_litre_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "cost_per_litre",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total co2 kg emitted of fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_co2_kg_emitted_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "co2_kg_emitted",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_distance_km_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many customs_declarationss are there?",
+      "canonical_id": "logistics_customs_declarations_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Cleared customs_declarationss are there?",
+      "canonical_id": "logistics_customs_declarations_count_cleared",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "count",
+        "state": "Cleared",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Held customs_declarationss are there?",
+      "canonical_id": "logistics_customs_declarations_count_held",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "count",
+        "state": "Held",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Rejected customs_declarationss are there?",
+      "canonical_id": "logistics_customs_declarations_count_rejected",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "count",
+        "state": "Rejected",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Under Review customs_declarationss are there?",
+      "canonical_id": "logistics_customs_declarations_count_under_review",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "count",
+        "state": "Under Review",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total declared value of customs_declarationss?",
+      "canonical_id": "logistics_customs_declarations_declared_value_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "declared_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total duties amount of customs_declarationss?",
+      "canonical_id": "logistics_customs_declarations_duties_amount_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "duties_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total taxes amount of customs_declarationss?",
+      "canonical_id": "logistics_customs_declarations_taxes_amount_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "taxes_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total clearance days of customs_declarationss?",
+      "canonical_id": "logistics_customs_declarations_clearance_days_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "clearance_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many incidentss are there?",
+      "canonical_id": "logistics_incidents_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Closed incidentss are there?",
+      "canonical_id": "logistics_incidents_count_closed",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "count",
+        "state": "Closed",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many In Progress incidentss are there?",
+      "canonical_id": "logistics_incidents_count_in_progress",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "count",
+        "state": "In Progress",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Resolved incidentss are there?",
+      "canonical_id": "logistics_incidents_count_resolved",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "count",
+        "state": "Resolved",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Under Investigation incidentss are there?",
+      "canonical_id": "logistics_incidents_count_under_investigation",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "count",
+        "state": "Under Investigation",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total estimated loss value of incidentss?",
+      "canonical_id": "logistics_incidents_estimated_loss_value_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "estimated_loss_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total claim amount of incidentss?",
+      "canonical_id": "logistics_incidents_claim_amount_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "claim_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total resolution days of incidentss?",
+      "canonical_id": "logistics_incidents_resolution_days_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "resolution_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many warehouse_inventorys are there?",
+      "canonical_id": "logistics_warehouse_inventory_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity on hand of warehouse_inventorys?",
+      "canonical_id": "logistics_warehouse_inventory_quantity_on_hand_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "quantity_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity reserved of warehouse_inventorys?",
+      "canonical_id": "logistics_warehouse_inventory_quantity_reserved_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "quantity_reserved",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity available of warehouse_inventorys?",
+      "canonical_id": "logistics_warehouse_inventory_quantity_available_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "quantity_available",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total inventory value of warehouse_inventorys?",
+      "canonical_id": "logistics_warehouse_inventory_inventory_value_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "inventory_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    }
+  ]
+}

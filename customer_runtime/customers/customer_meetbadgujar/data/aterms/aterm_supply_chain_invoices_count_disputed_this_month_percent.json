@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_invoices_count_disputed_this_month_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_invoices_count_disputed_this_month_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "invoices",
+    "measure": "count",
+    "state": "Disputed",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "RATIO: MEASURE_MONTH_FIXED('supply_chain_invoices_ERP_record', 'invoice_date', 'COUNT_DISTINCT', 'invoice_id', 'this_month', [{'field': 'invoice_status', 'op': '=', 'value': 'Disputed'}]) / MEASURE_MONTH_FIXED('supply_chain_invoices_ERP_record', 'invoice_date', 'COUNT_DISTINCT', 'invoice_id', 'this_month', None) * 100",
+  "exec_formula": "((MEASURE_MONTH_FIXED('supply_chain_invoices_ERP_record', 'invoice_date', 'COUNT_DISTINCT', 'invoice_id', 'this_month', [{'field': 'invoice_status', 'op': '=', 'value': 'Disputed'}])) / (MEASURE_MONTH_FIXED('supply_chain_invoices_ERP_record', 'invoice_date', 'COUNT_DISTINCT', 'invoice_id', 'this_month', None)) * 100) if (MEASURE_MONTH_FIXED('supply_chain_invoices_ERP_record', 'invoice_date', 'COUNT_DISTINCT', 'invoice_id', 'this_month', None)) else 0.0",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-09-02T06:45:03Z",
+  "usage_count": 0,
+  "source_goal": "What is the invoice dispute rate — the proportion of invoices currently in Disputed status this month?",
+  "wave": "A",
+  "via_llm": true,
+  "llm_reasoning": "wizard/RATIO_FILTERED steps=9",
+  "wizard_steps": 9,
+  "verified_at": "2026-09-02T06:49:08Z"
+}

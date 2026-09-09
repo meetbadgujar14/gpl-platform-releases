@@ -1,0 +1,43 @@
+{
+  "id": "aterm:supply_chain_shrinkage_events_unit_cost_currency_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shrinkage_events_unit_cost_currency_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shrinkage_events",
+    "measure": "unit_cost",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2024-12": 6.9,
+    "2025-05": 543.0,
+    "2025-08": 29.5,
+    "2025-11": 198.75,
+    "2026-01": 63.8,
+    "2026-02": 11.4,
+    "2026-03": 2375.6,
+    "2026-04": 1322.15,
+    "2026-05": 111.75,
+    "2026-06": 518.9,
+    "2026-07": 905.3,
+    "2026-08": 221.15,
+    "2026-09": 1553.15
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_shrinkage_events_WMS_event', 'SUM', 'unit_cost', None, [], None, None, None, {'date_col': 'event_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "What is the total unit cost of shrinkage_eventss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:07Z"
+}

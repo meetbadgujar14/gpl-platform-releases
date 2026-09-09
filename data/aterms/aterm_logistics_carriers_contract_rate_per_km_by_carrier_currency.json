@@ -1,0 +1,42 @@
+{
+  "id": "aterm:logistics_carriers_contract_rate_per_km_by_carrier_currency",
+  "type": "Aterm",
+  "canonical_id": "logistics_carriers_contract_rate_per_km_by_carrier_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "carriers",
+    "measure": "contract_rate_per_km",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Bengaluru Bulk Carriers": 0.94,
+    "Great Lakes Cargo Inc.": 2.38,
+    "Iberian Road Haulage": 1.47,
+    "Meridian Freight Solutions": 1.92,
+    "Nippon Swift Transport": 6.75,
+    "Nordic Express Freight": 3.88,
+    "Pacific Rim Logistics": 2.85,
+    "Southern Cross Hauliers": 2.1,
+    "TransEuro Carriers GmbH": 3.41,
+    "Volta Freight & Logistics": 1.23
+  },
+  "formula_line": "MEASURE_GROUPED('logistics_carriers_MANUAL_dimension', 'MAX', 'contract_rate_per_km', group_by_col='carrier_name', filters=None)",
+  "exec_formula": "MEASURE_GROUPED('logistics_carriers_MANUAL_dimension', 'MAX', 'contract_rate_per_km', group_by_col='carrier_name', filters=None)",
+  "verified": true,
+  "ai_locked": false,
+  "lock_method": "llm_wizard",
+  "verify_reason": "LLM_WIZARD_execution",
+  "created_at": "2026-08-10T06:52:53Z",
+  "usage_count": 0,
+  "source_goal": "Which carrier has the highest cost per km relative to contract rate — identifying over-spend carriers for renegotiation?",
+  "wave": "E",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_GROUPED steps=3",
+  "wizard_steps": 3
+}

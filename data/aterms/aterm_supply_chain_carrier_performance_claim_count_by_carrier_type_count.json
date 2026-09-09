@@ -1,0 +1,34 @@
+{
+  "id": "aterm:supply_chain_carrier_performance_claim_count_by_carrier_type_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_carrier_performance_claim_count_by_carrier_type_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "carrier_performance",
+    "measure": "claim_count",
+    "state": "all",
+    "scope": "by_carrier_type",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "FTL": 83.0,
+    "Intermodal": 103.0,
+    "LTL": 371.0,
+    "Parcel": 388.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(claim_count) FROM supply_chain_carrier_performance_WMS_snapshot JOIN supply_chain_carriers_WMS_dimension ON carrier_id=carrier_id GROUP BY carrier_type)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total claim count of carrier_performances by carrier type?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:51Z"
+}

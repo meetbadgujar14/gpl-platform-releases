@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_shipments_count_all_this_month_by_status_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shipments_count_all_this_month_by_status_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shipments",
+    "measure": "count",
+    "state": "all",
+    "scope": "by_status",
+    "time": "this_month",
+    "unit": "count",
+    "series": "by_status"
+  },
+  "oracle_value": {},
+  "formula_line": "MEASURE_GROUPED('supply_chain_shipments_WMS_record', 'COUNT_DISTINCT', 'shipment_id', group_by_col='status', filters=None)",
+  "exec_formula": "MEASURE_GROUPED('supply_chain_shipments_WMS_record', 'COUNT_DISTINCT', 'shipment_id', group_by_col='status', filters=None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T09:44:39Z",
+  "usage_count": 0,
+  "source_goal": "How do shipment counts compare across delivered vs in-transit status this month?",
+  "wave": "C",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_GROUPED steps=5",
+  "wizard_steps": 5,
+  "verified_at": "2026-09-02T06:49:07Z"
+}

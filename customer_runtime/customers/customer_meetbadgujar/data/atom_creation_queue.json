@@ -1,0 +1,349 @@
+[
+  {
+    "entry_id": "6fec58c0-ec53-4708-8cd3-352d0dcbb69a",
+    "customer_id": "customer_ritikkohad",
+    "table_name": "purchase_order_line",
+    "vertical": "supply_chain",
+    "columns": [
+      {
+        "name": "id",
+        "type": "number"
+      },
+      {
+        "name": "line",
+        "type": "number"
+      },
+      {
+        "name": "purchase_order",
+        "type": "number"
+      },
+      {
+        "name": "item",
+        "type": "number"
+      },
+      {
+        "name": "quantity_ordered",
+        "type": "number"
+      },
+      {
+        "name": "quantity_received",
+        "type": "number"
+      },
+      {
+        "name": "unit_cost",
+        "type": "number"
+      },
+      {
+        "name": "line_total",
+        "type": "number"
+      }
+    ],
+    "enums": {},
+    "row_count": 1257,
+    "queued_at": "2026-09-01T06:58:02Z",
+    "attempts": 1,
+    "last_attempt": "2026-09-01T06:58:02Z",
+    "status": "sent",
+    "error": null
+  },
+  {
+    "entry_id": "a4a7ccab-34e4-4442-aa82-bb1d99a9e9e1",
+    "customer_id": "customer_ritikkohad",
+    "table_name": "claim",
+    "vertical": "retail_shopify",
+    "columns": [
+      {
+        "name": "id",
+        "type": "number"
+      },
+      {
+        "name": "date",
+        "type": "date"
+      },
+      {
+        "name": "type",
+        "type": "string"
+      },
+      {
+        "name": "status",
+        "type": "string"
+      },
+      {
+        "name": "counterparty_type",
+        "type": "string"
+      },
+      {
+        "name": "supplier",
+        "type": "number"
+      },
+      {
+        "name": "shipment",
+        "type": "number"
+      },
+      {
+        "name": "item",
+        "type": "number"
+      },
+      {
+        "name": "reason_code",
+        "type": "string"
+      },
+      {
+        "name": "closed_date",
+        "type": "date"
+      },
+      {
+        "name": "amount_filed",
+        "type": "number"
+      },
+      {
+        "name": "amount_paid",
+        "type": "number"
+      },
+      {
+        "name": "days_open",
+        "type": "number"
+      }
+    ],
+    "enums": {
+      "type": [
+        "chargeback",
+        "damage",
+        "deduction",
+        "insurance",
+        "shortage",
+        "warranty"
+      ],
+      "status": [
+        "approved",
+        "denied",
+        "open",
+        "resolved"
+      ],
+      "counterparty_type": [
+        "carrier",
+        "customer",
+        "supplier"
+      ],
+      "reason_code": [
+        "concealed_damage",
+        "late_delivery",
+        "short_ship",
+        "spec_fail",
+        "temperature_excursion"
+      ]
+    },
+    "row_count": 420,
+    "queued_at": "2026-09-01T06:58:02Z",
+    "attempts": 1,
+    "last_attempt": "2026-09-01T06:58:20Z",
+    "status": "sent",
+    "error": null
+  },
+  {
+    "entry_id": "81925f81-90b7-4714-a183-3b432c54ff6f",
+    "customer_id": "customer_ritikkohad",
+    "table_name": "purchase_order",
+    "vertical": "retail_shopify",
+    "columns": [
+      {
+        "name": "id",
+        "type": "number"
+      },
+      {
+        "name": "date",
+        "type": "date"
+      },
+      {
+        "name": "supplier",
+        "type": "number"
+      },
+      {
+        "name": "warehouse",
+        "type": "number"
+      },
+      {
+        "name": "status",
+        "type": "string"
+      },
+      {
+        "name": "expected_date",
+        "type": "date"
+      },
+      {
+        "name": "total",
+        "type": "number"
+      }
+    ],
+    "enums": {
+      "status": [
+        "cancelled",
+        "open",
+        "partial",
+        "received"
+      ]
+    },
+    "row_count": 420,
+    "queued_at": "2026-09-01T06:58:03Z",
+    "attempts": 1,
+    "last_attempt": "2026-09-01T06:58:22Z",
+    "status": "sent",
+    "error": null
+  },
+  {
+    "entry_id": "cfe3e933-2c2a-493a-8c8e-6832f5132ceb",
+    "customer_id": "customer_meetbadgujar",
+    "table_name": "supply_chain_financials",
+    "vertical": "supply_chain",
+    "columns": [
+      {
+        "name": "transaction_id",
+        "type": "string"
+      },
+      {
+        "name": "date",
+        "type": "date"
+      },
+      {
+        "name": "product_category",
+        "type": "string"
+      },
+      {
+        "name": "units_sold",
+        "type": "number"
+      },
+      {
+        "name": "unit_selling_price",
+        "type": "number"
+      },
+      {
+        "name": "unit_cost_of_goods",
+        "type": "number"
+      },
+      {
+        "name": "revenue",
+        "type": "number"
+      },
+      {
+        "name": "cost_of_goods_sold",
+        "type": "number"
+      },
+      {
+        "name": "gross_profit",
+        "type": "number"
+      },
+      {
+        "name": "gross_profit_margin",
+        "type": "number"
+      },
+      {
+        "name": "operating_expenses",
+        "type": "number"
+      },
+      {
+        "name": "operating_profit",
+        "type": "number"
+      },
+      {
+        "name": "net_profit",
+        "type": "number"
+      },
+      {
+        "name": "net_profit_margin",
+        "type": "number"
+      }
+    ],
+    "enums": {
+      "product_category": [
+        "Apparel",
+        "Electronics",
+        "Industrial",
+        "Packaging"
+      ]
+    },
+    "row_count": 35,
+    "queued_at": "2026-09-02T05:33:40Z",
+    "attempts": 1,
+    "last_attempt": "2026-09-02T05:33:40Z",
+    "status": "sent",
+    "error": null
+  },
+  {
+    "entry_id": "541ae6b3-518b-45f5-a4ba-7a32c9442c24",
+    "customer_id": "customer_meetbadgujar",
+    "table_name": "supply_chain_financials",
+    "vertical": "supply_chain",
+    "columns": [
+      {
+        "name": "transaction_id",
+        "type": "string"
+      },
+      {
+        "name": "date",
+        "type": "date"
+      },
+      {
+        "name": "product_category",
+        "type": "string"
+      },
+      {
+        "name": "units_sold",
+        "type": "number"
+      },
+      {
+        "name": "unit_selling_price",
+        "type": "number"
+      },
+      {
+        "name": "unit_cost_of_goods",
+        "type": "number"
+      },
+      {
+        "name": "revenue",
+        "type": "number"
+      },
+      {
+        "name": "cost_of_goods_sold",
+        "type": "number"
+      },
+      {
+        "name": "gross_profit",
+        "type": "number"
+      },
+      {
+        "name": "gross_profit_margin",
+        "type": "number"
+      },
+      {
+        "name": "operating_expenses",
+        "type": "number"
+      },
+      {
+        "name": "operating_profit",
+        "type": "number"
+      },
+      {
+        "name": "net_profit",
+        "type": "number"
+      },
+      {
+        "name": "net_profit_margin",
+        "type": "number"
+      }
+    ],
+    "enums": {
+      "product_category": [
+        "Apparel",
+        "Electronics",
+        "Industrial",
+        "Packaging"
+      ]
+    },
+    "row_count": 35,
+    "queued_at": "2026-09-02T06:29:24Z",
+    "attempts": 1,
+    "last_attempt": "2026-09-02T06:29:24Z",
+    "status": "sent",
+    "error": null
+  }
+]

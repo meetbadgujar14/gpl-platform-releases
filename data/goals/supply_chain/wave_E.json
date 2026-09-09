@@ -1,0 +1,45 @@
+{
+  "wave": "E",
+  "goal_count": 2,
+  "generated_at": "2026-09-07T05:50:23Z",
+  "goals": [
+    {
+      "goal": "Which item has the highest return value to recommend quality or specification investigation?",
+      "canonical_id": "supply_chain_returns_return_value_all_max_by_item_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "return_value",
+        "state": "all",
+        "scope": "max",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_item"
+      },
+      "wave": "E",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "Which supplier has the highest number of disputed invoices to recommend billing process review?",
+      "canonical_id": "supply_chain_invoices_count_disputed_max_by_supplier_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "count",
+        "state": "Disputed",
+        "scope": "max",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_supplier"
+      },
+      "wave": "E",
+      "complexity": "KPI",
+      "join": null
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "aterm:logistics_carriers_contract_rate_per_km_percent_by_month",
+  "type": "Aterm",
+  "canonical_id": "logistics_carriers_contract_rate_per_km_percent_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "carriers",
+    "measure": "contract_rate_per_km",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2022-05": 1.23,
+    "2022-07": 1.47,
+    "2022-09": 2.38,
+    "2022-11": 1.92,
+    "2023-01": 6.75,
+    "2023-03": 2.85,
+    "2023-06": 3.41,
+    "2023-09": 2.1,
+    "2023-12": 0.94,
+    "2024-02": 3.88
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(contract_rate_per_km) FROM logistics_carriers_MANUAL_dimension GROUP BY BUCKET(created_date, month))",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:18Z",
+  "usage_count": 0,
+  "source_goal": "What is the total contract rate per km of carrierss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:45Z"
+}

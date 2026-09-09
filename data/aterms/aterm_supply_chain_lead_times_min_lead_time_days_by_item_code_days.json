@@ -1,0 +1,41 @@
+{
+  "id": "aterm:supply_chain_lead_times_min_lead_time_days_by_item_code_days",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_lead_times_min_lead_time_days_by_item_code_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "lead_times",
+    "measure": "min_lead_time_days",
+    "state": "all",
+    "scope": "by_item_code",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "BOLT-SS-M1050": 4.9,
+    "BOX-CORR-121008": 8.3,
+    "COND-PVC-0750": 12.6,
+    "DRUM-PP-55G": 10.2,
+    "ELEC-CB-20A-1P": 7.8,
+    "HYD-HOSE-0500": 18.7,
+    "OIL-LUB-ISO46-5L": 9.7,
+    "ORING-EPDM-050": 5.4,
+    "PALT-WOOD-4840": 15.9,
+    "PPE-GLOVE-NIT-L": 6.1,
+    "WRAP-BUB-12-100": 14.3
+  },
+  "formula_line": "MEASURE_GROUPED(MIN(avg_lead_time_days) FROM supply_chain_lead_times_ERP_snapshot JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY item_code)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total min lead time days of lead_timess by item code?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

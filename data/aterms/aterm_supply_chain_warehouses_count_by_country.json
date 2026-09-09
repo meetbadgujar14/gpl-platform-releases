@@ -1,0 +1,35 @@
+{
+  "id": "aterm:supply_chain_warehouses_count_by_country",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_warehouses_count_by_country",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "warehouses",
+    "measure": "count",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_country"
+  },
+  "oracle_value": {
+    "Australia": 1.0,
+    "China": 1.0,
+    "Germany": 1.0,
+    "United Kingdom": 1.0,
+    "United States": 1.0
+  },
+  "formula_line": "MEASURE_GROUPED(COUNT_DISTINCT(warehouse_id) FROM supply_chain_warehouses_WMS_dimension GROUP BY country)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:51Z",
+  "usage_count": 0,
+  "source_goal": "How many warehousess by country?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:52Z"
+}

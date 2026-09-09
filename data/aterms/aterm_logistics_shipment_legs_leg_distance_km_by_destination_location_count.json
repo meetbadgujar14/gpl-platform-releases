@@ -1,0 +1,40 @@
+{
+  "id": "aterm:logistics_shipment_legs_leg_distance_km_by_destination_location_count",
+  "type": "Aterm",
+  "canonical_id": "logistics_shipment_legs_leg_distance_km_by_destination_location_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "shipment_legs",
+    "measure": "leg_distance_km",
+    "state": "all",
+    "scope": "by_destination_location",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Dallas, TX": 1358.4,
+    "Denver, CO": 1124.7,
+    "Minneapolis, MN": 676.4,
+    "Nashville, TN": 823.5,
+    "New Orleans, LA": 453.7,
+    "Portland, OR": 7116.999999999999,
+    "San Antonio, TX": 588.3,
+    "San Francisco, CA": 1395.6,
+    "Seattle, WA": 730.6,
+    "Washington, DC": 1712.5
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(leg_distance_km) FROM logistics_shipment_legs_ERP_record JOIN logistics_routes_MANUAL_dimension ON route_id=route_id GROUP BY destination_location)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:17Z",
+  "usage_count": 0,
+  "source_goal": "What is the total leg distance km of shipment_legss by destination location?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:45Z"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_purchase_order_lines_count_open_ytd",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_purchase_order_lines_count_open_ytd",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "purchase_order_lines",
+    "measure": "count",
+    "state": "Open",
+    "scope": "total",
+    "time": "ytd",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 2.0,
+  "formula_line": "MEASURE_YTD('supply_chain_purchase_order_lines_ERP_record', 'po_date', 'COUNT_DISTINCT', 'po_line_id', [{'field': 'line_status', 'op': '=', 'value': 'Open'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution_stable",
+  "created_at": "2026-09-01T07:44:37Z",
+  "usage_count": 0,
+  "source_goal": "How many Open purchase_order_liness are there ytd?",
+  "wave": 3,
+  "operator": "MEASURE_YTD",
+  "verified_at": "2026-09-01T07:54:55Z"
+}

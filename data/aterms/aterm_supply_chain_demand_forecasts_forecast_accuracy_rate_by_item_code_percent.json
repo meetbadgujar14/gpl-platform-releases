@@ -1,0 +1,41 @@
+{
+  "id": "aterm:supply_chain_demand_forecasts_forecast_accuracy_rate_by_item_code_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_demand_forecasts_forecast_accuracy_rate_by_item_code_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "demand_forecasts",
+    "measure": "forecast_accuracy_rate",
+    "state": "all",
+    "scope": "by_item_code",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "BOLT-SS-M1050": 187.28,
+    "BOX-CORR-121008": 278.21,
+    "CHEM-IPA-99-1L": 91.76,
+    "ELEC-CB-20A-1P": 91.96,
+    "OIL-LUB-ISO46-5L": 92.31,
+    "ORING-EPDM-050": 266.53999999999996,
+    "PALT-WOOD-4840": 93.44,
+    "PPE-HELM-CE-YLW": 94.93,
+    "TOOL-ALLEN-9PC-M": 378.5,
+    "VALV-GATE-02-150": 93.68,
+    "WRAP-BUB-12-100": 191.64999999999998
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(forecast_accuracy_rate) FROM supply_chain_demand_forecasts_ERP_snapshot JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY item_code)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:47Z",
+  "usage_count": 0,
+  "source_goal": "What is the total forecast accuracy rate of demand_forecastss by item code?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

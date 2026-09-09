@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_supplier_performance_on_time_delivery_rate_this_month_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_supplier_performance_on_time_delivery_rate_this_month_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "supplier_performance",
+    "measure": "on_time_delivery_rate",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 646.5,
+  "formula_line": "MEASURE_MONTH_FIXED('supply_chain_supplier_performance_ERP_snapshot', 'period_start_date', 'SUM', 'on_time_delivery_rate', 'this_month', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:38Z",
+  "usage_count": 0,
+  "source_goal": "What is the total on time delivery rate of supplier_performances this month?",
+  "wave": 3,
+  "operator": "MEASURE_MONTH_FIXED",
+  "verified_at": "2026-09-02T06:49:04Z"
+}

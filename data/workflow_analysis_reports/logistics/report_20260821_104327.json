@@ -1,0 +1,99 @@
+{
+  "vertical": "logistics",
+  "models_used": [
+    "gpt4o"
+  ],
+  "total": 2,
+  "passed": 2,
+  "flagged": 0,
+  "failed": 0,
+  "errors": 0,
+  "results": [
+    {
+      "canonical_id": "logistics_drivers_total_trips_completed_by_state_count",
+      "source_goal": "Which driver employment type (Full-Time, Part-Time, Contract) has the highest average trips completed — informing workforce strategy for scaling delivery capacity?",
+      "formula_line": "MEASURE_GROUPED('logistics_drivers_MANUAL_dimension', 'AVG', 'total_trips_completed', group_by_col='employment_status', filters=None)",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "AVG is the correct aggregation function for calculating averages.",
+            "O2": "The column 'total_trips_completed' is the correct column to calculate the average trips completed.",
+            "O3": "The atom 'logistics_drivers_MANUAL_dimension' matches the domain and entity from the business question.",
+            "O4": "There is no time filter needed for 'all_time', which matches the formula.",
+            "O5": "The GROUP BY is on 'employment_status', which correctly matches the business question's focus.",
+            "O6": "The result unit is correctly 'count' for an average operation on the count of trips."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly aligns with the business question and uses appropriate aggregation, grouping, and unit based on provided rules and checks.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 20273
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-21T10:43:24Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_incidents_average_resolution_days_resolved_days",
+      "source_goal": "What is the average incident resolution time in days across all resolved incidents — a measure of operational responsiveness?",
+      "formula_line": "MEASURE('logistics_incidents_ERP_record', 'AVG', 'resolution_days', [{'field': 'incident_status', 'op': '=', 'value': 'Resolved'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "The AVG function is appropriate for calculating the average resolution time.",
+            "O2": "The resolution_days column is correctly used to calculate resolution time.",
+            "O3": "The source atom logistics_incidents_ERP_record matches the domain and entity of the business question.",
+            "O4": "No time filter is expected for an all_time scope, which is correct for this formula.",
+            "O5": "The WHERE clause correctly filters by 'incident_status = Resolved', matching the state filter.",
+            "O6": "The unit of days matches the 'AVG(resolution_days)' output."
+          },
+          "flags": [],
+          "reasoning": "All checks passed correctly, indicating that the formula accurately represents the business question and expected computations.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 2902
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-21T10:43:27Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    }
+  ],
+  "error_details": [],
+  "run_at": "2026-08-21T10:43:27Z"
+}

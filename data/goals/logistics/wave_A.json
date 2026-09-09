@@ -1,0 +1,45 @@
+{
+  "wave": "A",
+  "goal_count": 2,
+  "generated_at": "2026-07-21T11:34:12Z",
+  "goals": [
+    {
+      "goal": "What is the average incident resolution time in days across all resolved incidents — a measure of operational responsiveness?",
+      "canonical_id": "logistics_incidents_average_resolution_days_resolved_days",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "resolution_days",
+        "state": "Resolved",
+        "scope": "average",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "wave": "A",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the average planned delivery days across all active shipments — indicating the standard order-to-ship cycle time in the network?",
+      "canonical_id": "logistics_shipments_average_planned_delivery_days_in_transit_days",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "planned_delivery_days",
+        "state": "In Transit",
+        "scope": "average",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "wave": "A",
+      "complexity": "KPI",
+      "join": null
+    }
+  ]
+}

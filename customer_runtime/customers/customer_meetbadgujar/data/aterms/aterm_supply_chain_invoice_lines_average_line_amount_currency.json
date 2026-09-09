@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_invoice_lines_average_line_amount_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_invoice_lines_average_line_amount_currency",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "invoice_lines",
+    "measure": "average_line_amount",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 30522.282608695652,
+  "formula_line": "supply_chain_invoice_lines_average_line_amount_currency = {supply_chain_invoice_lines_line_amount_currency} / ({supply_chain_invoice_lines_count} if {supply_chain_invoice_lines_count} != 0 else 1)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-09-01T07:54:53Z",
+  "usage_count": 0,
+  "source_goal": "What is the average line amount per invoice_lines?",
+  "wave": 5,
+  "depends_on": [
+    "supply_chain_invoice_lines_line_amount_currency",
+    "supply_chain_invoice_lines_count"
+  ],
+  "dep_values": {
+    "supply_chain_invoice_lines_line_amount_currency": 702012.5,
+    "supply_chain_invoice_lines_count": 23.0
+  },
+  "verified_at": "2026-09-02T06:49:07Z"
+}

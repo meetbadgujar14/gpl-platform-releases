@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_financials_min_revenue_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_financials_min_revenue_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "financials",
+    "measure": "min_revenue",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 17700.0,
+  "formula_line": "MEASURE('supply_chain_financials_ERP_record', 'MIN', 'revenue', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-02T06:44:35Z",
+  "usage_count": 0,
+  "source_goal": "What is the min revenue across all financialss?",
+  "wave": 2,
+  "operator": "MEASURE",
+  "verified_at": "2026-09-02T06:49:08Z"
+}

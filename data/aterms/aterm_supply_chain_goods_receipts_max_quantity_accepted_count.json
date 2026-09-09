@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_goods_receipts_max_quantity_accepted_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_goods_receipts_max_quantity_accepted_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "goods_receipts",
+    "measure": "max_quantity_accepted",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 2950.0,
+  "formula_line": "MEASURE(MAX(quantity_accepted) FROM supply_chain_goods_receipts_ERP_record)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-07-22T12:17:43Z",
+  "usage_count": 0,
+  "source_goal": "What is the max quantity accepted across all goods_receiptss?",
+  "wave": 2,
+  "operator": "MEASURE",
+  "verified_at": "2026-07-22T12:18:47Z"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_buyers_active_po_count_this_quarter_count_max_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_buyers_active_po_count_this_quarter_count_max_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "buyers",
+    "measure": "active_po_count",
+    "state": "all",
+    "scope": "max",
+    "time": "this_quarter",
+    "unit": "count",
+    "series": "by_buyer"
+  },
+  "oracle_value": {},
+  "formula_line": "MEASURE_GROUPED('supply_chain_buyers_ERP_dimension', 'COUNT', 'active_po_count', group_by_col='buyer', filters=None)",
+  "exec_formula": "MEASURE_GROUPED('supply_chain_buyers_ERP_dimension', 'COUNT', 'active_po_count', group_by_col='buyer', filters=None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:52:02Z",
+  "usage_count": 0,
+  "source_goal": "Which buyer has the highest active purchase order count this quarter?",
+  "wave": "C",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_GROUPED steps=5",
+  "wizard_steps": 5,
+  "verified_at": "2026-09-02T06:49:07Z"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_suppliers_reliability_score_ytd_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_reliability_score_ytd_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "reliability_score",
+    "state": "all",
+    "scope": "total",
+    "time": "ytd",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_YTD('supply_chain_suppliers_ERP_dimension', 'onboarded_date', 'SUM', 'reliability_score', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-09-01T10:57:10Z",
+  "usage_count": 0,
+  "source_goal": "What is the total reliability score of supplierss ytd?",
+  "wave": 3,
+  "operator": "MEASURE_YTD",
+  "verified_at": "2026-09-02T06:49:08Z"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_carrier_performance_claim_count_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_carrier_performance_claim_count_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "carrier_performance",
+    "measure": "claim_count",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 945.0,
+  "formula_line": "MEASURE(SUM(claim_count) FROM supply_chain_carrier_performance_WMS_snapshot)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-07-22T12:17:43Z",
+  "usage_count": 0,
+  "source_goal": "What is the total claim count of carrier_performances?",
+  "wave": 1,
+  "operator": "MEASURE",
+  "verified_at": "2026-07-22T12:18:46Z"
+}

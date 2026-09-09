@@ -1,0 +1,151 @@
+{
+  "vertical": "logistics",
+  "models_used": [
+    "gpt4o"
+  ],
+  "total": 3,
+  "passed": 0,
+  "flagged": 3,
+  "failed": 0,
+  "errors": 0,
+  "results": [
+    {
+      "canonical_id": "logistics_delivery_events_average_delay_hours_count",
+      "source_goal": "What is the average delay hours per delivery_events?",
+      "formula_line": "logistics_delivery_events_average_delay_hours_count = {logistics_delivery_events_delay_hours_count} / {logistics_delivery_events_count}",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.6667,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "INCORRECT",
+          "confidence": 0.6667,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": false
+          },
+          "check_reasoning": {
+            "C1": "The formula uses division, which matches the requirement for calculating an average.",
+            "C2": "The formula correctly divides the total delay hours by the count of delivery events.",
+            "C3": "The dependency time scopes for both metrics are all_time, matching the composed metric.",
+            "C4": "There are no state filters on the composed metric or its dependencies, which is consistent.",
+            "C5": "There is no guard against division by zero if the denominator, delivery events count, is zero.",
+            "C6": "The result unit is 'count', which does not make sense for an average that involves 'hours'."
+          },
+          "flags": [],
+          "reasoning": "The metric calculation fails to handle division by zero and the resulting unit is incorrect for the operation performed.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 29227
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-13T04:51:36Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_fuel_consumption_average_distance_km_count",
+      "source_goal": "What is the average distance km per fuel_consumption?",
+      "formula_line": "logistics_fuel_consumption_average_distance_km_count = {logistics_fuel_consumption_distance_km_count} / {logistics_fuel_consumption_count}",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.6667,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.6667,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": false
+          },
+          "check_reasoning": {
+            "C1": "The formula correctly uses division for calculating an average.",
+            "C2": "The dependencies are correct for the average distance calculation; total distance divided by total count.",
+            "C3": "The dependencies share the same 'all_time' time scope as the composed metric.",
+            "C4": "The dependencies have consistent state filters, as both are unfiltered matching the composed metric.",
+            "C5": "There is no handling for division by zero if the denominator is zero.",
+            "C6": "The result unit is mislabeled as 'count' when it should be 'distance per consumption'."
+          },
+          "flags": [
+            "Missing division-by-zero guard",
+            "Incorrect result unit"
+          ],
+          "reasoning": "While the mathematical operations and dependencies are correctly set for an average calculation, the omission of zero-division handling and the incorrect result unit classification make the formula questionable.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 2636
+        }
+      },
+      "all_flags": [
+        "Missing division-by-zero guard",
+        "Incorrect result unit"
+      ],
+      "analyzed_at": "2026-08-13T04:51:39Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_incidents_average_claim_amount_currency",
+      "source_goal": "What is the average claim amount per incidents?",
+      "formula_line": "logistics_incidents_average_claim_amount_currency = {logistics_incidents_claim_amount_currency} / {logistics_incidents_count}",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.8333,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.8333,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses division, which matches 'average' in the business question.",
+            "C2": "The dependencies are correctly chosen for calculating an average.",
+            "C3": "Both dependencies use the 'all_time' time scope, aligning with the composed metric's time scope.",
+            "C4": "Both dependencies have no state filter, aligning with the composed metric's state filter.",
+            "C5": "There is no guard for division by zero in the formula, which could occur if the count is zero.",
+            "C6": "The result is in currency, which is appropriate for the operation of currency divided by count."
+          },
+          "flags": [
+            "Missing division-by-zero guard."
+          ],
+          "reasoning": "The formula matches the business question and dependencies are aligned, but it lacks a division-by-zero safeguard.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 2880
+        }
+      },
+      "all_flags": [
+        "Missing division-by-zero guard."
+      ],
+      "analyzed_at": "2026-08-13T04:51:42Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    }
+  ],
+  "error_details": [],
+  "run_at": "2026-08-13T04:51:42Z"
+}

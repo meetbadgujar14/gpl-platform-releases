@@ -1,0 +1,31 @@
+{
+  "id": "aterm:logistics_incidents_average_resolution_days_resolved_days",
+  "type": "Aterm",
+  "canonical_id": "logistics_incidents_average_resolution_days_resolved_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "incidents",
+    "measure": "resolution_days",
+    "state": "Resolved",
+    "scope": "average",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": 13.133333333333333,
+  "formula_line": "MEASURE('logistics_incidents_ERP_record', 'AVG', 'resolution_days', [{'field': 'incident_status', 'op': '=', 'value': 'Resolved'}])",
+  "exec_formula": "MEASURE('logistics_incidents_ERP_record', 'AVG', 'resolution_days', [{'field': 'incident_status', 'op': '=', 'value': 'Resolved'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_wizard_execution",
+  "created_at": "2026-08-10T06:51:02Z",
+  "usage_count": 0,
+  "source_goal": "What is the average incident resolution time in days across all resolved incidents — a measure of operational responsiveness?",
+  "wave": "A",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE steps=5",
+  "wizard_steps": 5
+}

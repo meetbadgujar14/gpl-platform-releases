@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_invoices_count_disputed_this_quarter_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_invoices_count_disputed_this_quarter_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "invoices",
+    "measure": "count",
+    "state": "Disputed",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_QUARTER_FIXED('supply_chain_invoices_ERP_record', 'invoice_date', 'COUNT_DISTINCT', 'invoice_id', 'this_quarter', [{'field': 'invoice_status', 'op': '=', 'value': 'Disputed'}])",
+  "exec_formula": "MEASURE_QUARTER_FIXED('supply_chain_invoices_ERP_record', 'invoice_date', 'COUNT_DISTINCT', 'invoice_id', 'this_quarter', [{'field': 'invoice_status', 'op': '=', 'value': 'Disputed'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-09-01T11:00:11Z",
+  "usage_count": 0,
+  "source_goal": "How many invoices are currently Disputed this quarter?",
+  "wave": "D",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_QUARTER_FIXED steps=7",
+  "wizard_steps": 7,
+  "verified_at": "2026-09-02T06:49:08Z"
+}

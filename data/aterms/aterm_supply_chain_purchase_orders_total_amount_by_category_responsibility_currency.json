@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_purchase_orders_total_amount_by_category_responsibility_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_purchase_orders_total_amount_by_category_responsibility_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "purchase_orders",
+    "measure": "total_amount",
+    "state": "all",
+    "scope": "by_category_responsibility",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Capital Equipment": 78900.0,
+    "Chemicals & Solvents": 527400.0,
+    "Electronic Components": 97600.0,
+    "Energy & Utilities": 2348250.0,
+    "IT Hardware & Software": 302500.0,
+    "Office Supplies & Print": 327400.0,
+    "Packaging Materials": 269900.0,
+    "Plastics & Polymers": 290500.0,
+    "Professional Services": 73250.0,
+    "Steel & Metals": 146850.0,
+    "Textiles & Apparel": 219050.5,
+    "Warehousing & 3PL": 112000.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(total_amount) FROM supply_chain_purchase_orders_ERP_record JOIN supply_chain_buyers_ERP_dimension ON buyer_id=buyer_id GROUP BY category_responsibility)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:46Z",
+  "usage_count": 0,
+  "source_goal": "What is the total total amount of purchase_orderss by category responsibility?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:49Z"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_safety_stock_safety_stock_qty_count_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_safety_stock_safety_stock_qty_count_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "safety_stock",
+    "measure": "safety_stock_qty",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2024-03": 245.0,
+    "2024-04": 620.0,
+    "2024-05": 1335.0,
+    "2024-06": 1307.0,
+    "2024-07": 475.0,
+    "2024-08": 28.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(safety_stock_qty) FROM supply_chain_safety_stock_ERP_snapshot GROUP BY BUCKET(snapshot_date, month))",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:51Z",
+  "usage_count": 0,
+  "source_goal": "What is the total safety stock qty of safety_stocks by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:52Z"
+}

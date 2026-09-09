@@ -1,0 +1,57 @@
+{
+  "vertical": "logistics",
+  "models_used": [
+    "gpt4o"
+  ],
+  "total": 1,
+  "passed": 1,
+  "flagged": 0,
+  "failed": 0,
+  "errors": 0,
+  "results": [
+    {
+      "canonical_id": "logistics_cargo_items_growth_volume_cbm_this_month_percent",
+      "source_goal": "What is the month over month growth in volume cbm for cargo_itemss?",
+      "formula_line": "logistics_cargo_items_growth_volume_cbm_this_month_percent = (({logistics_cargo_items_volume_cbm_this_month_count} - {logistics_cargo_items_volume_cbm_last_month_count}) / abs({logistics_cargo_items_volume_cbm_last_month_count}) * 100) if {logistics_cargo_items_volume_cbm_last_month_count} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses subtraction and division to calculate growth rate, as the business question concerns.",
+            "C2": "The formula correctly uses the current and last month's volume in cbm as dependencies.",
+            "C3": "The dependency metrics use the same time scope as the composed metric, this_month and last_month.",
+            "C4": "There are no state filters applied, aligning with the absence of a state filter in the composed metric.",
+            "C5": "The formula includes a guard to handle division by zero.",
+            "C6": "The result unit is percent, which is appropriate for a growth calculation of this form."
+          },
+          "flags": [],
+          "reasoning": "All checks are satisfied: the formula correctly calculates month-over-month growth in volume cbm as a percentage.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 3060
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-13T05:12:55Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    }
+  ],
+  "error_details": [],
+  "run_at": "2026-08-13T05:12:55Z"
+}

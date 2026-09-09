@@ -1,0 +1,197 @@
+{
+  "wave": "D",
+  "goal_count": 10,
+  "generated_at": "2026-09-07T05:50:23Z",
+  "goals": [
+    {
+      "goal": "How many shipments are currently pending this month?",
+      "canonical_id": "supply_chain_shipments_pending_this_month_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipments",
+        "measure": "count",
+        "state": "Pending",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "wave": "D",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total freight cost of shipments currently in transit this quarter?",
+      "canonical_id": "supply_chain_shipments_freight_cost_in_transit_this_quarter_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipments",
+        "measure": "freight_cost",
+        "state": "In Transit",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "D",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "How many invoices are currently disputed this month?",
+      "canonical_id": "supply_chain_invoices_disputed_this_month_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "count",
+        "state": "Disputed",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "wave": "D",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "How many invoices are under review this month?",
+      "canonical_id": "supply_chain_invoices_under_review_this_month_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "count",
+        "state": "Under Review",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "wave": "D",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "How many returns are pending this month?",
+      "canonical_id": "supply_chain_returns_pending_this_month_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "count",
+        "state": "Pending",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "wave": "D",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total return value of returns currently in review this quarter?",
+      "canonical_id": "supply_chain_returns_return_value_in_review_this_quarter_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "return_value",
+        "state": "In Review",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "D",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "How many suppliers are currently on hold this quarter?",
+      "canonical_id": "supply_chain_suppliers_on_hold_this_quarter_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "count",
+        "state": "On Hold",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "wave": "D",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "How many items are currently on hold this month?",
+      "canonical_id": "supply_chain_items_on_hold_this_month_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "items",
+        "measure": "count",
+        "state": "On Hold",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "wave": "D",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "How many items were discontinued this quarter?",
+      "canonical_id": "supply_chain_items_discontinued_this_quarter_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "items",
+        "measure": "count",
+        "state": "Discontinued",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "wave": "D",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "How many returns were cancelled this quarter?",
+      "canonical_id": "supply_chain_returns_cancelled_this_quarter_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "count",
+        "state": "Cancelled",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "wave": "D",
+      "complexity": "KPI",
+      "join": null
+    }
+  ]
+}

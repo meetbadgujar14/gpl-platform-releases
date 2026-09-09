@@ -1,0 +1,16 @@
+supplier_id,period_start_date,period_type,supplier_name,supplier_category,total_orders,on_time_delivery_rate,quality_acceptance_rate,avg_lead_time_days,total_spend,defect_rate
+SUP-8823,2024-01-01,monthly,Pacific Rim Logistics,Transportation & Logistics,142,94.4,97.8,6.2,1284500,2.2
+SUP-5102,2024-01-01,monthly,Meridian Industrial Supply Co.,Raw Materials,89,88.7,95.3,11.4,2341200,4.7
+SUP-1475,2024-02-01,monthly,Apex Component Technologies,Electronic Components,213,91.5,98.1,8.9,3875400,1.9
+SUP-4456,2024-02-01,monthly,Northfield Packaging Solutions,Packaging,305,96.7,99.2,4.1,874300,0.8
+SUP-2967,2024-03-01,monthly,Sunrise Fabrication Group,Metal Fabrication,67,82.1,93.6,18.3,5621000,6.4
+SUP-7781,2024-03-01,monthly,Coastal Chemical Distributors,Chemicals & Adhesives,124,90.3,96.9,9.7,1952700,3.1
+SUP-2193,2024-04-01,monthly,Vanguard Precision Parts,Machined Components,178,93.8,97.4,12.6,4312800,2.6
+SUP-9057,2024-04-01,monthly,Ironbridge Steel & Alloys,Raw Materials,55,85.5,94.1,22.4,7830600,5.9
+SUP-4821,2024-05-01,monthly,TechFlow Electronics Ltd.,Electronic Components,290,95.9,98.7,7.3,6145200,1.3
+SUP-5102,2024-05-01,monthly,Greenfield Polymer Corp.,Plastics & Polymers,198,89.4,96.2,10.8,2768900,3.8
+SUP-2967,2024-06-01,monthly,Delta Fasteners & Hardware,Fasteners & Hardware,412,97.2,99.4,3.5,583100,0.6
+SUP-4456,2024-06-01,monthly,Summit Textile & Fiber,Textiles,76,79.6,91.8,25.1,1427300,8.2
+SUP-8823,2024-07-01,monthly,Orion Safety Systems,Safety Equipment,93,92.0,97.1,14.2,2194500,2.9
+SUP-2193,2024-07-01,monthly,Cascade Fluid Technologies,Hydraulics & Pneumatics,61,86.9,95.7,16.8,3402700,4.3
+SUP-8390,2024-08-01,monthly,Blue Ridge Contract Manufacturing,Contract Manufacturing,38,84.2,92.9,28.6,9214800,7.1

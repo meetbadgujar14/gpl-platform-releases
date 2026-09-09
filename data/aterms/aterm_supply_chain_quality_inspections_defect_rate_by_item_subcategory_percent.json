@@ -1,0 +1,41 @@
+{
+  "id": "aterm:supply_chain_quality_inspections_defect_rate_by_item_subcategory_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_quality_inspections_defect_rate_by_item_subcategory_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "quality_inspections",
+    "measure": "defect_rate",
+    "state": "all",
+    "scope": "by_item_subcategory",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Conduit & Fittings": 7.32,
+    "Drive Belts": 8.28,
+    "Hand Tools": 22.43,
+    "Head Protection": 38.660000000000004,
+    "Hex Bolts": 32.22,
+    "Hydraulic Components": 23.5,
+    "O-Rings": 1.5,
+    "Protective Cushioning": 8.13,
+    "Shipping Boxes": 2.42,
+    "Solvents & Cleaners": 1.6,
+    "Stretch Film": 1.14
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(defect_rate) FROM supply_chain_quality_inspections_ERP_record JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY item_subcategory)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total defect rate of quality_inspectionss by item subcategory?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

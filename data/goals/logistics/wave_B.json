@@ -1,0 +1,83 @@
+{
+  "wave": "B",
+  "goal_count": 4,
+  "generated_at": "2026-07-21T11:34:12Z",
+  "goals": [
+    {
+      "goal": "What is the total freight cost at risk from shipments currently in Delayed status — revenue exposure from SLA breaches?",
+      "canonical_id": "logistics_shipments_freight_cost_delayed_this_quarter_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "freight_cost",
+        "state": "Delayed",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total claim amount across all incidents currently under investigation — quantifying unresolved financial liability?",
+      "canonical_id": "logistics_incidents_claim_amount_under_investigation_this_quarter_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "claim_amount",
+        "state": "Under Investigation",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total insurance cost carried by shipments currently in transit — representing active financial risk exposure in the network?",
+      "canonical_id": "logistics_shipments_insurance_cost_in_transit_this_quarter_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "insurance_cost",
+        "state": "In Transit",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total estimated loss value from incidents that are closed — indicating the cumulative financial impact of resolved operational failures?",
+      "canonical_id": "logistics_incidents_estimated_loss_value_closed_ytd_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "estimated_loss_value",
+        "state": "Closed",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    }
+  ]
+}

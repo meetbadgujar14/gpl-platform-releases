@@ -1,0 +1,34 @@
+{
+  "id": "aterm:supply_chain_purchase_requisitions_estimated_unit_cost_by_po_status_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_purchase_requisitions_estimated_unit_cost_by_po_status_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "purchase_requisitions",
+    "measure": "estimated_unit_cost",
+    "state": "all",
+    "scope": "by_po_status",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Cancelled": 2100.0,
+    "Completed": 3680.45,
+    "Open": 664.15,
+    "Pending Approval": 2305.85
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(estimated_unit_cost) FROM supply_chain_purchase_requisitions_ERP_record JOIN supply_chain_purchase_orders_ERP_record ON po_id=po_id GROUP BY po_status)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total estimated unit cost of purchase_requisitionss by po status?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

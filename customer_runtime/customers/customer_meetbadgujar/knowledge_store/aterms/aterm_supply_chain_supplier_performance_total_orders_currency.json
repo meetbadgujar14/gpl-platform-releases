@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_supplier_performance_total_orders_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_supplier_performance_total_orders_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "supplier_performance",
+    "measure": "total_orders",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 11751.0,
+  "formula_line": "MEASURE('supply_chain_supplier_performance_ERP_snapshot', 'SUM', 'total_orders', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:37Z",
+  "usage_count": 0,
+  "source_goal": "What is the total total orders of supplier_performances?",
+  "wave": 1,
+  "operator": "MEASURE",
+  "verified_at": "2026-09-02T06:49:02Z"
+}

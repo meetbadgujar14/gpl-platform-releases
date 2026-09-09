@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_reorder_proposals_estimated_total_cost_currency_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_reorder_proposals_estimated_total_cost_currency_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "reorder_proposals",
+    "measure": "estimated_total_cost",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2024-12": 93000.0,
+    "2025-08": 7800.0,
+    "2025-11": 52500.0,
+    "2026-01": 83500.0,
+    "2026-02": 67250.0,
+    "2026-03": 72000.0,
+    "2026-04": 61250.0,
+    "2026-05": 22500.0,
+    "2026-06": 150400.0,
+    "2026-07": 66500.0,
+    "2026-08": 106625.0,
+    "2026-09": 80770.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_reorder_proposals_ERP_record', 'SUM', 'estimated_total_cost', None, [], None, None, None, {'date_col': 'proposal_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "What is the total estimated total cost of reorder_proposalss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:07Z"
+}

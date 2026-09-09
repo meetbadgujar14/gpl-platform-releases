@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_procurement_spend_discount_amount_by_country_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_procurement_spend_discount_amount_by_country_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "procurement_spend",
+    "measure": "discount_amount",
+    "state": "all",
+    "scope": "by_country",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Brazil": 9795.0,
+    "Canada": 12209.0,
+    "China": 786.0,
+    "Egypt": 4500.0,
+    "Germany": 64.8,
+    "India": 227.0,
+    "Japan": 908.0,
+    "Peru": 471.4,
+    "South Africa": 0.0,
+    "Sweden": 1296.0,
+    "United Kingdom": 0.0,
+    "United States": 3136.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(discount_amount) FROM supply_chain_procurement_spend_ERP_record JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY country)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total discount amount of procurement_spends by country?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

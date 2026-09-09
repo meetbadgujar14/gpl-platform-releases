@@ -1,0 +1,38 @@
+{
+  "id": "aterm:supply_chain_supplier_performance_defect_rate_percent_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_supplier_performance_defect_rate_percent_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "supplier_performance",
+    "measure": "defect_rate",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2025-01": 11.0,
+    "2025-07": 1.9,
+    "2025-10": 8.1,
+    "2026-01": 13.700000000000001,
+    "2026-04": 10.5,
+    "2026-07": 4.1000000000000005,
+    "2026-08": 15.299999999999999,
+    "2026-09": 16.1
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_supplier_performance_ERP_snapshot', 'SUM', 'defect_rate', None, [], None, None, None, {'date_col': 'period_start_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "What is the total defect rate of supplier_performances by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

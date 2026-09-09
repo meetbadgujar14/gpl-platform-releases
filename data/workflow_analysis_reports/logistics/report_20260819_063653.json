@@ -1,0 +1,466 @@
+{
+  "vertical": "logistics",
+  "models_used": [
+    "gpt4o",
+    "claude"
+  ],
+  "total": 6,
+  "passed": 1,
+  "flagged": 5,
+  "failed": 0,
+  "errors": 0,
+  "results": [
+    {
+      "canonical_id": "logistics_customs_declarations_average_duties_amount_currency",
+      "source_goal": "What is the average duties amount per customs_declarations?",
+      "formula_line": "logistics_customs_declarations_average_duties_amount_currency = {logistics_customs_declarations_duties_amount_currency} / {logistics_customs_declarations_count}",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.8333,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.8333,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses division, which is appropriate for calculating an average.",
+            "C2": "The formula correctly uses total duties amount and count of customs declarations for calculating the average.",
+            "C3": "Both dependencies have the same time scope as the composed metric, which is all_time.",
+            "C4": "Both dependencies are unfiltered, aligning with the unfiltered composed metric.",
+            "C5": "There is no guard clause in the formula to handle a potential division-by-zero scenario.",
+            "C6": "The resulting unit is currency, which is valid for dividing total duties by count."
+          },
+          "flags": [
+            "Division by zero risk"
+          ],
+          "reasoning": "The formula correctly calculates the average duties per customs declaration, but lacks a guard against division by zero.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 30580
+        },
+        "claude": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.8333,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses division (total duties / count) which is the correct mathematical operation for computing an average.",
+            "C2": "The numerator is the total duties amount and the denominator is the count of distinct customs declarations, which are the correct building blocks for an average duties amount per declaration.",
+            "C3": "Both dependency metrics use all_time scope, which matches the composed metric's all_time scope.",
+            "C4": "Both dependencies have no state filter (all), which matches the composed metric's state filter of none.",
+            "C5": "There is no division-by-zero guard in the formula; if there are no customs declarations, the denominator would be zero causing a runtime error.",
+            "C6": "Currency divided by a count yields a currency unit, which matches the declared unit of the composed metric."
+          },
+          "flags": [
+            "No division-by-zero guard: if logistics_customs_declarations_count returns 0, the formula will produce an error rather than a safe fallback value."
+          ],
+          "reasoning": "The formula correctly computes the average duties amount per customs declaration using the right building blocks, time scope, and unit, but lacks a division-by-zero safeguard.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 8153
+        }
+      },
+      "all_flags": [
+        "Division by zero risk",
+        "No division-by-zero guard: if logistics_customs_declarations_count returns 0, the formula will produce an error rather than a safe fallback value."
+      ],
+      "analyzed_at": "2026-08-19T06:35:40Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_customs_declarations_average_taxes_amount_currency",
+      "source_goal": "What is the average taxes amount per customs_declarations?",
+      "formula_line": "logistics_customs_declarations_average_taxes_amount_currency = {logistics_customs_declarations_taxes_amount_currency} / {logistics_customs_declarations_count}",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.75,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.6667,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": false
+          },
+          "check_reasoning": {
+            "C1": "The formula uses division for calculating the average, which matches the business question.",
+            "C2": "The dependencies provide the total taxes amount and count of customs declarations, which are correct for this formula.",
+            "C3": "Both dependencies use the 'all_time' time scope, aligning with the composed metric's time scope.",
+            "C4": "The dependencies are unfiltered, consistent with the metric's unfiltered state.",
+            "C5": "There is no guard for division by zero, risking a runtime error if the count is zero.",
+            "C6": "The result unit is 'currency' but without handling for zero count, it could be incorrect."
+          },
+          "flags": [
+            "No guard for division by zero; could lead to errors if count is zero."
+          ],
+          "reasoning": "The formula largely conforms to the requirements, but lacks a guard for division by zero, risking incorrect results if no declarations exist in the dataset.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 6404
+        },
+        "claude": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.8333,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "Dividing total taxes amount by count of customs declarations correctly computes the average taxes amount per declaration.",
+            "C2": "The numerator is the total taxes amount and the denominator is the distinct count of customs declarations, which are the correct building blocks for this average.",
+            "C3": "Both dependency metrics use all_time scope, matching the composed metric's all_time scope.",
+            "C4": "Both dependencies have no state filter (state: all), consistent with the composed metric's state filter of none.",
+            "C5": "There is no division-by-zero guard in the formula; if there are no customs declarations, dividing by zero would cause a runtime error.",
+            "C6": "Currency divided by count yields currency per unit, which is the correct unit for an average taxes amount."
+          },
+          "flags": [
+            "No division-by-zero guard: if logistics_customs_declarations_count returns 0, the formula will fail or produce undefined results."
+          ],
+          "reasoning": "The formula correctly computes average taxes amount as total taxes divided by declaration count with aligned time and state scopes, but lacks a division-by-zero safeguard.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 7863
+        }
+      },
+      "all_flags": [
+        "No guard for division by zero; could lead to errors if count is zero.",
+        "No division-by-zero guard: if logistics_customs_declarations_count returns 0, the formula will fail or produce undefined results."
+      ],
+      "analyzed_at": "2026-08-19T06:35:54Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_customs_declarations_growth_declared_value_this_month_percent",
+      "source_goal": "What is the month over month growth in declared value for customs_declarationss?",
+      "formula_line": "logistics_customs_declarations_growth_declared_value_this_month_percent = (({logistics_customs_declarations_declared_value_this_month_currency} - {logistics_customs_declarations_declared_value_last_month_currency}) / abs({logistics_customs_declarations_declared_value_last_month_currency}) * 100) if {logistics_customs_declarations_declared_value_last_month_currency} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula calculates growth rate as a percentage, matching the business question.",
+            "C2": "The dependencies correctly provide the declared value for this month and last month.",
+            "C3": "The time scopes 'this_month' and 'last_month' are consistent with the composed metric's time scope.",
+            "C4": "The state filter is unfiltered in both the composed metric and its dependencies.",
+            "C5": "Division-by-zero is handled by checking if the denominator is not zero.",
+            "C6": "The result unit is percentage, which is suitable for a growth rate calculation."
+          },
+          "flags": [],
+          "reasoning": "All checks pass, indicating the formula and dependencies align well with the business question and time scope.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 3300
+        },
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses (this_month - last_month) / abs(last_month) * 100, which is the correct mathematical operation for month-over-month growth rate expressed as a percent.",
+            "C2": "The two dependencies are total declared value this month and total declared value last month, which are exactly the correct building blocks for computing month-over-month growth.",
+            "C3": "Dependency 1 covers this_month (2026-07) and Dependency 2 covers last_month (2026-06), which correctly align with the composed metric's this_month time scope for a MoM comparison.",
+            "C4": "Both dependencies have no state filter (state: all), consistent with the composed metric's state filter of none.",
+            "C5": "The formula explicitly guards against division by zero with 'if {logistics_customs_declarations_declared_value_last_month_currency} != 0 else 0'.",
+            "C6": "The operation (this_month - last_month) / abs(last_month) * 100 produces a percent value, which matches the declared unit of percent."
+          },
+          "flags": [],
+          "reasoning": "All six checks pass: the formula correctly computes month-over-month growth in declared value using the right dependencies, time scopes, state filters, mathematical operation, division-by-zero guard, and result unit.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 8595
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-19T06:36:06Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_delivery_events_average_delay_hours_count",
+      "source_goal": "What is the average delay hours per delivery_events?",
+      "formula_line": "logistics_delivery_events_average_delay_hours_count = {logistics_delivery_events_delay_hours_count} / {logistics_delivery_events_count}",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.6667,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.6667,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": false
+          },
+          "check_reasoning": {
+            "C1": "The mathematical operation involves division, suitable for calculating an average.",
+            "C2": "The dependencies measure total delay hours and total count of delivery events, which are appropriate for calculating an average delay per event.",
+            "C3": "Both dependencies use the 'all_time' time scope, which matches the composed metric's time scope.",
+            "C4": "There are no state filters applied to either the composed metric or its dependencies.",
+            "C5": "There is no guard against division by zero if the denominator is zero.",
+            "C6": "The declared unit 'count' does not match a result that represents 'average delay hours per delivery event'."
+          },
+          "flags": [
+            "Division by zero not guarded against.",
+            "Result unit 'count' does not align with the nature of an 'average delay hours' metric."
+          ],
+          "reasoning": "The formula correctly uses division to calculate an average, but it lacks division-by-zero protection and declares an incorrect result unit.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 6385
+        },
+        "claude": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.6667,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": false
+          },
+          "check_reasoning": {
+            "C1": "Division of total delay hours by total event count correctly computes an average, matching the business question.",
+            "C2": "The numerator is total delay hours and the denominator is the count of distinct delivery events, which are the correct building blocks for average delay hours per event.",
+            "C3": "Both dependencies use all_time scope, consistent with the composed metric's all_time scope.",
+            "C4": "Both dependencies have no state filter, consistent with the composed metric's state filter of none.",
+            "C5": "There is no division-by-zero guard in the formula; if there are no delivery events the denominator would be zero causing a runtime error.",
+            "C6": "The result unit is declared as 'count' but the formula produces hours/event (a rate of hours per event), not a dimensionless count, making the unit declaration incorrect."
+          },
+          "flags": [
+            "No division-by-zero guard: if logistics_delivery_events_count returns 0, the formula will error at runtime.",
+            "Unit declared as 'count' but the result is average delay hours per event (a time-rate), which is a unit mismatch in the metric metadata."
+          ],
+          "reasoning": "The formula logic and building blocks are correct for computing average delay hours per delivery event, but the missing division-by-zero guard and the incorrect 'count' unit declaration (should be 'hours' or a rate unit) reduce confidence to QUESTIONABLE.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 8751
+        }
+      },
+      "all_flags": [
+        "Division by zero not guarded against.",
+        "Result unit 'count' does not align with the nature of an 'average delay hours' metric.",
+        "No division-by-zero guard: if logistics_delivery_events_count returns 0, the formula will error at runtime.",
+        "Unit declared as 'count' but the result is average delay hours per event (a time-rate), which is a unit mismatch in the metric metadata."
+      ],
+      "analyzed_at": "2026-08-19T06:36:21Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_freight_cost_per_km_currency",
+      "source_goal": "Average freight cost incurred per kilometer across all shipments.",
+      "formula_line": "logistics_freight_cost_per_km_currency = {logistics_shipments_freight_cost_currency} / {logistics_freight_orders_distance_km_count}",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.6667,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.6667,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": false
+          },
+          "check_reasoning": {
+            "C1": "The formula uses division, which matches the requirement for calculating an average.",
+            "C2": "The dependencies are the correct totals for cost and distance, which are needed to calculate cost per kilometer.",
+            "C3": "Both dependencies are scoped over 'all_time', consistent with the overall metric.",
+            "C4": "There are no state filters in the dependencies, matching the composed metric's lack of a state filter.",
+            "C5": "There is no guard clause for division by zero in the formula, risking a runtime error if the denominator is zero.",
+            "C6": "The result unit should be currency per km, but it is only currency, which is incorrect."
+          },
+          "flags": [
+            "The formula lacks a division-by-zero guard and has a unit mismatch issue; it should output currency per kilometer but outputs just currency."
+          ],
+          "reasoning": "The formula correctly calculates the average cost per kilometer, but lacks a division-by-zero handling mechanism and uses an incorrect result unit.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 4355
+        },
+        "claude": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.6667,
+          "checks": {
+            "C1": true,
+            "C2": false,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "Dividing total freight cost by total distance km is the correct mathematical operation for computing cost per kilometer.",
+            "C2": "The numerator (total freight cost from shipments) and denominator (total distance_km from freight orders) come from different grains — shipments vs. freight orders — and freight orders can have multiple rows per shipment (e.g. SHP-18540 has 8 freight orders, SHP-78340 has 3), meaning the distance_km sum does not correspond 1:1 with the shipments whose freight_cost is being summed, making this a mismatched aggregation that could produce a misleading ratio.",
+            "C3": "Both dependency metrics have time scope all_time, matching the composed metric's all_time scope.",
+            "C4": "Both dependency metrics have no state filter (all), matching the composed metric's state filter of none.",
+            "C5": "There is no division-by-zero guard in the formula; if total distance_km were zero, the formula would produce an error.",
+            "C6": "Currency divided by a distance count (km) yields currency per km, which matches the declared unit of currency for a cost-per-km metric."
+          },
+          "flags": [
+            "Grain mismatch: freight_cost is summed at the shipment level (25 shipments), while distance_km is summed at the freight order level (28 orders), and multiple freight orders can exist per shipment — this risks double-counting or misalignment between numerator and denominator.",
+            "No division-by-zero guard present; if the freight orders table is empty or all distances are zero, the formula will fail.",
+            "The metric unit is declared as 'currency' but the result is actually currency/km (a rate), which may cause confusion in downstream reporting."
+          ],
+          "reasoning": "While the division operation and time/state alignment are correct, the core building blocks are semantically mismatched because freight_cost is aggregated at the shipment grain while distance_km is aggregated at the freight order grain, and the many-to-one relationship between freight orders and shipments means these totals are not directly comparable, undermining the validity of the ratio.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 12881
+        }
+      },
+      "all_flags": [
+        "The formula lacks a division-by-zero guard and has a unit mismatch issue; it should output currency per kilometer but outputs just currency.",
+        "Grain mismatch: freight_cost is summed at the shipment level (25 shipments), while distance_km is summed at the freight order level (28 orders), and multiple freight orders can exist per shipment — this risks double-counting or misalignment between numerator and denominator.",
+        "No division-by-zero guard present; if the freight orders table is empty or all distances are zero, the formula will fail.",
+        "The metric unit is declared as 'currency' but the result is actually currency/km (a rate), which may cause confusion in downstream reporting."
+      ],
+      "analyzed_at": "2026-08-19T06:36:38Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_freight_orders_average_distance_km_count",
+      "source_goal": "What is the average distance km per freight_orders?",
+      "formula_line": "logistics_freight_orders_average_distance_km_count = {logistics_freight_orders_distance_km_count} / {logistics_freight_orders_count}",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.8334,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses division, which is correct for calculating an average.",
+            "C2": "The dependencies correctly provide total distance and count, which are needed for the average.",
+            "C3": "All dependencies and the main metric use the 'all_time' scope, so they align.",
+            "C4": "There are no state filters in the main metric or its dependencies, so they align.",
+            "C5": "Both dependencies have valid values for the division, and division by zero is not a risk here.",
+            "C6": "The result unit of 'count' is correct as the resulting metric from count over count leads to a dimensionless value, which is a typical average ratio."
+          },
+          "flags": [],
+          "reasoning": "All components and conditions of the formula are aligned and correctly structured to answer the business question.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 4872
+        },
+        "claude": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.6667,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": false
+          },
+          "check_reasoning": {
+            "C1": "Division of total distance km by total count of freight orders correctly computes an average distance per freight order.",
+            "C2": "The numerator is total distance km and the denominator is count of distinct freight orders, which are the correct building blocks for an average distance per freight order.",
+            "C3": "Both dependencies use all_time scope, consistent with the composed metric's all_time scope.",
+            "C4": "Both dependencies have no state filter (state: all), consistent with the composed metric's state filter of none.",
+            "C5": "There is no division-by-zero guard in the formula; if freight_orders_count were 0, the formula would produce an error.",
+            "C6": "The result unit is declared as 'count' but the actual output is km/freight_order (a ratio of km to count), which is a distance rate, not a count; the unit declaration is incorrect."
+          },
+          "flags": [
+            "No division-by-zero guard: if logistics_freight_orders_count returns 0, the formula will fail in production.",
+            "Unit declared as 'count' but the result represents average distance in km per freight order (km/order), which is a continuous ratio, not a count."
+          ],
+          "reasoning": "The formula correctly computes average distance km per freight order using the right building blocks and aligned time/state scopes, but it lacks a division-by-zero safeguard and carries an incorrect unit declaration of 'count' instead of a distance-per-order ratio.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 9130
+        }
+      },
+      "all_flags": [
+        "No division-by-zero guard: if logistics_freight_orders_count returns 0, the formula will fail in production.",
+        "Unit declared as 'count' but the result represents average distance in km per freight order (km/order), which is a continuous ratio, not a count."
+      ],
+      "analyzed_at": "2026-08-19T06:36:53Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    }
+  ],
+  "error_details": [],
+  "run_at": "2026-08-19T06:36:53Z"
+}

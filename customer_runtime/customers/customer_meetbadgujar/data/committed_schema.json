@@ -1,0 +1,228 @@
+{
+  "supply_chain": {
+    "supply_chain_purchase_order_lines_ERP_record": {
+      "table_name": "supply_chain_purchase_order_lines_ERP_record",
+      "row_count": 1257,
+      "columns": [
+        {
+          "name": "id",
+          "original_name": "id",
+          "type": "number"
+        },
+        {
+          "name": "line",
+          "original_name": "line",
+          "type": "number"
+        },
+        {
+          "name": "purchase_order",
+          "original_name": "purchase_order",
+          "type": "number"
+        },
+        {
+          "name": "item",
+          "original_name": "item",
+          "type": "number"
+        },
+        {
+          "name": "quantity_ordered",
+          "original_name": "quantity_ordered",
+          "type": "number"
+        },
+        {
+          "name": "quantity_received",
+          "original_name": "quantity_received",
+          "type": "number"
+        },
+        {
+          "name": "unit_cost",
+          "original_name": "unit_cost",
+          "type": "number"
+        },
+        {
+          "name": "line_total",
+          "original_name": "line_total",
+          "type": "number"
+        }
+      ],
+      "enums": {}
+    },
+    "supply_chain_suppliers_ERP_dimension": {
+      "table_name": "supply_chain_suppliers_ERP_dimension",
+      "row_count": 219,
+      "columns": [
+        {
+          "name": "id",
+          "original_name": "id",
+          "type": "number"
+        },
+        {
+          "name": "as_of",
+          "original_name": "as_of",
+          "type": "date"
+        },
+        {
+          "name": "item",
+          "original_name": "item",
+          "type": "number"
+        },
+        {
+          "name": "warehouse",
+          "original_name": "warehouse",
+          "type": "number"
+        },
+        {
+          "name": "lot",
+          "original_name": "lot",
+          "type": "string"
+        },
+        {
+          "name": "status",
+          "original_name": "status",
+          "type": "string"
+        },
+        {
+          "name": "quantity_on_hand",
+          "original_name": "quantity_on_hand",
+          "type": "number"
+        },
+        {
+          "name": "quantity_allocated",
+          "original_name": "quantity_allocated",
+          "type": "number"
+        },
+        {
+          "name": "unit_cost",
+          "original_name": "unit_cost",
+          "type": "number"
+        },
+        {
+          "name": "ownership",
+          "original_name": "ownership",
+          "type": "string"
+        },
+        {
+          "name": "expiry_date",
+          "original_name": "expiry_date",
+          "type": "date"
+        },
+        {
+          "name": "received_date",
+          "original_name": "received_date",
+          "type": "date"
+        }
+      ],
+      "enums": {
+        "lot": [
+          "LOT-1000",
+          "LOT-1001",
+          "LOT-1002",
+          "LOT-1003",
+          "LOT-1004",
+          "LOT-1005",
+          "LOT-1006",
+          "LOT-1007",
+          "LOT-1008",
+          "LOT-1009",
+          "LOT-1010",
+          "LOT-1011"
+        ],
+        "status": [
+          "allocated",
+          "available",
+          "damaged",
+          "in_transit",
+          "quarantine"
+        ],
+        "ownership": [
+          "consignment",
+          "own"
+        ]
+      }
+    },
+    "supply_chain_financials": {
+      "table_name": "supply_chain_financials",
+      "row_count": 35,
+      "columns": [
+        {
+          "name": "transaction_id",
+          "original_name": "transaction_id",
+          "type": "string"
+        },
+        {
+          "name": "date",
+          "original_name": "date",
+          "type": "date"
+        },
+        {
+          "name": "product_category",
+          "original_name": "product_category",
+          "type": "string"
+        },
+        {
+          "name": "units_sold",
+          "original_name": "units_sold",
+          "type": "number"
+        },
+        {
+          "name": "unit_selling_price",
+          "original_name": "unit_selling_price",
+          "type": "number"
+        },
+        {
+          "name": "unit_cost_of_goods",
+          "original_name": "unit_cost_of_goods",
+          "type": "number"
+        },
+        {
+          "name": "revenue",
+          "original_name": "revenue",
+          "type": "number"
+        },
+        {
+          "name": "cost_of_goods_sold",
+          "original_name": "cost_of_goods_sold",
+          "type": "number"
+        },
+        {
+          "name": "gross_profit",
+          "original_name": "gross_profit",
+          "type": "number"
+        },
+        {
+          "name": "gross_profit_margin",
+          "original_name": "gross_profit_margin",
+          "type": "number"
+        },
+        {
+          "name": "operating_expenses",
+          "original_name": "operating_expenses",
+          "type": "number"
+        },
+        {
+          "name": "operating_profit",
+          "original_name": "operating_profit",
+          "type": "number"
+        },
+        {
+          "name": "net_profit",
+          "original_name": "net_profit",
+          "type": "number"
+        },
+        {
+          "name": "net_profit_margin",
+          "original_name": "net_profit_margin",
+          "type": "number"
+        }
+      ],
+      "enums": {
+        "product_category": [
+          "Apparel",
+          "Electronics",
+          "Industrial",
+          "Packaging"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+return_id,return_date,supplier_id,item_id,receipt_id,return_reason,return_status,quantity_returned,unit_cost,return_value,credit_amount,is_credit_received
+RTN-7842,2026-09-01,SUP-3291,ITM-8847,RCP-10492,Packaging defect,Cancelled,12,148.5,1782.0,1782.0,true
+RTN-3156,2026-09-01,SUP-7714,ITM-2234,RCP-20847,Expired product,Cancelled,5,312.75,1563.75,1563.75,true
+RTN-9403,2026-09-01,SUP-5582,ITM-6619,RCP-33174,Expired product,Cancelled,20,89.0,1780.0,0.0,false
+RTN-6271,2026-08-28,SUP-1047,ITM-3301,RCP-41829,Quality defect,Cancelled,8,527.2,4217.6,4217.6,true
+RTN-5019,2026-08-22,SUP-8830,ITM-9145,RCP-58302,Packaging defect,Pending,30,44.6,1338.0,1338.0,false
+RTN-2784,2026-08-15,SUP-3291,ITM-5567,RCP-62419,Specification mismatch,Pending,15,203.0,3045.0,1522.5,false
+RTN-1093,2026-08-09,SUP-6623,ITM-1178,RCP-71038,Overshipment,In Review,3,874.5,2623.5,2623.5,true
+RTN-8367,2026-07-30,SUP-7714,ITM-4490,RCP-83756,Wrong item shipped,Cancelled,7,156.8,1097.6,1097.6,false
+RTN-4512,2026-07-18,SUP-2249,ITM-7723,RCP-90124,Specification mismatch,Cancelled,10,390.0,3900.0,0.0,false
+RTN-7038,2026-07-05,SUP-5582,ITM-8847,RCP-10573,Expired product,Pending,25,148.5,3712.5,3712.5,false
+RTN-3890,2026-06-27,SUP-1047,ITM-2234,RCP-21408,Expired product,Cancelled,6,312.75,1876.5,1876.5,false
+RTN-6147,2026-06-14,SUP-8830,ITM-3301,RCP-34917,Specification mismatch,Cancelled,18,527.2,9489.6,4744.8,false
+RTN-9724,2026-05-30,SUP-6623,ITM-6619,RCP-48203,Wrong item shipped,In Review,4,89.0,356.0,356.0,false
+RTN-2481,2026-05-12,SUP-3291,ITM-9145,RCP-57630,Packaging defect,Cancelled,50,44.6,2230.0,2230.0,true
+RTN-5836,2026-04-28,SUP-2249,ITM-5567,RCP-69841,Packaging defect,Pending,9,203.0,1827.0,1827.0,true
+RTN-1374,2026-04-10,SUP-7714,ITM-1178,RCP-73592,Damaged in transit,Completed,11,874.5,9619.5,9619.5,true
+RTN-8029,2026-03-22,SUP-5582,ITM-4490,RCP-81247,Specification mismatch,Pending,14,156.8,2195.2,0.0,false
+RTN-4693,2026-03-08,SUP-1047,ITM-7723,RCP-92384,Packaging defect,In Review,2,390.0,780.0,780.0,false
+RTN-7261,2026-02-19,SUP-8830,ITM-8847,RCP-10819,Specification mismatch,Completed,16,148.5,2376.0,2376.0,false
+RTN-3548,2026-02-04,SUP-6623,ITM-2234,RCP-22063,Wrong item shipped,Cancelled,22,312.75,6880.5,3440.25,true
+RTN-6912,2026-01-17,SUP-3291,ITM-3301,RCP-35408,Wrong item shipped,Cancelled,8,527.2,4217.6,4217.6,true
+RTN-2037,2025-12-11,SUP-2249,ITM-6619,RCP-49817,Packaging defect,Cancelled,33,89.0,2937.0,2937.0,true
+RTN-5480,2025-10-28,SUP-7714,ITM-9145,RCP-58741,Expired product,Cancelled,40,44.6,1784.0,0.0,false
+RTN-8753,2025-09-15,SUP-5582,ITM-5567,RCP-70293,Packaging defect,Completed,13,203.0,2639.0,2639.0,false
+RTN-1629,2024-11-03,SUP-1047,ITM-1178,RCP-84056,Specification mismatch,In Review,6,874.5,5247.0,5247.0,true

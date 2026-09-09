@@ -1,0 +1,35 @@
+{
+  "id": "aterm:supply_chain_quality_inspections_average_defect_rate_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_quality_inspections_average_defect_rate_percent",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "quality_inspections",
+    "measure": "average_defect_rate",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 5.888000000000001,
+  "formula_line": "supply_chain_quality_inspections_average_defect_rate_percent = {supply_chain_quality_inspections_defect_rate_percent} / {supply_chain_quality_inspections_count} if {supply_chain_quality_inspections_count} != 0 else 0",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-08-12T09:17:59Z",
+  "usage_count": 0,
+  "source_goal": "What is the average defect rate per quality_inspections?",
+  "wave": 5,
+  "depends_on": [
+    "supply_chain_quality_inspections_defect_rate_percent",
+    "supply_chain_quality_inspections_count"
+  ],
+  "dep_values": {
+    "supply_chain_quality_inspections_defect_rate_percent": 147.20000000000002,
+    "supply_chain_quality_inspections_count": 25.0
+  }
+}

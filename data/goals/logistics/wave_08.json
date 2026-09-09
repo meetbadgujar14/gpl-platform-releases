@@ -1,0 +1,2059 @@
+{
+  "wave": 8,
+  "goal_count": 108,
+  "generated_at": "2026-07-21T11:32:53Z",
+  "goals": [
+    {
+      "goal": "How many carrierss by month?",
+      "canonical_id": "logistics_carriers_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "carriers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total contract rate per km of carrierss by month?",
+      "canonical_id": "logistics_carriers_contract_rate_per_km_percent_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "carriers",
+        "measure": "contract_rate_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many carrierss by carrier type?",
+      "canonical_id": "logistics_carriers_count_by_carrier_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "carriers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_carrier_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total contract rate per km of carrierss by carrier type?",
+      "canonical_id": "logistics_carriers_contract_rate_per_km_percent_by_carrier_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "carriers",
+        "measure": "contract_rate_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_carrier_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many carrierss by carrier country?",
+      "canonical_id": "logistics_carriers_count_by_carrier_country",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "carriers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_carrier_country"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total contract rate per km of carrierss by carrier country?",
+      "canonical_id": "logistics_carriers_contract_rate_per_km_percent_by_carrier_country",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "carriers",
+        "measure": "contract_rate_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_carrier_country"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many warehousess by month?",
+      "canonical_id": "logistics_warehouses_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouses",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total capacity sqm of warehousess by month?",
+      "canonical_id": "logistics_warehouses_total_capacity_sqm_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouses",
+        "measure": "total_capacity_sqm",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many routess by month?",
+      "canonical_id": "logistics_routes_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of routess by month?",
+      "canonical_id": "logistics_routes_distance_km_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total standard transit days of routess by month?",
+      "canonical_id": "logistics_routes_standard_transit_days_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "standard_transit_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many routess by transport mode?",
+      "canonical_id": "logistics_routes_count_by_transport_mode",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_transport_mode"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of routess by transport mode?",
+      "canonical_id": "logistics_routes_distance_km_count_by_transport_mode",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_transport_mode"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total standard transit days of routess by transport mode?",
+      "canonical_id": "logistics_routes_standard_transit_days_days_by_transport_mode",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "standard_transit_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_transport_mode"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many routess by origin location?",
+      "canonical_id": "logistics_routes_count_by_origin_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_origin_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of routess by origin location?",
+      "canonical_id": "logistics_routes_distance_km_count_by_origin_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_origin_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total standard transit days of routess by origin location?",
+      "canonical_id": "logistics_routes_standard_transit_days_days_by_origin_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "standard_transit_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_origin_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many routess by destination location?",
+      "canonical_id": "logistics_routes_count_by_destination_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_destination_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of routess by destination location?",
+      "canonical_id": "logistics_routes_distance_km_count_by_destination_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_destination_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total standard transit days of routess by destination location?",
+      "canonical_id": "logistics_routes_standard_transit_days_days_by_destination_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "standard_transit_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_destination_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many vehicless by month?",
+      "canonical_id": "logistics_vehicles_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicles",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total payload capacity kg of vehicless by month?",
+      "canonical_id": "logistics_vehicles_payload_capacity_kg_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicles",
+        "measure": "payload_capacity_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many vehicless by fuel type?",
+      "canonical_id": "logistics_vehicles_count_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicles",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total payload capacity kg of vehicless by fuel type?",
+      "canonical_id": "logistics_vehicles_payload_capacity_kg_count_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicles",
+        "measure": "payload_capacity_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many driverss by month?",
+      "canonical_id": "logistics_drivers_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "drivers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total trips completed of driverss by month?",
+      "canonical_id": "logistics_drivers_total_trips_completed_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "drivers",
+        "measure": "total_trips_completed",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many shipmentss by month?",
+      "canonical_id": "logistics_shipments_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total weight kg of shipmentss by month?",
+      "canonical_id": "logistics_shipments_total_weight_kg_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "total_weight_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total freight cost of shipmentss by month?",
+      "canonical_id": "logistics_shipments_freight_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "freight_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total insurance cost of shipmentss by month?",
+      "canonical_id": "logistics_shipments_insurance_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "insurance_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total planned delivery days of shipmentss by month?",
+      "canonical_id": "logistics_shipments_planned_delivery_days_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "planned_delivery_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many shipmentss by transport mode?",
+      "canonical_id": "logistics_shipments_count_by_transport_mode",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_transport_mode"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total weight kg of shipmentss by transport mode?",
+      "canonical_id": "logistics_shipments_total_weight_kg_currency_by_transport_mode",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "total_weight_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_transport_mode"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total freight cost of shipmentss by transport mode?",
+      "canonical_id": "logistics_shipments_freight_cost_currency_by_transport_mode",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "freight_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_transport_mode"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total insurance cost of shipmentss by transport mode?",
+      "canonical_id": "logistics_shipments_insurance_cost_currency_by_transport_mode",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "insurance_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_transport_mode"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total planned delivery days of shipmentss by transport mode?",
+      "canonical_id": "logistics_shipments_planned_delivery_days_days_by_transport_mode",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "planned_delivery_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_transport_mode"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many freight_orderss by month?",
+      "canonical_id": "logistics_freight_orders_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total agreed cost of freight_orderss by month?",
+      "canonical_id": "logistics_freight_orders_agreed_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "agreed_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total actual cost of freight_orderss by month?",
+      "canonical_id": "logistics_freight_orders_actual_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "actual_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of freight_orderss by month?",
+      "canonical_id": "logistics_freight_orders_distance_km_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many freight_orderss by origin location?",
+      "canonical_id": "logistics_freight_orders_count_by_origin_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_origin_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total agreed cost of freight_orderss by origin location?",
+      "canonical_id": "logistics_freight_orders_agreed_cost_currency_by_origin_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "agreed_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_origin_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total actual cost of freight_orderss by origin location?",
+      "canonical_id": "logistics_freight_orders_actual_cost_currency_by_origin_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "actual_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_origin_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of freight_orderss by origin location?",
+      "canonical_id": "logistics_freight_orders_distance_km_count_by_origin_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_origin_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many freight_orderss by destination location?",
+      "canonical_id": "logistics_freight_orders_count_by_destination_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_destination_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total agreed cost of freight_orderss by destination location?",
+      "canonical_id": "logistics_freight_orders_agreed_cost_currency_by_destination_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "agreed_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_destination_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total actual cost of freight_orderss by destination location?",
+      "canonical_id": "logistics_freight_orders_actual_cost_currency_by_destination_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "actual_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_destination_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of freight_orderss by destination location?",
+      "canonical_id": "logistics_freight_orders_distance_km_count_by_destination_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_destination_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many cargo_itemss by month?",
+      "canonical_id": "logistics_cargo_items_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total weight kg of cargo_itemss by month?",
+      "canonical_id": "logistics_cargo_items_weight_kg_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "weight_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total volume cbm of cargo_itemss by month?",
+      "canonical_id": "logistics_cargo_items_volume_cbm_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "volume_cbm",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total declared value of cargo_itemss by month?",
+      "canonical_id": "logistics_cargo_items_declared_value_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "declared_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity of cargo_itemss by month?",
+      "canonical_id": "logistics_cargo_items_quantity_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "quantity",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many cargo_itemss by commodity category?",
+      "canonical_id": "logistics_cargo_items_count_by_commodity_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_commodity_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total weight kg of cargo_itemss by commodity category?",
+      "canonical_id": "logistics_cargo_items_weight_kg_count_by_commodity_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "weight_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_commodity_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total volume cbm of cargo_itemss by commodity category?",
+      "canonical_id": "logistics_cargo_items_volume_cbm_count_by_commodity_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "volume_cbm",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_commodity_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total declared value of cargo_itemss by commodity category?",
+      "canonical_id": "logistics_cargo_items_declared_value_currency_by_commodity_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "declared_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_commodity_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity of cargo_itemss by commodity category?",
+      "canonical_id": "logistics_cargo_items_quantity_count_by_commodity_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "quantity",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_commodity_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many shipment_legss by month?",
+      "canonical_id": "logistics_shipment_legs_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total leg distance km of shipment_legss by month?",
+      "canonical_id": "logistics_shipment_legs_leg_distance_km_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "leg_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total leg cost of shipment_legss by month?",
+      "canonical_id": "logistics_shipment_legs_leg_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "leg_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total actual transit hours of shipment_legss by month?",
+      "canonical_id": "logistics_shipment_legs_actual_transit_hours_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "actual_transit_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many delivery_eventss by month?",
+      "canonical_id": "logistics_delivery_events_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay hours of delivery_eventss by month?",
+      "canonical_id": "logistics_delivery_events_delay_hours_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total event count of delivery_eventss by month?",
+      "canonical_id": "logistics_delivery_events_event_count_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "event_count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many vehicle_tripss by month?",
+      "canonical_id": "logistics_vehicle_trips_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of vehicle_tripss by month?",
+      "canonical_id": "logistics_vehicle_trips_distance_km_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total duration hours of vehicle_tripss by month?",
+      "canonical_id": "logistics_vehicle_trips_duration_hours_percent_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "duration_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total trip cost of vehicle_tripss by month?",
+      "canonical_id": "logistics_vehicle_trips_trip_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "trip_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many vehicle_tripss by origin location?",
+      "canonical_id": "logistics_vehicle_trips_count_by_origin_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_origin_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of vehicle_tripss by origin location?",
+      "canonical_id": "logistics_vehicle_trips_distance_km_count_by_origin_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_origin_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total duration hours of vehicle_tripss by origin location?",
+      "canonical_id": "logistics_vehicle_trips_duration_hours_percent_by_origin_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "duration_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_origin_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total trip cost of vehicle_tripss by origin location?",
+      "canonical_id": "logistics_vehicle_trips_trip_cost_currency_by_origin_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "trip_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_origin_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many vehicle_tripss by destination location?",
+      "canonical_id": "logistics_vehicle_trips_count_by_destination_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_destination_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of vehicle_tripss by destination location?",
+      "canonical_id": "logistics_vehicle_trips_distance_km_count_by_destination_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_destination_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total duration hours of vehicle_tripss by destination location?",
+      "canonical_id": "logistics_vehicle_trips_duration_hours_percent_by_destination_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "duration_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_destination_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total trip cost of vehicle_tripss by destination location?",
+      "canonical_id": "logistics_vehicle_trips_trip_cost_currency_by_destination_location",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "trip_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_destination_location"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many fuel_consumptions by month?",
+      "canonical_id": "logistics_fuel_consumption_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total litres consumed of fuel_consumptions by month?",
+      "canonical_id": "logistics_fuel_consumption_litres_consumed_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "litres_consumed",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total fuel cost of fuel_consumptions by month?",
+      "canonical_id": "logistics_fuel_consumption_fuel_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "fuel_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total cost per litre of fuel_consumptions by month?",
+      "canonical_id": "logistics_fuel_consumption_cost_per_litre_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "cost_per_litre",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total co2 kg emitted of fuel_consumptions by month?",
+      "canonical_id": "logistics_fuel_consumption_co2_kg_emitted_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "co2_kg_emitted",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of fuel_consumptions by month?",
+      "canonical_id": "logistics_fuel_consumption_distance_km_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many fuel_consumptions by fuel type?",
+      "canonical_id": "logistics_fuel_consumption_count_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total litres consumed of fuel_consumptions by fuel type?",
+      "canonical_id": "logistics_fuel_consumption_litres_consumed_count_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "litres_consumed",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total fuel cost of fuel_consumptions by fuel type?",
+      "canonical_id": "logistics_fuel_consumption_fuel_cost_currency_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "fuel_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total cost per litre of fuel_consumptions by fuel type?",
+      "canonical_id": "logistics_fuel_consumption_cost_per_litre_currency_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "cost_per_litre",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total co2 kg emitted of fuel_consumptions by fuel type?",
+      "canonical_id": "logistics_fuel_consumption_co2_kg_emitted_count_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "co2_kg_emitted",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of fuel_consumptions by fuel type?",
+      "canonical_id": "logistics_fuel_consumption_distance_km_count_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many customs_declarationss by month?",
+      "canonical_id": "logistics_customs_declarations_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total declared value of customs_declarationss by month?",
+      "canonical_id": "logistics_customs_declarations_declared_value_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "declared_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total duties amount of customs_declarationss by month?",
+      "canonical_id": "logistics_customs_declarations_duties_amount_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "duties_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total taxes amount of customs_declarationss by month?",
+      "canonical_id": "logistics_customs_declarations_taxes_amount_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "taxes_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total clearance days of customs_declarationss by month?",
+      "canonical_id": "logistics_customs_declarations_clearance_days_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "clearance_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many incidentss by month?",
+      "canonical_id": "logistics_incidents_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total estimated loss value of incidentss by month?",
+      "canonical_id": "logistics_incidents_estimated_loss_value_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "estimated_loss_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total claim amount of incidentss by month?",
+      "canonical_id": "logistics_incidents_claim_amount_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "claim_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total resolution days of incidentss by month?",
+      "canonical_id": "logistics_incidents_resolution_days_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "resolution_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many warehouse_inventorys by month?",
+      "canonical_id": "logistics_warehouse_inventory_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity on hand of warehouse_inventorys by month?",
+      "canonical_id": "logistics_warehouse_inventory_quantity_on_hand_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "quantity_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity reserved of warehouse_inventorys by month?",
+      "canonical_id": "logistics_warehouse_inventory_quantity_reserved_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "quantity_reserved",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity available of warehouse_inventorys by month?",
+      "canonical_id": "logistics_warehouse_inventory_quantity_available_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "quantity_available",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total inventory value of warehouse_inventorys by month?",
+      "canonical_id": "logistics_warehouse_inventory_inventory_value_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "inventory_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many warehouse_inventorys by commodity category?",
+      "canonical_id": "logistics_warehouse_inventory_count_by_commodity_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_commodity_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity on hand of warehouse_inventorys by commodity category?",
+      "canonical_id": "logistics_warehouse_inventory_quantity_on_hand_count_by_commodity_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "quantity_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_commodity_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity reserved of warehouse_inventorys by commodity category?",
+      "canonical_id": "logistics_warehouse_inventory_quantity_reserved_count_by_commodity_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "quantity_reserved",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_commodity_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity available of warehouse_inventorys by commodity category?",
+      "canonical_id": "logistics_warehouse_inventory_quantity_available_count_by_commodity_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "quantity_available",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_commodity_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total inventory value of warehouse_inventorys by commodity category?",
+      "canonical_id": "logistics_warehouse_inventory_inventory_value_currency_by_commodity_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "inventory_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_commodity_category"
+      },
+      "join": null
+    }
+  ]
+}

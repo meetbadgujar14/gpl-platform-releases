@@ -1,0 +1,16 @@
+supplier_id,item_id,period_start_date,supplier_name,item_name,item_category,avg_lead_time_days,min_lead_time_days,max_lead_time_days,order_count
+SUP-3309,ITM-1589,2024-01-01,Pacific Rim Logistics,Industrial Hydraulic Pump,Mechanical Components,14.3,10,21,47
+SUP-6640,ITM-6603,2024-01-01,Meridian Industrial Supply,Stainless Steel Fasteners Set,Hardware & Fasteners,7.8,5,12,132
+SUP-3309,ITM-1589,2024-02-01,Apex Semiconductor Solutions,Microcontroller Unit MCU-32,Electronics,28.5,21,42,89
+SUP-3309,ITM-2056,2024-02-01,Cascade Materials Group,Polycarbonate Sheet 4mm,Raw Materials,10.2,7,15,64
+SUP-5538,ITM-4821,2024-03-01,Northgate Precision Parts,CNC Machined Bearing Housing,Mechanical Components,18.7,14,28,33
+SUP-6640,ITM-2931,2024-03-01,Sterling Chemical Distributors,Industrial Lubricant 20L,Chemicals & Consumables,5.4,3,9,218
+SUP-7781,ITM-2056,2024-04-01,Vantage Electronics Corp,Power Supply Unit 480W,Electronics,22.1,16,35,76
+SUP-5102,ITM-7394,2024-04-01,BlueStar Packaging Solutions,Corrugated Cardboard Box L,Packaging,4.9,3,8,341
+SUP-4456,ITM-5812,2024-05-01,Ironclad Metals Ltd,Aluminum Alloy Billet 6061,Raw Materials,12.6,9,18,95
+SUP-5538,ITM-7394,2024-05-01,Quantum Optical Technologies,Fiber Optic Cable 50m,Electrical & Cabling,16.4,12,24,58
+SUP-5538,ITM-6389,2024-06-01,Hawthorne Rubber & Seals,O-Ring Seal Kit Industrial,Mechanical Components,8.3,5,13,187
+SUP-2193,ITM-1247,2024-06-01,Titan Structural Steel Co,Steel Angle Bar 50x50mm,Raw Materials,9.7,7,14,112
+SUP-4456,ITM-6389,2024-07-01,Elara Safety Products,Safety Valve Assembly V2,Safety Equipment,20.8,15,30,41
+SUP-7364,ITM-3648,2024-07-01,Clearfield Adhesive Systems,Epoxy Resin Adhesive 5kg,Chemicals & Consumables,6.1,4,10,156
+SUP-2193,ITM-2764,2024-08-01,Renshaw Pneumatic Systems,Pneumatic Cylinder 80mm,Mechanical Components,15.9,11,23,52

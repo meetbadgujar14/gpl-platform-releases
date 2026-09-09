@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_returns_credit_amount_Completed_this_quarter_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_returns_credit_amount_Completed_this_quarter_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "returns",
+    "measure": "credit_amount",
+    "state": "Completed",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_QUARTER_FIXED('supply_chain_returns_ERP_record', 'return_date', 'SUM', 'credit_amount', 'this_quarter', [{'field': 'return_status', 'op': '=', 'value': 'Completed'}])",
+  "exec_formula": "MEASURE_QUARTER_FIXED('supply_chain_returns_ERP_record', 'return_date', 'SUM', 'credit_amount', 'this_quarter', [{'field': 'return_status', 'op': '=', 'value': 'Completed'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-09-01T10:58:37Z",
+  "usage_count": 0,
+  "source_goal": "What is the total credit amount issued for completed returns this quarter?",
+  "wave": "B",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_QUARTER_FIXED steps=7",
+  "wizard_steps": 7,
+  "verified_at": "2026-09-02T06:49:08Z"
+}

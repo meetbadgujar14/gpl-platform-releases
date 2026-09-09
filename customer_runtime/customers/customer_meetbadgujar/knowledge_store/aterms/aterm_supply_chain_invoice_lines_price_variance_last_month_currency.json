@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_invoice_lines_price_variance_last_month_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_invoice_lines_price_variance_last_month_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "invoice_lines",
+    "measure": "price_variance",
+    "state": "all",
+    "scope": "total",
+    "time": "last_month",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": -226.0,
+  "formula_line": "MEASURE_MONTH_FIXED('supply_chain_invoice_lines_ERP_record', 'invoice_date', 'SUM', 'price_variance', 'last_month', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "What is the total price variance of invoice_liness last month?",
+  "wave": 3,
+  "operator": "MEASURE_MONTH_FIXED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

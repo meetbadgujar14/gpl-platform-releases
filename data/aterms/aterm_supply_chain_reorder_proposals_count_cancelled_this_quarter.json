@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_reorder_proposals_count_cancelled_this_quarter",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_reorder_proposals_count_cancelled_this_quarter",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "reorder_proposals",
+    "measure": "count",
+    "state": "Cancelled",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_QUARTER_FIXED(COUNT_DISTINCT(proposal_id) FROM supply_chain_reorder_proposals_ERP_record WHERE proposal_date IN 2026-Q3 WHERE proposal_status=Cancelled)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-07-22T12:17:46Z",
+  "usage_count": 0,
+  "source_goal": "How many Cancelled reorder_proposalss are there this quarter?",
+  "wave": 3,
+  "operator": "MEASURE_QUARTER_FIXED",
+  "verified_at": "2026-07-22T12:18:49Z"
+}

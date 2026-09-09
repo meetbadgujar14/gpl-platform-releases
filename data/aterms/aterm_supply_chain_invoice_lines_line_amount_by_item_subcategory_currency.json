@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_invoice_lines_line_amount_by_item_subcategory_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_invoice_lines_line_amount_by_item_subcategory_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "invoice_lines",
+    "measure": "line_amount",
+    "state": "all",
+    "scope": "by_item_subcategory",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Conduit & Fittings": 53800.0,
+    "Drive Belts": 44700.0,
+    "Filtration": 60845.0,
+    "Gate Valves": 42750.0,
+    "Hand Tools": 117175.0,
+    "Head Protection": 64417.5,
+    "Hex Bolts": 7950.0,
+    "O-Rings": 80280.0,
+    "Protective Cushioning": 15300.0,
+    "Shipping Boxes": 67000.0,
+    "Stretch Film": 42200.0,
+    "Wiring & Cable": 17190.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(line_amount) FROM supply_chain_invoice_lines_ERP_record JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY item_subcategory)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:49Z",
+  "usage_count": 0,
+  "source_goal": "What is the total line amount of invoice_liness by item subcategory?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:51Z"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_shipments_freight_cost_in_transit_this_quarter_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shipments_freight_cost_in_transit_this_quarter_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shipments",
+    "measure": "freight_cost",
+    "state": "in_transit",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 22172.7,
+  "formula_line": "MEASURE_QUARTER_FIXED('supply_chain_shipments_WMS_record', 'expected_arrival_date', 'SUM', 'freight_cost', 'this_quarter', [{'field': 'shipment_status', 'op': '=', 'value': 'in_transit'}])",
+  "exec_formula": "MEASURE_QUARTER_FIXED('supply_chain_shipments_WMS_record', 'expected_arrival_date', 'SUM', 'freight_cost', 'this_quarter', [{'field': 'shipment_status', 'op': '=', 'value': 'in_transit'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_wizard_execution",
+  "created_at": "2026-09-02T06:46:55Z",
+  "usage_count": 0,
+  "source_goal": "What is the total freight cost of shipments currently in transit representing outstanding logistics spend?",
+  "wave": "B",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_QUARTER_FIXED steps=7",
+  "wizard_steps": 7,
+  "verified_at": "2026-09-02T06:49:08Z"
+}

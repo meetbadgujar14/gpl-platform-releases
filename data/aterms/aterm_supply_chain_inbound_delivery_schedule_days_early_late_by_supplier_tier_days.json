@@ -1,0 +1,33 @@
+{
+  "id": "aterm:supply_chain_inbound_delivery_schedule_days_early_late_by_supplier_tier_days",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inbound_delivery_schedule_days_early_late_by_supplier_tier_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inbound_delivery_schedule",
+    "measure": "days_early_late",
+    "state": "all",
+    "scope": "by_supplier_tier",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Tier 1": -3.0,
+    "Tier 2": 12.0,
+    "Tier 3": 3.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(days_early_late) FROM supply_chain_inbound_delivery_schedule_ERP_record JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY supplier_tier)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:50Z",
+  "usage_count": 0,
+  "source_goal": "What is the total days early late of inbound_delivery_schedules by supplier tier?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:52Z"
+}

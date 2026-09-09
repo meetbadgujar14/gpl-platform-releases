@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_financials_net_profit_margin_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_financials_net_profit_margin_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "financials",
+    "measure": "net_profit_margin",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 362.06,
+  "formula_line": "MEASURE('supply_chain_financials_ERP_record', 'SUM', 'net_profit_margin', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-02T06:44:35Z",
+  "usage_count": 0,
+  "source_goal": "What is the total net profit margin of financialss?",
+  "wave": 1,
+  "operator": "MEASURE",
+  "verified_at": "2026-09-02T06:49:08Z"
+}

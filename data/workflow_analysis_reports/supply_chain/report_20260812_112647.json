@@ -1,0 +1,99 @@
+{
+  "vertical": "supply_chain",
+  "models_used": [
+    "gpt4o"
+  ],
+  "total": 2,
+  "passed": 2,
+  "flagged": 0,
+  "failed": 0,
+  "errors": 0,
+  "results": [
+    {
+      "canonical_id": "supply_chain_supplier_items_average_negotiated_unit_cost_currency",
+      "source_goal": "What is the average negotiated unit cost per supplier_items?",
+      "formula_line": "supply_chain_supplier_items_average_negotiated_unit_cost_currency = {supply_chain_supplier_items_negotiated_unit_cost_currency} / ({supply_chain_supplier_items_count} if {supply_chain_supplier_items_count} != 0 else 1)",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The division operation in the formula correctly matches the business question asking for an average.",
+            "C2": "The dependencies correctly provide the total negotiated unit cost and the count, which are needed for calculating an average.",
+            "C3": "The time scopes of the dependencies and the formula are all set to 'all_time', which aligns correctly.",
+            "C4": "There are no state filters applied to either the dependencies or the composed metric, ensuring alignment.",
+            "C5": "Division-by-zero is handled by substituting the denominator with 1 if it is zero.",
+            "C6": "The result unit is currency because it divides a currency total by a count, which is appropriate."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly computes the average based on the given dependencies and handles division-by-zero gracefully, with consistent time scopes and units.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 13605
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T11:26:43Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_supplier_performance_average_total_orders_currency",
+      "source_goal": "What is the average total orders per supplier_performance?",
+      "formula_line": "supply_chain_supplier_performance_average_total_orders_currency = {supply_chain_supplier_performance_total_orders_currency} / ({supply_chain_supplier_performance_count} if {supply_chain_supplier_performance_count} != 0 else 1)",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The operation correctly uses division to calculate the average.",
+            "C2": "The dependencies correctly represent total orders and count for the average calculation.",
+            "C3": "All dependencies have the same 'all_time' time scope matching the composed metric.",
+            "C4": "All dependencies are unfiltered, just like the composed metric.",
+            "C5": "Division-by-zero is correctly handled by providing an alternate value if the count is zero.",
+            "C6": "The resulting unit is 'currency', which makes sense for this average of orders."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly computes the average of total orders per supplier performance using the appropriate operations and dependencies.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 3334
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T11:26:47Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    }
+  ],
+  "error_details": [],
+  "run_at": "2026-08-12T11:26:47Z"
+}

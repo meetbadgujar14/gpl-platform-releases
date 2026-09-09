@@ -1,0 +1,16 @@
+vehicle_id,vehicle_type,registration_number,carrier_id,fuel_type,is_active,payload_capacity_kg,commissioned_date
+VEH-3847,Semi-Truck,TX-4821-KLM,CRR-4821,Diesel,True,22500,2022-03-15
+VEH-6193,Refrigerated Truck,CA-7734-PQR,CRR-5130,Diesel,True,18000,2021-11-08
+VEH-2041,Box Truck,FL-2295-WXY,CRR-8842,CNG,True,8500,2023-01-22
+VEH-9562,Flatbed Truck,OH-5130-ABD,CRR-9203,Diesel,False,25000,2020-07-30
+VEH-4718,Cargo Van,NY-8842-EFG,CRR-9203,Electric,True,2800,2023-06-14
+VEH-8325,Semi-Truck,IL-3316-HIJ,CRR-4821,Diesel,True,24000,2022-09-03
+VEH-1064,Tanker Truck,GA-6079-KNO,CRR-9203,Diesel,True,20000,2021-04-19
+VEH-7439,Sprinter Van,AZ-1485-LMN,CRR-1485,Gasoline,True,1500,2023-08-27
+VEH-5281,Refrigerated Truck,WA-9203-OPQ,CRR-4821,Hybrid,False,16500,2020-12-05
+VEH-3906,Box Truck,CO-5567-RST,CRR-4821,CNG,True,9200,2022-05-11
+VEH-6754,Flatbed Truck,TX-4821-UVW,CRR-2957,Diesel,True,27000,2021-08-16
+VEH-2893,Cargo Van,NC-7364-XYZ,CRR-9203,Electric,True,3100,2023-02-28
+VEH-4157,Semi-Truck,MN-2957-BCD,CRR-4821,LNG,False,21800,2019-10-22
+VEH-8612,Tanker Truck,MI-3316-EFH,CRR-4821,Diesel,True,19500,2022-11-30
+VEH-5039,Sprinter Van,OR-8842-GIJ,CRR-5130,Gasoline,True,1750,2023-04-07

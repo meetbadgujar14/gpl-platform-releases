@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_shipments_count_in_transit_last_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shipments_count_in_transit_last_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shipments",
+    "measure": "count",
+    "state": "in_transit",
+    "scope": "total",
+    "time": "last_month",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_MONTH_FIXED('supply_chain_shipments_WMS_record', 'shipment_date', 'COUNT_DISTINCT', 'shipment_id', 'last_month', [{'field': 'shipment_status', 'op': '=', 'value': 'in_transit'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-09-01T07:44:37Z",
+  "usage_count": 0,
+  "source_goal": "How many in_transit shipmentss are there last month?",
+  "wave": 3,
+  "operator": "MEASURE_MONTH_FIXED",
+  "verified_at": "2026-09-02T06:49:03Z"
+}

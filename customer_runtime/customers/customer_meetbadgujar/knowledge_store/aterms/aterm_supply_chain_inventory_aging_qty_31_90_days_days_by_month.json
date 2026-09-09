@@ -1,0 +1,43 @@
+{
+  "id": "aterm:supply_chain_inventory_aging_qty_31_90_days_days_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_aging_qty_31_90_days_days_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_aging",
+    "measure": "qty_31_90_days",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "days",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2025-09": 48.0,
+    "2025-10": 340.0,
+    "2025-11": 580.0,
+    "2025-12": 38.0,
+    "2026-01": 53.0,
+    "2026-02": 160.0,
+    "2026-03": 445.0,
+    "2026-04": 50.0,
+    "2026-05": 420.0,
+    "2026-06": 355.0,
+    "2026-07": 320.0,
+    "2026-08": 695.0,
+    "2026-09": 875.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_inventory_aging_WMS_snapshot', 'SUM', 'qty_31_90_days', None, [], None, None, None, {'date_col': 'snapshot_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "What is the total qty 31 90 days of inventory_agings by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_warehouses_max_total_capacity_sqm_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_warehouses_max_total_capacity_sqm_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "warehouses",
+    "measure": "max_total_capacity_sqm",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 24300.0,
+  "formula_line": "MEASURE(MAX(total_capacity_sqm) FROM supply_chain_warehouses_WMS_dimension)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-07-22T12:17:44Z",
+  "usage_count": 0,
+  "source_goal": "What is the max total capacity sqm across all warehousess?",
+  "wave": 2,
+  "operator": "MEASURE",
+  "verified_at": "2026-07-22T12:18:47Z"
+}

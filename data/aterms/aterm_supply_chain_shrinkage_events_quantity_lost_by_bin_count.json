@@ -1,0 +1,35 @@
+{
+  "id": "aterm:supply_chain_shrinkage_events_quantity_lost_by_bin_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shrinkage_events_quantity_lost_by_bin_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shrinkage_events",
+    "measure": "quantity_lost",
+    "state": "all",
+    "scope": "by_bin",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "B-004": 44.0,
+    "B-007": 8.0,
+    "B-011": 124.0,
+    "B-019": 309.0,
+    "B-022": 73.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(quantity_lost) FROM supply_chain_shrinkage_events_WMS_event JOIN supply_chain_warehouse_locations_WMS_dimension ON location_id=location_id GROUP BY bin)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:50Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quantity lost of shrinkage_eventss by bin?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:52Z"
+}

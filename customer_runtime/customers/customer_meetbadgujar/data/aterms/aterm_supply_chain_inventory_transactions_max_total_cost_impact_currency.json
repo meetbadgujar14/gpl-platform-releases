@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_inventory_transactions_max_total_cost_impact_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_transactions_max_total_cost_impact_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_transactions",
+    "measure": "max_total_cost_impact",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 129450.0,
+  "formula_line": "MEASURE('supply_chain_inventory_transactions_WMS_event', 'MAX', 'total_cost_impact', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:37Z",
+  "usage_count": 0,
+  "source_goal": "What is the max total cost impact across all inventory_transactionss?",
+  "wave": 2,
+  "operator": "MEASURE",
+  "verified_at": "2026-09-02T06:49:03Z"
+}

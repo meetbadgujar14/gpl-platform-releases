@@ -1,0 +1,29 @@
+trip_id,vehicle_id,driver_id,freight_order_id,trip_status,origin_location,destination_location,distance_km,duration_hours,trip_cost,trip_date
+TRIP-48273,VEH-7439,DRV-4823,FO-72938,completed,"Chicago, IL","Detroit, MI",457.3,5.2,1248.75,2024-03-12
+TRIP-61945,VEH-5281,DRV-4418,FO-72938,completed,"Dallas, TX","Houston, TX",386.2,4.1,987.5,2024-03-15
+TRIP-29384,VEH-6193,DRV-6239,FO-61594,completed,"Los Angeles, CA","Phoenix, AZ",598.7,6.8,1654.2,2024-04-02
+TRIP-75621,VEH-2041,DRV-7802,FO-84931,in_transit,"Atlanta, GA","Nashville, TN",412.5,4.6,1102.8,2024-11-08
+TRIP-83047,VEH-5281,DRV-5047,FO-23759,completed,"New York, NY","Philadelphia, PA",151.8,2.3,524.4,2024-05-19
+TRIP-54398,VEH-5281,DRV-9184,FO-72938,completed,"Seattle, WA","Portland, OR",279.4,3.1,742.6,2024-06-07
+TRIP-17863,VEH-2041,DRV-9184,FO-72938,cancelled,"Miami, FL","Orlando, FL",382.1,4.0,0.0,2024-07-14
+TRIP-92471,VEH-5039,DRV-6057,FO-72938,completed,"Denver, CO","Salt Lake City, UT",714.3,7.9,1923.5,2024-08-21
+TRIP-36529,VEH-9562,DRV-3392,FO-90483,completed,"Minneapolis, MN","Milwaukee, WI",543.6,6.0,1478.9,2024-09-03
+TRIP-48751,VEH-8612,DRV-9875,FO-72938,completed,"Kansas City, MO","St. Louis, MO",368.9,4.2,1015.3,2024-09-17
+TRIP-23694,VEH-1064,DRV-4823,FO-90483,completed,"Boston, MA","Hartford, CT",175.4,2.1,498.6,2024-10-05
+TRIP-67182,VEH-8325,DRV-1396,FO-72938,delayed,"Charlotte, NC","Richmond, VA",487.2,6.4,1367.8,2024-10-22
+TRIP-81436,VEH-7439,DRV-3671,FO-51374,completed,"Phoenix, AZ","Tucson, AZ",188.6,2.2,512.4,2024-11-01
+TRIP-59273,VEH-8325,DRV-6239,FO-72938,in_transit,"San Francisco, CA","Sacramento, CA",142.3,1.8,428.7,2024-11-09
+TRIP-34817,VEH-2893,DRV-4823,FO-84931,completed,"Columbus, OH","Pittsburgh, PA",312.7,3.7,867.9,2024-07-29
+TRIP-72948,VEH-2893,DRV-2984,FO-72938,completed,"Indianapolis, IN","Louisville, KY",178.3,2.4,523.1,2024-08-04
+TRIP-41683,VEH-3847,DRV-2218,FO-72938,completed,"Memphis, TN","Little Rock, AR",224.8,2.7,638.5,2024-08-18
+TRIP-95372,VEH-6193,DRV-5047,FO-72938,cancelled,"Las Vegas, NV","Los Angeles, CA",432.1,4.8,0.0,2024-09-11
+TRIP-28461,VEH-3906,DRV-8563,FO-72938,completed,"Portland, OR","Eugene, OR",179.5,2.1,487.3,2024-10-14
+TRIP-63847,VEH-2893,DRV-7741,FO-72938,completed,"Tampa, FL","Jacksonville, FL",336.8,3.9,921.6,2024-06-25
+TRIP-17529,VEH-3847,DRV-5047,FO-72938,completed,"Albuquerque, NM","El Paso, TX",449.7,5.1,1234.8,2024-05-08
+TRIP-84293,VEH-5281,DRV-3671,FO-72938,delayed,"San Antonio, TX","Austin, TX",129.4,1.9,398.2,2024-11-03
+TRIP-51736,VEH-3847,DRV-3671,FO-72938,completed,"Cincinnati, OH","Lexington, KY",145.2,1.7,412.9,2024-04-17
+TRIP-39184,VEH-3847,DRV-6057,FO-72938,completed,"Omaha, NE","Des Moines, IA",252.6,2.9,703.4,2024-03-28
+TRIP-76542,VEH-6193,DRV-2984,FO-72938,completed,"Baltimore, MD","Washington, DC",61.4,1.1,224.8,2024-07-03
+TRIP-22857,VEH-8325,DRV-6057,FO-51374,completed,"Raleigh, NC","Greensboro, NC",133.7,1.6,378.5,2024-10-30
+TRIP-68415,VEH-3847,DRV-9184,FO-72938,in_transit,"Oklahoma City, OK","Tulsa, OK",184.9,2.2,519.6,2024-11-10
+TRIP-43926,VEH-2893,DRV-3671,FO-72938,completed,"Cleveland, OH","Toledo, OH",198.3,2.4,567.1,2024-05-31

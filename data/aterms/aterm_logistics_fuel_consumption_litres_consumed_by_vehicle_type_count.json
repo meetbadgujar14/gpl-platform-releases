@@ -1,0 +1,37 @@
+{
+  "id": "aterm:logistics_fuel_consumption_litres_consumed_by_vehicle_type_count",
+  "type": "Aterm",
+  "canonical_id": "logistics_fuel_consumption_litres_consumed_by_vehicle_type_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "fuel_consumption",
+    "measure": "litres_consumed",
+    "state": "all",
+    "scope": "by_vehicle_type",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Box Truck": 860.4,
+    "Cargo Van": 1369.1000000000001,
+    "Flatbed Truck": 278.1,
+    "Refrigerated Truck": 800.2,
+    "Semi-Truck": 1269.0,
+    "Sprinter Van": 683.9000000000001,
+    "Tanker Truck": 586.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(litres_consumed) FROM logistics_fuel_consumption_WMS_record JOIN logistics_vehicles_MANUAL_dimension ON vehicle_id=vehicle_id GROUP BY vehicle_type)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:17Z",
+  "usage_count": 0,
+  "source_goal": "What is the total litres consumed of fuel_consumptions by vehicle type?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:45Z"
+}

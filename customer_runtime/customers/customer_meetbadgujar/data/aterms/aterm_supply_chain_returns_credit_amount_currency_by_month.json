@@ -1,0 +1,43 @@
+{
+  "id": "aterm:supply_chain_returns_credit_amount_currency_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_returns_credit_amount_currency_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "returns",
+    "measure": "credit_amount",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2024-11": 5247.0,
+    "2025-09": 2639.0,
+    "2025-10": 0.0,
+    "2025-12": 2937.0,
+    "2026-01": 4217.6,
+    "2026-02": 5816.25,
+    "2026-03": 780.0,
+    "2026-04": 11446.5,
+    "2026-05": 2586.0,
+    "2026-06": 6621.3,
+    "2026-07": 4810.1,
+    "2026-08": 9701.6,
+    "2026-09": 3345.75
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_returns_ERP_record', 'SUM', 'credit_amount', None, [], None, None, None, {'date_col': 'return_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "What is the total credit amount of returnss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

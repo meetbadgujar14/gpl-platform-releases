@@ -1,0 +1,24 @@
+item_id,warehouse_id,snapshot_date,item_name,item_category,age_bucket,qty_0_30_days,qty_31_90_days,qty_91_180_days,qty_over_180_days,total_qty_on_hand,total_inventory_value,slow_moving_value
+ITM-4823,WH-1047,2026-09-01,Stainless Steel Fastener Set,Packaging Materials,91-180 days,145,78,34,12,269,187430.5,32180.0
+ITM-7391,WH-2083,2026-09-01,Nitrile Safety Gloves (Box),Industrial Supplies,0-30 days,520,310,95,40,965,14725.8,2040.0
+ITM-2156,WH-3310,2026-09-01,Electronic Control Module,Mechanical Components,31-90 days,880,420,110,25,1435,21525.0,2025.0
+ITM-6047,WH-1047,2026-09-01,Nitrile Safety Gloves (Box),Material Handling,Over 180 days,60,45,80,30,215,129000.0,66000.0
+ITM-9284,WH-4521,2026-09-01,Nitrile Safety Gloves (Box),Material Handling,91-180 days,18,22,14,55,109,76300.0,48050.0
+ITM-3378,WH-2083,2026-08-15,Polyethylene Packing Film,Hardware,0-30 days,1200,640,180,50,2070,31050.0,3450.0
+ITM-5512,WH-3310,2026-08-01,Nitrile Safety Gloves (Box),Safety Equipment,Over 180 days,30,55,20,8,113,96050.0,23800.0
+ITM-8163,WH-4521,2026-07-15,Stainless Steel Fastener Set,Filtration,Over 180 days,200,130,60,15,405,48600.0,9000.0
+ITM-1094,WH-1047,2026-07-01,Conveyor Belt Section 3m,Electronics,Over 180 days,310,190,75,20,595,35700.0,5700.0
+ITM-7391,WH-3310,2026-06-15,Electronic Control Module,Hardware,31-90 days,480,290,85,35,890,13350.0,1800.0
+ITM-4823,WH-2083,2026-06-01,Thermal Insulation Blanket,Electronics,0-30 days,110,65,50,18,243,169290.0,47460.0
+ITM-6620,WH-4521,2026-05-15,Thermal Insulation Blanket,Material Handling,31-90 days,25,40,35,70,170,119000.0,73500.0
+ITM-3902,WH-1047,2026-05-01,Carbon Filter Cartridge,Fluid Control,31-90 days,750,380,90,10,1230,18450.0,1500.0
+ITM-5512,WH-2083,2026-04-15,Polyethylene Packing Film,Fluid Control,Over 180 days,28,50,18,6,102,86700.0,20400.0
+ITM-2156,WH-4521,2026-03-15,Carbon Filter Cartridge,Hardware,Over 180 days,700,390,100,20,1210,18150.0,1800.0
+ITM-8731,WH-3310,2026-03-01,Conveyor Belt Section 3m,Hardware,91-180 days,40,55,90,25,210,63000.0,34500.0
+ITM-1094,WH-2083,2026-02-15,Forklift Tine Extension,Safety Equipment,91-180 days,290,160,55,10,515,30900.0,3900.0
+ITM-9284,WH-1047,2026-01-15,Industrial Hydraulic Pump,Filtration,31-90 days,12,18,10,45,85,59500.0,38500.0
+ITM-6620,WH-2083,2026-01-01,Stainless Steel Fastener Set,Mechanical Components,31-90 days,20,35,48,60,163,114100.0,75600.0
+ITM-3378,WH-4521,2025-11-15,Industrial Hydraulic Pump,Filtration,31-90 days,1050,580,150,40,1820,27300.0,2850.0
+ITM-8731,WH-1047,2025-09-15,Industrial Hydraulic Pump,Fluid Control,0-30 days,35,48,70,40,193,57900.0,33000.0
+ITM-3902,WH-3310,2025-10-01,Electronic Control Module,Fluid Control,91-180 days,680,340,70,8,1098,16470.0,1170.0
+ITM-6047,WH-2083,2025-12-01,LED Warehouse Lighting Panel,Fluid Control,0-30 days,45,38,65,42,190,114000.0,64200.0

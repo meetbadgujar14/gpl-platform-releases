@@ -1,0 +1,6 @@
+warehouse_id,warehouse_name,warehouse_type,country,region,city,total_capacity_sqm,total_capacity_units,is_active,manager_name,opened_date
+WH-4821,Pacific Rim Distribution Center,Distribution,United States,West Coast,Los Angeles,18500,142000,True,Carlos Mendoza,2019-03-15
+WH-7364,Midlands Cold Storage Facility,Cold Storage,United Kingdom,East Midlands,Nottingham,7200,48500,True,Priya Nair,2021-07-22
+WH-2095,Rhine Valley Fulfillment Hub,Fulfillment,Germany,North Rhine-Westphalia,Düsseldorf,24300,195000,True,Stefan Brauer,2020-11-08
+WH-5537,Yangtze Cross-Dock Terminal,Cross-Dock,China,Jiangsu,Nanjing,11800,87000,False,Liu Wei,2018-05-30
+WH-9142,Southern Cross Bonded Warehouse,Bonded,Australia,New South Wales,Sydney,9650,63400,True,Amelia Thornton,2022-02-14

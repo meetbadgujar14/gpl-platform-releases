@@ -1,0 +1,45 @@
+{
+  "wave": "A",
+  "goal_count": 2,
+  "generated_at": "2026-09-07T05:50:23Z",
+  "goals": [
+    {
+      "goal": "What is the invoice dispute rate this quarter?",
+      "canonical_id": "supply_chain_invoices_count_disputed_this_quarter_percent",
+      "depends_on": [],
+      "composition_formula": "count(invoices[state=Disputed]) / count(invoices) * 100",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "count",
+        "state": "Disputed",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "wave": "A",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the invoice payment compliance rate measured as paid invoices versus total invoices this quarter?",
+      "canonical_id": "supply_chain_invoices_count_paid_this_quarter_percent",
+      "depends_on": [],
+      "composition_formula": "count(invoices[state=Paid]) / count(invoices) * 100",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "count",
+        "state": "Paid",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "wave": "A",
+      "complexity": "KPI",
+      "join": null
+    }
+  ]
+}

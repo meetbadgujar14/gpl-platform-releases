@@ -1,0 +1,29 @@
+{
+  "id": "aterm:logistics_vehicle_trips_max_duration_hours_percent",
+  "type": "Aterm",
+  "canonical_id": "logistics_vehicle_trips_max_duration_hours_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "vehicle_trips",
+    "measure": "max_duration_hours",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 7.9,
+  "formula_line": "MEASURE(MAX(duration_hours) FROM logistics_vehicle_trips_WMS_event)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-07-22T09:51:14Z",
+  "usage_count": 0,
+  "source_goal": "What is the max duration hours across all vehicle_tripss?",
+  "wave": 2,
+  "operator": "MEASURE",
+  "verified_at": "2026-07-22T12:18:44Z"
+}

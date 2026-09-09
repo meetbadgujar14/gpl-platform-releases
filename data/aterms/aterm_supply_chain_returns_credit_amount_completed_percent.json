@@ -1,0 +1,33 @@
+{
+  "id": "aterm:supply_chain_returns_credit_amount_completed_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_returns_credit_amount_completed_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "returns",
+    "measure": "credit_amount",
+    "state": "Completed",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "scalar",
+    "denominator_measure": "return_value",
+    "denominator_same_filter": true
+  },
+  "oracle_value": 100.0,
+  "formula_line": "RATIO: MEASURE('supply_chain_returns_ERP_record', 'SUM', 'credit_amount', [{'field': 'return_status', 'op': '=', 'value': 'Completed'}]) / MEASURE('supply_chain_returns_ERP_record', 'SUM', 'return_value', [{'field': 'return_status', 'op': '=', 'value': 'Completed'}]) * 100",
+  "exec_formula": "((MEASURE('supply_chain_returns_ERP_record', 'SUM', 'credit_amount', [{'field': 'return_status', 'op': '=', 'value': 'Completed'}])) / (MEASURE('supply_chain_returns_ERP_record', 'SUM', 'return_value', [{'field': 'return_status', 'op': '=', 'value': 'Completed'}])) * 100) if (MEASURE('supply_chain_returns_ERP_record', 'SUM', 'return_value', [{'field': 'return_status', 'op': '=', 'value': 'Completed'}])) else 0.0",
+  "verified": true,
+  "ai_locked": false,
+  "lock_method": "llm_wizard",
+  "verify_reason": "LLM_WIZARD_execution",
+  "created_at": "2026-08-11T09:46:18Z",
+  "usage_count": 0,
+  "source_goal": "What is the return credit recovery rate for Completed returns — measured as total credit amount issued against total return value for returns with status Completed?",
+  "wave": "A",
+  "via_llm": true,
+  "llm_reasoning": "wizard/RATIO_FILTERED steps=7",
+  "wizard_steps": 7
+}

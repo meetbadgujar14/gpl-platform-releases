@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_financials_net_profit_margin_this_month_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_financials_net_profit_margin_this_month_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "financials",
+    "measure": "net_profit_margin",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 87.94,
+  "formula_line": "MEASURE_MONTH_FIXED('supply_chain_financials_ERP_record', 'date', 'SUM', 'net_profit_margin', 'this_month', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-02T06:44:35Z",
+  "usage_count": 0,
+  "source_goal": "What is the total net profit margin of financialss this month?",
+  "wave": 3,
+  "operator": "MEASURE_MONTH_FIXED",
+  "verified_at": "2026-09-02T06:49:08Z"
+}

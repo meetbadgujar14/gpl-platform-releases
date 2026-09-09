@@ -1,0 +1,36 @@
+{
+  "id": "aterm:logistics_warehouse_inventory_quantity_reserved_count_by_commodity_category",
+  "type": "Aterm",
+  "canonical_id": "logistics_warehouse_inventory_quantity_reserved_count_by_commodity_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "warehouse_inventory",
+    "measure": "quantity_reserved",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_commodity_category"
+  },
+  "oracle_value": {
+    "Apparel": 4150.0,
+    "Consumer Electronics": 350.0,
+    "Food & Beverage": 7500.0,
+    "Health & Beauty": 1250.0,
+    "Industrial Equipment": 240.0,
+    "Pharmaceuticals": 950.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(quantity_reserved) FROM logistics_warehouse_inventory_WMS_state GROUP BY commodity_category)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:18Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quantity reserved of warehouse_inventorys by commodity category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:46Z"
+}

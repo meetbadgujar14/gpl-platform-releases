@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_financials_net_profit_margin_all_ytd_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_financials_net_profit_margin_all_ytd_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "financials",
+    "measure": "net_profit_margin",
+    "state": "all",
+    "scope": "total",
+    "time": "ytd",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 14.762731,
+  "formula_line": "RATIO: MEASURE('supply_chain_financials_ERP_record', 'SUM', 'net_profit', []) / MEASURE('supply_chain_financials_ERP_record', 'SUM', 'revenue', []) * 100",
+  "exec_formula": "",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_execution_stable",
+  "created_at": "2026-09-02T06:46:26Z",
+  "usage_count": 0,
+  "source_goal": "What is the net profit margin year to date?",
+  "wave": "B",
+  "via_llm": true,
+  "llm_reasoning": "wizard/RATIO steps=7",
+  "wizard_steps": 7,
+  "verified_at": "2026-09-02T06:49:08Z"
+}

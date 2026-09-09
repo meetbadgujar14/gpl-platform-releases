@@ -1,0 +1,37 @@
+{
+  "id": "aterm:supply_chain_carrier_performance_on_time_delivery_rate_by_country_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_carrier_performance_on_time_delivery_rate_by_country_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "carrier_performance",
+    "measure": "on_time_delivery_rate",
+    "state": "all",
+    "scope": "by_country",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Canada": 268.1,
+    "China": 288.29999999999995,
+    "Germany": 194.3,
+    "Mexico": 184.39999999999998,
+    "Sweden": 186.10000000000002,
+    "UK": 195.89999999999998,
+    "USA": 990.4
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(on_time_delivery_rate) FROM supply_chain_carrier_performance_WMS_snapshot JOIN supply_chain_carriers_WMS_dimension ON carrier_id=carrier_id GROUP BY country)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total on time delivery rate of carrier_performances by country?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:51Z"
+}

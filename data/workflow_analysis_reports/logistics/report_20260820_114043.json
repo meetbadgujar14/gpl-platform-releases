@@ -1,0 +1,90 @@
+{
+  "vertical": "logistics",
+  "models_used": [
+    "claude",
+    "gpt4o"
+  ],
+  "total": 1,
+  "passed": 0,
+  "flagged": 1,
+  "failed": 0,
+  "errors": 0,
+  "results": [
+    {
+      "canonical_id": "logistics_routes_distance_km_all_min_count",
+      "source_goal": "Which route has the shortest distance?",
+      "formula_line": "MEASURE('logistics_routes_MANUAL_dimension', 'MIN', 'distance_km', None)",
+      "kind": "operator",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.75,
+      "model_results": {
+        "claude": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.8333,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": false
+          },
+          "check_reasoning": {
+            "O1": "MIN is the correct aggregation function to find the shortest (minimum) distance, matching the business question.",
+            "O2": "distance_km is the correct column to aggregate when looking for the shortest distance.",
+            "O3": "The atom logistics_routes_MANUAL_dimension matches the domain (logistics) and entity (routes) of the business question.",
+            "O4": "The time scope is all_time and no time filter is applied in the formula, which is correct.",
+            "O5": "There is no GROUP BY or WHERE filter required here, and none is applied, which is appropriate for this question.",
+            "O6": "The declared unit is 'count', but MIN(distance_km) produces a distance value (in km), not a count — this is a unit mismatch regardless of the computed result."
+          },
+          "flags": [
+            "Unit mismatch: metric declares unit='count' but MIN(distance_km) produces a distance measurement in km. The metric ID suffix '_count' appears incorrect for a MIN distance aggregation.",
+            "Business question asks 'which route' (implying identification of a route), but MIN only returns the minimum distance value, not the route identifier — a MEASURE_GROUPED or lookup by route ID may be needed to fully answer the question."
+          ],
+          "reasoning": "The formula correctly uses MIN on distance_km from the appropriate logistics routes atom with no erroneous filters, but the declared unit 'count' conflicts with the actual output type of MIN(distance_km) which is a distance, and the formula cannot identify which route has the shortest distance — only the distance value itself.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 10502
+        },
+        "gpt4o": {
+          "verdict": "INCORRECT",
+          "confidence": 0.6667,
+          "checks": {
+            "O1": false,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": false
+          },
+          "check_reasoning": {
+            "O1": "The aggregation function should be COUNT or MEASURE_GROUPED for a count unit, not MIN.",
+            "O2": "The correct column 'distance_km' is being used for distance measurement.",
+            "O3": "The source atom 'logistics_routes_MANUAL_dimension' is correctly associated with the logistics domain and routes entity.",
+            "O4": "There is no time filter expected for all_time, and none is present.",
+            "O5": "There is no inappropriate grouping or filtering field applied.",
+            "O6": "The unit specified is 'count', but the aggregation function MIN does not produce a count."
+          },
+          "flags": [],
+          "reasoning": "The formula incorrectly uses MIN aggregation which does not match the specified unit of count and the business question's nature of identifying a minimum.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 22592
+        }
+      },
+      "all_flags": [
+        "Unit mismatch: metric declares unit='count' but MIN(distance_km) produces a distance measurement in km. The metric ID suffix '_count' appears incorrect for a MIN distance aggregation.",
+        "Business question asks 'which route' (implying identification of a route), but MIN only returns the minimum distance value, not the route identifier — a MEASURE_GROUPED or lookup by route ID may be needed to fully answer the question."
+      ],
+      "analyzed_at": "2026-08-20T11:40:43Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    }
+  ],
+  "error_details": [],
+  "run_at": "2026-08-20T11:40:43Z"
+}

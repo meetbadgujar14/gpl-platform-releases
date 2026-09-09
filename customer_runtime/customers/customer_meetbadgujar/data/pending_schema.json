@@ -1,0 +1,153 @@
+{
+  "supply_chain": {},
+  "retail_shopify": {
+    "retail_shopify_order_status_history_ERP_state": {
+      "table_name": "retail_shopify_order_status_history_ERP_state",
+      "row_count": 420,
+      "columns": [
+        {
+          "name": "id",
+          "original_name": "id",
+          "type": "number"
+        },
+        {
+          "name": "date",
+          "original_name": "date",
+          "type": "date"
+        },
+        {
+          "name": "type",
+          "original_name": "type",
+          "type": "string"
+        },
+        {
+          "name": "status",
+          "original_name": "status",
+          "type": "string"
+        },
+        {
+          "name": "counterparty_type",
+          "original_name": "counterparty_type",
+          "type": "string"
+        },
+        {
+          "name": "supplier",
+          "original_name": "supplier",
+          "type": "number"
+        },
+        {
+          "name": "shipment",
+          "original_name": "shipment",
+          "type": "number"
+        },
+        {
+          "name": "item",
+          "original_name": "item",
+          "type": "number"
+        },
+        {
+          "name": "reason_code",
+          "original_name": "reason_code",
+          "type": "string"
+        },
+        {
+          "name": "closed_date",
+          "original_name": "closed_date",
+          "type": "date"
+        },
+        {
+          "name": "amount_filed",
+          "original_name": "amount_filed",
+          "type": "number"
+        },
+        {
+          "name": "amount_paid",
+          "original_name": "amount_paid",
+          "type": "number"
+        },
+        {
+          "name": "days_open",
+          "original_name": "days_open",
+          "type": "number"
+        }
+      ],
+      "enums": {
+        "type": [
+          "chargeback",
+          "damage",
+          "deduction",
+          "insurance",
+          "shortage",
+          "warranty"
+        ],
+        "status": [
+          "approved",
+          "denied",
+          "open",
+          "resolved"
+        ],
+        "counterparty_type": [
+          "carrier",
+          "customer",
+          "supplier"
+        ],
+        "reason_code": [
+          "concealed_damage",
+          "late_delivery",
+          "short_ship",
+          "spec_fail",
+          "temperature_excursion"
+        ]
+      }
+    },
+    "retail_shopify_payments_ERP_record": {
+      "table_name": "retail_shopify_payments_ERP_record",
+      "row_count": 420,
+      "columns": [
+        {
+          "name": "id",
+          "original_name": "id",
+          "type": "number"
+        },
+        {
+          "name": "date",
+          "original_name": "date",
+          "type": "date"
+        },
+        {
+          "name": "supplier",
+          "original_name": "supplier",
+          "type": "number"
+        },
+        {
+          "name": "warehouse",
+          "original_name": "warehouse",
+          "type": "number"
+        },
+        {
+          "name": "status",
+          "original_name": "status",
+          "type": "string"
+        },
+        {
+          "name": "expected_date",
+          "original_name": "expected_date",
+          "type": "date"
+        },
+        {
+          "name": "total",
+          "original_name": "total",
+          "type": "number"
+        }
+      ],
+      "enums": {
+        "status": [
+          "cancelled",
+          "open",
+          "partial",
+          "received"
+        ]
+      }
+    }
+  }
+}

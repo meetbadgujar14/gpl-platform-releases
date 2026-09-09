@@ -1,0 +1,41 @@
+{
+  "id": "aterm:supply_chain_inventory_levels_quantity_reserved_by_item_category_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_levels_quantity_reserved_by_item_category_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_levels",
+    "measure": "quantity_reserved",
+    "state": "all",
+    "scope": "by_item_category",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Chemicals": 100.0,
+    "Consumer Electronics": 2000.0,
+    "Electronics": 160.0,
+    "Hardware": 1400.0,
+    "Industrial Equipment": 11.0,
+    "Machinery Parts": 165.0,
+    "Mechanical Components": 900.0,
+    "Medical Supplies": 2600.0,
+    "Raw Materials": 8300.0,
+    "Safety Equipment": 140.0,
+    "Warehouse Equipment": 17.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(quantity_reserved) FROM supply_chain_inventory_levels_WMS_state JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY item_category)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:47Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quantity reserved of inventory_levelss by item category?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

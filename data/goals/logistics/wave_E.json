@@ -1,0 +1,64 @@
+{
+  "wave": "E",
+  "goal_count": 3,
+  "generated_at": "2026-07-21T11:34:12Z",
+  "goals": [
+    {
+      "goal": "Which carrier has the highest cost per km relative to contract rate — identifying over-spend carriers for renegotiation?",
+      "canonical_id": "logistics_carriers_contract_rate_per_km_by_carrier_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "logistics",
+        "entity": "carriers",
+        "measure": "contract_rate_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "E",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "Which vehicle has the lowest payload utilisation rate relative to payload capacity — identifying underloaded assets for load consolidation?",
+      "canonical_id": "logistics_vehicles_payload_capacity_kg_utilisation_rate_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicles",
+        "measure": "payload_capacity_kg",
+        "state": "all",
+        "scope": "average",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "wave": "E",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "Which driver employment type (Full-Time, Part-Time, Contract) has the highest average trips completed — informing workforce strategy for scaling delivery capacity?",
+      "canonical_id": "logistics_drivers_total_trips_completed_by_state_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "logistics",
+        "entity": "drivers",
+        "measure": "total_trips_completed",
+        "state": "all",
+        "scope": "average",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "wave": "E",
+      "complexity": "KPI",
+      "join": null
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_warehouses_min_total_capacity_units_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_warehouses_min_total_capacity_units_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "warehouses",
+    "measure": "min_total_capacity_units",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 44500.0,
+  "formula_line": "MEASURE('supply_chain_warehouses_WMS_dimension', 'MIN', 'total_capacity_units', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:37Z",
+  "usage_count": 0,
+  "source_goal": "What is the min total capacity units across all warehousess?",
+  "wave": 2,
+  "operator": "MEASURE",
+  "verified_at": "2026-09-02T06:49:03Z"
+}

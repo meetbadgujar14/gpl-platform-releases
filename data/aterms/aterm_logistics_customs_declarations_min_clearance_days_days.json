@@ -1,0 +1,29 @@
+{
+  "id": "aterm:logistics_customs_declarations_min_clearance_days_days",
+  "type": "Aterm",
+  "canonical_id": "logistics_customs_declarations_min_clearance_days_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "customs_declarations",
+    "measure": "min_clearance_days",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": 2.0,
+  "formula_line": "MEASURE(MIN(clearance_days) FROM logistics_customs_declarations_ERP_record)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-07-22T09:51:14Z",
+  "usage_count": 0,
+  "source_goal": "What is the min clearance days across all customs_declarationss?",
+  "wave": 2,
+  "operator": "MEASURE",
+  "verified_at": "2026-07-22T12:18:44Z"
+}

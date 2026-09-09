@@ -1,0 +1,34 @@
+{
+  "id": "aterm:logistics_cargo_items_volume_cbm_by_transport_mode_count",
+  "type": "Aterm",
+  "canonical_id": "logistics_cargo_items_volume_cbm_by_transport_mode_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "cargo_items",
+    "measure": "volume_cbm",
+    "state": "all",
+    "scope": "by_transport_mode",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Air": 73.6,
+    "Rail": 77.30000000000001,
+    "Road": 159.20000000000002,
+    "Sea": 24.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(volume_cbm) FROM logistics_cargo_items_ERP_record JOIN logistics_shipments_ERP_record ON shipment_id=shipment_id GROUP BY transport_mode)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:17Z",
+  "usage_count": 0,
+  "source_goal": "What is the total volume cbm of cargo_itemss by transport mode?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:45Z"
+}

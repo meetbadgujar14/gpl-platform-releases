@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_reorder_proposals_count_cancelled_ytd",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_reorder_proposals_count_cancelled_ytd",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "reorder_proposals",
+    "measure": "count",
+    "state": "Cancelled",
+    "scope": "total",
+    "time": "ytd",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 1.0,
+  "formula_line": "MEASURE_YTD('supply_chain_reorder_proposals_ERP_record', 'proposal_date', 'COUNT_DISTINCT', 'proposal_id', [{'field': 'proposal_status', 'op': '=', 'value': 'Cancelled'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution_stable",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "How many Cancelled reorder_proposalss are there ytd?",
+  "wave": 3,
+  "operator": "MEASURE_YTD",
+  "verified_at": "2026-09-01T07:54:57Z"
+}

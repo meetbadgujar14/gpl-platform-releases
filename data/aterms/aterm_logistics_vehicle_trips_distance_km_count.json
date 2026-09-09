@@ -1,0 +1,29 @@
+{
+  "id": "aterm:logistics_vehicle_trips_distance_km_count",
+  "type": "Aterm",
+  "canonical_id": "logistics_vehicle_trips_distance_km_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "vehicle_trips",
+    "measure": "distance_km",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 8507.699999999999,
+  "formula_line": "MEASURE(SUM(distance_km) FROM logistics_vehicle_trips_WMS_event)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-07-22T09:51:14Z",
+  "usage_count": 0,
+  "source_goal": "What is the total distance km of vehicle_tripss?",
+  "wave": 1,
+  "operator": "MEASURE",
+  "verified_at": "2026-07-22T12:18:44Z"
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "run_id": "2026-09-07_12-24-21Z",
+    "file": "run_2026-09-07_12-24-21Z.json",
+    "executed_at": "2026-09-07T12:24:21Z",
+    "summary": {
+      "total": 2071,
+      "executed": 2071,
+      "failed": 0,
+      "diverged": 564
+    }
+  },
+  {
+    "run_id": "2026-09-07_11-23-04Z",
+    "file": "run_2026-09-07_11-23-04Z.json",
+    "executed_at": "2026-09-07T11:23:04Z",
+    "summary": {
+      "total": 2071,
+      "executed": 2071,
+      "failed": 0,
+      "diverged": 1830
+    }
+  },
+  {
+    "run_id": "2026-09-07_07-15-25Z",
+    "file": "run_2026-09-07_07-15-25Z.json",
+    "executed_at": "2026-09-07T07:15:25Z",
+    "summary": {
+      "total": 2071,
+      "executed": 2071,
+      "failed": 0,
+      "diverged": 1830
+    }
+  },
+  {
+    "run_id": "2026-09-02_06-53-58Z",
+    "file": "run_2026-09-02_06-53-58Z.json",
+    "executed_at": "2026-09-02T06:53:58Z",
+    "summary": {
+      "total": 2071,
+      "executed": 2071,
+      "failed": 0,
+      "diverged": 1830
+    }
+  },
+  {
+    "run_id": "2026-09-01_09-47-07Z",
+    "file": "run_2026-09-01_09-47-07Z.json",
+    "executed_at": "2026-09-01T09:47:07Z",
+    "summary": {
+      "total": 1836,
+      "executed": 1836,
+      "failed": 0,
+      "diverged": 1672
+    }
+  },
+  {
+    "run_id": "2026-09-01_08-23-02Z",
+    "file": "run_2026-09-01_08-23-02Z.json",
+    "executed_at": "2026-09-01T08:23:02Z",
+    "summary": {
+      "total": 1771,
+      "executed": 1771,
+      "failed": 0,
+      "diverged": 1629
+    }
+  }
+]

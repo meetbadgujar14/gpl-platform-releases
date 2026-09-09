@@ -1,0 +1,36 @@
+{
+  "id": "aterm:logistics_incidents_estimated_loss_value_by_fuel_type_currency",
+  "type": "Aterm",
+  "canonical_id": "logistics_incidents_estimated_loss_value_by_fuel_type_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "incidents",
+    "measure": "estimated_loss_value",
+    "state": "all",
+    "scope": "by_fuel_type",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "CNG": 39500.0,
+    "Diesel": 547000.0,
+    "Electric": 26800.0,
+    "Gasoline": 1500.0,
+    "Hybrid": 47800.0,
+    "LNG": 9300.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(estimated_loss_value) FROM logistics_incidents_ERP_record JOIN logistics_vehicles_MANUAL_dimension ON vehicle_id=vehicle_id GROUP BY fuel_type)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:17Z",
+  "usage_count": 0,
+  "source_goal": "What is the total estimated loss value of incidentss by fuel type?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:45Z"
+}

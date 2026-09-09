@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_supplier_contracts_payment_terms_days_this_quarter_days",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_supplier_contracts_payment_terms_days_this_quarter_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "supplier_contracts",
+    "measure": "payment_terms_days",
+    "state": "all",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": 180.0,
+  "formula_line": "MEASURE_QUARTER_FIXED('supply_chain_supplier_contracts_ERP_record', 'contract_start_date', 'SUM', 'payment_terms_days', 'this_quarter', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:38Z",
+  "usage_count": 0,
+  "source_goal": "What is the total payment terms days of supplier_contractss this quarter?",
+  "wave": 3,
+  "operator": "MEASURE_QUARTER_FIXED",
+  "verified_at": "2026-09-02T06:49:05Z"
+}

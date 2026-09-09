@@ -1,0 +1,31 @@
+{
+  "id": "aterm:supply_chain_inventory_levels_quantity_on_hand_this_quarter_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_levels_quantity_on_hand_this_quarter_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_levels",
+    "measure": "quantity_on_hand",
+    "state": "all",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_SNAPSHOT_DEDUPED_QUARTER('supply_chain_inventory_levels_WMS_state', 'snapshot_date', 'snapshot_date', ['item_id', 'location_id'], 'SUM', 'quantity_on_hand', 'this_quarter', None)",
+  "exec_formula": "MEASURE_SNAPSHOT_DEDUPED_QUARTER('supply_chain_inventory_levels_WMS_state', 'snapshot_date', 'snapshot_date', ['item_id', 'location_id'], 'SUM', 'quantity_on_hand', 'this_quarter', None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_wizard_execution",
+  "created_at": "2026-08-07T09:23:31Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quantity on hand of inventory_levelss this quarter?",
+  "wave": 3,
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_SNAPSHOT_DEDUPED_QUARTER steps=5",
+  "wizard_steps": 5
+}

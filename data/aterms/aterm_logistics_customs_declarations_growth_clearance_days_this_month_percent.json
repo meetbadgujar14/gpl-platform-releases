@@ -1,0 +1,36 @@
+{
+  "id": "aterm:logistics_customs_declarations_growth_clearance_days_this_month_percent",
+  "type": "Aterm",
+  "canonical_id": "logistics_customs_declarations_growth_clearance_days_this_month_percent",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "customs_declarations",
+    "measure": "growth_clearance_days",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "logistics_customs_declarations_growth_clearance_days_this_month_percent = (({logistics_customs_declarations_clearance_days_this_month_days} - {logistics_customs_declarations_clearance_days_last_month_days}) / abs({logistics_customs_declarations_clearance_days_last_month_days}) * 100) if {logistics_customs_declarations_clearance_days_last_month_days} != 0 else 0",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-07-22T09:51:18Z",
+  "usage_count": 0,
+  "source_goal": "What is the month over month growth in clearance days for customs_declarationss?",
+  "wave": 6,
+  "depends_on": [
+    "logistics_customs_declarations_clearance_days_this_month_days",
+    "logistics_customs_declarations_clearance_days_last_month_days"
+  ],
+  "dep_values": {
+    "logistics_customs_declarations_clearance_days_this_month_days": 0.0,
+    "logistics_customs_declarations_clearance_days_last_month_days": 0.0
+  },
+  "verified_at": "2026-07-22T12:18:46Z"
+}

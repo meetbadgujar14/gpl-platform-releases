@@ -1,0 +1,35 @@
+{
+  "id": "aterm:supply_chain_goods_receipts_quantity_rejected_by_po_status_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_goods_receipts_quantity_rejected_by_po_status_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "goods_receipts",
+    "measure": "quantity_rejected",
+    "state": "all",
+    "scope": "by_po_status",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Cancelled": 20.0,
+    "Completed": 1268.0,
+    "In Transit": 350.0,
+    "Open": 55.0,
+    "Pending Approval": 155.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(quantity_rejected) FROM supply_chain_goods_receipts_ERP_record JOIN supply_chain_purchase_orders_ERP_record ON po_id=po_id GROUP BY po_status)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:47Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quantity rejected of goods_receiptss by po status?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:49Z"
+}

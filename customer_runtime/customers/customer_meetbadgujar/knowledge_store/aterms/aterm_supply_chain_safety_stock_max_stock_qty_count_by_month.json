@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_safety_stock_max_stock_qty_count_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_safety_stock_max_stock_qty_count_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "safety_stock",
+    "measure": "max_stock_qty",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2025-01": 520.0,
+    "2025-08": 270.0,
+    "2025-11": 48.0,
+    "2026-01": 840.0,
+    "2026-02": 15.0,
+    "2026-03": 195.0,
+    "2026-04": 160.0,
+    "2026-05": 2100.0,
+    "2026-06": 900.0,
+    "2026-07": 1800.0,
+    "2026-08": 380.0,
+    "2026-09": 2400.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_safety_stock_ERP_snapshot', 'MAX', 'safety_stock_qty', None, [], None, None, None, {'date_col': 'snapshot_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "What is the total max stock qty of safety_stocks by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:07Z"
+}

@@ -1,0 +1,317 @@
+{
+  "vertical": "logistics",
+  "models_used": [
+    "gpt4o"
+  ],
+  "total": 7,
+  "passed": 5,
+  "flagged": 2,
+  "failed": 0,
+  "errors": 0,
+  "results": [
+    {
+      "canonical_id": "logistics_shipment_legs_growth_leg_cost_this_month_percent",
+      "source_goal": "What is the month over month growth in leg cost for shipment_legss?",
+      "formula_line": "logistics_shipment_legs_growth_leg_cost_this_month_percent = (({logistics_shipment_legs_leg_cost_this_month_currency} - {logistics_shipment_legs_leg_cost_last_month_currency}) / abs({logistics_shipment_legs_leg_cost_last_month_currency}) * 100) if {logistics_shipment_legs_leg_cost_last_month_currency} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses subtraction and division followed by a multiplication by 100, which matches the calculation of growth rate in percent.",
+            "C2": "The dependencies correctly represent the total leg costs for this month and last month, which are the necessary building blocks.",
+            "C3": "The time scopes of the dependencies (this_month and last_month) align with the composed metric's time scope of this_month.",
+            "C4": "There are no state filters on the composed metric or its dependencies, so they are consistent.",
+            "C5": "There is a guard clause ensuring division by zero is handled by returning 0 if the denominator is zero.",
+            "C6": "The result of the formula is a percentage, which aligns with the intended unit for growth rate."
+          },
+          "flags": [],
+          "reasoning": "All checks passed without any issues, indicating the formula is well-constructed for its intended purpose.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 4256
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T06:46:31Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_shipments_average_freight_cost_currency",
+      "source_goal": "What is the average freight cost per shipments?",
+      "formula_line": "logistics_shipments_average_freight_cost_currency = {logistics_shipments_freight_cost_currency} / {logistics_shipments_count}",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.8333,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.8333,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The division operation matches the business question of calculating an average.",
+            "C2": "The dependencies correctly represent total freight cost and the count of shipments.",
+            "C3": "The dependency time scopes both align with the all_time scope of the metric.",
+            "C4": "The dependency state filters are aligned as both are unfiltered matching the metric's state.",
+            "C5": "There is no guard against division by zero if the shipment count is zero.",
+            "C6": "The resulting unit of currency is correct for currency divided by count."
+          },
+          "flags": [
+            "Division by zero risk in production without a guard clause"
+          ],
+          "reasoning": "The formula correctly computes the average freight cost per shipment but lacks a safeguard against division by zero, lowering confidence.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 4036
+        }
+      },
+      "all_flags": [
+        "Division by zero risk in production without a guard clause"
+      ],
+      "analyzed_at": "2026-08-12T06:46:35Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_shipments_growth_planned_delivery_days_this_month_percent",
+      "source_goal": "What is the month over month growth in planned delivery days for shipmentss?",
+      "formula_line": "logistics_shipments_growth_planned_delivery_days_this_month_percent = (({logistics_shipments_planned_delivery_days_this_month_days} - {logistics_shipments_planned_delivery_days_last_month_days}) / abs({logistics_shipments_planned_delivery_days_last_month_days}) * 100) if {logistics_shipments_planned_delivery_days_last_month_days} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses subtraction and division, which are appropriate for calculating growth rate.",
+            "C2": "The dependency metrics correctly calculate total planned delivery days for this and last month.",
+            "C3": "Both dependencies have time scopes that align with the monthly scope of the composed metric.",
+            "C4": "Neither the composed metric nor its dependencies have state filters, maintaining alignment.",
+            "C5": "The formula includes a guard clause to handle division by zero cases.",
+            "C6": "The operation results in a percentage, which matches the declared unit."
+          },
+          "flags": [],
+          "reasoning": "All components of the formula align correctly with the business question, making it robust and accurate.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 3951
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T06:46:39Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_vehicle_trips_average_trip_cost_currency",
+      "source_goal": "What is the average trip cost per vehicle_trips?",
+      "formula_line": "logistics_vehicle_trips_average_trip_cost_currency = {logistics_vehicle_trips_trip_cost_currency} / {logistics_vehicle_trips_count}",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.8333,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.8333,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The division operation correctly computes the average as per the business question.",
+            "C2": "The dependencies correctly provide total trip cost and total trip count.",
+            "C3": "Both dependencies use the 'all_time' time scope, consistent with the composed metric.",
+            "C4": "Both dependencies have no state filter, aligning with the unfiltered composed metric.",
+            "C5": "There is no division-by-zero guard for the denominator.",
+            "C6": "Resulting unit is currency, which makes sense for the operation performed."
+          },
+          "flags": [
+            "Missing division-by-zero guard presents a risk in production."
+          ],
+          "reasoning": "The formula correctly calculates the average trip cost per vehicle trip but lacks a division-by-zero guard.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 3113
+        }
+      },
+      "all_flags": [
+        "Missing division-by-zero guard presents a risk in production."
+      ],
+      "analyzed_at": "2026-08-12T06:46:42Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_vehicle_trips_growth_distance_km_this_month_percent",
+      "source_goal": "What is the month over month growth in distance km for vehicle_tripss?",
+      "formula_line": "logistics_vehicle_trips_growth_distance_km_this_month_percent = (({logistics_vehicle_trips_distance_km_this_month_count} - {logistics_vehicle_trips_distance_km_last_month_count}) / abs({logistics_vehicle_trips_distance_km_last_month_count}) * 100) if {logistics_vehicle_trips_distance_km_last_month_count} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula calculates month-over-month growth correctly using subtraction and division.",
+            "C2": "The dependencies correctly calculate this month's and last month's total distances in kilometers, which are appropriate building blocks.",
+            "C3": "Both dependencies align with their respective monthly time scopes.",
+            "C4": "There are no state filters needed for this metric, and dependencies are also unfiltered, aligning correctly.",
+            "C5": "The formula handles division-by-zero by checking if the denominator is zero before dividing.",
+            "C6": "The result unit of percent is appropriate for a growth rate calculation expressed as a percentage."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly calculates the month-over-month growth in distance traveled by vehicle trips in line with the business question and all checks pass.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 3204
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T06:46:45Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_vehicle_trips_growth_trip_cost_this_month_percent",
+      "source_goal": "What is the month over month growth in trip cost for vehicle_tripss?",
+      "formula_line": "logistics_vehicle_trips_growth_trip_cost_this_month_percent = (({logistics_vehicle_trips_trip_cost_this_month_currency} - {logistics_vehicle_trips_trip_cost_last_month_currency}) / abs({logistics_vehicle_trips_trip_cost_last_month_currency}) * 100) if {logistics_vehicle_trips_trip_cost_last_month_currency} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses subtraction and division with scaling by 100 for growth rate calculation, as required.",
+            "C2": "The metric correctly uses this month's and last month's trip cost totals for calculating growth.",
+            "C3": "The dependencies have time scopes of this_month and last_month, aligning with the metric's time scope.",
+            "C4": "No specific state filter is needed in the metric or dependencies, consistent with the requirements.",
+            "C5": "The formula includes a guard for division by zero if the previous month's cost is zero.",
+            "C6": "The result is a percentage, which is appropriate for a growth rate calculation."
+          },
+          "flags": [],
+          "reasoning": "All checks passed successfully, so the formula correctly answers the business question with no issues.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 3385
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T06:46:49Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_warehouse_inventory_growth_quantity_reserved_this_month_percent",
+      "source_goal": "What is the month over month growth in quantity reserved for warehouse_inventorys?",
+      "formula_line": "logistics_warehouse_inventory_growth_quantity_reserved_this_month_percent = (({logistics_warehouse_inventory_quantity_reserved_this_month_count} - {logistics_warehouse_inventory_quantity_reserved_last_month_count}) / abs({logistics_warehouse_inventory_quantity_reserved_last_month_count}) * 100) if {logistics_warehouse_inventory_quantity_reserved_last_month_count} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula correctly uses subtraction and division appropriate for calculating growth rate.",
+            "C2": "The formula correctly uses the total quantity reserved this month and last month as dependencies.",
+            "C3": "The dependencies cover the correct time frames of 'this month' and 'last month' for a month-over-month calculation.",
+            "C4": "There are no state filters, and both dependencies are unfiltered, aligning with the main metric.",
+            "C5": "Division by zero is handled with a condition that returns 0 if the denominator is zero.",
+            "C6": "The resulting unit is percent, which makes sense for a growth rate calculation."
+          },
+          "flags": [],
+          "reasoning": "All checks pass with the formula correctly implementing a month-over-month growth calculation in percent with proper guard clauses and consistent time scopes.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 3134
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T06:46:52Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    }
+  ],
+  "error_details": [],
+  "run_at": "2026-08-12T06:46:52Z"
+}

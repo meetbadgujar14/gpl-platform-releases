@@ -1,0 +1,831 @@
+{
+  "supply_chain_buyers_ERP_dimension.buyer_name": [
+    "Angela Whitfield",
+    "Brianna Osei",
+    "Carlos Meléndez",
+    "Derek Okonkwo",
+    "Fatima Ouedraogo",
+    "Marcus Delgado",
+    "Priya Nambiar",
+    "Yusuf Al-Rashid"
+  ],
+  "supply_chain_buyers_ERP_dimension.department": [
+    "Finance & Procurement",
+    "Operations",
+    "Procurement",
+    "Supply Chain"
+  ],
+  "supply_chain_buyers_ERP_dimension.category_responsibility": [
+    "Capital Equipment",
+    "Chemical & Adhesives",
+    "Electronics & Components",
+    "IT Hardware & Software",
+    "Indirect Goods & Services",
+    "Logistics & Warehousing",
+    "Plastics & Polymers",
+    "Raw Materials",
+    "Transportation & Freight"
+  ],
+  "supply_chain_buyers_ERP_dimension.is_active": [
+    "false",
+    "true"
+  ],
+  "supply_chain_carrier_performance_WMS_snapshot.carrier_name": [
+    "Apex Ground Transport",
+    "BlueStar Parcel Services",
+    "Coastal Carriers Inc.",
+    "Irongate Trucking Co.",
+    "Meridian Express Freight",
+    "NorthStar Distribution",
+    "Pacific Rim Logistics",
+    "Redwood Freight Solutions"
+  ],
+  "supply_chain_carrier_performance_WMS_snapshot.carrier_type": [
+    "FTL",
+    "Intermodal",
+    "LTL",
+    "Parcel"
+  ],
+  "supply_chain_carrier_performance_WMS_snapshot.period_type": [
+    "monthly",
+    "quarterly"
+  ],
+  "supply_chain_carriers_WMS_dimension.carrier_name": [
+    "Apex Last Mile Delivery",
+    "Coastal Express Shipping",
+    "Euro Bridge Logistics GmbH",
+    "Pacific Rim Logistics",
+    "Summit Peak Haulage",
+    "Transpacific Alliance Shipping"
+  ],
+  "supply_chain_carriers_WMS_dimension.carrier_type": [
+    "Air Freight",
+    "Full Truckload",
+    "Ocean Freight",
+    "Parcel",
+    "Rail Freight"
+  ],
+  "supply_chain_carriers_WMS_dimension.country": [
+    "Canada",
+    "Germany",
+    "Japan",
+    "Spain",
+    "USA"
+  ],
+  "supply_chain_carriers_WMS_dimension.service_level": [
+    "Economy",
+    "Express",
+    "Priority",
+    "Standard"
+  ],
+  "supply_chain_carriers_WMS_dimension.is_preferred": [
+    "false",
+    "true"
+  ],
+  "supply_chain_carriers_WMS_dimension.is_active": [
+    "false",
+    "true"
+  ],
+  "supply_chain_cost_centers_ERP_dimension.cost_center_name": [
+    "Customs & Trade Compliance",
+    "EMEA Logistics Hub",
+    "Global Procurement Operations",
+    "Supplier Quality Assurance",
+    "Warehouse & Distribution - East"
+  ],
+  "supply_chain_cost_centers_ERP_dimension.department": [
+    "Inventory Management",
+    "Logistics",
+    "Procurement",
+    "Quality Control",
+    "Specialized Logistics",
+    "Trade Compliance"
+  ],
+  "supply_chain_cost_centers_ERP_dimension.business_unit": [
+    "Distribution Network",
+    "International Distribution",
+    "Operations",
+    "Supply Chain Management"
+  ],
+  "supply_chain_cost_centers_ERP_dimension.region": [
+    "Asia Pacific",
+    "Central US",
+    "East US",
+    "Europe",
+    "Global",
+    "West US"
+  ],
+  "supply_chain_cost_centers_ERP_dimension.is_active": [
+    "false",
+    "true"
+  ],
+  "supply_chain_demand_forecasts_ERP_snapshot.item_name": [
+    "Bearing Assembly 6204",
+    "Carbon Steel Pipe 2-inch",
+    "Copper Wire Spool 14AWG",
+    "Corrugated Packaging Box Large",
+    "Forklift Battery 48V",
+    "HDPE Sheet 10mm",
+    "Industrial Hydraulic Pump",
+    "LED Industrial Fixture 200W",
+    "PVC Insulation Tape Roll",
+    "Pneumatic Cylinder 50mm Bore",
+    "Polypropylene Resin Pellets",
+    "Stainless Steel Fastener Set",
+    "Stretch Wrap Film 20-inch"
+  ],
+  "supply_chain_demand_forecasts_ERP_snapshot.item_category": [
+    "Electrical",
+    "Hardware",
+    "Material Handling",
+    "Mechanical Components",
+    "Packaging",
+    "Raw Materials",
+    "Safety & PPE"
+  ],
+  "supply_chain_demand_forecasts_ERP_snapshot.forecast_method": [
+    "ARIMA",
+    "Exponential Smoothing",
+    "Machine Learning",
+    "Moving Average",
+    "Seasonal Decomposition"
+  ],
+  "supply_chain_demand_forecasts_ERP_snapshot.period_type": [
+    "Monthly"
+  ],
+  "supply_chain_financials_ERP_record.product_category": [
+    "Chemical Supplies",
+    "Electronic Components",
+    "Industrial Components",
+    "Logistics Equipment",
+    "Packaging Materials",
+    "Raw Materials",
+    "Safety Equipment"
+  ],
+  "supply_chain_goods_receipts_ERP_record.receipt_status": [
+    "Completed",
+    "Partially Accepted",
+    "Rejected"
+  ],
+  "supply_chain_goods_receipts_ERP_record.is_quality_passed": [
+    "false",
+    "true"
+  ],
+  "supply_chain_inbound_delivery_schedule_ERP_record.schedule_status": [
+    "Delivered"
+  ],
+  "supply_chain_inbound_delivery_schedule_ERP_record.dock_door": [
+    "D-01",
+    "D-02",
+    "D-04",
+    "D-05",
+    "D-06",
+    "D-07",
+    "D-08",
+    "D-09",
+    "D-10",
+    "D-11",
+    "D-12"
+  ],
+  "supply_chain_inventory_aging_WMS_snapshot.item_name": [
+    "Carbon Filter Cartridge",
+    "Conveyor Belt Section 3m",
+    "Electronic Control Module",
+    "Forklift Tine Extension",
+    "Industrial Hydraulic Pump",
+    "LED Warehouse Lighting Panel",
+    "Nitrile Safety Gloves (Box)",
+    "Polyethylene Packing Film",
+    "Stainless Steel Fastener Set",
+    "Thermal Insulation Blanket"
+  ],
+  "supply_chain_inventory_aging_WMS_snapshot.item_category": [
+    "Electronics",
+    "Filtration",
+    "Fluid Control",
+    "Hardware",
+    "Industrial Supplies",
+    "Material Handling",
+    "Mechanical Components",
+    "Packaging Materials",
+    "Safety Equipment"
+  ],
+  "supply_chain_inventory_aging_WMS_snapshot.age_bucket": [
+    "0-30 days",
+    "31-90 days",
+    "91-180 days",
+    "Over 180 days"
+  ],
+  "supply_chain_inventory_levels_WMS_state.item_name": [
+    "Anti-Static Bubble Wrap Roll",
+    "Carbon Steel Pipe 2in x 10ft",
+    "Conveyor Belt Roller 6in",
+    "Corrugated Shipping Box 18x12",
+    "HDPE Storage Container 5gal",
+    "Hydraulic Pump Assembly",
+    "Industrial Safety Gloves",
+    "Lithium-Ion Battery Pack 48V",
+    "Nitrile Examination Gloves Box",
+    "Pneumatic Valve 3-Way 1/4in",
+    "Polyethylene Foam Sheet 2in",
+    "Thermal Transfer Label 4x6"
+  ],
+  "supply_chain_inventory_levels_WMS_state.item_category": [
+    "Electrical Components",
+    "Fasteners & Hardware",
+    "Labeling & Identification",
+    "Mechanical Components",
+    "Packaging Materials",
+    "Personal Protective Equipment",
+    "Pneumatic & Fluid Control",
+    "Raw Materials",
+    "Storage & Containers"
+  ],
+  "supply_chain_inventory_levels_WMS_state.is_below_reorder": [
+    "false",
+    "true"
+  ],
+  "supply_chain_invoice_lines_ERP_record.line_status": [
+    "Approved",
+    "Cancelled",
+    "Disputed",
+    "Pending",
+    "Under Review"
+  ],
+  "supply_chain_invoice_lines_ERP_record.unit_of_measure": [
+    "EA",
+    "KG",
+    "LT",
+    "M"
+  ],
+  "supply_chain_invoices_ERP_record.invoice_status": [
+    "Approved",
+    "Cancelled",
+    "Disputed",
+    "Paid",
+    "Pending",
+    "Under Review"
+  ],
+  "supply_chain_invoices_ERP_record.currency": [
+    "AUD",
+    "CAD",
+    "GBP",
+    "USD"
+  ],
+  "supply_chain_invoices_ERP_record.is_3way_matched": [
+    "false",
+    "true"
+  ],
+  "supply_chain_items_ERP_dimension.item_name": [
+    "Activated Carbon Filter Cartridge",
+    "Aluminium Extrusion Profile 2m",
+    "Bearing Deep Groove 6204-2RS",
+    "Carbon Steel Sheet 3mm 1200x2400",
+    "Centrifugal Pump 2HP 60Hz",
+    "Conveyor Belt Rubber Type B 500mm",
+    "HDPE Pipe 50mm DN",
+    "Industrial Grade Hydraulic Hose",
+    "Industrial Lubricant ISO 46 20L",
+    "Nitrile Rubber Gasket 6-inch",
+    "PVC Shrink Wrap Sleeve 100mm",
+    "Pneumatic Solenoid Valve 24VDC",
+    "Safety Gloves Cut Level D Medium",
+    "Stainless Steel Hex Bolt M12",
+    "Thermal Insulation Blanket 1m x 2m"
+  ],
+  "supply_chain_items_ERP_dimension.item_category": [
+    "Consumables",
+    "Electronics",
+    "Filtration",
+    "Fluid Handling",
+    "Insulation",
+    "Labelling & Tracking",
+    "Packaging Materials",
+    "Piping",
+    "Pneumatics",
+    "Raw Materials",
+    "Safety Equipment",
+    "Seals & Gaskets"
+  ],
+  "supply_chain_items_ERP_dimension.item_subcategory": [
+    "Aluminium",
+    "Cartons & Boxes",
+    "Control Units",
+    "Conveyor Systems",
+    "Filter Cartridges",
+    "Pumps",
+    "Shrink Wrap",
+    "Steel",
+    "Stretch Film",
+    "Valves"
+  ],
+  "supply_chain_items_ERP_dimension.unit_of_measure": [
+    "BOX",
+    "EA",
+    "KG",
+    "MTR",
+    "PR",
+    "ROLL"
+  ],
+  "supply_chain_items_ERP_dimension.is_active": [
+    "false",
+    "true"
+  ],
+  "supply_chain_items_ERP_dimension.item_status": [
+    "Active",
+    "Discontinued",
+    "Under Review"
+  ],
+  "supply_chain_lead_times_ERP_snapshot.supplier_name": [
+    "Apex Global Trading",
+    "Centurion Materials Group",
+    "Delta Components Ltd.",
+    "Ironclad Supply Solutions",
+    "Lakeshore Manufacturing",
+    "Meridian Supply Co.",
+    "Northgate Industrial",
+    "Pacific Rim Logistics"
+  ],
+  "supply_chain_lead_times_ERP_snapshot.item_name": [
+    "Aluminum Extrusion Profiles",
+    "Copper Wire Harness",
+    "Electric Motor 5HP",
+    "Hydraulic Seals Kit",
+    "Industrial Grade Bearings",
+    "PCB Assembly Board",
+    "Polyurethane Foam Sheets",
+    "Safety Gloves - Heavy Duty",
+    "Stainless Steel Fasteners"
+  ],
+  "supply_chain_lead_times_ERP_snapshot.item_category": [
+    "Electrical Equipment",
+    "Electronics",
+    "Mechanical Components",
+    "Packaging Materials",
+    "Raw Materials",
+    "Safety Equipment"
+  ],
+  "supply_chain_order_fulfillment_WMS_event.event_type": [
+    "Pack",
+    "Pick",
+    "Receive",
+    "Ship"
+  ],
+  "supply_chain_order_fulfillment_WMS_event.fulfillment_status": [
+    "Cancelled",
+    "Completed",
+    "Partially Fulfilled",
+    "Pending"
+  ],
+  "supply_chain_procurement_spend_ERP_record.spend_category": [
+    "Contract Labor",
+    "Facilities Management",
+    "IT Equipment",
+    "Logistics & Freight",
+    "MRO Supplies",
+    "Packaging Materials",
+    "Professional Services",
+    "Raw Materials",
+    "Software Licenses",
+    "Utilities"
+  ],
+  "supply_chain_procurement_spend_ERP_record.cost_center": [
+    "CC-Facilities-07",
+    "CC-Finance-05",
+    "CC-HR-08",
+    "CC-Legal-09",
+    "CC-Logistics-03",
+    "CC-Maintenance-06",
+    "CC-Manufacturing-01",
+    "CC-Operations-04",
+    "CC-Technology-02"
+  ],
+  "supply_chain_procurement_spend_ERP_record.currency": [
+    "CAD",
+    "EUR",
+    "GBP",
+    "USD"
+  ],
+  "supply_chain_procurement_spend_ERP_record.payment_status": [
+    "Cancelled",
+    "Disputed",
+    "Paid",
+    "Pending",
+    "Under Review"
+  ],
+  "supply_chain_purchase_order_lines_ERP_record.unit_of_measure": [
+    "EA",
+    "KG",
+    "LB",
+    "M"
+  ],
+  "supply_chain_purchase_order_lines_ERP_record.line_status": [
+    "Cancelled",
+    "Closed",
+    "Open",
+    "Partially Received",
+    "Received"
+  ],
+  "supply_chain_purchase_order_lines_ERP_record.line": [
+    "1",
+    "2"
+  ],
+  "supply_chain_purchase_order_lines_ERP_record.purchase_order": [
+    "20318",
+    "21903",
+    "22487",
+    "23140",
+    "24755",
+    "26108",
+    "27643",
+    "28819",
+    "31057",
+    "31204"
+  ],
+  "supply_chain_purchase_order_lines_ERP_record.item": [
+    "1137",
+    "1190",
+    "2245",
+    "2278",
+    "4418",
+    "5521",
+    "5533",
+    "6302",
+    "6641",
+    "7714",
+    "8834"
+  ],
+  "supply_chain_purchase_orders_ERP_record.po_status": [
+    "Approved",
+    "Cancelled",
+    "Closed",
+    "Draft",
+    "Pending",
+    "Received"
+  ],
+  "supply_chain_purchase_orders_ERP_record.currency": [
+    "CAD",
+    "EUR",
+    "GBP",
+    "USD"
+  ],
+  "supply_chain_purchase_orders_ERP_record.department": [
+    "Facilities",
+    "IT",
+    "Logistics",
+    "Manufacturing",
+    "Operations",
+    "Procurement"
+  ],
+  "supply_chain_purchase_orders_ERP_record.is_emergency": [
+    "false",
+    "true"
+  ],
+  "supply_chain_purchase_requisitions_ERP_record.department": [
+    "Logistics",
+    "Maintenance",
+    "Manufacturing",
+    "Procurement",
+    "Quality Assurance",
+    "R&D",
+    "Warehouse Operations"
+  ],
+  "supply_chain_purchase_requisitions_ERP_record.requisition_status": [
+    "Approved",
+    "Cancelled",
+    "Completed",
+    "Pending",
+    "Under Review"
+  ],
+  "supply_chain_purchase_requisitions_ERP_record.approved_by": [
+    "Felix Oduya",
+    "Marcus Chen",
+    "Sandra Whitfield"
+  ],
+  "supply_chain_purchase_requisitions_ERP_record.is_approved": [
+    "false",
+    "true"
+  ],
+  "supply_chain_quality_inspections_ERP_record.inspection_type": [
+    "Final",
+    "In-Process",
+    "Incoming"
+  ],
+  "supply_chain_quality_inspections_ERP_record.inspection_result": [
+    "Failed",
+    "Passed",
+    "Passed with Conditions"
+  ],
+  "supply_chain_quality_inspections_ERP_record.is_passed": [
+    "false",
+    "true"
+  ],
+  "supply_chain_reorder_proposals_ERP_record.proposal_status": [
+    "Approved",
+    "Cancelled",
+    "PO Created",
+    "Pending",
+    "Rejected"
+  ],
+  "supply_chain_reorder_proposals_ERP_record.proposal_source": [
+    "Demand Forecast",
+    "MRP System",
+    "Manual Entry"
+  ],
+  "supply_chain_reorder_proposals_ERP_record.is_auto_generated": [
+    "false",
+    "true"
+  ],
+  "supply_chain_returns_ERP_record.return_reason": [
+    "Damaged in transit",
+    "Expired product",
+    "Overshipment",
+    "Packaging defect",
+    "Quality defect",
+    "Specification mismatch",
+    "Wrong item shipped"
+  ],
+  "supply_chain_returns_ERP_record.return_status": [
+    "Cancelled",
+    "Completed",
+    "In Review",
+    "Pending"
+  ],
+  "supply_chain_returns_ERP_record.is_credit_received": [
+    "false",
+    "true"
+  ],
+  "supply_chain_safety_stock_ERP_snapshot.item_name": [
+    "Ball Bearing 6205-2RS 25mm",
+    "Corrugated Box 18x12x10",
+    "HEPA Filter Cartridge Type-C",
+    "Industrial Grade Hydraulic Hose 1/2in",
+    "Industrial Lubricant 5L ISO 46",
+    "PLC Controller Module Siemens S7-1200",
+    "Polyethylene Packing Foam 24x24",
+    "Servo Motor 24V DC 150W",
+    "Stainless Steel Hex Bolt M12x80",
+    "Stretch Wrap Film 20in x 1000ft"
+  ],
+  "supply_chain_safety_stock_ERP_snapshot.item_category": [
+    "Bearings",
+    "Fasteners",
+    "Filtration",
+    "Fluid Power Components",
+    "Lubricants",
+    "Packaging Materials",
+    "Pneumatic Components",
+    "Seals & Gaskets"
+  ],
+  "supply_chain_safety_stock_ERP_snapshot.review_cycle": [
+    "Bi-Weekly",
+    "Monthly",
+    "Weekly"
+  ],
+  "supply_chain_shipment_lines_WMS_record.line_status": [
+    "Cancelled",
+    "Delivered",
+    "Partially Received",
+    "Received with Exceptions"
+  ],
+  "supply_chain_shipments_WMS_record.carrier": [
+    "ABF Freight",
+    "Estes Express Lines",
+    "FedEx Freight",
+    "Meridian Transport Solutions",
+    "Old Dominion Freight",
+    "Pacific Rim Logistics",
+    "R+L Carriers",
+    "Saia LTL Freight",
+    "UPS Supply Chain",
+    "XPO Logistics"
+  ],
+  "supply_chain_shipments_WMS_record.shipment_status": [
+    "delivered",
+    "in_transit"
+  ],
+  "supply_chain_shipments_WMS_record.is_late": [
+    "false",
+    "true"
+  ],
+  "supply_chain_shrinkage_events_WMS_event.shrinkage_type": [
+    "Administrative Error",
+    "Cycle Count Variance",
+    "Damage",
+    "Expiration",
+    "Theft"
+  ],
+  "supply_chain_shrinkage_events_WMS_event.is_recovered": [
+    "false",
+    "true"
+  ],
+  "supply_chain_stock_transfers_WMS_record.transfer_status": [
+    "cancelled",
+    "completed",
+    "in_transit",
+    "pending"
+  ],
+  "supply_chain_stock_transfers_WMS_record.is_urgent": [
+    "false",
+    "true"
+  ],
+  "supply_chain_supplier_contracts_ERP_record.contract_type": [
+    "Annual Framework Contract",
+    "Blanket Purchase Order",
+    "Fixed Price Contract",
+    "Frame Agreement",
+    "Master Supply Agreement",
+    "Service Level Agreement",
+    "Spot Purchase Agreement"
+  ],
+  "supply_chain_supplier_contracts_ERP_record.contract_status": [
+    "Active",
+    "Expired"
+  ],
+  "supply_chain_supplier_contracts_ERP_record.currency": [
+    "CAD",
+    "EUR",
+    "GBP",
+    "USD"
+  ],
+  "supply_chain_supplier_contracts_ERP_record.category": [
+    "Chemicals",
+    "Electronics Components",
+    "IT & Technology",
+    "Industrial Equipment",
+    "Logistics & Transportation",
+    "MRO Supplies",
+    "Packaging",
+    "Raw Materials"
+  ],
+  "supply_chain_supplier_contracts_ERP_record.is_auto_renew": [
+    "false",
+    "true"
+  ],
+  "supply_chain_supplier_items_ERP_dimension.currency": [
+    "CAD",
+    "CNY",
+    "EUR",
+    "GBP",
+    "USD"
+  ],
+  "supply_chain_supplier_items_ERP_dimension.is_preferred_supplier": [
+    "false",
+    "true"
+  ],
+  "supply_chain_supplier_items_ERP_dimension.is_active": [
+    "false",
+    "true"
+  ],
+  "supply_chain_supplier_performance_ERP_snapshot.period_type": [
+    "annual",
+    "monthly",
+    "quarterly"
+  ],
+  "supply_chain_supplier_performance_ERP_snapshot.supplier_name": [
+    "Alvarez & Sons Manufacturing",
+    "Cascade Chemical Co.",
+    "Meridian Industrial Supply",
+    "Northern Star Packaging",
+    "Okafor Electronics Group",
+    "Pacific Rim Logistics",
+    "Singh Precision Parts",
+    "Tanaka Fasteners Ltd.",
+    "Volkov Steel Works"
+  ],
+  "supply_chain_supplier_performance_ERP_snapshot.supplier_category": [
+    "Chemicals",
+    "Components",
+    "Electronics",
+    "Hardware",
+    "Packaging",
+    "Raw Materials",
+    "Transportation"
+  ],
+  "supply_chain_suppliers_ERP_dimension.supplier_name": [
+    "Amber Valley Chemical Works",
+    "Durango Plastics Corp.",
+    "Equinox Safety Products",
+    "Helios Energy Components",
+    "Ironclad Steel Works",
+    "Meridian Industrial Supplies",
+    "Nordvik Manufacturing Group",
+    "Pinnacle Cold Chain Logistics",
+    "Solaris Packaging Solutions",
+    "Stonebridge Textiles Inc.",
+    "Vantage Point MRO Services"
+  ],
+  "supply_chain_suppliers_ERP_dimension.supplier_category": [
+    "Chemicals",
+    "Cold Storage & Logistics",
+    "Components & Parts",
+    "Freight & Transportation",
+    "IT & Technology",
+    "MRO",
+    "Safety & Compliance"
+  ],
+  "supply_chain_suppliers_ERP_dimension.country": [
+    "DE",
+    "FR",
+    "GB",
+    "MX",
+    "US"
+  ],
+  "supply_chain_suppliers_ERP_dimension.region": [
+    "Asia-Pacific",
+    "Europe",
+    "Latin America",
+    "North America"
+  ],
+  "supply_chain_suppliers_ERP_dimension.payment_terms": [
+    "Net 30",
+    "Net 45",
+    "Net 60"
+  ],
+  "supply_chain_suppliers_ERP_dimension.status": [
+    "Active",
+    "Inactive",
+    "Under Review"
+  ],
+  "supply_chain_suppliers_ERP_dimension.is_preferred": [
+    "false",
+    "true"
+  ],
+  "supply_chain_suppliers_ERP_dimension.supplier_tier": [
+    "Tier 1",
+    "Tier 2",
+    "Tier 3"
+  ],
+  "supply_chain_warehouse_locations_WMS_dimension.warehouse_name": [
+    "Meridian Fulfillment Hub",
+    "Northgate Logistics Warehouse",
+    "Pacific Rim Distribution Center"
+  ],
+  "supply_chain_warehouse_locations_WMS_dimension.zone": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "supply_chain_warehouse_locations_WMS_dimension.aisle": [
+    "A-01",
+    "A-04",
+    "B-07",
+    "C-11"
+  ],
+  "supply_chain_warehouse_locations_WMS_dimension.bin": [
+    "A-04-12B",
+    "B-07-08C",
+    "C-11-03A"
+  ],
+  "supply_chain_warehouse_locations_WMS_dimension.location_type": [
+    "Bulk Storage",
+    "Overstock",
+    "Pick Face"
+  ],
+  "supply_chain_warehouse_locations_WMS_dimension.country": [
+    "Canada",
+    "UK",
+    "USA"
+  ],
+  "supply_chain_warehouse_locations_WMS_dimension.is_active": [
+    "false",
+    "true"
+  ],
+  "supply_chain_warehouses_WMS_dimension.warehouse_name": [
+    "Heartland Fulfillment Hub",
+    "Iberian Cross-Dock Terminal",
+    "Meridian Cold Storage Facility",
+    "Pacific Rim Distribution Center"
+  ],
+  "supply_chain_warehouses_WMS_dimension.warehouse_type": [
+    "Cold Storage",
+    "Distribution",
+    "Fulfillment"
+  ],
+  "supply_chain_warehouses_WMS_dimension.country": [
+    "Germany",
+    "Spain",
+    "United States"
+  ],
+  "supply_chain_warehouses_WMS_dimension.region": [
+    "Midwest",
+    "North Rhine-Westphalia",
+    "Ontario",
+    "West Coast"
+  ],
+  "supply_chain_warehouses_WMS_dimension.city": [
+    "Barcelona",
+    "Düsseldorf"
+  ],
+  "supply_chain_warehouses_WMS_dimension.is_active": [
+    "false",
+    "true"
+  ],
+  "supply_chain_warehouses_WMS_dimension.manager_name": [
+    "Amara Singh",
+    "DeShawn Holloway",
+    "Kenji Watanabe",
+    "Tobias Brandt"
+  ]
+}

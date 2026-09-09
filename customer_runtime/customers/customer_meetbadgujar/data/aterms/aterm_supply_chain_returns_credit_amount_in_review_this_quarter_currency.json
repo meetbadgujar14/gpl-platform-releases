@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_returns_credit_amount_in_review_this_quarter_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_returns_credit_amount_in_review_this_quarter_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "returns",
+    "measure": "credit_amount",
+    "state": "In Review",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 2623.5,
+  "formula_line": "MEASURE_QUARTER_FIXED('supply_chain_returns_ERP_record', 'return_date', 'SUM', 'credit_amount', 'this_quarter', [{'field': 'return_status', 'op': '=', 'value': 'In Review'}])",
+  "exec_formula": "MEASURE_QUARTER_FIXED('supply_chain_returns_ERP_record', 'return_date', 'SUM', 'credit_amount', 'this_quarter', [{'field': 'return_status', 'op': '=', 'value': 'In Review'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_wizard_execution",
+  "created_at": "2026-09-01T11:02:24Z",
+  "usage_count": 0,
+  "source_goal": "What is the total credit amount for returns In Review this quarter?",
+  "wave": "D",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_QUARTER_FIXED steps=7",
+  "wizard_steps": 7,
+  "verified_at": "2026-09-02T06:49:08Z"
+}

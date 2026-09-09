@@ -1,0 +1,37 @@
+{
+  "id": "aterm:supply_chain_purchase_order_lines_line_total_by_department_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_purchase_order_lines_line_total_by_department_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "purchase_order_lines",
+    "measure": "line_total",
+    "state": "all",
+    "scope": "by_department",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Facilities": 15220.0,
+    "IT": 61245.0,
+    "Logistics": 18934.0,
+    "Maintenance": 8437.5,
+    "Manufacturing": 122653.0,
+    "Operations": 21425.0,
+    "Procurement": 47227.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(line_total) FROM supply_chain_purchase_order_lines_ERP_record JOIN supply_chain_purchase_orders_ERP_record ON po_id=po_id GROUP BY department)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:46Z",
+  "usage_count": 0,
+  "source_goal": "What is the total line total of purchase_order_liness by department?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:49Z"
+}

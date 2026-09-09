@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_procurement_spend_per_order_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_procurement_spend_per_order_currency",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "procurement_spend_per_order",
+    "measure": "procurement_spend_per_order",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 103382.14285714286,
+  "formula_line": "supply_chain_procurement_spend_per_order_currency = {supply_chain_procurement_spend_spend_amount_currency} / ({supply_chain_purchase_orders_count} if {supply_chain_purchase_orders_count} != 0 else 1)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-09-01T11:05:04Z",
+  "usage_count": 0,
+  "source_goal": "Average procurement spend amount per purchase order placed.",
+  "wave": 9,
+  "depends_on": [
+    "supply_chain_procurement_spend_spend_amount_currency",
+    "supply_chain_purchase_orders_count"
+  ],
+  "dep_values": {
+    "supply_chain_procurement_spend_spend_amount_currency": 2894700.0,
+    "supply_chain_purchase_orders_count": 28.0
+  },
+  "verified_at": "2026-09-02T06:49:08Z"
+}

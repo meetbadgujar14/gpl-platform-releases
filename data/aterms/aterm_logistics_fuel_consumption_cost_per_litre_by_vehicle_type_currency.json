@@ -1,0 +1,37 @@
+{
+  "id": "aterm:logistics_fuel_consumption_cost_per_litre_by_vehicle_type_currency",
+  "type": "Aterm",
+  "canonical_id": "logistics_fuel_consumption_cost_per_litre_by_vehicle_type_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "fuel_consumption",
+    "measure": "cost_per_litre",
+    "state": "all",
+    "scope": "by_vehicle_type",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Box Truck": 5.579999999999999,
+    "Cargo Van": 10.219999999999999,
+    "Flatbed Truck": 1.35,
+    "Refrigerated Truck": 7.52,
+    "Semi-Truck": 8.780000000000001,
+    "Sprinter Van": 4.17,
+    "Tanker Truck": 2.95
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(cost_per_litre) FROM logistics_fuel_consumption_WMS_record JOIN logistics_vehicles_MANUAL_dimension ON vehicle_id=vehicle_id GROUP BY vehicle_type)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:17Z",
+  "usage_count": 0,
+  "source_goal": "What is the total cost per litre of fuel_consumptions by vehicle type?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:45Z"
+}

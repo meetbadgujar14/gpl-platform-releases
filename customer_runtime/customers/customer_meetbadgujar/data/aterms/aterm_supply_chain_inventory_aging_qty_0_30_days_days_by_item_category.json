@@ -1,0 +1,39 @@
+{
+  "id": "aterm:supply_chain_inventory_aging_qty_0_30_days_days_by_item_category",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_aging_qty_0_30_days_days_by_item_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_aging",
+    "measure": "qty_0_30_days",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "days",
+    "series": "by_item_category"
+  },
+  "oracle_value": {
+    "Electronics": 180.0,
+    "Filtration": 600.0,
+    "Fluid Control": 45.0,
+    "Hardware": 1000.0,
+    "Industrial Supplies": 200.0,
+    "Material Handling": 30.0,
+    "Mechanical Components": 313.0,
+    "Packaging Materials": 3010.0,
+    "Safety Equipment": 2250.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_inventory_aging_WMS_snapshot', 'SUM', 'qty_0_30_days', 'item_category', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "What is the total qty 0 30 days of inventory_agings by item category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

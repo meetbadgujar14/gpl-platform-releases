@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_carrier_performance_damage_rate_this_quarter_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_carrier_performance_damage_rate_this_quarter_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "carrier_performance",
+    "measure": "damage_rate",
+    "state": "all",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 14.7,
+  "formula_line": "MEASURE_QUARTER_FIXED('supply_chain_carrier_performance_WMS_snapshot', 'period_start_date', 'SUM', 'damage_rate', 'this_quarter', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:38Z",
+  "usage_count": 0,
+  "source_goal": "What is the total damage rate of carrier_performances this quarter?",
+  "wave": 3,
+  "operator": "MEASURE_QUARTER_FIXED",
+  "verified_at": "2026-09-02T06:49:05Z"
+}

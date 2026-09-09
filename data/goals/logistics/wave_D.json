@@ -1,0 +1,102 @@
+{
+  "wave": "D",
+  "goal_count": 5,
+  "generated_at": "2026-07-21T11:34:12Z",
+  "goals": [
+    {
+      "goal": "How many shipments are currently in Delayed status this month — triggering operational escalation for SLA breach prevention?",
+      "canonical_id": "logistics_shipments_count_delayed_this_month_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "count",
+        "state": "Delayed",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "wave": "D",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "How many incidents are currently Under Investigation this quarter — monitoring unresolved operational liability requiring management attention?",
+      "canonical_id": "logistics_incidents_count_under_investigation_this_quarter_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "count",
+        "state": "Under Investigation",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "wave": "D",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total freight cost of shipments cancelled this month — quantifying revenue lost to order cancellations for commercial review?",
+      "canonical_id": "logistics_shipments_freight_cost_cancelled_this_month_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "freight_cost",
+        "state": "Cancelled",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "D",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total estimated loss value of incidents currently In Progress this quarter — representing active unresolved financial exposure?",
+      "canonical_id": "logistics_incidents_estimated_loss_value_in_progress_this_quarter_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "estimated_loss_value",
+        "state": "In Progress",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "D",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "How many shipments are still in Processing status this month — indicating order preparation bottlenecks before dispatch?",
+      "canonical_id": "logistics_shipments_count_processing_this_month_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "count",
+        "state": "Processing",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "wave": "D",
+      "complexity": "KPI",
+      "join": null
+    }
+  ]
+}

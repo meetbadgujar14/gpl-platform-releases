@@ -1,0 +1,39 @@
+{
+  "id": "aterm:supply_chain_inventory_aging_qty_91_180_days_days_by_item_category",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_aging_qty_91_180_days_days_by_item_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_aging",
+    "measure": "qty_91_180_days",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "days",
+    "series": "by_item_category"
+  },
+  "oracle_value": {
+    "Electronics": 305.0,
+    "Filtration": 130.0,
+    "Fluid Control": 83.0,
+    "Hardware": 180.0,
+    "Industrial Supplies": 60.0,
+    "Material Handling": 24.0,
+    "Mechanical Components": 122.0,
+    "Packaging Materials": 370.0,
+    "Safety Equipment": 330.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_inventory_aging_WMS_snapshot', 'SUM', 'qty_91_180_days', 'item_category', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "What is the total qty 91 180 days of inventory_agings by item category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

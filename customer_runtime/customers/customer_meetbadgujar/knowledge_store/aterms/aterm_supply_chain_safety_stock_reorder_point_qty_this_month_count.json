@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_safety_stock_reorder_point_qty_this_month_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_safety_stock_reorder_point_qty_this_month_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "safety_stock",
+    "measure": "reorder_point_qty",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 10550.0,
+  "formula_line": "MEASURE_MONTH_FIXED('supply_chain_safety_stock_ERP_snapshot', 'snapshot_date', 'SUM', 'reorder_point_qty', 'this_month', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "What is the total reorder point qty of safety_stocks this month?",
+  "wave": 3,
+  "operator": "MEASURE_MONTH_FIXED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

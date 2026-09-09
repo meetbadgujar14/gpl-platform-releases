@@ -1,0 +1,27 @@
+# ── GPL Platform desktop app dependencies ────────────────────────────────────
+# Install into a dedicated venv:
+#   python -m venv desktop\venv
+#   desktop\venv\Scripts\pip install -r desktop\requirements.txt
+
+# Qt GUI + WebEngine
+PySide6>=6.7.0
+
+# Both servers (run.py + run_customer.py)
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+anthropic>=0.25.0
+tinydb>=4.8.0
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+duckdb>=0.10.0
+pandas>=2.0.0
+python-multipart>=0.0.32
+openpyxl
+pdfkit>=1.0.0
+httpx>=0.27.0
+
+# Update mechanism — process detection for folder-swap
+psutil>=5.9.0
+
+# Build tooling (not needed at runtime, only for packaging step)
+pyinstaller>=6.5.0

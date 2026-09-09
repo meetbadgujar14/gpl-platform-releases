@@ -1,0 +1,39 @@
+{
+  "id": "aterm:supply_chain_inventory_transactions_unit_cost_currency_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_transactions_unit_cost_currency_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_transactions",
+    "measure": "unit_cost",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2024-03": 176.15,
+    "2024-04": 480.95000000000005,
+    "2024-05": 719.6,
+    "2024-06": 227.35,
+    "2024-07": 137.75,
+    "2024-08": 222.5,
+    "2024-09": 367.5,
+    "2024-10": 138.35,
+    "2024-11": 76.3
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(unit_cost) FROM supply_chain_inventory_transactions_WMS_event GROUP BY BUCKET(transaction_date, month))",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:51Z",
+  "usage_count": 0,
+  "source_goal": "What is the total unit cost of inventory_transactionss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:52Z"
+}

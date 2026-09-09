@@ -1,0 +1,2537 @@
+{
+  "wave": 5,
+  "goal_count": 115,
+  "generated_at": "2026-09-07T05:45:17Z",
+  "goals": [
+    {
+      "goal": "What is the average capacity units per warehouse_locations?",
+      "canonical_id": "supply_chain_warehouse_locations_average_capacity_units_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_warehouse_locations_capacity_units_count",
+        "supply_chain_warehouse_locations_count"
+      ],
+      "composition_formula": "{supply_chain_warehouse_locations_capacity_units_count} / {supply_chain_warehouse_locations_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "warehouse_locations",
+        "measure": "average_capacity_units",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average total amount per purchase_orders?",
+      "canonical_id": "supply_chain_purchase_orders_average_total_amount_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_purchase_orders_total_amount_currency",
+        "supply_chain_purchase_orders_count"
+      ],
+      "composition_formula": "{supply_chain_purchase_orders_total_amount_currency} / {supply_chain_purchase_orders_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_orders",
+        "measure": "average_total_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average total line items per purchase_orders?",
+      "canonical_id": "supply_chain_purchase_orders_average_total_line_items_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_purchase_orders_total_line_items_currency",
+        "supply_chain_purchase_orders_count"
+      ],
+      "composition_formula": "{supply_chain_purchase_orders_total_line_items_currency} / {supply_chain_purchase_orders_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_orders",
+        "measure": "average_total_line_items",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity ordered per purchase_order_lines?",
+      "canonical_id": "supply_chain_purchase_order_lines_average_quantity_ordered_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_purchase_order_lines_quantity_ordered_count",
+        "supply_chain_purchase_order_lines_count"
+      ],
+      "composition_formula": "{supply_chain_purchase_order_lines_quantity_ordered_count} / {supply_chain_purchase_order_lines_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_order_lines",
+        "measure": "average_quantity_ordered",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity received per purchase_order_lines?",
+      "canonical_id": "supply_chain_purchase_order_lines_average_quantity_received_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_purchase_order_lines_quantity_received_count",
+        "supply_chain_purchase_order_lines_count"
+      ],
+      "composition_formula": "{supply_chain_purchase_order_lines_quantity_received_count} / {supply_chain_purchase_order_lines_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_order_lines",
+        "measure": "average_quantity_received",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average unit cost per purchase_order_lines?",
+      "canonical_id": "supply_chain_purchase_order_lines_average_unit_cost_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_purchase_order_lines_unit_cost_currency",
+        "supply_chain_purchase_order_lines_count"
+      ],
+      "composition_formula": "{supply_chain_purchase_order_lines_unit_cost_currency} / {supply_chain_purchase_order_lines_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_order_lines",
+        "measure": "average_unit_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average line total per purchase_order_lines?",
+      "canonical_id": "supply_chain_purchase_order_lines_average_line_total_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_purchase_order_lines_line_total_currency",
+        "supply_chain_purchase_order_lines_count"
+      ],
+      "composition_formula": "{supply_chain_purchase_order_lines_line_total_currency} / {supply_chain_purchase_order_lines_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_order_lines",
+        "measure": "average_line_total",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average freight cost per shipments?",
+      "canonical_id": "supply_chain_shipments_average_freight_cost_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_shipments_freight_cost_currency",
+        "supply_chain_shipments_count"
+      ],
+      "composition_formula": "{supply_chain_shipments_freight_cost_currency} / {supply_chain_shipments_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipments",
+        "measure": "average_freight_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average total weight kg per shipments?",
+      "canonical_id": "supply_chain_shipments_average_total_weight_kg_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_shipments_total_weight_kg_currency",
+        "supply_chain_shipments_count"
+      ],
+      "composition_formula": "{supply_chain_shipments_total_weight_kg_currency} / {supply_chain_shipments_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipments",
+        "measure": "average_total_weight_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity shipped per shipment_lines?",
+      "canonical_id": "supply_chain_shipment_lines_average_quantity_shipped_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_shipment_lines_quantity_shipped_count",
+        "supply_chain_shipment_lines_count"
+      ],
+      "composition_formula": "{supply_chain_shipment_lines_quantity_shipped_count} / {supply_chain_shipment_lines_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipment_lines",
+        "measure": "average_quantity_shipped",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity damaged per shipment_lines?",
+      "canonical_id": "supply_chain_shipment_lines_average_quantity_damaged_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_shipment_lines_quantity_damaged_count",
+        "supply_chain_shipment_lines_count"
+      ],
+      "composition_formula": "{supply_chain_shipment_lines_quantity_damaged_count} / {supply_chain_shipment_lines_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipment_lines",
+        "measure": "average_quantity_damaged",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity received per goods_receipts?",
+      "canonical_id": "supply_chain_goods_receipts_average_quantity_received_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_goods_receipts_quantity_received_count",
+        "supply_chain_goods_receipts_count"
+      ],
+      "composition_formula": "{supply_chain_goods_receipts_quantity_received_count} / {supply_chain_goods_receipts_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "goods_receipts",
+        "measure": "average_quantity_received",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity accepted per goods_receipts?",
+      "canonical_id": "supply_chain_goods_receipts_average_quantity_accepted_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_goods_receipts_quantity_accepted_count",
+        "supply_chain_goods_receipts_count"
+      ],
+      "composition_formula": "{supply_chain_goods_receipts_quantity_accepted_count} / {supply_chain_goods_receipts_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "goods_receipts",
+        "measure": "average_quantity_accepted",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity rejected per goods_receipts?",
+      "canonical_id": "supply_chain_goods_receipts_average_quantity_rejected_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_goods_receipts_quantity_rejected_count",
+        "supply_chain_goods_receipts_count"
+      ],
+      "composition_formula": "{supply_chain_goods_receipts_quantity_rejected_count} / {supply_chain_goods_receipts_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "goods_receipts",
+        "measure": "average_quantity_rejected",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity on hand per inventory_levels?",
+      "canonical_id": "supply_chain_inventory_levels_average_quantity_on_hand_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_inventory_levels_quantity_on_hand_count",
+        "supply_chain_inventory_levels_count"
+      ],
+      "composition_formula": "{supply_chain_inventory_levels_quantity_on_hand_count} / {supply_chain_inventory_levels_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "average_quantity_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity reserved per inventory_levels?",
+      "canonical_id": "supply_chain_inventory_levels_average_quantity_reserved_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_inventory_levels_quantity_reserved_count",
+        "supply_chain_inventory_levels_count"
+      ],
+      "composition_formula": "{supply_chain_inventory_levels_quantity_reserved_count} / {supply_chain_inventory_levels_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "average_quantity_reserved",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity available per inventory_levels?",
+      "canonical_id": "supply_chain_inventory_levels_average_quantity_available_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_inventory_levels_quantity_available_count",
+        "supply_chain_inventory_levels_count"
+      ],
+      "composition_formula": "{supply_chain_inventory_levels_quantity_available_count} / {supply_chain_inventory_levels_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "average_quantity_available",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average reorder point per inventory_levels?",
+      "canonical_id": "supply_chain_inventory_levels_average_reorder_point_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_inventory_levels_reorder_point_count",
+        "supply_chain_inventory_levels_count"
+      ],
+      "composition_formula": "{supply_chain_inventory_levels_reorder_point_count} / {supply_chain_inventory_levels_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "average_reorder_point",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average total orders per supplier_performance?",
+      "canonical_id": "supply_chain_supplier_performance_average_total_orders_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_supplier_performance_total_orders_currency",
+        "supply_chain_supplier_performance_count"
+      ],
+      "composition_formula": "{supply_chain_supplier_performance_total_orders_currency} / {supply_chain_supplier_performance_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "average_total_orders",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average on time delivery rate per supplier_performance?",
+      "canonical_id": "supply_chain_supplier_performance_average_on_time_delivery_rate_percent",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_supplier_performance_on_time_delivery_rate_percent",
+        "supply_chain_supplier_performance_count"
+      ],
+      "composition_formula": "{supply_chain_supplier_performance_on_time_delivery_rate_percent} / {supply_chain_supplier_performance_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "average_on_time_delivery_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quality acceptance rate per supplier_performance?",
+      "canonical_id": "supply_chain_supplier_performance_average_quality_acceptance_rate_percent",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_supplier_performance_quality_acceptance_rate_percent",
+        "supply_chain_supplier_performance_count"
+      ],
+      "composition_formula": "{supply_chain_supplier_performance_quality_acceptance_rate_percent} / {supply_chain_supplier_performance_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "average_quality_acceptance_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average avg lead time days per supplier_performance?",
+      "canonical_id": "supply_chain_supplier_performance_average_avg_lead_time_days_days",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_supplier_performance_avg_lead_time_days_days",
+        "supply_chain_supplier_performance_count"
+      ],
+      "composition_formula": "{supply_chain_supplier_performance_avg_lead_time_days_days} / {supply_chain_supplier_performance_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "average_avg_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average total spend per supplier_performance?",
+      "canonical_id": "supply_chain_supplier_performance_average_total_spend_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_supplier_performance_total_spend_currency",
+        "supply_chain_supplier_performance_count"
+      ],
+      "composition_formula": "{supply_chain_supplier_performance_total_spend_currency} / {supply_chain_supplier_performance_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "average_total_spend",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average defect rate per supplier_performance?",
+      "canonical_id": "supply_chain_supplier_performance_average_defect_rate_percent",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_supplier_performance_defect_rate_percent",
+        "supply_chain_supplier_performance_count"
+      ],
+      "composition_formula": "{supply_chain_supplier_performance_defect_rate_percent} / {supply_chain_supplier_performance_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "average_defect_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average forecasted quantity per demand_forecasts?",
+      "canonical_id": "supply_chain_demand_forecasts_average_forecasted_quantity_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_demand_forecasts_forecasted_quantity_count",
+        "supply_chain_demand_forecasts_count"
+      ],
+      "composition_formula": "{supply_chain_demand_forecasts_forecasted_quantity_count} / {supply_chain_demand_forecasts_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "demand_forecasts",
+        "measure": "average_forecasted_quantity",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average actual quantity per demand_forecasts?",
+      "canonical_id": "supply_chain_demand_forecasts_average_actual_quantity_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_demand_forecasts_actual_quantity_count",
+        "supply_chain_demand_forecasts_count"
+      ],
+      "composition_formula": "{supply_chain_demand_forecasts_actual_quantity_count} / {supply_chain_demand_forecasts_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "demand_forecasts",
+        "measure": "average_actual_quantity",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average forecast error per demand_forecasts?",
+      "canonical_id": "supply_chain_demand_forecasts_average_forecast_error_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_demand_forecasts_forecast_error_count",
+        "supply_chain_demand_forecasts_count"
+      ],
+      "composition_formula": "{supply_chain_demand_forecasts_forecast_error_count} / {supply_chain_demand_forecasts_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "demand_forecasts",
+        "measure": "average_forecast_error",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average forecast accuracy rate per demand_forecasts?",
+      "canonical_id": "supply_chain_demand_forecasts_average_forecast_accuracy_rate_percent",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_demand_forecasts_forecast_accuracy_rate_percent",
+        "supply_chain_demand_forecasts_count"
+      ],
+      "composition_formula": "{supply_chain_demand_forecasts_forecast_accuracy_rate_percent} / {supply_chain_demand_forecasts_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "demand_forecasts",
+        "measure": "average_forecast_accuracy_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average spend amount per procurement_spend?",
+      "canonical_id": "supply_chain_procurement_spend_average_spend_amount_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_procurement_spend_spend_amount_currency",
+        "supply_chain_procurement_spend_count"
+      ],
+      "composition_formula": "{supply_chain_procurement_spend_spend_amount_currency} / {supply_chain_procurement_spend_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "average_spend_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average tax amount per procurement_spend?",
+      "canonical_id": "supply_chain_procurement_spend_average_tax_amount_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_procurement_spend_tax_amount_currency",
+        "supply_chain_procurement_spend_count"
+      ],
+      "composition_formula": "{supply_chain_procurement_spend_tax_amount_currency} / {supply_chain_procurement_spend_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "average_tax_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average discount amount per procurement_spend?",
+      "canonical_id": "supply_chain_procurement_spend_average_discount_amount_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_procurement_spend_discount_amount_currency",
+        "supply_chain_procurement_spend_count"
+      ],
+      "composition_formula": "{supply_chain_procurement_spend_discount_amount_currency} / {supply_chain_procurement_spend_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "average_discount_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average avg lead time days per lead_times?",
+      "canonical_id": "supply_chain_lead_times_average_avg_lead_time_days_days",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_lead_times_avg_lead_time_days_days",
+        "supply_chain_lead_times_count"
+      ],
+      "composition_formula": "{supply_chain_lead_times_avg_lead_time_days_days} / {supply_chain_lead_times_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "lead_times",
+        "measure": "average_avg_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average min lead time days per lead_times?",
+      "canonical_id": "supply_chain_lead_times_average_min_lead_time_days_days",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_lead_times_min_lead_time_days_days",
+        "supply_chain_lead_times_count"
+      ],
+      "composition_formula": "{supply_chain_lead_times_min_lead_time_days_days} / {supply_chain_lead_times_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "lead_times",
+        "measure": "average_min_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average max lead time days per lead_times?",
+      "canonical_id": "supply_chain_lead_times_average_max_lead_time_days_days",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_lead_times_max_lead_time_days_days",
+        "supply_chain_lead_times_count"
+      ],
+      "composition_formula": "{supply_chain_lead_times_max_lead_time_days_days} / {supply_chain_lead_times_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "lead_times",
+        "measure": "average_max_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average order count per lead_times?",
+      "canonical_id": "supply_chain_lead_times_average_order_count_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_lead_times_order_count_count",
+        "supply_chain_lead_times_count"
+      ],
+      "composition_formula": "{supply_chain_lead_times_order_count_count} / {supply_chain_lead_times_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "lead_times",
+        "measure": "average_order_count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average standard cost per items?",
+      "canonical_id": "supply_chain_items_average_standard_cost_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_items_standard_cost_currency",
+        "supply_chain_items_count"
+      ],
+      "composition_formula": "{supply_chain_items_standard_cost_currency} / {supply_chain_items_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "items",
+        "measure": "average_standard_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average lead time days per items?",
+      "canonical_id": "supply_chain_items_average_lead_time_days_days",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_items_lead_time_days_days",
+        "supply_chain_items_count"
+      ],
+      "composition_formula": "{supply_chain_items_lead_time_days_days} / {supply_chain_items_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "items",
+        "measure": "average_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average reorder point per items?",
+      "canonical_id": "supply_chain_items_average_reorder_point_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_items_reorder_point_count",
+        "supply_chain_items_count"
+      ],
+      "composition_formula": "{supply_chain_items_reorder_point_count} / {supply_chain_items_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "items",
+        "measure": "average_reorder_point",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average safety stock qty per items?",
+      "canonical_id": "supply_chain_items_average_safety_stock_qty_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_items_safety_stock_qty_count",
+        "supply_chain_items_count"
+      ],
+      "composition_formula": "{supply_chain_items_safety_stock_qty_count} / {supply_chain_items_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "items",
+        "measure": "average_safety_stock_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average total capacity sqm per warehouses?",
+      "canonical_id": "supply_chain_warehouses_average_total_capacity_sqm_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_warehouses_total_capacity_sqm_currency",
+        "supply_chain_warehouses_count"
+      ],
+      "composition_formula": "{supply_chain_warehouses_total_capacity_sqm_currency} / {supply_chain_warehouses_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "warehouses",
+        "measure": "average_total_capacity_sqm",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average total capacity units per warehouses?",
+      "canonical_id": "supply_chain_warehouses_average_total_capacity_units_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_warehouses_total_capacity_units_currency",
+        "supply_chain_warehouses_count"
+      ],
+      "composition_formula": "{supply_chain_warehouses_total_capacity_units_currency} / {supply_chain_warehouses_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "warehouses",
+        "measure": "average_total_capacity_units",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity change per inventory_transactions?",
+      "canonical_id": "supply_chain_inventory_transactions_average_quantity_change_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_inventory_transactions_quantity_change_count",
+        "supply_chain_inventory_transactions_count"
+      ],
+      "composition_formula": "{supply_chain_inventory_transactions_quantity_change_count} / {supply_chain_inventory_transactions_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_transactions",
+        "measure": "average_quantity_change",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity before per inventory_transactions?",
+      "canonical_id": "supply_chain_inventory_transactions_average_quantity_before_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_inventory_transactions_quantity_before_count",
+        "supply_chain_inventory_transactions_count"
+      ],
+      "composition_formula": "{supply_chain_inventory_transactions_quantity_before_count} / {supply_chain_inventory_transactions_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_transactions",
+        "measure": "average_quantity_before",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity after per inventory_transactions?",
+      "canonical_id": "supply_chain_inventory_transactions_average_quantity_after_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_inventory_transactions_quantity_after_count",
+        "supply_chain_inventory_transactions_count"
+      ],
+      "composition_formula": "{supply_chain_inventory_transactions_quantity_after_count} / {supply_chain_inventory_transactions_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_transactions",
+        "measure": "average_quantity_after",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average unit cost per inventory_transactions?",
+      "canonical_id": "supply_chain_inventory_transactions_average_unit_cost_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_inventory_transactions_unit_cost_currency",
+        "supply_chain_inventory_transactions_count"
+      ],
+      "composition_formula": "{supply_chain_inventory_transactions_unit_cost_currency} / {supply_chain_inventory_transactions_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_transactions",
+        "measure": "average_unit_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average total cost impact per inventory_transactions?",
+      "canonical_id": "supply_chain_inventory_transactions_average_total_cost_impact_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_inventory_transactions_total_cost_impact_currency",
+        "supply_chain_inventory_transactions_count"
+      ],
+      "composition_formula": "{supply_chain_inventory_transactions_total_cost_impact_currency} / {supply_chain_inventory_transactions_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_transactions",
+        "measure": "average_total_cost_impact",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity requested per stock_transfers?",
+      "canonical_id": "supply_chain_stock_transfers_average_quantity_requested_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_stock_transfers_quantity_requested_count",
+        "supply_chain_stock_transfers_count"
+      ],
+      "composition_formula": "{supply_chain_stock_transfers_quantity_requested_count} / {supply_chain_stock_transfers_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "stock_transfers",
+        "measure": "average_quantity_requested",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity shipped per stock_transfers?",
+      "canonical_id": "supply_chain_stock_transfers_average_quantity_shipped_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_stock_transfers_quantity_shipped_count",
+        "supply_chain_stock_transfers_count"
+      ],
+      "composition_formula": "{supply_chain_stock_transfers_quantity_shipped_count} / {supply_chain_stock_transfers_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "stock_transfers",
+        "measure": "average_quantity_shipped",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity received per stock_transfers?",
+      "canonical_id": "supply_chain_stock_transfers_average_quantity_received_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_stock_transfers_quantity_received_count",
+        "supply_chain_stock_transfers_count"
+      ],
+      "composition_formula": "{supply_chain_stock_transfers_quantity_received_count} / {supply_chain_stock_transfers_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "stock_transfers",
+        "measure": "average_quantity_received",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average transfer cost per stock_transfers?",
+      "canonical_id": "supply_chain_stock_transfers_average_transfer_cost_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_stock_transfers_transfer_cost_currency",
+        "supply_chain_stock_transfers_count"
+      ],
+      "composition_formula": "{supply_chain_stock_transfers_transfer_cost_currency} / {supply_chain_stock_transfers_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "stock_transfers",
+        "measure": "average_transfer_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity requested per purchase_requisitions?",
+      "canonical_id": "supply_chain_purchase_requisitions_average_quantity_requested_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_purchase_requisitions_quantity_requested_count",
+        "supply_chain_purchase_requisitions_count"
+      ],
+      "composition_formula": "{supply_chain_purchase_requisitions_quantity_requested_count} / {supply_chain_purchase_requisitions_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_requisitions",
+        "measure": "average_quantity_requested",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average estimated unit cost per purchase_requisitions?",
+      "canonical_id": "supply_chain_purchase_requisitions_average_estimated_unit_cost_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_purchase_requisitions_estimated_unit_cost_currency",
+        "supply_chain_purchase_requisitions_count"
+      ],
+      "composition_formula": "{supply_chain_purchase_requisitions_estimated_unit_cost_currency} / {supply_chain_purchase_requisitions_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_requisitions",
+        "measure": "average_estimated_unit_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average estimated total cost per purchase_requisitions?",
+      "canonical_id": "supply_chain_purchase_requisitions_average_estimated_total_cost_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_purchase_requisitions_estimated_total_cost_currency",
+        "supply_chain_purchase_requisitions_count"
+      ],
+      "composition_formula": "{supply_chain_purchase_requisitions_estimated_total_cost_currency} / {supply_chain_purchase_requisitions_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_requisitions",
+        "measure": "average_estimated_total_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average contracted value per supplier_contracts?",
+      "canonical_id": "supply_chain_supplier_contracts_average_contracted_value_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_supplier_contracts_contracted_value_currency",
+        "supply_chain_supplier_contracts_count"
+      ],
+      "composition_formula": "{supply_chain_supplier_contracts_contracted_value_currency} / {supply_chain_supplier_contracts_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_contracts",
+        "measure": "average_contracted_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average committed spend amount per supplier_contracts?",
+      "canonical_id": "supply_chain_supplier_contracts_average_committed_spend_amount_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_supplier_contracts_committed_spend_amount_currency",
+        "supply_chain_supplier_contracts_count"
+      ],
+      "composition_formula": "{supply_chain_supplier_contracts_committed_spend_amount_currency} / {supply_chain_supplier_contracts_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_contracts",
+        "measure": "average_committed_spend_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average payment terms days per supplier_contracts?",
+      "canonical_id": "supply_chain_supplier_contracts_average_payment_terms_days_days",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_supplier_contracts_payment_terms_days_days",
+        "supply_chain_supplier_contracts_count"
+      ],
+      "composition_formula": "{supply_chain_supplier_contracts_payment_terms_days_days} / {supply_chain_supplier_contracts_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_contracts",
+        "measure": "average_payment_terms_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity inspected per quality_inspections?",
+      "canonical_id": "supply_chain_quality_inspections_average_quantity_inspected_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_quality_inspections_quantity_inspected_count",
+        "supply_chain_quality_inspections_count"
+      ],
+      "composition_formula": "{supply_chain_quality_inspections_quantity_inspected_count} / {supply_chain_quality_inspections_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "quality_inspections",
+        "measure": "average_quantity_inspected",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity defective per quality_inspections?",
+      "canonical_id": "supply_chain_quality_inspections_average_quantity_defective_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_quality_inspections_quantity_defective_count",
+        "supply_chain_quality_inspections_count"
+      ],
+      "composition_formula": "{supply_chain_quality_inspections_quantity_defective_count} / {supply_chain_quality_inspections_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "quality_inspections",
+        "measure": "average_quantity_defective",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average defect rate per quality_inspections?",
+      "canonical_id": "supply_chain_quality_inspections_average_defect_rate_percent",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_quality_inspections_defect_rate_percent",
+        "supply_chain_quality_inspections_count"
+      ],
+      "composition_formula": "{supply_chain_quality_inspections_defect_rate_percent} / {supply_chain_quality_inspections_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "quality_inspections",
+        "measure": "average_defect_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average total shipments per carrier_performance?",
+      "canonical_id": "supply_chain_carrier_performance_average_total_shipments_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_carrier_performance_total_shipments_currency",
+        "supply_chain_carrier_performance_count"
+      ],
+      "composition_formula": "{supply_chain_carrier_performance_total_shipments_currency} / {supply_chain_carrier_performance_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carrier_performance",
+        "measure": "average_total_shipments",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average on time delivery rate per carrier_performance?",
+      "canonical_id": "supply_chain_carrier_performance_average_on_time_delivery_rate_percent",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_carrier_performance_on_time_delivery_rate_percent",
+        "supply_chain_carrier_performance_count"
+      ],
+      "composition_formula": "{supply_chain_carrier_performance_on_time_delivery_rate_percent} / {supply_chain_carrier_performance_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carrier_performance",
+        "measure": "average_on_time_delivery_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average damage rate per carrier_performance?",
+      "canonical_id": "supply_chain_carrier_performance_average_damage_rate_percent",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_carrier_performance_damage_rate_percent",
+        "supply_chain_carrier_performance_count"
+      ],
+      "composition_formula": "{supply_chain_carrier_performance_damage_rate_percent} / {supply_chain_carrier_performance_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carrier_performance",
+        "measure": "average_damage_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average avg transit days per carrier_performance?",
+      "canonical_id": "supply_chain_carrier_performance_average_avg_transit_days_days",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_carrier_performance_avg_transit_days_days",
+        "supply_chain_carrier_performance_count"
+      ],
+      "composition_formula": "{supply_chain_carrier_performance_avg_transit_days_days} / {supply_chain_carrier_performance_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carrier_performance",
+        "measure": "average_avg_transit_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average total freight cost per carrier_performance?",
+      "canonical_id": "supply_chain_carrier_performance_average_total_freight_cost_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_carrier_performance_total_freight_cost_currency",
+        "supply_chain_carrier_performance_count"
+      ],
+      "composition_formula": "{supply_chain_carrier_performance_total_freight_cost_currency} / {supply_chain_carrier_performance_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carrier_performance",
+        "measure": "average_total_freight_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average total weight kg per carrier_performance?",
+      "canonical_id": "supply_chain_carrier_performance_average_total_weight_kg_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_carrier_performance_total_weight_kg_currency",
+        "supply_chain_carrier_performance_count"
+      ],
+      "composition_formula": "{supply_chain_carrier_performance_total_weight_kg_currency} / {supply_chain_carrier_performance_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carrier_performance",
+        "measure": "average_total_weight_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average claim count per carrier_performance?",
+      "canonical_id": "supply_chain_carrier_performance_average_claim_count_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_carrier_performance_claim_count_count",
+        "supply_chain_carrier_performance_count"
+      ],
+      "composition_formula": "{supply_chain_carrier_performance_claim_count_count} / {supply_chain_carrier_performance_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carrier_performance",
+        "measure": "average_claim_count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity returned per returns?",
+      "canonical_id": "supply_chain_returns_average_quantity_returned_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_returns_quantity_returned_count",
+        "supply_chain_returns_count"
+      ],
+      "composition_formula": "{supply_chain_returns_quantity_returned_count} / {supply_chain_returns_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "average_quantity_returned",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average unit cost per returns?",
+      "canonical_id": "supply_chain_returns_average_unit_cost_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_returns_unit_cost_currency",
+        "supply_chain_returns_count"
+      ],
+      "composition_formula": "{supply_chain_returns_unit_cost_currency} / {supply_chain_returns_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "average_unit_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average return value per returns?",
+      "canonical_id": "supply_chain_returns_average_return_value_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_returns_return_value_currency",
+        "supply_chain_returns_count"
+      ],
+      "composition_formula": "{supply_chain_returns_return_value_currency} / {supply_chain_returns_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "average_return_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average credit amount per returns?",
+      "canonical_id": "supply_chain_returns_average_credit_amount_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_returns_credit_amount_currency",
+        "supply_chain_returns_count"
+      ],
+      "composition_formula": "{supply_chain_returns_credit_amount_currency} / {supply_chain_returns_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "average_credit_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average qty 0 30 days per inventory_aging?",
+      "canonical_id": "supply_chain_inventory_aging_average_qty_0_30_days_days",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_inventory_aging_qty_0_30_days_days",
+        "supply_chain_inventory_aging_count"
+      ],
+      "composition_formula": "{supply_chain_inventory_aging_qty_0_30_days_days} / {supply_chain_inventory_aging_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "average_qty_0_30_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average qty 31 90 days per inventory_aging?",
+      "canonical_id": "supply_chain_inventory_aging_average_qty_31_90_days_days",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_inventory_aging_qty_31_90_days_days",
+        "supply_chain_inventory_aging_count"
+      ],
+      "composition_formula": "{supply_chain_inventory_aging_qty_31_90_days_days} / {supply_chain_inventory_aging_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "average_qty_31_90_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average qty 91 180 days per inventory_aging?",
+      "canonical_id": "supply_chain_inventory_aging_average_qty_91_180_days_days",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_inventory_aging_qty_91_180_days_days",
+        "supply_chain_inventory_aging_count"
+      ],
+      "composition_formula": "{supply_chain_inventory_aging_qty_91_180_days_days} / {supply_chain_inventory_aging_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "average_qty_91_180_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average qty over 180 days per inventory_aging?",
+      "canonical_id": "supply_chain_inventory_aging_average_qty_over_180_days_days",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_inventory_aging_qty_over_180_days_days",
+        "supply_chain_inventory_aging_count"
+      ],
+      "composition_formula": "{supply_chain_inventory_aging_qty_over_180_days_days} / {supply_chain_inventory_aging_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "average_qty_over_180_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average total qty on hand per inventory_aging?",
+      "canonical_id": "supply_chain_inventory_aging_average_total_qty_on_hand_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_inventory_aging_total_qty_on_hand_currency",
+        "supply_chain_inventory_aging_count"
+      ],
+      "composition_formula": "{supply_chain_inventory_aging_total_qty_on_hand_currency} / {supply_chain_inventory_aging_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "average_total_qty_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average total inventory value per inventory_aging?",
+      "canonical_id": "supply_chain_inventory_aging_average_total_inventory_value_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_inventory_aging_total_inventory_value_currency",
+        "supply_chain_inventory_aging_count"
+      ],
+      "composition_formula": "{supply_chain_inventory_aging_total_inventory_value_currency} / {supply_chain_inventory_aging_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "average_total_inventory_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average slow moving value per inventory_aging?",
+      "canonical_id": "supply_chain_inventory_aging_average_slow_moving_value_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_inventory_aging_slow_moving_value_currency",
+        "supply_chain_inventory_aging_count"
+      ],
+      "composition_formula": "{supply_chain_inventory_aging_slow_moving_value_currency} / {supply_chain_inventory_aging_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "average_slow_moving_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average current qty on hand per reorder_proposals?",
+      "canonical_id": "supply_chain_reorder_proposals_average_current_qty_on_hand_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_reorder_proposals_current_qty_on_hand_count",
+        "supply_chain_reorder_proposals_count"
+      ],
+      "composition_formula": "{supply_chain_reorder_proposals_current_qty_on_hand_count} / {supply_chain_reorder_proposals_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "reorder_proposals",
+        "measure": "average_current_qty_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average reorder point qty per reorder_proposals?",
+      "canonical_id": "supply_chain_reorder_proposals_average_reorder_point_qty_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_reorder_proposals_reorder_point_qty_count",
+        "supply_chain_reorder_proposals_count"
+      ],
+      "composition_formula": "{supply_chain_reorder_proposals_reorder_point_qty_count} / {supply_chain_reorder_proposals_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "reorder_proposals",
+        "measure": "average_reorder_point_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average proposed order qty per reorder_proposals?",
+      "canonical_id": "supply_chain_reorder_proposals_average_proposed_order_qty_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_reorder_proposals_proposed_order_qty_count",
+        "supply_chain_reorder_proposals_count"
+      ],
+      "composition_formula": "{supply_chain_reorder_proposals_proposed_order_qty_count} / {supply_chain_reorder_proposals_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "reorder_proposals",
+        "measure": "average_proposed_order_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average estimated total cost per reorder_proposals?",
+      "canonical_id": "supply_chain_reorder_proposals_average_estimated_total_cost_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_reorder_proposals_estimated_total_cost_currency",
+        "supply_chain_reorder_proposals_count"
+      ],
+      "composition_formula": "{supply_chain_reorder_proposals_estimated_total_cost_currency} / {supply_chain_reorder_proposals_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "reorder_proposals",
+        "measure": "average_estimated_total_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average contract rate usd per carriers?",
+      "canonical_id": "supply_chain_carriers_average_contract_rate_usd_percent",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_carriers_contract_rate_usd_percent",
+        "supply_chain_carriers_count"
+      ],
+      "composition_formula": "{supply_chain_carriers_contract_rate_usd_percent} / {supply_chain_carriers_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carriers",
+        "measure": "average_contract_rate_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average avg transit days per carriers?",
+      "canonical_id": "supply_chain_carriers_average_avg_transit_days_days",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_carriers_avg_transit_days_days",
+        "supply_chain_carriers_count"
+      ],
+      "composition_formula": "{supply_chain_carriers_avg_transit_days_days} / {supply_chain_carriers_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carriers",
+        "measure": "average_avg_transit_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average negotiated unit cost per supplier_items?",
+      "canonical_id": "supply_chain_supplier_items_average_negotiated_unit_cost_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_supplier_items_negotiated_unit_cost_currency",
+        "supply_chain_supplier_items_count"
+      ],
+      "composition_formula": "{supply_chain_supplier_items_negotiated_unit_cost_currency} / {supply_chain_supplier_items_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_items",
+        "measure": "average_negotiated_unit_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average minimum order qty per supplier_items?",
+      "canonical_id": "supply_chain_supplier_items_average_minimum_order_qty_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_supplier_items_minimum_order_qty_count",
+        "supply_chain_supplier_items_count"
+      ],
+      "composition_formula": "{supply_chain_supplier_items_minimum_order_qty_count} / {supply_chain_supplier_items_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_items",
+        "measure": "average_minimum_order_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average lead time days per supplier_items?",
+      "canonical_id": "supply_chain_supplier_items_average_lead_time_days_days",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_supplier_items_lead_time_days_days",
+        "supply_chain_supplier_items_count"
+      ],
+      "composition_formula": "{supply_chain_supplier_items_lead_time_days_days} / {supply_chain_supplier_items_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_items",
+        "measure": "average_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average spend limit per buyers?",
+      "canonical_id": "supply_chain_buyers_average_spend_limit_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_buyers_spend_limit_currency",
+        "supply_chain_buyers_count"
+      ],
+      "composition_formula": "{supply_chain_buyers_spend_limit_currency} / {supply_chain_buyers_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "buyers",
+        "measure": "average_spend_limit",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average active po count per buyers?",
+      "canonical_id": "supply_chain_buyers_average_active_po_count_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_buyers_active_po_count_count",
+        "supply_chain_buyers_count"
+      ],
+      "composition_formula": "{supply_chain_buyers_active_po_count_count} / {supply_chain_buyers_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "buyers",
+        "measure": "average_active_po_count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average annual budget per cost_centers?",
+      "canonical_id": "supply_chain_cost_centers_average_annual_budget_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_cost_centers_annual_budget_count",
+        "supply_chain_cost_centers_count"
+      ],
+      "composition_formula": "{supply_chain_cost_centers_annual_budget_count} / {supply_chain_cost_centers_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "cost_centers",
+        "measure": "average_annual_budget",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average gross amount per invoices?",
+      "canonical_id": "supply_chain_invoices_average_gross_amount_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_invoices_gross_amount_currency",
+        "supply_chain_invoices_count"
+      ],
+      "composition_formula": "{supply_chain_invoices_gross_amount_currency} / {supply_chain_invoices_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "average_gross_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average tax amount per invoices?",
+      "canonical_id": "supply_chain_invoices_average_tax_amount_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_invoices_tax_amount_currency",
+        "supply_chain_invoices_count"
+      ],
+      "composition_formula": "{supply_chain_invoices_tax_amount_currency} / {supply_chain_invoices_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "average_tax_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average discount amount per invoices?",
+      "canonical_id": "supply_chain_invoices_average_discount_amount_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_invoices_discount_amount_currency",
+        "supply_chain_invoices_count"
+      ],
+      "composition_formula": "{supply_chain_invoices_discount_amount_currency} / {supply_chain_invoices_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "average_discount_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average net amount per invoices?",
+      "canonical_id": "supply_chain_invoices_average_net_amount_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_invoices_net_amount_currency",
+        "supply_chain_invoices_count"
+      ],
+      "composition_formula": "{supply_chain_invoices_net_amount_currency} / {supply_chain_invoices_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "average_net_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average days to pay per invoices?",
+      "canonical_id": "supply_chain_invoices_average_days_to_pay_days",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_invoices_days_to_pay_days",
+        "supply_chain_invoices_count"
+      ],
+      "composition_formula": "{supply_chain_invoices_days_to_pay_days} / {supply_chain_invoices_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "average_days_to_pay",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity invoiced per invoice_lines?",
+      "canonical_id": "supply_chain_invoice_lines_average_quantity_invoiced_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_invoice_lines_quantity_invoiced_count",
+        "supply_chain_invoice_lines_count"
+      ],
+      "composition_formula": "{supply_chain_invoice_lines_quantity_invoiced_count} / {supply_chain_invoice_lines_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoice_lines",
+        "measure": "average_quantity_invoiced",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average unit price per invoice_lines?",
+      "canonical_id": "supply_chain_invoice_lines_average_unit_price_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_invoice_lines_unit_price_currency",
+        "supply_chain_invoice_lines_count"
+      ],
+      "composition_formula": "{supply_chain_invoice_lines_unit_price_currency} / {supply_chain_invoice_lines_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoice_lines",
+        "measure": "average_unit_price",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average line amount per invoice_lines?",
+      "canonical_id": "supply_chain_invoice_lines_average_line_amount_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_invoice_lines_line_amount_currency",
+        "supply_chain_invoice_lines_count"
+      ],
+      "composition_formula": "{supply_chain_invoice_lines_line_amount_currency} / {supply_chain_invoice_lines_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoice_lines",
+        "measure": "average_line_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average price variance per invoice_lines?",
+      "canonical_id": "supply_chain_invoice_lines_average_price_variance_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_invoice_lines_price_variance_currency",
+        "supply_chain_invoice_lines_count"
+      ],
+      "composition_formula": "{supply_chain_invoice_lines_price_variance_currency} / {supply_chain_invoice_lines_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoice_lines",
+        "measure": "average_price_variance",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity variance per invoice_lines?",
+      "canonical_id": "supply_chain_invoice_lines_average_quantity_variance_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_invoice_lines_quantity_variance_count",
+        "supply_chain_invoice_lines_count"
+      ],
+      "composition_formula": "{supply_chain_invoice_lines_quantity_variance_count} / {supply_chain_invoice_lines_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoice_lines",
+        "measure": "average_quantity_variance",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity requested per order_fulfillment?",
+      "canonical_id": "supply_chain_order_fulfillment_average_quantity_requested_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_order_fulfillment_quantity_requested_count",
+        "supply_chain_order_fulfillment_count"
+      ],
+      "composition_formula": "{supply_chain_order_fulfillment_quantity_requested_count} / {supply_chain_order_fulfillment_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "order_fulfillment",
+        "measure": "average_quantity_requested",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity fulfilled per order_fulfillment?",
+      "canonical_id": "supply_chain_order_fulfillment_average_quantity_fulfilled_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_order_fulfillment_quantity_fulfilled_count",
+        "supply_chain_order_fulfillment_count"
+      ],
+      "composition_formula": "{supply_chain_order_fulfillment_quantity_fulfilled_count} / {supply_chain_order_fulfillment_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "order_fulfillment",
+        "measure": "average_quantity_fulfilled",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average fulfillment rate per order_fulfillment?",
+      "canonical_id": "supply_chain_order_fulfillment_average_fulfillment_rate_percent",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_order_fulfillment_fulfillment_rate_percent",
+        "supply_chain_order_fulfillment_count"
+      ],
+      "composition_formula": "{supply_chain_order_fulfillment_fulfillment_rate_percent} / {supply_chain_order_fulfillment_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "order_fulfillment",
+        "measure": "average_fulfillment_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average processing time mins per order_fulfillment?",
+      "canonical_id": "supply_chain_order_fulfillment_average_processing_time_mins_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_order_fulfillment_processing_time_mins_count",
+        "supply_chain_order_fulfillment_count"
+      ],
+      "composition_formula": "{supply_chain_order_fulfillment_processing_time_mins_count} / {supply_chain_order_fulfillment_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "order_fulfillment",
+        "measure": "average_processing_time_mins",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average safety stock qty per safety_stock?",
+      "canonical_id": "supply_chain_safety_stock_average_safety_stock_qty_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_safety_stock_safety_stock_qty_count",
+        "supply_chain_safety_stock_count"
+      ],
+      "composition_formula": "{supply_chain_safety_stock_safety_stock_qty_count} / {supply_chain_safety_stock_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "average_safety_stock_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average reorder point qty per safety_stock?",
+      "canonical_id": "supply_chain_safety_stock_average_reorder_point_qty_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_safety_stock_reorder_point_qty_count",
+        "supply_chain_safety_stock_count"
+      ],
+      "composition_formula": "{supply_chain_safety_stock_reorder_point_qty_count} / {supply_chain_safety_stock_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "average_reorder_point_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average max stock qty per safety_stock?",
+      "canonical_id": "supply_chain_safety_stock_average_max_stock_qty_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_safety_stock_max_stock_qty_count",
+        "supply_chain_safety_stock_count"
+      ],
+      "composition_formula": "{supply_chain_safety_stock_max_stock_qty_count} / {supply_chain_safety_stock_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "average_max_stock_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average economic order qty per safety_stock?",
+      "canonical_id": "supply_chain_safety_stock_average_economic_order_qty_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_safety_stock_economic_order_qty_count",
+        "supply_chain_safety_stock_count"
+      ],
+      "composition_formula": "{supply_chain_safety_stock_economic_order_qty_count} / {supply_chain_safety_stock_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "average_economic_order_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average avg daily demand per safety_stock?",
+      "canonical_id": "supply_chain_safety_stock_average_avg_daily_demand_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_safety_stock_avg_daily_demand_count",
+        "supply_chain_safety_stock_count"
+      ],
+      "composition_formula": "{supply_chain_safety_stock_avg_daily_demand_count} / {supply_chain_safety_stock_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "average_avg_daily_demand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average demand variability per safety_stock?",
+      "canonical_id": "supply_chain_safety_stock_average_demand_variability_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_safety_stock_demand_variability_count",
+        "supply_chain_safety_stock_count"
+      ],
+      "composition_formula": "{supply_chain_safety_stock_demand_variability_count} / {supply_chain_safety_stock_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "average_demand_variability",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average quantity lost per shrinkage_events?",
+      "canonical_id": "supply_chain_shrinkage_events_average_quantity_lost_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_shrinkage_events_quantity_lost_count",
+        "supply_chain_shrinkage_events_count"
+      ],
+      "composition_formula": "{supply_chain_shrinkage_events_quantity_lost_count} / {supply_chain_shrinkage_events_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shrinkage_events",
+        "measure": "average_quantity_lost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average unit cost per shrinkage_events?",
+      "canonical_id": "supply_chain_shrinkage_events_average_unit_cost_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_shrinkage_events_unit_cost_currency",
+        "supply_chain_shrinkage_events_count"
+      ],
+      "composition_formula": "{supply_chain_shrinkage_events_unit_cost_currency} / {supply_chain_shrinkage_events_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shrinkage_events",
+        "measure": "average_unit_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average total cost impact per shrinkage_events?",
+      "canonical_id": "supply_chain_shrinkage_events_average_total_cost_impact_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_shrinkage_events_total_cost_impact_currency",
+        "supply_chain_shrinkage_events_count"
+      ],
+      "composition_formula": "{supply_chain_shrinkage_events_total_cost_impact_currency} / {supply_chain_shrinkage_events_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shrinkage_events",
+        "measure": "average_total_cost_impact",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average expected quantity per inbound_delivery_schedule?",
+      "canonical_id": "supply_chain_inbound_delivery_schedule_average_expected_quantity_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_inbound_delivery_schedule_expected_quantity_count",
+        "supply_chain_inbound_delivery_schedule_count"
+      ],
+      "composition_formula": "{supply_chain_inbound_delivery_schedule_expected_quantity_count} / {supply_chain_inbound_delivery_schedule_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inbound_delivery_schedule",
+        "measure": "average_expected_quantity",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average expected pallets per inbound_delivery_schedule?",
+      "canonical_id": "supply_chain_inbound_delivery_schedule_average_expected_pallets_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_inbound_delivery_schedule_expected_pallets_count",
+        "supply_chain_inbound_delivery_schedule_count"
+      ],
+      "composition_formula": "{supply_chain_inbound_delivery_schedule_expected_pallets_count} / {supply_chain_inbound_delivery_schedule_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inbound_delivery_schedule",
+        "measure": "average_expected_pallets",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average days early late per inbound_delivery_schedule?",
+      "canonical_id": "supply_chain_inbound_delivery_schedule_average_days_early_late_days",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "supply_chain_inbound_delivery_schedule_days_early_late_days",
+        "supply_chain_inbound_delivery_schedule_count"
+      ],
+      "composition_formula": "{supply_chain_inbound_delivery_schedule_days_early_late_days} / {supply_chain_inbound_delivery_schedule_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inbound_delivery_schedule",
+        "measure": "average_days_early_late",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    }
+  ]
+}

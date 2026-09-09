@@ -1,0 +1,817 @@
+{
+  "vertical": "supply_chain",
+  "models_used": [
+    "claude"
+  ],
+  "total": 18,
+  "passed": 9,
+  "flagged": 6,
+  "failed": 2,
+  "errors": 1,
+  "results": [
+    {
+      "canonical_id": "supply_chain_buyers_active_po_count_spend_limit_ratio_count",
+      "source_goal": "Which buyers have the highest number of active purchase orders relative to their spend limit and may need reallocation?",
+      "formula_line": "MEASURE_GROUPED('supply_chain_buyers_ERP_dimension', 'SUM', 'active_po_count', group_by_col='category_responsibility', filters=None)",
+      "kind": "operator",
+      "ensemble_verdict": "FAILED",
+      "ensemble_confidence": 0.5,
+      "model_results": {
+        "claude": {
+          "verdict": "INCORRECT",
+          "confidence": 0.5,
+          "checks": {
+            "O1": false,
+            "O2": false,
+            "O3": true,
+            "O4": true,
+            "O5": false,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "The business question asks for a ratio (active PO count relative to spend limit) per individual buyer, but the formula uses SUM grouped by category_responsibility, which aggregates totals by category rather than computing a ratio per buyer.",
+            "O2": "The question requires a ratio of active_po_count to spend_limit per buyer, but the formula only sums active_po_count without incorporating spend_limit, missing the core computation of the stated metric.",
+            "O3": "The atom 'supply_chain_buyers_ERP_dimension' correctly matches the supply_chain domain and buyers entity as described in the business question.",
+            "O4": "The time scope is all_time and the formula correctly uses no time filter operator.",
+            "O5": "The business question asks to identify individual buyers with the highest ratio, but the formula groups by category_responsibility instead of by buyer, which does not answer which buyers need reallocation.",
+            "O6": "The formula produces a SUM of a count column, which yields a count-type unit, consistent with the declared unit of count."
+          },
+          "flags": [
+            "The metric name references a 'ratio' (active_po_count / spend_limit) but the formula computes only SUM(active_po_count) with no division by spend_limit.",
+            "The formula groups by category_responsibility instead of by individual buyer, so it cannot identify which specific buyers need reallocation.",
+            "The spend_limit dimension is entirely absent from the formula despite being central to the business question."
+          ],
+          "reasoning": "The formula fails to compute the ratio defined in the business question (active PO count relative to spend limit) and groups by category rather than individual buyer, making it unable to answer which buyers may need reallocation.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 10357
+        }
+      },
+      "all_flags": [
+        "The metric name references a 'ratio' (active_po_count / spend_limit) but the formula computes only SUM(active_po_count) with no division by spend_limit.",
+        "The formula groups by category_responsibility instead of by individual buyer, so it cannot identify which specific buyers need reallocation.",
+        "The spend_limit dimension is entirely absent from the formula despite being central to the business question."
+      ],
+      "analyzed_at": "2026-08-07T09:40:03Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_invoices_count_disputed_percent",
+      "source_goal": "What is the invoice dispute rate, measured as disputed invoices against total approved invoices?",
+      "formula_line": "RATIO: MEASURE(COUNT_DISTINCT(invoice_id) FROM supply_chain_invoices_ERP_record WHERE invoice_status=Disputed) / MEASURE(COUNT_DISTINCT(invoice_id) FROM supply_chain_invoices_ERP_record WHERE invoice_status=Approved) * 100",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "RATIO with COUNT_DISTINCT in numerator and denominator multiplied by 100 correctly computes a percentage rate of disputed to approved invoices.",
+            "O2": "COUNT_DISTINCT(invoice_id) correctly counts unique invoices in both numerator and denominator.",
+            "O3": "supply_chain_invoices_ERP_record matches the domain (supply_chain) and entity (invoices) specified in the business question.",
+            "O4": "Time scope is all_time, so no time filter is expected and none is present in the formula.",
+            "O5": "The numerator filters invoice_status=Disputed and denominator filters invoice_status=Approved, exactly matching the business question's definition.",
+            "O6": "A ratio of two COUNT_DISTINCT values multiplied by 100 correctly produces a percent unit, matching the declared unit."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly computes the invoice dispute rate as (count of disputed invoices / count of approved invoices) * 100, verified against mock data yielding 33.3333%.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 12403
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T09:40:15Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_invoices_count_under_review_escalation_count",
+      "source_goal": "Which invoices have been under review the longest and should be prioritized for resolution to avoid payment delays?",
+      "formula_line": "MEASURE_GROUPED('supply_chain_invoices_ERP_record', 'COUNT_DISTINCT', 'invoice_id', group_by_col='invoice_status', filters=[{'field': 'invoice_status', 'op': '=', 'value': 'Under Review'}])",
+      "kind": "operator",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.6667,
+      "model_results": {
+        "claude": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.6667,
+          "checks": {
+            "O1": false,
+            "O2": false,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "The business question asks which invoices have been under review the longest (implying a ranking or duration-based measure, e.g. MAX or sorted list by age), but MEASURE_GROUPED with COUNT_DISTINCT just counts how many invoices are under review, not which ones have been waiting the longest.",
+            "O2": "Counting invoice_id via COUNT_DISTINCT tells you how many invoices are under review, but the question requires identifying which specific invoices have been under review the longest — requiring a duration or age column (e.g. review_start_date or days_in_status), not a count of invoice IDs.",
+            "O3": "The atom supply_chain_invoices_ERP_record correctly matches the domain (supply_chain) and entity (invoices) referenced in the business question.",
+            "O4": "The metric is all_time scoped and no time filter operator is applied, which is correct for an all_time scope.",
+            "O5": "The filter on invoice_status = 'Under Review' correctly restricts results to invoices in the Under Review state, matching the stated state filter.",
+            "O6": "COUNT_DISTINCT produces a count unit, which matches the declared unit of count."
+          },
+          "flags": [
+            "The business question asks 'which invoices have been under review the longest' — this requires ranking or sorting by duration/age, not a simple count of invoices under review.",
+            "The formula returns a single aggregated count (3 invoices under review) rather than identifying individual invoices or their review durations for prioritization.",
+            "A more appropriate formula would expose invoice-level data with review start dates or elapsed time to support prioritization, not a grouped count."
+          ],
+          "reasoning": "While the source, time scope, and filter are correct, the formula fundamentally mismatches the business question by counting invoices under review rather than identifying which specific invoices have been waiting the longest for prioritization.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 11611
+        }
+      },
+      "all_flags": [
+        "The business question asks 'which invoices have been under review the longest' — this requires ranking or sorting by duration/age, not a simple count of invoices under review.",
+        "The formula returns a single aggregated count (3 invoices under review) rather than identifying individual invoices or their review durations for prioritization.",
+        "A more appropriate formula would expose invoice-level data with review start dates or elapsed time to support prioritization, not a grouped count."
+      ],
+      "analyzed_at": "2026-08-07T09:40:27Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_invoices_days_to_pay_paid_days",
+      "source_goal": "What is the invoice payment compliance rate, measured as paid invoices against total approved invoices?",
+      "formula_line": "MEASURE('supply_chain_invoices_ERP_record', 'COUNT_DISTINCT', 'invoice_id', [{'field': 'invoice_status', 'op': '=', 'value': 'Paid'}])",
+      "kind": "operator",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.6667,
+      "model_results": {
+        "claude": {
+          "verdict": "INCORRECT",
+          "confidence": 0.6667,
+          "checks": {
+            "O1": false,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": false
+          },
+          "check_reasoning": {
+            "O1": "The business question asks for a compliance rate (paid invoices / total approved invoices), which requires a ratio or two-part calculation, but the formula only counts distinct paid invoices — it does not compute a rate.",
+            "O2": "COUNT_DISTINCT(invoice_id) is the correct column to count unique invoices.",
+            "O3": "supply_chain_invoices_ERP_record matches the domain (supply_chain) and entity (invoices) in the business question.",
+            "O4": "The time scope is all_time, so no time filter is expected and none is present — this is correct.",
+            "O5": "The filter on invoice_status = 'Paid' correctly matches the state filter declared in the metric metadata.",
+            "O6": "The formula produces a count (COUNT_DISTINCT), but the declared unit is 'days', which is a duration — a count of invoices is not days."
+          },
+          "flags": [
+            "The business question asks for a compliance rate (paid vs. total approved), but the formula only counts paid invoices — the denominator (total approved invoices) is entirely missing.",
+            "The declared unit is 'days' and the metric ID references 'days_to_pay', but the formula computes a count of paid invoices, not an average or sum of days — there is a fundamental mismatch between the metric ID, declared unit, and the actual business question.",
+            "The metric appears to conflate two different metrics: a payment compliance rate and an average days-to-pay calculation."
+          ],
+          "reasoning": "The formula fails on multiple dimensions: it computes a simple count of paid invoices rather than a compliance rate (missing the denominator of total approved invoices), and the declared unit of 'days' does not match the COUNT_DISTINCT aggregation output.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 10030
+        }
+      },
+      "all_flags": [
+        "The business question asks for a compliance rate (paid vs. total approved), but the formula only counts paid invoices — the denominator (total approved invoices) is entirely missing.",
+        "The declared unit is 'days' and the metric ID references 'days_to_pay', but the formula computes a count of paid invoices, not an average or sum of days — there is a fundamental mismatch between the metric ID, declared unit, and the actual business question.",
+        "The metric appears to conflate two different metrics: a payment compliance rate and an average days-to-pay calculation."
+      ],
+      "analyzed_at": "2026-08-07T09:40:37Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_invoices_discount_amount_paid_this_quarter_currency",
+      "source_goal": "What is the total discount amount captured on paid invoices this quarter?",
+      "formula_line": "MEASURE_QUARTER_FIXED('supply_chain_invoices_ERP_record', 'invoice_date', 'SUM', 'discount_amount', 'this_quarter', [{'field': 'invoice_status', 'op': '=', 'value': 'Paid'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "SUM is the correct aggregation for computing a total discount amount, matching the 'total discount amount' business question.",
+            "O2": "The formula aggregates 'discount_amount', which is the exact column needed to compute total discount captured on invoices.",
+            "O3": "The atom 'supply_chain_invoices_ERP_record' matches the domain (supply_chain) and entity (invoices) specified in the business question.",
+            "O4": "MEASURE_QUARTER_FIXED is the correct operator for a 'this quarter' time scope.",
+            "O5": "The filter on 'invoice_status' = 'Paid' correctly restricts results to paid invoices as required by the business question.",
+            "O6": "SUM applied to a discount_amount currency column produces a currency result, matching the declared unit of currency."
+          },
+          "flags": [],
+          "reasoning": "All six checks pass: the formula correctly uses SUM on discount_amount from the right supply_chain invoices atom, filtered to Paid invoices for the current quarter, producing a currency result.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 7499
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T09:40:45Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_invoices_gross_amount_under_review_currency",
+      "source_goal": "What is the total gross amount of invoices currently under review?",
+      "formula_line": "MEASURE('supply_chain_invoices_ERP_record', 'SUM', 'gross_amount', [{'field': 'invoice_status', 'op': '=', 'value': 'Under Review'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "SUM is the correct aggregation for computing a total gross amount as asked by the business question.",
+            "O2": "The formula aggregates 'gross_amount', which is the correct column for a total gross invoice amount.",
+            "O3": "The atom 'supply_chain_invoices_ERP_record' matches the domain (supply_chain) and entity (invoices) specified in the business question.",
+            "O4": "The time scope is all_time, so no time filter is expected or present, which is correct.",
+            "O5": "The filter on 'invoice_status' = 'Under Review' correctly matches the state filter specified in the metric definition.",
+            "O6": "SUM applied to a gross_amount (currency) column correctly produces a currency result, matching the declared unit."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly uses SUM on gross_amount from the appropriate supply_chain invoices atom, filtered by invoice_status = 'Under Review' with no time filter required, fully satisfying the business question.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 6514
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T09:40:51Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_invoices_gross_discount_tax_net_composite_currency",
+      "source_goal": "What is the invoice financial summary showing gross amount, discount amount, tax amount, and net amount across all invoices?",
+      "formula_line": "MEASURE('supply_chain_invoices_ERP_record', 'SUM', 'net_amount', None)",
+      "kind": "operator",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.6667,
+      "model_results": {
+        "claude": {
+          "verdict": "INCORRECT",
+          "confidence": 0.6667,
+          "checks": {
+            "O1": false,
+            "O2": false,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "The business question asks for a composite summary of four distinct amounts (gross, discount, tax, and net), but the formula uses a single MEASURE with SUM — it does not produce a multi-field composite output as required.",
+            "O2": "The formula only aggregates 'net_amount', omitting the three other required columns: gross_amount, discount_amount, and tax_amount — making it incomplete for the stated question.",
+            "O3": "The atom 'supply_chain_invoices_ERP_record' correctly matches the domain (supply_chain) and entity (invoices) specified in the business question.",
+            "O4": "The time scope is all_time and no time filter is applied in the formula, which is correct.",
+            "O5": "No grouping or filtering is required by the business question beyond all invoices, and the formula applies none, which is appropriate.",
+            "O6": "SUM on a monetary column (net_amount) correctly produces a currency unit, matching the declared unit of the metric."
+          },
+          "flags": [
+            "The formula returns only SUM(net_amount) but the business question explicitly requires a composite of four figures: gross_amount, discount_amount, tax_amount, and net_amount — three fields are entirely missing.",
+            "A single MEASURE operator cannot represent a composite/multi-field metric; a MEASURE_COMPOSITE or equivalent multi-field construct would be needed."
+          ],
+          "reasoning": "The formula is fundamentally incomplete: it only computes net_amount via a single SUM when the business question demands a four-component financial summary (gross, discount, tax, and net amounts), failing both the aggregation-type and column-selection checks.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 10261
+        }
+      },
+      "all_flags": [
+        "The formula returns only SUM(net_amount) but the business question explicitly requires a composite of four figures: gross_amount, discount_amount, tax_amount, and net_amount — three fields are entirely missing.",
+        "A single MEASURE operator cannot represent a composite/multi-field metric; a MEASURE_COMPOSITE or equivalent multi-field construct would be needed."
+      ],
+      "analyzed_at": "2026-08-07T09:41:01Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_invoices_net_amount_disputed_currency",
+      "source_goal": "What is the total value of disputed invoices currently under review?",
+      "formula_line": "MEASURE('supply_chain_invoices_ERP_record', 'SUM', 'net_amount', [{'field': 'invoice_status', 'op': '=', 'value': 'Under Review'}])",
+      "kind": "operator",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.8333,
+      "model_results": {
+        "claude": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.8333,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": false,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "SUM is correct for computing a total value of invoices.",
+            "O2": "net_amount is the appropriate column for summing invoice values.",
+            "O3": "supply_chain_invoices_ERP_record matches the supply_chain domain and invoices entity from the business question.",
+            "O4": "The time scope is all_time, so no time filter is expected and none is present — correct.",
+            "O5": "The metric's STATE FILTER is 'Disputed' but the formula filters on invoice_status = 'Under Review', creating a mismatch between the declared state filter and the actual filter value applied.",
+            "O6": "SUM applied to a currency column (net_amount) correctly produces a currency result."
+          },
+          "flags": [
+            "STATE FILTER declared as 'Disputed' but formula filters invoice_status = 'Under Review' — these may refer to different statuses and the formula may not correctly capture all disputed invoices, or the metric naming is inconsistent with the filter applied."
+          ],
+          "reasoning": "The formula is structurally sound (correct aggregation, column, source, and time scope) but the filter value 'Under Review' does not match the declared state filter 'Disputed', raising a meaningful discrepancy that warrants human review.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 11769
+        }
+      },
+      "all_flags": [
+        "STATE FILTER declared as 'Disputed' but formula filters invoice_status = 'Under Review' — these may refer to different statuses and the formula may not correctly capture all disputed invoices, or the metric naming is inconsistent with the filter applied."
+      ],
+      "analyzed_at": "2026-08-07T09:41:13Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_invoices_tax_amount_approved_ytd_currency",
+      "source_goal": "What is the total tax amount on approved invoices year to date?",
+      "formula_line": "MEASURE_YTD('supply_chain_invoices_ERP_record', 'invoice_date', 'SUM', 'tax_amount', [{'field': 'invoice_status', 'op': '=', 'value': 'Approved'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "SUM is the correct aggregation for a total tax amount question.",
+            "O2": "The formula aggregates 'tax_amount', which directly corresponds to the tax amount column requested.",
+            "O3": "The atom 'supply_chain_invoices_ERP_record' matches the domain (supply_chain) and entity (invoices) of the business question.",
+            "O4": "MEASURE_YTD is the correct time operator for a year-to-date scope.",
+            "O5": "The filter on invoice_status = 'Approved' correctly matches the state filter specified in the business question.",
+            "O6": "SUM applied to a currency column (tax_amount) correctly produces a currency result; the zero computed value is not an indicator of error."
+          },
+          "flags": [],
+          "reasoning": "All six checks pass: the formula correctly uses SUM on tax_amount from the right atom, filtered to Approved invoices with a YTD time operator, producing a currency result.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 6809
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T09:41:20Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_returns_credit_amount_completed_percent",
+      "source_goal": "What is the return credit recovery rate, measured as total credit amount issued against total return value?",
+      "formula_line": "RATIO: MEASURE(SUM(credit_amount) FROM supply_chain_returns_ERP_record) / MEASURE(SUM(return_value) FROM supply_chain_returns_ERP_record) * 100",
+      "kind": "operator",
+      "ensemble_verdict": "ERROR",
+      "ensemble_confidence": 0.0,
+      "model_results": {
+        "claude": {
+          "verdict": "ERROR",
+          "confidence": 0.0,
+          "checks": {},
+          "check_reasoning": {},
+          "flags": [
+            "Failed to parse model response: Expecting ',' delimiter: line 14 column 217 (char 1317). Raw: Let me analyze this formula carefully.\n\n**Business Question:** Return credit recovery rate = total credit amount issued / total return value × 100 (as percent)\n\n**Formula:** RATIO: MEASURE(SUM(credit_"
+          ],
+          "reasoning": "Analysis failed — see flags.",
+          "error": "Failed to parse model response: Expecting ',' delimiter: line 14 column 217 (char 1317). Raw: Let me analyze this formula carefully.\n\n**Business Question:** Return credit recovery rate = total credit amount issued / total return value × 100 (as percent)\n\n**Formula:** RATIO: MEASURE(SUM(credit_",
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 19266
+        }
+      },
+      "all_flags": [
+        "Failed to parse model response: Expecting ',' delimiter: line 14 column 217 (char 1317). Raw: Let me analyze this formula carefully.\n\n**Business Question:** Return credit recovery rate = total credit amount issued / total return value × 100 (as percent)\n\n**Formula:** RATIO: MEASURE(SUM(credit_"
+      ],
+      "analyzed_at": "2026-08-07T09:41:39Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_returns_credit_amount_completed_this_quarter_currency",
+      "source_goal": "What is the total credit amount issued for completed returns this quarter?",
+      "formula_line": "MEASURE_QUARTER_FIXED('supply_chain_returns_ERP_record', 'return_date', 'SUM', 'credit_amount', 'this_quarter', [{'field': 'return_status', 'op': '=', 'value': 'Completed'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "SUM is correct for computing a total credit amount, matching the 'total credit amount' business question.",
+            "O2": "credit_amount is the correct column to aggregate for a credit amount total.",
+            "O3": "supply_chain_returns_ERP_record matches the domain (supply_chain) and entity (returns) specified in the business question.",
+            "O4": "MEASURE_QUARTER_FIXED with 'this_quarter' is the correct time operator for a quarterly scope.",
+            "O5": "The filter on return_status = 'Completed' correctly matches the state filter requirement of 'Completed' returns.",
+            "O6": "SUM(credit_amount) produces a currency unit, matching the declared unit; a result of 0.0000 does not indicate an error."
+          },
+          "flags": [],
+          "reasoning": "All six checks pass — the formula correctly uses SUM on credit_amount from the right atom, filtered to Completed returns within the current quarter.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 6418
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T09:41:46Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_returns_qty_value_credit_composite_currency",
+      "source_goal": "What is the returns impact summary showing quantity returned, return value, and credit amount across all completed returns?",
+      "formula_line": "MEASURE('supply_chain_returns_ERP_record', 'SUM', 'return_value', [{'field': 'return_status', 'op': '=', 'value': 'Completed'}])",
+      "kind": "operator",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.6667,
+      "model_results": {
+        "claude": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.6667,
+          "checks": {
+            "O1": false,
+            "O2": false,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "The business question asks for a composite summary of quantity returned, return value, AND credit amount, but the formula only computes a single SUM aggregation (return_value), not a composite metric covering all three components.",
+            "O2": "The formula aggregates only 'return_value', but the business question requires three columns: quantity returned, return value, and credit amount — so the column selection is incomplete.",
+            "O3": "The atom 'supply_chain_returns_ERP_record' matches the domain (supply_chain) and entity (returns) in the business question, so the source table is correct.",
+            "O4": "The time scope is all_time and no time filter is applied in the formula, which is correct.",
+            "O5": "The WHERE filter on return_status = 'Completed' correctly matches the state filter specified in the metric definition.",
+            "O6": "SUM on a value column produces a currency result, which matches the declared unit of currency."
+          },
+          "flags": [
+            "The metric is declared as a 'composite' metric covering quantity returned, return value, and credit amount, but the formula only captures return_value via a single SUM — quantity_returned and credit_amount are missing entirely.",
+            "A composite metric of this kind likely requires either multiple MEASURE calls or a MEASURE_GROUPED/operator composition, not a single SUM formula."
+          ],
+          "reasoning": "While the source, filter, time scope, and unit are correct, the formula fundamentally fails to implement the composite nature of the business question by omitting quantity returned and credit amount, making it an incomplete representation of the stated goal.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 10689
+        }
+      },
+      "all_flags": [
+        "The metric is declared as a 'composite' metric covering quantity returned, return value, and credit amount, but the formula only captures return_value via a single SUM — quantity_returned and credit_amount are missing entirely.",
+        "A composite metric of this kind likely requires either multiple MEASURE calls or a MEASURE_GROUPED/operator composition, not a single SUM formula."
+      ],
+      "analyzed_at": "2026-08-07T09:41:56Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_returns_return_value_completed_ytd_currency",
+      "source_goal": "What is the total return value of completed supplier returns year to date?",
+      "formula_line": "MEASURE_YTD('supply_chain_returns_ERP_record', 'return_date', 'SUM', 'return_value', [{'field': 'return_status', 'op': '=', 'value': 'Completed'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "SUM is the correct aggregation for computing a total value, matching the 'total return value' business question.",
+            "O2": "The formula aggregates 'return_value', which is the correct column for computing total return value.",
+            "O3": "The atom 'supply_chain_returns_ERP_record' matches the domain (supply_chain) and entity (returns) from the business question.",
+            "O4": "MEASURE_YTD is the correct time operator for a year-to-date scope.",
+            "O5": "The filter applies return_status = 'Completed', which correctly matches the state filter specified in the business question.",
+            "O6": "SUM applied to a value column (return_value) produces a currency result, matching the declared unit; a zero result is a valid data outcome."
+          },
+          "flags": [],
+          "reasoning": "All six checks pass: the formula correctly uses SUM on return_value from the appropriate supply_chain returns atom, filtered by Completed status over a YTD time scope, producing a currency result.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 6583
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T09:42:03Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_returns_return_value_in_review_currency",
+      "source_goal": "What is the total return value of returns currently in review?",
+      "formula_line": "MEASURE('supply_chain_returns_ERP_record', 'SUM', 'return_value', [{'field': 'return_status', 'op': '=', 'value': 'In Review'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "SUM is the correct aggregation for computing a total monetary value.",
+            "O2": "return_value is the correct column to sum for a return value total.",
+            "O3": "supply_chain_returns_ERP_record matches the domain (supply_chain) and entity (returns) from the business question.",
+            "O4": "The time scope is all_time, so no time filter is expected and none is present.",
+            "O5": "The WHERE filter correctly uses return_status = 'In Review', matching the stated state filter.",
+            "O6": "SUM on a value column produces a currency result, matching the declared unit."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly sums return_value from the appropriate supply_chain returns atom, filtered to 'In Review' status with no time restriction, fully matching the business question.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 5758
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T09:42:09Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_shipments_count_freight_cost_by_state_composite_currency",
+      "source_goal": "What is the shipment status breakdown showing count and freight cost across Pending, In Transit, and Delivered shipments?",
+      "formula_line": "MEASURE_GROUPED('supply_chain_shipments_WMS_record', 'COUNT_DISTINCT', 'shipment_id', group_by_col='shipment_status', filters=None)",
+      "kind": "operator",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.8333,
+      "model_results": {
+        "claude": {
+          "verdict": "INCORRECT",
+          "confidence": 0.8333,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": false
+          },
+          "check_reasoning": {
+            "O1": "MEASURE_GROUPED with COUNT_DISTINCT is correct for a breakdown by shipment_status showing counts of unique shipments.",
+            "O2": "COUNT_DISTINCT on shipment_id is the correct column to count unique shipments.",
+            "O3": "supply_chain_shipments_WMS_record matches the domain (supply_chain) and entity (shipments) from the business question.",
+            "O4": "The time scope is all_time, so no time filter is expected and none is present — correct.",
+            "O5": "GROUP BY shipment_status correctly groups by the status dimension requested (Pending, In Transit, Delivered).",
+            "O6": "The business question asks for both count AND freight cost (a composite currency metric), but the formula only computes COUNT_DISTINCT(shipment_id) — it does not compute any freight cost (currency) aggregation, so the declared unit of 'currency' is not satisfied by this formula alone."
+          },
+          "flags": [
+            "The business question explicitly requests both count and freight cost per shipment status, but the formula only computes COUNT_DISTINCT(shipment_id) — there is no SUM(freight_cost) or equivalent currency aggregation present.",
+            "The metric is declared as a 'composite' with unit 'currency', but the formula returns only counts, making the unit declaration incorrect for the output produced.",
+            "A complete answer requires a second formula (or a combined formula) that also groups freight cost by shipment_status using SUM."
+          ],
+          "reasoning": "While the COUNT_DISTINCT grouping by shipment_status is correct for the count portion, the formula entirely omits the freight cost component that the business question requires, making it an incomplete and unit-mismatched answer for a composite currency metric.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 10000
+        }
+      },
+      "all_flags": [
+        "The business question explicitly requests both count and freight cost per shipment status, but the formula only computes COUNT_DISTINCT(shipment_id) — there is no SUM(freight_cost) or equivalent currency aggregation present.",
+        "The metric is declared as a 'composite' with unit 'currency', but the formula returns only counts, making the unit declaration incorrect for the output produced.",
+        "A complete answer requires a second formula (or a combined formula) that also groups freight cost by shipment_status using SUM."
+      ],
+      "analyzed_at": "2026-08-07T09:42:19Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_shipments_freight_cost_delivered_ytd_currency",
+      "source_goal": "What is the total freight cost for delivered shipments year to date?",
+      "formula_line": "MEASURE_YTD('supply_chain_shipments_WMS_record', 'actual_arrival_date', 'SUM', 'freight_cost', [{'field': 'shipment_status', 'op': '=', 'value': 'Delivered'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "SUM is the correct aggregation for a total freight cost question.",
+            "O2": "The formula aggregates 'freight_cost', which is the correct column for a freight cost total.",
+            "O3": "The atom 'supply_chain_shipments_WMS_record' matches the domain (supply_chain) and entity (shipments) of the business question.",
+            "O4": "MEASURE_YTD is the correct time operator for a year-to-date scope.",
+            "O5": "The filter on shipment_status = 'Delivered' correctly matches the state filter specified in the business question.",
+            "O6": "SUM applied to a freight_cost column produces a currency result, matching the declared unit."
+          },
+          "flags": [],
+          "reasoning": "All six checks pass; the formula correctly computes the total freight cost for delivered shipments year-to-date using the appropriate aggregation, column, source atom, time operator, and filter.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 5461
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T09:42:24Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_shipments_freight_cost_in_transit_currency",
+      "source_goal": "What is the total freight cost for shipments currently in transit?",
+      "formula_line": "MEASURE('supply_chain_shipments_WMS_record', 'SUM', 'freight_cost', [{'field': 'shipment_status', 'op': '=', 'value': 'In Transit'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "SUM is the correct aggregation for computing a total freight cost (a monetary value).",
+            "O2": "The formula aggregates 'freight_cost', which is the correct column for a freight cost total.",
+            "O3": "The atom 'supply_chain_shipments_WMS_record' matches the domain (supply_chain) and entity (shipments) of the business question.",
+            "O4": "The time scope is all_time, so no time filter is expected, and none is applied — correct.",
+            "O5": "The WHERE filter on shipment_status = 'In Transit' correctly matches the state filter specified in the business question.",
+            "O6": "SUM applied to a freight_cost column produces a currency unit, matching the declared unit of the metric."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly uses SUM on freight_cost from the appropriate supply_chain shipments atom, filtered to 'In Transit' status with no time filter, fully matching the business question.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 9092
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T09:42:33Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_warehouses_total_capacity_units_utilization_highest_count",
+      "source_goal": "Which warehouses are closest to full capacity and should be flagged for stock redistribution?",
+      "formula_line": "MEASURE_GROUPED('supply_chain_warehouses_WMS_dimension', 'SUM', 'total_capacity_units', group_by_col='warehouse_type', filters=None)",
+      "kind": "operator",
+      "ensemble_verdict": "FAILED",
+      "ensemble_confidence": 0.5,
+      "model_results": {
+        "claude": {
+          "verdict": "INCORRECT",
+          "confidence": 0.5,
+          "checks": {
+            "O1": false,
+            "O2": false,
+            "O3": true,
+            "O4": true,
+            "O5": false,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "The business question asks which warehouses are closest to full capacity (implying a utilization ratio or ranking), but the formula uses SUM of total_capacity_units grouped by warehouse_type — this does not identify which individual warehouses are nearest to capacity.",
+            "O2": "To determine warehouses closest to full capacity, the formula needs current stock/occupancy relative to total capacity (a utilization ratio), not merely the SUM of total_capacity_units which only shows raw capacity totals with no occupancy data.",
+            "O3": "The atom 'supply_chain_warehouses_WMS_dimension' correctly matches the supply_chain domain and warehouses entity.",
+            "O4": "The time scope is all_time and no time filter is applied, which is correct.",
+            "O5": "The business question asks to identify individual warehouses closest to capacity, but the formula groups by 'warehouse_type' rather than by individual warehouse identifier, making it impossible to flag specific warehouses for redistribution.",
+            "O6": "SUM of a units column correctly produces a count/units value, which is consistent with the declared unit of 'count'."
+          },
+          "flags": [
+            "Formula groups by warehouse_type instead of individual warehouse, losing the ability to identify specific warehouses for redistribution.",
+            "Formula only sums total_capacity_units but does not incorporate current occupancy/stock levels, so utilization (capacity used vs. capacity available) cannot be computed.",
+            "Metric name includes 'utilization_highest' suggesting a ranking or ratio, but the formula produces raw capacity sums with no utilization calculation."
+          ],
+          "reasoning": "The formula fails to answer the business question because it aggregates total capacity by warehouse type rather than computing a utilization ratio per individual warehouse, making it impossible to identify which specific warehouses are closest to full capacity and should be flagged for redistribution.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 10559
+        }
+      },
+      "all_flags": [
+        "Formula groups by warehouse_type instead of individual warehouse, losing the ability to identify specific warehouses for redistribution.",
+        "Formula only sums total_capacity_units but does not incorporate current occupancy/stock levels, so utilization (capacity used vs. capacity available) cannot be computed.",
+        "Metric name includes 'utilization_highest' suggesting a ranking or ratio, but the formula produces raw capacity sums with no utilization calculation."
+      ],
+      "analyzed_at": "2026-08-07T09:42:44Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    }
+  ],
+  "error_details": [],
+  "run_at": "2026-08-07T09:42:44Z"
+}

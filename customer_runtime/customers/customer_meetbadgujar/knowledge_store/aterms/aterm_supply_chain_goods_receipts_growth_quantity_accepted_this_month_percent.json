@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_goods_receipts_growth_quantity_accepted_this_month_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_goods_receipts_growth_quantity_accepted_this_month_percent",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "goods_receipts",
+    "measure": "growth_quantity_accepted",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 13.838936669272869,
+  "formula_line": "supply_chain_goods_receipts_growth_quantity_accepted_this_month_percent = (({supply_chain_goods_receipts_quantity_accepted_this_month_count} - {supply_chain_goods_receipts_quantity_accepted_last_month_count}) / abs({supply_chain_goods_receipts_quantity_accepted_last_month_count}) * 100) if {supply_chain_goods_receipts_quantity_accepted_last_month_count} != 0 else 0",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-09-01T07:54:53Z",
+  "usage_count": 0,
+  "source_goal": "What is the month over month growth in quantity accepted for goods_receiptss?",
+  "wave": 6,
+  "depends_on": [
+    "supply_chain_goods_receipts_quantity_accepted_this_month_count",
+    "supply_chain_goods_receipts_quantity_accepted_last_month_count"
+  ],
+  "dep_values": {
+    "supply_chain_goods_receipts_quantity_accepted_this_month_count": 7280.0,
+    "supply_chain_goods_receipts_quantity_accepted_last_month_count": 6395.0
+  },
+  "verified_at": "2026-09-02T06:49:07Z"
+}

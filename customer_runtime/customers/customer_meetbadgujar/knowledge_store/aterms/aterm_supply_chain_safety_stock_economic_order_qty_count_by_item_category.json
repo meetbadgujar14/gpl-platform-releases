@@ -1,0 +1,40 @@
+{
+  "id": "aterm:supply_chain_safety_stock_economic_order_qty_count_by_item_category",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_safety_stock_economic_order_qty_count_by_item_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "safety_stock",
+    "measure": "economic_order_qty",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_item_category"
+  },
+  "oracle_value": {
+    "Automation Hardware": 75.0,
+    "Bearings": 1750.0,
+    "Electrical Components": 190.0,
+    "Fasteners": 8500.0,
+    "Filtration": 380.0,
+    "Fluid Power Components": 2100.0,
+    "Lubricants": 660.0,
+    "Packaging Materials": 17700.0,
+    "Pneumatic Components": 230.0,
+    "Seals & Gaskets": 960.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_safety_stock_ERP_snapshot', 'SUM', 'economic_order_qty', 'item_category', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "What is the total economic order qty of safety_stocks by item category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:07Z"
+}

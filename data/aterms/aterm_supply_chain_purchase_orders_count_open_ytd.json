@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_purchase_orders_count_open_ytd",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_purchase_orders_count_open_ytd",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "purchase_orders",
+    "measure": "count",
+    "state": "Open",
+    "scope": "total",
+    "time": "ytd",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_YTD(COUNT_DISTINCT(po_id) FROM supply_chain_purchase_orders_ERP_record WHERE po_date BETWEEN 2026-01-01 AND 2026-07-22 WHERE po_status=Open)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-07-22T12:17:44Z",
+  "usage_count": 0,
+  "source_goal": "How many Open purchase_orderss are there ytd?",
+  "wave": 3,
+  "operator": "MEASURE_YTD",
+  "verified_at": "2026-07-22T12:18:47Z"
+}

@@ -1,0 +1,6 @@
+location_id,warehouse_id,warehouse_name,zone,aisle,bin,location_type,country,capacity_units,is_active,created_date
+LOC-38421,WH-5537,Pacific Rim Logistics Center,Zone-A,A-12,B-004,Bulk Storage,USA,480,True,2023-03-15
+LOC-71093,WH-5537,Meridian Distribution Hub,Zone-C,C-07,B-011,Pick Face,Canada,120,True,2022-11-28
+LOC-54867,WH-5537,Northgate Supply Depot,Zone-B,B-03,B-022,Overstock,USA,960,False,2023-07-02
+LOC-29384,WH-5537,Suncoast Fulfillment Center,Zone-D,D-15,B-007,Cold Storage,USA,300,True,2024-01-10
+LOC-66712,WH-5537,Ironbridge Logistics Park,Zone-A,A-08,B-019,Receiving,UK,200,True,2023-09-21

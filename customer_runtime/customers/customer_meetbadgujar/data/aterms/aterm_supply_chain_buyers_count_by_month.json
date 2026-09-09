@@ -1,0 +1,43 @@
+{
+  "id": "aterm:supply_chain_buyers_count_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_buyers_count_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "buyers",
+    "measure": "count",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2024-10": 1.0,
+    "2025-02": 1.0,
+    "2025-05": 1.0,
+    "2025-08": 1.0,
+    "2025-11": 1.0,
+    "2026-01": 1.0,
+    "2026-02": 1.0,
+    "2026-03": 1.0,
+    "2026-04": 1.0,
+    "2026-05": 1.0,
+    "2026-06": 1.0,
+    "2026-07": 1.0,
+    "2026-09": 3.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_buyers_ERP_dimension', 'COUNT_DISTINCT', 'buyer_id', None, [], None, None, None, {'date_col': 'hire_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "How many buyerss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:07Z"
+}

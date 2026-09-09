@@ -1,0 +1,43 @@
+{
+  "id": "aterm:supply_chain_inventory_transactions_quantity_before_by_item_subcategory_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_transactions_quantity_before_by_item_subcategory_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_transactions",
+    "measure": "quantity_before",
+    "state": "all",
+    "scope": "by_item_subcategory",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Circuit Protection": 1345.0,
+    "Conduit & Fittings": 370.0,
+    "Drive Belts": 40.0,
+    "Filtration": 780.0,
+    "Gate Valves": 95.0,
+    "Hand Tools": 1045.0,
+    "Head Protection": 250.0,
+    "Hex Bolts": 162.0,
+    "Industrial Drums": 200.0,
+    "Machine Oils": 700.0,
+    "Solvents & Cleaners": 1573.0,
+    "Stretch Film": 345.0,
+    "Wiring & Cable": 310.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(quantity_before) FROM supply_chain_inventory_transactions_WMS_event JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY item_subcategory)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quantity before of inventory_transactionss by item subcategory?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

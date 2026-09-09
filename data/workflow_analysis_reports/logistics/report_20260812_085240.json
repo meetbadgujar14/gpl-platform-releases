@@ -1,0 +1,141 @@
+{
+  "vertical": "logistics",
+  "models_used": [
+    "gpt4o"
+  ],
+  "total": 3,
+  "passed": 2,
+  "flagged": 1,
+  "failed": 0,
+  "errors": 0,
+  "results": [
+    {
+      "canonical_id": "logistics_cargo_items_growth_quantity_this_month_percent",
+      "source_goal": "What is the month over month growth in quantity for cargo_itemss?",
+      "formula_line": "logistics_cargo_items_growth_quantity_this_month_percent = (({logistics_cargo_items_quantity_this_month_count} - {logistics_cargo_items_quantity_last_month_count}) / abs({logistics_cargo_items_quantity_last_month_count}) * 100) if {logistics_cargo_items_quantity_last_month_count} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses subtraction and division to calculate growth rate, which matches the business question.",
+            "C2": "The dependencies correctly calculate the total quantity for this month and last month.",
+            "C3": "The dependencies have time scopes of this month and last month, aligning with the metric's time scope.",
+            "C4": "The metric does not have a state filter, and neither do the dependencies.",
+            "C5": "The formula handles division-by-zero by returning 0 if the denominator is zero.",
+            "C6": "The operation results in a percentage, which matches the declared unit."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly calculates month-over-month growth in quantity for cargo_items, using appropriate dependencies and ensuring division-by-zero is handled.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 11181
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T08:52:33Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_carriers_growth_contract_rate_per_km_this_month_percent",
+      "source_goal": "What is the month over month growth in contract rate per km for carrierss?",
+      "formula_line": "logistics_carriers_growth_contract_rate_per_km_this_month_percent = (({logistics_carriers_contract_rate_per_km_this_month_percent} - {logistics_carriers_contract_rate_per_km_last_month_percent}) / abs({logistics_carriers_contract_rate_per_km_last_month_percent}) * 100) if {logistics_carriers_contract_rate_per_km_last_month_percent} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula calculates growth rate using subtraction and division, matching the business question.",
+            "C2": "The dependency metrics correctly provide the contract rate per km for this month and last month.",
+            "C3": "The dependencies' time scopes (this month and last month) align with the metric's time scope of this month.",
+            "C4": "There are no state filters, and the dependencies also have no state filters, which is consistent.",
+            "C5": "Division by zero is handled with a guard clause in the formula.",
+            "C6": "The result unit is percent, which matches the growth percentage calculation performed."
+          },
+          "flags": [],
+          "reasoning": "The formula accurately answers the business question with all criteria satisfied and correct handling of potential errors.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 4047
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T08:52:37Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_drivers_average_total_trips_completed_currency",
+      "source_goal": "What is the average total trips completed per drivers?",
+      "formula_line": "logistics_drivers_average_total_trips_completed_currency = {logistics_drivers_total_trips_completed_currency} / {logistics_drivers_count}",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.6667,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.6667,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": false
+          },
+          "check_reasoning": {
+            "C1": "The formula uses division, which corresponds to calculating an average.",
+            "C2": "The dependencies used are the total trips completed and the count of drivers, which are correct for calculating an average.",
+            "C3": "The dependencies and the composed metric share the same 'all_time' time scope.",
+            "C4": "Both the composed metric and its dependencies have no state filters.",
+            "C5": "There is no guard clause to handle division by zero if 'logistics_drivers_count' is zero.",
+            "C6": "The result unit of 'currency' is incorrect for this operation; it should be 'trips per driver'."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly applies mathematical averaging but lacks a guard for division by zero and uses an incorrect unit.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 3213
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T08:52:40Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    }
+  ],
+  "error_details": [],
+  "run_at": "2026-08-12T08:52:40Z"
+}

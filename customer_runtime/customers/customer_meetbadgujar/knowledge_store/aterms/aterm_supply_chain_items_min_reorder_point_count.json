@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_items_min_reorder_point_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_items_min_reorder_point_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "items",
+    "measure": "min_reorder_point",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 10.0,
+  "formula_line": "MEASURE('supply_chain_items_ERP_dimension', 'MIN', 'reorder_point', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:37Z",
+  "usage_count": 0,
+  "source_goal": "What is the min reorder point across all itemss?",
+  "wave": 2,
+  "operator": "MEASURE",
+  "verified_at": "2026-09-02T06:49:03Z"
+}

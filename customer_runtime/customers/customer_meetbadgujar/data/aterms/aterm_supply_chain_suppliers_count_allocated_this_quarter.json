@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_suppliers_count_allocated_this_quarter",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_count_allocated_this_quarter",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "count",
+    "state": "allocated",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_QUARTER_FIXED('supply_chain_suppliers_ERP_dimension', 'onboarded_date', 'COUNT_DISTINCT', 'supplier_id', 'this_quarter', [{'field': 'status', 'op': '=', 'value': 'allocated'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-09-01T10:57:10Z",
+  "usage_count": 0,
+  "source_goal": "How many allocated supplierss are there this quarter?",
+  "wave": 3,
+  "operator": "MEASURE_QUARTER_FIXED",
+  "verified_at": "2026-09-02T06:49:08Z"
+}

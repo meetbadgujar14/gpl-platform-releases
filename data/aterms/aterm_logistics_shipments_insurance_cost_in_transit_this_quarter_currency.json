@@ -1,0 +1,31 @@
+{
+  "id": "aterm:logistics_shipments_insurance_cost_in_transit_this_quarter_currency",
+  "type": "Aterm",
+  "canonical_id": "logistics_shipments_insurance_cost_in_transit_this_quarter_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "shipments",
+    "measure": "insurance_cost",
+    "state": "In Transit",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_QUARTER_FIXED('logistics_shipments_ERP_record', 'booked_date', 'SUM', 'insurance_cost', 'this_quarter', [{'field': 'shipment_status', 'op': '=', 'value': 'In Transit'}])",
+  "exec_formula": "MEASURE_QUARTER_FIXED('logistics_shipments_ERP_record', 'booked_date', 'SUM', 'insurance_cost', 'this_quarter', [{'field': 'shipment_status', 'op': '=', 'value': 'In Transit'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_wizard_execution",
+  "created_at": "2026-08-10T06:51:38Z",
+  "usage_count": 0,
+  "source_goal": "What is the total insurance cost carried by shipments currently in transit — representing active financial risk exposure in the network?",
+  "wave": "B",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_QUARTER_FIXED steps=7",
+  "wizard_steps": 7
+}

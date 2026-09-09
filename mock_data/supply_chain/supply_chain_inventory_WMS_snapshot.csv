@@ -1,0 +1,32 @@
+inventory_id,product_id,product_name,category,warehouse_id,current_stock,reorder_level,maximum_stock,unit_cost,supplier_id
+INV-7342,PRD-4821,Industrial Hydraulic Pump,Machinery Components,WH-2914,148,50,400,312.75,SUP-6183
+INV-5519,PRD-3307,Nitrile Safety Gloves (Box of 100),Personal Protective Equipment,WH-1047,2340,500,5000,18.4,SUP-2291
+INV-8803,PRD-9154,Stainless Steel Bolts M12 (Pack of 50),Fasteners & Hardware,WH-3856,7800,2000,20000,4.95,SUP-4478
+INV-3361,PRD-6620,HDPE Storage Drum 55 Gallon,Containers & Packaging,WH-2914,312,80,600,67.2,SUP-8834
+INV-1092,PRD-2045,Electric Pallet Jack 3000lb,Material Handling Equipment,WH-5501,14,5,30,4850.0,SUP-1127
+INV-6748,PRD-8813,Corrugated Cardboard Boxes 12x12x12,Containers & Packaging,WH-1047,15600,3000,30000,1.35,SUP-8834
+INV-4427,PRD-5539,Industrial Lubricant Oil 5L,Chemicals & Lubricants,WH-3856,890,200,2000,28.6,SUP-3362
+INV-9916,PRD-7708,Safety Helmet Class E,Personal Protective Equipment,WH-5501,430,100,800,22.9,SUP-2291
+INV-2583,PRD-1196,Conveyor Belt Rubber 10m,Machinery Components,WH-2914,67,20,150,189.5,SUP-6183
+INV-7105,PRD-4402,Stretch Wrap Film 18in x 1500ft,Containers & Packaging,WH-1047,3200,600,8000,9.75,SUP-8834
+INV-5284,PRD-3891,Forklift Propane Tank 33lb,Chemicals & Lubricants,WH-3856,55,15,120,48.0,SUP-3362
+INV-8471,PRD-6217,Steel Shelving Unit 5-Tier,Storage & Shelving,WH-5501,82,20,200,135.0,SUP-7756
+INV-3948,PRD-9930,Barcode Scanner Handheld Wireless,Warehouse Technology,WH-2914,37,10,80,275.0,SUP-5549
+INV-6023,PRD-2784,High-Visibility Vest ANSI Class 2,Personal Protective Equipment,WH-1047,1150,300,3000,11.25,SUP-2291
+INV-1874,PRD-7361,Pneumatic Air Compressor 60 Gal,Machinery Components,WH-3856,9,3,25,1240.0,SUP-6183
+INV-4619,PRD-5007,Pallet Wood Standard 48x40,Material Handling Equipment,WH-5501,4800,1000,10000,12.8,SUP-1127
+INV-7893,PRD-8456,Label Printer Thermal Direct,Warehouse Technology,WH-2914,22,5,50,390.0,SUP-5549
+INV-2156,PRD-3128,Bubble Wrap Roll 24in x 250ft,Containers & Packaging,WH-1047,680,150,2000,32.5,SUP-8834
+INV-9347,PRD-6885,Heavy Duty Zip Ties 100-Pack,Fasteners & Hardware,WH-3856,5400,1000,15000,3.2,SUP-4478
+INV-5762,PRD-1573,Wire Mesh Bin 24x18x12,Storage & Shelving,WH-5501,145,30,350,42.0,SUP-7756
+INV-3085,PRD-4699,Solvent Cleaner Industrial 1 Gal,Chemicals & Lubricants,WH-2914,320,75,800,21.4,SUP-3362
+INV-8239,PRD-9271,RFID Inventory Tag 100-Pack,Warehouse Technology,WH-1047,1800,400,5000,0.85,SUP-5549
+INV-4503,PRD-2340,Steel Toe Boot Size 10,Personal Protective Equipment,WH-3856,74,20,200,89.95,SUP-2291
+INV-6987,PRD-7024,Hand Truck Aluminum 600lb,Material Handling Equipment,WH-5501,38,10,80,118.0,SUP-1127
+INV-1648,PRD-5863,Anchor Bolt 3/4in x 5in Pack 25,Fasteners & Hardware,WH-2914,2900,500,8000,6.1,SUP-4478
+INV-3714,PRD-8187,Modular Plastic Bin 14x8x7,Storage & Shelving,WH-1047,560,100,1500,7.6,SUP-7756
+INV-9062,PRD-3556,Hydraulic Cylinder Seal Kit,Machinery Components,WH-3856,193,40,500,54.75,SUP-6183
+INV-7421,PRD-6449,Hazmat Storage Cabinet 30 Gal,Storage & Shelving,WH-5501,11,3,30,620.0,SUP-7756
+INV-2847,PRD-1038,Polyethylene Shrink Wrap Bag 12x18,Containers & Packaging,WH-2914,9200,2000,25000,0.48,SUP-8834
+INV-5138,PRD-4115,Anti-Static Wrist Strap,Warehouse Technology,WH-1047,270,50,600,5.3,SUP-5549
+INV-8695,PRD-7792,Chemical Resistant Apron,Personal Protective Equipment,WH-3856,185,40,400,16.8,SUP-2291

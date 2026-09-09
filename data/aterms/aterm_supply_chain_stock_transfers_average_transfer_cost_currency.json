@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_stock_transfers_average_transfer_cost_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_stock_transfers_average_transfer_cost_currency",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "stock_transfers",
+    "measure": "average_transfer_cost",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 2047.83,
+  "formula_line": "supply_chain_stock_transfers_average_transfer_cost_currency = {supply_chain_stock_transfers_transfer_cost_currency} / {supply_chain_stock_transfers_count}",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-07-22T12:17:51Z",
+  "usage_count": 0,
+  "source_goal": "What is the average transfer cost per stock_transfers?",
+  "wave": 5,
+  "depends_on": [
+    "supply_chain_stock_transfers_transfer_cost_currency",
+    "supply_chain_stock_transfers_count"
+  ],
+  "dep_values": {
+    "supply_chain_stock_transfers_transfer_cost_currency": 51195.75,
+    "supply_chain_stock_transfers_count": 25.0
+  },
+  "verified_at": "2026-07-22T12:18:52Z"
+}

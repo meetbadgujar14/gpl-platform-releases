@@ -1,0 +1,349 @@
+{
+  "wave": "B",
+  "goal_count": 18,
+  "generated_at": "2026-09-02T06:44:34Z",
+  "goals": [
+    {
+      "goal": "What is the total value of invoices currently in Disputed state this quarter?",
+      "canonical_id": "supply_chain_invoices_net_amount_disputed_this_quarter_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "net_amount",
+        "state": "Disputed",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total value of invoices that remain Pending payment this quarter?",
+      "canonical_id": "supply_chain_invoices_net_amount_pending_this_quarter_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "net_amount",
+        "state": "Pending",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total gross profit generated year to date?",
+      "canonical_id": "supply_chain_financials_gross_profit_all_ytd_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "gross_profit",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total operating profit year to date?",
+      "canonical_id": "supply_chain_financials_operating_profit_all_ytd_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "operating_profit",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total cost of goods sold year to date?",
+      "canonical_id": "supply_chain_financials_cost_of_goods_sold_all_ytd_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "cost_of_goods_sold",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the gross profit margin this quarter?",
+      "canonical_id": "supply_chain_financials_gross_profit_margin_all_this_quarter_percent",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "gross_profit_margin",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the net profit margin year to date?",
+      "canonical_id": "supply_chain_financials_net_profit_margin_all_ytd_percent",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "net_profit_margin",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total value of completed returns and associated credits year to date?",
+      "canonical_id": "supply_chain_returns_return_value_completed_ytd_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "return_value",
+        "state": "Completed",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total credit amount issued for completed returns year to date?",
+      "canonical_id": "supply_chain_returns_credit_amount_completed_ytd_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "credit_amount",
+        "state": "Completed",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total revenue generated year to date?",
+      "canonical_id": "supply_chain_financials_revenue_all_ytd_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "revenue",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "How does gross profit margin trend month by month this year?",
+      "canonical_id": "supply_chain_financials_gross_profit_margin_all_ytd_percent_by_month_percent",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "gross_profit_margin",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "percent",
+        "series": "by_month"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total tax amount on paid invoices year to date?",
+      "canonical_id": "supply_chain_invoices_tax_amount_paid_ytd_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "tax_amount",
+        "state": "Paid",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total discount amount captured on paid invoices year to date?",
+      "canonical_id": "supply_chain_invoices_discount_amount_paid_ytd_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "discount_amount",
+        "state": "Paid",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total freight cost incurred on delivered shipments year to date?",
+      "canonical_id": "supply_chain_shipments_freight_cost_delivered_ytd_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipments",
+        "measure": "freight_cost",
+        "state": "delivered",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total freight cost of shipments currently in transit representing outstanding logistics spend?",
+      "canonical_id": "supply_chain_shipments_freight_cost_in_transit_this_quarter_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipments",
+        "measure": "freight_cost",
+        "state": "in_transit",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total operating expenses recorded year to date?",
+      "canonical_id": "supply_chain_financials_operating_expenses_all_ytd_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "operating_expenses",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total net profit year to date?",
+      "canonical_id": "supply_chain_financials_net_profit_all_ytd_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "net_profit",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total gross amount of invoices approved for payment this quarter?",
+      "canonical_id": "supply_chain_invoices_gross_amount_approved_this_quarter_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "gross_amount",
+        "state": "Approved",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    }
+  ]
+}

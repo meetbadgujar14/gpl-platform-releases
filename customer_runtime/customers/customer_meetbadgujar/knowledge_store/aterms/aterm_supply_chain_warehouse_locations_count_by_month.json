@@ -1,0 +1,35 @@
+{
+  "id": "aterm:supply_chain_warehouse_locations_count_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_warehouse_locations_count_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "warehouse_locations",
+    "measure": "count",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2025-04": 1.0,
+    "2026-01": 1.0,
+    "2026-03": 1.0,
+    "2026-07": 1.0,
+    "2026-09": 1.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_warehouse_locations_WMS_dimension', 'COUNT_DISTINCT', 'location_id', None, [], None, None, None, {'date_col': 'created_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "How many warehouse_locationss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

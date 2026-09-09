@@ -1,0 +1,200 @@
+{
+  "supply_chain_buyers_ERP_dimension": {
+    "sha256": "4c26780fb48ea2203544474d7d638b120cdb79ad8109679be089a9fce9134b6b",
+    "vertical": "supply_chain",
+    "row_count": 15,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_carriers_WMS_dimension": {
+    "sha256": "e0b13e8f25e7eaf117aec963d86e94576292ff50fe4320ea8477551af94936d2",
+    "vertical": "supply_chain",
+    "row_count": 10,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_cost_centers_ERP_dimension": {
+    "sha256": "e21a45884cfcb06d93b593d3c73e433c2106f16561b0d78c899396e7b9e33176",
+    "vertical": "supply_chain",
+    "row_count": 10,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_items_ERP_dimension": {
+    "sha256": "8ae56922f93cf259a1a288f7cdcfe30e58115a15c586d5342114c4b05e50516e",
+    "vertical": "supply_chain",
+    "row_count": 20,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_suppliers_ERP_dimension": {
+    "sha256": "efd27337f71fa8d5a8c7c2df88f1856663cb64379b2937914dc657d3fff7f1c8",
+    "vertical": "supply_chain",
+    "row_count": 15,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_supplier_items_ERP_dimension": {
+    "sha256": "082ab5c4bc5f389a81f130545ca85980f2623923b7bcba7f98eba4191cbaa3d0",
+    "vertical": "supply_chain",
+    "row_count": 15,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_warehouses_WMS_dimension": {
+    "sha256": "22a1cf8a1f4f31f0c6c7f67810f8ac257b0b5f1d707135aa40c921ab2e7bc9fd",
+    "vertical": "supply_chain",
+    "row_count": 5,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_warehouse_locations_WMS_dimension": {
+    "sha256": "fbf01c3479ff3cffa430d1abda8d79331ac2497813b63942ad4538404348f459",
+    "vertical": "supply_chain",
+    "row_count": 5,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_carrier_performance_WMS_snapshot": {
+    "sha256": "d885cd36ba1025fb1dff75289fcf4dc753d19dc4933d0e94bc73f0e8966ff8bd",
+    "vertical": "supply_chain",
+    "row_count": 25,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_demand_forecasts_ERP_snapshot": {
+    "sha256": "b501f61d7d43862fb617374b120e0e8fae3edc17ea57cebd181490c6428b7ec4",
+    "vertical": "supply_chain",
+    "row_count": 20,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_inventory_aging_WMS_snapshot": {
+    "sha256": "a9246e215bdcda78d602c8d3133f1ca48e06f8d867ea2ff23a732c76f9b4d9e5",
+    "vertical": "supply_chain",
+    "row_count": 23,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_inventory_levels_WMS_state": {
+    "sha256": "f509f8aef91e82d621c3e10f2a9f980391603e6e3bcb50fdc406880a0aebe3b1",
+    "vertical": "supply_chain",
+    "row_count": 28,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_inventory_transactions_WMS_event": {
+    "sha256": "86ffe0e20d269f8193e59b919002f7b89c2b6cdcc2c37537939e53fb71a2409e",
+    "vertical": "supply_chain",
+    "row_count": 23,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_lead_times_ERP_snapshot": {
+    "sha256": "fb695ad4c4119e6df6d5a56610f5ac5b8806f9080d6246c1d0ae165bbd865efd",
+    "vertical": "supply_chain",
+    "row_count": 15,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_order_fulfillment_WMS_event": {
+    "sha256": "231dfa86c5cb8a3df8c2f68121ce63726d3d8535bbcdf94001660e7eab9ca5ed",
+    "vertical": "supply_chain",
+    "row_count": 25,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_purchase_orders_ERP_record": {
+    "sha256": "1d5a84d4902c0f3b4a3ae414b944e34a300cbda95526ce49b0fb233e594b0dbf",
+    "vertical": "supply_chain",
+    "row_count": 28,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_inbound_delivery_schedule_ERP_record": {
+    "sha256": "cfb5b9f67dcfafea70434791733d362f2a83de8a59e77159b1d4afb8bb040de2",
+    "vertical": "supply_chain",
+    "row_count": 23,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_invoices_ERP_record": {
+    "sha256": "cceddc732b416aac38cbb955c3503b5f63f63760930fc93517968556a9d6d1ab",
+    "vertical": "supply_chain",
+    "row_count": 22,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_procurement_spend_ERP_record": {
+    "sha256": "895a27e17620976c6fec36b1f7e15a0516e794ce9b3ee8fc2fd5414d10937de5",
+    "vertical": "supply_chain",
+    "row_count": 28,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_purchase_order_lines_ERP_record": {
+    "sha256": "14c97d92748061da0fca934b9f25be60e0736e76dc0b31313ee46a597f8fcebd",
+    "vertical": "supply_chain",
+    "row_count": 28,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_invoice_lines_ERP_record": {
+    "sha256": "9f1c7461145f8cb24554c3e7827f0405bd7fb0c8147a20c0a20ee9ef0951c65b",
+    "vertical": "supply_chain",
+    "row_count": 23,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_purchase_requisitions_ERP_record": {
+    "sha256": "a83ec17a0891199dd0c10f7374d9d3208939862f873c47027792327f59559b31",
+    "vertical": "supply_chain",
+    "row_count": 25,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_reorder_proposals_ERP_record": {
+    "sha256": "783597a248f2fd6f9eab0e112a6fb5f4067cbc8c06ce7f40da886b417277a3b1",
+    "vertical": "supply_chain",
+    "row_count": 23,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_safety_stock_ERP_snapshot": {
+    "sha256": "082be6e4aee5c67bcd41dac82f711cdb1dd5f475a215c408ec2db744f27ca9cf",
+    "vertical": "supply_chain",
+    "row_count": 20,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_shipments_WMS_record": {
+    "sha256": "d3061edbd75985e4d6a9419bea0005cd00112e35811f4e2f5d0dfc914cb4652c",
+    "vertical": "supply_chain",
+    "row_count": 25,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_goods_receipts_ERP_record": {
+    "sha256": "05f294200ec89c156fe9fe131eed170acd8bf253c27c6d120f00219753745dd9",
+    "vertical": "supply_chain",
+    "row_count": 28,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_quality_inspections_ERP_record": {
+    "sha256": "967d84f7a85179eea4a929e8a4c38e6f1142d3308182be74ca74932e0faedaa8",
+    "vertical": "supply_chain",
+    "row_count": 25,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_returns_ERP_record": {
+    "sha256": "6090b34bf9451d53fbf4ee05cc209e9fd08122ea9a2c49e3fd2f86fa5d9141b9",
+    "vertical": "supply_chain",
+    "row_count": 25,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_shipment_lines_WMS_record": {
+    "sha256": "56c5f6c6363d2af3e606831beb5c2545b395efd4b4ab5a176b383edeae6a6b1f",
+    "vertical": "supply_chain",
+    "row_count": 34,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_shrinkage_events_WMS_event": {
+    "sha256": "16b3ec094c2e4fb9f9f8f0e1461b9f4a0137962a22f85e5633f9fc4a3f91bfd3",
+    "vertical": "supply_chain",
+    "row_count": 25,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_stock_transfers_WMS_record": {
+    "sha256": "e8d832508d54c62fd2c3e81a31ebf7c399628fcaf6289beb1175f30d0c550b86",
+    "vertical": "supply_chain",
+    "row_count": 25,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_supplier_contracts_ERP_record": {
+    "sha256": "4179236d7dbcf7b4012014dff824338e6a9eaebb050802f863dd12974e1681cb",
+    "vertical": "supply_chain",
+    "row_count": 25,
+    "generated_at": "2026-07-22T11:38:06Z"
+  },
+  "supply_chain_supplier_performance_ERP_snapshot": {
+    "sha256": "127b1f7a29d6844be2a75690cba5303deee77ee42d429ef5adca173409da61f9",
+    "vertical": "supply_chain",
+    "row_count": 15,
+    "generated_at": "2026-07-22T11:38:06Z"
+  }
+}

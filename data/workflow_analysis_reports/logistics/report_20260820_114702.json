@@ -1,0 +1,63 @@
+{
+  "vertical": "logistics",
+  "models_used": [
+    "claude"
+  ],
+  "total": 1,
+  "passed": 0,
+  "flagged": 1,
+  "failed": 0,
+  "errors": 0,
+  "results": [
+    {
+      "canonical_id": "logistics_warehouses_total_capacity_sqm_all_min_count",
+      "source_goal": "Which warehouse has the smallest storage capacity?",
+      "formula_line": "MEASURE('logistics_warehouses_MANUAL_dimension', 'MIN', 'total_capacity_sqm', None)",
+      "kind": "operator",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.8333,
+      "model_results": {
+        "claude": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.8333,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": false
+          },
+          "check_reasoning": {
+            "O1": "MIN is the correct aggregation for finding the smallest storage capacity across warehouses.",
+            "O2": "total_capacity_sqm is the correct column to find minimum storage capacity.",
+            "O3": "logistics_warehouses_MANUAL_dimension matches the domain (logistics) and entity (warehouses) of the business question.",
+            "O4": "The time scope is all_time, so no time filter is expected and none is present — correct.",
+            "O5": "No grouping or filtering is required by the business question, and none is applied — correct.",
+            "O6": "MIN(total_capacity_sqm) produces a square meter measurement (area unit), but the declared metric unit is 'count', which is a mismatch — the unit should be sqm or a dimensional measure, not count."
+          },
+          "flags": [
+            "Unit mismatch: the metric declares unit='count' but MIN(total_capacity_sqm) returns a square meter value (8900.0), not a count of entities.",
+            "The business question asks 'which warehouse' (implying identification), but the formula only returns a scalar MIN value — it does not identify the warehouse name/ID with the smallest capacity."
+          ],
+          "reasoning": "While the aggregation, column, source, time scope, and filters are all appropriate, the declared unit 'count' conflicts with MIN(total_capacity_sqm) which produces an area measurement, and the formula cannot identify which warehouse has the smallest capacity — only its value.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 10599
+        }
+      },
+      "all_flags": [
+        "Unit mismatch: the metric declares unit='count' but MIN(total_capacity_sqm) returns a square meter value (8900.0), not a count of entities.",
+        "The business question asks 'which warehouse' (implying identification), but the formula only returns a scalar MIN value — it does not identify the warehouse name/ID with the smallest capacity."
+      ],
+      "analyzed_at": "2026-08-20T11:47:02Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    }
+  ],
+  "error_details": [],
+  "run_at": "2026-08-20T11:47:02Z"
+}

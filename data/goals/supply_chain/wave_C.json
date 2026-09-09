@@ -1,0 +1,83 @@
+{
+  "wave": "C",
+  "goal_count": 4,
+  "generated_at": "2026-09-07T05:50:23Z",
+  "goals": [
+    {
+      "goal": "How does shipment count break down by status (Delivered, In Transit, Pending) this month?",
+      "canonical_id": "supply_chain_shipments_count_by_status_this_month_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipments",
+        "measure": "count",
+        "state": "all",
+        "scope": "by_status",
+        "time": "this_month",
+        "unit": "count",
+        "series": "by_status"
+      },
+      "wave": "C",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "How does invoice status (Approved, Disputed, Paid, Under Review) break down by total net amount this quarter?",
+      "canonical_id": "supply_chain_invoices_net_amount_by_status_this_quarter_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "net_amount",
+        "state": "all",
+        "scope": "by_status",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "by_status"
+      },
+      "wave": "C",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "Which buyer has the highest active purchase order count relative to their spend limit?",
+      "canonical_id": "supply_chain_buyers_active_po_count_max_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "buyers",
+        "measure": "active_po_count",
+        "state": "all",
+        "scope": "max",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "by_buyer"
+      },
+      "wave": "C",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "How does return value break down by status (Pending, In Review, Completed, Cancelled) this quarter?",
+      "canonical_id": "supply_chain_returns_return_value_by_status_this_quarter_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "return_value",
+        "state": "all",
+        "scope": "by_status",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "by_status"
+      },
+      "wave": "C",
+      "complexity": "KPI",
+      "join": null
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_order_fulfillment_quantity_requested_count_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_order_fulfillment_quantity_requested_count_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "order_fulfillment",
+    "measure": "quantity_requested",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2024-12": 320.0,
+    "2025-08": 700.0,
+    "2025-11": 240.0,
+    "2026-01": 248.0,
+    "2026-02": 1200.0,
+    "2026-03": 516.0,
+    "2026-04": 180.0,
+    "2026-05": 722.0,
+    "2026-06": 355.0,
+    "2026-07": 944.0,
+    "2026-08": 1310.0,
+    "2026-09": 1069.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_order_fulfillment_WMS_event', 'SUM', 'quantity_requested', None, [], None, None, None, {'date_col': 'event_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quantity requested of order_fulfillments by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:07Z"
+}

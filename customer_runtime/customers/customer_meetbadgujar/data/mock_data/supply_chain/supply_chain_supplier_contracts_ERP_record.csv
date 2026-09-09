@@ -1,0 +1,26 @@
+contract_id,supplier_id,contract_start_date,contract_end_date,contract_type,contract_status,contracted_value,committed_spend_amount,payment_terms_days,currency,category,is_auto_renew
+CTRCT-7482,SUPP-3841,2026-09-01,2027-08-31,Fixed Price Contract,Expired,1250000,312500,30,EUR,IT & Technology,true
+CTRCT-2193,SUPP-5627,2026-09-01,2027-03-31,Fixed Price Contract,Active,485000,121250,45,GBP,Industrial Equipment,true
+CTRCT-9015,SUPP-1092,2026-09-01,2026-12-31,Fixed Price Contract,Expired,78000,78000,15,USD,Packaging,true
+CTRCT-4738,SUPP-8834,2026-08-15,2027-08-14,Service Level Agreement,Expired,920000,460000,30,CAD,IT & Technology,true
+CTRCT-6301,SUPP-2274,2026-07-01,2027-06-30,Service Level Agreement,Active,3400000,1133333,60,GBP,Packaging,false
+CTRCT-1847,SUPP-6610,2026-06-01,2026-11-30,Blanket Purchase Order,Active,215000,143333,30,USD,Chemicals,true
+CTRCT-5529,SUPP-4451,2026-05-15,2027-05-14,Blanket Purchase Order,Expired,1875000,781250,45,EUR,Raw Materials,false
+CTRCT-3074,SUPP-7783,2026-04-01,2026-09-30,Master Supply Agreement,Active,540000,450000,30,GBP,Electronics Components,false
+CTRCT-8862,SUPP-3190,2026-03-01,2027-02-28,Annual Framework Contract,Active,6200000,3100000,60,USD,Packaging,true
+CTRCT-2641,SUPP-9947,2026-02-15,2026-08-14,Fixed Price Contract,Expired,92000,92000,15,USD,Industrial Equipment,false
+CTRCT-7190,SUPP-5018,2026-02-01,2027-01-31,Fixed Price Contract,Active,1480000,863333,30,EUR,Electronics Components,false
+CTRCT-4423,SUPP-1365,2026-01-15,2026-07-14,Blanket Purchase Order,Active,310000,295000,45,EUR,Industrial Equipment,true
+CTRCT-6857,SUPP-8229,2026-01-01,2026-12-31,Blanket Purchase Order,Active,4750000,2968750,60,EUR,IT & Technology,true
+CTRCT-9334,SUPP-6702,2025-12-01,2026-11-30,Fixed Price Contract,Expired,2100000,1575000,30,USD,Logistics & Transportation,false
+CTRCT-1503,SUPP-4087,2025-11-01,2026-10-31,Frame Agreement,Active,880000,733333,45,GBP,IT & Technology,true
+CTRCT-3768,SUPP-2956,2025-10-15,2026-04-14,Master Supply Agreement,Expired,425000,398000,30,USD,Industrial Equipment,true
+CTRCT-5241,SUPP-7341,2025-10-01,2026-09-30,Blanket Purchase Order,Expired,3600000,3300000,60,CAD,IT & Technology,false
+CTRCT-8019,SUPP-5583,2025-09-15,2026-09-14,Fixed Price Contract,Active,670000,614166,30,EUR,Electronics Components,true
+CTRCT-2387,SUPP-3628,2025-09-01,2026-08-31,Master Supply Agreement,Active,1960000,1796666,45,GBP,Packaging,true
+CTRCT-6614,SUPP-1874,2025-08-01,2026-01-31,Service Level Agreement,Expired,145000,145000,15,USD,IT & Technology,true
+CTRCT-4952,SUPP-9263,2025-07-01,2026-06-30,Frame Agreement,Expired,5100000,4887500,60,CAD,MRO Supplies,false
+CTRCT-7726,SUPP-4419,2025-06-15,2025-12-14,Frame Agreement,Expired,380000,365000,30,GBP,Industrial Equipment,true
+CTRCT-1138,SUPP-6037,2025-05-01,2026-04-30,Annual Framework Contract,Active,2750000,2520833,45,GBP,Electronics Components,true
+CTRCT-3895,SUPP-8561,2025-03-01,2025-08-31,Spot Purchase Agreement,Expired,255000,231000,30,GBP,MRO Supplies,false
+CTRCT-5067,SUPP-2143,2024-11-01,2025-10-31,Service Level Agreement,Expired,1320000,1188000,45,CAD,Packaging,false

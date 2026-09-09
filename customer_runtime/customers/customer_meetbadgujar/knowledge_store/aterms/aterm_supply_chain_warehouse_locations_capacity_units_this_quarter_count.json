@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_warehouse_locations_capacity_units_this_quarter_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_warehouse_locations_capacity_units_this_quarter_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "warehouse_locations",
+    "measure": "capacity_units",
+    "state": "all",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 320.0,
+  "formula_line": "MEASURE_QUARTER_FIXED('supply_chain_warehouse_locations_WMS_dimension', 'created_date', 'SUM', 'capacity_units', 'this_quarter', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:37Z",
+  "usage_count": 0,
+  "source_goal": "What is the total capacity units of warehouse_locationss this quarter?",
+  "wave": 3,
+  "operator": "MEASURE_QUARTER_FIXED",
+  "verified_at": "2026-09-02T06:49:03Z"
+}

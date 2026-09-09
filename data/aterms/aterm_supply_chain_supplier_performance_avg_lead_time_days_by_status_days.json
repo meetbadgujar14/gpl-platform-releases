@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_supplier_performance_avg_lead_time_days_by_status_days",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_supplier_performance_avg_lead_time_days_by_status_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "supplier_performance",
+    "measure": "avg_lead_time_days",
+    "state": "all",
+    "scope": "by_status",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Active": 12.492307692307692,
+    "On Hold": 18.75
+  },
+  "formula_line": "MEASURE_GROUPED(AVG(avg_lead_time_days) FROM supply_chain_supplier_performance_ERP_snapshot JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY status)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:47Z",
+  "usage_count": 0,
+  "source_goal": "What is the total avg lead time days of supplier_performances by status?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

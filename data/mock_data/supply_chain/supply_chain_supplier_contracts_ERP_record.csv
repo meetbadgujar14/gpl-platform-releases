@@ -1,0 +1,26 @@
+contract_id,supplier_id,contract_start_date,contract_end_date,contract_type,contract_status,contracted_value,committed_spend_amount,payment_terms_days,currency,category,is_auto_renew
+CTR-8472,SUP-2967,2023-01-15,2024-01-14,Master Service Agreement,Expired,485000,462300,30,USD,Raw Materials,False
+CTR-3156,SUP-2193,2023-04-01,2025-03-31,Framework Agreement,Active,1250000,780000,45,USD,Logistics Services,True
+CTR-6893,SUP-2193,2022-09-01,2024-08-31,Purchase Agreement,Active,320000,295000,30,EUR,Packaging Materials,False
+CTR-5041,SUP-6640,2023-07-01,2024-06-30,Spot Contract,Active,95000,61000,15,USD,MRO Supplies,False
+CTR-2278,SUP-2193,2022-11-15,2024-11-14,Master Service Agreement,Active,2100000,1870000,60,USD,IT Hardware,True
+CTR-7714,SUP-8390,2023-02-01,2024-01-31,Purchase Agreement,Expired,540000,538900,30,GBP,Chemical Inputs,False
+CTR-9365,SUP-2193,2024-01-01,2025-12-31,Framework Agreement,Active,875000,320000,45,USD,Freight & Transportation,True
+CTR-4482,SUP-2193,2023-05-15,2024-05-14,Service Level Agreement,Expired,210000,198700,30,USD,Facility Management,False
+CTR-1837,SUP-2193,2022-06-01,2025-05-31,Long-Term Supply Agreement,Active,4500000,3200000,60,USD,Electronic Components,True
+CTR-6620,SUP-2193,2023-09-01,2024-08-31,Purchase Agreement,Active,178000,104500,30,EUR,Packaging Materials,False
+CTR-3091,SUP-2193,2023-03-01,2024-02-29,Service Level Agreement,Expired,660000,645000,45,USD,Warehousing Services,True
+CTR-8854,SUP-2193,2024-02-01,2026-01-31,Master Service Agreement,Active,3200000,890000,60,USD,Raw Materials,True
+CTR-5573,SUP-1475,2022-08-15,2023-08-14,Spot Contract,Terminated,72000,45800,15,USD,MRO Supplies,False
+CTR-2446,SUP-2193,2023-10-01,2025-09-30,Framework Agreement,Active,1560000,620000,45,GBP,Chemical Inputs,False
+CTR-7189,SUP-2193,2023-06-01,2024-05-31,Purchase Agreement,Expired,390000,388200,30,EUR,Freight & Transportation,False
+CTR-4037,SUP-2193,2024-02-15,2026-02-14,Long-Term Supply Agreement,Active,960000,310000,30,USD,Raw Materials,True
+CTR-9721,SUP-7364,2022-12-01,2023-11-30,Service Level Agreement,Expired,420000,411000,45,USD,IT Services,False
+CTR-6318,SUP-7781,2024-03-01,2025-02-28,Purchase Agreement,Active,145000,52000,30,USD,Office Supplies,False
+CTR-1563,SUP-6640,2022-05-01,2024-04-30,Master Service Agreement,Expired,730000,729100,60,USD,Logistics Services,True
+CTR-8245,SUP-2193,2024-04-01,2027-03-31,Long-Term Supply Agreement,Active,6800000,1200000,60,EUR,Electronic Components,True
+CTR-5892,SUP-2193,2023-11-01,2024-10-31,Spot Contract,Active,58000,33000,15,USD,MRO Supplies,False
+CTR-3674,SUP-2193,2022-03-15,2023-03-14,Purchase Agreement,Terminated,280000,196000,30,USD,IT Hardware,False
+CTR-7056,SUP-2193,2024-01-15,2026-01-14,Framework Agreement,Active,1100000,425000,45,GBP,Facility Management,True
+CTR-2983,SUP-5102,2024-05-01,2025-04-30,Service Level Agreement,Active,390000,145000,30,USD,Warehousing Services,False
+CTR-4817,SUP-2193,2023-08-01,2025-07-31,Master Service Agreement,Active,2450000,1380000,60,USD,Chemical Inputs,True

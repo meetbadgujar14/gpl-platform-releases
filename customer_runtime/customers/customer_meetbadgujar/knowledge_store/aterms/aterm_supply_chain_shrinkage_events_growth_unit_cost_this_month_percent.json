@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_shrinkage_events_growth_unit_cost_this_month_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shrinkage_events_growth_unit_cost_this_month_percent",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shrinkage_events",
+    "measure": "growth_unit_cost",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 602.3061270630793,
+  "formula_line": "supply_chain_shrinkage_events_growth_unit_cost_this_month_percent = (({supply_chain_shrinkage_events_unit_cost_this_month_currency} - {supply_chain_shrinkage_events_unit_cost_last_month_currency}) / abs({supply_chain_shrinkage_events_unit_cost_last_month_currency}) * 100) if {supply_chain_shrinkage_events_unit_cost_last_month_currency} != 0 else 0",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-09-01T07:54:53Z",
+  "usage_count": 0,
+  "source_goal": "What is the month over month growth in unit cost for shrinkage_eventss?",
+  "wave": 6,
+  "depends_on": [
+    "supply_chain_shrinkage_events_unit_cost_this_month_currency",
+    "supply_chain_shrinkage_events_unit_cost_last_month_currency"
+  ],
+  "dep_values": {
+    "supply_chain_shrinkage_events_unit_cost_this_month_currency": 1553.15,
+    "supply_chain_shrinkage_events_unit_cost_last_month_currency": 221.15
+  },
+  "verified_at": "2026-09-02T06:49:07Z"
+}

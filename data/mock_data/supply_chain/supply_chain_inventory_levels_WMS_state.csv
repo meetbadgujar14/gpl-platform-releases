@@ -1,0 +1,29 @@
+item_id,location_id,snapshot_date,warehouse_id,item_name,item_category,quantity_on_hand,quantity_reserved,quantity_available,reorder_point,is_below_reorder
+ITM-4821,LOC-38421,2024-01-15,WH-2095,Industrial Hydraulic Pump,Machinery Parts,145,30,115,50,False
+ITM-4821,LOC-71093,2024-02-10,WH-7364,Industrial Hydraulic Pump,Machinery Parts,98,45,53,50,False
+ITM-4821,LOC-54867,2024-03-05,WH-7364,Industrial Hydraulic Pump,Machinery Parts,42,20,22,50,True
+ITM-4821,LOC-29384,2024-04-18,WH-5537,Industrial Hydraulic Pump,Machinery Parts,210,60,150,50,False
+ITM-4821,LOC-66712,2024-05-22,WH-4821,Industrial Hydraulic Pump,Machinery Parts,35,10,25,50,True
+ITM-7394,LOC-38421,2024-01-20,WH-4821,Stainless Steel Fastener Set,Hardware,2500,400,2100,500,False
+ITM-7394,LOC-71093,2024-02-14,WH-4821,Stainless Steel Fastener Set,Hardware,320,100,220,500,True
+ITM-7394,LOC-54867,2024-03-08,WH-5537,Stainless Steel Fastener Set,Hardware,1750,250,1500,500,False
+ITM-7394,LOC-29384,2024-04-25,WH-4821,Stainless Steel Fastener Set,Hardware,480,50,430,500,True
+ITM-7394,LOC-66712,2024-05-30,WH-2095,Stainless Steel Fastener Set,Hardware,3100,600,2500,500,False
+ITM-2056,LOC-38421,2024-02-05,WH-4821,Medical Grade Latex Gloves,Medical Supplies,8000,1500,6500,2000,False
+ITM-2056,LOC-71093,2024-03-12,WH-5537,Medical Grade Latex Gloves,Medical Supplies,1200,300,900,2000,True
+ITM-2056,LOC-54867,2024-04-01,WH-2095,Medical Grade Latex Gloves,Medical Supplies,5400,800,4600,2000,False
+ITM-9173,LOC-38421,2024-01-28,WH-7364,Polymer Resin Pellets,Raw Materials,12000,3000,9000,4000,False
+ITM-9173,LOC-54867,2024-03-15,WH-5537,Polymer Resin Pellets,Raw Materials,3200,800,2400,4000,True
+ITM-9173,LOC-29384,2024-04-10,WH-2095,Polymer Resin Pellets,Raw Materials,18500,4500,14000,4000,False
+ITM-3648,LOC-66712,2024-02-20,WH-7364,Heavy Duty Conveyor Belt,Industrial Equipment,25,8,17,10,False
+ITM-3648,LOC-71093,2024-03-25,WH-4821,Heavy Duty Conveyor Belt,Industrial Equipment,7,3,4,10,True
+ITM-5812,LOC-38421,2024-01-10,WH-2095,Electronic Control Module,Electronics,560,120,440,100,False
+ITM-5812,LOC-29384,2024-04-05,WH-2095,Electronic Control Module,Electronics,85,40,45,100,True
+ITM-1247,LOC-54867,2024-02-28,WH-7364,Precision Ball Bearing 6205,Mechanical Components,3800,700,3100,1000,False
+ITM-1247,LOC-66712,2024-05-14,WH-7364,Precision Ball Bearing 6205,Mechanical Components,820,200,620,1000,True
+ITM-6389,LOC-38421,2024-03-20,WH-5537,Alkaline Battery Pack AA,Consumer Electronics,14500,2000,12500,3000,False
+ITM-8740,LOC-71093,2024-04-12,WH-2095,Safety Hardhat Type II,Safety Equipment,640,90,550,150,False
+ITM-8740,LOC-29384,2024-05-08,WH-9142,Safety Hardhat Type II,Safety Equipment,110,50,60,150,True
+ITM-2931,LOC-54867,2024-01-30,WH-9142,Forklift Propane Cylinder,Warehouse Equipment,72,12,60,20,False
+ITM-2931,LOC-66712,2024-03-18,WH-4821,Forklift Propane Cylinder,Warehouse Equipment,14,5,9,20,True
+ITM-5067,LOC-38421,2024-06-01,WH-9142,Pharmaceutical Grade Ethanol,Chemicals,450,100,350,200,False

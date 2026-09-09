@@ -1,0 +1,243 @@
+{
+  "vertical": "supply_chain",
+  "models_used": [
+    "gpt4o"
+  ],
+  "total": 5,
+  "passed": 2,
+  "flagged": 2,
+  "failed": 1,
+  "errors": 0,
+  "results": [
+    {
+      "canonical_id": "supply_chain_warehouses_growth_total_capacity_units_this_month_percent",
+      "source_goal": "What is the month over month growth in total capacity units for warehousess?",
+      "formula_line": "supply_chain_warehouses_growth_total_capacity_units_this_month_percent = (({supply_chain_warehouses_total_capacity_units_this_month_currency} - {supply_chain_warehouses_total_capacity_units_last_month_currency}) / abs({supply_chain_warehouses_total_capacity_units_last_month_currency}) * 100) if {supply_chain_warehouses_total_capacity_units_last_month_currency} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "FAILED",
+      "ensemble_confidence": 0.5,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "INCORRECT",
+          "confidence": 0.5,
+          "checks": {
+            "C1": true,
+            "C2": false,
+            "C3": false,
+            "C4": true,
+            "C5": true,
+            "C6": false
+          },
+          "check_reasoning": {
+            "C1": "The formula uses subtraction and division to compute a growth rate, which matches the business question.",
+            "C2": "The dependencies do not measure the total capacity units for the correct time periods (this_month and last_month).",
+            "C3": "Dependencies have 'all_time' time scope, not aligning with the metric's 'this_month' time scope.",
+            "C4": "Both the metric and dependencies have unfiltered state, which aligns.",
+            "C5": "The formula includes a guard clause to handle division by zero.",
+            "C6": "The result unit is percent, but the dependencies incorrectly use currency, leading to a unit mismatch."
+          },
+          "flags": [
+            "Time scope of dependencies is all_time instead of this_month or last_month.",
+            "Incorrect units in dependencies."
+          ],
+          "reasoning": "The formula structure is correct, but the dependencies do not match the requested time scopes and units, leading to a mismatch.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 4763
+        }
+      },
+      "all_flags": [
+        "Time scope of dependencies is all_time instead of this_month or last_month.",
+        "Incorrect units in dependencies."
+      ],
+      "analyzed_at": "2026-08-12T11:16:42Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_supplier_performance_growth_total_orders_this_month_percent",
+      "source_goal": "What is the month over month growth in total orders for supplier_performances?",
+      "formula_line": "supply_chain_supplier_performance_growth_total_orders_this_month_percent = (({supply_chain_supplier_performance_total_orders_this_month_currency} - {supply_chain_supplier_performance_total_orders_last_month_currency}) / abs({supply_chain_supplier_performance_total_orders_last_month_currency}) * 100) if {supply_chain_supplier_performance_total_orders_last_month_currency} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula applies subtraction and division to compute the growth rate, which matches the business question.",
+            "C2": "The dependencies correctly represent total orders for this and last month, aligning with the formula's intention.",
+            "C3": "The dependencies use the monthly scope that matches the overall metric's 'this_month' time window.",
+            "C4": "There are no state filters on the composed metric or its dependencies, ensuring alignment.",
+            "C5": "Division by zero is managed with a guard clause, ensuring no runtime errors.",
+            "C6": "The resulting unit is percent, which is appropriate for a growth rate calculation."
+          },
+          "flags": [],
+          "reasoning": "The formula accurately calculates month-over-month growth using correct building blocks and time scope, with appropriate error handling.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 3478
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T11:16:46Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_supplier_performance_growth_avg_lead_time_days_this_month_percent",
+      "source_goal": "What is the month over month growth in avg lead time days for supplier_performances?",
+      "formula_line": "supply_chain_supplier_performance_growth_avg_lead_time_days_this_month_percent = (({supply_chain_supplier_performance_avg_lead_time_days_this_month_days} - {supply_chain_supplier_performance_avg_lead_time_days_last_month_days}) / abs({supply_chain_supplier_performance_avg_lead_time_days_last_month_days}) * 100) if {supply_chain_supplier_performance_avg_lead_time_days_last_month_days} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses subtraction and division to calculate growth rate, which matches the business question.",
+            "C2": "Dependencies correctly calculate average lead time days for this month and last month.",
+            "C3": "The dependencies use this_month and last_month, aligning with the composed metric's time scope.",
+            "C4": "Neither the composed metric nor the dependencies have state filters, so they are aligned.",
+            "C5": "The formula includes a division-by-zero guard to handle potential zero denominators.",
+            "C6": "The result in percent logically follows from the growth rate calculation."
+          },
+          "flags": [],
+          "reasoning": "The formula accurately implements a month-over-month growth calculation with correct dependencies, time alignment, and unit representation.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 3665
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T11:16:49Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_supplier_performance_average_total_orders_currency",
+      "source_goal": "What is the average total orders per supplier_performance?",
+      "formula_line": "supply_chain_supplier_performance_average_total_orders_currency = {supply_chain_supplier_performance_total_orders_currency} / {supply_chain_supplier_performance_count}",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.6667,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.6667,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": false
+          },
+          "check_reasoning": {
+            "C1": "The division operation matches the 'average' in the business question.",
+            "C2": "Correct metrics for average are used: total orders and supplier count.",
+            "C3": "Both dependencies have the 'all_time' time scope matching the metric.",
+            "C4": "Both dependencies have unfiltered state, consistent with the metric's state filter.",
+            "C5": "The formula does not handle division-by-zero if the supplier count is zero.",
+            "C6": "The unit should be count, not currency, since the metric is about orders per entity."
+          },
+          "flags": [
+            "Division by zero not handled.",
+            "Unit mismatch: result unit does not make sense for average total orders."
+          ],
+          "reasoning": "The formula logic mostly aligns with the business question, but lacks division-by-zero handling and has a unit mismatch.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 4265
+        }
+      },
+      "all_flags": [
+        "Division by zero not handled.",
+        "Unit mismatch: result unit does not make sense for average total orders."
+      ],
+      "analyzed_at": "2026-08-12T11:16:54Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_supplier_items_average_negotiated_unit_cost_currency",
+      "source_goal": "What is the average negotiated unit cost per supplier_items?",
+      "formula_line": "supply_chain_supplier_items_average_negotiated_unit_cost_currency = {supply_chain_supplier_items_negotiated_unit_cost_currency} / {supply_chain_supplier_items_count}",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.6667,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.6667,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": false
+          },
+          "check_reasoning": {
+            "C1": "The formula uses division which matches the need to calculate an average.",
+            "C2": "The dependencies correctly identify total cost and count as the building blocks for the average.",
+            "C3": "Both dependencies use the 'all_time' scope, which aligns with the metric's time scope.",
+            "C4": "Dependencies have unfiltered state, consistent with the metric's state filter of 'none'.",
+            "C5": "There is no handling for division by zero if the count is zero, which could lead to errors.",
+            "C6": "The result unit is expected to be currency, but division by count without conversion does not ensure this."
+          },
+          "flags": [
+            "Missing division-by-zero handling",
+            "Result unit may not be appropriately calculated as currency"
+          ],
+          "reasoning": "Although the formula structure and dependency selections are correct, it lacks division-by-zero error handling and might not ensure an appropriate currency unit conversion in its result.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 4621
+        }
+      },
+      "all_flags": [
+        "Missing division-by-zero handling",
+        "Result unit may not be appropriately calculated as currency"
+      ],
+      "analyzed_at": "2026-08-12T11:16:58Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    }
+  ],
+  "error_details": [],
+  "run_at": "2026-08-12T11:16:58Z"
+}

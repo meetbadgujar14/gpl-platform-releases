@@ -1,0 +1,35 @@
+{
+  "id": "aterm:supply_chain_avg_procurement_lead_time_days",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_avg_procurement_lead_time_days",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "avg_procurement_lead_time",
+    "measure": "avg_procurement_lead_time",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": 1.6808333333333332,
+  "formula_line": "supply_chain_avg_procurement_lead_time_days = {supply_chain_lead_times_avg_lead_time_days_days} / {supply_chain_lead_times_count} if {supply_chain_lead_times_count} != 0 else 0",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-08-12T09:17:59Z",
+  "usage_count": 0,
+  "source_goal": "Average lead time in days from order placement to receipt across all suppliers and items.",
+  "wave": 9,
+  "depends_on": [
+    "supply_chain_lead_times_avg_lead_time_days_days",
+    "supply_chain_lead_times_count"
+  ],
+  "dep_values": {
+    "supply_chain_lead_times_avg_lead_time_days_days": 13.446666666666665,
+    "supply_chain_lead_times_count": 8.0
+  }
+}

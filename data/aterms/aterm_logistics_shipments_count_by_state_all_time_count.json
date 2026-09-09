@@ -1,0 +1,37 @@
+{
+  "id": "aterm:logistics_shipments_count_by_state_all_time_count",
+  "type": "Aterm",
+  "canonical_id": "logistics_shipments_count_by_state_all_time_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "shipments",
+    "measure": "count",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Cancelled": 2.0,
+    "Delayed": 2.0,
+    "Delivered": 15.0,
+    "In Transit": 4.0,
+    "Processing": 2.0
+  },
+  "formula_line": "MEASURE_GROUPED('logistics_shipments_ERP_record', 'COUNT_DISTINCT', 'shipment_id', group_by_col='shipment_status', filters=None)",
+  "exec_formula": "MEASURE_GROUPED('logistics_shipments_ERP_record', 'COUNT_DISTINCT', 'shipment_id', group_by_col='shipment_status', filters=None)",
+  "verified": true,
+  "ai_locked": false,
+  "lock_method": "llm_wizard",
+  "verify_reason": "LLM_WIZARD_execution",
+  "created_at": "2026-08-10T06:51:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the overall shipment health breakdown — count of shipments in each state (Delivered, In Transit, Delayed, Processing, Cancelled) — for an executive pipeline view?",
+  "wave": "C",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_GROUPED steps=3",
+  "wizard_steps": 3
+}

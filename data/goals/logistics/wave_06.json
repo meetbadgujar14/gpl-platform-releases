@@ -1,0 +1,909 @@
+{
+  "wave": 6,
+  "goal_count": 41,
+  "generated_at": "2026-07-21T11:32:53Z",
+  "goals": [
+    {
+      "goal": "What is the month over month growth in contract rate per km for carrierss?",
+      "canonical_id": "logistics_carriers_growth_contract_rate_per_km_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_carriers_contract_rate_per_km_this_month_percent",
+        "logistics_carriers_contract_rate_per_km_last_month_percent"
+      ],
+      "composition_formula": "(({logistics_carriers_contract_rate_per_km_this_month_percent} - {logistics_carriers_contract_rate_per_km_last_month_percent}) / abs({logistics_carriers_contract_rate_per_km_last_month_percent}) * 100) if {logistics_carriers_contract_rate_per_km_last_month_percent} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "carriers",
+        "measure": "growth_contract_rate_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in total capacity sqm for warehousess?",
+      "canonical_id": "logistics_warehouses_growth_total_capacity_sqm_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_warehouses_total_capacity_sqm_this_month_currency",
+        "logistics_warehouses_total_capacity_sqm_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_warehouses_total_capacity_sqm_this_month_currency} - {logistics_warehouses_total_capacity_sqm_last_month_currency}) / abs({logistics_warehouses_total_capacity_sqm_last_month_currency}) * 100) if {logistics_warehouses_total_capacity_sqm_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouses",
+        "measure": "growth_total_capacity_sqm",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in distance km for routess?",
+      "canonical_id": "logistics_routes_growth_distance_km_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_routes_distance_km_this_month_count",
+        "logistics_routes_distance_km_last_month_count"
+      ],
+      "composition_formula": "(({logistics_routes_distance_km_this_month_count} - {logistics_routes_distance_km_last_month_count}) / abs({logistics_routes_distance_km_last_month_count}) * 100) if {logistics_routes_distance_km_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "growth_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in standard transit days for routess?",
+      "canonical_id": "logistics_routes_growth_standard_transit_days_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_routes_standard_transit_days_this_month_days",
+        "logistics_routes_standard_transit_days_last_month_days"
+      ],
+      "composition_formula": "(({logistics_routes_standard_transit_days_this_month_days} - {logistics_routes_standard_transit_days_last_month_days}) / abs({logistics_routes_standard_transit_days_last_month_days}) * 100) if {logistics_routes_standard_transit_days_last_month_days} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "growth_standard_transit_days",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in payload capacity kg for vehicless?",
+      "canonical_id": "logistics_vehicles_growth_payload_capacity_kg_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_vehicles_payload_capacity_kg_this_month_count",
+        "logistics_vehicles_payload_capacity_kg_last_month_count"
+      ],
+      "composition_formula": "(({logistics_vehicles_payload_capacity_kg_this_month_count} - {logistics_vehicles_payload_capacity_kg_last_month_count}) / abs({logistics_vehicles_payload_capacity_kg_last_month_count}) * 100) if {logistics_vehicles_payload_capacity_kg_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicles",
+        "measure": "growth_payload_capacity_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in total trips completed for driverss?",
+      "canonical_id": "logistics_drivers_growth_total_trips_completed_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_drivers_total_trips_completed_this_month_currency",
+        "logistics_drivers_total_trips_completed_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_drivers_total_trips_completed_this_month_currency} - {logistics_drivers_total_trips_completed_last_month_currency}) / abs({logistics_drivers_total_trips_completed_last_month_currency}) * 100) if {logistics_drivers_total_trips_completed_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "drivers",
+        "measure": "growth_total_trips_completed",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in total weight kg for shipmentss?",
+      "canonical_id": "logistics_shipments_growth_total_weight_kg_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_shipments_total_weight_kg_this_month_currency",
+        "logistics_shipments_total_weight_kg_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_shipments_total_weight_kg_this_month_currency} - {logistics_shipments_total_weight_kg_last_month_currency}) / abs({logistics_shipments_total_weight_kg_last_month_currency}) * 100) if {logistics_shipments_total_weight_kg_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "growth_total_weight_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in freight cost for shipmentss?",
+      "canonical_id": "logistics_shipments_growth_freight_cost_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_shipments_freight_cost_this_month_currency",
+        "logistics_shipments_freight_cost_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_shipments_freight_cost_this_month_currency} - {logistics_shipments_freight_cost_last_month_currency}) / abs({logistics_shipments_freight_cost_last_month_currency}) * 100) if {logistics_shipments_freight_cost_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "growth_freight_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in insurance cost for shipmentss?",
+      "canonical_id": "logistics_shipments_growth_insurance_cost_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_shipments_insurance_cost_this_month_currency",
+        "logistics_shipments_insurance_cost_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_shipments_insurance_cost_this_month_currency} - {logistics_shipments_insurance_cost_last_month_currency}) / abs({logistics_shipments_insurance_cost_last_month_currency}) * 100) if {logistics_shipments_insurance_cost_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "growth_insurance_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in planned delivery days for shipmentss?",
+      "canonical_id": "logistics_shipments_growth_planned_delivery_days_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_shipments_planned_delivery_days_this_month_days",
+        "logistics_shipments_planned_delivery_days_last_month_days"
+      ],
+      "composition_formula": "(({logistics_shipments_planned_delivery_days_this_month_days} - {logistics_shipments_planned_delivery_days_last_month_days}) / abs({logistics_shipments_planned_delivery_days_last_month_days}) * 100) if {logistics_shipments_planned_delivery_days_last_month_days} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "growth_planned_delivery_days",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in agreed cost for freight_orderss?",
+      "canonical_id": "logistics_freight_orders_growth_agreed_cost_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_freight_orders_agreed_cost_this_month_currency",
+        "logistics_freight_orders_agreed_cost_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_freight_orders_agreed_cost_this_month_currency} - {logistics_freight_orders_agreed_cost_last_month_currency}) / abs({logistics_freight_orders_agreed_cost_last_month_currency}) * 100) if {logistics_freight_orders_agreed_cost_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "growth_agreed_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in actual cost for freight_orderss?",
+      "canonical_id": "logistics_freight_orders_growth_actual_cost_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_freight_orders_actual_cost_this_month_currency",
+        "logistics_freight_orders_actual_cost_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_freight_orders_actual_cost_this_month_currency} - {logistics_freight_orders_actual_cost_last_month_currency}) / abs({logistics_freight_orders_actual_cost_last_month_currency}) * 100) if {logistics_freight_orders_actual_cost_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "growth_actual_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in distance km for freight_orderss?",
+      "canonical_id": "logistics_freight_orders_growth_distance_km_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_freight_orders_distance_km_this_month_count",
+        "logistics_freight_orders_distance_km_last_month_count"
+      ],
+      "composition_formula": "(({logistics_freight_orders_distance_km_this_month_count} - {logistics_freight_orders_distance_km_last_month_count}) / abs({logistics_freight_orders_distance_km_last_month_count}) * 100) if {logistics_freight_orders_distance_km_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "growth_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in weight kg for cargo_itemss?",
+      "canonical_id": "logistics_cargo_items_growth_weight_kg_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_cargo_items_weight_kg_this_month_count",
+        "logistics_cargo_items_weight_kg_last_month_count"
+      ],
+      "composition_formula": "(({logistics_cargo_items_weight_kg_this_month_count} - {logistics_cargo_items_weight_kg_last_month_count}) / abs({logistics_cargo_items_weight_kg_last_month_count}) * 100) if {logistics_cargo_items_weight_kg_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "growth_weight_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in volume cbm for cargo_itemss?",
+      "canonical_id": "logistics_cargo_items_growth_volume_cbm_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_cargo_items_volume_cbm_this_month_count",
+        "logistics_cargo_items_volume_cbm_last_month_count"
+      ],
+      "composition_formula": "(({logistics_cargo_items_volume_cbm_this_month_count} - {logistics_cargo_items_volume_cbm_last_month_count}) / abs({logistics_cargo_items_volume_cbm_last_month_count}) * 100) if {logistics_cargo_items_volume_cbm_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "growth_volume_cbm",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in declared value for cargo_itemss?",
+      "canonical_id": "logistics_cargo_items_growth_declared_value_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_cargo_items_declared_value_this_month_currency",
+        "logistics_cargo_items_declared_value_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_cargo_items_declared_value_this_month_currency} - {logistics_cargo_items_declared_value_last_month_currency}) / abs({logistics_cargo_items_declared_value_last_month_currency}) * 100) if {logistics_cargo_items_declared_value_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "growth_declared_value",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in quantity for cargo_itemss?",
+      "canonical_id": "logistics_cargo_items_growth_quantity_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_cargo_items_quantity_this_month_count",
+        "logistics_cargo_items_quantity_last_month_count"
+      ],
+      "composition_formula": "(({logistics_cargo_items_quantity_this_month_count} - {logistics_cargo_items_quantity_last_month_count}) / abs({logistics_cargo_items_quantity_last_month_count}) * 100) if {logistics_cargo_items_quantity_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "growth_quantity",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in leg distance km for shipment_legss?",
+      "canonical_id": "logistics_shipment_legs_growth_leg_distance_km_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_shipment_legs_leg_distance_km_this_month_count",
+        "logistics_shipment_legs_leg_distance_km_last_month_count"
+      ],
+      "composition_formula": "(({logistics_shipment_legs_leg_distance_km_this_month_count} - {logistics_shipment_legs_leg_distance_km_last_month_count}) / abs({logistics_shipment_legs_leg_distance_km_last_month_count}) * 100) if {logistics_shipment_legs_leg_distance_km_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "growth_leg_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in leg cost for shipment_legss?",
+      "canonical_id": "logistics_shipment_legs_growth_leg_cost_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_shipment_legs_leg_cost_this_month_currency",
+        "logistics_shipment_legs_leg_cost_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_shipment_legs_leg_cost_this_month_currency} - {logistics_shipment_legs_leg_cost_last_month_currency}) / abs({logistics_shipment_legs_leg_cost_last_month_currency}) * 100) if {logistics_shipment_legs_leg_cost_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "growth_leg_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in actual transit hours for shipment_legss?",
+      "canonical_id": "logistics_shipment_legs_growth_actual_transit_hours_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_shipment_legs_actual_transit_hours_this_month_count",
+        "logistics_shipment_legs_actual_transit_hours_last_month_count"
+      ],
+      "composition_formula": "(({logistics_shipment_legs_actual_transit_hours_this_month_count} - {logistics_shipment_legs_actual_transit_hours_last_month_count}) / abs({logistics_shipment_legs_actual_transit_hours_last_month_count}) * 100) if {logistics_shipment_legs_actual_transit_hours_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "growth_actual_transit_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in delay hours for delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_growth_delay_hours_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_delivery_events_delay_hours_this_month_count",
+        "logistics_delivery_events_delay_hours_last_month_count"
+      ],
+      "composition_formula": "(({logistics_delivery_events_delay_hours_this_month_count} - {logistics_delivery_events_delay_hours_last_month_count}) / abs({logistics_delivery_events_delay_hours_last_month_count}) * 100) if {logistics_delivery_events_delay_hours_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "growth_delay_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in event count for delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_growth_event_count_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_delivery_events_event_count_this_month_count",
+        "logistics_delivery_events_event_count_last_month_count"
+      ],
+      "composition_formula": "(({logistics_delivery_events_event_count_this_month_count} - {logistics_delivery_events_event_count_last_month_count}) / abs({logistics_delivery_events_event_count_last_month_count}) * 100) if {logistics_delivery_events_event_count_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "growth_event_count",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in distance km for vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_growth_distance_km_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_vehicle_trips_distance_km_this_month_count",
+        "logistics_vehicle_trips_distance_km_last_month_count"
+      ],
+      "composition_formula": "(({logistics_vehicle_trips_distance_km_this_month_count} - {logistics_vehicle_trips_distance_km_last_month_count}) / abs({logistics_vehicle_trips_distance_km_last_month_count}) * 100) if {logistics_vehicle_trips_distance_km_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "growth_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in duration hours for vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_growth_duration_hours_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_vehicle_trips_duration_hours_this_month_percent",
+        "logistics_vehicle_trips_duration_hours_last_month_percent"
+      ],
+      "composition_formula": "(({logistics_vehicle_trips_duration_hours_this_month_percent} - {logistics_vehicle_trips_duration_hours_last_month_percent}) / abs({logistics_vehicle_trips_duration_hours_last_month_percent}) * 100) if {logistics_vehicle_trips_duration_hours_last_month_percent} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "growth_duration_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in trip cost for vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_growth_trip_cost_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_vehicle_trips_trip_cost_this_month_currency",
+        "logistics_vehicle_trips_trip_cost_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_vehicle_trips_trip_cost_this_month_currency} - {logistics_vehicle_trips_trip_cost_last_month_currency}) / abs({logistics_vehicle_trips_trip_cost_last_month_currency}) * 100) if {logistics_vehicle_trips_trip_cost_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "growth_trip_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in litres consumed for fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_growth_litres_consumed_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_fuel_consumption_litres_consumed_this_month_count",
+        "logistics_fuel_consumption_litres_consumed_last_month_count"
+      ],
+      "composition_formula": "(({logistics_fuel_consumption_litres_consumed_this_month_count} - {logistics_fuel_consumption_litres_consumed_last_month_count}) / abs({logistics_fuel_consumption_litres_consumed_last_month_count}) * 100) if {logistics_fuel_consumption_litres_consumed_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "growth_litres_consumed",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in fuel cost for fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_growth_fuel_cost_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_fuel_consumption_fuel_cost_this_month_currency",
+        "logistics_fuel_consumption_fuel_cost_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_fuel_consumption_fuel_cost_this_month_currency} - {logistics_fuel_consumption_fuel_cost_last_month_currency}) / abs({logistics_fuel_consumption_fuel_cost_last_month_currency}) * 100) if {logistics_fuel_consumption_fuel_cost_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "growth_fuel_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in cost per litre for fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_growth_cost_per_litre_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_fuel_consumption_cost_per_litre_this_month_currency",
+        "logistics_fuel_consumption_cost_per_litre_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_fuel_consumption_cost_per_litre_this_month_currency} - {logistics_fuel_consumption_cost_per_litre_last_month_currency}) / abs({logistics_fuel_consumption_cost_per_litre_last_month_currency}) * 100) if {logistics_fuel_consumption_cost_per_litre_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "growth_cost_per_litre",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in co2 kg emitted for fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_growth_co2_kg_emitted_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_fuel_consumption_co2_kg_emitted_this_month_count",
+        "logistics_fuel_consumption_co2_kg_emitted_last_month_count"
+      ],
+      "composition_formula": "(({logistics_fuel_consumption_co2_kg_emitted_this_month_count} - {logistics_fuel_consumption_co2_kg_emitted_last_month_count}) / abs({logistics_fuel_consumption_co2_kg_emitted_last_month_count}) * 100) if {logistics_fuel_consumption_co2_kg_emitted_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "growth_co2_kg_emitted",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in distance km for fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_growth_distance_km_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_fuel_consumption_distance_km_this_month_count",
+        "logistics_fuel_consumption_distance_km_last_month_count"
+      ],
+      "composition_formula": "(({logistics_fuel_consumption_distance_km_this_month_count} - {logistics_fuel_consumption_distance_km_last_month_count}) / abs({logistics_fuel_consumption_distance_km_last_month_count}) * 100) if {logistics_fuel_consumption_distance_km_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "growth_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in declared value for customs_declarationss?",
+      "canonical_id": "logistics_customs_declarations_growth_declared_value_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_customs_declarations_declared_value_this_month_currency",
+        "logistics_customs_declarations_declared_value_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_customs_declarations_declared_value_this_month_currency} - {logistics_customs_declarations_declared_value_last_month_currency}) / abs({logistics_customs_declarations_declared_value_last_month_currency}) * 100) if {logistics_customs_declarations_declared_value_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "growth_declared_value",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in duties amount for customs_declarationss?",
+      "canonical_id": "logistics_customs_declarations_growth_duties_amount_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_customs_declarations_duties_amount_this_month_currency",
+        "logistics_customs_declarations_duties_amount_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_customs_declarations_duties_amount_this_month_currency} - {logistics_customs_declarations_duties_amount_last_month_currency}) / abs({logistics_customs_declarations_duties_amount_last_month_currency}) * 100) if {logistics_customs_declarations_duties_amount_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "growth_duties_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in taxes amount for customs_declarationss?",
+      "canonical_id": "logistics_customs_declarations_growth_taxes_amount_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_customs_declarations_taxes_amount_this_month_currency",
+        "logistics_customs_declarations_taxes_amount_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_customs_declarations_taxes_amount_this_month_currency} - {logistics_customs_declarations_taxes_amount_last_month_currency}) / abs({logistics_customs_declarations_taxes_amount_last_month_currency}) * 100) if {logistics_customs_declarations_taxes_amount_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "growth_taxes_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in clearance days for customs_declarationss?",
+      "canonical_id": "logistics_customs_declarations_growth_clearance_days_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_customs_declarations_clearance_days_this_month_days",
+        "logistics_customs_declarations_clearance_days_last_month_days"
+      ],
+      "composition_formula": "(({logistics_customs_declarations_clearance_days_this_month_days} - {logistics_customs_declarations_clearance_days_last_month_days}) / abs({logistics_customs_declarations_clearance_days_last_month_days}) * 100) if {logistics_customs_declarations_clearance_days_last_month_days} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "growth_clearance_days",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in estimated loss value for incidentss?",
+      "canonical_id": "logistics_incidents_growth_estimated_loss_value_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_incidents_estimated_loss_value_this_month_currency",
+        "logistics_incidents_estimated_loss_value_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_incidents_estimated_loss_value_this_month_currency} - {logistics_incidents_estimated_loss_value_last_month_currency}) / abs({logistics_incidents_estimated_loss_value_last_month_currency}) * 100) if {logistics_incidents_estimated_loss_value_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "growth_estimated_loss_value",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in claim amount for incidentss?",
+      "canonical_id": "logistics_incidents_growth_claim_amount_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_incidents_claim_amount_this_month_currency",
+        "logistics_incidents_claim_amount_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_incidents_claim_amount_this_month_currency} - {logistics_incidents_claim_amount_last_month_currency}) / abs({logistics_incidents_claim_amount_last_month_currency}) * 100) if {logistics_incidents_claim_amount_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "growth_claim_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in resolution days for incidentss?",
+      "canonical_id": "logistics_incidents_growth_resolution_days_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_incidents_resolution_days_this_month_days",
+        "logistics_incidents_resolution_days_last_month_days"
+      ],
+      "composition_formula": "(({logistics_incidents_resolution_days_this_month_days} - {logistics_incidents_resolution_days_last_month_days}) / abs({logistics_incidents_resolution_days_last_month_days}) * 100) if {logistics_incidents_resolution_days_last_month_days} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "growth_resolution_days",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in quantity on hand for warehouse_inventorys?",
+      "canonical_id": "logistics_warehouse_inventory_growth_quantity_on_hand_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_warehouse_inventory_quantity_on_hand_this_month_count",
+        "logistics_warehouse_inventory_quantity_on_hand_last_month_count"
+      ],
+      "composition_formula": "(({logistics_warehouse_inventory_quantity_on_hand_this_month_count} - {logistics_warehouse_inventory_quantity_on_hand_last_month_count}) / abs({logistics_warehouse_inventory_quantity_on_hand_last_month_count}) * 100) if {logistics_warehouse_inventory_quantity_on_hand_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "growth_quantity_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in quantity reserved for warehouse_inventorys?",
+      "canonical_id": "logistics_warehouse_inventory_growth_quantity_reserved_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_warehouse_inventory_quantity_reserved_this_month_count",
+        "logistics_warehouse_inventory_quantity_reserved_last_month_count"
+      ],
+      "composition_formula": "(({logistics_warehouse_inventory_quantity_reserved_this_month_count} - {logistics_warehouse_inventory_quantity_reserved_last_month_count}) / abs({logistics_warehouse_inventory_quantity_reserved_last_month_count}) * 100) if {logistics_warehouse_inventory_quantity_reserved_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "growth_quantity_reserved",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in quantity available for warehouse_inventorys?",
+      "canonical_id": "logistics_warehouse_inventory_growth_quantity_available_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_warehouse_inventory_quantity_available_this_month_count",
+        "logistics_warehouse_inventory_quantity_available_last_month_count"
+      ],
+      "composition_formula": "(({logistics_warehouse_inventory_quantity_available_this_month_count} - {logistics_warehouse_inventory_quantity_available_last_month_count}) / abs({logistics_warehouse_inventory_quantity_available_last_month_count}) * 100) if {logistics_warehouse_inventory_quantity_available_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "growth_quantity_available",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in inventory value for warehouse_inventorys?",
+      "canonical_id": "logistics_warehouse_inventory_growth_inventory_value_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_warehouse_inventory_inventory_value_this_month_currency",
+        "logistics_warehouse_inventory_inventory_value_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_warehouse_inventory_inventory_value_this_month_currency} - {logistics_warehouse_inventory_inventory_value_last_month_currency}) / abs({logistics_warehouse_inventory_inventory_value_last_month_currency}) * 100) if {logistics_warehouse_inventory_inventory_value_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "growth_inventory_value",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    }
+  ]
+}

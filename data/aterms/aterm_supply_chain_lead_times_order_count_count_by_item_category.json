@@ -1,0 +1,38 @@
+{
+  "id": "aterm:supply_chain_lead_times_order_count_count_by_item_category",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_lead_times_order_count_count_by_item_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "lead_times",
+    "measure": "order_count",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_item_category"
+  },
+  "oracle_value": {
+    "Chemicals & Consumables": 374.0,
+    "Electrical & Cabling": 58.0,
+    "Electronics": 165.0,
+    "Hardware & Fasteners": 132.0,
+    "Mechanical Components": 319.0,
+    "Packaging": 341.0,
+    "Raw Materials": 271.0,
+    "Safety Equipment": 41.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(order_count) FROM supply_chain_lead_times_ERP_snapshot GROUP BY item_category)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:51Z",
+  "usage_count": 0,
+  "source_goal": "What is the total order count of lead_timess by item category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:52Z"
+}

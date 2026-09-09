@@ -1,0 +1,401 @@
+{
+  "uploads": [
+    {
+      "file_id": "4a8f9a3e",
+      "filename": "purchase_order_line.csv",
+      "uploaded_at": "2026-09-01T06:58:02.684094Z",
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "purchase_order_line",
+          "original_sheet_name": "purchase_order_line",
+          "col_fingerprint": "995af01879f2",
+          "content_hash": "bddefee6c595f76c",
+          "columns": [
+            "id",
+            "line",
+            "purchase_order",
+            "item",
+            "quantity_ordered",
+            "quantity_received",
+            "unit_cost",
+            "line_total"
+          ],
+          "normalised_columns": [
+            "id",
+            "line",
+            "purchase_order",
+            "item",
+            "quantity_ordered",
+            "quantity_received",
+            "unit_cost",
+            "line_total"
+          ],
+          "vertical": "supply_chain",
+          "atom_canonical_id": "supply_chain_purchase_order_lines_ERP_record",
+          "confidence": 0.15,
+          "row_count": 1257
+        }
+      ]
+    },
+    {
+      "file_id": "a6c3a270",
+      "filename": "claim.csv",
+      "uploaded_at": "2026-09-01T06:58:02.840927Z",
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "claim",
+          "original_sheet_name": "claim",
+          "col_fingerprint": "e2038cbc568c",
+          "content_hash": "5437dd946b99193c",
+          "columns": [
+            "id",
+            "date",
+            "type",
+            "status",
+            "counterparty_type",
+            "supplier",
+            "shipment",
+            "item",
+            "reason_code",
+            "closed_date",
+            "amount_filed",
+            "amount_paid",
+            "days_open"
+          ],
+          "normalised_columns": [
+            "id",
+            "date",
+            "type",
+            "status",
+            "counterparty_type",
+            "supplier",
+            "shipment",
+            "item",
+            "reason_code",
+            "closed_date",
+            "amount_filed",
+            "amount_paid",
+            "days_open"
+          ],
+          "vertical": "retail_shopify",
+          "atom_canonical_id": "retail_shopify_order_status_history_ERP_state",
+          "confidence": 0.0462,
+          "row_count": 420
+        }
+      ]
+    },
+    {
+      "file_id": "90006fc0",
+      "filename": "purchase_order.csv",
+      "uploaded_at": "2026-09-01T06:58:03.025305Z",
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "purchase_order",
+          "original_sheet_name": "purchase_order",
+          "col_fingerprint": "1b1d39cc1898",
+          "content_hash": "dea87a33e08d9284",
+          "columns": [
+            "id",
+            "date",
+            "supplier",
+            "warehouse",
+            "status",
+            "expected_date",
+            "total"
+          ],
+          "normalised_columns": [
+            "id",
+            "date",
+            "supplier",
+            "warehouse",
+            "status",
+            "expected_date",
+            "total"
+          ],
+          "vertical": "retail_shopify",
+          "atom_canonical_id": "retail_shopify_payments_ERP_record",
+          "confidence": 0.0429,
+          "row_count": 420
+        }
+      ]
+    },
+    {
+      "file_id": "6ecf94df",
+      "filename": "Supply_chain_inventory.csv",
+      "uploaded_at": "2026-09-01T09:20:35.109195Z",
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "supply_chain_inventory",
+          "original_sheet_name": "supply_chain_inventory",
+          "col_fingerprint": "17da194477a3",
+          "content_hash": "0ba4a6106d1eb905",
+          "columns": [
+            "id",
+            "as_of",
+            "item",
+            "warehouse",
+            "lot",
+            "status",
+            "quantity_on_hand",
+            "quantity_allocated",
+            "unit_cost",
+            "ownership",
+            "expiry_date",
+            "received_date"
+          ],
+          "normalised_columns": [
+            "id",
+            "as_of",
+            "item",
+            "warehouse",
+            "lot",
+            "status",
+            "quantity_on_hand",
+            "quantity_allocated",
+            "unit_cost",
+            "ownership",
+            "expiry_date",
+            "received_date"
+          ],
+          "vertical": "supply_chain",
+          "atom_canonical_id": "supply_chain_suppliers_ERP_dimension",
+          "confidence": 0.775,
+          "row_count": 219
+        }
+      ]
+    },
+    {
+      "file_id": "92348cce",
+      "filename": "supply_chain_supplier.csv",
+      "uploaded_at": "2026-09-01T10:34:50.758519Z",
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "supply_chain_supplier",
+          "original_sheet_name": "supply_chain_supplier",
+          "col_fingerprint": "c15330d9479a",
+          "content_hash": "1b5b8a7d15507eaa",
+          "columns": [
+            "id",
+            "name",
+            "category",
+            "country",
+            "terms",
+            "lead_time_days",
+            "reliability_score",
+            "onboarded_date"
+          ],
+          "normalised_columns": [
+            "id",
+            "name",
+            "category",
+            "country",
+            "terms",
+            "lead_time_days",
+            "reliability_score",
+            "onboarded_date"
+          ],
+          "vertical": "supply_chain",
+          "atom_canonical_id": "supply_chain_suppliers_ERP_dimension",
+          "confidence": 0.85,
+          "row_count": 14
+        }
+      ]
+    },
+    {
+      "file_id": "34b974fb",
+      "filename": "supply_chain_financials.xlsx",
+      "uploaded_at": "2026-09-02T06:29:24.977396Z",
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "supply_chain_financials",
+          "original_sheet_name": "supply_chain_financials",
+          "col_fingerprint": "29afbf0d793c",
+          "content_hash": "0b813b5683164765",
+          "columns": [
+            "transaction_id",
+            "date",
+            "product_category",
+            "units_sold",
+            "unit_selling_price",
+            "unit_cost_of_goods",
+            "revenue",
+            "cost_of_goods_sold",
+            "gross_profit",
+            "gross_profit_margin",
+            "operating_expenses",
+            "operating_profit",
+            "net_profit",
+            "net_profit_margin"
+          ],
+          "normalised_columns": [
+            "transaction_id",
+            "date",
+            "product_category",
+            "units_sold",
+            "unit_selling_price",
+            "unit_cost_of_goods",
+            "revenue",
+            "cost_of_goods_sold",
+            "gross_profit",
+            "gross_profit_margin",
+            "operating_expenses",
+            "operating_profit",
+            "net_profit",
+            "net_profit_margin"
+          ],
+          "vertical": "supply_chain",
+          "atom_canonical_id": null,
+          "confidence": 1.0,
+          "row_count": 35
+        }
+      ]
+    }
+  ],
+  "column_cache": {
+    "995af01879f2": {
+      "vertical": "supply_chain",
+      "atom_canonical_id": "supply_chain_purchase_order_lines_ERP_record",
+      "confidence": 0.15,
+      "canonical_map": {
+        "id": "id",
+        "line": "line",
+        "purchase_order": "purchase_order",
+        "item": "item",
+        "quantity_ordered": "quantity_ordered",
+        "quantity_received": "quantity_received",
+        "unit_cost": "unit_cost",
+        "line_total": "line_total"
+      },
+      "grain_keys": [
+        "po_line_id"
+      ],
+      "content_hash": "bddefee6c595f76c",
+      "first_seen": "2026-09-01T06:58:02.684094Z",
+      "hit_count": 0
+    },
+    "e2038cbc568c": {
+      "vertical": "retail_shopify",
+      "atom_canonical_id": "retail_shopify_order_status_history_ERP_state",
+      "confidence": 0.0462,
+      "canonical_map": {
+        "id": "id",
+        "date": "date",
+        "type": "type",
+        "status": "status",
+        "counterparty_type": "counterparty_type",
+        "supplier": "supplier",
+        "shipment": "shipment",
+        "item": "item",
+        "reason_code": "reason_code",
+        "closed_date": "closed_date",
+        "amount_filed": "amount_filed",
+        "amount_paid": "amount_paid",
+        "days_open": "days_open"
+      },
+      "grain_keys": [
+        "order_id",
+        "status_updated_at"
+      ],
+      "content_hash": "5437dd946b99193c",
+      "first_seen": "2026-09-01T06:58:02.840927Z",
+      "hit_count": 0
+    },
+    "1b1d39cc1898": {
+      "vertical": "retail_shopify",
+      "atom_canonical_id": "retail_shopify_payments_ERP_record",
+      "confidence": 0.0429,
+      "canonical_map": {
+        "id": "id",
+        "date": "date",
+        "supplier": "supplier",
+        "warehouse": "warehouse",
+        "status": "status",
+        "expected_date": "expected_date",
+        "total": "total"
+      },
+      "grain_keys": [
+        "transaction_id"
+      ],
+      "content_hash": "dea87a33e08d9284",
+      "first_seen": "2026-09-01T06:58:03.025305Z",
+      "hit_count": 0
+    },
+    "17da194477a3": {
+      "vertical": "supply_chain",
+      "atom_canonical_id": "supply_chain_suppliers_ERP_dimension",
+      "confidence": 0.775,
+      "canonical_map": {
+        "id": "id",
+        "as_of": "as_of",
+        "item": "item",
+        "warehouse": "warehouse",
+        "lot": "lot",
+        "status": "status",
+        "quantity_on_hand": "quantity_on_hand",
+        "quantity_allocated": "quantity_allocated",
+        "unit_cost": "unit_cost",
+        "ownership": "ownership",
+        "expiry_date": "expiry_date",
+        "received_date": "received_date"
+      },
+      "grain_keys": [
+        "supplier_id"
+      ],
+      "content_hash": "0ba4a6106d1eb905",
+      "first_seen": "2026-09-01T09:20:35.109195Z",
+      "hit_count": 0
+    },
+    "c15330d9479a": {
+      "vertical": "supply_chain",
+      "atom_canonical_id": "supply_chain_suppliers_ERP_dimension",
+      "confidence": 0.85,
+      "canonical_map": {
+        "id": "id",
+        "name": "name",
+        "category": "category",
+        "country": "country",
+        "terms": "terms",
+        "lead_time_days": "lead_time_days",
+        "reliability_score": "reliability_score",
+        "onboarded_date": "onboarded_date"
+      },
+      "grain_keys": [
+        "supplier_id"
+      ],
+      "content_hash": "1b5b8a7d15507eaa",
+      "first_seen": "2026-09-01T10:34:50.758519Z",
+      "hit_count": 0
+    },
+    "29afbf0d793c": {
+      "vertical": "supply_chain",
+      "atom_canonical_id": null,
+      "confidence": 1.0,
+      "canonical_map": {
+        "transaction_id": "transaction_id",
+        "date": "date",
+        "product_category": "product_category",
+        "units_sold": "units_sold",
+        "unit_selling_price": "unit_selling_price",
+        "unit_cost_of_goods": "unit_cost_of_goods",
+        "revenue": "revenue",
+        "cost_of_goods_sold": "cost_of_goods_sold",
+        "gross_profit": "gross_profit",
+        "gross_profit_margin": "gross_profit_margin",
+        "operating_expenses": "operating_expenses",
+        "operating_profit": "operating_profit",
+        "net_profit": "net_profit",
+        "net_profit_margin": "net_profit_margin"
+      },
+      "grain_keys": [],
+      "content_hash": "0b813b5683164765",
+      "first_seen": "2026-09-02T05:33:40.168372Z",
+      "hit_count": 1
+    }
+  }
+}

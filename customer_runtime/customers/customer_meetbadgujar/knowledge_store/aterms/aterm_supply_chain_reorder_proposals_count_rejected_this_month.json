@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_reorder_proposals_count_rejected_this_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_reorder_proposals_count_rejected_this_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "reorder_proposals",
+    "measure": "count",
+    "state": "Rejected",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 1.0,
+  "formula_line": "MEASURE_MONTH_FIXED('supply_chain_reorder_proposals_ERP_record', 'proposal_date', 'COUNT_DISTINCT', 'proposal_id', 'this_month', [{'field': 'proposal_status', 'op': '=', 'value': 'Rejected'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution_stable",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "How many Rejected reorder_proposalss are there this month?",
+  "wave": 3,
+  "operator": "MEASURE_MONTH_FIXED",
+  "verified_at": "2026-09-02T06:49:05Z"
+}

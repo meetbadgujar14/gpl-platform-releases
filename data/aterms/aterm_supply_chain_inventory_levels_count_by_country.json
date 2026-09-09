@@ -1,0 +1,33 @@
+{
+  "id": "aterm:supply_chain_inventory_levels_count_by_country",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_levels_count_by_country",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_levels",
+    "measure": "count",
+    "state": "all",
+    "scope": "by_country",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Canada": 5.0,
+    "UK": 5.0,
+    "USA": 10.0
+  },
+  "formula_line": "MEASURE_GROUPED(COUNT_DISTINCT(item_id) FROM supply_chain_inventory_levels_WMS_state JOIN supply_chain_warehouse_locations_WMS_dimension ON location_id=location_id GROUP BY country)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:47Z",
+  "usage_count": 0,
+  "source_goal": "How many inventory_levelss by country?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

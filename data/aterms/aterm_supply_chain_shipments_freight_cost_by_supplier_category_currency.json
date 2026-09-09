@@ -1,0 +1,41 @@
+{
+  "id": "aterm:supply_chain_shipments_freight_cost_by_supplier_category_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shipments_freight_cost_by_supplier_category_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shipments",
+    "measure": "freight_cost",
+    "state": "all",
+    "scope": "by_supplier_category",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Agricultural Products": 8120.0,
+    "Chemicals": 19290.25,
+    "Electronic Components": 1980.0,
+    "Logistics": 14747.75,
+    "MRO Supplies": 3560.0,
+    "Machined Parts": 19977.0,
+    "Metal Fabrication": 10241.5,
+    "Plastics & Polymers": 11150.75,
+    "Raw Materials": 15871.5,
+    "Safety & PPE": 2995.5,
+    "Textiles": 5312.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(freight_cost) FROM supply_chain_shipments_WMS_record JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY supplier_category)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:47Z",
+  "usage_count": 0,
+  "source_goal": "What is the total freight cost of shipmentss by supplier category?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:49Z"
+}

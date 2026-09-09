@@ -1,0 +1,40 @@
+{
+  "id": "aterm:supply_chain_suppliers_quantity_on_hand_count_by_supplier_category",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_quantity_on_hand_count_by_supplier_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "quantity_on_hand",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_supplier_category"
+  },
+  "oracle_value": {
+    "Chemicals": 0.0,
+    "Cold Storage & Logistics": 0.0,
+    "Components & Parts": 0.0,
+    "Freight & Transportation": 0.0,
+    "IT & Technology": 0.0,
+    "MRO": 0.0,
+    "Packaging": 0.0,
+    "Raw Materials": 0.0,
+    "Safety & Compliance": 0.0,
+    "Textiles & Fabric": 0.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_suppliers_ERP_dimension', 'SUM', 'quantity_on_hand', 'supplier_category', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T09:43:57Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quantity on hand of supplierss by supplier category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:07Z"
+}

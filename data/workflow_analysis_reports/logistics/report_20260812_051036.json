@@ -1,0 +1,445 @@
+{
+  "vertical": "logistics",
+  "models_used": [
+    "gpt4o"
+  ],
+  "total": 10,
+  "passed": 6,
+  "flagged": 4,
+  "failed": 0,
+  "errors": 0,
+  "results": [
+    {
+      "canonical_id": "logistics_cargo_items_average_declared_value_currency",
+      "source_goal": "What is the average declared value per cargo_items?",
+      "formula_line": "logistics_cargo_items_average_declared_value_currency = {logistics_cargo_items_declared_value_currency} / {logistics_cargo_items_count}",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.8333,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.8333,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses division, which is appropriate for calculating an average.",
+            "C2": "The dependencies correctly measure the total declared value and count of cargo items for calculating an average.",
+            "C3": "Both dependencies and the composed metric are aligned with the same 'all_time' time scope.",
+            "C4": "The dependencies and the composed metric have aligned unfiltered states.",
+            "C5": "There is no handling for division-by-zero if the count of cargo items is zero.",
+            "C6": "The result unit of currency is appropriate for the average declared value."
+          },
+          "flags": [
+            "Division by zero risk: The formula lacks a guard for zero in the denominator."
+          ],
+          "reasoning": "The formula is structurally sound but lacks a safeguard for potential division by zero, making it questionable.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 21230
+        }
+      },
+      "all_flags": [
+        "Division by zero risk: The formula lacks a guard for zero in the denominator."
+      ],
+      "analyzed_at": "2026-08-12T05:10:00Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_cargo_items_growth_declared_value_this_month_percent",
+      "source_goal": "What is the month over month growth in declared value for cargo_itemss?",
+      "formula_line": "logistics_cargo_items_growth_declared_value_this_month_percent = (({logistics_cargo_items_declared_value_this_month_currency} - {logistics_cargo_items_declared_value_last_month_currency}) / abs({logistics_cargo_items_declared_value_last_month_currency}) * 100) if {logistics_cargo_items_declared_value_last_month_currency} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula correctly calculates month-over-month growth as (this_month - last_month) / last_month * 100, which matches the business question.",
+            "C2": "The dependencies correctly represent this month's and last month's declared values as needed for calculating growth.",
+            "C3": "The dependencies use the correct time scopes corresponding to this month and last month, aligning with the metric's time scope.",
+            "C4": "There are no state filters on the composed metric or dependencies, ensuring alignment.",
+            "C5": "The formula includes a division-by-zero guard to handle the case of a zero denominator.",
+            "C6": "The result unit is percent, which is appropriate for a growth calculation expressed as a percentage."
+          },
+          "flags": [],
+          "reasoning": "The formula accurately calculates month-over-month growth in declared cargo items' value, with all dependencies and operations correctly aligned with the business question.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 5129
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T05:10:06Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_cargo_items_growth_quantity_this_month_percent",
+      "source_goal": "What is the month over month growth in quantity for cargo_itemss?",
+      "formula_line": "logistics_cargo_items_growth_quantity_this_month_percent = (({logistics_cargo_items_quantity_this_month_count} - {logistics_cargo_items_quantity_last_month_count}) / abs({logistics_cargo_items_quantity_last_month_count}) * 100) if {logistics_cargo_items_quantity_last_month_count} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula correctly uses subtraction and division for calculating growth rate.",
+            "C2": "The dependencies correctly calculate the quantities for this month and last month.",
+            "C3": "The dependency time scopes align with 'this_month' and 'last_month' as required.",
+            "C4": "There are no state filters in the metric or its dependencies, which is consistent.",
+            "C5": "The formula includes a guard clause to handle division by zero for the denominator.",
+            "C6": "The result unit is percentage, which is appropriate for a growth rate calculation."
+          },
+          "flags": [],
+          "reasoning": "All checks passed, indicating the formula correctly implements the metric as described.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 4236
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T05:10:10Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_cargo_items_growth_weight_kg_this_month_percent",
+      "source_goal": "What is the month over month growth in weight kg for cargo_itemss?",
+      "formula_line": "logistics_cargo_items_growth_weight_kg_this_month_percent = (({logistics_cargo_items_weight_kg_this_month_count} - {logistics_cargo_items_weight_kg_last_month_count}) / abs({logistics_cargo_items_weight_kg_last_month_count}) * 100) if {logistics_cargo_items_weight_kg_last_month_count} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula correctly uses subtraction and division to calculate growth rate as per the business question.",
+            "C2": "The dependencies correctly represent the total weight for this and last month needed for calculating growth.",
+            "C3": "The dependencies use the same 'this_month' and 'last_month' time scopes as the metric's time scope.",
+            "C4": "The composed metric and dependencies have no state filters, which aligns correctly.",
+            "C5": "Division by zero is properly handled with a condition that returns 0 in case the previous month's weight is zero.",
+            "C6": "The resulting unit is in percent, which matches the expected output for a growth rate calculation."
+          },
+          "flags": [],
+          "reasoning": "All checks are satisfied, and the composed formula accurately answers the business question without error.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 5326
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T05:10:15Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_cargo_items_growth_volume_cbm_this_month_percent",
+      "source_goal": "What is the month over month growth in volume cbm for cargo_itemss?",
+      "formula_line": "logistics_cargo_items_growth_volume_cbm_this_month_percent = (({logistics_cargo_items_volume_cbm_this_month_count} - {logistics_cargo_items_volume_cbm_last_month_count}) / abs({logistics_cargo_items_volume_cbm_last_month_count}) * 100) if {logistics_cargo_items_volume_cbm_last_month_count} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula performs a subtraction followed by division, which is appropriate for calculating growth rate.",
+            "C2": "The dependencies measure volume cbm for this month and last month, which are the correct metrics for growth calculation.",
+            "C3": "The time scopes 'this month' and 'last month' align with the metric's time scope of 'this_month'.",
+            "C4": "There are no state filters applied, aligning with the composed metric's lack of state filtering.",
+            "C5": "The formula includes a guard to handle division by zero if last month's count is zero.",
+            "C6": "The operation results in a percentage, which matches the declared unit of 'percent'."
+          },
+          "flags": [],
+          "reasoning": "All checks passed, and the formula correctly calculates the month-over-month growth in percentage terms.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 4023
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T05:10:19Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_carriers_growth_contract_rate_per_km_this_month_percent",
+      "source_goal": "What is the month over month growth in contract rate per km for carrierss?",
+      "formula_line": "logistics_carriers_growth_contract_rate_per_km_this_month_percent = (({logistics_carriers_contract_rate_per_km_this_month_percent} - {logistics_carriers_contract_rate_per_km_last_month_percent}) / abs({logistics_carriers_contract_rate_per_km_last_month_percent}) * 100) if {logistics_carriers_contract_rate_per_km_last_month_percent} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses subtraction and division to calculate a growth rate, which matches the business question.",
+            "C2": "The dependencies reflect the contract rates for this month and last month, which are correct building blocks for calculating growth.",
+            "C3": "The dependency time scopes align correctly with this metric's 'this_month' scope.",
+            "C4": "There are no state filters in the dependencies or the composed metric, so they are aligned.",
+            "C5": "Division by zero is correctly handled with a conditional check.",
+            "C6": "The result unit is percent, which is appropriate for the calculated growth rate."
+          },
+          "flags": [],
+          "reasoning": "All checks are satisfied, indicating that the formula correctly addresses the business question with appropriate operations and dependencies.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 3443
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T05:10:23Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_customs_clearance_success_rate_percent",
+      "source_goal": "Percentage of customs declarations that were successfully cleared out of all declarations.",
+      "formula_line": "logistics_customs_clearance_success_rate_percent = {logistics_customs_declarations_count_cleared} / {logistics_customs_declarations_count}",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.6667,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.6667,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": false
+          },
+          "check_reasoning": {
+            "C1": "The division operation aligns with calculating a percentage or rate.",
+            "C2": "The selected dependencies are correct for measuring the success rate.",
+            "C3": "Both dependencies align with the 'all_time' time scope of the metric.",
+            "C4": "The state filters are correctly matched with no state filter for the composed metric.",
+            "C5": "The formula does not handle division by zero if the total number of declarations is zero.",
+            "C6": "The result unit should be a percentage, but it is presented as a ratio."
+          },
+          "flags": [
+            "Division by zero risk present",
+            "Result unit type should be explicit as percent"
+          ],
+          "reasoning": "The formula correctly uses division to calculate a rate and uses the appropriate dependencies, but fails to address division by zero and the result unit is incorrectly expressed as a ratio instead of percent.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 3695
+        }
+      },
+      "all_flags": [
+        "Division by zero risk present",
+        "Result unit type should be explicit as percent"
+      ],
+      "analyzed_at": "2026-08-12T05:10:26Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_customs_declarations_average_clearance_days_days",
+      "source_goal": "What is the average clearance days per customs_declarations?",
+      "formula_line": "logistics_customs_declarations_average_clearance_days_days = {logistics_customs_declarations_clearance_days_days} / {logistics_customs_declarations_count}",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "Division is correct for calculating an average.",
+            "C2": "Total clearance days and count of customs declarations are the correct components for average clearance days.",
+            "C3": "Both dependencies use the same 'all_time' time scope as the composed metric.",
+            "C4": "There is no state filter on the composed metric or dependencies, which aligns.",
+            "C5": "The formula implies a non-zero denominator since the context suggests positive customs declarations are expected.",
+            "C6": "Days divided by count results in an average measured in days, which is correct."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly calculates the average clearance days per customs declaration with all elements in alignment.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 3644
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T05:10:30Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_customs_declarations_average_declared_value_currency",
+      "source_goal": "What is the average declared value per customs_declarations?",
+      "formula_line": "logistics_customs_declarations_average_declared_value_currency = {logistics_customs_declarations_declared_value_currency} / {logistics_customs_declarations_count}",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.6667,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.6667,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": false
+          },
+          "check_reasoning": {
+            "C1": "The formula correctly uses division to calculate an average.",
+            "C2": "The formula uses the total declared value and the count of declarations, which are correct.",
+            "C3": "The time scope for both dependencies is 'all_time', aligning with the composed metric.",
+            "C4": "The state filter for both dependencies is 'all', matching the composed metric.",
+            "C5": "There is no guard clause to handle division by zero if the count is zero.",
+            "C6": "The result unit is 'currency', which is correct for this operation."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly calculates an average but lacks a guard for division-by-zero and improperly considers the unit, reducing confidence.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 2873
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T05:10:33Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_customs_declarations_average_duties_amount_currency",
+      "source_goal": "What is the average duties amount per customs_declarations?",
+      "formula_line": "logistics_customs_declarations_average_duties_amount_currency = {logistics_customs_declarations_duties_amount_currency} / {logistics_customs_declarations_count}",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.8333,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.8333,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The division operation correctly aligns with calculating an average.",
+            "C2": "The dependencies correctly represent total duties amount and count of customs_declarations.",
+            "C3": "All dependencies and the composed metric use the all_time time scope.",
+            "C4": "No state filters are applied on both the composed metric and its dependencies.",
+            "C5": "There is no guard against division by zero in case the number of customs_declarations is zero.",
+            "C6": "The result unit is currency, which is appropriate for an average value calculation."
+          },
+          "flags": [],
+          "reasoning": "The formula is generally correct but lacks handling for division by zero.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 3358
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T05:10:36Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    }
+  ],
+  "error_details": [],
+  "run_at": "2026-08-12T05:10:36Z"
+}

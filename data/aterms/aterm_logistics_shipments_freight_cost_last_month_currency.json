@@ -1,0 +1,29 @@
+{
+  "id": "aterm:logistics_shipments_freight_cost_last_month_currency",
+  "type": "Aterm",
+  "canonical_id": "logistics_shipments_freight_cost_last_month_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "shipments",
+    "measure": "freight_cost",
+    "state": "all",
+    "scope": "total",
+    "time": "last_month",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_MONTH_FIXED(SUM(freight_cost) FROM logistics_shipments_ERP_record WHERE booked_date IN 2026-06)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-07-22T09:51:15Z",
+  "usage_count": 0,
+  "source_goal": "What is the total freight cost of shipmentss last month?",
+  "wave": 3,
+  "operator": "MEASURE_MONTH_FIXED",
+  "verified_at": "2026-07-22T12:18:44Z"
+}

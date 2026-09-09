@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_invoices_growth_discount_amount_this_month_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_invoices_growth_discount_amount_this_month_percent",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "invoices",
+    "measure": "growth_discount_amount",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 454.07239819004525,
+  "formula_line": "supply_chain_invoices_growth_discount_amount_this_month_percent = (({supply_chain_invoices_discount_amount_this_month_currency} - {supply_chain_invoices_discount_amount_last_month_currency}) / abs({supply_chain_invoices_discount_amount_last_month_currency}) * 100) if {supply_chain_invoices_discount_amount_last_month_currency} != 0 else 0",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-09-01T07:54:53Z",
+  "usage_count": 0,
+  "source_goal": "What is the month over month growth in discount amount for invoicess?",
+  "wave": 6,
+  "depends_on": [
+    "supply_chain_invoices_discount_amount_this_month_currency",
+    "supply_chain_invoices_discount_amount_last_month_currency"
+  ],
+  "dep_values": {
+    "supply_chain_invoices_discount_amount_this_month_currency": 4898.0,
+    "supply_chain_invoices_discount_amount_last_month_currency": 884.0
+  },
+  "verified_at": "2026-09-02T06:49:07Z"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_inventory_transactions_count_ytd",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_transactions_count_ytd",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_transactions",
+    "measure": "count",
+    "state": "all",
+    "scope": "total",
+    "time": "ytd",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 19.0,
+  "formula_line": "MEASURE_YTD('supply_chain_inventory_transactions_WMS_event', 'transaction_date', 'COUNT_DISTINCT', 'transaction_id', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:38Z",
+  "usage_count": 0,
+  "source_goal": "How many inventory_transactionss are there ytd?",
+  "wave": 3,
+  "operator": "MEASURE_YTD",
+  "verified_at": "2026-09-02T06:49:04Z"
+}

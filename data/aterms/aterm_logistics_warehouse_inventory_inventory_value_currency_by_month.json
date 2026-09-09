@@ -1,0 +1,43 @@
+{
+  "id": "aterm:logistics_warehouse_inventory_inventory_value_currency_by_month",
+  "type": "Aterm",
+  "canonical_id": "logistics_warehouse_inventory_inventory_value_currency_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "warehouse_inventory",
+    "measure": "inventory_value",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2023-07": 225000.0,
+    "2023-08": 382500.0,
+    "2023-09": 387500.0,
+    "2023-10": 425000.0,
+    "2023-11": 360000.0,
+    "2023-12": 142100.0,
+    "2024-01": 194600.0,
+    "2024-02": 228000.0,
+    "2024-03": 255000.0,
+    "2024-04": 136800.0,
+    "2024-05": 41400.0,
+    "2024-06": 123000.0,
+    "2024-07": 115500.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(inventory_value) FROM logistics_warehouse_inventory_WMS_state GROUP BY BUCKET(snapshot_date, month))",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:18Z",
+  "usage_count": 0,
+  "source_goal": "What is the total inventory value of warehouse_inventorys by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:46Z"
+}

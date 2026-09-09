@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_invoices_average_days_to_pay_days",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_invoices_average_days_to_pay_days",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "invoices",
+    "measure": "average_days_to_pay",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": 22.681818181818183,
+  "formula_line": "supply_chain_invoices_average_days_to_pay_days = {supply_chain_invoices_days_to_pay_days} / {supply_chain_invoices_count}",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-07-22T12:17:51Z",
+  "usage_count": 0,
+  "source_goal": "What is the average days to pay per invoices?",
+  "wave": 5,
+  "depends_on": [
+    "supply_chain_invoices_days_to_pay_days",
+    "supply_chain_invoices_count"
+  ],
+  "dep_values": {
+    "supply_chain_invoices_days_to_pay_days": 499.0,
+    "supply_chain_invoices_count": 22.0
+  },
+  "verified_at": "2026-07-22T12:18:53Z"
+}

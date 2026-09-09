@@ -1,0 +1,33 @@
+{
+  "id": "aterm:supply_chain_lead_times_count_by_supplier_tier",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_lead_times_count_by_supplier_tier",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "lead_times",
+    "measure": "count",
+    "state": "all",
+    "scope": "by_supplier_tier",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Tier 1": 3.0,
+    "Tier 2": 4.0,
+    "Tier 3": 1.0
+  },
+  "formula_line": "MEASURE_GROUPED(COUNT_DISTINCT(supplier_id) FROM supply_chain_lead_times_ERP_snapshot JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY supplier_tier)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "How many lead_timess by supplier tier?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

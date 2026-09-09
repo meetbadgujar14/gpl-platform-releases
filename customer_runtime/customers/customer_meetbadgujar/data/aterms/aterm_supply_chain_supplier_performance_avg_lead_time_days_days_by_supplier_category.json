@@ -1,0 +1,37 @@
+{
+  "id": "aterm:supply_chain_supplier_performance_avg_lead_time_days_days_by_supplier_category",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_supplier_performance_avg_lead_time_days_days_by_supplier_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "supplier_performance",
+    "measure": "avg_lead_time_days",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "days",
+    "series": "by_supplier_category"
+  },
+  "oracle_value": {
+    "Chemicals": 6.833333333333333,
+    "Components": 5.3999999999999995,
+    "Electronics": 13.85,
+    "Hardware": 2.9,
+    "Packaging": 3.1999999999999997,
+    "Raw Materials": 8.6,
+    "Transportation": 4.475
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_supplier_performance_ERP_snapshot', 'AVG', 'avg_lead_time_days', 'supplier_category', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "What is the total avg lead time days of supplier_performances by supplier category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

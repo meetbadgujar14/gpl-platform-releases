@@ -1,0 +1,21 @@
+item_id,forecast_period_date,item_name,item_category,forecast_method,period_type,forecasted_quantity,actual_quantity,forecast_error,forecast_accuracy_rate
+ITM-6389,2024-01-01,Industrial Ball Bearings 6205,Mechanical Components,Moving Average,Monthly,1250,1187,63,94.97
+ITM-7394,2024-01-01,Hydraulic Pump Assembly HPA-300,Fluid Power Equipment,Exponential Smoothing,Monthly,340,318,22,93.53
+ITM-7394,2024-02-01,Stainless Steel Fastener Set M8,Fasteners & Hardware,Linear Regression,Monthly,4800,5120,-320,93.75
+ITM-1589,2024-02-01,PVC Insulated Cable 10AWG,Electrical Supplies,ARIMA,Monthly,9200,8850,350,96.05
+ITM-8740,2024-03-01,Safety Gloves Cut-Resistant L,Personal Protective Equipment,Seasonal Decomposition,Monthly,620,574,46,91.98
+ITM-2931,2024-03-01,Pneumatic Actuator PAC-150,Automation Components,Exponential Smoothing,Monthly,185,202,-17,91.58
+ITM-8740,2024-04-01,Polyethylene Packaging Film 50mu,Packaging Materials,Moving Average,Monthly,7400,7215,185,97.44
+ITM-2931,2024-04-01,Digital Pressure Gauge DPG-80,Instrumentation,ARIMA,Monthly,95,112,-17,84.82
+ITM-6603,2024-05-01,Conveyor Belt Rubber 500mm,Material Handling,Linear Regression,Monthly,430,398,32,91.96
+ITM-6389,2024-05-01,Industrial Lubricant ISO 46,Lubricants & Chemicals,Seasonal Decomposition,Monthly,2100,2260,-160,92.92
+ITM-8740,2024-06-01,Welding Electrode E6013 3.2mm,Welding Supplies,Moving Average,Monthly,3600,3420,180,94.74
+ITM-4172,2024-06-01,Electric Motor 3HP 1800RPM,Electric Motors,Exponential Smoothing,Monthly,78,85,-7,91.76
+ITM-8740,2024-07-01,Stainless Steel Pipe 2-inch SCH40,Piping & Fittings,ARIMA,Monthly,560,530,30,94.34
+ITM-8327,2024-07-01,High-Density Foam Padding 50mm,Packaging Materials,Linear Regression,Monthly,1850,1740,110,93.68
+ITM-6389,2024-08-01,Circuit Breaker 30A Single Pole,Electrical Supplies,Seasonal Decomposition,Monthly,420,465,-45,90.32
+ITM-2931,2024-08-01,Forklift Tyre 200/50-10,Material Handling,Moving Average,Monthly,64,71,-7,90.14
+ITM-2764,2024-09-01,Acetylene Gas Cylinder 40L,Welding Supplies,Exponential Smoothing,Monthly,130,122,8,93.44
+ITM-1589,2024-09-01,V-Belt Drive A-Section A42,Mechanical Components,ARIMA,Monthly,870,910,-40,95.6
+ITM-5067,2024-10-01,Anti-Static Work Boots Size 10,Personal Protective Equipment,Linear Regression,Monthly,145,138,7,94.93
+ITM-1247,2024-10-01,Solenoid Valve 24VDC 1/2-inch,Automation Components,Seasonal Decomposition,Monthly,210,195,15,92.31

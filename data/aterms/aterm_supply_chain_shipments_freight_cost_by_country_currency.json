@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_shipments_freight_cost_by_country_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shipments_freight_cost_by_country_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shipments",
+    "measure": "freight_cost",
+    "state": "all",
+    "scope": "by_country",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Brazil": 4680.75,
+    "Canada": 2995.5,
+    "China": 11190.75,
+    "Croatia": 11150.75,
+    "Egypt": 8120.0,
+    "India": 14747.75,
+    "Japan": 1980.0,
+    "Peru": 5312.0,
+    "Spain": 10241.5,
+    "Sweden": 19977.0,
+    "United Kingdom": 3560.0,
+    "United States": 19290.25
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(freight_cost) FROM supply_chain_shipments_WMS_record JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY country)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:47Z",
+  "usage_count": 0,
+  "source_goal": "What is the total freight cost of shipmentss by country?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:49Z"
+}

@@ -1,0 +1,803 @@
+{
+  "vertical": "logistics",
+  "models_used": [
+    "claude"
+  ],
+  "total": 18,
+  "passed": 14,
+  "flagged": 2,
+  "failed": 2,
+  "errors": 0,
+  "results": [
+    {
+      "canonical_id": "logistics_carriers_contract_rate_per_km_by_carrier_currency",
+      "source_goal": "Which carrier has the highest cost per km relative to contract rate — identifying over-spend carriers for renegotiation?",
+      "formula_line": "MEASURE_GROUPED('logistics_carriers_MANUAL_dimension', 'SUM', 'contract_rate_per_km', group_by_col='carrier_name', filters=None)",
+      "kind": "operator",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.8333,
+      "model_results": {
+        "claude": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.8333,
+          "checks": {
+            "O1": false,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "The business question asks which carrier has the highest cost per km RELATIVE to contract rate, implying a comparison or ratio; however, even if interpreted as 'show contract_rate_per_km by carrier', SUM is inappropriate for a per-km rate column — the rate is already a unit rate, so SUM would aggregate rates across rows rather than return a meaningful representative value; AVG or MAX would be more appropriate for identifying the highest rate per carrier.",
+            "O2": "The column 'contract_rate_per_km' directly corresponds to the contract rate per km metric referenced in the business question.",
+            "O3": "The atom 'logistics_carriers_MANUAL_dimension' matches the logistics domain and carriers entity, making it the correct source for carrier contract rate data.",
+            "O4": "The time scope is all_time and no time filter operator is applied, which is correct.",
+            "O5": "The GROUP BY field is 'carrier_name', which correctly groups results by carrier as required by the business question.",
+            "O6": "SUM of a currency-unit rate column produces a currency-type result, which matches the declared unit of currency."
+          },
+          "flags": [
+            "SUM is applied to a rate column (contract_rate_per_km), which is already a per-km value; summing rates across rows is mathematically dubious and likely overstates values for carriers with multiple records — AVG or MAX would better identify the highest rate.",
+            "The business question mentions 'relative to contract rate' suggesting an actual vs. contract comparison, but the formula only returns the contract rate itself with no actual cost comparison — the metric may not fully answer the over-spend identification goal."
+          ],
+          "reasoning": "While the source atom, column, grouping, and time scope are correct, using SUM on a rate column is semantically incorrect for identifying the highest per-km rate, and the formula does not capture actual vs. contract cost comparison implied by the business question.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 12019
+        }
+      },
+      "all_flags": [
+        "SUM is applied to a rate column (contract_rate_per_km), which is already a per-km value; summing rates across rows is mathematically dubious and likely overstates values for carriers with multiple records — AVG or MAX would better identify the highest rate.",
+        "The business question mentions 'relative to contract rate' suggesting an actual vs. contract comparison, but the formula only returns the contract rate itself with no actual cost comparison — the metric may not fully answer the over-spend identification goal."
+      ],
+      "analyzed_at": "2026-08-07T06:32:41Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_drivers_count_by_state_all_time_count",
+      "source_goal": "What is the driver workforce composition by employment type — count of Full-Time, Part-Time, and Contract drivers — for workforce planning overview?",
+      "formula_line": "MEASURE_GROUPED('logistics_drivers_MANUAL_dimension', 'COUNT', 'driver_id', group_by_col='employment_status', filters=None)",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "MEASURE_GROUPED is the correct operator for a 'by X' breakdown, and COUNT is appropriate for counting rows in a dimension table where each row represents one driver.",
+            "O2": "COUNT on driver_id is the correct column to count individual drivers in the workforce.",
+            "O3": "The atom 'logistics_drivers_MANUAL_dimension' matches the domain (logistics) and entity (drivers), making it the correct source.",
+            "O4": "The time scope is all_time with no time filter expected, and no time filter is applied in the formula, which is correct.",
+            "O5": "The GROUP BY field is 'employment_status', which directly corresponds to the business question asking for breakdown by employment type (Full-Time, Part-Time, Contract).",
+            "O6": "COUNT on driver_id produces a count unit, which matches the declared unit of 'count', and the computed results confirm distinct counts per employment type."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly uses MEASURE_GROUPED with COUNT on driver_id grouped by employment_status to produce a workforce composition breakdown by employment type, fully matching the business question.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 6748
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T06:32:48Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_drivers_total_trips_completed_by_state_count",
+      "source_goal": "Which driver employment type (Full-Time, Part-Time, Contract) has the highest average trips completed — informing workforce strategy for scaling delivery capacity?",
+      "formula_line": "MEASURE_GROUPED('logistics_drivers_MANUAL_dimension', 'AVG', 'total_trips_completed', group_by_col='employment_status', filters=None)",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "The business question asks for average trips completed by employment type, and the formula uses AVG via MEASURE_GROUPED, which is correct for computing averages in a breakdown.",
+            "O2": "The formula aggregates 'total_trips_completed', which is the correct column for measuring trips completed per driver.",
+            "O3": "The atom 'logistics_drivers_MANUAL_dimension' matches the domain (logistics) and entity (drivers), making it the correct source for driver-level data.",
+            "O4": "The time scope is all_time, so no time filter is expected, and none is applied in the formula — this is correct.",
+            "O5": "The formula groups by 'employment_status', which corresponds to the employment type breakdown (Full-Time, Part-Time, Contract) requested in the business question.",
+            "O6": "AVG applied to a count column (total_trips_completed) produces a count/numeric average, matching the declared unit of 'count'."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly uses AVG grouped by employment_status on the total_trips_completed column from the appropriate logistics drivers atom, with no time filter needed for all_time scope, and the computed results show meaningful differentiation across employment types.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 7384
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T06:32:56Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_incidents_average_resolution_days_resolved_days",
+      "source_goal": "What is the average incident resolution time in days across all resolved incidents — a measure of operational responsiveness?",
+      "formula_line": "MEASURE('logistics_incidents_ERP_record', 'AVG', 'resolution_days', [{'field': 'incident_status', 'op': '=', 'value': 'Resolved'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "The business question asks for an average resolution time, and the formula uses AVG, which is the correct aggregation function.",
+            "O2": "The formula aggregates 'resolution_days', which is the correct column for measuring incident resolution time in days.",
+            "O3": "The atom 'logistics_incidents_ERP_record' matches the domain (logistics) and entity (incidents) specified in the business question.",
+            "O4": "The time scope is 'all_time', so no time filter is expected, and none is present in the formula — this is correct.",
+            "O5": "The formula filters on 'incident_status' = 'Resolved', which correctly matches the state filter requirement of the metric.",
+            "O6": "AVG applied to a 'resolution_days' column produces a value in days, which matches the declared unit of 'days', and the computed result of 13.1333 is consistent with this."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly uses AVG on the resolution_days column from the appropriate logistics incidents atom, filtered to Resolved status with no time filter as expected for an all_time scope, producing a result in the correct unit of days.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 6952
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T06:33:02Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_incidents_claim_amount_by_state_ytd_currency",
+      "source_goal": "What is the incident portfolio summary — total claim amount and count broken down by incident state — providing executive visibility into unresolved operational risk?",
+      "formula_line": "MEASURE_GROUPED('logistics_incidents_ERP_record', 'SUM', 'claim_amount', group_by_col='incident_status', filters=None)",
+      "kind": "operator",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.8333,
+      "model_results": {
+        "claude": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.8333,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": false,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "MEASURE_GROUPED with SUM is correct for producing a breakdown of total claim amounts by incident state.",
+            "O2": "SUM('claim_amount') directly aggregates the claim amount column, which matches the business question asking for total claim amount.",
+            "O3": "The atom 'logistics_incidents_ERP_record' matches the domain (logistics) and entity (incidents) specified in the business question.",
+            "O4": "The metric is scoped as YTD but the formula uses MEASURE_GROUPED with filters=None, meaning no time filter is applied — a MEASURE_YTD or equivalent YTD filter is missing.",
+            "O5": "The GROUP BY on 'incident_status' correctly matches the business question's requirement to break down results by incident state.",
+            "O6": "SUM of a currency column (claim_amount) produces a currency result, matching the declared unit of currency."
+          },
+          "flags": [
+            "YTD time scope declared in metric metadata but no YTD time filter is applied in the formula (filters=None); this may cause the result to include all-time data rather than year-to-date data.",
+            "Business question also mentions 'count' broken down by incident state, but this formula only computes SUM of claim_amount — a companion COUNT_DISTINCT metric may be missing."
+          ],
+          "reasoning": "The formula correctly aggregates claim amounts by incident status using MEASURE_GROUPED with SUM, but fails to apply the required YTD time filter, meaning results likely reflect all-time data rather than year-to-date as declared.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 10088
+        }
+      },
+      "all_flags": [
+        "YTD time scope declared in metric metadata but no YTD time filter is applied in the formula (filters=None); this may cause the result to include all-time data rather than year-to-date data.",
+        "Business question also mentions 'count' broken down by incident state, but this formula only computes SUM of claim_amount — a companion COUNT_DISTINCT metric may be missing."
+      ],
+      "analyzed_at": "2026-08-07T06:33:13Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_incidents_claim_amount_under_investigation_this_quarter_currency",
+      "source_goal": "What is the total claim amount across all incidents currently under investigation — quantifying unresolved financial liability?",
+      "formula_line": "MEASURE_QUARTER_FIXED('logistics_incidents_ERP_record', 'incident_date', 'SUM', 'claim_amount', 'this_quarter', [{'field': 'incident_status', 'op': '=', 'value': 'Under Investigation'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "SUM is the correct aggregation for computing a total claim amount (currency value), matching 'total claim amount' in the business question.",
+            "O2": "The formula aggregates 'claim_amount', which is exactly the column needed to quantify financial liability from incidents.",
+            "O3": "The atom 'logistics_incidents_ERP_record' matches domain=logistics and entity=incidents, which aligns with the business question about logistics incidents.",
+            "O4": "MEASURE_QUARTER_FIXED is the correct time operator for a 'this_quarter' time scope.",
+            "O5": "The filter on 'incident_status' = 'Under Investigation' correctly matches the state filter specified in the metric definition.",
+            "O6": "SUM applied to a currency column (claim_amount) produces a currency result, matching the declared unit; a zero result does not indicate an error."
+          },
+          "flags": [],
+          "reasoning": "All six checks pass: the formula correctly uses SUM on claim_amount from the right logistics incidents atom, filtered to the current quarter and 'Under Investigation' status, producing a currency result as required.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 9870
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T06:33:22Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_incidents_count_under_investigation_this_quarter_count",
+      "source_goal": "How many incidents are currently Under Investigation this quarter — monitoring unresolved operational liability requiring management attention?",
+      "formula_line": "MEASURE_QUARTER_FIXED('logistics_incidents_ERP_record', 'incident_date', 'COUNT_DISTINCT', 'incident_id', 'this_quarter', [{'field': 'incident_status', 'op': '=', 'value': 'Under Investigation'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "COUNT_DISTINCT is correct for answering 'how many unique incidents' from a record table that may have multiple rows per incident.",
+            "O2": "incident_id is the correct column to count distinctly when measuring unique incident count.",
+            "O3": "logistics_incidents_ERP_record matches the domain (logistics) and entity (incidents) in the business question.",
+            "O4": "MEASURE_QUARTER_FIXED with 'this_quarter' is the correct operator for a this_quarter time scope.",
+            "O5": "The filter on incident_status = 'Under Investigation' correctly matches the state filter specified in the business question.",
+            "O6": "COUNT_DISTINCT on an ID column produces a count, which matches the declared unit of count."
+          },
+          "flags": [],
+          "reasoning": "All six checks pass: the formula correctly uses COUNT_DISTINCT(incident_id) on the right source atom, filtered to the current quarter and incident_status = 'Under Investigation', producing a count unit as required.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 6751
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T06:33:29Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_incidents_estimated_loss_value_closed_ytd_currency",
+      "source_goal": "What is the total estimated loss value from incidents that are closed — indicating the cumulative financial impact of resolved operational failures?",
+      "formula_line": "MEASURE_YTD('logistics_incidents_ERP_record', 'incident_date', 'SUM', 'estimated_loss_value', [{'field': 'incident_status', 'op': '=', 'value': 'Closed'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "SUM is correct for computing a total estimated loss value (a financial aggregate).",
+            "O2": "The formula aggregates 'estimated_loss_value', which directly matches the business question asking for total estimated loss value.",
+            "O3": "The atom 'logistics_incidents_ERP_record' matches the domain (logistics) and entity (incidents) specified in the business question.",
+            "O4": "MEASURE_YTD is the correct time operator for a year-to-date scope as indicated by the metric's time scope.",
+            "O5": "The filter applies incident_status = 'Closed', which correctly matches the state filter requirement for closed incidents.",
+            "O6": "SUM applied to a value column (estimated_loss_value) produces a currency result, matching the declared unit; the zero result is valid data, not an error."
+          },
+          "flags": [],
+          "reasoning": "All six checks pass: the formula correctly uses SUM on the estimated_loss_value column from the appropriate logistics incidents atom, with a YTD time filter and a Closed status filter, producing a currency result as required.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 8167
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T06:33:37Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_incidents_estimated_loss_value_in_progress_this_quarter_currency",
+      "source_goal": "What is the total estimated loss value of incidents currently In Progress this quarter — representing active unresolved financial exposure?",
+      "formula_line": "MEASURE_QUARTER_FIXED('logistics_incidents_ERP_record', 'incident_date', 'SUM', 'estimated_loss_value', 'this_quarter', [{'field': 'incident_status', 'op': '=', 'value': 'In Progress'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "SUM is the correct aggregation for computing a total estimated loss value (currency total).",
+            "O2": "The formula aggregates 'estimated_loss_value', which directly matches the business question asking for total estimated loss value.",
+            "O3": "The atom 'logistics_incidents_ERP_record' matches the domain (logistics) and entity (incidents) specified in the business question.",
+            "O4": "MEASURE_QUARTER_FIXED with 'this_quarter' is the correct time operator for a quarterly scope.",
+            "O5": "The WHERE filter on 'incident_status' = 'In Progress' correctly matches the state filter required by the business question.",
+            "O6": "SUM applied to a value column ('estimated_loss_value') correctly produces a currency result, matching the declared unit."
+          },
+          "flags": [],
+          "reasoning": "All six checks pass: the formula correctly uses SUM on estimated_loss_value from the right atom, filtered by the correct status and time scope, producing a currency result.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 6272
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T06:33:44Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_shipments_average_planned_delivery_days_in_transit_days",
+      "source_goal": "What is the average planned delivery days across all active shipments — indicating the standard order-to-ship cycle time in the network?",
+      "formula_line": "MEASURE('logistics_shipments_ERP_record', 'AVG', 'planned_delivery_days', [{'field': 'shipment_status', 'op': '=', 'value': 'In Transit'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "The business question asks for an average, and the formula uses AVG — this is the correct aggregation function.",
+            "O2": "The formula aggregates 'planned_delivery_days', which directly corresponds to the planned delivery days column the question is asking about.",
+            "O3": "The atom 'logistics_shipments_ERP_record' matches the domain (logistics) and entity (shipments) specified in the business question.",
+            "O4": "The time scope is all_time, so no time filter is expected or present — this is correct.",
+            "O5": "The filter on shipment_status = 'In Transit' correctly matches the state filter specified in the metric definition for active shipments.",
+            "O6": "AVG applied to a days column produces a days result, which matches the declared unit of 'days', and the computed result of 9.25 is a valid numeric day value."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly uses AVG on the planned_delivery_days column from the appropriate logistics shipments atom, with the correct state filter for In Transit shipments and no time filter as expected for all_time scope.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 7361
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T06:33:51Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_shipments_count_by_state_all_time_count",
+      "source_goal": "What is the overall shipment health breakdown — count of shipments in each state (Delivered, In Transit, Delayed, Processing, Cancelled) — for an executive pipeline view?",
+      "formula_line": "MEASURE_GROUPED('logistics_shipments_ERP_record', 'COUNT_DISTINCT', 'shipment_id', group_by_col='shipment_status', filters=None)",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "MEASURE_GROUPED with COUNT_DISTINCT is the correct aggregation for a breakdown count of unique shipments by state.",
+            "O2": "COUNT_DISTINCT on 'shipment_id' correctly counts unique shipments rather than rows or unrelated identifiers.",
+            "O3": "The atom 'logistics_shipments_ERP_record' matches the domain (logistics) and entity (shipments) of the business question.",
+            "O4": "The time scope is all_time, so no time filter is expected, and filters=None correctly reflects this.",
+            "O5": "GROUP BY 'shipment_status' correctly groups shipments by their state, matching the business question's breakdown requirement.",
+            "O6": "COUNT_DISTINCT produces a count unit, which matches the declared unit of 'count', and the result dictionary of integer counts confirms this."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly uses MEASURE_GROUPED with COUNT_DISTINCT on shipment_id grouped by shipment_status with no time filter, perfectly matching the all-time executive pipeline breakdown request.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 7465
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T06:33:58Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_shipments_count_delayed_this_month_count",
+      "source_goal": "How many shipments are currently in Delayed status this month — triggering operational escalation for SLA breach prevention?",
+      "formula_line": "MEASURE_MONTH_FIXED('logistics_shipments_ERP_record', 'booked_date', 'COUNT_DISTINCT', 'shipment_id', 'this_month', [{'field': 'shipment_status', 'op': '=', 'value': 'Delayed'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "COUNT_DISTINCT is correct for answering 'how many unique shipments' are in a given status.",
+            "O2": "COUNT_DISTINCT is applied to 'shipment_id', which is the correct column for counting unique shipments.",
+            "O3": "The atom 'logistics_shipments_ERP_record' matches the logistics domain and shipments entity from the business question.",
+            "O4": "MEASURE_MONTH_FIXED with 'this_month' is the correct time operator for a current-month scope.",
+            "O5": "The WHERE filter on 'shipment_status' = 'Delayed' correctly matches the state filter specified in the business question.",
+            "O6": "COUNT_DISTINCT on an ID column produces a count unit, which matches the declared unit of 'count'; the zero result is valid data, not an error."
+          },
+          "flags": [],
+          "reasoning": "All six checks pass: the formula correctly counts distinct shipment IDs from the logistics shipments ERP record table, filtered to the current month and Delayed status, matching the business question exactly.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 7472
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T06:34:06Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_shipments_count_processing_this_month_count",
+      "source_goal": "How many shipments are still in Processing status this month — indicating order preparation bottlenecks before dispatch?",
+      "formula_line": "MEASURE_MONTH_FIXED('logistics_shipments_ERP_record', 'booked_date', 'COUNT_DISTINCT', 'shipment_id', 'this_month', [{'field': 'shipment_status', 'op': '=', 'value': 'Processing'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "COUNT_DISTINCT is the correct aggregation for counting how many unique shipments exist, matching the 'how many' business question.",
+            "O2": "COUNT_DISTINCT is applied to 'shipment_id', which is the correct identifier for counting unique shipments.",
+            "O3": "The atom 'logistics_shipments_ERP_record' matches the domain (logistics) and entity (shipments) specified in the business question.",
+            "O4": "MEASURE_MONTH_FIXED with 'this_month' is the correct time operator for a current-month scoped metric.",
+            "O5": "The WHERE filter applies shipment_status = 'Processing', which exactly matches the state filter required by the business question.",
+            "O6": "COUNT_DISTINCT produces a count unit, which matches the declared unit of 'count'; a result of 0.0 does not indicate a formula error."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly uses COUNT_DISTINCT on shipment_id from the appropriate logistics shipments atom, filtered to the current month and Processing status, fully matching the business question.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 7355
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T06:34:13Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_shipments_freight_cost_cancelled_this_month_currency",
+      "source_goal": "What is the total freight cost of shipments cancelled this month — quantifying revenue lost to order cancellations for commercial review?",
+      "formula_line": "MEASURE_MONTH_FIXED('logistics_shipments_ERP_record', 'booked_date', 'SUM', 'freight_cost', 'this_month', [{'field': 'shipment_status', 'op': '=', 'value': 'Cancelled'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "SUM is the correct aggregation for computing a total freight cost value.",
+            "O2": "freight_cost is the correct column to sum when quantifying total freight cost of shipments.",
+            "O3": "logistics_shipments_ERP_record matches the logistics domain and shipments entity specified in the business question.",
+            "O4": "MEASURE_MONTH_FIXED with 'this_month' correctly scopes the metric to the current calendar month.",
+            "O5": "The filter on shipment_status = 'Cancelled' correctly matches the state filter requirement of the business question.",
+            "O6": "SUM of a freight_cost column (a monetary/currency field) correctly produces a currency unit result; the zero oracle value is not evidence of an error."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly uses SUM on freight_cost from the appropriate logistics shipments atom, scoped to this month with a Cancelled status filter, fully satisfying the business question.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 6667
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T06:34:20Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_shipments_freight_cost_delayed_this_quarter_currency",
+      "source_goal": "What is the total freight cost at risk from shipments currently in Delayed status — revenue exposure from SLA breaches?",
+      "formula_line": "MEASURE_QUARTER_FIXED('logistics_shipments_ERP_record', 'booked_date', 'SUM', 'freight_cost', 'this_quarter', [{'field': 'shipment_status', 'op': '=', 'value': 'Delayed'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "SUM is the correct aggregation for computing a total freight cost value, matching the 'total freight cost at risk' business question.",
+            "O2": "freight_cost is the correct column to SUM for a freight cost exposure metric.",
+            "O3": "logistics_shipments_ERP_record matches the logistics domain and shipments entity as required by the business question.",
+            "O4": "MEASURE_QUARTER_FIXED is the correct operator for a this_quarter time scope.",
+            "O5": "The filter on shipment_status = 'Delayed' correctly matches the STATE FILTER specified in the metric definition.",
+            "O6": "SUM applied to a freight_cost column produces a currency result, matching the declared unit of currency; a zero result does not invalidate this."
+          },
+          "flags": [],
+          "reasoning": "All six checks pass: the formula correctly uses SUM(freight_cost) on the right atom with the correct quarter-fixed time operator and a Delayed status filter, producing a currency result consistent with the business question.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 7866
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T06:34:28Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_shipments_freight_cost_insurance_cost_ratio_delivered_ytd_currency",
+      "source_goal": "What is the combined freight cost versus insurance cost ratio across all delivered shipments — revealing the total landed cost composition?",
+      "formula_line": "MEASURE_GROUPED('logistics_shipments_ERP_record', 'SUM', 'freight_cost', group_by_col='shipment_status', filters=[{'field': 'shipment_status', 'op': '=', 'value': 'Delivered'}])",
+      "kind": "operator",
+      "ensemble_verdict": "FAILED",
+      "ensemble_confidence": 0.3333,
+      "model_results": {
+        "claude": {
+          "verdict": "INCORRECT",
+          "confidence": 0.3333,
+          "checks": {
+            "O1": false,
+            "O2": false,
+            "O3": true,
+            "O4": false,
+            "O5": true,
+            "O6": false
+          },
+          "check_reasoning": {
+            "O1": "The business question asks for a ratio (freight_cost / insurance_cost) across delivered shipments, but the formula only computes a SUM of freight_cost with no ratio calculation or reference to insurance_cost.",
+            "O2": "The formula aggregates only 'freight_cost', but the business question requires both freight_cost and insurance_cost to compute a ratio; insurance_cost is entirely missing from the formula.",
+            "O3": "The atom 'logistics_shipments_ERP_record' correctly matches the logistics domain and shipments entity as required by the business question.",
+            "O4": "The metric is time-scoped as YTD but the formula uses MEASURE_GROUPED with no YTD time filter operator (e.g. MEASURE_YTD), so the year-to-date constraint is not applied.",
+            "O5": "The formula correctly filters on shipment_status = 'Delivered', which matches the state filter specified in the business question.",
+            "O6": "The formula produces a SUM (currency value) but the declared unit is 'currency' for a ratio metric — however, more critically, a ratio requires division of two values, and returning a single SUM produces the wrong unit type (currency instead of a dimensionless ratio)."
+          },
+          "flags": [
+            "Formula computes only SUM(freight_cost) but the business question requires a freight_cost/insurance_cost ratio — insurance_cost is completely absent.",
+            "No YTD time filter is applied despite the metric being time-scoped as year-to-date.",
+            "The metric unit is declared as 'currency' but the business question clearly asks for a ratio (freight vs insurance cost composition), suggesting a unit declaration mismatch as well.",
+            "MEASURE_GROUPED is used but the result should be a single ratio value, not a grouped breakdown by shipment_status."
+          ],
+          "reasoning": "The formula fundamentally fails to answer the business question because it only sums freight_cost for delivered shipments without computing a ratio against insurance_cost, and also lacks the required YTD time filter.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 11580
+        }
+      },
+      "all_flags": [
+        "Formula computes only SUM(freight_cost) but the business question requires a freight_cost/insurance_cost ratio — insurance_cost is completely absent.",
+        "No YTD time filter is applied despite the metric being time-scoped as year-to-date.",
+        "The metric unit is declared as 'currency' but the business question clearly asks for a ratio (freight vs insurance cost composition), suggesting a unit declaration mismatch as well.",
+        "MEASURE_GROUPED is used but the result should be a single ratio value, not a grouped breakdown by shipment_status."
+      ],
+      "analyzed_at": "2026-08-07T06:34:39Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_shipments_insurance_cost_in_transit_this_quarter_currency",
+      "source_goal": "What is the total insurance cost carried by shipments currently in transit — representing active financial risk exposure in the network?",
+      "formula_line": "MEASURE_QUARTER_FIXED('logistics_shipments_ERP_record', 'booked_date', 'SUM', 'insurance_cost', 'this_quarter', [{'field': 'shipment_status', 'op': '=', 'value': 'In Transit'}])",
+      "kind": "operator",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "O1": true,
+            "O2": true,
+            "O3": true,
+            "O4": true,
+            "O5": true,
+            "O6": true
+          },
+          "check_reasoning": {
+            "O1": "SUM is the correct aggregation for computing a total insurance cost (financial value).",
+            "O2": "The formula aggregates 'insurance_cost', which directly corresponds to the insurance cost field asked about in the business question.",
+            "O3": "The atom 'logistics_shipments_ERP_record' matches the domain (logistics) and entity (shipments) of the business question.",
+            "O4": "MEASURE_QUARTER_FIXED with 'this_quarter' is the correct time operator for a quarterly time scope.",
+            "O5": "The filter on shipment_status = 'In Transit' correctly matches the state filter specified in the business question.",
+            "O6": "SUM applied to an insurance_cost column produces a currency unit, matching the declared unit of the metric."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly uses SUM on the insurance_cost column from the appropriate logistics shipments atom, filtered to the current quarter and 'In Transit' status, fully matching the business question.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 9223
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-07T06:34:49Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_vehicles_payload_capacity_kg_utilisation_rate_count",
+      "source_goal": "Which vehicle has the lowest payload utilisation rate relative to payload capacity — identifying underloaded assets for load consolidation?",
+      "formula_line": "MEASURE_GROUPED('logistics_vehicles_MANUAL_dimension', 'AVG', 'payload_capacity_kg', group_by_col='vehicle_type', filters=None)",
+      "kind": "operator",
+      "ensemble_verdict": "FAILED",
+      "ensemble_confidence": 0.3333,
+      "model_results": {
+        "claude": {
+          "verdict": "INCORRECT",
+          "confidence": 0.3333,
+          "checks": {
+            "O1": false,
+            "O2": false,
+            "O3": true,
+            "O4": true,
+            "O5": false,
+            "O6": false
+          },
+          "check_reasoning": {
+            "O1": "The business question asks for payload utilisation rate (actual payload used vs capacity), requiring a ratio or rate computation, not AVG of raw capacity values; additionally, identifying the single lowest vehicle calls for a MIN or ranked result, not a grouped average.",
+            "O2": "The formula aggregates payload_capacity_kg (a static capacity field), but the question asks for utilisation rate, which requires actual payload usage data divided by capacity — the wrong column is being aggregated entirely.",
+            "O3": "The atom logistics_vehicles_MANUAL_dimension correctly matches the logistics domain and vehicles entity, so the source table is appropriate.",
+            "O4": "The time scope is all_time and no time filter is applied in the formula, which is correct.",
+            "O5": "The question asks to identify which specific vehicle (individual asset) has the lowest utilisation rate, but the formula groups by vehicle_type — an aggregate category — rather than by individual vehicle identifier.",
+            "O6": "The declared unit is 'count' but AVG(payload_capacity_kg) produces a weight/capacity value in kilograms, which is a magnitude unit, not a count or a utilisation rate ratio."
+          },
+          "flags": [
+            "Formula computes average payload capacity by vehicle type, which is entirely unrelated to payload utilisation rate.",
+            "No actual payload usage or load data is incorporated, making it impossible to compute a utilisation rate from this formula alone.",
+            "Grouping by vehicle_type instead of individual vehicle ID cannot identify the single lowest-utilisation asset.",
+            "Declared unit 'count' does not match the aggregation output (kg average) nor the conceptual output (utilisation rate/ratio)."
+          ],
+          "reasoning": "The formula answers a completely different question (average payload capacity by vehicle type) rather than identifying which individual vehicle has the lowest payload utilisation rate, failing on aggregation logic, column selection, grouping field, and result unit.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 12582
+        }
+      },
+      "all_flags": [
+        "Formula computes average payload capacity by vehicle type, which is entirely unrelated to payload utilisation rate.",
+        "No actual payload usage or load data is incorporated, making it impossible to compute a utilisation rate from this formula alone.",
+        "Grouping by vehicle_type instead of individual vehicle ID cannot identify the single lowest-utilisation asset.",
+        "Declared unit 'count' does not match the aggregation output (kg average) nor the conceptual output (utilisation rate/ratio)."
+      ],
+      "analyzed_at": "2026-08-07T06:35:01Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    }
+  ],
+  "error_details": [],
+  "run_at": "2026-08-07T06:35:01Z"
+}

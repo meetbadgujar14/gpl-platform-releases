@@ -1,0 +1,16 @@
+driver_id,driver_name,carrier_id,license_class,employment_status,is_active,total_trips_completed,hire_date
+DRV-4823,Marcus Johnson,CRR-2957,Class A CDL,Full-Time,True,412,2022-03-15
+DRV-7741,Elena Vasquez,CRR-2957,Class B CDL,Full-Time,True,287,2023-01-09
+DRV-3392,Darnell Williams,CRR-1485,Class A CDL,Part-Time,True,134,2023-06-22
+DRV-9184,Priya Nair,CRR-2957,Class A CDL,Full-Time,True,519,2021-11-03
+DRV-6057,Thomas Brennan,CRR-2957,Class B CDL,Contract,False,88,2023-08-14
+DRV-2218,Yuki Tanaka,CRR-2957,Class A CDL,Full-Time,True,376,2022-07-28
+DRV-8563,Rodrigo Mendes,CRR-4821,Class C,Part-Time,True,201,2023-02-17
+DRV-5047,Fatima Al-Rashid,CRR-7364,Class A CDL,Full-Time,True,463,2021-09-05
+DRV-1396,Kevin O'Brien,CRR-2957,Class B CDL,Contract,False,55,2024-01-20
+DRV-7802,Aisha Okonkwo,CRR-2957,Class A CDL,Full-Time,True,334,2022-10-11
+DRV-3671,Samuel Kowalski,CRR-2957,Class A CDL,Full-Time,True,488,2021-05-30
+DRV-6239,Mei-Ling Chen,CRR-2957,Class B CDL,Part-Time,True,162,2023-09-04
+DRV-4418,Jerome Thibodeaux,CRR-9203,Class A CDL,Full-Time,False,279,2022-04-18
+DRV-9875,Ingrid Svensson,CRR-2957,Class C,Contract,True,117,2023-11-29
+DRV-2984,Carlos Espinoza,CRR-2957,Class A CDL,Full-Time,True,541,2021-08-12

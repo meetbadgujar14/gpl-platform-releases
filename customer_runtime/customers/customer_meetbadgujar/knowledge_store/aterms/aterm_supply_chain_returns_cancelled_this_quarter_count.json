@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_returns_cancelled_this_quarter_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_returns_cancelled_this_quarter_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "returns",
+    "measure": "count",
+    "state": "Cancelled",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 1.0,
+  "formula_line": "MEASURE_QUARTER_FIXED('supply_chain_returns_ERP_record', 'return_date', 'COUNT_DISTINCT', 'return_id', 'this_quarter', [{'field': 'return_status', 'op': '=', 'value': 'Cancelled'}])",
+  "exec_formula": "MEASURE_QUARTER_FIXED('supply_chain_returns_ERP_record', 'return_date', 'COUNT_DISTINCT', 'return_id', 'this_quarter', [{'field': 'return_status', 'op': '=', 'value': 'Cancelled'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_wizard_execution",
+  "created_at": "2026-09-01T07:54:47Z",
+  "usage_count": 0,
+  "source_goal": "How many returns were cancelled this quarter?",
+  "wave": "D",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_QUARTER_FIXED steps=7",
+  "wizard_steps": 7,
+  "verified_at": "2026-09-01T07:55:00Z"
+}

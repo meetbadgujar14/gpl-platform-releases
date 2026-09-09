@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_inbound_delivery_schedule_expected_pallets_ytd_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inbound_delivery_schedule_expected_pallets_ytd_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inbound_delivery_schedule",
+    "measure": "expected_pallets",
+    "state": "all",
+    "scope": "total",
+    "time": "ytd",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_YTD(SUM(expected_pallets) FROM supply_chain_inbound_delivery_schedule_ERP_record WHERE scheduled_delivery_date BETWEEN 2026-01-01 AND 2026-07-22)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-07-22T12:17:46Z",
+  "usage_count": 0,
+  "source_goal": "What is the total expected pallets of inbound_delivery_schedules ytd?",
+  "wave": 3,
+  "operator": "MEASURE_YTD",
+  "verified_at": "2026-07-22T12:18:49Z"
+}

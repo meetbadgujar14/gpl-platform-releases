@@ -1,0 +1,306 @@
+{
+  "vertical": "supply_chain",
+  "models_used": [
+    "claude"
+  ],
+  "total": 13,
+  "passed": 6,
+  "flagged": 0,
+  "failed": 0,
+  "errors": 7,
+  "results": [
+    {
+      "canonical_id": "supply_chain_inbound_delivery_schedule_growth_expected_pallets_this_month_percent",
+      "source_goal": "What is the month over month growth in expected pallets for inbound_delivery_schedules?",
+      "formula_line": "supply_chain_inbound_delivery_schedule_growth_expected_pallets_this_month_percent = (({supply_chain_inbound_delivery_schedule_expected_pallets_this_month_count} - {supply_chain_inbound_delivery_schedule_expected_pallets_last_month_count}) / abs({supply_chain_inbound_delivery_schedule_expected_pallets_last_month_count}) * 100) if {supply_chain_inbound_delivery_schedule_expected_pallets_last_month_count} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses (this_month - last_month) / abs(last_month) * 100, which is the standard month-over-month growth rate calculation.",
+            "C2": "The two dependencies correctly capture total expected pallets for this month (2026-07) and last month (2026-06) from the same source atom, which are the right building blocks for MoM growth.",
+            "C3": "Dependency 1 covers this_month (2026-07) and Dependency 2 covers last_month (2026-06), which is the correct pairing for a this_month MoM growth metric.",
+            "C4": "Neither the composed metric nor its dependencies apply any state filter, which is consistent with the stated state filter of 'none'.",
+            "C5": "The formula includes an explicit guard 'if last_month_count != 0 else 0' to handle division-by-zero when last month's value is zero.",
+            "C6": "The operation (this_month - last_month) / abs(last_month) * 100 produces a percent result, which matches the declared unit of percent."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly implements month-over-month growth in expected pallets with proper math, correct time-scoped dependencies, consistent state filters, and a division-by-zero guard, yielding a valid percent result.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 8950
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-11T11:54:35Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_inventory_levels_growth_quantity_on_hand_this_month_percent",
+      "source_goal": "What is the month over month growth in quantity on hand for inventory_levelss?",
+      "formula_line": "supply_chain_inventory_levels_growth_quantity_on_hand_this_month_percent = (({supply_chain_inventory_levels_quantity_on_hand_this_month_count} - {supply_chain_inventory_levels_quantity_on_hand_last_month_count}) / abs({supply_chain_inventory_levels_quantity_on_hand_last_month_count}) * 100) if {supply_chain_inventory_levels_quantity_on_hand_last_month_count} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses (this_month - last_month) / abs(last_month) * 100, which is the correct month-over-month growth rate calculation.",
+            "C2": "The two dependencies correctly capture quantity_on_hand for this_month and last_month from the same inventory_levels entity, which are the right building blocks for a MoM growth metric.",
+            "C3": "Dependency 1 covers this_month and Dependency 2 covers last_month, which are exactly the two time scopes needed for a this_month MoM growth metric.",
+            "C4": "Both dependencies have no state filter (state: all), consistent with the composed metric's state filter of none.",
+            "C5": "The formula includes an explicit guard 'if last_month_count != 0 else 0', properly handling division-by-zero.",
+            "C6": "The operation (this_month - last_month) / abs(last_month) * 100 produces a percent, which matches the declared unit of percent."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly implements month-over-month growth in quantity on hand using appropriate dependencies, time scopes, division-by-zero protection, and produces a result in the correct unit.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 8005
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-11T11:54:43Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_invoice_lines_growth_price_variance_this_month_percent",
+      "source_goal": "What is the month over month growth in price variance for invoice_liness?",
+      "formula_line": "supply_chain_invoice_lines_growth_price_variance_this_month_percent = (({supply_chain_invoice_lines_price_variance_this_month_currency} - {supply_chain_invoice_lines_price_variance_last_month_currency}) / abs({supply_chain_invoice_lines_price_variance_last_month_currency}) * 100) if {supply_chain_invoice_lines_price_variance_last_month_currency} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses (this_month - last_month) / abs(last_month) * 100, which is the standard month-over-month growth rate calculation.",
+            "C2": "The two dependencies correctly represent total price variance for this month and last month respectively, which are the right building blocks for MoM growth.",
+            "C3": "Dependency 1 covers this_month (2026-07) and Dependency 2 covers last_month (2026-06), which correctly align with the composed metric's this_month time scope for a MoM comparison.",
+            "C4": "Both dependencies have no state filter (state: all), consistent with the composed metric's state filter of none.",
+            "C5": "The formula includes an explicit guard 'if {supply_chain_invoice_lines_price_variance_last_month_currency} != 0 else 0' to handle division-by-zero.",
+            "C6": "The operation (currency - currency) / abs(currency) * 100 correctly produces a percent result, matching the declared unit."
+          },
+          "flags": [],
+          "reasoning": "The composed formula correctly computes month-over-month growth in price variance using the right dependencies, proper time scopes, consistent state filters, division-by-zero protection, and produces a percent result.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 8334
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-11T11:54:52Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_reorder_proposals_growth_reorder_point_qty_this_month_percent",
+      "source_goal": "What is the month over month growth in reorder point qty for reorder_proposalss?",
+      "formula_line": "supply_chain_reorder_proposals_growth_reorder_point_qty_this_month_percent = (({supply_chain_reorder_proposals_reorder_point_qty_this_month_count} - {supply_chain_reorder_proposals_reorder_point_qty_last_month_count}) / abs({supply_chain_reorder_proposals_reorder_point_qty_last_month_count}) * 100) if {supply_chain_reorder_proposals_reorder_point_qty_last_month_count} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses (this_month - last_month) / abs(last_month) * 100, which is the standard month-over-month growth rate calculation.",
+            "C2": "The two dependencies correctly capture total reorder_point_qty for this month and last month, which are the right building blocks for MoM growth.",
+            "C3": "Dependency 1 covers this month (2026-07) and Dependency 2 covers last month (2026-06), correctly aligned with the composed metric's this_month time scope.",
+            "C4": "Neither the composed metric nor either dependency applies a state filter, which is consistent with the stated state filter of none.",
+            "C5": "The formula includes an explicit guard 'if last_month_count != 0 else 0' to handle division-by-zero.",
+            "C6": "The operation (this_month - last_month) / abs(last_month) * 100 correctly produces a percent result, matching the declared unit."
+          },
+          "flags": [],
+          "reasoning": "The formula correctly implements month-over-month growth in reorder point qty with proper time scopes, consistent state filters, division-by-zero protection, and the correct percent unit.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 7232
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-11T11:54:59Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_shipments_growth_freight_cost_this_month_percent",
+      "source_goal": "What is the month over month growth in freight cost for shipmentss?",
+      "formula_line": "supply_chain_shipments_growth_freight_cost_this_month_percent = (({supply_chain_shipments_freight_cost_this_month_currency} - {supply_chain_shipments_freight_cost_last_month_currency}) / abs({supply_chain_shipments_freight_cost_last_month_currency}) * 100) if {supply_chain_shipments_freight_cost_last_month_currency} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses (this_month - last_month) / abs(last_month) * 100, which is the correct month-over-month growth rate calculation.",
+            "C2": "The dependencies are freight cost this month and freight cost last month, which are exactly the correct building blocks for a month-over-month growth metric.",
+            "C3": "Dependency 1 uses this_month (2026-07) and Dependency 2 uses last_month (2026-06), which are the correct time scopes for a this_month growth metric.",
+            "C4": "Both dependencies have no state filter, consistent with the composed metric's state filter of none.",
+            "C5": "The formula includes an explicit guard 'if {supply_chain_shipments_freight_cost_last_month_currency} != 0 else 0' to handle division by zero.",
+            "C6": "The operation (currency - currency) / currency * 100 correctly produces a percent result, matching the declared unit."
+          },
+          "flags": [
+            "Both oracle values are 0.0, likely because the mock data contains no shipments dated in 2026-06 or 2026-07 — this is a data coverage issue, not a formula error."
+          ],
+          "reasoning": "The formula correctly implements month-over-month freight cost growth rate with proper math, correct dependencies, aligned time scopes, consistent state filters, division-by-zero protection, and the right output unit.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 7499
+        }
+      },
+      "all_flags": [
+        "Both oracle values are 0.0, likely because the mock data contains no shipments dated in 2026-06 or 2026-07 — this is a data coverage issue, not a formula error."
+      ],
+      "analyzed_at": "2026-08-11T11:55:06Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "supply_chain_supplier_contracts_growth_committed_spend_amount_this_month_percent",
+      "source_goal": "What is the month over month growth in committed spend amount for supplier_contractss?",
+      "formula_line": "supply_chain_supplier_contracts_growth_committed_spend_amount_this_month_percent = (({supply_chain_supplier_contracts_committed_spend_amount_this_month_currency} - {supply_chain_supplier_contracts_committed_spend_amount_last_month_currency}) / abs({supply_chain_supplier_contracts_committed_spend_amount_last_month_currency}) * 100) if {supply_chain_supplier_contracts_committed_spend_amount_last_month_currency} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "claude": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses (this_month - last_month) / abs(last_month) * 100, which is the correct mathematical operation for month-over-month growth rate as a percent.",
+            "C2": "The two building blocks are committed_spend_amount for this month and last month respectively, which are the correct components for a MoM growth calculation.",
+            "C3": "Dependency 1 uses this_month and Dependency 2 uses last_month, which is the correct pair of time scopes for a this_month MoM growth metric.",
+            "C4": "Both dependencies have no state filter (state: all), consistent with the composed metric's state filter of none.",
+            "C5": "The formula includes an explicit guard 'if ... != 0 else 0' to handle division by zero when last month's value is zero.",
+            "C6": "The operation (currency - currency) / currency * 100 correctly produces a percent result, matching the declared unit."
+          },
+          "flags": [
+            "Both dependency formulas filter on contract_start_date IN 2026-07 and 2026-06 respectively. This means only contracts that started in those specific months are included, rather than all active or existing contracts in those months. This is likely incorrect — committed_spend_amount should probably be summed across all contracts (or all active contracts) regardless of when they started, not just those whose start date falls within the measurement month.",
+            "The oracle values for both dependencies are 0.0, which is consistent with the mock data containing no contracts with contract_start_date in 2026-06 or 2026-07, but the filter logic itself appears semantically wrong for measuring total committed spend."
+          ],
+          "reasoning": "While the composed formula's math, structure, and guards are correct, both underlying dependency formulas filter by contract_start_date falling within the measurement month, which almost certainly undercounts committed spend by excluding contracts started in prior periods — a significant semantic concern warranting human review.",
+          "error": null,
+          "model_key": "claude",
+          "model_label": "Claude (Anthropic)",
+          "elapsed_ms": 11349
+        }
+      },
+      "all_flags": [
+        "Both dependency formulas filter on contract_start_date IN 2026-07 and 2026-06 respectively. This means only contracts that started in those specific months are included, rather than all active or existing contracts in those months. This is likely incorrect — committed_spend_amount should probably be summed across all contracts (or all active contracts) regardless of when they started, not just those whose start date falls within the measurement month.",
+        "The oracle values for both dependencies are 0.0, which is consistent with the mock data containing no contracts with contract_start_date in 2026-06 or 2026-07, but the filter logic itself appears semantically wrong for measuring total committed spend."
+      ],
+      "analyzed_at": "2026-08-11T11:55:18Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    }
+  ],
+  "error_details": [
+    {
+      "canonical_id": "supply_chain_avg_procurement_lead_time_days",
+      "error": "aterm file not found"
+    },
+    {
+      "canonical_id": "supply_chain_carrier_performance_average_on_time_delivery_rate_percent",
+      "error": "aterm file not found"
+    },
+    {
+      "canonical_id": "supply_chain_demand_forecasts_average_actual_quantity_count",
+      "error": "aterm file not found"
+    },
+    {
+      "canonical_id": "supply_chain_items_growth_safety_stock_qty_this_month_percent",
+      "error": "aterm file not found"
+    },
+    {
+      "canonical_id": "supply_chain_purchase_order_lines_average_quantity_ordered_count",
+      "error": "aterm file not found"
+    },
+    {
+      "canonical_id": "supply_chain_quality_inspections_average_defect_rate_percent",
+      "error": "aterm file not found"
+    },
+    {
+      "canonical_id": "supply_chain_warehouses_growth_total_capacity_units_this_month_percent",
+      "error": "aterm file not found"
+    }
+  ],
+  "run_at": "2026-08-11T11:55:18Z"
+}

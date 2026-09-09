@@ -1,0 +1,38 @@
+{
+  "id": "aterm:supply_chain_warehouses_total_capacity_units_utilization_highest_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_warehouses_total_capacity_units_utilization_highest_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "warehouses",
+    "measure": "total_capacity_units",
+    "state": "all",
+    "scope": "by_warehouse_name",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar",
+    "agg_override": "SUM"
+  },
+  "oracle_value": {
+    "Midlands Cold Storage Facility": 48500.0,
+    "Pacific Rim Distribution Center": 142000.0,
+    "Rhine Valley Fulfillment Hub": 195000.0,
+    "Southern Cross Bonded Warehouse": 63400.0,
+    "Yangtze Cross-Dock Terminal": 87000.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_warehouses_WMS_dimension', 'SUM', 'total_capacity_units', group_by_col='warehouse_name', filters=None)",
+  "exec_formula": "MEASURE_GROUPED('supply_chain_warehouses_WMS_dimension', 'SUM', 'total_capacity_units', group_by_col='warehouse_name', filters=None)",
+  "verified": true,
+  "ai_locked": false,
+  "lock_method": "llm_wizard",
+  "verify_reason": "LLM_WIZARD_execution",
+  "created_at": "2026-08-11T11:59:00Z",
+  "usage_count": 0,
+  "source_goal": "Which warehouses have the highest total capacity units?",
+  "wave": "E",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_GROUPED steps=3",
+  "wizard_steps": 3
+}

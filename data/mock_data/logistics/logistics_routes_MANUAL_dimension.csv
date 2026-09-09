@@ -1,0 +1,16 @@
+route_id,route_name,origin_location,destination_location,transport_mode,is_active,distance_km,standard_transit_days,created_date
+RTE-4821,Pacific Northwest Corridor,"Seattle, WA","Portland, OR",Truck,True,279,1,2023-03-15
+RTE-7364,Trans-Continental Express,"Los Angeles, CA","New York, NY",Rail,True,4488,7,2022-11-08
+RTE-2195,Gulf Coast Freight Lane,"Houston, TX","New Orleans, LA",Truck,True,507,2,2023-01-22
+RTE-9043,Atlantic Seaboard Shipping,"Miami, FL","Baltimore, MD",Ocean Freight,True,1932,5,2022-08-30
+RTE-5517,Midwest Distribution Run,"Chicago, IL","Detroit, MI",Truck,True,458,1,2023-06-10
+RTE-3382,Southwest Air Express,"Phoenix, AZ","Dallas, TX",Air,False,1421,1,2022-05-17
+RTE-6709,Great Plains Haul,"Kansas City, MO","Denver, CO",Truck,True,872,2,2023-09-04
+RTE-1148,Southeast Rail Connector,"Atlanta, GA","Charlotte, NC",Rail,True,397,2,2023-02-28
+RTE-8826,Cascadia Cold Chain,"Vancouver, BC","San Francisco, CA",Refrigerated Truck,True,1536,3,2023-07-19
+RTE-4470,Northeast Air Cargo,"Boston, MA","Washington, DC",Air,False,710,1,2022-12-03
+RTE-2963,Mountain West Express,"Salt Lake City, UT","Las Vegas, NV",Truck,True,423,1,2024-01-15
+RTE-7581,Great Lakes Intermodal,"Cleveland, OH","Minneapolis, MN",Intermodal,True,1124,3,2023-04-07
+RTE-5234,Texas Triangle Loop,"Dallas, TX","San Antonio, TX",Truck,True,436,1,2023-10-22
+RTE-3697,Appalachian Freight Route,"Pittsburgh, PA","Nashville, TN",Truck,False,988,2,2022-07-11
+RTE-9154,Pacific Coast Ocean Lane,"Long Beach, CA","Seattle, WA",Ocean Freight,True,2147,6,2024-02-08

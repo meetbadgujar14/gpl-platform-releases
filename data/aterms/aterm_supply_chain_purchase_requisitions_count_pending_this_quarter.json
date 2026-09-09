@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_purchase_requisitions_count_pending_this_quarter",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_purchase_requisitions_count_pending_this_quarter",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "purchase_requisitions",
+    "measure": "count",
+    "state": "Pending",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_QUARTER_FIXED(COUNT_DISTINCT(requisition_id) FROM supply_chain_purchase_requisitions_ERP_record WHERE requisition_date IN 2026-Q3 WHERE requisition_status=Pending)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-07-22T12:17:45Z",
+  "usage_count": 0,
+  "source_goal": "How many Pending purchase_requisitionss are there this quarter?",
+  "wave": 3,
+  "operator": "MEASURE_QUARTER_FIXED",
+  "verified_at": "2026-07-22T12:18:48Z"
+}

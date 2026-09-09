@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_shipments_count_in_transit_this_month_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shipments_count_in_transit_this_month_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shipments",
+    "measure": "count",
+    "state": "in_transit",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 1.0,
+  "formula_line": "MEASURE_MONTH_FIXED('supply_chain_shipments_WMS_record', 'shipment_date', 'COUNT_DISTINCT', 'shipment_id', 'this_month', [{'field': 'shipment_status', 'op': '=', 'value': 'in_transit'}])",
+  "exec_formula": "MEASURE_MONTH_FIXED('supply_chain_shipments_WMS_record', 'shipment_date', 'COUNT_DISTINCT', 'shipment_id', 'this_month', [{'field': 'shipment_status', 'op': '=', 'value': 'in_transit'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_wizard_execution",
+  "created_at": "2026-09-01T11:03:38Z",
+  "usage_count": 0,
+  "source_goal": "How many shipments are currently in transit this month?",
+  "wave": "D",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_MONTH_FIXED steps=7",
+  "wizard_steps": 7,
+  "verified_at": "2026-09-02T06:49:08Z"
+}

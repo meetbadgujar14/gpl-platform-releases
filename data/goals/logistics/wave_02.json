@@ -1,0 +1,1565 @@
+{
+  "wave": 2,
+  "goal_count": 82,
+  "generated_at": "2026-07-21T11:32:53Z",
+  "goals": [
+    {
+      "goal": "What is the max contract rate per km across all carrierss?",
+      "canonical_id": "logistics_carriers_max_contract_rate_per_km_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "carriers",
+        "measure": "max_contract_rate_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min contract rate per km across all carrierss?",
+      "canonical_id": "logistics_carriers_min_contract_rate_per_km_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "carriers",
+        "measure": "min_contract_rate_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max total capacity sqm across all warehousess?",
+      "canonical_id": "logistics_warehouses_max_total_capacity_sqm_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouses",
+        "measure": "max_total_capacity_sqm",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min total capacity sqm across all warehousess?",
+      "canonical_id": "logistics_warehouses_min_total_capacity_sqm_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouses",
+        "measure": "min_total_capacity_sqm",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max distance km across all routess?",
+      "canonical_id": "logistics_routes_max_distance_km_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "max_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min distance km across all routess?",
+      "canonical_id": "logistics_routes_min_distance_km_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "min_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max standard transit days across all routess?",
+      "canonical_id": "logistics_routes_max_standard_transit_days_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "max_standard_transit_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min standard transit days across all routess?",
+      "canonical_id": "logistics_routes_min_standard_transit_days_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "routes",
+        "measure": "min_standard_transit_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max payload capacity kg across all vehicless?",
+      "canonical_id": "logistics_vehicles_max_payload_capacity_kg_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicles",
+        "measure": "max_payload_capacity_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min payload capacity kg across all vehicless?",
+      "canonical_id": "logistics_vehicles_min_payload_capacity_kg_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicles",
+        "measure": "min_payload_capacity_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max total trips completed across all driverss?",
+      "canonical_id": "logistics_drivers_max_total_trips_completed_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "drivers",
+        "measure": "max_total_trips_completed",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min total trips completed across all driverss?",
+      "canonical_id": "logistics_drivers_min_total_trips_completed_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "drivers",
+        "measure": "min_total_trips_completed",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max total weight kg across all shipmentss?",
+      "canonical_id": "logistics_shipments_max_total_weight_kg_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "max_total_weight_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min total weight kg across all shipmentss?",
+      "canonical_id": "logistics_shipments_min_total_weight_kg_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "min_total_weight_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max freight cost across all shipmentss?",
+      "canonical_id": "logistics_shipments_max_freight_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "max_freight_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min freight cost across all shipmentss?",
+      "canonical_id": "logistics_shipments_min_freight_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "min_freight_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max insurance cost across all shipmentss?",
+      "canonical_id": "logistics_shipments_max_insurance_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "max_insurance_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min insurance cost across all shipmentss?",
+      "canonical_id": "logistics_shipments_min_insurance_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "min_insurance_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max planned delivery days across all shipmentss?",
+      "canonical_id": "logistics_shipments_max_planned_delivery_days_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "max_planned_delivery_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min planned delivery days across all shipmentss?",
+      "canonical_id": "logistics_shipments_min_planned_delivery_days_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipments",
+        "measure": "min_planned_delivery_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max agreed cost across all freight_orderss?",
+      "canonical_id": "logistics_freight_orders_max_agreed_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "max_agreed_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min agreed cost across all freight_orderss?",
+      "canonical_id": "logistics_freight_orders_min_agreed_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "min_agreed_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max actual cost across all freight_orderss?",
+      "canonical_id": "logistics_freight_orders_max_actual_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "max_actual_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min actual cost across all freight_orderss?",
+      "canonical_id": "logistics_freight_orders_min_actual_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "min_actual_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max distance km across all freight_orderss?",
+      "canonical_id": "logistics_freight_orders_max_distance_km_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "max_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min distance km across all freight_orderss?",
+      "canonical_id": "logistics_freight_orders_min_distance_km_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_orders",
+        "measure": "min_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max weight kg across all cargo_itemss?",
+      "canonical_id": "logistics_cargo_items_max_weight_kg_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "max_weight_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min weight kg across all cargo_itemss?",
+      "canonical_id": "logistics_cargo_items_min_weight_kg_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "min_weight_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max volume cbm across all cargo_itemss?",
+      "canonical_id": "logistics_cargo_items_max_volume_cbm_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "max_volume_cbm",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min volume cbm across all cargo_itemss?",
+      "canonical_id": "logistics_cargo_items_min_volume_cbm_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "min_volume_cbm",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max declared value across all cargo_itemss?",
+      "canonical_id": "logistics_cargo_items_max_declared_value_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "max_declared_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min declared value across all cargo_itemss?",
+      "canonical_id": "logistics_cargo_items_min_declared_value_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "min_declared_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max quantity across all cargo_itemss?",
+      "canonical_id": "logistics_cargo_items_max_quantity_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "max_quantity",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min quantity across all cargo_itemss?",
+      "canonical_id": "logistics_cargo_items_min_quantity_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "cargo_items",
+        "measure": "min_quantity",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max leg distance km across all shipment_legss?",
+      "canonical_id": "logistics_shipment_legs_max_leg_distance_km_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "max_leg_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min leg distance km across all shipment_legss?",
+      "canonical_id": "logistics_shipment_legs_min_leg_distance_km_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "min_leg_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max leg cost across all shipment_legss?",
+      "canonical_id": "logistics_shipment_legs_max_leg_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "max_leg_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min leg cost across all shipment_legss?",
+      "canonical_id": "logistics_shipment_legs_min_leg_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "min_leg_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max actual transit hours across all shipment_legss?",
+      "canonical_id": "logistics_shipment_legs_max_actual_transit_hours_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "max_actual_transit_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min actual transit hours across all shipment_legss?",
+      "canonical_id": "logistics_shipment_legs_min_actual_transit_hours_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "shipment_legs",
+        "measure": "min_actual_transit_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max delay hours across all delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_max_delay_hours_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "max_delay_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min delay hours across all delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_min_delay_hours_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "min_delay_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max event count across all delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_max_event_count_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "max_event_count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min event count across all delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_min_event_count_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "min_event_count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max distance km across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_max_distance_km_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "max_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min distance km across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_min_distance_km_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "min_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max duration hours across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_max_duration_hours_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "max_duration_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min duration hours across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_min_duration_hours_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "min_duration_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max trip cost across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_max_trip_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "max_trip_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min trip cost across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_min_trip_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "min_trip_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max litres consumed across all fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_max_litres_consumed_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "max_litres_consumed",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min litres consumed across all fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_min_litres_consumed_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "min_litres_consumed",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max fuel cost across all fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_max_fuel_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "max_fuel_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min fuel cost across all fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_min_fuel_cost_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "min_fuel_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max cost per litre across all fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_max_cost_per_litre_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "max_cost_per_litre",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min cost per litre across all fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_min_cost_per_litre_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "min_cost_per_litre",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max co2 kg emitted across all fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_max_co2_kg_emitted_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "max_co2_kg_emitted",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min co2 kg emitted across all fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_min_co2_kg_emitted_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "min_co2_kg_emitted",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max distance km across all fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_max_distance_km_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "max_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min distance km across all fuel_consumptions?",
+      "canonical_id": "logistics_fuel_consumption_min_distance_km_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_consumption",
+        "measure": "min_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max declared value across all customs_declarationss?",
+      "canonical_id": "logistics_customs_declarations_max_declared_value_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "max_declared_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min declared value across all customs_declarationss?",
+      "canonical_id": "logistics_customs_declarations_min_declared_value_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "min_declared_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max duties amount across all customs_declarationss?",
+      "canonical_id": "logistics_customs_declarations_max_duties_amount_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "max_duties_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min duties amount across all customs_declarationss?",
+      "canonical_id": "logistics_customs_declarations_min_duties_amount_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "min_duties_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max taxes amount across all customs_declarationss?",
+      "canonical_id": "logistics_customs_declarations_max_taxes_amount_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "max_taxes_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min taxes amount across all customs_declarationss?",
+      "canonical_id": "logistics_customs_declarations_min_taxes_amount_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "min_taxes_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max clearance days across all customs_declarationss?",
+      "canonical_id": "logistics_customs_declarations_max_clearance_days_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "max_clearance_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min clearance days across all customs_declarationss?",
+      "canonical_id": "logistics_customs_declarations_min_clearance_days_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_declarations",
+        "measure": "min_clearance_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max estimated loss value across all incidentss?",
+      "canonical_id": "logistics_incidents_max_estimated_loss_value_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "max_estimated_loss_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min estimated loss value across all incidentss?",
+      "canonical_id": "logistics_incidents_min_estimated_loss_value_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "min_estimated_loss_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max claim amount across all incidentss?",
+      "canonical_id": "logistics_incidents_max_claim_amount_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "max_claim_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min claim amount across all incidentss?",
+      "canonical_id": "logistics_incidents_min_claim_amount_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "min_claim_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max resolution days across all incidentss?",
+      "canonical_id": "logistics_incidents_max_resolution_days_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "max_resolution_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min resolution days across all incidentss?",
+      "canonical_id": "logistics_incidents_min_resolution_days_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "incidents",
+        "measure": "min_resolution_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max quantity on hand across all warehouse_inventorys?",
+      "canonical_id": "logistics_warehouse_inventory_max_quantity_on_hand_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "max_quantity_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min quantity on hand across all warehouse_inventorys?",
+      "canonical_id": "logistics_warehouse_inventory_min_quantity_on_hand_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "min_quantity_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max quantity reserved across all warehouse_inventorys?",
+      "canonical_id": "logistics_warehouse_inventory_max_quantity_reserved_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "max_quantity_reserved",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min quantity reserved across all warehouse_inventorys?",
+      "canonical_id": "logistics_warehouse_inventory_min_quantity_reserved_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "min_quantity_reserved",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max quantity available across all warehouse_inventorys?",
+      "canonical_id": "logistics_warehouse_inventory_max_quantity_available_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "max_quantity_available",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min quantity available across all warehouse_inventorys?",
+      "canonical_id": "logistics_warehouse_inventory_min_quantity_available_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "min_quantity_available",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max inventory value across all warehouse_inventorys?",
+      "canonical_id": "logistics_warehouse_inventory_max_inventory_value_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "max_inventory_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min inventory value across all warehouse_inventorys?",
+      "canonical_id": "logistics_warehouse_inventory_min_inventory_value_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "warehouse_inventory",
+        "measure": "min_inventory_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    }
+  ]
+}

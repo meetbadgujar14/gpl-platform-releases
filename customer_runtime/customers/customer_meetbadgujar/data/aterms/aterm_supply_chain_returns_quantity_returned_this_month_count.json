@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_returns_quantity_returned_this_month_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_returns_quantity_returned_this_month_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "returns",
+    "measure": "quantity_returned",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 37.0,
+  "formula_line": "MEASURE_MONTH_FIXED('supply_chain_returns_ERP_record', 'return_date', 'SUM', 'quantity_returned', 'this_month', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:38Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quantity returned of returnss this month?",
+  "wave": 3,
+  "operator": "MEASURE_MONTH_FIXED",
+  "verified_at": "2026-09-02T06:49:05Z"
+}

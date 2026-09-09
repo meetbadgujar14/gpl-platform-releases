@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_invoice_lines_quantity_invoiced_by_item_code_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_invoice_lines_quantity_invoiced_by_item_code_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "invoice_lines",
+    "measure": "quantity_invoiced",
+    "state": "all",
+    "scope": "by_item_code",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "BELT-V-B68": 60.0,
+    "BOLT-SS-M1050": 3000.0,
+    "BOX-CORR-121008": 50.0,
+    "COND-PVC-0750": 2100.0,
+    "FILT-HYD-010M": 675.0,
+    "ORING-EPDM-050": 90.0,
+    "PPE-HELM-CE-YLW": 2975.0,
+    "TOOL-ALLEN-9PC-M": 2585.0,
+    "VALV-GATE-02-150": 550.0,
+    "WIRE-CU-AWG12-500": 450.0,
+    "WRAP-BUB-12-100": 1100.0,
+    "WRAP-STR-18-1500": 80.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(quantity_invoiced) FROM supply_chain_invoice_lines_ERP_record JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY item_code)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:49Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quantity invoiced of invoice_liness by item code?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:51Z"
+}

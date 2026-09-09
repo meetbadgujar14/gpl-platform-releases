@@ -1,0 +1,32 @@
+supplier_id,item_id,period_start_date,supplier_name,item_name,item_category,avg_lead_time_days,min_lead_time_days,max_lead_time_days,order_count
+SUP-4821,ITM-7364,2026-09-01,Centurion Materials Group,Stainless Steel Fasteners,Packaging Materials,12.4,8,19,47
+SUP-3917,ITM-2891,2026-09-01,Delta Components Ltd.,Polyurethane Foam Sheets,Mechanical Components,7.2,5,11,134
+SUP-6043,ITM-5512,2026-09-01,Ironclad Supply Solutions,Safety Gloves - Heavy Duty,Electronics,18.7,14,28,22
+SUP-7256,ITM-9031,2026-09-01,Meridian Supply Co.,PCB Assembly Board,Electrical Equipment,24.3,18,35,61
+SUP-1584,ITM-3748,2026-09-01,Delta Components Ltd.,Electric Motor 5HP,Mechanical Components,9.1,6,14,89
+SUP-8392,ITM-6207,2026-09-01,Pacific Rim Logistics,PCB Assembly Board,Mechanical Components,15.6,10,22,38
+SUP-2763,ITM-8450,2026-09-01,Northgate Industrial,Industrial Grade Bearings,Safety Equipment,21.0,15,30,53
+SUP-5109,ITM-1673,2026-09-01,Delta Components Ltd.,Aluminum Extrusion Profiles,Electrical Equipment,5.8,3,9,210
+SUP-4821,ITM-2891,2026-09-01,Meridian Supply Co.,PCB Assembly Board,Mechanical Components,11.2,7,17,76
+SUP-9674,ITM-4389,2026-08-01,Delta Components Ltd.,Polyurethane Foam Sheets,Raw Materials,33.5,25,45,17
+SUP-3917,ITM-7364,2026-08-01,Lakeshore Manufacturing,PCB Assembly Board,Safety Equipment,13.8,9,20,44
+SUP-6043,ITM-9031,2026-08-01,Pacific Rim Logistics,Hydraulic Seals Kit,Electrical Equipment,27.1,20,38,29
+SUP-7256,ITM-5512,2026-08-01,Lakeshore Manufacturing,Industrial Grade Bearings,Mechanical Components,16.4,12,24,35
+SUP-2763,ITM-3748,2026-07-01,Meridian Supply Co.,Hydraulic Seals Kit,Mechanical Components,8.6,5,13,95
+SUP-8392,ITM-1673,2026-07-01,Centurion Materials Group,Hydraulic Seals Kit,Electronics,6.3,4,10,187
+SUP-5109,ITM-6207,2026-07-01,Ironclad Supply Solutions,Stainless Steel Fasteners,Electronics,14.9,9,21,41
+SUP-1584,ITM-8450,2026-06-01,Meridian Supply Co.,Aluminum Extrusion Profiles,Mechanical Components,19.5,14,27,58
+SUP-9674,ITM-2891,2026-06-01,Ironclad Supply Solutions,Industrial Grade Bearings,Packaging Materials,6.7,4,10,122
+SUP-4821,ITM-4389,2026-06-01,Delta Components Ltd.,Hydraulic Seals Kit,Mechanical Components,38.2,28,52,12
+SUP-3917,ITM-5512,2026-04-01,Meridian Supply Co.,Hydraulic Seals Kit,Packaging Materials,17.3,12,25,31
+SUP-6043,ITM-8450,2026-04-01,Northgate Industrial,Electric Motor 5HP,Packaging Materials,22.6,16,33,45
+SUP-7256,ITM-7364,2026-03-01,Pacific Rim Logistics,Hydraulic Seals Kit,Safety Equipment,10.9,7,16,68
+SUP-2763,ITM-6207,2026-03-01,Apex Global Trading,Stainless Steel Fasteners,Electrical Equipment,16.8,11,24,36
+SUP-8392,ITM-9031,2026-02-01,Centurion Materials Group,Safety Gloves - Heavy Duty,Safety Equipment,29.4,22,40,24
+SUP-5109,ITM-3748,2026-02-01,Lakeshore Manufacturing,Aluminum Extrusion Profiles,Mechanical Components,7.8,5,12,103
+SUP-9674,ITM-1673,2026-01-01,Delta Components Ltd.,Copper Wire Harness,Packaging Materials,5.4,3,8,245
+SUP-1584,ITM-4389,2026-01-01,Delta Components Ltd.,Aluminum Extrusion Profiles,Electrical Equipment,36.7,27,49,14
+SUP-4821,ITM-5512,2025-11-01,Pacific Rim Logistics,Aluminum Extrusion Profiles,Electronics,19.2,14,27,28
+SUP-3917,ITM-8450,2025-09-01,Apex Global Trading,Safety Gloves - Heavy Duty,Electronics,20.3,15,29,51
+SUP-6043,ITM-1673,2025-06-01,Delta Components Ltd.,Aluminum Extrusion Profiles,Safety Equipment,6.9,4,11,198
+SUP-7256,ITM-6207,2024-12-01,Northgate Industrial,Stainless Steel Fasteners,Raw Materials,17.5,12,25,33

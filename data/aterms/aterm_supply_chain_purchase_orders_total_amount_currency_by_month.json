@@ -1,0 +1,43 @@
+{
+  "id": "aterm:supply_chain_purchase_orders_total_amount_currency_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_purchase_orders_total_amount_currency_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "purchase_orders",
+    "measure": "total_amount",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2023-08": 302500.0,
+    "2023-09": 262800.0,
+    "2023-10": 174200.0,
+    "2023-11": 420800.0,
+    "2023-12": 441000.0,
+    "2024-01": 917800.0,
+    "2024-02": 85850.0,
+    "2024-03": 471000.5,
+    "2024-04": 227600.0,
+    "2024-05": 420000.0,
+    "2024-06": 157450.0,
+    "2024-07": 555300.0,
+    "2024-08": 357300.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(total_amount) FROM supply_chain_purchase_orders_ERP_record GROUP BY BUCKET(po_date, month))",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:50Z",
+  "usage_count": 0,
+  "source_goal": "What is the total total amount of purchase_orderss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:52Z"
+}

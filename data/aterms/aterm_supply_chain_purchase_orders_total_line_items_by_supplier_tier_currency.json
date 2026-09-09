@@ -1,0 +1,33 @@
+{
+  "id": "aterm:supply_chain_purchase_orders_total_line_items_by_supplier_tier_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_purchase_orders_total_line_items_by_supplier_tier_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "purchase_orders",
+    "measure": "total_line_items",
+    "state": "all",
+    "scope": "by_supplier_tier",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Tier 1": 249.0,
+    "Tier 2": 170.0,
+    "Tier 3": 23.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(total_line_items) FROM supply_chain_purchase_orders_ERP_record JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY supplier_tier)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:46Z",
+  "usage_count": 0,
+  "source_goal": "What is the total total line items of purchase_orderss by supplier tier?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:49Z"
+}

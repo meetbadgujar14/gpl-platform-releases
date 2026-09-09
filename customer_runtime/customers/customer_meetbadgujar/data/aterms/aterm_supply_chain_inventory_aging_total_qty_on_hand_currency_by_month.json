@@ -1,0 +1,43 @@
+{
+  "id": "aterm:supply_chain_inventory_aging_total_qty_on_hand_currency_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_aging_total_qty_on_hand_currency_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_aging",
+    "measure": "total_qty_on_hand",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2025-09": 193.0,
+    "2025-10": 1098.0,
+    "2025-11": 1820.0,
+    "2025-12": 190.0,
+    "2026-01": 248.0,
+    "2026-02": 515.0,
+    "2026-03": 1420.0,
+    "2026-04": 102.0,
+    "2026-05": 1400.0,
+    "2026-06": 1133.0,
+    "2026-07": 1000.0,
+    "2026-08": 2183.0,
+    "2026-09": 2993.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_inventory_aging_WMS_snapshot', 'SUM', 'total_qty_on_hand', None, [], None, None, None, {'date_col': 'snapshot_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "What is the total total qty on hand of inventory_agings by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

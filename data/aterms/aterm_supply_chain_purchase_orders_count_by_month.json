@@ -1,0 +1,43 @@
+{
+  "id": "aterm:supply_chain_purchase_orders_count_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_purchase_orders_count_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "purchase_orders",
+    "measure": "count",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2023-08": 1.0,
+    "2023-09": 2.0,
+    "2023-10": 1.0,
+    "2023-11": 2.0,
+    "2023-12": 1.0,
+    "2024-01": 3.0,
+    "2024-02": 2.0,
+    "2024-03": 3.0,
+    "2024-04": 2.0,
+    "2024-05": 3.0,
+    "2024-06": 3.0,
+    "2024-07": 3.0,
+    "2024-08": 2.0
+  },
+  "formula_line": "MEASURE_GROUPED(COUNT_DISTINCT(po_id) FROM supply_chain_purchase_orders_ERP_record GROUP BY BUCKET(po_date, month))",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:50Z",
+  "usage_count": 0,
+  "source_goal": "How many purchase_orderss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:52Z"
+}

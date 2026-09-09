@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_lead_times_max_lead_time_days_days_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_lead_times_max_lead_time_days_days_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "lead_times",
+    "measure": "max_lead_time_days",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "days",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2024-12": 17.5,
+    "2025-06": 6.9,
+    "2025-09": 20.3,
+    "2025-11": 19.2,
+    "2026-01": 36.7,
+    "2026-02": 29.4,
+    "2026-03": 16.8,
+    "2026-04": 22.6,
+    "2026-06": 38.2,
+    "2026-07": 14.9,
+    "2026-08": 33.5,
+    "2026-09": 24.3
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_lead_times_ERP_snapshot', 'MAX', 'avg_lead_time_days', None, [], None, None, None, {'date_col': 'period_start_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "What is the total max lead time days of lead_timess by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

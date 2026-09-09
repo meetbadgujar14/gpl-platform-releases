@@ -1,0 +1,447 @@
+{
+  "id": "ptem:report_coo_supply_chain_adhoc_receiving_quality_audit",
+  "canonical_id": "report_coo_supply_chain_adhoc_receiving_quality_audit",
+  "type": "Ptem",
+  "version": 1,
+  "meta": {
+    "title": "Inbound Receiving & Goods Quality Audit Report",
+    "description": "Ad-hoc deep-dive into inbound goods receipt performance, acceptance vs. rejection rates, damaged line items, and inventory impact — enabling the COO to pinpoint quality failures at the receiving dock and take corrective action with suppliers.",
+    "audience_label": "COO / Operations Leadership",
+    "verticals": [
+      "supply_chain"
+    ],
+    "tags": [
+      "receiving",
+      "goods receipt",
+      "quality",
+      "inbound",
+      "rejection",
+      "damage",
+      "audit",
+      "operational"
+    ],
+    "install_count": 870,
+    "rating": 4,
+    "created_at": "2026-08-21T05:35:27Z",
+    "created_by": "factory_llm_generator"
+  },
+  "slots": {
+    "format": "report",
+    "audience": "coo",
+    "scope": "supply_chain",
+    "frequency": "adhoc",
+    "depth": "detailed",
+    "period": "last_30_days"
+  },
+  "required_oracles": [
+    {
+      "canonical_id": "supply_chain_goods_receipts_count",
+      "label": "Total Goods Receipts",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_goods_receipts_count_completed",
+      "label": "Fully Completed Receipts",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_goods_receipts_count_partially_accepted",
+      "label": "Partially Accepted Receipts",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_goods_receipts_count_rejected",
+      "label": "Rejected Receipts",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_goods_receipts_quantity_received_count",
+      "label": "Total Units Received",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_goods_receipts_quantity_accepted_count",
+      "label": "Total Units Accepted",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_goods_receipts_quantity_rejected_count",
+      "label": "Total Units Rejected",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_shipment_lines_count_damaged",
+      "label": "Damaged Shipment Lines",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_shipment_lines_quantity_damaged_count",
+      "label": "Total Damaged Units",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_shipment_lines_quantity_shipped_count",
+      "label": "Total Units Shipped",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_shipment_lines_count_partially_received",
+      "label": "Partially Received Shipment Lines",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_supplier_performance_quality_acceptance_rate_percent",
+      "label": "Supplier Quality Acceptance Rate",
+      "format": "percent",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_supplier_performance_defect_rate_percent",
+      "label": "Supplier Defect Rate",
+      "format": "percent",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_supplier_performance_on_time_delivery_rate_percent",
+      "label": "On-Time Delivery Rate",
+      "format": "percent",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_inventory_levels_quantity_on_hand_count",
+      "label": "Inventory On Hand",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_inventory_levels_quantity_available_count",
+      "label": "Available Inventory",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_purchase_order_lines_count_partially_received",
+      "label": "PO Lines Partially Received",
+      "format": "count",
+      "required": false
+    },
+    {
+      "canonical_id": "supply_chain_purchase_order_lines_quantity_ordered_count",
+      "label": "Total Units Ordered",
+      "format": "count",
+      "required": false
+    },
+    {
+      "canonical_id": "supply_chain_purchase_order_lines_quantity_received_count",
+      "label": "Total Units Received vs Ordered",
+      "format": "count",
+      "required": false
+    },
+    {
+      "canonical_id": "supply_chain_items_standard_cost_currency",
+      "label": "Standard Unit Cost (Rejected Exposure)",
+      "format": "currency",
+      "currency_symbol": "USD",
+      "required": false
+    }
+  ],
+  "sections": [
+    {
+      "id": "header",
+      "type": "header",
+      "title": "Inbound Receiving & Goods Quality Audit Report",
+      "oracles": [],
+      "config": {
+        "show_status_pill": true,
+        "show_date_range": true,
+        "subtitle": "Ad-hoc audit of receiving dock performance, acceptance rates, damage incidents, and supplier quality signals"
+      }
+    },
+    {
+      "id": "kpis_receipt_summary",
+      "type": "kpi_grid",
+      "title": "Goods Receipt Overview",
+      "oracles": [
+        "supply_chain_goods_receipts_count",
+        "supply_chain_goods_receipts_count_completed",
+        "supply_chain_goods_receipts_count_partially_accepted",
+        "supply_chain_goods_receipts_count_rejected"
+      ],
+      "config": {
+        "columns": 4,
+        "show_rag_status": true,
+        "rag_rules": {
+          "supply_chain_goods_receipts_count_rejected": {
+            "green_max": 5,
+            "amber_max": 15,
+            "red_above": 15
+          }
+        }
+      }
+    },
+    {
+      "id": "kpis_unit_quality",
+      "type": "kpi_grid",
+      "title": "Unit-Level Acceptance & Rejection",
+      "oracles": [
+        "supply_chain_goods_receipts_quantity_received_count",
+        "supply_chain_goods_receipts_quantity_accepted_count",
+        "supply_chain_goods_receipts_quantity_rejected_count",
+        "supply_chain_shipment_lines_quantity_damaged_count"
+      ],
+      "config": {
+        "columns": 4,
+        "show_rag_status": true
+      }
+    },
+    {
+      "id": "kpis_supplier_quality",
+      "type": "kpi_grid",
+      "title": "Supplier Quality Indicators",
+      "oracles": [
+        "supply_chain_supplier_performance_quality_acceptance_rate_percent",
+        "supply_chain_supplier_performance_defect_rate_percent",
+        "supply_chain_supplier_performance_on_time_delivery_rate_percent"
+      ],
+      "config": {
+        "columns": 3,
+        "show_rag_status": true,
+        "rag_rules": {
+          "supply_chain_supplier_performance_defect_rate_percent": {
+            "green_max": 2,
+            "amber_max": 5,
+            "red_above": 5
+          },
+          "supply_chain_supplier_performance_quality_acceptance_rate_percent": {
+            "green_min": 95,
+            "amber_min": 85,
+            "red_below": 85
+          }
+        }
+      }
+    },
+    {
+      "id": "chart_receipt_status_breakdown",
+      "type": "bar_chart",
+      "title": "Goods Receipts by Status",
+      "oracles": [
+        "supply_chain_goods_receipts_count_completed",
+        "supply_chain_goods_receipts_count_partially_accepted",
+        "supply_chain_goods_receipts_count_rejected"
+      ],
+      "config": {
+        "max_bars": 3,
+        "color": "multi",
+        "orientation": "horizontal",
+        "show_data_labels": true,
+        "legend": true
+      }
+    },
+    {
+      "id": "chart_unit_flow",
+      "type": "bar_chart",
+      "title": "Units Received → Accepted vs. Rejected",
+      "oracles": [
+        "supply_chain_goods_receipts_quantity_received_count",
+        "supply_chain_goods_receipts_quantity_accepted_count",
+        "supply_chain_goods_receipts_quantity_rejected_count"
+      ],
+      "config": {
+        "max_bars": 3,
+        "color": "green_red",
+        "orientation": "vertical",
+        "show_data_labels": true,
+        "legend": true
+      }
+    },
+    {
+      "id": "chart_damage_vs_shipped",
+      "type": "bar_chart",
+      "title": "Damaged Units vs. Total Shipped",
+      "oracles": [
+        "supply_chain_shipment_lines_quantity_shipped_count",
+        "supply_chain_shipment_lines_quantity_damaged_count"
+      ],
+      "config": {
+        "max_bars": 2,
+        "color": "amber",
+        "orientation": "vertical",
+        "show_data_labels": true
+      }
+    },
+    {
+      "id": "chart_supplier_quality_rates",
+      "type": "bar_chart",
+      "title": "Supplier Quality vs. Defect Rates",
+      "oracles": [
+        "supply_chain_supplier_performance_quality_acceptance_rate_percent",
+        "supply_chain_supplier_performance_defect_rate_percent"
+      ],
+      "config": {
+        "max_bars": 8,
+        "color": "blue_red",
+        "orientation": "horizontal",
+        "group_by": "supplier",
+        "show_benchmark_line": true,
+        "benchmark_value": 95
+      }
+    },
+    {
+      "id": "table_po_receiving_gaps",
+      "type": "table",
+      "title": "Purchase Order Receiving Completeness",
+      "oracles": [
+        "supply_chain_purchase_order_lines_quantity_ordered_count",
+        "supply_chain_purchase_order_lines_quantity_received_count",
+        "supply_chain_purchase_order_lines_count_partially_received"
+      ],
+      "config": {
+        "columns": [
+          "PO Reference",
+          "Units Ordered",
+          "Units Received",
+          "Lines Partially Received",
+          "Gap %"
+        ],
+        "sort_by": "gap_desc",
+        "max_rows": 20,
+        "highlight_threshold": {
+          "gap_pct": 10
+        }
+      }
+    },
+    {
+      "id": "table_damaged_shipment_lines",
+      "type": "table",
+      "title": "Damaged & Partially Received Shipment Lines",
+      "oracles": [
+        "supply_chain_shipment_lines_count_damaged",
+        "supply_chain_shipment_lines_count_partially_received",
+        "supply_chain_shipment_lines_quantity_damaged_count"
+      ],
+      "config": {
+        "columns": [
+          "Shipment ID",
+          "Supplier",
+          "Damaged Lines",
+          "Partially Received Lines",
+          "Damaged Units",
+          "Estimated Cost Exposure"
+        ],
+        "sort_by": "damaged_units_desc",
+        "max_rows": 15
+      }
+    },
+    {
+      "id": "inventory_impact",
+      "type": "kpi_grid",
+      "title": "Inventory Impact of Receiving Shortfalls",
+      "oracles": [
+        "supply_chain_inventory_levels_quantity_on_hand_count",
+        "supply_chain_inventory_levels_quantity_available_count",
+        "supply_chain_items_standard_cost_currency"
+      ],
+      "config": {
+        "columns": 3,
+        "show_rag_status": false,
+        "annotation": "Available inventory reflects deductions from rejected and damaged inbound units"
+      }
+    },
+    {
+      "id": "narrative",
+      "type": "narrative",
+      "title": "Operations Summary & Recommended Actions",
+      "oracles": [],
+      "config": {
+        "max_words": 220,
+        "focus_areas": [
+          "rejection_rate_trend",
+          "top_offending_suppliers",
+          "damage_root_cause",
+          "inventory_risk_from_shortfalls",
+          "recommended_corrective_actions"
+        ]
+      }
+    },
+    {
+      "id": "audit",
+      "type": "audit_trail",
+      "title": "Oracle Data Sources",
+      "oracles": [],
+      "config": {
+        "show_last_refreshed": true,
+        "show_oracle_ids": true
+      }
+    },
+    {
+      "id": "footer",
+      "type": "footer",
+      "title": "",
+      "oracles": [],
+      "config": {
+        "show_generated_timestamp": true,
+        "show_report_id": true
+      }
+    }
+  ],
+  "narrative": {
+    "enabled": true,
+    "audience_tone": "operational",
+    "max_words": 220,
+    "structure": [
+      "observation",
+      "context",
+      "driver",
+      "implication",
+      "action"
+    ],
+    "highlight_thresholds": true
+  },
+  "delivery": {
+    "formats": [
+      "html",
+      "pdf"
+    ],
+    "filename_template": "inbound_receiving_quality_audit_{date}"
+  },
+  "coverage": {
+    "total": 20,
+    "available": 20,
+    "missing": 0,
+    "available_ids": [
+      "supply_chain_goods_receipts_count",
+      "supply_chain_goods_receipts_count_completed",
+      "supply_chain_goods_receipts_count_partially_accepted",
+      "supply_chain_goods_receipts_count_rejected",
+      "supply_chain_goods_receipts_quantity_received_count",
+      "supply_chain_goods_receipts_quantity_accepted_count",
+      "supply_chain_goods_receipts_quantity_rejected_count",
+      "supply_chain_shipment_lines_count_damaged",
+      "supply_chain_shipment_lines_quantity_damaged_count",
+      "supply_chain_shipment_lines_quantity_shipped_count",
+      "supply_chain_shipment_lines_count_partially_received",
+      "supply_chain_supplier_performance_quality_acceptance_rate_percent",
+      "supply_chain_supplier_performance_defect_rate_percent",
+      "supply_chain_supplier_performance_on_time_delivery_rate_percent",
+      "supply_chain_inventory_levels_quantity_on_hand_count",
+      "supply_chain_inventory_levels_quantity_available_count",
+      "supply_chain_purchase_order_lines_count_partially_received",
+      "supply_chain_purchase_order_lines_quantity_ordered_count",
+      "supply_chain_purchase_order_lines_quantity_received_count",
+      "supply_chain_items_standard_cost_currency"
+    ],
+    "missing_oracles": [],
+    "status": "READY"
+  }
+}

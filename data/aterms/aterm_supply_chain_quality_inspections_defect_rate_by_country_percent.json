@@ -1,0 +1,41 @@
+{
+  "id": "aterm:supply_chain_quality_inspections_defect_rate_by_country_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_quality_inspections_defect_rate_by_country_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "quality_inspections",
+    "measure": "defect_rate",
+    "state": "all",
+    "scope": "by_country",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Brazil": 1.2,
+    "Canada": 15.67,
+    "Croatia": 26.17,
+    "India": 3.96,
+    "Japan": 9.6,
+    "Peru": 1.04,
+    "South Africa": 17.08,
+    "Spain": 1.45,
+    "Sweden": 7.0,
+    "United Kingdom": 13.05,
+    "United States": 50.98
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(defect_rate) FROM supply_chain_quality_inspections_ERP_record JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY country)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total defect rate of quality_inspectionss by country?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

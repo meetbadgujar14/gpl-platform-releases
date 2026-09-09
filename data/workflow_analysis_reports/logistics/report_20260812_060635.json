@@ -1,0 +1,233 @@
+{
+  "vertical": "logistics",
+  "models_used": [
+    "gpt4o"
+  ],
+  "total": 5,
+  "passed": 3,
+  "flagged": 2,
+  "failed": 0,
+  "errors": 0,
+  "results": [
+    {
+      "canonical_id": "logistics_fuel_consumption_growth_litres_consumed_this_month_percent",
+      "source_goal": "What is the month over month growth in litres consumed for fuel_consumptions?",
+      "formula_line": "logistics_fuel_consumption_growth_litres_consumed_this_month_percent = (({logistics_fuel_consumption_litres_consumed_this_month_count} - {logistics_fuel_consumption_litres_consumed_last_month_count}) / abs({logistics_fuel_consumption_litres_consumed_last_month_count}) * 100) if {logistics_fuel_consumption_litres_consumed_last_month_count} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula correctly calculates month over month growth using subtraction and division.",
+            "C2": "The dependencies correctly represent the litres consumed this month and last month.",
+            "C3": "The time scopes for this month and last month match the metric's time scope requirement.",
+            "C4": "There are no state filters in the formula, which aligns with the unfiltered metric requirement.",
+            "C5": "There is a guard clause to handle division-by-zero when the denominator is zero.",
+            "C6": "The result is a percentage, which correctly reflects the unit for a growth calculation."
+          },
+          "flags": [],
+          "reasoning": "All checklist checks are satisfied, and the formula logically follows the business question of calculating month over month growth in litres consumed.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 4953
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T06:06:18Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_fuel_efficiency_km_per_litre_ratio",
+      "source_goal": "Average kilometers traveled per litre of fuel consumed across all vehicle trips.",
+      "formula_line": "logistics_fuel_efficiency_km_per_litre_ratio = {logistics_fuel_consumption_distance_km_count} / {logistics_fuel_consumption_litres_consumed_count}",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.6667,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.6667,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": false,
+            "C6": false
+          },
+          "check_reasoning": {
+            "C1": "The formula correctly uses division to represent the average kilometers per litre.",
+            "C2": "Dependencies use the correct numerical totals for distance and fuel consumed.",
+            "C3": "Dependencies align with the all_time time scope of the composed metric.",
+            "C4": "Dependencies have no state filter, matching the unfiltered composed metric.",
+            "C5": "The formula does not handle division by zero for the denominator.",
+            "C6": "The result unit is a ratio as expected, but it's unclear if the unit directly expresses 'kilometers per litre'."
+          },
+          "flags": [
+            "Consider adding a safeguard against division by zero."
+          ],
+          "reasoning": "The formula mostly aligns with business requirements, but lacks a zero-division safeguard and clarity on explicit unit expression.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 3312
+        }
+      },
+      "all_flags": [
+        "Consider adding a safeguard against division by zero."
+      ],
+      "analyzed_at": "2026-08-12T06:06:21Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_incidents_growth_estimated_loss_value_this_month_percent",
+      "source_goal": "What is the month over month growth in estimated loss value for incidentss?",
+      "formula_line": "logistics_incidents_growth_estimated_loss_value_this_month_percent = (({logistics_incidents_estimated_loss_value_this_month_currency} - {logistics_incidents_estimated_loss_value_last_month_currency}) / abs({logistics_incidents_estimated_loss_value_last_month_currency}) * 100) if {logistics_incidents_estimated_loss_value_last_month_currency} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses subtraction and division to calculate month-over-month growth rate, which matches the business question.",
+            "C2": "Both dependencies accurately represent the estimated loss values for this month and last month, which are needed for the growth calculation.",
+            "C3": "The time scopes for the dependencies are correctly set to this_month and last_month, aligning with the composed metric's time scope.",
+            "C4": "The dependencies are unfiltered, consistent with the unfiltered state of the composed metric.",
+            "C5": "The formula includes a division-by-zero guard, ensuring safe calculation if the last month's value is zero.",
+            "C6": "The result unit is percent, which is appropriate for a month-over-month growth rate calculation."
+          },
+          "flags": [],
+          "reasoning": "The formula accurately calculates the month-over-month growth in estimated loss value for incidents with all checks passing, ensuring correctness and safety.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 5306
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T06:06:27Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_incidents_growth_resolution_days_this_month_percent",
+      "source_goal": "What is the month over month growth in resolution days for incidentss?",
+      "formula_line": "logistics_incidents_growth_resolution_days_this_month_percent = (({logistics_incidents_resolution_days_this_month_days} - {logistics_incidents_resolution_days_last_month_days}) / abs({logistics_incidents_resolution_days_last_month_days}) * 100) if {logistics_incidents_resolution_days_last_month_days} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "PASSED",
+      "ensemble_confidence": 1.0,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "CORRECT",
+          "confidence": 1.0,
+          "checks": {
+            "C1": true,
+            "C2": true,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula correctly computes month-over-month growth by using subtraction and division, matching the business question.",
+            "C2": "The formula correctly uses total resolution days for this month and last month as dependencies.",
+            "C3": "The dependency metrics both use the correct time scopes of this month and last month.",
+            "C4": "The formula and dependencies have no state filters applied, which is consistent.",
+            "C5": "The formula handles division-by-zero by checking if the denominator is not zero before performing the division.",
+            "C6": "The computed result is in percent, which is appropriate for a growth rate calculation."
+          },
+          "flags": [],
+          "reasoning": "All checks pass for the formula matching the business question and having proper dependencies, time scopes, state alignment, zero-division handling, and unit.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 4010
+        }
+      },
+      "all_flags": [],
+      "analyzed_at": "2026-08-12T06:06:31Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    },
+    {
+      "canonical_id": "logistics_routes_growth_standard_transit_days_this_month_percent",
+      "source_goal": "What is the month over month growth in standard transit days for routess?",
+      "formula_line": "logistics_routes_growth_standard_transit_days_this_month_percent = (({logistics_routes_standard_transit_days_this_month_days} - {logistics_routes_standard_transit_days_last_month_days}) / abs({logistics_routes_standard_transit_days_last_month_days}) * 100) if {logistics_routes_standard_transit_days_last_month_days} != 0 else 0",
+      "kind": "composed",
+      "ensemble_verdict": "FLAGGED",
+      "ensemble_confidence": 0.8333,
+      "model_results": {
+        "gpt4o": {
+          "verdict": "QUESTIONABLE",
+          "confidence": 0.8333,
+          "checks": {
+            "C1": true,
+            "C2": false,
+            "C3": true,
+            "C4": true,
+            "C5": true,
+            "C6": true
+          },
+          "check_reasoning": {
+            "C1": "The formula uses subtraction and division consistent with 'growth rate'.",
+            "C2": "The dependencies measure totals, but the business question is about 'standard transit days', suggesting potential misalignment.",
+            "C3": "The time scopes 'this_month' and 'last_month' align with the composite metric's 'this_month' time scope.",
+            "C4": "There are no state filters on the composite or dependency metrics, maintaining alignment.",
+            "C5": "The formula includes a guard to handle division by zero.",
+            "C6": "The formula outputs a percent, which matches the operation performed."
+          },
+          "flags": [
+            "The dependencies focus on total standard transit days, which may not directly reflect the 'standard transit days for routess' as asked in the business question."
+          ],
+          "reasoning": "The formula generally aligns with the business question, but there's a potential mismatch in the dependency metrics relative to the concept of 'standard transit days for routess'.",
+          "error": null,
+          "model_key": "gpt4o",
+          "model_label": "GPT-4o (OpenAI)",
+          "elapsed_ms": 4251
+        }
+      },
+      "all_flags": [
+        "The dependencies focus on total standard transit days, which may not directly reflect the 'standard transit days for routess' as asked in the business question."
+      ],
+      "analyzed_at": "2026-08-12T06:06:35Z",
+      "human_review_status": "pending",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "review_note": null
+    }
+  ],
+  "error_details": [],
+  "run_at": "2026-08-12T06:06:35Z"
+}

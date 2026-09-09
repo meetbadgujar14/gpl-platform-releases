@@ -1,0 +1,41 @@
+{
+  "id": "aterm:supply_chain_invoice_lines_unit_price_by_country_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_invoice_lines_unit_price_by_country_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "invoice_lines",
+    "measure": "unit_price",
+    "state": "all",
+    "scope": "by_country",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Brazil": 1340.0,
+    "Canada": 3452.5,
+    "China": 3.15,
+    "Croatia": 956.8,
+    "Egypt": 318.0,
+    "India": 487.25,
+    "Japan": 22.1,
+    "Peru": 582.7,
+    "South Africa": 5.4,
+    "United Kingdom": 42.75,
+    "United States": 2.65
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(unit_price) FROM supply_chain_invoice_lines_ERP_record JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY country)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:50Z",
+  "usage_count": 0,
+  "source_goal": "What is the total unit price of invoice_liness by country?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:51Z"
+}

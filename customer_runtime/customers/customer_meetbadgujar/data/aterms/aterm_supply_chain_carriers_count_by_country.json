@@ -1,0 +1,35 @@
+{
+  "id": "aterm:supply_chain_carriers_count_by_country",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_carriers_count_by_country",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "carriers",
+    "measure": "count",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_country"
+  },
+  "oracle_value": {
+    "Canada": 1.0,
+    "Germany": 1.0,
+    "Japan": 1.0,
+    "Spain": 1.0,
+    "USA": 6.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_carriers_WMS_dimension', 'COUNT_DISTINCT', 'carrier_id', 'country', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:40Z",
+  "usage_count": 0,
+  "source_goal": "How many carrierss by country?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:07Z"
+}

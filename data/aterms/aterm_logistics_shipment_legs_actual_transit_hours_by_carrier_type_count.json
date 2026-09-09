@@ -1,0 +1,35 @@
+{
+  "id": "aterm:logistics_shipment_legs_actual_transit_hours_by_carrier_type_count",
+  "type": "Aterm",
+  "canonical_id": "logistics_shipment_legs_actual_transit_hours_by_carrier_type_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "shipment_legs",
+    "measure": "actual_transit_hours",
+    "state": "all",
+    "scope": "by_carrier_type",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Air Freight": 31.5,
+    "Full Truckload": 126.75,
+    "Intermodal": 43.25,
+    "Less Than Truckload": 53.25,
+    "Rail Freight": 20.5
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(actual_transit_hours) FROM logistics_shipment_legs_ERP_record JOIN logistics_carriers_MANUAL_dimension ON carrier_id=carrier_id GROUP BY carrier_type)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:17Z",
+  "usage_count": 0,
+  "source_goal": "What is the total actual transit hours of shipment_legss by carrier type?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:45Z"
+}

@@ -1,0 +1,11 @@
+carrier_id,carrier_name,carrier_code,carrier_type,country,service_level,contract_rate_usd,avg_transit_days,is_preferred,is_active,onboarded_date
+CRR-4821,Pacific Rim Logistics,PRL,Full Truckload,USA,Standard,1850.0,4,True,True,2022-03-15
+CRR-7364,Meridian Freight Solutions,MFS,Less Than Truckload,USA,Express,620.5,2,True,True,2021-11-08
+CRR-1093,TransAtlantic Carriers GmbH,TAC,Ocean Freight,Germany,Economy,3400.0,18,False,True,2023-01-22
+CRR-5582,Skybridge Air Cargo,SAC,Air Freight,Canada,Priority,7250.0,1,True,True,2022-07-30
+CRR-2947,Coastal Express Delivery,CED,Last Mile,USA,Same Day,185.75,1,False,True,2023-04-10
+CRR-8816,Sino-Pacific Trade Logistics,SPT,Ocean Freight,China,Standard,4100.0,22,False,False,2021-06-14
+CRR-3375,Nordic Swift Transport,NST,Less Than Truckload,Sweden,Express,890.0,3,True,True,2022-09-05
+CRR-6104,Irongate Rail Freight,IRF,Rail,USA,Economy,2300.0,7,False,True,2023-02-18
+CRR-9238,Estrella Cargo Mexicana,ECM,Full Truckload,Mexico,Standard,1420.0,5,False,True,2023-06-27
+CRR-4467,Apex Global Parcel Services,AGP,Parcel,UK,Priority,42.8,2,True,True,2022-12-03

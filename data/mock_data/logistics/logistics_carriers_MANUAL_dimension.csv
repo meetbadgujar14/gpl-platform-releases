@@ -1,0 +1,11 @@
+carrier_id,carrier_name,carrier_type,carrier_country,service_tier,is_active,contract_rate_per_km,created_date
+CRR-4821,Pacific Rim Logistics,Full Truckload,USA,Premium,True,2.85,2023-03-15
+CRR-7364,Meridian Freight Solutions,Less Than Truckload,Canada,Standard,True,1.92,2022-11-08
+CRR-2957,TransEuro Carriers GmbH,Intermodal,Germany,Express,True,3.41,2023-06-22
+CRR-5130,Iberian Road Haulage,Full Truckload,Spain,Economy,False,1.47,2022-07-30
+CRR-8842,Nippon Swift Transport,Air Freight,Japan,Premium,True,6.75,2023-01-17
+CRR-3316,Southern Cross Hauliers,Less Than Truckload,Australia,Standard,True,2.1,2023-09-04
+CRR-6079,Volta Freight & Logistics,Rail Freight,France,Economy,True,1.23,2022-05-19
+CRR-1485,Great Lakes Cargo Inc.,Intermodal,USA,Standard,False,2.38,2022-09-11
+CRR-9203,Nordic Express Freight,Full Truckload,Sweden,Express,True,3.88,2024-02-28
+CRR-5567,Bengaluru Bulk Carriers,Less Than Truckload,India,Economy,True,0.94,2023-12-05

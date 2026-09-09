@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_suppliers_under_review_this_month_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_under_review_this_month_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "count",
+    "state": "Under Review",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_MONTH_FIXED('supply_chain_suppliers_ERP_dimension', 'onboarded_date', 'COUNT_DISTINCT', 'supplier_id', 'this_month', [{'field': 'status', 'op': '=', 'value': 'Under Review'}])",
+  "exec_formula": "MEASURE_MONTH_FIXED('supply_chain_suppliers_ERP_dimension', 'onboarded_date', 'COUNT_DISTINCT', 'supplier_id', 'this_month', [{'field': 'status', 'op': '=', 'value': 'Under Review'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-09-01T07:53:33Z",
+  "usage_count": 0,
+  "source_goal": "How many suppliers are currently under review this month?",
+  "wave": "D",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_MONTH_FIXED steps=7",
+  "wizard_steps": 7,
+  "verified_at": "2026-09-02T06:49:07Z"
+}

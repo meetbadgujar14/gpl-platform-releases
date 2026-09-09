@@ -1,0 +1,32 @@
+item_id,forecast_period_date,item_name,item_category,forecast_method,period_type,forecasted_quantity,actual_quantity,forecast_error,forecast_accuracy_rate
+ITM-4821,2026-09-01,Forklift Battery 48V,Hardware,Seasonal Decomposition,Monthly,320,298,22,93.1
+ITM-7364,2026-09-01,Stainless Steel Fastener Set,Mechanical Components,ARIMA,Monthly,1850,1920,-70,96.4
+ITM-2093,2026-09-01,Carbon Steel Pipe 2-inch,Material Handling,Seasonal Decomposition,Monthly,5400,5210,190,96.5
+ITM-5517,2026-09-01,Copper Wire Spool 14AWG,Mechanical Components,ARIMA,Monthly,740,810,-70,91.4
+ITM-8832,2026-09-01,HDPE Sheet 10mm,Mechanical Components,Machine Learning,Monthly,2200,2150,50,97.7
+ITM-3145,2026-09-01,PVC Insulation Tape Roll,Raw Materials,ARIMA,Monthly,980,1045,-65,93.8
+ITM-6678,2026-09-01,Polypropylene Resin Pellets,Hardware,Moving Average,Monthly,12500,11980,520,95.8
+ITM-9201,2026-08-01,Corrugated Packaging Box Large,Packaging,Exponential Smoothing,Monthly,870,904,-34,96.2
+ITM-4821,2026-08-01,Polypropylene Resin Pellets,Material Handling,Exponential Smoothing,Monthly,305,287,18,94.1
+ITM-7364,2026-08-01,PVC Insulation Tape Roll,Electrical,ARIMA,Monthly,1780,1850,-70,96.2
+ITM-1134,2026-08-01,LED Industrial Fixture 200W,Material Handling,Machine Learning,Monthly,430,395,35,91.9
+ITM-5517,2026-08-01,Forklift Battery 48V,Electrical,Seasonal Decomposition,Monthly,690,725,-35,95.2
+ITM-3856,2026-07-01,LED Industrial Fixture 200W,Electrical,Machine Learning,Monthly,2100,1975,125,94.0
+ITM-2093,2026-07-01,HDPE Sheet 10mm,Raw Materials,Moving Average,Monthly,5100,5340,-240,95.5
+ITM-8832,2026-07-01,Bearing Assembly 6204,Hardware,Exponential Smoothing,Monthly,2050,2180,-130,94.0
+ITM-6290,2026-07-01,Forklift Battery 48V,Safety & PPE,Seasonal Decomposition,Monthly,3300,3150,150,95.4
+ITM-4471,2026-06-01,Pneumatic Cylinder 50mm Bore,Electrical,Machine Learning,Monthly,4800,5020,-220,95.6
+ITM-9201,2026-06-01,Bearing Assembly 6204,Hardware,ARIMA,Monthly,820,790,30,96.2
+ITM-1134,2026-06-01,PVC Insulation Tape Roll,Material Handling,Machine Learning,Monthly,410,375,35,91.5
+ITM-7720,2026-05-01,Corrugated Packaging Box Large,Packaging,Moving Average,Monthly,55,62,-7,88.7
+ITM-3145,2026-05-01,Stretch Wrap Film 20-inch,Raw Materials,ARIMA,Monthly,950,985,-35,96.4
+ITM-6678,2026-05-01,Bearing Assembly 6204,Electrical,Moving Average,Monthly,11800,11500,300,97.4
+ITM-2548,2026-03-01,HDPE Sheet 10mm,Electrical,ARIMA,Monthly,6200,5980,220,96.4
+ITM-6290,2026-03-01,LED Industrial Fixture 200W,Packaging,Seasonal Decomposition,Monthly,3100,2950,150,94.9
+ITM-7720,2026-01-01,PVC Insulation Tape Roll,Packaging,Seasonal Decomposition,Monthly,48,53,-5,90.6
+ITM-3856,2026-01-01,HDPE Sheet 10mm,Packaging,Exponential Smoothing,Monthly,1850,1760,90,94.9
+ITM-4471,2025-12-01,Polypropylene Resin Pellets,Electrical,Seasonal Decomposition,Monthly,5200,5480,-280,94.9
+ITM-2548,2025-11-01,Carbon Steel Pipe 2-inch,Electrical,ARIMA,Monthly,5900,6150,-250,95.9
+ITM-9201,2025-10-01,Industrial Hydraulic Pump,Safety & PPE,Moving Average,Monthly,760,715,45,94.1
+ITM-8832,2025-10-01,HDPE Sheet 10mm,Mechanical Components,Moving Average,Monthly,1980,2060,-80,96.1
+ITM-1134,2025-09-01,Carbon Steel Pipe 2-inch,Safety & PPE,Exponential Smoothing,Monthly,390,420,-30,92.9

@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_shipments_freight_cost_in_transit_this_month_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shipments_freight_cost_in_transit_this_month_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shipments",
+    "measure": "freight_cost",
+    "state": "in_transit",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 1675.0,
+  "formula_line": "MEASURE_MONTH_FIXED('supply_chain_shipments_WMS_record', 'shipment_date', 'SUM', 'freight_cost', 'this_month', [{'field': 'shipment_status', 'op': '=', 'value': 'in_transit'}])",
+  "exec_formula": "MEASURE_MONTH_FIXED('supply_chain_shipments_WMS_record', 'shipment_date', 'SUM', 'freight_cost', 'this_month', [{'field': 'shipment_status', 'op': '=', 'value': 'in_transit'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_wizard_execution",
+  "created_at": "2026-09-01T07:50:07Z",
+  "usage_count": 0,
+  "source_goal": "What is the total freight cost for shipments currently in transit this month?",
+  "wave": "B",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_MONTH_FIXED steps=7",
+  "wizard_steps": 7,
+  "verified_at": "2026-09-01T07:54:59Z"
+}

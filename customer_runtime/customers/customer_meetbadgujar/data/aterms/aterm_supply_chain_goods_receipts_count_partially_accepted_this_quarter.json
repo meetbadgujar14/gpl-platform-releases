@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_goods_receipts_count_partially_accepted_this_quarter",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_goods_receipts_count_partially_accepted_this_quarter",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "goods_receipts",
+    "measure": "count",
+    "state": "Partially Accepted",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 2.0,
+  "formula_line": "MEASURE_QUARTER_FIXED('supply_chain_goods_receipts_ERP_record', 'receipt_date', 'COUNT_DISTINCT', 'receipt_id', 'this_quarter', [{'field': 'receipt_status', 'op': '=', 'value': 'Partially Accepted'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution_stable",
+  "created_at": "2026-09-01T07:44:38Z",
+  "usage_count": 0,
+  "source_goal": "How many Partially Accepted goods_receiptss are there this quarter?",
+  "wave": 3,
+  "operator": "MEASURE_QUARTER_FIXED",
+  "verified_at": "2026-09-01T07:54:56Z"
+}

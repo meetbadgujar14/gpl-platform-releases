@@ -1,0 +1,31 @@
+{
+  "id": "aterm:supply_chain_items_on_hold_this_month_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_items_on_hold_this_month_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "items",
+    "measure": "count",
+    "state": "On Hold",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_MONTH_FIXED('supply_chain_items_ERP_dimension', 'created_date', 'COUNT', 'item_id', 'this_month', [{'field': 'item_status', 'op': '=', 'value': 'On Hold'}])",
+  "exec_formula": "MEASURE_MONTH_FIXED('supply_chain_items_ERP_dimension', 'created_date', 'COUNT', 'item_id', 'this_month', [{'field': 'item_status', 'op': '=', 'value': 'On Hold'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_wizard_execution",
+  "created_at": "2026-09-07T05:58:21Z",
+  "usage_count": 0,
+  "source_goal": "How many items are currently on hold this month?",
+  "wave": "D",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_MONTH_FIXED steps=7",
+  "wizard_steps": 7
+}

@@ -1,0 +1,35 @@
+{
+  "id": "aterm:supply_chain_supplier_items_average_negotiated_unit_cost_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_supplier_items_average_negotiated_unit_cost_currency",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "supplier_items",
+    "measure": "average_negotiated_unit_cost",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 501.074,
+  "formula_line": "supply_chain_supplier_items_average_negotiated_unit_cost_currency = {supply_chain_supplier_items_negotiated_unit_cost_currency} / ({supply_chain_supplier_items_count} if {supply_chain_supplier_items_count} != 0 else 1)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-08-12T11:25:04Z",
+  "usage_count": 0,
+  "source_goal": "What is the average negotiated unit cost per supplier_items?",
+  "wave": 5,
+  "depends_on": [
+    "supply_chain_supplier_items_negotiated_unit_cost_currency",
+    "supply_chain_supplier_items_count"
+  ],
+  "dep_values": {
+    "supply_chain_supplier_items_negotiated_unit_cost_currency": 7516.110000000001,
+    "supply_chain_supplier_items_count": 15.0
+  }
+}

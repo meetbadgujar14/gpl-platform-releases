@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_invoices_count_under_review_escalation_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_invoices_count_under_review_escalation_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "invoices",
+    "measure": "days_to_pay",
+    "state": "Under Review",
+    "scope": "by_invoice_id",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar",
+    "agg_override": "MAX"
+  },
+  "oracle_value": {
+    "INV-48593": 0.0,
+    "INV-63712": 0.0,
+    "INV-98053": 0.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_invoices_ERP_record', 'MAX', 'days_to_pay', group_by_col='invoice_id', filters=[{'field': 'invoice_status', 'op': '=', 'value': 'Under Review'}])",
+  "exec_formula": "MEASURE_GROUPED('supply_chain_invoices_ERP_record', 'MAX', 'days_to_pay', group_by_col='invoice_id', filters=[{'field': 'invoice_status', 'op': '=', 'value': 'Under Review'}])",
+  "verified": true,
+  "ai_locked": false,
+  "lock_method": "llm_wizard",
+  "verify_reason": "LLM_WIZARD_execution",
+  "created_at": "2026-08-11T11:59:06Z",
+  "usage_count": 0,
+  "source_goal": "Which Under Review invoices have the highest days to pay and should be prioritized for resolution?",
+  "wave": "E",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_GROUPED steps=5",
+  "wizard_steps": 5
+}

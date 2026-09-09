@@ -1,0 +1,39 @@
+{
+  "id": "aterm:logistics_vehicles_payload_capacity_kg_utilisation_rate_count",
+  "type": "Aterm",
+  "canonical_id": "logistics_vehicles_payload_capacity_kg_utilisation_rate_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "vehicles",
+    "measure": "payload_capacity_kg",
+    "state": "all",
+    "scope": "average",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Box Truck": 17700.0,
+    "Cargo Van": 5900.0,
+    "Flatbed Truck": 52000.0,
+    "Refrigerated Truck": 34500.0,
+    "Semi-Truck": 68300.0,
+    "Sprinter Van": 3250.0,
+    "Tanker Truck": 39500.0
+  },
+  "formula_line": "MEASURE_GROUPED('logistics_vehicles_MANUAL_dimension', 'SUM', 'payload_capacity_kg', group_by_col='vehicle_type', filters=None)",
+  "exec_formula": "MEASURE_GROUPED('logistics_vehicles_MANUAL_dimension', 'SUM', 'payload_capacity_kg', group_by_col='vehicle_type', filters=None)",
+  "verified": true,
+  "ai_locked": false,
+  "lock_method": "llm_wizard",
+  "verify_reason": "LLM_WIZARD_execution",
+  "created_at": "2026-08-10T06:52:55Z",
+  "usage_count": 0,
+  "source_goal": "Which vehicle has the lowest payload utilisation rate relative to payload capacity — identifying underloaded assets for load consolidation?",
+  "wave": "E",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_GROUPED steps=3",
+  "wizard_steps": 3
+}

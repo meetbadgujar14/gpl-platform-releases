@@ -1,0 +1,36 @@
+{
+  "id": "aterm:logistics_vehicle_trips_average_trip_cost_currency",
+  "type": "Aterm",
+  "canonical_id": "logistics_vehicle_trips_average_trip_cost_currency",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "vehicle_trips",
+    "measure": "average_trip_cost",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 762.9696428571427,
+  "formula_line": "logistics_vehicle_trips_average_trip_cost_currency = {logistics_vehicle_trips_trip_cost_currency} / {logistics_vehicle_trips_count}",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-07-22T09:51:18Z",
+  "usage_count": 0,
+  "source_goal": "What is the average trip cost per vehicle_trips?",
+  "wave": 5,
+  "depends_on": [
+    "logistics_vehicle_trips_trip_cost_currency",
+    "logistics_vehicle_trips_count"
+  ],
+  "dep_values": {
+    "logistics_vehicle_trips_trip_cost_currency": 21363.149999999998,
+    "logistics_vehicle_trips_count": 28.0
+  },
+  "verified_at": "2026-07-22T12:18:46Z"
+}

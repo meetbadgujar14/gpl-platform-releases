@@ -1,0 +1,1006 @@
+{
+  "customer_meetbadgujar": [
+    {
+      "onboard_id": "3d71cb5c-d0ef-436f-b874-4decdad400c2",
+      "vertical": "supply_chain",
+      "status": "done",
+      "error": null,
+      "created_at": 1788330567.4002893,
+      "finished_at": 1788331763.2025092,
+      "overall_pct": 100,
+      "stages": [
+        {
+          "id": "reconcile",
+          "label": "Atom Reconciliation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "relationships",
+          "label": "Relationship Establishment",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "mockdata",
+          "label": "Mock Data Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "enforce_enums",
+          "label": "Enum Enforcement",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "seed",
+          "label": "Seed Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "vocabulary",
+          "label": "Vocabulary Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "goals",
+          "label": "Goal Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "compile",
+          "label": "Compilation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "verify",
+          "label": "Verification",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "package_and_ship",
+          "label": "Package & Ship",
+          "status": "done",
+          "error": null
+        }
+      ]
+    },
+    {
+      "onboard_id": "c572ee18-f063-43e9-b227-3926709a37da",
+      "vertical": "logistics",
+      "status": "done",
+      "error": null,
+      "created_at": 1787813791.6999767,
+      "finished_at": 1787814372.5928943,
+      "overall_pct": 100,
+      "stages": [
+        {
+          "id": "reconcile",
+          "label": "Atom Reconciliation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "relationships",
+          "label": "Relationship Establishment",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "mockdata",
+          "label": "Mock Data Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "enforce_enums",
+          "label": "Enum Enforcement",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "seed",
+          "label": "Seed Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "vocabulary",
+          "label": "Vocabulary Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "goals",
+          "label": "Goal Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "compile",
+          "label": "Compilation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "verify",
+          "label": "Verification",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "package_and_ship",
+          "label": "Package & Ship",
+          "status": "done",
+          "error": null
+        }
+      ]
+    },
+    {
+      "onboard_id": "d1b556b3-31fd-4236-ad4d-dbe1a56661c3",
+      "vertical": "logistics",
+      "status": "failed",
+      "error": "No seed file for 'logistics'. Run SeedAgent first.",
+      "created_at": 1787641124.9214997,
+      "finished_at": 1787641173.2261932,
+      "overall_pct": 50,
+      "stages": [
+        {
+          "id": "reconcile",
+          "label": "Atom Reconciliation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "relationships",
+          "label": "Relationship Establishment",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "mockdata",
+          "label": "Mock Data Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "enforce_enums",
+          "label": "Enum Enforcement",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "seed",
+          "label": "Seed Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "vocabulary",
+          "label": "Vocabulary Generation",
+          "status": "failed",
+          "error": "No seed file for 'logistics'. Run SeedAgent first."
+        },
+        {
+          "id": "goals",
+          "label": "Goal Generation",
+          "status": "idle",
+          "error": null
+        },
+        {
+          "id": "compile",
+          "label": "Compilation",
+          "status": "idle",
+          "error": null
+        },
+        {
+          "id": "verify",
+          "label": "Verification",
+          "status": "idle",
+          "error": null
+        },
+        {
+          "id": "package_and_ship",
+          "label": "Package & Ship",
+          "status": "idle",
+          "error": null
+        }
+      ]
+    }
+  ],
+  "customer_ritikkohad": [
+    {
+      "onboard_id": "808c794e-854d-4497-8b5a-889cd4e40367",
+      "vertical": "supply_chain",
+      "status": "failed",
+      "error": "timed out",
+      "created_at": 1788258910.4272323,
+      "finished_at": 1788260786.30965,
+      "overall_pct": 90,
+      "stages": [
+        {
+          "id": "reconcile",
+          "label": "Atom Reconciliation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "relationships",
+          "label": "Relationship Establishment",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "mockdata",
+          "label": "Mock Data Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "enforce_enums",
+          "label": "Enum Enforcement",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "seed",
+          "label": "Seed Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "vocabulary",
+          "label": "Vocabulary Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "goals",
+          "label": "Goal Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "compile",
+          "label": "Compilation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "verify",
+          "label": "Verification",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "package_and_ship",
+          "label": "Package & Ship",
+          "status": "failed",
+          "error": "timed out"
+        }
+      ]
+    },
+    {
+      "onboard_id": "9f0bdb8e-ac8e-418f-bad6-6c3ba36dff80",
+      "vertical": "supply_chain",
+      "status": "done",
+      "error": null,
+      "created_at": 1788254460.8565886,
+      "finished_at": 1788255991.8050303,
+      "overall_pct": 100,
+      "stages": [
+        {
+          "id": "reconcile",
+          "label": "Atom Reconciliation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "relationships",
+          "label": "Relationship Establishment",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "mockdata",
+          "label": "Mock Data Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "enforce_enums",
+          "label": "Enum Enforcement",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "seed",
+          "label": "Seed Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "vocabulary",
+          "label": "Vocabulary Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "goals",
+          "label": "Goal Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "compile",
+          "label": "Compilation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "verify",
+          "label": "Verification",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "package_and_ship",
+          "label": "Package & Ship",
+          "status": "done",
+          "error": null
+        }
+      ]
+    },
+    {
+      "onboard_id": "5908f9f9-7e8b-41ff-8ff6-2268db915560",
+      "vertical": "supply_chain",
+      "status": "done",
+      "error": null,
+      "created_at": 1788246110.4156344,
+      "finished_at": 1788249314.1450293,
+      "overall_pct": 100,
+      "stages": [
+        {
+          "id": "reconcile",
+          "label": "Atom Reconciliation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "relationships",
+          "label": "Relationship Establishment",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "mockdata",
+          "label": "Mock Data Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "enforce_enums",
+          "label": "Enum Enforcement",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "seed",
+          "label": "Seed Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "vocabulary",
+          "label": "Vocabulary Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "goals",
+          "label": "Goal Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "compile",
+          "label": "Compilation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "verify",
+          "label": "Verification",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "package_and_ship",
+          "label": "Package & Ship",
+          "status": "done",
+          "error": null
+        }
+      ]
+    }
+  ],
+  "customer_sakshijadeja": [
+    {
+      "onboard_id": "78e960c8-8045-4127-9798-fda9716d85ff",
+      "vertical": "supply_chain",
+      "status": "done",
+      "error": null,
+      "created_at": 1785823645.5192943,
+      "finished_at": 1785824163.5904818,
+      "overall_pct": 100,
+      "stages": [
+        {
+          "id": "reconcile",
+          "label": "Atom Reconciliation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "relationships",
+          "label": "Relationship Establishment",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "mockdata",
+          "label": "Mock Data Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "enforce_enums",
+          "label": "Enum Enforcement",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "seed",
+          "label": "Seed Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "vocabulary",
+          "label": "Vocabulary Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "goals",
+          "label": "Goal Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "compile",
+          "label": "Compilation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "verify",
+          "label": "Verification",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "package_and_ship",
+          "label": "Package & Ship",
+          "status": "done",
+          "error": null
+        }
+      ]
+    },
+    {
+      "onboard_id": "6be4301c-643d-4f5e-8d8f-71014e957140",
+      "vertical": "logistics",
+      "status": "done",
+      "error": null,
+      "created_at": 1785823443.0597234,
+      "finished_at": 1785823639.683139,
+      "overall_pct": 100,
+      "stages": [
+        {
+          "id": "reconcile",
+          "label": "Atom Reconciliation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "relationships",
+          "label": "Relationship Establishment",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "mockdata",
+          "label": "Mock Data Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "enforce_enums",
+          "label": "Enum Enforcement",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "seed",
+          "label": "Seed Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "vocabulary",
+          "label": "Vocabulary Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "goals",
+          "label": "Goal Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "compile",
+          "label": "Compilation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "verify",
+          "label": "Verification",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "package_and_ship",
+          "label": "Package & Ship",
+          "status": "done",
+          "error": null
+        }
+      ]
+    }
+  ],
+  "customer_jonsnow": [
+    {
+      "onboard_id": "3e7b7745-f9e0-4663-a81d-528ddb8b0b24",
+      "vertical": "logistics",
+      "status": "done",
+      "error": null,
+      "created_at": 1787739609.189641,
+      "finished_at": 1787740283.146055,
+      "overall_pct": 100,
+      "stages": [
+        {
+          "id": "reconcile",
+          "label": "Atom Reconciliation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "relationships",
+          "label": "Relationship Establishment",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "mockdata",
+          "label": "Mock Data Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "enforce_enums",
+          "label": "Enum Enforcement",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "seed",
+          "label": "Seed Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "vocabulary",
+          "label": "Vocabulary Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "goals",
+          "label": "Goal Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "compile",
+          "label": "Compilation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "verify",
+          "label": "Verification",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "package_and_ship",
+          "label": "Package & Ship",
+          "status": "done",
+          "error": null
+        }
+      ]
+    },
+    {
+      "onboard_id": "2baa797c-17d2-4752-8944-65b6d2b868df",
+      "vertical": "supply_chain",
+      "status": "done",
+      "error": null,
+      "created_at": 1787650922.626042,
+      "finished_at": 1787651867.7158782,
+      "overall_pct": 100,
+      "stages": [
+        {
+          "id": "reconcile",
+          "label": "Atom Reconciliation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "relationships",
+          "label": "Relationship Establishment",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "mockdata",
+          "label": "Mock Data Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "enforce_enums",
+          "label": "Enum Enforcement",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "seed",
+          "label": "Seed Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "vocabulary",
+          "label": "Vocabulary Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "goals",
+          "label": "Goal Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "compile",
+          "label": "Compilation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "verify",
+          "label": "Verification",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "package_and_ship",
+          "label": "Package & Ship",
+          "status": "done",
+          "error": null
+        }
+      ]
+    },
+    {
+      "onboard_id": "3a88c6a9-041b-4248-aa00-f7430e2abe82",
+      "vertical": "logistics",
+      "status": "done",
+      "error": null,
+      "created_at": 1787650638.6340795,
+      "finished_at": 1787650894.2349813,
+      "overall_pct": 100,
+      "stages": [
+        {
+          "id": "reconcile",
+          "label": "Atom Reconciliation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "relationships",
+          "label": "Relationship Establishment",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "mockdata",
+          "label": "Mock Data Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "enforce_enums",
+          "label": "Enum Enforcement",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "seed",
+          "label": "Seed Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "vocabulary",
+          "label": "Vocabulary Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "goals",
+          "label": "Goal Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "compile",
+          "label": "Compilation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "verify",
+          "label": "Verification",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "package_and_ship",
+          "label": "Package & Ship",
+          "status": "done",
+          "error": null
+        }
+      ]
+    }
+  ],
+  "customer_sakshi": [
+    {
+      "onboard_id": "d726ce9c-1c9b-45c3-9e48-144a3f1e5a10",
+      "vertical": "supply_chain",
+      "status": "done",
+      "error": null,
+      "created_at": 1787828012.173382,
+      "finished_at": 1787831367.1175995,
+      "overall_pct": 100,
+      "stages": [
+        {
+          "id": "reconcile",
+          "label": "Atom Reconciliation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "relationships",
+          "label": "Relationship Establishment",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "mockdata",
+          "label": "Mock Data Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "enforce_enums",
+          "label": "Enum Enforcement",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "seed",
+          "label": "Seed Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "vocabulary",
+          "label": "Vocabulary Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "goals",
+          "label": "Goal Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "compile",
+          "label": "Compilation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "verify",
+          "label": "Verification",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "package_and_ship",
+          "label": "Package & Ship",
+          "status": "done",
+          "error": null
+        }
+      ]
+    },
+    {
+      "onboard_id": "4308b6dd-a4e4-41bd-89f4-25563d8d411c",
+      "vertical": "supply_chain",
+      "status": "failed",
+      "error": "name 'path' is not defined",
+      "created_at": 1787827898.3826485,
+      "finished_at": 1787827898.4102113,
+      "overall_pct": 0,
+      "stages": [
+        {
+          "id": "reconcile",
+          "label": "Atom Reconciliation",
+          "status": "failed",
+          "error": "name 'path' is not defined"
+        },
+        {
+          "id": "relationships",
+          "label": "Relationship Establishment",
+          "status": "idle",
+          "error": null
+        },
+        {
+          "id": "mockdata",
+          "label": "Mock Data Generation",
+          "status": "idle",
+          "error": null
+        },
+        {
+          "id": "enforce_enums",
+          "label": "Enum Enforcement",
+          "status": "idle",
+          "error": null
+        },
+        {
+          "id": "seed",
+          "label": "Seed Generation",
+          "status": "idle",
+          "error": null
+        },
+        {
+          "id": "vocabulary",
+          "label": "Vocabulary Generation",
+          "status": "idle",
+          "error": null
+        },
+        {
+          "id": "goals",
+          "label": "Goal Generation",
+          "status": "idle",
+          "error": null
+        },
+        {
+          "id": "compile",
+          "label": "Compilation",
+          "status": "idle",
+          "error": null
+        },
+        {
+          "id": "verify",
+          "label": "Verification",
+          "status": "idle",
+          "error": null
+        },
+        {
+          "id": "package_and_ship",
+          "label": "Package & Ship",
+          "status": "idle",
+          "error": null
+        }
+      ]
+    },
+    {
+      "onboard_id": "01f6186f-fd35-46b1-86cd-853658d21785",
+      "vertical": "supply_chain",
+      "status": "failed",
+      "error": "No atoms found for vertical 'supply_chain'. Run VerticalSchemaAgent first.",
+      "created_at": 1787826185.38517,
+      "finished_at": 1787826237.866218,
+      "overall_pct": 40,
+      "stages": [
+        {
+          "id": "reconcile",
+          "label": "Atom Reconciliation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "relationships",
+          "label": "Relationship Establishment",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "mockdata",
+          "label": "Mock Data Generation",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "enforce_enums",
+          "label": "Enum Enforcement",
+          "status": "done",
+          "error": null
+        },
+        {
+          "id": "seed",
+          "label": "Seed Generation",
+          "status": "failed",
+          "error": "No atoms found for vertical 'supply_chain'. Run VerticalSchemaAgent first."
+        },
+        {
+          "id": "vocabulary",
+          "label": "Vocabulary Generation",
+          "status": "idle",
+          "error": null
+        },
+        {
+          "id": "goals",
+          "label": "Goal Generation",
+          "status": "idle",
+          "error": null
+        },
+        {
+          "id": "compile",
+          "label": "Compilation",
+          "status": "idle",
+          "error": null
+        },
+        {
+          "id": "verify",
+          "label": "Verification",
+          "status": "idle",
+          "error": null
+        },
+        {
+          "id": "package_and_ship",
+          "label": "Package & Ship",
+          "status": "idle",
+          "error": null
+        }
+      ]
+    }
+  ]
+}

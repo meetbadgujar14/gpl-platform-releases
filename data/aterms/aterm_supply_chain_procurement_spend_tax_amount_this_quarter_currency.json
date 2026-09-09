@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_procurement_spend_tax_amount_this_quarter_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_procurement_spend_tax_amount_this_quarter_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "procurement_spend",
+    "measure": "tax_amount",
+    "state": "all",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_QUARTER_FIXED(SUM(tax_amount) FROM supply_chain_procurement_spend_ERP_record WHERE transaction_date IN 2026-Q3)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-07-22T12:17:45Z",
+  "usage_count": 0,
+  "source_goal": "What is the total tax amount of procurement_spends this quarter?",
+  "wave": 3,
+  "operator": "MEASURE_QUARTER_FIXED",
+  "verified_at": "2026-07-22T12:18:48Z"
+}

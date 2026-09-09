@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_inbound_delivery_schedule_growth_expected_quantity_this_month_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inbound_delivery_schedule_growth_expected_quantity_this_month_percent",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inbound_delivery_schedule",
+    "measure": "growth_expected_quantity",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 205.111821086262,
+  "formula_line": "supply_chain_inbound_delivery_schedule_growth_expected_quantity_this_month_percent = (({supply_chain_inbound_delivery_schedule_expected_quantity_this_month_count} - {supply_chain_inbound_delivery_schedule_expected_quantity_last_month_count}) / abs({supply_chain_inbound_delivery_schedule_expected_quantity_last_month_count}) * 100) if {supply_chain_inbound_delivery_schedule_expected_quantity_last_month_count} != 0 else 0",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-09-01T07:54:53Z",
+  "usage_count": 0,
+  "source_goal": "What is the month over month growth in expected quantity for inbound_delivery_schedules?",
+  "wave": 6,
+  "depends_on": [
+    "supply_chain_inbound_delivery_schedule_expected_quantity_this_month_count",
+    "supply_chain_inbound_delivery_schedule_expected_quantity_last_month_count"
+  ],
+  "dep_values": {
+    "supply_chain_inbound_delivery_schedule_expected_quantity_this_month_count": 9550.0,
+    "supply_chain_inbound_delivery_schedule_expected_quantity_last_month_count": 3130.0
+  },
+  "verified_at": "2026-09-02T06:49:07Z"
+}

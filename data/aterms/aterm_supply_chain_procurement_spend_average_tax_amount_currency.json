@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_procurement_spend_average_tax_amount_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_procurement_spend_average_tax_amount_currency",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "procurement_spend",
+    "measure": "average_tax_amount",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 4237.2300000000005,
+  "formula_line": "supply_chain_procurement_spend_average_tax_amount_currency = {supply_chain_procurement_spend_tax_amount_currency} / {supply_chain_procurement_spend_count}",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-07-22T12:17:51Z",
+  "usage_count": 0,
+  "source_goal": "What is the average tax amount per procurement_spend?",
+  "wave": 5,
+  "depends_on": [
+    "supply_chain_procurement_spend_tax_amount_currency",
+    "supply_chain_procurement_spend_count"
+  ],
+  "dep_values": {
+    "supply_chain_procurement_spend_tax_amount_currency": 118642.44,
+    "supply_chain_procurement_spend_count": 28.0
+  },
+  "verified_at": "2026-07-22T12:18:52Z"
+}

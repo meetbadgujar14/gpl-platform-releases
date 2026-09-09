@@ -1,0 +1,44 @@
+{
+  "id": "aterm:supply_chain_shipments_count_freight_cost_by_state_composite_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shipments_count_freight_cost_by_state_composite_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shipments",
+    "measure": "freight_cost",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "breakdown"
+  },
+  "oracle_value": {
+    "Delivered": {
+      "shipment_id": 20.0,
+      "freight_cost": 95655.25
+    },
+    "In Transit": {
+      "shipment_id": 3.0,
+      "freight_cost": 12946.0
+    },
+    "Pending": {
+      "shipment_id": 2.0,
+      "freight_cost": 4645.0
+    }
+  },
+  "formula_line": "MEASURE_MULTI_GROUPED('supply_chain_shipments_WMS_record', [('COUNT_DISTINCT', 'shipment_id'), ('SUM', 'freight_cost')], 'shipment_status', None)",
+  "exec_formula": "MEASURE_MULTI_GROUPED('supply_chain_shipments_WMS_record', [('COUNT_DISTINCT', 'shipment_id'), ('SUM', 'freight_cost')], 'shipment_status', None)",
+  "verified": true,
+  "ai_locked": false,
+  "lock_method": "llm_wizard",
+  "verify_reason": "LLM_WIZARD_execution",
+  "created_at": "2026-08-10T06:55:14Z",
+  "usage_count": 0,
+  "source_goal": "What is the shipment status breakdown showing count and freight cost across Pending, In Transit, and Delivered shipments?",
+  "wave": "C",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_MULTI_GROUPED steps=3",
+  "wizard_steps": 3
+}

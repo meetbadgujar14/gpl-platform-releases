@@ -1,0 +1,39 @@
+{
+  "id": "aterm:supply_chain_inventory_transactions_unit_cost_by_item_category_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_transactions_unit_cost_by_item_category_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_transactions",
+    "measure": "unit_cost",
+    "state": "all",
+    "scope": "by_item_category",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Electrical": 383.4,
+    "Fasteners": 145.0,
+    "Fluid Control": 432.5,
+    "Lubricants & Chemicals": 660.6,
+    "MRO Supplies": 11.75,
+    "Mechanical Components": 210.8,
+    "Packaging": 291.7,
+    "Safety & PPE": 146.95,
+    "Tools & Equipment": 263.75
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(unit_cost) FROM supply_chain_inventory_transactions_WMS_event JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY item_category)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total unit cost of inventory_transactionss by item category?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

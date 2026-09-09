@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_supplier_items_negotiated_unit_cost_by_item_subcategory_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_supplier_items_negotiated_unit_cost_by_item_subcategory_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "supplier_items",
+    "measure": "negotiated_unit_cost",
+    "state": "all",
+    "scope": "by_item_subcategory",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Bearings": 313.28,
+    "Circuit Protection": 1250.0,
+    "Filtration": 89.99,
+    "Hand Protection": 14.6,
+    "Hand Tools": 638.0,
+    "Hydraulic Components": 215.75,
+    "Pallets": 52.3,
+    "Protective Cushioning": 11.57,
+    "Shipping Boxes": 1.24,
+    "Solvents & Cleaners": 0.03,
+    "Stretch Film": 4875.0,
+    "Wiring & Cable": 54.35
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(negotiated_unit_cost) FROM supply_chain_supplier_items_ERP_dimension JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY item_subcategory)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:49Z",
+  "usage_count": 0,
+  "source_goal": "What is the total negotiated unit cost of supplier_itemss by item subcategory?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:51Z"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_quality_inspections_average_quantity_inspected_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_quality_inspections_average_quantity_inspected_count",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "quality_inspections",
+    "measure": "average_quantity_inspected",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 1038.8,
+  "formula_line": "supply_chain_quality_inspections_average_quantity_inspected_count = {supply_chain_quality_inspections_quantity_inspected_count} / ({supply_chain_quality_inspections_count} if {supply_chain_quality_inspections_count} != 0 else 1)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-09-01T07:54:53Z",
+  "usage_count": 0,
+  "source_goal": "What is the average quantity inspected per quality_inspections?",
+  "wave": 5,
+  "depends_on": [
+    "supply_chain_quality_inspections_quantity_inspected_count",
+    "supply_chain_quality_inspections_count"
+  ],
+  "dep_values": {
+    "supply_chain_quality_inspections_quantity_inspected_count": 25970.0,
+    "supply_chain_quality_inspections_count": 25.0
+  },
+  "verified_at": "2026-09-02T06:49:07Z"
+}

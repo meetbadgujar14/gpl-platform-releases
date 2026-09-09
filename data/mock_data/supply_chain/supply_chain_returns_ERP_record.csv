@@ -1,0 +1,26 @@
+return_id,return_date,supplier_id,item_id,receipt_id,return_reason,return_status,quantity_returned,unit_cost,return_value,credit_amount,is_credit_received
+RET-48271,2024-03-15,SUP-3309,ITM-3648,GR-21953,Defective product,Completed,12,145.5,1746.0,1746.0,True
+RET-93045,2024-07-22,SUP-4821,ITM-6389,GR-95274,Incorrect item shipped,Completed,5,320.0,1600.0,1600.0,True
+RET-61823,2023-11-08,SUP-5102,ITM-3405,GR-47523,Damaged in transit,Pending,8,87.25,698.0,0.0,False
+RET-27490,2024-01-30,SUP-6640,ITM-3405,GR-74109,Quality does not meet specifications,Completed,25,56.8,1420.0,1420.0,True
+RET-85163,2024-05-17,SUP-9057,ITM-9173,GR-82406,Overshipment,Completed,10,210.0,2100.0,2100.0,True
+RET-34712,2023-09-04,SUP-8390,ITM-6603,GR-21953,Expired shelf life,In Review,40,18.9,756.0,0.0,False
+RET-70258,2024-08-11,SUP-8390,ITM-3405,GR-68417,Defective product,Completed,3,875.0,2625.0,2625.0,True
+RET-19384,2023-12-19,SUP-5102,ITM-6389,GR-92045,Packaging damaged,Completed,15,43.6,654.0,654.0,True
+RET-56047,2024-02-28,SUP-8823,ITM-9854,GR-82406,Incorrect item shipped,Pending,7,495.0,3465.0,0.0,False
+RET-82619,2024-06-03,SUP-8390,ITM-2764,GR-95274,Quality does not meet specifications,Completed,20,134.75,2695.0,2695.0,True
+RET-43801,2023-10-14,SUP-9057,ITM-5941,GR-83160,Damaged in transit,Completed,6,267.3,1603.8,1603.8,True
+RET-67295,2024-09-25,SUP-2193,ITM-6389,GR-19748,Defective product,In Review,18,92.0,1656.0,828.0,False
+RET-25738,2024-04-09,SUP-2967,ITM-6389,GR-40638,Overshipment,Completed,9,385.5,3469.5,3469.5,True
+RET-91046,2023-08-22,SUP-4821,ITM-2931,GR-79034,Expired shelf life,Cancelled,30,27.4,822.0,0.0,False
+RET-38572,2024-10-07,SUP-2193,ITM-4172,GR-47523,Incorrect item shipped,Completed,4,1250.0,5000.0,5000.0,True
+RET-74193,2024-01-14,SUP-3812,ITM-9854,GR-83160,Quality does not meet specifications,Completed,22,61.0,1342.0,1342.0,True
+RET-50867,2023-07-30,SUP-9057,ITM-5812,GR-74109,Packaging damaged,Pending,11,178.9,1967.9,0.0,False
+RET-16524,2024-03-28,SUP-4821,ITM-9854,GR-53978,Defective product,Completed,14,225.6,3158.4,3158.4,True
+RET-89345,2024-07-05,SUP-3309,ITM-2764,GR-79034,Overshipment,Completed,16,74.25,1188.0,1188.0,True
+RET-32780,2023-11-29,SUP-4821,ITM-7216,GR-68417,Damaged in transit,In Review,2,940.0,1880.0,940.0,False
+RET-65418,2024-05-31,SUP-7364,ITM-9854,GR-21953,Expired shelf life,Completed,35,22.5,787.5,787.5,True
+RET-41963,2024-09-12,SUP-8390,ITM-7216,GR-92045,Incorrect item shipped,Completed,8,310.0,2480.0,2480.0,True
+RET-78204,2023-10-01,SUP-1475,ITM-3405,GR-53978,Quality does not meet specifications,Cancelled,13,158.4,2059.2,0.0,False
+RET-23657,2024-02-16,SUP-2967,ITM-8327,GR-68417,Defective product,Completed,19,112.0,2128.0,2128.0,True
+RET-59831,2024-08-27,SUP-5102,ITM-9854,GR-21953,Packaging damaged,Completed,6,540.0,3240.0,3240.0,True

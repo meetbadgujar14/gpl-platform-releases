@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_procurement_spend_tax_amount_currency_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_procurement_spend_tax_amount_currency_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "procurement_spend",
+    "measure": "tax_amount",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2025-01": 9783.0,
+    "2025-08": 6705.0,
+    "2025-11": 34038.0,
+    "2026-01": 2502.0,
+    "2026-02": 32877.0,
+    "2026-03": 21152.5,
+    "2026-04": 13221.0,
+    "2026-05": 9999.0,
+    "2026-06": 76650.0,
+    "2026-07": 15097.5,
+    "2026-08": 36008.0,
+    "2026-09": 49442.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_procurement_spend_ERP_record', 'SUM', 'tax_amount', None, [], None, None, None, {'date_col': 'transaction_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "What is the total tax amount of procurement_spends by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

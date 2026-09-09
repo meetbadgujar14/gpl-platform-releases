@@ -1,0 +1,6 @@
+warehouse_id,warehouse_name,warehouse_type,country,city,is_active,total_capacity_sqm,opened_date
+WH-4821,Pacific Rim Distribution Center,Distribution,United States,Los Angeles,True,28500,2019-03-15
+WH-7364,Meridian Cold Storage Facility,Cold Storage,Germany,Hamburg,True,12400,2021-08-02
+WH-2957,Apex Fulfillment Hub,Fulfillment,United Kingdom,Birmingham,True,19750,2020-11-20
+WH-6103,SilkRoute Bonded Warehouse,Bonded,Singapore,Singapore,False,8300,2017-06-10
+WH-9482,Nordex Cross-Dock Terminal,Cross-Dock,Netherlands,Rotterdam,True,15900,2022-01-28

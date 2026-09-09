@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_stock_transfers_count_completed_last_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_stock_transfers_count_completed_last_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "stock_transfers",
+    "measure": "count",
+    "state": "completed",
+    "scope": "total",
+    "time": "last_month",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 4.0,
+  "formula_line": "MEASURE_MONTH_FIXED('supply_chain_stock_transfers_WMS_record', 'transfer_date', 'COUNT_DISTINCT', 'transfer_id', 'last_month', [{'field': 'transfer_status', 'op': '=', 'value': 'completed'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution_stable",
+  "created_at": "2026-09-01T07:44:38Z",
+  "usage_count": 0,
+  "source_goal": "How many completed stock_transferss are there last month?",
+  "wave": 3,
+  "operator": "MEASURE_MONTH_FIXED",
+  "verified_at": "2026-09-01T07:54:56Z"
+}

@@ -1,0 +1,41 @@
+{
+  "id": "aterm:supply_chain_invoice_lines_line_amount_by_country_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_invoice_lines_line_amount_by_country_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "invoice_lines",
+    "measure": "line_amount",
+    "state": "all",
+    "scope": "by_country",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Brazil": 67000.0,
+    "Canada": 163200.0,
+    "China": 6300.0,
+    "Croatia": 96480.0,
+    "Egypt": 39750.0,
+    "India": 57300.0,
+    "Japan": 16575.0,
+    "Peru": 146160.0,
+    "South Africa": 6480.0,
+    "United Kingdom": 6412.5,
+    "United States": 7950.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(line_amount) FROM supply_chain_invoice_lines_ERP_record JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY country)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:50Z",
+  "usage_count": 0,
+  "source_goal": "What is the total line amount of invoice_liness by country?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:51Z"
+}

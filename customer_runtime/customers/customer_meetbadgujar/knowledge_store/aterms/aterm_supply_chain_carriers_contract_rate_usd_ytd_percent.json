@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_carriers_contract_rate_usd_ytd_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_carriers_contract_rate_usd_ytd_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "carriers",
+    "measure": "contract_rate_usd",
+    "state": "all",
+    "scope": "total",
+    "time": "ytd",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 12166.25,
+  "formula_line": "MEASURE_YTD('supply_chain_carriers_WMS_dimension', 'onboarded_date', 'SUM', 'contract_rate_usd', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "What is the total contract rate usd of carrierss ytd?",
+  "wave": 3,
+  "operator": "MEASURE_YTD",
+  "verified_at": "2026-09-02T06:49:05Z"
+}

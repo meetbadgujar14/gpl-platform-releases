@@ -1,0 +1,117 @@
+{
+  "wave": 9,
+  "goal_count": 5,
+  "generated_at": "2026-09-07T05:45:17Z",
+  "goals": [
+    {
+      "goal": "Percentage of shipments delivered on time across all suppliers.",
+      "canonical_id": "supply_chain_on_time_delivery_rate_percent",
+      "complexity": "KPI",
+      "depends_on": [
+        "supply_chain_supplier_performance_on_time_delivery_rate_percent",
+        "supply_chain_supplier_performance_count"
+      ],
+      "composition_formula": "{supply_chain_supplier_performance_on_time_delivery_rate_percent} / {supply_chain_supplier_performance_count}",
+      "wave": 9,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "on_time_delivery_rate",
+        "measure": "on_time_delivery_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "Average defect rate across all supplier quality inspections.",
+      "canonical_id": "supply_chain_supplier_defect_rate_percent",
+      "complexity": "KPI",
+      "depends_on": [
+        "supply_chain_quality_inspections_quantity_defective_count",
+        "supply_chain_quality_inspections_quantity_inspected_count"
+      ],
+      "composition_formula": "{supply_chain_quality_inspections_quantity_defective_count} / {supply_chain_quality_inspections_quantity_inspected_count}",
+      "wave": 9,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_defect_rate",
+        "measure": "supplier_defect_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "Ratio of available inventory quantity to total on-hand quantity across all warehouse locations.",
+      "canonical_id": "supply_chain_inventory_fill_rate_ratio",
+      "complexity": "KPI",
+      "depends_on": [
+        "supply_chain_inventory_levels_quantity_available_count",
+        "supply_chain_inventory_levels_quantity_on_hand_count"
+      ],
+      "composition_formula": "{supply_chain_inventory_levels_quantity_available_count} / {supply_chain_inventory_levels_quantity_on_hand_count}",
+      "wave": 9,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_fill_rate",
+        "measure": "inventory_fill_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "ratio",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "Average lead time in days from order placement to receipt across all suppliers and items.",
+      "canonical_id": "supply_chain_avg_procurement_lead_time_days",
+      "complexity": "KPI",
+      "depends_on": [
+        "supply_chain_lead_times_avg_lead_time_days_days",
+        "supply_chain_lead_times_count"
+      ],
+      "composition_formula": "{supply_chain_lead_times_avg_lead_time_days_days} / {supply_chain_lead_times_count}",
+      "wave": 9,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "avg_procurement_lead_time",
+        "measure": "avg_procurement_lead_time",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "Average freight cost per kilogram shipped across all shipments.",
+      "canonical_id": "supply_chain_total_freight_cost_per_kg_currency",
+      "complexity": "KPI",
+      "depends_on": [
+        "supply_chain_shipments_freight_cost_currency",
+        "supply_chain_shipments_total_weight_kg_currency"
+      ],
+      "composition_formula": "{supply_chain_shipments_freight_cost_currency} / {supply_chain_shipments_total_weight_kg_currency}",
+      "wave": 9,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "total_freight_cost_per_kg",
+        "measure": "total_freight_cost_per_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    }
+  ]
+}

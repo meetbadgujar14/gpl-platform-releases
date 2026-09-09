@@ -1,0 +1,16 @@
+buyer_id,buyer_name,email,department,category_responsibility,spend_limit,active_po_count,is_active,hire_date
+BYR-4827,Mei-Ling Fitzgerald,m.fitzgerald@procure.internalops.com,Strategic Sourcing,Raw Materials,750000,34,True,2019-03-12
+BYR-7391,Darnell Okafor,d.okafor@procure.internalops.com,Indirect Procurement,IT Hardware & Software,500000,21,True,2020-07-08
+BYR-2154,Priya Nambiar,p.nambiar@procure.internalops.com,Direct Procurement,Packaging Materials,1200000,58,True,2017-11-22
+BYR-6038,Carlos Mendes,c.mendes@procure.internalops.com,Strategic Sourcing,Chemicals & Solvents,900000,47,True,2018-05-30
+BYR-9472,Ingrid Thorvaldsen,i.thorvaldsen@procure.internalops.com,Logistics Procurement,Freight & Transportation,650000,29,True,2021-02-14
+BYR-3315,Marcus Webb,m.webb@procure.internalops.com,Indirect Procurement,Facilities & MRO,300000,16,False,2016-09-05
+BYR-5863,Fatima Al-Rashidi,f.alrashidi@procure.internalops.com,Direct Procurement,Electronic Components,1500000,72,True,2015-04-18
+BYR-1729,Jerome Kiplangat,j.kiplangat@procure.internalops.com,Strategic Sourcing,Capital Equipment,2000000,11,True,2013-08-27
+BYR-8204,Soo-Jin Park,s.park@procure.internalops.com,Indirect Procurement,Professional Services,420000,18,True,2022-01-10
+BYR-6647,Thomas Beaumont,t.beaumont@procure.internalops.com,Direct Procurement,Steel & Metals,1750000,63,True,2014-06-03
+BYR-4491,Anika Sharma,a.sharma@procure.internalops.com,Logistics Procurement,Warehousing & 3PL,800000,25,False,2019-10-15
+BYR-2983,Roberto Esparza,r.esparza@procure.internalops.com,Strategic Sourcing,Plastics & Polymers,1100000,41,True,2016-12-19
+BYR-7756,Natasha Volkov,n.volkov@procure.internalops.com,Indirect Procurement,Office Supplies & Print,150000,9,True,2023-03-27
+BYR-5129,Derek Hutchinson,d.hutchinson@procure.internalops.com,Direct Procurement,Textiles & Apparel,680000,37,True,2018-02-08
+BYR-3867,Yuki Tanaka,y.tanaka@procure.internalops.com,Strategic Sourcing,Energy & Utilities,950000,14,True,2020-11-04

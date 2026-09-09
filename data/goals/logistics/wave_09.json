@@ -1,0 +1,117 @@
+{
+  "wave": 9,
+  "goal_count": 5,
+  "generated_at": "2026-07-21T11:32:53Z",
+  "goals": [
+    {
+      "goal": "Average freight cost incurred per kilometer across all shipments.",
+      "canonical_id": "logistics_freight_cost_per_km_currency",
+      "complexity": "KPI",
+      "depends_on": [
+        "logistics_shipments_freight_cost_currency",
+        "logistics_freight_orders_distance_km_count"
+      ],
+      "composition_formula": "{logistics_shipments_freight_cost_currency} / {logistics_freight_orders_distance_km_count}",
+      "wave": 9,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_cost_per_km",
+        "measure": "freight_cost_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "Proportion of shipments delivered without delay out of all completed shipments.",
+      "canonical_id": "logistics_on_time_delivery_rate_percent",
+      "complexity": "KPI",
+      "depends_on": [
+        "logistics_shipments_count_delivered",
+        "logistics_shipments_count_delayed"
+      ],
+      "composition_formula": "{logistics_shipments_count_delivered} / ({logistics_shipments_count_delivered} + {logistics_shipments_count_delayed})",
+      "wave": 9,
+      "slots": {
+        "domain": "logistics",
+        "entity": "on_time_delivery_rate",
+        "measure": "on_time_delivery_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "Average kilometers traveled per litre of fuel consumed across all vehicle trips.",
+      "canonical_id": "logistics_fuel_efficiency_km_per_litre_ratio",
+      "complexity": "KPI",
+      "depends_on": [
+        "logistics_fuel_consumption_distance_km_count",
+        "logistics_fuel_consumption_litres_consumed_count"
+      ],
+      "composition_formula": "{logistics_fuel_consumption_distance_km_count} / {logistics_fuel_consumption_litres_consumed_count}",
+      "wave": 9,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_efficiency_km_per_litre",
+        "measure": "fuel_efficiency_km_per_litre",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "ratio",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "Percentage of customs declarations that were successfully cleared out of all declarations.",
+      "canonical_id": "logistics_customs_clearance_success_rate_percent",
+      "complexity": "KPI",
+      "depends_on": [
+        "logistics_customs_declarations_count_cleared",
+        "logistics_customs_declarations_count"
+      ],
+      "composition_formula": "{logistics_customs_declarations_count_cleared} / {logistics_customs_declarations_count}",
+      "wave": 9,
+      "slots": {
+        "domain": "logistics",
+        "entity": "customs_clearance_success_rate",
+        "measure": "customs_clearance_success_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "Ratio of actual freight order cost to agreed cost, indicating budget adherence.",
+      "canonical_id": "logistics_freight_order_cost_variance_rate_ratio",
+      "complexity": "KPI",
+      "depends_on": [
+        "logistics_freight_orders_actual_cost_currency",
+        "logistics_freight_orders_agreed_cost_currency"
+      ],
+      "composition_formula": "{logistics_freight_orders_actual_cost_currency} / {logistics_freight_orders_agreed_cost_currency}",
+      "wave": 9,
+      "slots": {
+        "domain": "logistics",
+        "entity": "freight_order_cost_variance_rate",
+        "measure": "freight_order_cost_variance_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "ratio",
+        "series": "scalar"
+      },
+      "join": null
+    }
+  ]
+}

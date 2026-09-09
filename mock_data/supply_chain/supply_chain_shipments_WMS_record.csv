@@ -1,0 +1,29 @@
+shipment_id,order_id,warehouse_id,carrier,origin,destination,shipment_date,status,weight_kg,volume_m3,shipping_cost
+SHP-7423,ORD-10492,WH-301,FedEx Freight,"Chicago, IL","Atlanta, GA",2026-08-04,In Transit,342.5,2.8,1247.5
+SHP-8815,ORD-20847,WH-114,UPS Supply Chain,"Los Angeles, CA","Seattle, WA",2026-08-03,Delivered,128.0,1.1,589.75
+SHP-6091,ORD-33561,WH-207,XPO Logistics,"Dallas, TX","Houston, TX",2026-08-02,Delivered,510.3,4.2,1834.0
+SHP-5347,ORD-14278,WH-301,Old Dominion Freight,"Chicago, IL","Detroit, MI",2026-08-01,Delivered,275.8,2.3,912.4
+SHP-9284,ORD-47103,WH-422,Estes Express Lines,"Memphis, TN","Nashville, TN",2026-08-01,In Transit,193.4,1.6,674.2
+SHP-3762,ORD-58294,WH-114,Pacific Rim Logistics,"Los Angeles, CA","Phoenix, AZ",2026-07-28,Delivered,445.7,3.7,1563.9
+SHP-4519,ORD-62017,WH-207,Saia LTL Freight,"Dallas, TX","Denver, CO",2026-07-22,Delivered,389.1,3.2,1421.6
+SHP-2938,ORD-71845,WH-533,FedEx Freight,"New York, NY","Boston, MA",2026-07-15,Delivered,98.6,0.8,387.3
+SHP-7056,ORD-83492,WH-301,UPS Supply Chain,"Chicago, IL","Minneapolis, MN",2026-07-09,Cancelled,0.0,0.0,0.0
+SHP-1483,ORD-90136,WH-422,Meridian Freight Solutions,"Memphis, TN","St. Louis, MO",2026-07-03,Delivered,622.9,5.1,2187.45
+SHP-8673,ORD-10583,WH-114,XPO Logistics,"Los Angeles, CA","San Francisco, CA",2026-06-25,Delivered,215.4,1.8,743.8
+SHP-3291,ORD-22764,WH-533,Old Dominion Freight,"New York, NY","Philadelphia, PA",2026-06-18,Delivered,167.2,1.4,521.6
+SHP-6748,ORD-35918,WH-207,Estes Express Lines,"Dallas, TX","Oklahoma City, OK",2026-06-10,Delivered,734.6,6.0,2634.15
+SHP-5102,ORD-48237,WH-301,FedEx Freight,"Chicago, IL","Indianapolis, IN",2026-05-29,Delivered,483.3,4.0,1702.7
+SHP-9417,ORD-57064,WH-422,Pacific Rim Logistics,"Memphis, TN","Birmingham, AL",2026-05-15,Delivered,301.7,2.5,1088.3
+SHP-2654,ORD-68391,WH-114,Saia LTL Freight,"Los Angeles, CA","Las Vegas, NV",2026-04-30,Delivered,558.9,4.6,1978.55
+SHP-7839,ORD-79452,WH-533,UPS Supply Chain,"New York, NY","Baltimore, MD",2026-04-14,Delivered,142.8,1.2,467.9
+SHP-4065,ORD-81673,WH-207,Meridian Freight Solutions,"Dallas, TX","San Antonio, TX",2026-03-27,Delivered,876.2,7.2,3104.8
+SHP-1927,ORD-92845,WH-301,XPO Logistics,"Chicago, IL","Kansas City, MO",2026-03-11,Lost,319.4,2.6,1134.6
+SHP-6384,ORD-13507,WH-422,Old Dominion Freight,"Memphis, TN","Little Rock, AR",2026-02-22,Delivered,254.1,2.1,853.4
+SHP-8247,ORD-24618,WH-114,FedEx Freight,"Los Angeles, CA","Portland, OR",2026-02-08,Delivered,692.7,5.7,2456.3
+SHP-3518,ORD-36729,WH-533,Estes Express Lines,"New York, NY","Washington, DC",2026-01-19,Delivered,178.5,1.5,598.2
+SHP-7193,ORD-49831,WH-207,Saia LTL Freight,"Dallas, TX","Austin, TX",2026-01-05,Delivered,427.6,3.5,1512.75
+SHP-2871,ORD-51942,WH-301,Pacific Rim Logistics,"Chicago, IL","Columbus, OH",2025-12-17,Delivered,364.9,3.0,1289.6
+SHP-5639,ORD-63074,WH-422,UPS Supply Chain,"Memphis, TN","Louisville, KY",2025-11-28,Delivered,539.2,4.4,1901.85
+SHP-4982,ORD-74386,WH-114,Meridian Freight Solutions,"Los Angeles, CA","Sacramento, CA",2025-10-14,Delivered,241.3,2.0,814.7
+SHP-1356,ORD-85619,WH-533,XPO Logistics,"New York, NY","Newark, NJ",2025-09-02,Delivered,115.7,0.9,403.5
+SHP-8504,ORD-96742,WH-207,FedEx Freight,"Dallas, TX","El Paso, TX",2024-11-19,Delivered,803.4,6.6,2843.2

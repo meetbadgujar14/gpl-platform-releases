@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_demand_forecasts_forecasted_quantity_ytd_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_demand_forecasts_forecasted_quantity_ytd_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "demand_forecasts",
+    "measure": "forecasted_quantity",
+    "state": "all",
+    "scope": "total",
+    "time": "ytd",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 70648.0,
+  "formula_line": "MEASURE_YTD('supply_chain_demand_forecasts_ERP_snapshot', 'forecast_period_date', 'SUM', 'forecasted_quantity', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:38Z",
+  "usage_count": 0,
+  "source_goal": "What is the total forecasted quantity of demand_forecastss ytd?",
+  "wave": 3,
+  "operator": "MEASURE_YTD",
+  "verified_at": "2026-09-02T06:49:04Z"
+}

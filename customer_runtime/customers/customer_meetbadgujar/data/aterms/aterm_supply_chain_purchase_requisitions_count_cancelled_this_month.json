@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_purchase_requisitions_count_cancelled_this_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_purchase_requisitions_count_cancelled_this_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "purchase_requisitions",
+    "measure": "count",
+    "state": "Cancelled",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_MONTH_FIXED('supply_chain_purchase_requisitions_ERP_record', 'requisition_date', 'COUNT_DISTINCT', 'requisition_id', 'this_month', [{'field': 'requisition_status', 'op': '=', 'value': 'Cancelled'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-09-01T07:44:38Z",
+  "usage_count": 0,
+  "source_goal": "How many Cancelled purchase_requisitionss are there this month?",
+  "wave": 3,
+  "operator": "MEASURE_MONTH_FIXED",
+  "verified_at": "2026-09-02T06:49:04Z"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_returns_return_value_max_by_supplier_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_returns_return_value_max_by_supplier_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "returns",
+    "measure": "return_value",
+    "state": "all",
+    "scope": "max",
+    "time": "ytd",
+    "unit": "currency",
+    "series": "by_supplier"
+  },
+  "oracle_value": {},
+  "formula_line": "MEASURE_GROUPED_YTD('supply_chain_returns_ERP_record', 'return_date', 'SUM', 'return_value', group_by_col='supplier', filters=None)",
+  "exec_formula": "MEASURE_GROUPED_YTD('supply_chain_returns_ERP_record', 'return_date', 'SUM', 'return_value', group_by_col='supplier', filters=None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:54:53Z",
+  "usage_count": 0,
+  "source_goal": "Which supplier has the highest return value to recommend supplier quality improvement or contract penalty enforcement?",
+  "wave": "E",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_GROUPED_YTD steps=5",
+  "wizard_steps": 5,
+  "verified_at": "2026-09-02T06:49:07Z"
+}

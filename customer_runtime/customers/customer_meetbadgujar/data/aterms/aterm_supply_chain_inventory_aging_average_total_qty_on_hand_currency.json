@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_inventory_aging_average_total_qty_on_hand_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_aging_average_total_qty_on_hand_currency",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_aging",
+    "measure": "average_total_qty_on_hand",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 1191.25,
+  "formula_line": "supply_chain_inventory_aging_average_total_qty_on_hand_currency = {supply_chain_inventory_aging_total_qty_on_hand_currency} / ({supply_chain_inventory_aging_count} if {supply_chain_inventory_aging_count} != 0 else 1)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-09-01T07:54:53Z",
+  "usage_count": 0,
+  "source_goal": "What is the average total qty on hand per inventory_aging?",
+  "wave": 5,
+  "depends_on": [
+    "supply_chain_inventory_aging_total_qty_on_hand_currency",
+    "supply_chain_inventory_aging_count"
+  ],
+  "dep_values": {
+    "supply_chain_inventory_aging_total_qty_on_hand_currency": 14295.0,
+    "supply_chain_inventory_aging_count": 12.0
+  },
+  "verified_at": "2026-09-02T06:49:07Z"
+}

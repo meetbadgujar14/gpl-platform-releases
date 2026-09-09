@@ -1,0 +1,869 @@
+{
+  "domain": "supply_chain",
+  "version": "1.0",
+  "generated_at": "2026-09-02T06:51:03Z",
+  "generated_from_atoms": [
+    "supply_chain_shipment_lines_WMS_record",
+    "supply_chain_inbound_delivery_schedule_ERP_record",
+    "supply_chain_carriers_WMS_dimension",
+    "supply_chain_procurement_spend_ERP_record",
+    "supply_chain_cost_centers_ERP_dimension",
+    "supply_chain_financials_ERP_record",
+    "supply_chain_returns_ERP_record",
+    "supply_chain_stock_transfers_WMS_record",
+    "supply_chain_safety_stock_ERP_snapshot",
+    "supply_chain_buyers_ERP_dimension",
+    "supply_chain_demand_forecasts_ERP_snapshot",
+    "supply_chain_suppliers_ERP_dimension",
+    "supply_chain_supplier_items_ERP_dimension",
+    "supply_chain_purchase_requisitions_ERP_record",
+    "supply_chain_warehouses_WMS_dimension",
+    "supply_chain_reorder_proposals_ERP_record",
+    "supply_chain_order_fulfillment_WMS_event",
+    "supply_chain_shipments_WMS_record",
+    "supply_chain_warehouse_locations_WMS_dimension",
+    "supply_chain_supplier_performance_ERP_snapshot",
+    "supply_chain_purchase_order_lines_ERP_record",
+    "supply_chain_carrier_performance_WMS_snapshot",
+    "supply_chain_invoices_ERP_record",
+    "supply_chain_invoice_lines_ERP_record",
+    "supply_chain_inventory_levels_WMS_state",
+    "supply_chain_inventory_aging_WMS_snapshot",
+    "supply_chain_items_ERP_dimension",
+    "supply_chain_purchase_orders_ERP_record",
+    "supply_chain_supplier_contracts_ERP_record",
+    "supply_chain_lead_times_ERP_snapshot",
+    "supply_chain_inventory_transactions_WMS_event",
+    "supply_chain_quality_inspections_ERP_record",
+    "supply_chain_goods_receipts_ERP_record",
+    "supply_chain_shrinkage_events_WMS_event"
+  ],
+  "entities": {
+    "suppliers": {
+      "atom": "supply_chain_suppliers_ERP_dimension",
+      "record_type": "dimension",
+      "grain_key": "supplier_id",
+      "time_col": "onboarded_date",
+      "measures": [
+        "quantity_on_hand",
+        "quantity_allocated",
+        "unit_cost",
+        "lead_time_days",
+        "reliability_score"
+      ],
+      "states": [
+        "Active",
+        "Inactive",
+        "Under Review"
+      ],
+      "dimensions": [
+        "supplier_name",
+        "supplier_category",
+        "country",
+        "region",
+        "payment_terms",
+        "supplier_tier",
+        "item",
+        "warehouse",
+        "lot",
+        "ownership",
+        "expiry_date",
+        "received_date",
+        "name",
+        "category",
+        "terms"
+      ]
+    },
+    "warehouse_locations": {
+      "atom": "supply_chain_warehouse_locations_WMS_dimension",
+      "record_type": "dimension",
+      "grain_key": "location_id",
+      "time_col": "created_date",
+      "measures": [
+        "capacity_units"
+      ],
+      "states": [],
+      "dimensions": [
+        "warehouse_id",
+        "warehouse_name",
+        "zone",
+        "aisle",
+        "bin",
+        "location_type",
+        "country"
+      ]
+    },
+    "purchase_orders": {
+      "atom": "supply_chain_purchase_orders_ERP_record",
+      "record_type": "record",
+      "grain_key": "po_id",
+      "time_col": "po_date",
+      "measures": [
+        "total_amount",
+        "total_line_items"
+      ],
+      "states": [
+        "Approved",
+        "Cancelled",
+        "Closed",
+        "Draft",
+        "Pending",
+        "Received"
+      ],
+      "dimensions": [
+        "supplier_id",
+        "expected_delivery_date",
+        "currency",
+        "buyer_id",
+        "department"
+      ]
+    },
+    "purchase_order_lines": {
+      "atom": "supply_chain_purchase_order_lines_ERP_record",
+      "record_type": "record",
+      "grain_key": "po_line_id",
+      "time_col": "po_date",
+      "measures": [
+        "quantity_ordered",
+        "quantity_received",
+        "unit_cost",
+        "line_total"
+      ],
+      "states": [
+        "Cancelled",
+        "Closed",
+        "Open",
+        "Partially Received",
+        "Received"
+      ],
+      "dimensions": [
+        "po_id",
+        "item_id",
+        "supplier_id",
+        "unit_of_measure",
+        "line",
+        "purchase_order",
+        "item"
+      ]
+    },
+    "shipments": {
+      "atom": "supply_chain_shipments_WMS_record",
+      "record_type": "record",
+      "grain_key": "shipment_id",
+      "time_col": "shipment_date",
+      "measures": [
+        "freight_cost",
+        "total_weight_kg"
+      ],
+      "states": [
+        "delivered",
+        "in_transit"
+      ],
+      "dimensions": [
+        "po_id",
+        "supplier_id",
+        "expected_arrival_date",
+        "actual_arrival_date",
+        "destination_warehouse_id",
+        "carrier"
+      ]
+    },
+    "shipment_lines": {
+      "atom": "supply_chain_shipment_lines_WMS_record",
+      "record_type": "record",
+      "grain_key": "shipment_line_id",
+      "time_col": "shipment_date",
+      "measures": [
+        "quantity_shipped",
+        "quantity_damaged"
+      ],
+      "states": [
+        "Cancelled",
+        "Delivered",
+        "Partially Received",
+        "Received with Exceptions"
+      ],
+      "dimensions": [
+        "shipment_id",
+        "po_line_id",
+        "item_id",
+        "unit_of_measure"
+      ]
+    },
+    "goods_receipts": {
+      "atom": "supply_chain_goods_receipts_ERP_record",
+      "record_type": "record",
+      "grain_key": "receipt_id",
+      "time_col": "receipt_date",
+      "measures": [
+        "quantity_received",
+        "quantity_accepted",
+        "quantity_rejected"
+      ],
+      "states": [
+        "Completed",
+        "Partially Accepted",
+        "Rejected"
+      ],
+      "dimensions": [
+        "po_id",
+        "shipment_id",
+        "supplier_id",
+        "warehouse_id"
+      ]
+    },
+    "inventory_levels": {
+      "atom": "supply_chain_inventory_levels_WMS_state",
+      "record_type": "state",
+      "grain_key": "item_id",
+      "time_col": "snapshot_date",
+      "measures": [
+        "quantity_on_hand",
+        "quantity_reserved",
+        "quantity_available",
+        "reorder_point"
+      ],
+      "states": [],
+      "dimensions": [
+        "warehouse_id",
+        "item_name",
+        "item_category"
+      ]
+    },
+    "supplier_performance": {
+      "atom": "supply_chain_supplier_performance_ERP_snapshot",
+      "record_type": "snapshot",
+      "grain_key": "supplier_id",
+      "time_col": "period_start_date",
+      "measures": [
+        "total_orders",
+        "on_time_delivery_rate",
+        "quality_acceptance_rate",
+        "avg_lead_time_days",
+        "total_spend",
+        "defect_rate"
+      ],
+      "states": [],
+      "dimensions": [
+        "period_type",
+        "supplier_name",
+        "supplier_category"
+      ]
+    },
+    "demand_forecasts": {
+      "atom": "supply_chain_demand_forecasts_ERP_snapshot",
+      "record_type": "snapshot",
+      "grain_key": "item_id",
+      "time_col": "forecast_period_date",
+      "measures": [
+        "forecasted_quantity",
+        "actual_quantity",
+        "forecast_error",
+        "forecast_accuracy_rate"
+      ],
+      "states": [],
+      "dimensions": [
+        "item_name",
+        "item_category",
+        "forecast_method",
+        "period_type"
+      ]
+    },
+    "procurement_spend": {
+      "atom": "supply_chain_procurement_spend_ERP_record",
+      "record_type": "record",
+      "grain_key": "spend_transaction_id",
+      "time_col": "transaction_date",
+      "measures": [
+        "spend_amount",
+        "tax_amount",
+        "discount_amount"
+      ],
+      "states": [
+        "Cancelled",
+        "Disputed",
+        "Paid",
+        "Pending",
+        "Under Review"
+      ],
+      "dimensions": [
+        "po_id",
+        "supplier_id",
+        "spend_category",
+        "cost_center",
+        "currency"
+      ]
+    },
+    "lead_times": {
+      "atom": "supply_chain_lead_times_ERP_snapshot",
+      "record_type": "snapshot",
+      "grain_key": "supplier_id",
+      "time_col": "period_start_date",
+      "measures": [
+        "avg_lead_time_days",
+        "min_lead_time_days",
+        "max_lead_time_days",
+        "order_count"
+      ],
+      "states": [],
+      "dimensions": [
+        "supplier_name",
+        "item_name",
+        "item_category"
+      ]
+    },
+    "items": {
+      "atom": "supply_chain_items_ERP_dimension",
+      "record_type": "dimension",
+      "grain_key": "item_id",
+      "time_col": "created_date",
+      "measures": [
+        "standard_cost",
+        "lead_time_days",
+        "reorder_point",
+        "safety_stock_qty"
+      ],
+      "states": [
+        "Active",
+        "Discontinued",
+        "Under Review"
+      ],
+      "dimensions": [
+        "item_name",
+        "item_code",
+        "item_category",
+        "item_subcategory",
+        "unit_of_measure"
+      ]
+    },
+    "warehouses": {
+      "atom": "supply_chain_warehouses_WMS_dimension",
+      "record_type": "dimension",
+      "grain_key": "warehouse_id",
+      "time_col": "opened_date",
+      "measures": [
+        "total_capacity_sqm",
+        "total_capacity_units"
+      ],
+      "states": [],
+      "dimensions": [
+        "warehouse_name",
+        "warehouse_type",
+        "country",
+        "region",
+        "city",
+        "manager_name"
+      ]
+    },
+    "inventory_transactions": {
+      "atom": "supply_chain_inventory_transactions_WMS_event",
+      "record_type": "event",
+      "grain_key": "transaction_id",
+      "time_col": "transaction_date",
+      "measures": [
+        "quantity_change",
+        "quantity_before",
+        "quantity_after",
+        "unit_cost",
+        "total_cost_impact"
+      ],
+      "states": [],
+      "dimensions": [
+        "transaction_type",
+        "item_id",
+        "location_id",
+        "warehouse_id",
+        "reference_id",
+        "created_by"
+      ]
+    },
+    "stock_transfers": {
+      "atom": "supply_chain_stock_transfers_WMS_record",
+      "record_type": "record",
+      "grain_key": "transfer_id",
+      "time_col": "transfer_date",
+      "measures": [
+        "quantity_requested",
+        "quantity_shipped",
+        "quantity_received",
+        "transfer_cost"
+      ],
+      "states": [
+        "cancelled",
+        "completed",
+        "in_transit",
+        "pending"
+      ],
+      "dimensions": [
+        "item_id",
+        "from_warehouse_id",
+        "to_warehouse_id",
+        "expected_arrival_date"
+      ]
+    },
+    "purchase_requisitions": {
+      "atom": "supply_chain_purchase_requisitions_ERP_record",
+      "record_type": "record",
+      "grain_key": "requisition_id",
+      "time_col": "requisition_date",
+      "measures": [
+        "quantity_requested",
+        "estimated_unit_cost",
+        "estimated_total_cost"
+      ],
+      "states": [
+        "Approved",
+        "Cancelled",
+        "Completed",
+        "Pending",
+        "Under Review"
+      ],
+      "dimensions": [
+        "item_id",
+        "requested_by",
+        "department",
+        "po_id",
+        "approved_by"
+      ]
+    },
+    "supplier_contracts": {
+      "atom": "supply_chain_supplier_contracts_ERP_record",
+      "record_type": "record",
+      "grain_key": "contract_id",
+      "time_col": "contract_start_date",
+      "measures": [
+        "contracted_value",
+        "committed_spend_amount",
+        "payment_terms_days"
+      ],
+      "states": [
+        "Active",
+        "Expired"
+      ],
+      "dimensions": [
+        "supplier_id",
+        "contract_end_date",
+        "contract_type",
+        "currency",
+        "category"
+      ]
+    },
+    "quality_inspections": {
+      "atom": "supply_chain_quality_inspections_ERP_record",
+      "record_type": "record",
+      "grain_key": "inspection_id",
+      "time_col": "inspection_date",
+      "measures": [
+        "quantity_inspected",
+        "quantity_defective",
+        "defect_rate"
+      ],
+      "states": [],
+      "dimensions": [
+        "receipt_id",
+        "supplier_id",
+        "item_id",
+        "inspection_type",
+        "inspection_result",
+        "inspector_id"
+      ]
+    },
+    "carrier_performance": {
+      "atom": "supply_chain_carrier_performance_WMS_snapshot",
+      "record_type": "snapshot",
+      "grain_key": "carrier_id",
+      "time_col": "period_start_date",
+      "measures": [
+        "total_shipments",
+        "on_time_delivery_rate",
+        "damage_rate",
+        "avg_transit_days",
+        "total_freight_cost",
+        "total_weight_kg",
+        "claim_count"
+      ],
+      "states": [],
+      "dimensions": [
+        "carrier_name",
+        "carrier_type",
+        "period_type"
+      ]
+    },
+    "returns": {
+      "atom": "supply_chain_returns_ERP_record",
+      "record_type": "record",
+      "grain_key": "return_id",
+      "time_col": "return_date",
+      "measures": [
+        "quantity_returned",
+        "unit_cost",
+        "return_value",
+        "credit_amount"
+      ],
+      "states": [
+        "Cancelled",
+        "Completed",
+        "In Review",
+        "Pending"
+      ],
+      "dimensions": [
+        "supplier_id",
+        "item_id",
+        "receipt_id",
+        "return_reason"
+      ]
+    },
+    "inventory_aging": {
+      "atom": "supply_chain_inventory_aging_WMS_snapshot",
+      "record_type": "snapshot",
+      "grain_key": "item_id",
+      "time_col": "snapshot_date",
+      "measures": [
+        "qty_0_30_days",
+        "qty_31_90_days",
+        "qty_91_180_days",
+        "qty_over_180_days",
+        "total_qty_on_hand",
+        "total_inventory_value",
+        "slow_moving_value"
+      ],
+      "states": [],
+      "dimensions": [
+        "item_name",
+        "item_category",
+        "age_bucket"
+      ]
+    },
+    "reorder_proposals": {
+      "atom": "supply_chain_reorder_proposals_ERP_record",
+      "record_type": "record",
+      "grain_key": "proposal_id",
+      "time_col": "proposal_date",
+      "measures": [
+        "current_qty_on_hand",
+        "reorder_point_qty",
+        "proposed_order_qty",
+        "estimated_total_cost"
+      ],
+      "states": [
+        "Approved",
+        "Cancelled",
+        "PO Created",
+        "Pending",
+        "Rejected"
+      ],
+      "dimensions": [
+        "item_id",
+        "supplier_id",
+        "warehouse_id",
+        "proposal_source",
+        "po_id"
+      ]
+    },
+    "carriers": {
+      "atom": "supply_chain_carriers_WMS_dimension",
+      "record_type": "dimension",
+      "grain_key": "carrier_id",
+      "time_col": "onboarded_date",
+      "measures": [
+        "contract_rate_usd",
+        "avg_transit_days"
+      ],
+      "states": [],
+      "dimensions": [
+        "carrier_name",
+        "carrier_code",
+        "carrier_type",
+        "country",
+        "service_level"
+      ]
+    },
+    "supplier_items": {
+      "atom": "supply_chain_supplier_items_ERP_dimension",
+      "record_type": "dimension",
+      "grain_key": "supplier_item_id",
+      "time_col": "effective_date",
+      "measures": [
+        "negotiated_unit_cost",
+        "minimum_order_qty",
+        "lead_time_days"
+      ],
+      "states": [],
+      "dimensions": [
+        "supplier_id",
+        "item_id",
+        "supplier_part_number",
+        "currency"
+      ]
+    },
+    "buyers": {
+      "atom": "supply_chain_buyers_ERP_dimension",
+      "record_type": "dimension",
+      "grain_key": "buyer_id",
+      "time_col": "hire_date",
+      "measures": [
+        "spend_limit",
+        "active_po_count"
+      ],
+      "states": [],
+      "dimensions": [
+        "buyer_name",
+        "email",
+        "department",
+        "category_responsibility"
+      ]
+    },
+    "cost_centers": {
+      "atom": "supply_chain_cost_centers_ERP_dimension",
+      "record_type": "dimension",
+      "grain_key": "cost_center_id",
+      "time_col": "created_date",
+      "measures": [
+        "annual_budget"
+      ],
+      "states": [],
+      "dimensions": [
+        "cost_center_name",
+        "cost_center_code",
+        "department",
+        "business_unit",
+        "region"
+      ]
+    },
+    "invoices": {
+      "atom": "supply_chain_invoices_ERP_record",
+      "record_type": "record",
+      "grain_key": "invoice_id",
+      "time_col": "invoice_date",
+      "measures": [
+        "gross_amount",
+        "tax_amount",
+        "discount_amount",
+        "net_amount",
+        "days_to_pay"
+      ],
+      "states": [
+        "Approved",
+        "Cancelled",
+        "Disputed",
+        "Paid",
+        "Pending",
+        "Under Review"
+      ],
+      "dimensions": [
+        "supplier_invoice_number",
+        "po_id",
+        "supplier_id",
+        "due_date",
+        "currency"
+      ]
+    },
+    "invoice_lines": {
+      "atom": "supply_chain_invoice_lines_ERP_record",
+      "record_type": "record",
+      "grain_key": "invoice_line_id",
+      "time_col": "invoice_date",
+      "measures": [
+        "quantity_invoiced",
+        "unit_price",
+        "line_amount",
+        "price_variance",
+        "quantity_variance"
+      ],
+      "states": [
+        "Approved",
+        "Cancelled",
+        "Disputed",
+        "Pending",
+        "Under Review"
+      ],
+      "dimensions": [
+        "invoice_id",
+        "po_line_id",
+        "item_id",
+        "supplier_id",
+        "unit_of_measure"
+      ]
+    },
+    "order_fulfillment": {
+      "atom": "supply_chain_order_fulfillment_WMS_event",
+      "record_type": "event",
+      "grain_key": "fulfillment_event_id",
+      "time_col": "event_date",
+      "measures": [
+        "quantity_requested",
+        "quantity_fulfilled",
+        "fulfillment_rate",
+        "processing_time_mins"
+      ],
+      "states": [
+        "Cancelled",
+        "Completed",
+        "Partially Fulfilled",
+        "Pending"
+      ],
+      "dimensions": [
+        "order_id",
+        "warehouse_id",
+        "item_id",
+        "event_type",
+        "operator_id"
+      ]
+    },
+    "safety_stock": {
+      "atom": "supply_chain_safety_stock_ERP_snapshot",
+      "record_type": "snapshot",
+      "grain_key": "item_id",
+      "time_col": "snapshot_date",
+      "measures": [
+        "safety_stock_qty",
+        "reorder_point_qty",
+        "max_stock_qty",
+        "economic_order_qty",
+        "avg_daily_demand",
+        "demand_variability"
+      ],
+      "states": [],
+      "dimensions": [
+        "item_name",
+        "item_category",
+        "review_cycle"
+      ]
+    },
+    "shrinkage_events": {
+      "atom": "supply_chain_shrinkage_events_WMS_event",
+      "record_type": "event",
+      "grain_key": "shrinkage_event_id",
+      "time_col": "event_date",
+      "measures": [
+        "quantity_lost",
+        "unit_cost",
+        "total_cost_impact"
+      ],
+      "states": [],
+      "dimensions": [
+        "item_id",
+        "warehouse_id",
+        "location_id",
+        "shrinkage_type",
+        "discovered_by",
+        "reference_count_id"
+      ]
+    },
+    "inbound_delivery_schedule": {
+      "atom": "supply_chain_inbound_delivery_schedule_ERP_record",
+      "record_type": "record",
+      "grain_key": "schedule_id",
+      "time_col": "scheduled_delivery_date",
+      "measures": [
+        "expected_quantity",
+        "expected_pallets",
+        "days_early_late"
+      ],
+      "states": [
+        "Delivered"
+      ],
+      "dimensions": [
+        "po_id",
+        "supplier_id",
+        "warehouse_id",
+        "confirmed_delivery_date",
+        "actual_delivery_date",
+        "dock_door"
+      ]
+    },
+    "financials": {
+      "atom": "supply_chain_financials_ERP_record",
+      "record_type": "record",
+      "grain_key": "transaction_id",
+      "time_col": "date",
+      "measures": [
+        "units_sold",
+        "unit_selling_price",
+        "unit_cost_of_goods",
+        "revenue",
+        "cost_of_goods_sold",
+        "gross_profit",
+        "gross_profit_margin",
+        "operating_expenses",
+        "operating_profit",
+        "net_profit",
+        "net_profit_margin"
+      ],
+      "states": [],
+      "dimensions": [
+        "product_category"
+      ]
+    }
+  },
+  "cross_domain_refs": [],
+  "kpi_definitions": [
+    {
+      "name": "supplier_on_time_delivery_rate",
+      "description": "Percentage of supplier deliveries that arrived on time, reflecting supplier reliability.",
+      "formula": "{supply_chain_supplier_performance_on_time_delivery_rate_percent} / {supply_chain_supplier_performance_count}",
+      "unit": "percent",
+      "depends_on": [
+        "supply_chain_supplier_performance_on_time_delivery_rate_percent",
+        "supply_chain_supplier_performance_count"
+      ]
+    },
+    {
+      "name": "inventory_turnover_ratio",
+      "description": "Ratio of cost of goods sold to average inventory on hand, indicating how efficiently inventory is being used.",
+      "formula": "{supply_chain_financials_cost_of_goods_sold_currency} / {supply_chain_inventory_levels_quantity_on_hand_count}",
+      "unit": "ratio",
+      "depends_on": [
+        "supply_chain_financials_cost_of_goods_sold_currency",
+        "supply_chain_inventory_levels_quantity_on_hand_count"
+      ]
+    },
+    {
+      "name": "purchase_order_fulfillment_rate",
+      "description": "Proportion of ordered quantities that have been received, measuring procurement completion effectiveness.",
+      "formula": "{supply_chain_purchase_order_lines_quantity_received_count} / {supply_chain_purchase_order_lines_quantity_ordered_count}",
+      "unit": "percent",
+      "depends_on": [
+        "supply_chain_purchase_order_lines_quantity_received_count",
+        "supply_chain_purchase_order_lines_quantity_ordered_count"
+      ]
+    },
+    {
+      "name": "freight_cost_per_kg",
+      "description": "Average freight cost incurred per kilogram shipped, used to benchmark carrier cost efficiency.",
+      "formula": "{supply_chain_shipments_freight_cost_currency} / {supply_chain_shipments_total_weight_kg_currency}",
+      "unit": "currency",
+      "depends_on": [
+        "supply_chain_shipments_freight_cost_currency",
+        "supply_chain_shipments_total_weight_kg_currency"
+      ]
+    },
+    {
+      "name": "quality_defect_rate",
+      "description": "Proportion of inspected goods found to be defective, indicating incoming quality from suppliers.",
+      "formula": "{supply_chain_quality_inspections_quantity_defective_count} / {supply_chain_quality_inspections_quantity_inspected_count}",
+      "unit": "percent",
+      "depends_on": [
+        "supply_chain_quality_inspections_quantity_defective_count",
+        "supply_chain_quality_inspections_quantity_inspected_count"
+      ]
+    }
+  ],
+  "time_scopes": [
+    "all_time",
+    "this_month",
+    "last_month",
+    "this_quarter",
+    "ytd"
+  ],
+  "series_axes": [
+    "by_month",
+    "by_region",
+    "by_supplier_category",
+    "by_item_category",
+    "by_warehouse",
+    "by_carrier",
+    "by_country",
+    "by_cost_center"
+  ]
+}

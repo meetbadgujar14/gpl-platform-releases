@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_procurement_spend_min_spend_amount_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_procurement_spend_min_spend_amount_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "procurement_spend",
+    "measure": "min_spend_amount",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 3240.0,
+  "formula_line": "MEASURE(MIN(spend_amount) FROM supply_chain_procurement_spend_ERP_record)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-07-22T12:17:43Z",
+  "usage_count": 0,
+  "source_goal": "What is the min spend amount across all procurement_spends?",
+  "wave": 2,
+  "operator": "MEASURE",
+  "verified_at": "2026-07-22T12:18:47Z"
+}

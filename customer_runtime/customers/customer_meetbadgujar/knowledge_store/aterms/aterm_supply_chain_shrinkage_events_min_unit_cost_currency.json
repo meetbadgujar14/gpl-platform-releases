@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_shrinkage_events_min_unit_cost_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shrinkage_events_min_unit_cost_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shrinkage_events",
+    "measure": "min_unit_cost",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 6.9,
+  "formula_line": "MEASURE('supply_chain_shrinkage_events_WMS_event', 'MIN', 'unit_cost', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:37Z",
+  "usage_count": 0,
+  "source_goal": "What is the min unit cost across all shrinkage_eventss?",
+  "wave": 2,
+  "operator": "MEASURE",
+  "verified_at": "2026-09-02T06:49:03Z"
+}

@@ -1,0 +1,44 @@
+{
+  "supply_chain_financials.xlsx": {
+    "file_id": "supply_chain_financials.xlsx",
+    "sheets": [
+      {
+        "sheet_name": "supply_chain_financials",
+        "total_cells_changed": 0,
+        "badge_colour": "green",
+        "steps": {
+          "headers": {
+            "cells_affected": 0,
+            "renames": {}
+          },
+          "empty_cols": {
+            "columns": []
+          },
+          "null_norm": {
+            "cells_affected": 0
+          },
+          "whitespace": {
+            "cells_affected": 0
+          },
+          "numbers": {
+            "cells_affected": 0,
+            "columns_affected": []
+          },
+          "dates": {
+            "cells_affected": 0,
+            "columns_affected": [],
+            "decisions": [
+              {
+                "column": "date",
+                "decision": "day_first",
+                "reason": "column name hint + vertical 'supply_chain' convention DD/MM"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "total_cells_changed": 0,
+    "badge_colour": "green"
+  }
+}

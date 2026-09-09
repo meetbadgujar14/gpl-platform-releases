@@ -1,0 +1,4928 @@
+{
+  "wave": 8,
+  "goal_count": 259,
+  "generated_at": "2026-09-02T06:38:00Z",
+  "goals": [
+    {
+      "goal": "How many supplierss by month?",
+      "canonical_id": "supply_chain_suppliers_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity on hand of supplierss by month?",
+      "canonical_id": "supply_chain_suppliers_quantity_on_hand_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "quantity_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity allocated of supplierss by month?",
+      "canonical_id": "supply_chain_suppliers_quantity_allocated_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "quantity_allocated",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total unit cost of supplierss by month?",
+      "canonical_id": "supply_chain_suppliers_unit_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "unit_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total lead time days of supplierss by month?",
+      "canonical_id": "supply_chain_suppliers_lead_time_days_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total reliability score of supplierss by month?",
+      "canonical_id": "supply_chain_suppliers_reliability_score_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "reliability_score",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many supplierss by supplier category?",
+      "canonical_id": "supply_chain_suppliers_count_by_supplier_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_supplier_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity on hand of supplierss by supplier category?",
+      "canonical_id": "supply_chain_suppliers_quantity_on_hand_count_by_supplier_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "quantity_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_supplier_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity allocated of supplierss by supplier category?",
+      "canonical_id": "supply_chain_suppliers_quantity_allocated_count_by_supplier_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "quantity_allocated",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_supplier_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total unit cost of supplierss by supplier category?",
+      "canonical_id": "supply_chain_suppliers_unit_cost_currency_by_supplier_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "unit_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_supplier_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total lead time days of supplierss by supplier category?",
+      "canonical_id": "supply_chain_suppliers_lead_time_days_days_by_supplier_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_supplier_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total reliability score of supplierss by supplier category?",
+      "canonical_id": "supply_chain_suppliers_reliability_score_count_by_supplier_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "reliability_score",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_supplier_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many supplierss by warehouse?",
+      "canonical_id": "supply_chain_suppliers_count_by_warehouse",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_warehouse"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity on hand of supplierss by warehouse?",
+      "canonical_id": "supply_chain_suppliers_quantity_on_hand_count_by_warehouse",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "quantity_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_warehouse"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity allocated of supplierss by warehouse?",
+      "canonical_id": "supply_chain_suppliers_quantity_allocated_count_by_warehouse",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "quantity_allocated",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_warehouse"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total unit cost of supplierss by warehouse?",
+      "canonical_id": "supply_chain_suppliers_unit_cost_currency_by_warehouse",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "unit_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_warehouse"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total lead time days of supplierss by warehouse?",
+      "canonical_id": "supply_chain_suppliers_lead_time_days_days_by_warehouse",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_warehouse"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total reliability score of supplierss by warehouse?",
+      "canonical_id": "supply_chain_suppliers_reliability_score_count_by_warehouse",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "reliability_score",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_warehouse"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many supplierss by country?",
+      "canonical_id": "supply_chain_suppliers_count_by_country",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_country"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity on hand of supplierss by country?",
+      "canonical_id": "supply_chain_suppliers_quantity_on_hand_count_by_country",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "quantity_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_country"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity allocated of supplierss by country?",
+      "canonical_id": "supply_chain_suppliers_quantity_allocated_count_by_country",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "quantity_allocated",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_country"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total unit cost of supplierss by country?",
+      "canonical_id": "supply_chain_suppliers_unit_cost_currency_by_country",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "unit_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_country"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total lead time days of supplierss by country?",
+      "canonical_id": "supply_chain_suppliers_lead_time_days_days_by_country",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_country"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total reliability score of supplierss by country?",
+      "canonical_id": "supply_chain_suppliers_reliability_score_count_by_country",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "reliability_score",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_country"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many supplierss by region?",
+      "canonical_id": "supply_chain_suppliers_count_by_region",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_region"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity on hand of supplierss by region?",
+      "canonical_id": "supply_chain_suppliers_quantity_on_hand_count_by_region",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "quantity_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_region"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity allocated of supplierss by region?",
+      "canonical_id": "supply_chain_suppliers_quantity_allocated_count_by_region",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "quantity_allocated",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_region"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total unit cost of supplierss by region?",
+      "canonical_id": "supply_chain_suppliers_unit_cost_currency_by_region",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "unit_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_region"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total lead time days of supplierss by region?",
+      "canonical_id": "supply_chain_suppliers_lead_time_days_days_by_region",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_region"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total reliability score of supplierss by region?",
+      "canonical_id": "supply_chain_suppliers_reliability_score_count_by_region",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "reliability_score",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_region"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many warehouse_locationss by month?",
+      "canonical_id": "supply_chain_warehouse_locations_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "warehouse_locations",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total capacity units of warehouse_locationss by month?",
+      "canonical_id": "supply_chain_warehouse_locations_capacity_units_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "warehouse_locations",
+        "measure": "capacity_units",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many warehouse_locationss by country?",
+      "canonical_id": "supply_chain_warehouse_locations_count_by_country",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "warehouse_locations",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_country"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total capacity units of warehouse_locationss by country?",
+      "canonical_id": "supply_chain_warehouse_locations_capacity_units_count_by_country",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "warehouse_locations",
+        "measure": "capacity_units",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_country"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many purchase_orderss by month?",
+      "canonical_id": "supply_chain_purchase_orders_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_orders",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total amount of purchase_orderss by month?",
+      "canonical_id": "supply_chain_purchase_orders_total_amount_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_orders",
+        "measure": "total_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total line items of purchase_orderss by month?",
+      "canonical_id": "supply_chain_purchase_orders_total_line_items_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_orders",
+        "measure": "total_line_items",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many purchase_orderss by department?",
+      "canonical_id": "supply_chain_purchase_orders_count_by_department",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_orders",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_department"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total amount of purchase_orderss by department?",
+      "canonical_id": "supply_chain_purchase_orders_total_amount_currency_by_department",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_orders",
+        "measure": "total_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_department"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total line items of purchase_orderss by department?",
+      "canonical_id": "supply_chain_purchase_orders_total_line_items_currency_by_department",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_orders",
+        "measure": "total_line_items",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_department"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many purchase_order_liness by month?",
+      "canonical_id": "supply_chain_purchase_order_lines_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_order_lines",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity ordered of purchase_order_liness by month?",
+      "canonical_id": "supply_chain_purchase_order_lines_quantity_ordered_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_order_lines",
+        "measure": "quantity_ordered",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity received of purchase_order_liness by month?",
+      "canonical_id": "supply_chain_purchase_order_lines_quantity_received_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_order_lines",
+        "measure": "quantity_received",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total unit cost of purchase_order_liness by month?",
+      "canonical_id": "supply_chain_purchase_order_lines_unit_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_order_lines",
+        "measure": "unit_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total line total of purchase_order_liness by month?",
+      "canonical_id": "supply_chain_purchase_order_lines_line_total_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_order_lines",
+        "measure": "line_total",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many shipmentss by month?",
+      "canonical_id": "supply_chain_shipments_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipments",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total freight cost of shipmentss by month?",
+      "canonical_id": "supply_chain_shipments_freight_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipments",
+        "measure": "freight_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total weight kg of shipmentss by month?",
+      "canonical_id": "supply_chain_shipments_total_weight_kg_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipments",
+        "measure": "total_weight_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many shipmentss by carrier?",
+      "canonical_id": "supply_chain_shipments_count_by_carrier",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipments",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_carrier"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total freight cost of shipmentss by carrier?",
+      "canonical_id": "supply_chain_shipments_freight_cost_currency_by_carrier",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipments",
+        "measure": "freight_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_carrier"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total weight kg of shipmentss by carrier?",
+      "canonical_id": "supply_chain_shipments_total_weight_kg_currency_by_carrier",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipments",
+        "measure": "total_weight_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_carrier"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many shipment_liness by month?",
+      "canonical_id": "supply_chain_shipment_lines_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipment_lines",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity shipped of shipment_liness by month?",
+      "canonical_id": "supply_chain_shipment_lines_quantity_shipped_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipment_lines",
+        "measure": "quantity_shipped",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity damaged of shipment_liness by month?",
+      "canonical_id": "supply_chain_shipment_lines_quantity_damaged_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shipment_lines",
+        "measure": "quantity_damaged",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many goods_receiptss by month?",
+      "canonical_id": "supply_chain_goods_receipts_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "goods_receipts",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity received of goods_receiptss by month?",
+      "canonical_id": "supply_chain_goods_receipts_quantity_received_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "goods_receipts",
+        "measure": "quantity_received",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity accepted of goods_receiptss by month?",
+      "canonical_id": "supply_chain_goods_receipts_quantity_accepted_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "goods_receipts",
+        "measure": "quantity_accepted",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity rejected of goods_receiptss by month?",
+      "canonical_id": "supply_chain_goods_receipts_quantity_rejected_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "goods_receipts",
+        "measure": "quantity_rejected",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many inventory_levelss by month?",
+      "canonical_id": "supply_chain_inventory_levels_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity on hand of inventory_levelss by month?",
+      "canonical_id": "supply_chain_inventory_levels_quantity_on_hand_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "quantity_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity reserved of inventory_levelss by month?",
+      "canonical_id": "supply_chain_inventory_levels_quantity_reserved_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "quantity_reserved",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity available of inventory_levelss by month?",
+      "canonical_id": "supply_chain_inventory_levels_quantity_available_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "quantity_available",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total reorder point of inventory_levelss by month?",
+      "canonical_id": "supply_chain_inventory_levels_reorder_point_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "reorder_point",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many inventory_levelss by item category?",
+      "canonical_id": "supply_chain_inventory_levels_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity on hand of inventory_levelss by item category?",
+      "canonical_id": "supply_chain_inventory_levels_quantity_on_hand_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "quantity_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity reserved of inventory_levelss by item category?",
+      "canonical_id": "supply_chain_inventory_levels_quantity_reserved_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "quantity_reserved",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity available of inventory_levelss by item category?",
+      "canonical_id": "supply_chain_inventory_levels_quantity_available_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "quantity_available",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total reorder point of inventory_levelss by item category?",
+      "canonical_id": "supply_chain_inventory_levels_reorder_point_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "reorder_point",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many supplier_performances by month?",
+      "canonical_id": "supply_chain_supplier_performance_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total orders of supplier_performances by month?",
+      "canonical_id": "supply_chain_supplier_performance_total_orders_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "total_orders",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total on time delivery rate of supplier_performances by month?",
+      "canonical_id": "supply_chain_supplier_performance_on_time_delivery_rate_percent_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "on_time_delivery_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quality acceptance rate of supplier_performances by month?",
+      "canonical_id": "supply_chain_supplier_performance_quality_acceptance_rate_percent_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "quality_acceptance_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total avg lead time days of supplier_performances by month?",
+      "canonical_id": "supply_chain_supplier_performance_avg_lead_time_days_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "avg_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total spend of supplier_performances by month?",
+      "canonical_id": "supply_chain_supplier_performance_total_spend_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "total_spend",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total defect rate of supplier_performances by month?",
+      "canonical_id": "supply_chain_supplier_performance_defect_rate_percent_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "defect_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many supplier_performances by supplier category?",
+      "canonical_id": "supply_chain_supplier_performance_count_by_supplier_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_supplier_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total orders of supplier_performances by supplier category?",
+      "canonical_id": "supply_chain_supplier_performance_total_orders_currency_by_supplier_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "total_orders",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_supplier_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total on time delivery rate of supplier_performances by supplier category?",
+      "canonical_id": "supply_chain_supplier_performance_on_time_delivery_rate_percent_by_supplier_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "on_time_delivery_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_supplier_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quality acceptance rate of supplier_performances by supplier category?",
+      "canonical_id": "supply_chain_supplier_performance_quality_acceptance_rate_percent_by_supplier_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "quality_acceptance_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_supplier_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total avg lead time days of supplier_performances by supplier category?",
+      "canonical_id": "supply_chain_supplier_performance_avg_lead_time_days_days_by_supplier_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "avg_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_supplier_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total spend of supplier_performances by supplier category?",
+      "canonical_id": "supply_chain_supplier_performance_total_spend_currency_by_supplier_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "total_spend",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_supplier_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total defect rate of supplier_performances by supplier category?",
+      "canonical_id": "supply_chain_supplier_performance_defect_rate_percent_by_supplier_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_performance",
+        "measure": "defect_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_supplier_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many demand_forecastss by month?",
+      "canonical_id": "supply_chain_demand_forecasts_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "demand_forecasts",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total forecasted quantity of demand_forecastss by month?",
+      "canonical_id": "supply_chain_demand_forecasts_forecasted_quantity_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "demand_forecasts",
+        "measure": "forecasted_quantity",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total actual quantity of demand_forecastss by month?",
+      "canonical_id": "supply_chain_demand_forecasts_actual_quantity_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "demand_forecasts",
+        "measure": "actual_quantity",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total forecast error of demand_forecastss by month?",
+      "canonical_id": "supply_chain_demand_forecasts_forecast_error_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "demand_forecasts",
+        "measure": "forecast_error",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total forecast accuracy rate of demand_forecastss by month?",
+      "canonical_id": "supply_chain_demand_forecasts_forecast_accuracy_rate_percent_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "demand_forecasts",
+        "measure": "forecast_accuracy_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many demand_forecastss by item category?",
+      "canonical_id": "supply_chain_demand_forecasts_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "demand_forecasts",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total forecasted quantity of demand_forecastss by item category?",
+      "canonical_id": "supply_chain_demand_forecasts_forecasted_quantity_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "demand_forecasts",
+        "measure": "forecasted_quantity",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total actual quantity of demand_forecastss by item category?",
+      "canonical_id": "supply_chain_demand_forecasts_actual_quantity_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "demand_forecasts",
+        "measure": "actual_quantity",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total forecast error of demand_forecastss by item category?",
+      "canonical_id": "supply_chain_demand_forecasts_forecast_error_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "demand_forecasts",
+        "measure": "forecast_error",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total forecast accuracy rate of demand_forecastss by item category?",
+      "canonical_id": "supply_chain_demand_forecasts_forecast_accuracy_rate_percent_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "demand_forecasts",
+        "measure": "forecast_accuracy_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many procurement_spends by month?",
+      "canonical_id": "supply_chain_procurement_spend_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total spend amount of procurement_spends by month?",
+      "canonical_id": "supply_chain_procurement_spend_spend_amount_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "spend_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total tax amount of procurement_spends by month?",
+      "canonical_id": "supply_chain_procurement_spend_tax_amount_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "tax_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total discount amount of procurement_spends by month?",
+      "canonical_id": "supply_chain_procurement_spend_discount_amount_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "discount_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many lead_timess by month?",
+      "canonical_id": "supply_chain_lead_times_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "lead_times",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total avg lead time days of lead_timess by month?",
+      "canonical_id": "supply_chain_lead_times_avg_lead_time_days_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "lead_times",
+        "measure": "avg_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total min lead time days of lead_timess by month?",
+      "canonical_id": "supply_chain_lead_times_min_lead_time_days_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "lead_times",
+        "measure": "min_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total max lead time days of lead_timess by month?",
+      "canonical_id": "supply_chain_lead_times_max_lead_time_days_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "lead_times",
+        "measure": "max_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total order count of lead_timess by month?",
+      "canonical_id": "supply_chain_lead_times_order_count_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "lead_times",
+        "measure": "order_count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many lead_timess by item category?",
+      "canonical_id": "supply_chain_lead_times_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "lead_times",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total avg lead time days of lead_timess by item category?",
+      "canonical_id": "supply_chain_lead_times_avg_lead_time_days_days_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "lead_times",
+        "measure": "avg_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total min lead time days of lead_timess by item category?",
+      "canonical_id": "supply_chain_lead_times_min_lead_time_days_days_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "lead_times",
+        "measure": "min_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total max lead time days of lead_timess by item category?",
+      "canonical_id": "supply_chain_lead_times_max_lead_time_days_days_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "lead_times",
+        "measure": "max_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total order count of lead_timess by item category?",
+      "canonical_id": "supply_chain_lead_times_order_count_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "lead_times",
+        "measure": "order_count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many itemss by month?",
+      "canonical_id": "supply_chain_items_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "items",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total standard cost of itemss by month?",
+      "canonical_id": "supply_chain_items_standard_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "items",
+        "measure": "standard_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total lead time days of itemss by month?",
+      "canonical_id": "supply_chain_items_lead_time_days_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "items",
+        "measure": "lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total reorder point of itemss by month?",
+      "canonical_id": "supply_chain_items_reorder_point_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "items",
+        "measure": "reorder_point",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total safety stock qty of itemss by month?",
+      "canonical_id": "supply_chain_items_safety_stock_qty_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "items",
+        "measure": "safety_stock_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many itemss by item category?",
+      "canonical_id": "supply_chain_items_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "items",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total standard cost of itemss by item category?",
+      "canonical_id": "supply_chain_items_standard_cost_currency_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "items",
+        "measure": "standard_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total lead time days of itemss by item category?",
+      "canonical_id": "supply_chain_items_lead_time_days_days_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "items",
+        "measure": "lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total reorder point of itemss by item category?",
+      "canonical_id": "supply_chain_items_reorder_point_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "items",
+        "measure": "reorder_point",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total safety stock qty of itemss by item category?",
+      "canonical_id": "supply_chain_items_safety_stock_qty_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "items",
+        "measure": "safety_stock_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many warehousess by month?",
+      "canonical_id": "supply_chain_warehouses_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "warehouses",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total capacity sqm of warehousess by month?",
+      "canonical_id": "supply_chain_warehouses_total_capacity_sqm_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "warehouses",
+        "measure": "total_capacity_sqm",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total capacity units of warehousess by month?",
+      "canonical_id": "supply_chain_warehouses_total_capacity_units_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "warehouses",
+        "measure": "total_capacity_units",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many warehousess by country?",
+      "canonical_id": "supply_chain_warehouses_count_by_country",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "warehouses",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_country"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total capacity sqm of warehousess by country?",
+      "canonical_id": "supply_chain_warehouses_total_capacity_sqm_currency_by_country",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "warehouses",
+        "measure": "total_capacity_sqm",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_country"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total capacity units of warehousess by country?",
+      "canonical_id": "supply_chain_warehouses_total_capacity_units_currency_by_country",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "warehouses",
+        "measure": "total_capacity_units",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_country"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many warehousess by region?",
+      "canonical_id": "supply_chain_warehouses_count_by_region",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "warehouses",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_region"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total capacity sqm of warehousess by region?",
+      "canonical_id": "supply_chain_warehouses_total_capacity_sqm_currency_by_region",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "warehouses",
+        "measure": "total_capacity_sqm",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_region"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total capacity units of warehousess by region?",
+      "canonical_id": "supply_chain_warehouses_total_capacity_units_currency_by_region",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "warehouses",
+        "measure": "total_capacity_units",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_region"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many inventory_transactionss by month?",
+      "canonical_id": "supply_chain_inventory_transactions_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_transactions",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity change of inventory_transactionss by month?",
+      "canonical_id": "supply_chain_inventory_transactions_quantity_change_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_transactions",
+        "measure": "quantity_change",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity before of inventory_transactionss by month?",
+      "canonical_id": "supply_chain_inventory_transactions_quantity_before_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_transactions",
+        "measure": "quantity_before",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity after of inventory_transactionss by month?",
+      "canonical_id": "supply_chain_inventory_transactions_quantity_after_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_transactions",
+        "measure": "quantity_after",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total unit cost of inventory_transactionss by month?",
+      "canonical_id": "supply_chain_inventory_transactions_unit_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_transactions",
+        "measure": "unit_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total cost impact of inventory_transactionss by month?",
+      "canonical_id": "supply_chain_inventory_transactions_total_cost_impact_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_transactions",
+        "measure": "total_cost_impact",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many stock_transferss by month?",
+      "canonical_id": "supply_chain_stock_transfers_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "stock_transfers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity requested of stock_transferss by month?",
+      "canonical_id": "supply_chain_stock_transfers_quantity_requested_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "stock_transfers",
+        "measure": "quantity_requested",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity shipped of stock_transferss by month?",
+      "canonical_id": "supply_chain_stock_transfers_quantity_shipped_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "stock_transfers",
+        "measure": "quantity_shipped",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity received of stock_transferss by month?",
+      "canonical_id": "supply_chain_stock_transfers_quantity_received_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "stock_transfers",
+        "measure": "quantity_received",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total transfer cost of stock_transferss by month?",
+      "canonical_id": "supply_chain_stock_transfers_transfer_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "stock_transfers",
+        "measure": "transfer_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many purchase_requisitionss by month?",
+      "canonical_id": "supply_chain_purchase_requisitions_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_requisitions",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity requested of purchase_requisitionss by month?",
+      "canonical_id": "supply_chain_purchase_requisitions_quantity_requested_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_requisitions",
+        "measure": "quantity_requested",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total estimated unit cost of purchase_requisitionss by month?",
+      "canonical_id": "supply_chain_purchase_requisitions_estimated_unit_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_requisitions",
+        "measure": "estimated_unit_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total estimated total cost of purchase_requisitionss by month?",
+      "canonical_id": "supply_chain_purchase_requisitions_estimated_total_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_requisitions",
+        "measure": "estimated_total_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many purchase_requisitionss by department?",
+      "canonical_id": "supply_chain_purchase_requisitions_count_by_department",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_requisitions",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_department"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity requested of purchase_requisitionss by department?",
+      "canonical_id": "supply_chain_purchase_requisitions_quantity_requested_count_by_department",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_requisitions",
+        "measure": "quantity_requested",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_department"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total estimated unit cost of purchase_requisitionss by department?",
+      "canonical_id": "supply_chain_purchase_requisitions_estimated_unit_cost_currency_by_department",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_requisitions",
+        "measure": "estimated_unit_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_department"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total estimated total cost of purchase_requisitionss by department?",
+      "canonical_id": "supply_chain_purchase_requisitions_estimated_total_cost_currency_by_department",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "purchase_requisitions",
+        "measure": "estimated_total_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_department"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many supplier_contractss by month?",
+      "canonical_id": "supply_chain_supplier_contracts_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_contracts",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total contracted value of supplier_contractss by month?",
+      "canonical_id": "supply_chain_supplier_contracts_contracted_value_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_contracts",
+        "measure": "contracted_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total committed spend amount of supplier_contractss by month?",
+      "canonical_id": "supply_chain_supplier_contracts_committed_spend_amount_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_contracts",
+        "measure": "committed_spend_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total payment terms days of supplier_contractss by month?",
+      "canonical_id": "supply_chain_supplier_contracts_payment_terms_days_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_contracts",
+        "measure": "payment_terms_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many quality_inspectionss by month?",
+      "canonical_id": "supply_chain_quality_inspections_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "quality_inspections",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity inspected of quality_inspectionss by month?",
+      "canonical_id": "supply_chain_quality_inspections_quantity_inspected_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "quality_inspections",
+        "measure": "quantity_inspected",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity defective of quality_inspectionss by month?",
+      "canonical_id": "supply_chain_quality_inspections_quantity_defective_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "quality_inspections",
+        "measure": "quantity_defective",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total defect rate of quality_inspectionss by month?",
+      "canonical_id": "supply_chain_quality_inspections_defect_rate_percent_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "quality_inspections",
+        "measure": "defect_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many carrier_performances by month?",
+      "canonical_id": "supply_chain_carrier_performance_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carrier_performance",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total shipments of carrier_performances by month?",
+      "canonical_id": "supply_chain_carrier_performance_total_shipments_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carrier_performance",
+        "measure": "total_shipments",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total on time delivery rate of carrier_performances by month?",
+      "canonical_id": "supply_chain_carrier_performance_on_time_delivery_rate_percent_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carrier_performance",
+        "measure": "on_time_delivery_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total damage rate of carrier_performances by month?",
+      "canonical_id": "supply_chain_carrier_performance_damage_rate_percent_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carrier_performance",
+        "measure": "damage_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total avg transit days of carrier_performances by month?",
+      "canonical_id": "supply_chain_carrier_performance_avg_transit_days_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carrier_performance",
+        "measure": "avg_transit_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total freight cost of carrier_performances by month?",
+      "canonical_id": "supply_chain_carrier_performance_total_freight_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carrier_performance",
+        "measure": "total_freight_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total weight kg of carrier_performances by month?",
+      "canonical_id": "supply_chain_carrier_performance_total_weight_kg_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carrier_performance",
+        "measure": "total_weight_kg",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total claim count of carrier_performances by month?",
+      "canonical_id": "supply_chain_carrier_performance_claim_count_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carrier_performance",
+        "measure": "claim_count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many returnss by month?",
+      "canonical_id": "supply_chain_returns_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity returned of returnss by month?",
+      "canonical_id": "supply_chain_returns_quantity_returned_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "quantity_returned",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total unit cost of returnss by month?",
+      "canonical_id": "supply_chain_returns_unit_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "unit_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total return value of returnss by month?",
+      "canonical_id": "supply_chain_returns_return_value_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "return_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total credit amount of returnss by month?",
+      "canonical_id": "supply_chain_returns_credit_amount_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "credit_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many inventory_agings by month?",
+      "canonical_id": "supply_chain_inventory_aging_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total qty 0 30 days of inventory_agings by month?",
+      "canonical_id": "supply_chain_inventory_aging_qty_0_30_days_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "qty_0_30_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total qty 31 90 days of inventory_agings by month?",
+      "canonical_id": "supply_chain_inventory_aging_qty_31_90_days_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "qty_31_90_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total qty 91 180 days of inventory_agings by month?",
+      "canonical_id": "supply_chain_inventory_aging_qty_91_180_days_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "qty_91_180_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total qty over 180 days of inventory_agings by month?",
+      "canonical_id": "supply_chain_inventory_aging_qty_over_180_days_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "qty_over_180_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total qty on hand of inventory_agings by month?",
+      "canonical_id": "supply_chain_inventory_aging_total_qty_on_hand_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "total_qty_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total inventory value of inventory_agings by month?",
+      "canonical_id": "supply_chain_inventory_aging_total_inventory_value_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "total_inventory_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total slow moving value of inventory_agings by month?",
+      "canonical_id": "supply_chain_inventory_aging_slow_moving_value_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "slow_moving_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many inventory_agings by item category?",
+      "canonical_id": "supply_chain_inventory_aging_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total qty 0 30 days of inventory_agings by item category?",
+      "canonical_id": "supply_chain_inventory_aging_qty_0_30_days_days_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "qty_0_30_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total qty 31 90 days of inventory_agings by item category?",
+      "canonical_id": "supply_chain_inventory_aging_qty_31_90_days_days_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "qty_31_90_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total qty 91 180 days of inventory_agings by item category?",
+      "canonical_id": "supply_chain_inventory_aging_qty_91_180_days_days_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "qty_91_180_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total qty over 180 days of inventory_agings by item category?",
+      "canonical_id": "supply_chain_inventory_aging_qty_over_180_days_days_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "qty_over_180_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total qty on hand of inventory_agings by item category?",
+      "canonical_id": "supply_chain_inventory_aging_total_qty_on_hand_currency_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "total_qty_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total inventory value of inventory_agings by item category?",
+      "canonical_id": "supply_chain_inventory_aging_total_inventory_value_currency_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "total_inventory_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total slow moving value of inventory_agings by item category?",
+      "canonical_id": "supply_chain_inventory_aging_slow_moving_value_currency_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_aging",
+        "measure": "slow_moving_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many reorder_proposalss by month?",
+      "canonical_id": "supply_chain_reorder_proposals_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "reorder_proposals",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total current qty on hand of reorder_proposalss by month?",
+      "canonical_id": "supply_chain_reorder_proposals_current_qty_on_hand_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "reorder_proposals",
+        "measure": "current_qty_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total reorder point qty of reorder_proposalss by month?",
+      "canonical_id": "supply_chain_reorder_proposals_reorder_point_qty_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "reorder_proposals",
+        "measure": "reorder_point_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total proposed order qty of reorder_proposalss by month?",
+      "canonical_id": "supply_chain_reorder_proposals_proposed_order_qty_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "reorder_proposals",
+        "measure": "proposed_order_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total estimated total cost of reorder_proposalss by month?",
+      "canonical_id": "supply_chain_reorder_proposals_estimated_total_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "reorder_proposals",
+        "measure": "estimated_total_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many carrierss by month?",
+      "canonical_id": "supply_chain_carriers_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carriers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total contract rate usd of carrierss by month?",
+      "canonical_id": "supply_chain_carriers_contract_rate_usd_percent_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carriers",
+        "measure": "contract_rate_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total avg transit days of carrierss by month?",
+      "canonical_id": "supply_chain_carriers_avg_transit_days_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carriers",
+        "measure": "avg_transit_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many carrierss by country?",
+      "canonical_id": "supply_chain_carriers_count_by_country",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carriers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_country"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total contract rate usd of carrierss by country?",
+      "canonical_id": "supply_chain_carriers_contract_rate_usd_percent_by_country",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carriers",
+        "measure": "contract_rate_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_country"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total avg transit days of carrierss by country?",
+      "canonical_id": "supply_chain_carriers_avg_transit_days_days_by_country",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "carriers",
+        "measure": "avg_transit_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_country"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many supplier_itemss by month?",
+      "canonical_id": "supply_chain_supplier_items_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_items",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total negotiated unit cost of supplier_itemss by month?",
+      "canonical_id": "supply_chain_supplier_items_negotiated_unit_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_items",
+        "measure": "negotiated_unit_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total minimum order qty of supplier_itemss by month?",
+      "canonical_id": "supply_chain_supplier_items_minimum_order_qty_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_items",
+        "measure": "minimum_order_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total lead time days of supplier_itemss by month?",
+      "canonical_id": "supply_chain_supplier_items_lead_time_days_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_items",
+        "measure": "lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many buyerss by month?",
+      "canonical_id": "supply_chain_buyers_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "buyers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total spend limit of buyerss by month?",
+      "canonical_id": "supply_chain_buyers_spend_limit_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "buyers",
+        "measure": "spend_limit",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total active po count of buyerss by month?",
+      "canonical_id": "supply_chain_buyers_active_po_count_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "buyers",
+        "measure": "active_po_count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many buyerss by department?",
+      "canonical_id": "supply_chain_buyers_count_by_department",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "buyers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_department"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total spend limit of buyerss by department?",
+      "canonical_id": "supply_chain_buyers_spend_limit_currency_by_department",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "buyers",
+        "measure": "spend_limit",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_department"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total active po count of buyerss by department?",
+      "canonical_id": "supply_chain_buyers_active_po_count_count_by_department",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "buyers",
+        "measure": "active_po_count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_department"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many cost_centerss by month?",
+      "canonical_id": "supply_chain_cost_centers_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "cost_centers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total annual budget of cost_centerss by month?",
+      "canonical_id": "supply_chain_cost_centers_annual_budget_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "cost_centers",
+        "measure": "annual_budget",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many cost_centerss by region?",
+      "canonical_id": "supply_chain_cost_centers_count_by_region",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "cost_centers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_region"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total annual budget of cost_centerss by region?",
+      "canonical_id": "supply_chain_cost_centers_annual_budget_count_by_region",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "cost_centers",
+        "measure": "annual_budget",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_region"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many cost_centerss by department?",
+      "canonical_id": "supply_chain_cost_centers_count_by_department",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "cost_centers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_department"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total annual budget of cost_centerss by department?",
+      "canonical_id": "supply_chain_cost_centers_annual_budget_count_by_department",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "cost_centers",
+        "measure": "annual_budget",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_department"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many invoicess by month?",
+      "canonical_id": "supply_chain_invoices_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total gross amount of invoicess by month?",
+      "canonical_id": "supply_chain_invoices_gross_amount_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "gross_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total tax amount of invoicess by month?",
+      "canonical_id": "supply_chain_invoices_tax_amount_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "tax_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total discount amount of invoicess by month?",
+      "canonical_id": "supply_chain_invoices_discount_amount_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "discount_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total net amount of invoicess by month?",
+      "canonical_id": "supply_chain_invoices_net_amount_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "net_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total days to pay of invoicess by month?",
+      "canonical_id": "supply_chain_invoices_days_to_pay_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "days_to_pay",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many invoice_liness by month?",
+      "canonical_id": "supply_chain_invoice_lines_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoice_lines",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity invoiced of invoice_liness by month?",
+      "canonical_id": "supply_chain_invoice_lines_quantity_invoiced_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoice_lines",
+        "measure": "quantity_invoiced",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total unit price of invoice_liness by month?",
+      "canonical_id": "supply_chain_invoice_lines_unit_price_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoice_lines",
+        "measure": "unit_price",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total line amount of invoice_liness by month?",
+      "canonical_id": "supply_chain_invoice_lines_line_amount_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoice_lines",
+        "measure": "line_amount",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total price variance of invoice_liness by month?",
+      "canonical_id": "supply_chain_invoice_lines_price_variance_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoice_lines",
+        "measure": "price_variance",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity variance of invoice_liness by month?",
+      "canonical_id": "supply_chain_invoice_lines_quantity_variance_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoice_lines",
+        "measure": "quantity_variance",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many order_fulfillments by month?",
+      "canonical_id": "supply_chain_order_fulfillment_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "order_fulfillment",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity requested of order_fulfillments by month?",
+      "canonical_id": "supply_chain_order_fulfillment_quantity_requested_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "order_fulfillment",
+        "measure": "quantity_requested",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity fulfilled of order_fulfillments by month?",
+      "canonical_id": "supply_chain_order_fulfillment_quantity_fulfilled_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "order_fulfillment",
+        "measure": "quantity_fulfilled",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total fulfillment rate of order_fulfillments by month?",
+      "canonical_id": "supply_chain_order_fulfillment_fulfillment_rate_percent_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "order_fulfillment",
+        "measure": "fulfillment_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total processing time mins of order_fulfillments by month?",
+      "canonical_id": "supply_chain_order_fulfillment_processing_time_mins_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "order_fulfillment",
+        "measure": "processing_time_mins",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many safety_stocks by month?",
+      "canonical_id": "supply_chain_safety_stock_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total safety stock qty of safety_stocks by month?",
+      "canonical_id": "supply_chain_safety_stock_safety_stock_qty_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "safety_stock_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total reorder point qty of safety_stocks by month?",
+      "canonical_id": "supply_chain_safety_stock_reorder_point_qty_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "reorder_point_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total max stock qty of safety_stocks by month?",
+      "canonical_id": "supply_chain_safety_stock_max_stock_qty_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "max_stock_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total economic order qty of safety_stocks by month?",
+      "canonical_id": "supply_chain_safety_stock_economic_order_qty_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "economic_order_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total avg daily demand of safety_stocks by month?",
+      "canonical_id": "supply_chain_safety_stock_avg_daily_demand_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "avg_daily_demand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total demand variability of safety_stocks by month?",
+      "canonical_id": "supply_chain_safety_stock_demand_variability_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "demand_variability",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many safety_stocks by item category?",
+      "canonical_id": "supply_chain_safety_stock_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total safety stock qty of safety_stocks by item category?",
+      "canonical_id": "supply_chain_safety_stock_safety_stock_qty_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "safety_stock_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total reorder point qty of safety_stocks by item category?",
+      "canonical_id": "supply_chain_safety_stock_reorder_point_qty_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "reorder_point_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total max stock qty of safety_stocks by item category?",
+      "canonical_id": "supply_chain_safety_stock_max_stock_qty_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "max_stock_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total economic order qty of safety_stocks by item category?",
+      "canonical_id": "supply_chain_safety_stock_economic_order_qty_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "economic_order_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total avg daily demand of safety_stocks by item category?",
+      "canonical_id": "supply_chain_safety_stock_avg_daily_demand_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "avg_daily_demand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total demand variability of safety_stocks by item category?",
+      "canonical_id": "supply_chain_safety_stock_demand_variability_count_by_item_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "safety_stock",
+        "measure": "demand_variability",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_item_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many shrinkage_eventss by month?",
+      "canonical_id": "supply_chain_shrinkage_events_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shrinkage_events",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity lost of shrinkage_eventss by month?",
+      "canonical_id": "supply_chain_shrinkage_events_quantity_lost_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shrinkage_events",
+        "measure": "quantity_lost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total unit cost of shrinkage_eventss by month?",
+      "canonical_id": "supply_chain_shrinkage_events_unit_cost_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shrinkage_events",
+        "measure": "unit_cost",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total cost impact of shrinkage_eventss by month?",
+      "canonical_id": "supply_chain_shrinkage_events_total_cost_impact_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "shrinkage_events",
+        "measure": "total_cost_impact",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many inbound_delivery_schedules by month?",
+      "canonical_id": "supply_chain_inbound_delivery_schedule_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inbound_delivery_schedule",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total expected quantity of inbound_delivery_schedules by month?",
+      "canonical_id": "supply_chain_inbound_delivery_schedule_expected_quantity_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inbound_delivery_schedule",
+        "measure": "expected_quantity",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total expected pallets of inbound_delivery_schedules by month?",
+      "canonical_id": "supply_chain_inbound_delivery_schedule_expected_pallets_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inbound_delivery_schedule",
+        "measure": "expected_pallets",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total days early late of inbound_delivery_schedules by month?",
+      "canonical_id": "supply_chain_inbound_delivery_schedule_days_early_late_days_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inbound_delivery_schedule",
+        "measure": "days_early_late",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many financialss by month?",
+      "canonical_id": "supply_chain_financials_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total units sold of financialss by month?",
+      "canonical_id": "supply_chain_financials_units_sold_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "units_sold",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total unit selling price of financialss by month?",
+      "canonical_id": "supply_chain_financials_unit_selling_price_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "unit_selling_price",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total unit cost of goods of financialss by month?",
+      "canonical_id": "supply_chain_financials_unit_cost_of_goods_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "unit_cost_of_goods",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total revenue of financialss by month?",
+      "canonical_id": "supply_chain_financials_revenue_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "revenue",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total cost of goods sold of financialss by month?",
+      "canonical_id": "supply_chain_financials_cost_of_goods_sold_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "cost_of_goods_sold",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total gross profit of financialss by month?",
+      "canonical_id": "supply_chain_financials_gross_profit_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "gross_profit",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total gross profit margin of financialss by month?",
+      "canonical_id": "supply_chain_financials_gross_profit_margin_percent_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "gross_profit_margin",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total operating expenses of financialss by month?",
+      "canonical_id": "supply_chain_financials_operating_expenses_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "operating_expenses",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total operating profit of financialss by month?",
+      "canonical_id": "supply_chain_financials_operating_profit_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "operating_profit",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total net profit of financialss by month?",
+      "canonical_id": "supply_chain_financials_net_profit_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "net_profit",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total net profit margin of financialss by month?",
+      "canonical_id": "supply_chain_financials_net_profit_margin_percent_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "financials",
+        "measure": "net_profit_margin",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_month"
+      },
+      "join": null
+    }
+  ]
+}

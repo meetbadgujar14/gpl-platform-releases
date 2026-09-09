@@ -1,0 +1,382 @@
+{
+  "id": "ptem:report_ops_supply_chain_daily_warehouse_capacity_utilization",
+  "canonical_id": "report_ops_supply_chain_daily_warehouse_capacity_utilization",
+  "type": "Ptem",
+  "version": 1,
+  "meta": {
+    "title": "warehouse capacity & inventory utilization report",
+    "description": "Daily operational view of warehouse capacity consumption, inventory availability, reorder triggers, and stock reservation pressure across all warehouse locations.",
+    "audience_label": "Operations Manager / Warehouse Lead",
+    "verticals": [
+      "supply_chain"
+    ],
+    "tags": [
+      "warehouse",
+      "capacity",
+      "inventory",
+      "utilization",
+      "reorder",
+      "operational"
+    ],
+    "install_count": 1340,
+    "rating": 4,
+    "created_at": "2026-08-21T05:35:27Z",
+    "created_by": "factory_llm_generator"
+  },
+  "slots": {
+    "format": "report",
+    "audience": "ops",
+    "scope": "supply_chain",
+    "frequency": "daily",
+    "depth": "detailed",
+    "period": "current_day"
+  },
+  "required_oracles": [
+    {
+      "canonical_id": "supply_chain_warehouses_count",
+      "label": "Total Warehouses",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_warehouses_total_capacity_sqm_currency",
+      "label": "Total Warehouse Capacity (sqm)",
+      "format": "currency",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_warehouses_total_capacity_units_currency",
+      "label": "Total Capacity (Units)",
+      "format": "currency",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_warehouse_locations_count",
+      "label": "Total Warehouse Locations",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_warehouse_locations_capacity_units_count",
+      "label": "Location Capacity (Units)",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_inventory_levels_count",
+      "label": "Total Inventory Records",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_inventory_levels_quantity_on_hand_count",
+      "label": "Quantity On Hand",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_inventory_levels_quantity_reserved_count",
+      "label": "Quantity Reserved",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_inventory_levels_quantity_available_count",
+      "label": "Quantity Available",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_inventory_levels_reorder_point_count",
+      "label": "Items at or Below Reorder Point",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_items_count",
+      "label": "Total Items",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_items_count_active",
+      "label": "Active Items",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_items_count_on_hold",
+      "label": "Items On Hold",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_items_safety_stock_qty_count",
+      "label": "Safety Stock Quantity",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_items_reorder_point_count",
+      "label": "Item Reorder Point Threshold",
+      "format": "count",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_items_standard_cost_currency",
+      "label": "Standard Cost of Inventory",
+      "format": "currency",
+      "currency_symbol": "USD",
+      "required": true
+    },
+    {
+      "canonical_id": "supply_chain_shipments_count_pending",
+      "label": "Pending Inbound Shipments",
+      "format": "count",
+      "required": false
+    },
+    {
+      "canonical_id": "supply_chain_shipments_count_in_transit",
+      "label": "Shipments In Transit",
+      "format": "count",
+      "required": false
+    },
+    {
+      "canonical_id": "supply_chain_goods_receipts_count",
+      "label": "Goods Receipts Today",
+      "format": "count",
+      "required": false
+    },
+    {
+      "canonical_id": "supply_chain_goods_receipts_quantity_received_count",
+      "label": "Units Received Today",
+      "format": "count",
+      "required": false
+    },
+    {
+      "canonical_id": "supply_chain_goods_receipts_quantity_accepted_count",
+      "label": "Units Accepted",
+      "format": "count",
+      "required": false
+    },
+    {
+      "canonical_id": "supply_chain_goods_receipts_quantity_rejected_count",
+      "label": "Units Rejected",
+      "format": "count",
+      "required": false
+    }
+  ],
+  "sections": [
+    {
+      "id": "header",
+      "type": "header",
+      "title": "Warehouse Capacity & Inventory Utilization Report",
+      "oracles": [],
+      "config": {
+        "show_status_pill": true,
+        "show_date": true
+      }
+    },
+    {
+      "id": "kpis_capacity",
+      "type": "kpi_grid",
+      "title": "Warehouse Capacity Overview",
+      "oracles": [
+        "supply_chain_warehouses_count",
+        "supply_chain_warehouse_locations_count",
+        "supply_chain_warehouses_total_capacity_sqm_currency",
+        "supply_chain_warehouses_total_capacity_units_currency",
+        "supply_chain_warehouse_locations_capacity_units_count"
+      ],
+      "config": {
+        "columns": 5,
+        "show_rag_status": true
+      }
+    },
+    {
+      "id": "kpis_inventory",
+      "type": "kpi_grid",
+      "title": "Inventory Position",
+      "oracles": [
+        "supply_chain_inventory_levels_quantity_on_hand_count",
+        "supply_chain_inventory_levels_quantity_available_count",
+        "supply_chain_inventory_levels_quantity_reserved_count",
+        "supply_chain_inventory_levels_reorder_point_count",
+        "supply_chain_items_safety_stock_qty_count",
+        "supply_chain_items_standard_cost_currency"
+      ],
+      "config": {
+        "columns": 3,
+        "show_rag_status": true,
+        "highlight_below_threshold": true
+      }
+    },
+    {
+      "id": "chart_utilization",
+      "type": "bar_chart",
+      "title": "Inventory Utilization vs Capacity by Warehouse",
+      "oracles": [
+        "supply_chain_inventory_levels_quantity_on_hand_count",
+        "supply_chain_warehouse_locations_capacity_units_count"
+      ],
+      "config": {
+        "max_bars": 10,
+        "color": "teal",
+        "stacked": false,
+        "show_benchmark_line": true
+      }
+    },
+    {
+      "id": "chart_stock_breakdown",
+      "type": "donut_chart",
+      "title": "Stock Availability Breakdown",
+      "oracles": [
+        "supply_chain_inventory_levels_quantity_available_count",
+        "supply_chain_inventory_levels_quantity_reserved_count",
+        "supply_chain_inventory_levels_quantity_on_hand_count"
+      ],
+      "config": {
+        "show_legend": true,
+        "color_scheme": "traffic_light"
+      }
+    },
+    {
+      "id": "reorder_alerts",
+      "type": "alert_list",
+      "title": "Reorder & Safety Stock Alerts",
+      "oracles": [
+        "supply_chain_inventory_levels_reorder_point_count",
+        "supply_chain_items_reorder_point_count",
+        "supply_chain_items_safety_stock_qty_count",
+        "supply_chain_items_count_on_hold"
+      ],
+      "config": {
+        "show_rag_status": true,
+        "severity_levels": [
+          "critical",
+          "warning",
+          "ok"
+        ],
+        "max_items": 20
+      }
+    },
+    {
+      "id": "kpis_items",
+      "type": "kpi_grid",
+      "title": "Item Catalogue Status",
+      "oracles": [
+        "supply_chain_items_count",
+        "supply_chain_items_count_active",
+        "supply_chain_items_count_on_hold",
+        "supply_chain_items_count_discontinued"
+      ],
+      "config": {
+        "columns": 4,
+        "show_rag_status": false
+      }
+    },
+    {
+      "id": "chart_receipts",
+      "type": "bar_chart",
+      "title": "Today's Inbound Goods Receipts",
+      "oracles": [
+        "supply_chain_goods_receipts_quantity_received_count",
+        "supply_chain_goods_receipts_quantity_accepted_count",
+        "supply_chain_goods_receipts_quantity_rejected_count"
+      ],
+      "config": {
+        "max_bars": 6,
+        "color": "green",
+        "stacked": true
+      }
+    },
+    {
+      "id": "kpis_inbound",
+      "type": "kpi_grid",
+      "title": "Inbound Pipeline",
+      "oracles": [
+        "supply_chain_shipments_count_pending",
+        "supply_chain_shipments_count_in_transit",
+        "supply_chain_goods_receipts_count"
+      ],
+      "config": {
+        "columns": 3,
+        "show_rag_status": true
+      }
+    },
+    {
+      "id": "narrative",
+      "type": "narrative",
+      "title": "Daily Operational Summary",
+      "oracles": [],
+      "config": {
+        "max_bullets": 5
+      }
+    },
+    {
+      "id": "audit",
+      "type": "audit_trail",
+      "title": "Oracle Sources",
+      "oracles": [],
+      "config": {}
+    },
+    {
+      "id": "footer",
+      "type": "footer",
+      "title": "",
+      "oracles": [],
+      "config": {}
+    }
+  ],
+  "narrative": {
+    "enabled": true,
+    "audience_tone": "operational",
+    "max_words": 180,
+    "structure": [
+      "observation",
+      "context",
+      "driver",
+      "implication",
+      "action"
+    ],
+    "highlight_thresholds": true
+  },
+  "delivery": {
+    "formats": [
+      "html",
+      "pdf"
+    ],
+    "filename_template": "ops_warehouse_capacity_utilization_{date}"
+  },
+  "coverage": {
+    "total": 22,
+    "available": 22,
+    "missing": 0,
+    "available_ids": [
+      "supply_chain_warehouses_count",
+      "supply_chain_warehouses_total_capacity_sqm_currency",
+      "supply_chain_warehouses_total_capacity_units_currency",
+      "supply_chain_warehouse_locations_count",
+      "supply_chain_warehouse_locations_capacity_units_count",
+      "supply_chain_inventory_levels_count",
+      "supply_chain_inventory_levels_quantity_on_hand_count",
+      "supply_chain_inventory_levels_quantity_reserved_count",
+      "supply_chain_inventory_levels_quantity_available_count",
+      "supply_chain_inventory_levels_reorder_point_count",
+      "supply_chain_items_count",
+      "supply_chain_items_count_active",
+      "supply_chain_items_count_on_hold",
+      "supply_chain_items_safety_stock_qty_count",
+      "supply_chain_items_reorder_point_count",
+      "supply_chain_items_standard_cost_currency",
+      "supply_chain_shipments_count_pending",
+      "supply_chain_shipments_count_in_transit",
+      "supply_chain_goods_receipts_count",
+      "supply_chain_goods_receipts_quantity_received_count",
+      "supply_chain_goods_receipts_quantity_accepted_count",
+      "supply_chain_goods_receipts_quantity_rejected_count"
+    ],
+    "missing_oracles": [],
+    "status": "READY"
+  }
+}

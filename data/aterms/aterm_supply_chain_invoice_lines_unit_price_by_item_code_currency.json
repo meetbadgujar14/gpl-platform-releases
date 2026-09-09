@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_invoice_lines_unit_price_by_item_code_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_invoice_lines_unit_price_by_item_code_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "invoice_lines",
+    "measure": "unit_price",
+    "state": "all",
+    "scope": "by_item_code",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "BELT-V-B68": 745.0,
+    "BOLT-SS-M1050": 2.65,
+    "BOX-CORR-121008": 1340.0,
+    "COND-PVC-0750": 478.15,
+    "FILT-HYD-010M": 405.0,
+    "ORING-EPDM-050": 892.0,
+    "PPE-HELM-CE-YLW": 374.0,
+    "TOOL-ALLEN-9PC-M": 2228.85,
+    "VALV-GATE-02-150": 153.3,
+    "WIRE-CU-AWG12-500": 38.2,
+    "WRAP-BUB-12-100": 28.65,
+    "WRAP-STR-18-1500": 527.5
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(unit_price) FROM supply_chain_invoice_lines_ERP_record JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY item_code)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:49Z",
+  "usage_count": 0,
+  "source_goal": "What is the total unit price of invoice_liness by item code?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:51Z"
+}

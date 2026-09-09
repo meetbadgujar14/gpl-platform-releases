@@ -1,0 +1,26 @@
+requisition_id,requisition_date,item_id,requested_by,department,requisition_status,quantity_requested,estimated_unit_cost,estimated_total_cost,po_id,approved_by,is_approved
+REQ-48271,2024-01-15,ITM-5067,Marcus Okafor,Manufacturing,Approved,150,42.75,6412.5,PO-44280,Sandra Whitfield,True
+REQ-73916,2024-02-03,ITM-4172,Priya Sharma,Operations,Pending,80,215.0,17200.0,PO-34819,,False
+REQ-19284,2024-03-22,ITM-9854,James Tremblay,Procurement,Approved,500,8.3,4150.0,PO-44280,Linda Nguyen,True
+REQ-56403,2024-04-10,ITM-5812,Aisha Mohammed,Warehouse,Approved,200,135.5,27100.0,PO-34819,Robert Chen,True
+REQ-82749,2024-05-07,ITM-6389,Carlos Mendoza,Engineering,Rejected,25,890.0,22250.0,PO-44280,Sandra Whitfield,False
+REQ-34617,2024-05-19,ITM-3405,Elena Petrova,Quality Assurance,Approved,60,74.2,4452.0,PO-44280,Linda Nguyen,True
+REQ-61085,2024-06-01,ITM-8327,David Okonkwo,Maintenance,Approved,300,12.6,3780.0,PO-44280,Robert Chen,True
+REQ-27493,2024-06-14,ITM-5812,Mei-Ling Zhou,Manufacturing,Pending,45,560.0,25200.0,PO-34819,,False
+REQ-90372,2024-07-08,ITM-6603,Samuel Adeyemi,Operations,Approved,120,95.4,11448.0,PO-15293,Sandra Whitfield,True
+REQ-45826,2024-07-23,ITM-4172,Rachel Kowalski,Procurement,Approved,75,348.0,26100.0,PO-34819,Linda Nguyen,True
+REQ-13659,2024-08-05,ITM-5067,Thomas Andersen,Engineering,Under Review,10,1250.0,12500.0,PO-34819,,False
+REQ-67248,2024-08-19,ITM-9854,Fatima Al-Hassan,Warehouse,Approved,400,6.85,2740.0,PO-34819,Robert Chen,True
+REQ-38917,2024-09-02,ITM-4172,Henry Beaumont,Maintenance,Approved,18,2100.0,37800.0,PO-13847,Sandra Whitfield,True
+REQ-52184,2024-09-17,ITM-6603,Ingrid Larsson,Quality Assurance,Cancelled,35,185.0,6475.0,PO-44280,,False
+REQ-79503,2024-10-04,ITM-8327,Jerome Baptiste,Manufacturing,Approved,250,28.9,7225.0,PO-34819,Linda Nguyen,True
+REQ-24768,2024-10-21,ITM-4172,Nadia Volkov,Operations,Approved,90,67.5,6075.0,PO-44280,Robert Chen,True
+REQ-40956,2024-11-06,ITM-5067,Omar Farouk,Procurement,Pending,1000,3.45,3450.0,PO-34819,,False
+REQ-87321,2024-11-18,ITM-4172,Grace Nwachukwu,Warehouse,Approved,55,420.0,23100.0,PO-29573,Sandra Whitfield,True
+REQ-15674,2024-12-03,ITM-4172,Patrick Sullivan,Engineering,Approved,40,315.0,12600.0,PO-34819,Linda Nguyen,True
+REQ-63809,2024-12-16,ITM-5812,Yuki Tanaka,Maintenance,Under Review,70,148.75,10412.5,PO-82359,,False
+REQ-31547,2025-01-09,ITM-5812,Claudia Reyes,Manufacturing,Approved,320,42.75,13680.0,PO-41685,Robert Chen,True
+REQ-58092,2025-01-24,ITM-6603,Benjamin Strauss,Quality Assurance,Approved,110,215.0,23650.0,PO-34819,Sandra Whitfield,True
+REQ-74361,2025-02-11,ITM-4172,Amara Diallo,Operations,Pending,15,890.0,13350.0,PO-44280,,False
+REQ-29843,2025-02-28,ITM-8740,Kevin Moreau,Procurement,Approved,180,560.0,100800.0,PO-50921,Linda Nguyen,True
+REQ-96175,2025-03-14,ITM-4172,Sophia Bergmann,Engineering,Approved,65,135.5,8807.5,PO-44280,Robert Chen,True

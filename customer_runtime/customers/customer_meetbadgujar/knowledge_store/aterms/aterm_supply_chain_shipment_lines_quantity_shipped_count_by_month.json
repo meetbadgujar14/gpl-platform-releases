@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_shipment_lines_quantity_shipped_count_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_shipment_lines_quantity_shipped_count_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "shipment_lines",
+    "measure": "quantity_shipped",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2024-12": 440.0,
+    "2025-08": 650.0,
+    "2025-11": 940.0,
+    "2026-01": 590.0,
+    "2026-02": 750.0,
+    "2026-03": 1250.0,
+    "2026-04": 650.0,
+    "2026-05": 1520.0,
+    "2026-06": 1410.0,
+    "2026-07": 1640.0,
+    "2026-08": 2425.0,
+    "2026-09": 1245.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_shipment_lines_WMS_record', 'SUM', 'quantity_shipped', None, [], None, None, None, {'date_col': 'shipment_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quantity shipped of shipment_liness by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

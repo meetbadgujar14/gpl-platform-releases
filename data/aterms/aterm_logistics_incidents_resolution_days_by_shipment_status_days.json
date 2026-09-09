@@ -1,0 +1,34 @@
+{
+  "id": "aterm:logistics_incidents_resolution_days_by_shipment_status_days",
+  "type": "Aterm",
+  "canonical_id": "logistics_incidents_resolution_days_by_shipment_status_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "incidents",
+    "measure": "resolution_days",
+    "state": "all",
+    "scope": "by_shipment_status",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Cancelled": 88.0,
+    "Delayed": 85.0,
+    "Delivered": 195.0,
+    "In Transit": 189.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(resolution_days) FROM logistics_incidents_ERP_record JOIN logistics_shipments_ERP_record ON shipment_id=shipment_id GROUP BY shipment_status)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:17Z",
+  "usage_count": 0,
+  "source_goal": "What is the total resolution days of incidentss by shipment status?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:45Z"
+}

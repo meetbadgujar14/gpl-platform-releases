@@ -1,0 +1,29 @@
+{
+  "id": "aterm:logistics_fuel_consumption_litres_consumed_last_month_count",
+  "type": "Aterm",
+  "canonical_id": "logistics_fuel_consumption_litres_consumed_last_month_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "fuel_consumption",
+    "measure": "litres_consumed",
+    "state": "all",
+    "scope": "total",
+    "time": "last_month",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_MONTH_FIXED(SUM(litres_consumed) FROM logistics_fuel_consumption_WMS_record WHERE record_date IN 2026-06)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-07-22T09:51:16Z",
+  "usage_count": 0,
+  "source_goal": "What is the total litres consumed of fuel_consumptions last month?",
+  "wave": 3,
+  "operator": "MEASURE_MONTH_FIXED",
+  "verified_at": "2026-07-22T12:18:45Z"
+}

@@ -1,0 +1,21 @@
+item_id,warehouse_id,snapshot_date,item_name,item_category,safety_stock_qty,reorder_point_qty,max_stock_qty,economic_order_qty,avg_daily_demand,demand_variability,review_cycle
+ITM-6603,WH-7364,2024-03-15,Industrial Hydraulic Pump,Mechanical Components,45,120,500,150,12.5,0.18,Weekly
+ITM-3405,WH-5537,2024-03-15,Stainless Steel Fastener Set,Hardware,200,550,2000,500,58.3,0.12,Daily
+ITM-3405,WH-5537,2024-04-01,Polyethylene Packaging Film,Packaging Materials,320,800,3000,1000,78.4,0.09,Biweekly
+ITM-2931,WH-2095,2024-04-01,Electronic Control Module,Electronics,30,75,300,80,6.8,0.27,Weekly
+ITM-9173,WH-7364,2024-04-15,Lubricating Oil 5W-40,Chemicals & Lubricants,180,420,1500,600,40.2,0.14,Weekly
+ITM-2056,WH-5537,2024-04-15,PVC Pipe 2-inch Diameter,Plumbing Supplies,90,240,800,250,22.1,0.16,Biweekly
+ITM-7216,WH-5537,2024-05-01,Bearing Assembly 6205-2RS,Mechanical Components,60,160,600,200,15.9,0.21,Weekly
+ITM-3405,WH-4821,2024-05-01,Corrugated Cardboard Box 12x10x8,Packaging Materials,500,1200,5000,2000,145.0,0.11,Daily
+ITM-9854,WH-4821,2024-05-15,Pneumatic Cylinder 50mm Bore,Mechanical Components,25,65,250,75,5.4,0.31,Monthly
+ITM-8740,WH-5537,2024-05-15,Nylon Cable Ties 12-inch,Hardware,750,2000,8000,3000,225.0,0.08,Biweekly
+ITM-6603,WH-9142,2024-06-01,Conveyor Belt Segment 1m,Industrial Equipment,15,40,150,50,3.2,0.38,Monthly
+ITM-1247,WH-9142,2024-06-01,Activated Carbon Filter Cartridge,Filtration,80,200,750,220,18.6,0.22,Weekly
+ITM-5812,WH-5537,2024-06-15,Latex Examination Gloves M,Safety & PPE,1200,3000,12000,5000,380.0,0.07,Daily
+ITM-2056,WH-7364,2024-06-15,Servo Motor 400W 3000RPM,Electronics,12,30,120,40,2.8,0.42,Monthly
+ITM-6389,WH-4821,2024-07-01,Industrial Solvent Cleaner 20L,Chemicals & Lubricants,55,140,500,160,13.5,0.19,Weekly
+ITM-8327,WH-5537,2024-07-01,Stretch Wrap Film 500mm x 300m,Packaging Materials,280,700,2500,900,66.7,0.1,Biweekly
+ITM-3648,WH-2095,2024-07-15,Hard Hat ANSI Class E,Safety & PPE,100,260,1000,300,24.4,0.15,Biweekly
+ITM-6603,WH-7364,2024-07-15,V-Belt A55 Industrial,Mechanical Components,40,105,400,120,9.8,0.24,Weekly
+ITM-7394,WH-7364,2024-08-01,Ethernet Switch 24-Port,Electronics,8,20,80,25,1.9,0.45,Monthly
+ITM-3648,WH-7364,2024-08-01,Forklift Tire Solid 200x50,Industrial Equipment,20,52,200,60,4.6,0.33,Monthly

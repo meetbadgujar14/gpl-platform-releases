@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_returns_unit_cost_by_supplier_category_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_returns_unit_cost_by_supplier_category_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "returns",
+    "measure": "unit_cost",
+    "state": "all",
+    "scope": "by_supplier_category",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Agricultural Products": 219.75,
+    "Chemicals": 61.0,
+    "Electronic Components": 22.5,
+    "Fasteners & Hardware": 1338.65,
+    "Logistics": 56.8,
+    "MRO Supplies": 497.5,
+    "Metal Fabrication": 158.4,
+    "Packaging": 1342.0,
+    "Plastics & Polymers": 670.85,
+    "Raw Materials": 1513.0,
+    "Safety & PPE": 495.0,
+    "Textiles": 656.2
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(unit_cost) FROM supply_chain_returns_ERP_record JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY supplier_category)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total unit cost of returnss by supplier category?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:51Z"
+}

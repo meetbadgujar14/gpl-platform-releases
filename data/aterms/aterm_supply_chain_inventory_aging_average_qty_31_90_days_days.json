@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_inventory_aging_average_qty_31_90_days_days",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_aging_average_qty_31_90_days_days",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_aging",
+    "measure": "average_qty_31_90_days",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": 252.75,
+  "formula_line": "supply_chain_inventory_aging_average_qty_31_90_days_days = {supply_chain_inventory_aging_qty_31_90_days_days} / {supply_chain_inventory_aging_count}",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-07-22T12:17:51Z",
+  "usage_count": 0,
+  "source_goal": "What is the average qty 31 90 days per inventory_aging?",
+  "wave": 5,
+  "depends_on": [
+    "supply_chain_inventory_aging_qty_31_90_days_days",
+    "supply_chain_inventory_aging_count"
+  ],
+  "dep_values": {
+    "supply_chain_inventory_aging_qty_31_90_days_days": 5055.0,
+    "supply_chain_inventory_aging_count": 20.0
+  },
+  "verified_at": "2026-07-22T12:18:53Z"
+}

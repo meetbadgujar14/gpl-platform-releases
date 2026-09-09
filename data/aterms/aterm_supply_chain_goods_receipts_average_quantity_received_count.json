@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_goods_receipts_average_quantity_received_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_goods_receipts_average_quantity_received_count",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "goods_receipts",
+    "measure": "average_quantity_received",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 1077.6785714285713,
+  "formula_line": "supply_chain_goods_receipts_average_quantity_received_count = {supply_chain_goods_receipts_quantity_received_count} / {supply_chain_goods_receipts_count}",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-07-22T12:17:51Z",
+  "usage_count": 0,
+  "source_goal": "What is the average quantity received per goods_receipts?",
+  "wave": 5,
+  "depends_on": [
+    "supply_chain_goods_receipts_quantity_received_count",
+    "supply_chain_goods_receipts_count"
+  ],
+  "dep_values": {
+    "supply_chain_goods_receipts_quantity_received_count": 30175.0,
+    "supply_chain_goods_receipts_count": 28.0
+  },
+  "verified_at": "2026-07-22T12:18:52Z"
+}

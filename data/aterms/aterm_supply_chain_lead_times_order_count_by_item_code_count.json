@@ -1,0 +1,41 @@
+{
+  "id": "aterm:supply_chain_lead_times_order_count_by_item_code_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_lead_times_order_count_by_item_code_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "lead_times",
+    "measure": "order_count",
+    "state": "all",
+    "scope": "by_item_code",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "BOLT-SS-M1050": 399.0,
+    "BOX-CORR-121008": 228.0,
+    "COND-PVC-0750": 95.0,
+    "DRUM-PP-55G": 140.0,
+    "ELEC-CB-20A-1P": 132.0,
+    "HYD-HOSE-0500": 33.0,
+    "OIL-LUB-ISO46-5L": 112.0,
+    "ORING-EPDM-050": 218.0,
+    "PALT-WOOD-4840": 52.0,
+    "PPE-GLOVE-NIT-L": 156.0,
+    "WRAP-BUB-12-100": 136.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(order_count) FROM supply_chain_lead_times_ERP_snapshot JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY item_code)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total order count of lead_timess by item code?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

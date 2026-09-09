@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_invoice_lines_line_amount_currency_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_invoice_lines_line_amount_currency_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "invoice_lines",
+    "measure": "line_amount",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2024-01": 6412.5,
+    "2024-02": 25575.0,
+    "2024-03": 33030.0,
+    "2024-04": 76800.0,
+    "2024-05": 63700.0,
+    "2024-06": 19290.0,
+    "2024-07": 86580.0,
+    "2024-08": 88075.0,
+    "2024-09": 47855.0,
+    "2024-10": 92400.0,
+    "2024-11": 31690.0,
+    "2024-12": 42200.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(line_amount) FROM supply_chain_invoice_lines_ERP_record GROUP BY BUCKET(invoice_date, month))",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:51Z",
+  "usage_count": 0,
+  "source_goal": "What is the total line amount of invoice_liness by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:52Z"
+}

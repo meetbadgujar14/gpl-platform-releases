@@ -1,0 +1,11 @@
+cost_center_id,cost_center_name,cost_center_code,department,business_unit,region,annual_budget,is_active,created_date
+CC-4821,Customs & Trade Compliance,SCM-PROC-001,Specialized Logistics,Operations,Central US,4250000,true,2026-09-01
+CC-7364,Global Procurement Operations,SCM-WH-E02,Specialized Logistics,Distribution Network,Europe,3180000,true,2026-09-01
+CC-2957,Global Procurement Operations,SCM-QA-003,Procurement,Distribution Network,Asia Pacific,1920000,false,2026-07-15
+CC-5103,Supplier Quality Assurance,SCM-SRC-AP4,Logistics,Supply Chain Management,Europe,5670000,true,2026-06-10
+CC-8842,EMEA Logistics Hub,SCM-FRT-005,Quality Control,Distribution Network,Asia Pacific,7340000,false,2026-03-22
+CC-3316,Warehouse & Distribution - East,SCM-INV-006,Trade Compliance,International Distribution,Global,2850000,false,2026-02-14
+CC-6079,Warehouse & Distribution - East,SCM-LOG-EU7,Inventory Management,Supply Chain Management,Asia Pacific,6120000,true,2025-11-30
+CC-1548,EMEA Logistics Hub,SCM-CTC-008,Procurement,Distribution Network,West US,1475000,false,2025-08-19
+CC-9231,Customs & Trade Compliance,SCM-CCL-009,Procurement,International Distribution,Global,3960000,false,2025-05-07
+CC-4467,Warehouse & Distribution - East,SCM-VND-010,Inventory Management,International Distribution,East US,2210000,false,2024-12-03

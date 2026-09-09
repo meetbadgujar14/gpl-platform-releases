@@ -1,0 +1,42 @@
+{
+  "id": "aterm:supply_chain_purchase_orders_count_by_category_responsibility",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_purchase_orders_count_by_category_responsibility",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "purchase_orders",
+    "measure": "count",
+    "state": "all",
+    "scope": "by_category_responsibility",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Capital Equipment": 1.0,
+    "Chemicals & Solvents": 2.0,
+    "Electronic Components": 1.0,
+    "Energy & Utilities": 11.0,
+    "IT Hardware & Software": 1.0,
+    "Office Supplies & Print": 1.0,
+    "Packaging Materials": 2.0,
+    "Plastics & Polymers": 2.0,
+    "Professional Services": 1.0,
+    "Steel & Metals": 3.0,
+    "Textiles & Apparel": 2.0,
+    "Warehousing & 3PL": 1.0
+  },
+  "formula_line": "MEASURE_GROUPED(COUNT_DISTINCT(po_id) FROM supply_chain_purchase_orders_ERP_record JOIN supply_chain_buyers_ERP_dimension ON buyer_id=buyer_id GROUP BY category_responsibility)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:46Z",
+  "usage_count": 0,
+  "source_goal": "How many purchase_orderss by category responsibility?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:49Z"
+}

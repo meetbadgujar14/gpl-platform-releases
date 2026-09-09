@@ -1,0 +1,40 @@
+{
+  "id": "aterm:supply_chain_carriers_contract_rate_usd_percent_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_carriers_contract_rate_usd_percent_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "carriers",
+    "measure": "contract_rate_usd",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2021-06": 4100.0,
+    "2021-11": 620.5,
+    "2022-03": 1850.0,
+    "2022-07": 7250.0,
+    "2022-09": 890.0,
+    "2022-12": 42.8,
+    "2023-01": 3400.0,
+    "2023-02": 2300.0,
+    "2023-04": 185.75,
+    "2023-06": 1420.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(contract_rate_usd) FROM supply_chain_carriers_WMS_dimension GROUP BY BUCKET(onboarded_date, month))",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:51Z",
+  "usage_count": 0,
+  "source_goal": "What is the total contract rate usd of carrierss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:52Z"
+}

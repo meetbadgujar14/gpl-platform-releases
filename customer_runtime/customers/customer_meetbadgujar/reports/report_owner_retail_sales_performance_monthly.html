@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Retail Sales Performance Report</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f0f4f8;color:#111;line-height:1.5;padding:20px;min-height:100vh}
+
+/* ── Hero Header ── */
+.rpt-hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 55%,#1e40af 100%);border-radius:12px;padding:20px 28px;margin-bottom:16px;color:#fff;position:relative;overflow:hidden}
+.rpt-hero::before{content:'';position:absolute;top:-60px;right:-60px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.03)}
+.rpt-hero::after{content:'';position:absolute;bottom:-80px;right:80px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.025)}
+.hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
+.hero-brand{font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:4px}
+.hero-title{font-size:20px;font-weight:800;line-height:1.15;margin-bottom:4px;color:#fff;letter-spacing:-.3px}
+.hero-desc{font-size:11px;color:rgba(255,255,255,.6);max-width:540px;margin-bottom:10px;line-height:1.6}
+.hero-pills{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.hero-status{display:inline-flex;align-items:center;gap:5px;padding:4px 12px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:.04em}
+.hero-meta{text-align:right;flex-shrink:0;font-size:10px;color:rgba(255,255,255,.5);line-height:1.8}
+.hero-meta strong{color:#fff;font-weight:700;font-size:13px;display:block}
+.hero-customer{font-size:9px;color:rgba(255,255,255,.25);margin-top:2px;letter-spacing:.04em}
+
+/* ── Section wrapper ── */
+.sec{background:#fff;border-radius:12px;padding:18px 22px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,.06);border:1px solid #e5e7eb}
+.sec-label{font-size:9px;font-weight:700;color:#93c5fd;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;border-bottom:2px solid #dbeafe;padding-bottom:8px}
+
+/* ── KPI Cards ── */
+.kg{display:grid;gap:10px}
+.kc{background:#fff;border:1px solid #dbeafe;border-radius:10px;padding:14px 16px;position:relative;border-top:3px solid #1e40af}
+.kc-red{border-top-color:#dc2626!important;border-color:#fca5a5!important}
+.kc-yellow{border-top-color:#d97706!important;border-color:#fde68a!important}
+.kv{font-size:22px;font-weight:900;color:#1e3a8a;line-height:1;margin-bottom:3px;letter-spacing:-.5px}
+.kl{font-size:10px;color:#64748b;font-weight:600;letter-spacing:.03em}
+.ktrend{font-size:10px;font-weight:700;margin-top:6px;padding:2px 7px;border-radius:4px;display:inline-block}
+.ktrend-up{color:#059669;background:#ecfdf5}
+.ktrend-down{color:#dc2626;background:#fef2f2}
+.ktrend-neutral{color:#6b7280;background:#f1f5f9}
+
+/* ── Chart grid — 2-col ── */
+.cg{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:14px}
+.cc{background:#fff;border-radius:12px;padding:18px 22px;box-shadow:0 1px 4px rgba(0,0,0,.06);border:1px solid #e5e7eb}
+.cc-label{font-size:9px;font-weight:700;color:#93c5fd;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;border-bottom:2px solid #dbeafe;padding-bottom:8px}
+
+/* ── Alert / exec summary ── */
+.exec-summary{background:#fff;border-radius:12px;padding:16px 22px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,.06);border:1px solid #e5e7eb}
+.alert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;margin-top:12px}
+.alert-card{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;background:#eff6ff;border-radius:8px;border-left:3px solid #1e40af}
+.alert-icon{font-size:15px;flex-shrink:0;margin-top:1px}
+.alert-label{font-size:11px;color:#1e40af;font-weight:600;margin-bottom:2px}
+.alert-val{font-size:13px;font-weight:800;color:#1e3a8a}
+
+/* ── Insight cards ── */
+.ic-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.ic{display:flex;gap:14px;padding:12px 16px;background:#eff6ff;border-radius:8px;border-left:3px solid #1e40af}
+.ic-num{font-size:22px;font-weight:900;color:#bfdbfe;flex-shrink:0;line-height:1.1}
+.ic-title{font-size:12px;font-weight:700;color:#1e3a8a;margin-bottom:3px}
+.ic-text{font-size:12px;color:#374151;line-height:1.55}
+.actions-sec{margin-top:12px;padding-top:12px;border-top:1px solid #dbeafe}
+.actions-title{font-size:10px;font-weight:700;color:#1e40af;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+.actions-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px}
+.actions-list li{font-size:12px;color:#1e3a8a;padding:7px 12px 7px 28px;background:#dbeafe;border-radius:6px;position:relative}
+.actions-list li::before{content:'→';position:absolute;left:10px;color:#1e40af;font-weight:700}
+
+/* ── Leaderboard table ── */
+.dt{width:100%;border-collapse:collapse;font-size:12px}
+.dt thead tr{background:#eff6ff}
+.dt th{padding:8px 10px;text-align:left;font-size:9px;color:#1e40af;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-bottom:2px solid #dbeafe}
+.dt td{padding:8px 10px;border-top:1px solid #f1f5f9;color:#374151;vertical-align:middle}
+.tn{color:#1e3a8a;font-weight:600}
+.rk{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;font-size:10px;font-weight:700}
+
+/* ── Audit / Oracle Sources ── */
+.audit-wrap{background:#fff;border-radius:12px;border:1px solid #e5e7eb;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,.06);overflow:hidden}
+.audit-toggle{list-style:none;padding:12px 22px;font-size:10px;font-weight:700;color:#1e40af;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:#eff6ff}
+.audit-toggle::-webkit-details-marker{display:none}
+.audit-toggle:hover{background:#dbeafe}
+.audit-ct{font-weight:400;color:#93c5fd}
+.audit-body{padding:0 22px 14px}
+.ar{display:grid;grid-template-columns:1fr 1fr 2fr auto;gap:8px;align-items:center;padding:7px 0;border-top:1px solid #f1f5f9;font-size:11px}
+.ar:first-child{border-top:none}
+.aid{font-family:monospace;font-size:9px;color:#93c5fd;word-break:break-all}
+.albl{color:#374151;font-weight:500}
+.aval{color:#6b7280}
+.aok{background:#dbeafe;color:#1e40af;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700}
+.ana{color:#d1d5db;font-size:10px}
+
+/* ── Footer ── */
+.rpt-foot{display:flex;justify-content:space-between;align-items:center;padding:12px 0 2px;border-top:1px solid #dbeafe;margin-top:4px}
+.rpt-ft{font-size:10px;color:#93c5fd}
+.rpt-badge{font-size:9px;font-weight:700;background:#1e40af;color:#fff;padding:3px 14px;border-radius:20px;letter-spacing:.07em}
+
+@media print{
+  @page{size:A4 landscape;margin:10mm}
+  body{background:#fff;padding:8px}
+  .rpt-hero{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  .sec,.cc,.audit-wrap{box-shadow:none!important}
+  .audit-wrap{display:none}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ── HERO HEADER ────────────────────────────────────────────────── -->
+<div class="rpt-hero">
+  <div class="hero-top">
+    <div>
+      <div class="hero-brand">GPL — Presentation Compiler</div>
+      <div class="hero-title">Retail Sales Performance Report</div>
+      <div class="hero-desc">Monthly sales overview — total revenue, orders, gross margin, top products, top cities, and channel breakdown.</div>
+      <div class="hero-pills">
+        <span class="hero-status" style="background:rgba(5,150,105,.18);color:#6ee7b7">
+          ● All Systems Normal
+        </span>
+        <span style="font-size:10px;color:rgba(255,255,255,.35)">07 Sep 2026</span>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <strong>Business Owner / Sales Head</strong>
+      <div>customer_meetbadgujar</div>
+      <div class="hero-customer">report_owner_retail_sales_performance_monthly</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="sec kpi-sec"><div class="sec-label">Sales snapshot</div><div class="kg" style="grid-template-columns:repeat(4,1fr)"><div class="kc"><div class="kv">₹0</div><div class="kl">Total Revenue</div></div><div class="kc"><div class="kv">420</div><div class="kl">Total Orders</div></div><div class="kc"><div class="kv">0</div><div class="kl">Fulfilled Orders</div></div></div></div>
+<div class="cg"><div class="cc"><div class="cc-label">Revenue by product</div><div class="cc-body"><svg viewBox="0 0 480 58" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:58px;overflow:visible"><style>.bl{font:11px system-ui;fill:#374151}.bv{font:700 11px system-ui;fill:#111}.ax{font:9px system-ui;fill:#9ca3af}</style><text x="0" y="26" class="bl">Unknown</text><rect x="140" y="14" width="4" height="26" rx="4" fill="#3b82f6" opacity=".88"/><text x="151" y="26" class="bv">0</text></svg></div></div><div class="cc"><div class="cc-label">Revenue by category</div><div class="cc-body"><svg viewBox="0 0 480 58" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:58px;overflow:visible"><style>.bl{font:11px system-ui;fill:#374151}.bv{font:700 11px system-ui;fill:#111}.ax{font:9px system-ui;fill:#9ca3af}</style><text x="0" y="26" class="bl">Unknown</text><rect x="140" y="14" width="4" height="26" rx="4" fill="#3b82f6" opacity=".88"/><text x="151" y="26" class="bv">0</text></svg></div></div></div>
+<div class="sec insights-sec"><div class="sec-label">Key Findings</div><div class="ic-grid"><div class="ic" style="border-left:4px solid #1e40af"><div class="ic-num" style="color:#1e40af">01</div><div class="ic-body"><div class="ic-title">The retail sales data shows 420 orders placed but zero revenue recorded and zero fulfilled orders completed.</div><div class="ic-text">Every order is sitting unresolved, and no product or category has generated any income. This points to a serious data or operational breakdown, either orders are not being processed through to fulfillment, or revenue is not being captured correctly in the system. The business is effectively running blind with no visibility into what is selling or earning. You need to immediately investigate whether this is a Shopify integration issue, a fulfillment pipeline failure, or a reporting configuration problem before any meaningful sales decisions can be made.</div></div></div></div><div class="actions-sec"><div class="actions-title">Recommended Actions</div><ul class="actions-list"><li>You need to immediately investigate whether this is a Shopify integration issue, a fulfillment pipeline failure, or a reporting configuration problem before any meaningful sales decisions can be made.</li></ul></div></div>
+<details class="audit-wrap"><summary class="audit-toggle">Oracle Sources <span class="audit-ct">(7 metrics)</span></summary><div class="audit-body"><div class="ar"><div class="aid">retail_shopify_order_line_items_revenue_total_currency</div><div class="albl">Total Revenue</div><div class="aval">₹0</div><span class="aok">✓</span></div><div class="ar"><div class="aid">retail_shopify_order_line_items_order_id_count</div><div class="albl">Total Orders</div><div class="aval">420</div><span class="aok">✓</span></div><div class="ar"><div class="aid">retail_shopify_order_line_items_fulfilled_count</div><div class="albl">Fulfilled Orders</div><div class="aval">0</div><span class="aok">✓</span></div><div class="ar"><div class="aid">retail_shopify_customers_count</div><div class="albl">Total Customers</div><div class="aval">N/A</div><span class="ana">—</span></div><div class="ar"><div class="aid">retail_shopify_order_line_items_title_revenue_grouped</div><div class="albl">Revenue by Product</div><div class="aval">Unknown: ₹0</div><span class="aok">✓</span></div><div class="ar"><div class="aid">retail_shopify_order_line_items_vendor_revenue_grouped</div><div class="albl">Revenue by Category</div><div class="aval">Unknown: ₹0</div><span class="aok">✓</span></div><div class="ar"><div class="aid">retail_shopify_customers_total_spent_currency</div><div class="albl">Total Customer Spend</div><div class="aval">N/A</div><span class="ana">—</span></div></div></details>
+
+<div class="rpt-foot">
+  <span class="rpt-ft">GPL · All values from verified customer data</span>
+  <span class="rpt-badge">GPL CERTIFIED</span>
+</div>
+
+</body>
+</html>

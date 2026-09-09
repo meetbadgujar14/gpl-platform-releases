@@ -1,0 +1,31 @@
+{
+  "id": "aterm:supply_chain_invoices_days_to_pay_paid_days",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_invoices_days_to_pay_paid_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "invoices",
+    "measure": "days_to_pay",
+    "state": "Paid",
+    "scope": "average",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": 23.6,
+  "formula_line": "MEASURE('supply_chain_invoices_ERP_record', 'AVG', 'days_to_pay', [{'field': 'invoice_status', 'op': '=', 'value': 'Paid'}])",
+  "exec_formula": "MEASURE('supply_chain_invoices_ERP_record', 'AVG', 'days_to_pay', [{'field': 'invoice_status', 'op': '=', 'value': 'Paid'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_wizard_execution",
+  "created_at": "2026-08-11T09:46:02Z",
+  "usage_count": 0,
+  "source_goal": "What is the average days to pay for Paid invoices?",
+  "wave": "A",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE steps=5",
+  "wizard_steps": 5
+}

@@ -1,0 +1,40 @@
+{
+  "id": "aterm:supply_chain_carrier_performance_count_by_carrier_code",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_carrier_performance_count_by_carrier_code",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "carrier_performance",
+    "measure": "count",
+    "state": "all",
+    "scope": "by_carrier_code",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "AGP": 1.0,
+    "CED": 1.0,
+    "ECM": 1.0,
+    "IRF": 1.0,
+    "MFS": 1.0,
+    "NST": 1.0,
+    "PRL": 1.0,
+    "SAC": 1.0,
+    "SPT": 1.0,
+    "TAC": 1.0
+  },
+  "formula_line": "MEASURE_GROUPED(COUNT_DISTINCT(carrier_id) FROM supply_chain_carrier_performance_WMS_snapshot JOIN supply_chain_carriers_WMS_dimension ON carrier_id=carrier_id GROUP BY carrier_code)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "How many carrier_performances by carrier code?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

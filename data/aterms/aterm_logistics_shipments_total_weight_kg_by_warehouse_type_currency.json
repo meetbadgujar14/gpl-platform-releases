@@ -1,0 +1,35 @@
+{
+  "id": "aterm:logistics_shipments_total_weight_kg_by_warehouse_type_currency",
+  "type": "Aterm",
+  "canonical_id": "logistics_shipments_total_weight_kg_by_warehouse_type_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "shipments",
+    "measure": "total_weight_kg",
+    "state": "all",
+    "scope": "by_warehouse_type",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Bonded": 25601.1,
+    "Cold Storage": 61777.2,
+    "Cross-Dock": 30556.100000000002,
+    "Distribution": 80490.0,
+    "Fulfillment": 5500.3
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(total_weight_kg) FROM logistics_shipments_ERP_record JOIN logistics_warehouses_MANUAL_dimension ON origin_warehouse_id=warehouse_id GROUP BY warehouse_type)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:17Z",
+  "usage_count": 0,
+  "source_goal": "What is the total total weight kg of shipmentss by warehouse type?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:45Z"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_inventory_aging_qty_91_180_days_ytd_days",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_aging_qty_91_180_days_ytd_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_aging",
+    "measure": "qty_91_180_days",
+    "state": "all",
+    "scope": "total",
+    "time": "ytd",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": 1249.0,
+  "formula_line": "MEASURE_YTD('supply_chain_inventory_aging_WMS_snapshot', 'snapshot_date', 'SUM', 'qty_91_180_days', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "What is the total qty 91 180 days of inventory_agings ytd?",
+  "wave": 3,
+  "operator": "MEASURE_YTD",
+  "verified_at": "2026-09-02T06:49:05Z"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_items_lead_time_days_this_month_days",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_items_lead_time_days_this_month_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "items",
+    "measure": "lead_time_days",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": 31.0,
+  "formula_line": "MEASURE_MONTH_FIXED('supply_chain_items_ERP_dimension', 'created_date', 'SUM', 'lead_time_days', 'this_month', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-09-01T07:44:38Z",
+  "usage_count": 0,
+  "source_goal": "What is the total lead time days of itemss this month?",
+  "wave": 3,
+  "operator": "MEASURE_MONTH_FIXED",
+  "verified_at": "2026-09-02T06:49:04Z"
+}

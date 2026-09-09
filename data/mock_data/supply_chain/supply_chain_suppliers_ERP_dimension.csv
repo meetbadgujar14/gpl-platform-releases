@@ -1,0 +1,16 @@
+supplier_id,supplier_name,supplier_category,country,region,payment_terms,status,is_preferred,onboarded_date,supplier_tier
+SUP-4821,Pacific Rim Industrial Supplies,Raw Materials,China,Asia-Pacific,Net 30,Active,True,2022-03-15,Tier 1
+SUP-7364,Meridian Components GmbH,Electronic Components,Germany,Europe,Net 45,Active,True,2021-08-22,Tier 1
+SUP-2193,Harborview Packaging Solutions,Packaging,United States,North America,Net 30,Active,False,2023-01-10,Tier 2
+SUP-9057,Andean Textile Exports S.A.,Textiles,Peru,Latin America,Net 60,Active,False,2022-11-03,Tier 2
+SUP-5538,Nordic Precision Machining AB,Machined Parts,Sweden,Europe,Net 45,Active,True,2020-06-18,Tier 1
+SUP-3812,Gulf Coast Petrochemicals Ltd,Chemicals,United States,North America,Net 30,Active,True,2019-09-27,Tier 1
+SUP-6640,Bharati Logistics & Freight Pvt Ltd,Logistics,India,Asia-Pacific,Net 30,Active,False,2023-04-05,Tier 2
+SUP-1475,Castillo Metalworks S.L.,Metal Fabrication,Spain,Europe,Net 60,On Hold,False,2021-02-14,Tier 3
+SUP-8823,Maple Leaf Safety Equipment Inc.,Safety & PPE,Canada,North America,Net 30,Active,False,2022-07-19,Tier 2
+SUP-3309,Nile Valley Agricultural Exports,Agricultural Products,Egypt,Middle East & Africa,Net 60,Inactive,False,2020-12-01,Tier 3
+SUP-7781,Sakura Electronics Co. Ltd,Electronic Components,Japan,Asia-Pacific,Net 45,Active,True,2018-05-30,Tier 1
+SUP-4456,Ironwood Timber & Forest Products,Raw Materials,Brazil,Latin America,Net 30,Active,False,2023-06-21,Tier 2
+SUP-2967,Cornerstone MRO Solutions,MRO Supplies,United Kingdom,Europe,Net 30,Active,True,2021-10-08,Tier 1
+SUP-5102,Adriatic Polymer Industries d.o.o.,Plastics & Polymers,Croatia,Europe,Net 45,Active,False,2022-09-14,Tier 2
+SUP-8390,Highveld Industrial Fasteners Pty Ltd,Fasteners & Hardware,South Africa,Middle East & Africa,Net 60,On Hold,False,2020-03-25,Tier 3

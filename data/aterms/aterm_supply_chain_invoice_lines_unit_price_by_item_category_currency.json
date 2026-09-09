@@ -1,0 +1,39 @@
+{
+  "id": "aterm:supply_chain_invoice_lines_unit_price_by_item_category_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_invoice_lines_unit_price_by_item_category_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "invoice_lines",
+    "measure": "unit_price",
+    "state": "all",
+    "scope": "by_item_category",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Electrical": 516.35,
+    "Fasteners": 2.65,
+    "Fluid Control": 153.3,
+    "MRO Supplies": 405.0,
+    "Mechanical Components": 745.0,
+    "Packaging": 1896.15,
+    "Safety & PPE": 374.0,
+    "Seals & Gaskets": 892.0,
+    "Tools & Equipment": 2228.85
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(unit_price) FROM supply_chain_invoice_lines_ERP_record JOIN supply_chain_items_ERP_dimension ON item_id=item_id GROUP BY item_category)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:49Z",
+  "usage_count": 0,
+  "source_goal": "What is the total unit price of invoice_liness by item category?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:51Z"
+}

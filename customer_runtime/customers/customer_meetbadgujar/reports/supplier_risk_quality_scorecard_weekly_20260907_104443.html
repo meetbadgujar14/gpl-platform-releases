@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Supplier Risk & Quality Scorecard</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f0f4f8;color:#111;line-height:1.5;padding:20px;min-height:100vh}
+
+/* ── Hero Header ── */
+.rpt-hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 60%,#1e40af 100%);border-radius:10px;padding:14px 20px;margin-bottom:12px;color:#fff;position:relative;overflow:hidden}
+.rpt-hero::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.04)}
+.rpt-hero::after{content:'';position:absolute;bottom:-60px;right:60px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.03)}
+.hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+.hero-brand{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:2px}
+.hero-title{font-size:17px;font-weight:800;line-height:1.2;margin-bottom:2px;color:#fff}
+.hero-desc{font-size:11px;color:rgba(255,255,255,.65);max-width:520px;margin-bottom:6px}
+.hero-pills{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.hero-status{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:20px;font-size:10px;font-weight:700}
+.hero-meta{text-align:right;flex-shrink:0;font-size:10px;color:rgba(255,255,255,.55);line-height:1.6}
+.hero-meta strong{color:#fff;font-weight:700;font-size:12px}
+.hero-customer{font-size:10px;color:rgba(255,255,255,.3);margin-top:4px}
+
+/* ── Executive Summary ── */
+.exec-summary{background:#fff;border-radius:12px;padding:16px 20px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.06);border:1px solid #e5e7eb}
+.alert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-top:10px}
+.alert-card{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;background:#f9fafb;border-radius:8px;border-left:3px solid #e5e7eb}
+.alert-icon{font-size:16px;flex-shrink:0;margin-top:1px}
+.alert-label{font-size:11px;color:#6b7280;font-weight:600;margin-bottom:2px}
+.alert-val{font-size:13px;font-weight:800;color:#111}
+
+/* ── Sections ── */
+.sec{background:#fff;border-radius:12px;padding:16px 20px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.06);border:1px solid #e5e7eb}
+.sec-label{font-size:10px;font-weight:700;color:#9ca3af;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+
+/* ── KPI Cards ── */
+.kpi-sec{}
+.kg{display:grid;gap:6px}
+.kc{background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:8px 12px;position:relative}
+.kc-red{border-color:#fca5a5!important;background:#fff5f5!important}
+.kc-yellow{border-color:#fde68a!important;background:#fffdf0!important}
+.ki{font-size:13px;margin-bottom:2px}
+.kv{font-size:18px;font-weight:900;color:#111;line-height:1;margin-bottom:1px;letter-spacing:-.5px}
+.kl{font-size:10px;color:#6b7280;font-weight:500}
+.ktrend{font-size:10px;font-weight:700;margin-top:5px;padding:2px 6px;border-radius:4px;display:inline-block}
+.ktrend-up{color:#059669;background:#ecfdf5}
+.ktrend-down{color:#dc2626;background:#fef2f2}
+.ktrend-neutral{color:#6b7280;background:#f3f4f6}
+
+/* ── Chart grid ── */
+.cg{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:14px}
+.cc{background:#fff;border-radius:12px;padding:16px 20px;box-shadow:0 1px 3px rgba(0,0,0,.06);border:1px solid #e5e7eb}
+.cc-label{font-size:10px;font-weight:700;color:#9ca3af;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+
+/* ── Insight cards ── */
+.insights-sec{}
+.ic-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.ic{display:flex;gap:14px;padding:12px 14px;background:#f9fafb;border-radius:8px}
+.ic-num{font-size:20px;font-weight:900;font-variant-numeric:tabular-nums;flex-shrink:0;line-height:1.2}
+.ic-title{font-size:12px;font-weight:700;color:#111;margin-bottom:3px}
+.ic-text{font-size:12px;color:#6b7280;line-height:1.5}
+.actions-sec{margin-top:12px;padding-top:12px;border-top:1px solid #e5e7eb}
+.actions-title{font-size:11px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.actions-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:6px}
+.actions-list li{font-size:12px;color:#374151;padding:7px 12px;background:#eff6ff;border-radius:6px;padding-left:28px;position:relative}
+.actions-list li::before{content:'→';position:absolute;left:10px;color:#2563eb;font-weight:700}
+
+/* ── Table ── */
+.dt{width:100%;border-collapse:collapse;font-size:12px}
+.dt thead tr{background:#f9fafb}
+.dt th{padding:8px 10px;text-align:left;font-size:10px;color:#6b7280;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid #e5e7eb}
+.dt td{padding:8px 10px;border-top:1px solid #f1f5f9;color:#374151;vertical-align:middle}
+.tn{color:#111;font-weight:500}
+.rk{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#e5e7eb;font-size:9px;font-weight:700;color:#6b7280}
+
+/* ── Audit ── */
+.audit-wrap{background:#fff;border-radius:12px;border:1px solid #e5e7eb;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}
+.audit-toggle{list-style:none;padding:12px 20px;font-size:11px;font-weight:700;color:#6b7280;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.audit-toggle::-webkit-details-marker{display:none}
+.audit-toggle:hover{background:#f9fafb}
+.audit-ct{font-weight:400;color:#9ca3af}
+.audit-body{padding:0 20px 14px}
+.ar{display:grid;grid-template-columns:1fr 1fr 2fr auto;gap:8px;align-items:center;padding:7px 0;border-top:1px solid #f1f5f9;font-size:11px}
+.ar:first-child{border-top:none}
+.aid{font-family:monospace;font-size:10px;color:#9ca3af;word-break:break-all}
+.albl{color:#374151;font-weight:500}
+.aval{color:#6b7280}
+.aok{background:#ecfdf5;color:#059669;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700}
+.ana{color:#d1d5db;font-size:10px}
+
+/* ── Footer ── */
+.rpt-foot{display:flex;justify-content:space-between;align-items:center;padding:12px 0 2px;border-top:1px solid #e5e7eb;margin-top:4px}
+.rpt-ft{font-size:10px;color:#9ca3af}
+.rpt-badge{font-size:10px;font-weight:700;background:#eff6ff;color:#2563eb;padding:3px 12px;border-radius:20px;letter-spacing:.05em}
+
+@media print{
+  @page{size:A4 landscape;margin:10mm}
+  body{background:#fff;padding:8px}
+  .rpt-hero{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  .sec,.cc,.audit-wrap{box-shadow:none!important}
+  .audit-wrap{display:none}
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+}
+</style>
+</head>
+<body>
+
+<div class="rpt-hero">
+  <div class="hero-top">
+    <div>
+      <div class="hero-brand">GPL — Presentation Compiler</div>
+      <div class="hero-title">Supplier Risk & Quality Scorecard</div>
+      <div class="hero-desc">Weekly CEO-level view of supplier reliability, quality acceptance, defect exposure, and lead time volatility to identify at-risk supply relationships before they impact operations.</div>
+      <div class="hero-pills">
+        <span class="hero-status" style="background:#ecfdf5;color:#059669">
+          🟢 All Systems Normal
+        </span>
+        <span style="font-size:11px;color:rgba(255,255,255,.4)">07 Sep 2026</span>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <div><strong>CEO / Owner / Executive</strong></div>
+      <div class="hero-customer">customer_meetbadgujar</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="sec kpi-sec"><div class="sec-label">Supplier Network Health</div><div class="kg" style="grid-template-columns:repeat(4,1fr)"><div class="kc"><div class="ki">📦</div><div class="kv">15</div><div class="kl">Total Suppliers</div></div><div class="kc"><div class="ki">🏭</div><div class="kv">13</div><div class="kl">Active Suppliers</div></div><div class="kc"><div class="ki">🏭</div><div class="kv">0</div><div class="kl">Suppliers On Hold</div></div><div class="kc"><div class="ki">🏭</div><div class="kv">1</div><div class="kl">Inactive Suppliers</div></div></div></div><div class="sec kpi-sec"><div class="sec-label">Supplier Performance KPIs</div><div class="kg" style="grid-template-columns:repeat(3,1fr)"><div class="kc"><div class="ki">📊</div><div class="kv">2554%</div><div class="kl">On-Time Delivery Rate</div></div><div class="kc"><div class="ki">⭐</div><div class="kv">2719%</div><div class="kl">Quality Acceptance Rate</div></div><div class="kc"><div class="ki">🏭</div><div class="kv">81%</div><div class="kl">Supplier Defect Rate</div></div><div class="kc"><div class="ki">🏭</div><div class="kv">7</div><div class="kl">Avg Supplier Lead Time</div></div><div class="kc"><div class="ki">📦</div><div class="kv">USD77.6L</div><div class="kl">Total Supplier Spend</div></div><div class="kc"><div class="ki">📊</div><div class="kv">N/A</div><div class="kl">Overdue Procurement Items</div></div></div></div><div class="sec kpi-sec"><div class="sec-label">Goods Receipt Quality Summary</div><div class="kg" style="grid-template-columns:repeat(4,1fr)"><div class="kc"><div class="ki">📊</div><div class="kv">2</div><div class="kl">Rejected Goods Receipts</div></div><div class="kc"><div class="ki">📊</div><div class="kv">4</div><div class="kl">Partially Accepted Receipts</div></div><div class="kc"><div class="ki">📦</div><div class="kv">1,520</div><div class="kl">Total Quantity Rejected</div></div><div class="kc"><div class="ki">📦</div><div class="kv">33,015</div><div class="kl">Total Quantity Accepted</div></div></div></div>
+<div class="cg"><div class="cc"><div class="cc-label">On-Time Delivery Rate vs Quality Acceptance Rate by Supplier</div><div class="cc-body"><svg viewBox="0 0 480 84" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:84px;overflow:visible"><style>.bl{font:11px system-ui;fill:#374151}.bv{font:11px system-ui;font-weight:700;fill:#111}.ax{font:10px system-ui;fill:#9ca3af}</style><text x="0" y="24" class="bl">On-Time Delivery Rate</text><rect x="130" y="13" width="319" height="24" rx="3" fill="#0891b2" opacity=".85"/><text x="455" y="24" class="bv">2.6k</text><text x="0" y="56" class="bl">Quality Acceptance Rat</text><rect x="130" y="45" width="340" height="24" rx="3" fill="#0891b2" opacity=".85"/><text x="476" y="56" class="bv">2.7k</text></svg></div></div><div class="cc"><div class="cc-label">Defect Rate vs Total Spend by Supplier</div><div class="cc-body"><svg viewBox="0 0 480 84" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:84px;overflow:visible"><style>.bl{font:11px system-ui;fill:#374151}.bv{font:11px system-ui;font-weight:700;fill:#111}.ax{font:10px system-ui;fill:#9ca3af}</style><text x="0" y="24" class="bl">Supplier Defect Rate</text><rect x="130" y="13" width="4" height="24" rx="3" fill="#d97706" opacity=".85"/><text x="140" y="24" class="bv">81</text><text x="0" y="56" class="bl">Total Supplier Spend</text><rect x="130" y="45" width="340" height="24" rx="3" fill="#d97706" opacity=".85"/><text x="476" y="56" class="bv">7.8Cr</text></svg></div></div><div class="cc"><div class="cc-label">Lead Time Spread: Min vs Max by Supplier</div><div class="cc-body"><svg viewBox="0 0 480 84" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:84px;overflow:visible"><style>.bl{font:11px system-ui;fill:#374151}.bv{font:11px system-ui;font-weight:700;fill:#111}.ax{font:10px system-ui;fill:#9ca3af}</style><text x="0" y="24" class="bl">Minimum Lead Time</text><rect x="130" y="13" width="48" height="24" rx="3" fill="#dc2626" opacity=".85"/><text x="184" y="24" class="bv">5</text><text x="0" y="56" class="bl">Maximum Lead Time</text><rect x="130" y="45" width="340" height="24" rx="3" fill="#dc2626" opacity=".85"/><text x="476" y="56" class="bv">38</text></svg></div></div></div>
+<div class="sec insights-sec"><div class="sec-label">Key Findings</div><div class="ic-grid"><div class="ic" style="border-left:4px solid #2563eb"><div class="ic-num" style="color:#2563eb">01</div><div class="ic-body"><div class="ic-title">The most urgent issue flagged in this scorecard is the supplier defect rate, which stands at 81 percent.</div><div class="ic-text">This is a critical RED alert and demands immediate attention. A defect rate this high is far outside any acceptable range for a healthy supply chain, and it is directly reflected in the goods receipt data, where 1,520 units were rejected across 2 rejected and 4 partially accepted receipts, against 33,015 units accepted. The primary driver appears to be concentrated quality failures among a subset of suppliers, given that only 9 of the 13 active suppliers have performance data recorded, meaning visibility across the supply base is incomplete.</div></div></div><div class="ic" style="border-left:4px solid #0891b2"><div class="ic-num" style="color:#0891b2">02</div><div class="ic-body"><div class="ic-title">The lead time picture is more mixed.</div><div class="ic-text">The average lead time of 7 days is reasonable, but the maximum lead time stretches to 38 days against a minimum of 5 days, tracked across 2,246 orders. This spread suggests some suppliers are significantly slower than others, creating delivery unpredictability. Total supplier spend sits at USD77.6 lakh, with total orders valued at USD11,751 and procurement spend at USD2.9 lakh. The 2 cancelled purchase orders indicate some disruption.</div></div></div><div class="ic" style="border-left:4px solid #7c3aed"><div class="ic-num" style="color:#7c3aed">03</div><div class="ic-body"><div class="ic-title">The business cannot absorb an 81 percent defect rate without serious cost and customer service consequences.</div><div class="ic-text">The immediate action required is to identify which suppliers are responsible for the 1,520 rejected units and place them on a formal corrective action plan or consider suspension.</div></div></div></div><div class="actions-sec"><div class="actions-title">Recommended Actions</div><ul class="actions-list"><li>The immediate action required is to identify which suppliers are responsible for the 1,520 rejected units and place them on a formal corrective action plan or consider suspension.</li></ul></div></div>
+<details class="audit-wrap"><summary class="audit-toggle">Oracle Sources <span class="audit-ct">(22 metrics)</span></summary><div class="audit-body"><div class="ar"><div class="aid">supply_chain_suppliers_count</div><div class="albl">Total Suppliers</div><div class="aval">15</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_suppliers_count_active</div><div class="albl">Active Suppliers</div><div class="aval">13</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_suppliers_count_on_hold</div><div class="albl">Suppliers On Hold</div><div class="aval">0</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_suppliers_count_inactive</div><div class="albl">Inactive Suppliers</div><div class="aval">1</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_supplier_performance_count</div><div class="albl">Suppliers with Performance Data</div><div class="aval">9</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_supplier_performance_on_time_delivery_rate_percent</div><div class="albl">On-Time Delivery Rate</div><div class="aval">2554%</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_supplier_performance_quality_acceptance_rate_percent</div><div class="albl">Quality Acceptance Rate</div><div class="aval">2719%</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_supplier_performance_defect_rate_percent</div><div class="albl">Supplier Defect Rate</div><div class="aval">81%</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_supplier_performance_avg_lead_time_days_days</div><div class="albl">Avg Supplier Lead Time</div><div class="aval">7</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_supplier_performance_total_spend_currency</div><div class="albl">Total Supplier Spend</div><div class="aval">USD77.6L</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_supplier_performance_total_orders_currency</div><div class="albl">Total Supplier Orders Value</div><div class="aval">USD11,751</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_lead_times_min_lead_time_days_days</div><div class="albl">Minimum Lead Time</div><div class="aval">5</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_lead_times_max_lead_time_days_days</div><div class="albl">Maximum Lead Time</div><div class="aval">38</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_lead_times_order_count_count</div><div class="albl">Orders with Lead Time Tracked</div><div class="aval">2,246</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_goods_receipts_count_rejected</div><div class="albl">Rejected Goods Receipts</div><div class="aval">2</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_goods_receipts_count_partially_accepted</div><div class="albl">Partially Accepted Receipts</div><div class="aval">4</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_goods_receipts_quantity_rejected_count</div><div class="albl">Total Quantity Rejected</div><div class="aval">1,520</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_goods_receipts_quantity_accepted_count</div><div class="albl">Total Quantity Accepted</div><div class="aval">33,015</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_purchase_orders_count_pending_approval</div><div class="albl">POs Pending Approval</div><div class="aval">N/A</div><span class="ana">—</span></div><div class="ar"><div class="aid">supply_chain_purchase_orders_count_cancelled</div><div class="albl">Cancelled Purchase Orders</div><div class="aval">2</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_procurement_spend_spend_amount_currency</div><div class="albl">Procurement Spend Amount</div><div class="aval">USD2.9L</div><span class="aok">✓</span></div><div class="ar"><div class="aid">supply_chain_procurement_spend_count_overdue</div><div class="albl">Overdue Procurement Items</div><div class="aval">N/A</div><span class="ana">—</span></div></div></details>
+
+<div class="rpt-foot">
+  <span class="rpt-ft">GPL v3.0 · All values from verified customer data · report_ceo_supply_chain_weekly_supplier_risk_scorecard</span>
+  <span class="rpt-badge">GPL CERTIFIED</span>
+</div>
+
+</body>
+</html>

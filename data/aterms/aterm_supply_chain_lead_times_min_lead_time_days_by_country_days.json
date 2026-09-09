@@ -1,0 +1,38 @@
+{
+  "id": "aterm:supply_chain_lead_times_min_lead_time_days_by_country_days",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_lead_times_min_lead_time_days_by_country_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "lead_times",
+    "measure": "min_lead_time_days",
+    "state": "all",
+    "scope": "by_country",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Brazil": 12.6,
+    "Croatia": 4.9,
+    "Egypt": 10.2,
+    "Germany": 6.1,
+    "India": 5.4,
+    "Japan": 22.1,
+    "Sweden": 8.3,
+    "United States": 9.7
+  },
+  "formula_line": "MEASURE_GROUPED(MIN(avg_lead_time_days) FROM supply_chain_lead_times_ERP_snapshot JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY country)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total min lead time days of lead_timess by country?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:50Z"
+}

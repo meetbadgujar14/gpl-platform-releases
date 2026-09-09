@@ -1,0 +1,43 @@
+{
+  "id": "aterm:supply_chain_purchase_orders_total_line_items_currency_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_purchase_orders_total_line_items_currency_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "purchase_orders",
+    "measure": "total_line_items",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2024-09": 13.0,
+    "2024-12": 32.0,
+    "2025-09": 25.0,
+    "2025-11": 37.0,
+    "2026-01": 27.0,
+    "2026-02": 38.0,
+    "2026-03": 34.0,
+    "2026-04": 23.0,
+    "2026-05": 60.0,
+    "2026-06": 35.0,
+    "2026-07": 56.0,
+    "2026-08": 49.0,
+    "2026-09": 60.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_purchase_orders_ERP_record', 'SUM', 'total_line_items', None, [], None, None, None, {'date_col': 'po_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-09-01T07:44:39Z",
+  "usage_count": 0,
+  "source_goal": "What is the total total line items of purchase_orderss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-09-02T06:49:06Z"
+}

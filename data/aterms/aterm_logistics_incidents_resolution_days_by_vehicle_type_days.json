@@ -1,0 +1,36 @@
+{
+  "id": "aterm:logistics_incidents_resolution_days_by_vehicle_type_days",
+  "type": "Aterm",
+  "canonical_id": "logistics_incidents_resolution_days_by_vehicle_type_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "incidents",
+    "measure": "resolution_days",
+    "state": "all",
+    "scope": "by_vehicle_type",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Box Truck": 37.0,
+    "Cargo Van": 22.0,
+    "Flatbed Truck": 367.0,
+    "Refrigerated Truck": 49.0,
+    "Semi-Truck": 79.0,
+    "Sprinter Van": 3.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(resolution_days) FROM logistics_incidents_ERP_record JOIN logistics_vehicles_MANUAL_dimension ON vehicle_id=vehicle_id GROUP BY vehicle_type)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:17Z",
+  "usage_count": 0,
+  "source_goal": "What is the total resolution days of incidentss by vehicle type?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:45Z"
+}

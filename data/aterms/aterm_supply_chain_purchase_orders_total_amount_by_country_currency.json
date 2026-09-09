@@ -1,0 +1,41 @@
+{
+  "id": "aterm:supply_chain_purchase_orders_total_amount_by_country_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_purchase_orders_total_amount_by_country_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "purchase_orders",
+    "measure": "total_amount",
+    "state": "all",
+    "scope": "by_country",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Brazil": 1090450.0,
+    "Canada": 148700.0,
+    "China": 1006250.0,
+    "Croatia": 448200.5,
+    "Egypt": 93400.0,
+    "Germany": 664700.0,
+    "Japan": 383700.0,
+    "Peru": 41300.0,
+    "South Africa": 131750.0,
+    "United Kingdom": 496900.0,
+    "United States": 288250.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(total_amount) FROM supply_chain_purchase_orders_ERP_record JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY country)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:46Z",
+  "usage_count": 0,
+  "source_goal": "What is the total total amount of purchase_orderss by country?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:49Z"
+}

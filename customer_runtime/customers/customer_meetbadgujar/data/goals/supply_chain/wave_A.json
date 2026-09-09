@@ -1,0 +1,83 @@
+{
+  "wave": "A",
+  "goal_count": 4,
+  "generated_at": "2026-09-02T06:44:34Z",
+  "goals": [
+    {
+      "goal": "What is the invoice dispute rate — the proportion of invoices currently in Disputed status this month?",
+      "canonical_id": "supply_chain_invoices_count_disputed_this_month_percent",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "count",
+        "state": "Disputed",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "wave": "A",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the average days to pay for paid invoices this quarter — a measure of accounts payable cycle efficiency?",
+      "canonical_id": "supply_chain_invoices_days_to_pay_paid_this_quarter_days",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "days_to_pay",
+        "state": "Paid",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "wave": "A",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the invoice payment cycle efficiency — average days to pay for paid invoices broken down by month this year?",
+      "canonical_id": "supply_chain_invoices_days_to_pay_paid_ytd_by_month_days",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "invoices",
+        "measure": "days_to_pay",
+        "state": "Paid",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "days",
+        "series": "by_month"
+      },
+      "wave": "A",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the return rate — proportion of quantity returned versus total quantity received — year to date?",
+      "canonical_id": "supply_chain_returns_quantity_returned_completed_ytd_percent",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "returns",
+        "measure": "quantity_returned",
+        "state": "Completed",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "wave": "A",
+      "complexity": "KPI",
+      "join": null
+    }
+  ]
+}

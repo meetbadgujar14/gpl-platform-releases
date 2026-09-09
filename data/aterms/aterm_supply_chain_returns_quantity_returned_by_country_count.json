@@ -1,0 +1,41 @@
+{
+  "id": "aterm:supply_chain_returns_quantity_returned_by_country_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_returns_quantity_returned_by_country_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "returns",
+    "measure": "quantity_returned",
+    "state": "all",
+    "scope": "by_country",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Canada": 7.0,
+    "China": 51.0,
+    "Croatia": 29.0,
+    "Egypt": 28.0,
+    "Germany": 35.0,
+    "India": 25.0,
+    "Peru": 27.0,
+    "South Africa": 71.0,
+    "Spain": 13.0,
+    "United Kingdom": 28.0,
+    "United States": 44.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(quantity_returned) FROM supply_chain_returns_ERP_record JOIN supply_chain_suppliers_ERP_dimension ON supplier_id=supplier_id GROUP BY country)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T12:17:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quantity returned of returnss by country?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:51Z"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "aterm:logistics_shipments_planned_delivery_days_by_city_days",
+  "type": "Aterm",
+  "canonical_id": "logistics_shipments_planned_delivery_days_by_city_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "shipments",
+    "measure": "planned_delivery_days",
+    "state": "all",
+    "scope": "by_city",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Birmingham": 15.0,
+    "Hamburg": 70.0,
+    "Los Angeles": 81.0,
+    "Rotterdam": 31.0,
+    "Singapore": 33.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(planned_delivery_days) FROM logistics_shipments_ERP_record JOIN logistics_warehouses_MANUAL_dimension ON origin_warehouse_id=warehouse_id GROUP BY city)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:17Z",
+  "usage_count": 0,
+  "source_goal": "What is the total planned delivery days of shipmentss by city?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:45Z"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "aterm:logistics_incidents_average_estimated_loss_value_currency",
+  "type": "Aterm",
+  "canonical_id": "logistics_incidents_average_estimated_loss_value_currency",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "incidents",
+    "measure": "average_estimated_loss_value",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 23996.428571428572,
+  "formula_line": "logistics_incidents_average_estimated_loss_value_currency = {logistics_incidents_estimated_loss_value_currency} / {logistics_incidents_count}",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-07-22T09:51:18Z",
+  "usage_count": 0,
+  "source_goal": "What is the average estimated loss value per incidents?",
+  "wave": 5,
+  "depends_on": [
+    "logistics_incidents_estimated_loss_value_currency",
+    "logistics_incidents_count"
+  ],
+  "dep_values": {
+    "logistics_incidents_estimated_loss_value_currency": 671900.0,
+    "logistics_incidents_count": 28.0
+  },
+  "verified_at": "2026-07-22T12:18:46Z"
+}

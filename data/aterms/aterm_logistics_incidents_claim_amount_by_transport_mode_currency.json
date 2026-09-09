@@ -1,0 +1,34 @@
+{
+  "id": "aterm:logistics_incidents_claim_amount_by_transport_mode_currency",
+  "type": "Aterm",
+  "canonical_id": "logistics_incidents_claim_amount_by_transport_mode_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "incidents",
+    "measure": "claim_amount",
+    "state": "all",
+    "scope": "by_transport_mode",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Air": 102300.0,
+    "Rail": 114600.0,
+    "Road": 360100.0,
+    "Sea": 36850.0
+  },
+  "formula_line": "MEASURE_GROUPED(SUM(claim_amount) FROM logistics_incidents_ERP_record JOIN logistics_shipments_ERP_record ON shipment_id=shipment_id GROUP BY transport_mode)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-07-22T09:51:17Z",
+  "usage_count": 0,
+  "source_goal": "What is the total claim amount of incidentss by transport mode?",
+  "wave": 7,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-07-22T12:18:45Z"
+}
