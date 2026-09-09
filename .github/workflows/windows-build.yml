@@ -79,7 +79,9 @@ jobs:
           $ver = "${{ steps.version.outputs.VERSION }}"
           $iss = "$env:GITHUB_WORKSPACE\desktop\packaging\installer.iss"
           $outdir = "$env:GITHUB_WORKSPACE\desktop\packaging\dist"
-          iscc /Q "/DMyAppVersion=$ver" "/O$outdir" $iss
+          Write-Host "ISS path: $iss"
+          Write-Host "ISS exists: $(Test-Path $iss)"
+          iscc /Q "/DMyAppVersion=$ver" "/O=$outdir" "$iss"
           $installer = "$outdir\GPLPlatform_Setup_v$ver.exe"
           if (-not (Test-Path $installer)) { Write-Error "Installer not found at $installer"; exit 1 }
           Write-Host "Installer: $((Get-Item $installer).Length) bytes"
