@@ -1,2 +1,4 @@
 .env 
 data/llm_keys.json 
+__pycache__/ 
+*.pyc 
