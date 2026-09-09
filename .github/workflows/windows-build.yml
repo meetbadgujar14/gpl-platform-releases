@@ -33,21 +33,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r desktop/requirements.txt
 
-      # ── 4. Download wkhtmltopdf portable binary ──────────────────────────────
-      # We bundle wkhtmltopdf.exe so PDF generation works out of the box.
-      - name: Download wkhtmltopdf
-        run: |
-          $url = "https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-3/wkhtmltox-0.12.6.1-3.msvc2019-win64.exe"
-          $installer = "$env:TEMP\wkhtmltox_installer.exe"
-          Invoke-WebRequest -Uri $url -OutFile $installer
-          # Extract using 7-Zip or run silently then grab the binary
-          Start-Process -FilePath $installer -ArgumentList "/S" -Wait
-          $src = "C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe"
-          $dst = "desktop\packaging\wkhtmltopdf"
-          New-Item -ItemType Directory -Force -Path $dst | Out-Null
-          Copy-Item $src "$dst\wkhtmltopdf.exe"
-          Write-Host "wkhtmltopdf bundled OK"
-        shell: pwsh
+      # ── 4. (wkhtmltopdf skipped — PDF generation disabled for now) ──────────
 
       # ── 5. Extract version from tag ──────────────────────────────────────────
       - name: Extract version
