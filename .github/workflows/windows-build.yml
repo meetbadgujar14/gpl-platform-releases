@@ -44,15 +44,18 @@ jobs:
           echo "VERSION=$ver" >> $env:GITHUB_OUTPUT
           echo "TAG=$tag"     >> $env:GITHUB_OUTPUT
           # Update version.py in-place so the frozen exe reports the right version
-          (Get-Content desktop/version.py) -replace 'APP_VERSION = ".*"', "APP_VERSION = `"$ver`"" |
-            Set-Content desktop/version.py
+          $vfile = "$env:GITHUB_WORKSPACE\desktop\version.py"
+          (Get-Content $vfile) -replace 'APP_VERSION = ".*"', "APP_VERSION = `"$ver`"" | Set-Content $vfile
           Write-Host "Building version $ver"
         shell: pwsh
 
       # ── 6. PyInstaller freeze ────────────────────────────────────────────────
       - name: Build with PyInstaller
         run: |
-          pyinstaller --noconfirm --distpath "desktop/packaging/dist" --workpath "desktop/packaging/build" desktop/packaging/gpl_platform.spec
+          $distpath = "$env:GITHUB_WORKSPACE\desktop\packaging\dist"
+          $workpath = "$env:GITHUB_WORKSPACE\desktop\packaging\build"
+          $spec = "$env:GITHUB_WORKSPACE\desktop\packaging\gpl_platform.spec"
+          pyinstaller --noconfirm --distpath $distpath --workpath $workpath $spec
         env:
           PYTHONPATH: .
 
@@ -74,9 +77,12 @@ jobs:
       - name: Build installer
         run: |
           $ver = "${{ steps.version.outputs.VERSION }}"
-          iscc /Q "/DMyAppVersion=$ver" desktop/packaging/installer.iss
-          $installer = "desktop/packaging/dist/GPLPlatform_Setup_v$ver.exe"
-          Write-Host "Installer: $(Get-Item $installer | Select-Object -ExpandProperty Length) bytes"
+          $iss = "$env:GITHUB_WORKSPACE\desktop\packaging\installer.iss"
+          $outdir = "$env:GITHUB_WORKSPACE\desktop\packaging\dist"
+          iscc /Q "/DMyAppVersion=$ver" "/O$outdir" $iss
+          $installer = "$outdir\GPLPlatform_Setup_v$ver.exe"
+          if (-not (Test-Path $installer)) { Write-Error "Installer not found at $installer"; exit 1 }
+          Write-Host "Installer: $((Get-Item $installer).Length) bytes"
         shell: pwsh
 
       # ── 9. Create update ZIP (flat — no subfolder) ───────────────────────────
