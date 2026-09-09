@@ -163,28 +163,31 @@ class _DownloadThread(threading.Thread):
     def run(self) -> None:
         tmp = None
         try:
+            import httpx
+
             fd, tmp_path = tempfile.mkstemp(suffix=".zip", prefix="GPLPlatform-update-")
             os.close(fd)
             tmp = Path(tmp_path)
 
-            req = urllib.request.Request(
-                self._info.url,
-                headers={"User-Agent": f"GPLPlatform/{APP_VERSION}"},
-            )
             sha = hashlib.sha256()
-            chunk = 64 * 1024
+            done = 0
+            total = 0
 
-            with urllib.request.urlopen(req, timeout=30) as r:
-                total = int(r.headers.get("Content-Length", 0))
-                done = 0
+            # httpx follows redirects automatically (GitHub releases redirect to CDN)
+            with httpx.stream(
+                "GET",
+                self._info.url,
+                follow_redirects=True,
+                timeout=60.0,
+                headers={"User-Agent": f"GPLPlatform/{APP_VERSION}"},
+            ) as r:
+                r.raise_for_status()
+                total = int(r.headers.get("content-length", 0))
                 with tmp.open("wb") as f:
-                    while True:
-                        buf = r.read(chunk)
-                        if not buf:
-                            break
-                        f.write(buf)
-                        sha.update(buf)
-                        done += len(buf)
+                    for chunk in r.iter_bytes(chunk_size=65536):
+                        f.write(chunk)
+                        sha.update(chunk)
+                        done += len(chunk)
                         self._on_progress(done, total)
 
             digest = sha.hexdigest()

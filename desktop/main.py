@@ -159,6 +159,9 @@ class MainWindow(QMainWindow):
     _sig_update_found  = Signal(object)
     _sig_update_error  = Signal(str)
     _sig_no_update     = Signal()
+    _sig_dl_progress   = Signal(int, int)
+    _sig_dl_done       = Signal(object)
+    _sig_dl_error      = Signal(str)
 
     def __init__(self, cfg) -> None:
         super().__init__()
@@ -174,6 +177,7 @@ class MainWindow(QMainWindow):
         self._sig_no_update.connect(lambda: QMessageBox.information(
             self, "Up to date", f"You are running the latest version ({APP_VERSION})."
         ))
+        self._dl_progress_dlg = None
 
     def _build_menu(self) -> None:
         mb = QMenuBar(self)
@@ -273,27 +277,47 @@ class MainWindow(QMainWindow):
     def _start_download(self, info) -> None:
         from . import updater
 
-        dlg = QProgressDialog("Downloading update...", "Cancel", 0, 100, self)
+        dlg = QProgressDialog("Downloading GPL Platform update...", "Cancel", 0, 100, self)
         dlg.setWindowTitle("GPL Platform Update")
         dlg.setWindowModality(Qt.WindowModality.ApplicationModal)
-        dlg.setMinimumWidth(360)
+        dlg.setMinimumWidth(400)
+        dlg.setMinimumDuration(0)
+        dlg.setValue(0)
         dlg.show()
+        self._dl_progress_dlg = dlg
 
-        def on_progress(done: int, total: int) -> None:
-            if total > 0:
-                pct = int(done * 100 / total)
-                QTimer.singleShot(0, lambda: dlg.setValue(pct))
+        # Connect signals — these always fire on the main thread
+        self._sig_dl_progress.connect(self._on_dl_progress)
+        self._sig_dl_done.connect(self._on_download_done)
+        self._sig_dl_error.connect(self._on_dl_error)
 
-        def on_done(zip_path) -> None:
-            QTimer.singleShot(0, lambda: self._on_download_done(zip_path, dlg))
+        updater.download_async(
+            info,
+            on_progress=lambda d, t: self._sig_dl_progress.emit(d, t),
+            on_done=lambda p: self._sig_dl_done.emit(p),
+            on_error=lambda m: self._sig_dl_error.emit(m),
+        )
 
-        def on_error(msg: str) -> None:
-            QTimer.singleShot(0, lambda: (dlg.close(), QMessageBox.critical(self, "Download failed", msg)))
+    def _on_dl_progress(self, done: int, total: int) -> None:
+        if self._dl_progress_dlg and total > 0:
+            pct = int(done * 100 / total)
+            self._dl_progress_dlg.setValue(pct)
+            mb_done = done / 1024 / 1024
+            mb_total = total / 1024 / 1024
+            self._dl_progress_dlg.setLabelText(
+                f"Downloading update... {mb_done:.1f} / {mb_total:.1f} MB"
+            )
 
-        updater.download_async(info, on_progress, on_done, on_error)
+    def _on_dl_error(self, msg: str) -> None:
+        if self._dl_progress_dlg:
+            self._dl_progress_dlg.close()
+            self._dl_progress_dlg = None
+        QMessageBox.critical(self, "Download failed", msg)
 
-    def _on_download_done(self, zip_path, dlg) -> None:
-        dlg.close()
+    def _on_download_done(self, zip_path) -> None:
+        if self._dl_progress_dlg:
+            self._dl_progress_dlg.close()
+            self._dl_progress_dlg = None
         from . import updater
         QMessageBox.information(
             self, "Installing update",
