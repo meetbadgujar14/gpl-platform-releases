@@ -128,7 +128,7 @@ class _CheckThread(threading.Thread):
         except Exception as e:
             _log.debug("update check failed: %s", e)
             if self._manual:
-                self._on_error(str(e))
+                self._on_error(f"Could not reach GitHub to check for updates.\n\nError: {e}")
 
 
 def check_async(

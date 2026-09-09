@@ -155,6 +155,11 @@ QTabBar::tab:hover:!selected { background: #334155; color: #f1f5f9; }
 
 
 class MainWindow(QMainWindow):
+    # Signals for thread-safe UI updates from background threads
+    _sig_update_found  = Signal(object)
+    _sig_update_error  = Signal(str)
+    _sig_no_update     = Signal()
+
     def __init__(self, cfg) -> None:
         super().__init__()
         self._cfg = cfg
@@ -163,6 +168,12 @@ class MainWindow(QMainWindow):
         self.setStyleSheet(_WINDOW_STYLE)
         self._build_menu()
         self._build_tabs()
+        # Connect signals to slots (always runs on main thread)
+        self._sig_update_found.connect(self._show_update_dialog)
+        self._sig_update_error.connect(lambda msg: QMessageBox.warning(self, "Update check failed", msg))
+        self._sig_no_update.connect(lambda: QMessageBox.information(
+            self, "Up to date", f"You are running the latest version ({APP_VERSION})."
+        ))
 
     def _build_menu(self) -> None:
         mb = QMenuBar(self)
@@ -231,17 +242,10 @@ class MainWindow(QMainWindow):
         )
 
     def _on_no_update(self) -> None:
-        QTimer.singleShot(
-            0,
-            lambda: QMessageBox.information(
-                self, "Up to date",
-                f"You are running the latest version ({APP_VERSION})."
-            )
-        )
+        self._sig_no_update.emit()
 
     def _on_update_found(self, info) -> None:
-        # Called from background thread — use QTimer to marshal to main thread
-        QTimer.singleShot(0, lambda: self._show_update_dialog(info))
+        self._sig_update_found.emit(info)
 
     def _show_update_dialog(self, info) -> None:
         from . import updater
@@ -264,10 +268,7 @@ class MainWindow(QMainWindow):
             self._start_download(info)
 
     def _on_update_error(self, msg: str) -> None:
-        QTimer.singleShot(
-            0,
-            lambda: QMessageBox.warning(self, "Update check failed", msg)
-        )
+        self._sig_update_error.emit(msg)
 
     def _start_download(self, info) -> None:
         from . import updater

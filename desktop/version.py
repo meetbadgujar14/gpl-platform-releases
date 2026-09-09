@@ -7,4 +7,4 @@ Bump this before every release. Consumed by:
   - CI / Inno Setup (installer version)
 """
 
-APP_VERSION = "1.0.2"
+APP_VERSION = "1.0.3"
