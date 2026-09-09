@@ -44,22 +44,22 @@ jobs:
           echo "VERSION=$ver" >> $env:GITHUB_OUTPUT
           echo "TAG=$tag"     >> $env:GITHUB_OUTPUT
           # Update version.py in-place so the frozen exe reports the right version
-          (Get-Content desktop\version.py) -replace 'APP_VERSION = ".*"', "APP_VERSION = `"$ver`"" |
-            Set-Content desktop\version.py
+          (Get-Content desktop/version.py) -replace 'APP_VERSION = ".*"', "APP_VERSION = `"$ver`"" |
+            Set-Content desktop/version.py
           Write-Host "Building version $ver"
         shell: pwsh
 
       # ── 6. PyInstaller freeze ────────────────────────────────────────────────
       - name: Build with PyInstaller
         run: |
-          pyinstaller --noconfirm desktop\packaging\gpl_platform.spec
+          pyinstaller --noconfirm --distpath "desktop/packaging/dist" --workpath "desktop/packaging/build" desktop/packaging/gpl_platform.spec
         env:
           PYTHONPATH: .
 
       # ── 7. Verify exe exists ──────────────────────────────────────────────────
       - name: Verify build output
         run: |
-          $exe = "desktop\packaging\dist\GPL Platform\GPL Platform.exe"
+          $exe = "desktop/packaging/dist/GPL Platform/GPL Platform.exe"
           if (-not (Test-Path $exe)) {
             Write-Error "Build failed: exe not found at $exe"
             exit 1
@@ -74,8 +74,8 @@ jobs:
       - name: Build installer
         run: |
           $ver = "${{ steps.version.outputs.VERSION }}"
-          iscc /Q "/DMyAppVersion=$ver" desktop\packaging\installer.iss
-          $installer = "desktop\packaging\dist\GPLPlatform_Setup_v$ver.exe"
+          iscc /Q "/DMyAppVersion=$ver" desktop/packaging/installer.iss
+          $installer = "desktop/packaging/dist/GPLPlatform_Setup_v$ver.exe"
           Write-Host "Installer: $(Get-Item $installer | Select-Object -ExpandProperty Length) bytes"
         shell: pwsh
 
@@ -83,8 +83,8 @@ jobs:
       - name: Create update ZIP
         run: |
           $ver = "${{ steps.version.outputs.VERSION }}"
-          $src = "desktop\packaging\dist\GPL Platform"
-          $zip = "desktop\packaging\dist\GPLPlatform-$ver-windows.zip"
+          $src = "desktop/packaging/dist/GPL Platform"
+          $zip = "desktop/packaging/dist/GPLPlatform-$ver-windows.zip"
           Compress-Archive -Path "$src\*" -DestinationPath $zip
           Write-Host "ZIP: $(Get-Item $zip | Select-Object -ExpandProperty Length) bytes"
         shell: pwsh
@@ -94,7 +94,7 @@ jobs:
         id: sha
         run: |
           $ver = "${{ steps.version.outputs.VERSION }}"
-          $zip = "desktop\packaging\dist\GPLPlatform-$ver-windows.zip"
+          $zip = "desktop/packaging/dist/GPLPlatform-$ver-windows.zip"
           $hash = (Get-FileHash $zip -Algorithm SHA256).Hash.ToLower()
           echo "SHA256=$hash" >> $env:GITHUB_OUTPUT
           Write-Host "SHA256: $hash"
@@ -118,7 +118,7 @@ jobs:
             }
           } | ConvertTo-Json -Depth 3
 
-          $manifest | Set-Content "desktop\packaging\dist\latest.json"
+          $manifest | Set-Content "desktop/packaging/dist/latest.json"
           Write-Host $manifest
         shell: pwsh
 
