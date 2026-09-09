@@ -30,7 +30,7 @@ from pathlib import Path
 
 _log = logging.getLogger("gpl.win_updater")
 
-APP_EXE_NAME = "GPL Platform.exe"
+APP_EXE_NAME = "GPLPlatform.exe"
 
 # Processes that hold handles everywhere on the system — never terminate these
 _PROTECTED_PROCS = {

@@ -240,7 +240,7 @@ def apply_update_windows(zip_path: Path) -> None:
     install = _install_dir()
     updater_dir = _local_appdata() / "GPLPlatform" / _UPDATER_DIR_NAME
 
-    exe_name = "GPL Platform.exe"
+    exe_name = "GPLPlatform.exe"
     src_exe = install / exe_name
     if not src_exe.exists():
         # Dev mode — nothing to swap

@@ -62,7 +62,7 @@ jobs:
       # ── 7. Verify exe exists ──────────────────────────────────────────────────
       - name: Verify build output
         run: |
-          $exe = "desktop/packaging/dist/GPL Platform/GPL Platform.exe"
+          $exe = "desktop/packaging/dist/GPLPlatform/GPLPlatform.exe"
           if (-not (Test-Path $exe)) {
             Write-Error "Build failed: exe not found at $exe"
             exit 1
@@ -80,10 +80,10 @@ jobs:
           $iss = "$env:GITHUB_WORKSPACE\desktop\packaging\installer.iss"
           $outdir = "$env:GITHUB_WORKSPACE\desktop\packaging\dist"
           # Pass absolute DistDir so Inno Setup can find the source files
-          $distDir = "$env:GITHUB_WORKSPACE\desktop\packaging\dist\GPL Platform"
+          $distDir = "$env:GITHUB_WORKSPACE\desktop\packaging\dist\GPLPlatform"
           Write-Host "DistDir: $distDir"
           Write-Host "DistDir exists: $(Test-Path $distDir)"
-          iscc /Q "/DMyAppVersion=$ver" "/DDistDir=$distDir" "$iss"
+          iscc /Q "/DMyAppVersion=$ver" "/DDistDir="$distDir"" "$iss"
           # Installer lands next to the .iss file — move it to dist/
           $installer = "$env:GITHUB_WORKSPACE\desktop\packaging\GPLPlatform_Setup_v$ver.exe"
           if (-not (Test-Path $installer)) { Write-Error "Installer not found at $installer"; exit 1 }
@@ -95,7 +95,7 @@ jobs:
       - name: Create update ZIP
         run: |
           $ver = "${{ steps.version.outputs.VERSION }}"
-          $src = "desktop/packaging/dist/GPL Platform"
+          $src = "desktop/packaging/dist/GPLPlatform"
           $zip = "desktop/packaging/dist/GPLPlatform-$ver-windows.zip"
           Compress-Archive -Path "$src\*" -DestinationPath $zip
           Write-Host "ZIP: $(Get-Item $zip | Select-Object -ExpandProperty Length) bytes"

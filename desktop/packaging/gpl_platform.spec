@@ -6,7 +6,7 @@ Usage (from repo root, with desktop venv active):
     desktop\\venv\\Scripts\\pyinstaller --noconfirm desktop\\packaging\\gpl_platform.spec
 
 Output:
-    desktop\\packaging\\dist\\GPL Platform\\GPL Platform.exe
+    desktop\\packaging\\dist\\GPLPlatform\\GPLPlatform.exe
 """
 
 import sys
@@ -117,7 +117,7 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name="GPL Platform",
+    name="GPLPlatform",
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -140,5 +140,5 @@ coll = COLLECT(
     strip=False,
     upx=False,
     upx_exclude=[],
-    name="GPL Platform",
+    name="GPLPlatform",
 )

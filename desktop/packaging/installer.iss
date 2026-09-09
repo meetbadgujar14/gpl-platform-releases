@@ -13,10 +13,10 @@
 #endif
 
 #define MyAppName      "GPL Platform"
-#define MyAppExeName   "GPL Platform.exe"
+#define MyAppExeName   "GPLPlatform.exe"
 #define MyAppPublisher "GPL Platform"
 #define MyAppMutex     "GPLPlatformSingleInstance"
-; DistDir must be passed as an absolute path via /DDistDir="..." on the command line
+#define DistDir "GPLPlatform"
 
 [Setup]
 AppId={{B3A7F2C1-4D8E-4A6B-9F2E-1C3D5E7A9B0C}
