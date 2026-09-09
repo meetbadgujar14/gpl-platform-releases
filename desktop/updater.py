@@ -163,31 +163,49 @@ class _DownloadThread(threading.Thread):
     def run(self) -> None:
         tmp = None
         try:
-            import httpx
-
             fd, tmp_path = tempfile.mkstemp(suffix=".zip", prefix="GPLPlatform-update-")
             os.close(fd)
             tmp = Path(tmp_path)
 
             sha = hashlib.sha256()
             done = 0
-            total = 0
 
-            # httpx follows redirects automatically (GitHub releases redirect to CDN)
-            with httpx.stream(
-                "GET",
+            # Step 1: resolve GitHub redirect to get the actual CDN URL
+            # GitHub releases return 302 → release-assets.githubusercontent.com
+            opener = urllib.request.build_opener(urllib.request.HTTPRedirectHandler())
+            req = urllib.request.Request(
                 self._info.url,
-                follow_redirects=True,
-                timeout=60.0,
+                headers={
+                    "User-Agent": f"GPLPlatform/{APP_VERSION}",
+                    "Accept": "application/octet-stream",
+                },
+            )
+            # Follow redirects manually to get final URL
+            final_url = self._info.url
+            try:
+                resp_check = urllib.request.urlopen(req, timeout=15)
+                final_url = resp_check.url
+                resp_check.close()
+            except Exception:
+                pass  # use original URL if resolution fails
+
+            _log.info("Downloading from: %s", final_url)
+
+            # Step 2: download from the resolved URL
+            dl_req = urllib.request.Request(
+                final_url,
                 headers={"User-Agent": f"GPLPlatform/{APP_VERSION}"},
-            ) as r:
-                r.raise_for_status()
-                total = int(r.headers.get("content-length", 0))
+            )
+            with urllib.request.urlopen(dl_req, timeout=120) as r:
+                total = int(r.headers.get("Content-Length", 0))
                 with tmp.open("wb") as f:
-                    for chunk in r.iter_bytes(chunk_size=65536):
-                        f.write(chunk)
-                        sha.update(chunk)
-                        done += len(chunk)
+                    while True:
+                        buf = r.read(65536)
+                        if not buf:
+                            break
+                        f.write(buf)
+                        sha.update(buf)
+                        done += len(buf)
                         self._on_progress(done, total)
 
             digest = sha.hexdigest()
