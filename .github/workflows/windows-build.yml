@@ -71,27 +71,9 @@ jobs:
         shell: pwsh
 
       # ── 8. Build Inno Setup installer (.exe) ──────────────────────────────────
-      - name: Install Inno Setup
-        run: choco install innosetup --no-progress -y
 
-      - name: Build installer
-        run: |
-          $ver = "${{ steps.version.outputs.VERSION }}"
-          $iss = "$env:GITHUB_WORKSPACE\desktop\packaging\installer.iss"
-          $outdir = "$env:GITHUB_WORKSPACE\desktop\packaging\dist"
-          # Pass absolute DistDir so Inno Setup can find the source files
-          $distDir = "$env:GITHUB_WORKSPACE\desktop\packaging\dist\GPLPlatform"
-          Write-Host "DistDir: $distDir"
-          Write-Host "DistDir exists: $(Test-Path $distDir)"
-          iscc /Q "/DMyAppVersion=$ver" "/DDistDir="$distDir"" "$iss"
-          # Installer lands next to the .iss file — move it to dist/
-          $installer = "$env:GITHUB_WORKSPACE\desktop\packaging\GPLPlatform_Setup_v$ver.exe"
-          if (-not (Test-Path $installer)) { Write-Error "Installer not found at $installer"; exit 1 }
-          Move-Item $installer "$outdir\GPLPlatform_Setup_v$ver.exe"
-          Write-Host "Installer OK"
-        shell: pwsh
+      # ── 8. (Inno Setup installer skipped — ZIP is the release format) ────
 
-      # ── 9. Create update ZIP (flat — no subfolder) ───────────────────────────
       - name: Create update ZIP
         run: |
           $ver = "${{ steps.version.outputs.VERSION }}"
@@ -146,6 +128,5 @@ jobs:
           repository: meetbadgujar14/gpl-platform-releases
           token: ${{ secrets.RELEASE_PAT }}
           files: |
-            desktop/packaging/dist/GPLPlatform_Setup_v${{ steps.version.outputs.VERSION }}.exe
             desktop/packaging/dist/GPLPlatform-${{ steps.version.outputs.VERSION }}-windows.zip
             desktop/packaging/dist/latest.json
