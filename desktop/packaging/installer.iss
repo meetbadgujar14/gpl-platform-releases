@@ -25,7 +25,7 @@ AppVersion={#MyAppVersion}
 AppPublisher={#MyAppPublisher}
 DefaultDirName={userpf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
-OutputDir=dist
+; OutputDir set via /O flag or defaults to .iss location
 OutputBaseFilename=GPLPlatform_Setup_v{#MyAppVersion}
 Compression=lzma2/ultra64
 SolidCompression=yes

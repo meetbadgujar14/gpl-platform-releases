@@ -79,12 +79,16 @@ jobs:
           $ver = "${{ steps.version.outputs.VERSION }}"
           $iss = "$env:GITHUB_WORKSPACE\desktop\packaging\installer.iss"
           $outdir = "$env:GITHUB_WORKSPACE\desktop\packaging\dist"
-          Write-Host "ISS path: $iss"
-          Write-Host "ISS exists: $(Test-Path $iss)"
-          iscc /Q "/DMyAppVersion=$ver" "/O=$outdir" "$iss"
-          $installer = "$outdir\GPLPlatform_Setup_v$ver.exe"
+          # Run iscc from the packaging dir so relative paths resolve correctly
+          Push-Location "$env:GITHUB_WORKSPACE\desktop\packaging"
+          iscc /Q "/DMyAppVersion=$ver" installer.iss
+          Pop-Location
+          # Installer lands in desktop/packaging/ next to the .iss file
+          $installer = "$env:GITHUB_WORKSPACE\desktop\packaging\GPLPlatform_Setup_v$ver.exe"
           if (-not (Test-Path $installer)) { Write-Error "Installer not found at $installer"; exit 1 }
-          Write-Host "Installer: $((Get-Item $installer).Length) bytes"
+          # Move it into dist/
+          Move-Item $installer $outdir
+          Write-Host "Installer OK"
         shell: pwsh
 
       # ── 9. Create update ZIP (flat — no subfolder) ───────────────────────────
