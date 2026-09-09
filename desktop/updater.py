@@ -82,12 +82,14 @@ class _CheckThread(threading.Thread):
         on_error: Callable[[str], None],
         skipped_version: str = "",
         manual: bool = False,
+        on_no_update: Optional[Callable[[], None]] = None,
     ) -> None:
         super().__init__(name="gpl-update-check", daemon=True)
         self._on_update = on_update
         self._on_error = on_error
         self._skipped = skipped_version
         self._manual = manual
+        self._on_no_update = on_no_update
 
     def run(self) -> None:
         try:
@@ -107,6 +109,8 @@ class _CheckThread(threading.Thread):
 
             if not is_newer(remote_ver):
                 _log.debug("update check: already up to date (%s)", APP_VERSION)
+                if self._manual and self._on_no_update:
+                    self._on_no_update()
                 return
 
             # On auto-check, skip if user dismissed this version
@@ -132,9 +136,10 @@ def check_async(
     on_error: Callable[[str], None],
     skipped_version: str = "",
     manual: bool = False,
+    on_no_update: Optional[Callable[[], None]] = None,
 ) -> None:
     """Start a background update check. Non-blocking."""
-    _CheckThread(on_update, on_error, skipped_version, manual).start()
+    _CheckThread(on_update, on_error, skipped_version, manual, on_no_update).start()
 
 
 # ── Download + verify ─────────────────────────────────────────────────────────

@@ -225,13 +225,18 @@ class MainWindow(QMainWindow):
         updater.check_async(
             on_update=self._on_update_found,
             on_error=self._on_update_error,
+            on_no_update=self._on_no_update,
             skipped_version=self._cfg.skipped_version,
             manual=True,
         )
-        QMessageBox.information(
-            self, "Checking for updates",
-            "Checking GitHub for a newer version...\n"
-            "You'll be notified if one is available."
+
+    def _on_no_update(self) -> None:
+        QTimer.singleShot(
+            0,
+            lambda: QMessageBox.information(
+                self, "Up to date",
+                f"You are running the latest version ({APP_VERSION})."
+            )
         )
 
     def _on_update_found(self, info) -> None:
@@ -379,16 +384,7 @@ def main() -> int:
         if not _VERIFY_STARTUP:
             _upd.write_startup_sentinel()
 
-        # Auto-check for updates 4 seconds after window appears
-        QTimer.singleShot(
-            4000,
-            lambda: _upd.check_async(
-                on_update=win._on_update_found,
-                on_error=lambda _: None,   # silent on auto-check errors
-                skipped_version=cfg.skipped_version,
-                manual=False,
-            ),
-        )
+        # Auto-check disabled — use File → Check for Updates to check manually
 
     loading.ready.connect(on_ready)
 
