@@ -1,0 +1,381 @@
+{
+  "wave": 5,
+  "goal_count": 17,
+  "generated_at": "2026-08-25T09:40:08Z",
+  "goals": [
+    {
+      "goal": "What is the average delay hours per delivery_events?",
+      "canonical_id": "logistics_delivery_events_average_delay_hours_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "logistics_delivery_events_delay_hours_count",
+        "logistics_delivery_events_count"
+      ],
+      "composition_formula": "{logistics_delivery_events_delay_hours_count} / {logistics_delivery_events_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "average_delay_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average delay cost usd per delivery_events?",
+      "canonical_id": "logistics_delivery_events_average_delay_cost_usd_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "logistics_delivery_events_delay_cost_usd_currency",
+        "logistics_delivery_events_count"
+      ],
+      "composition_formula": "{logistics_delivery_events_delay_cost_usd_currency} / {logistics_delivery_events_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "average_delay_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average resolution hours per delivery_events?",
+      "canonical_id": "logistics_delivery_events_average_resolution_hours_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "logistics_delivery_events_resolution_hours_count",
+        "logistics_delivery_events_count"
+      ],
+      "composition_formula": "{logistics_delivery_events_resolution_hours_count} / {logistics_delivery_events_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "average_resolution_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average shipment value usd per delivery_events?",
+      "canonical_id": "logistics_delivery_events_average_shipment_value_usd_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "logistics_delivery_events_shipment_value_usd_currency",
+        "logistics_delivery_events_count"
+      ],
+      "composition_formula": "{logistics_delivery_events_shipment_value_usd_currency} / {logistics_delivery_events_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "average_shipment_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average distance km per vehicle_trips?",
+      "canonical_id": "logistics_vehicle_trips_average_distance_km_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "logistics_vehicle_trips_distance_km_count",
+        "logistics_vehicle_trips_count"
+      ],
+      "composition_formula": "{logistics_vehicle_trips_distance_km_count} / {logistics_vehicle_trips_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "average_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average planned duration hrs per vehicle_trips?",
+      "canonical_id": "logistics_vehicle_trips_average_planned_duration_hrs_percent",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "logistics_vehicle_trips_planned_duration_hrs_percent",
+        "logistics_vehicle_trips_count"
+      ],
+      "composition_formula": "{logistics_vehicle_trips_planned_duration_hrs_percent} / {logistics_vehicle_trips_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "average_planned_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average actual duration hrs per vehicle_trips?",
+      "canonical_id": "logistics_vehicle_trips_average_actual_duration_hrs_percent",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "logistics_vehicle_trips_actual_duration_hrs_percent",
+        "logistics_vehicle_trips_count"
+      ],
+      "composition_formula": "{logistics_vehicle_trips_actual_duration_hrs_percent} / {logistics_vehicle_trips_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "average_actual_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average trip cost usd per vehicle_trips?",
+      "canonical_id": "logistics_vehicle_trips_average_trip_cost_usd_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "logistics_vehicle_trips_trip_cost_usd_currency",
+        "logistics_vehicle_trips_count"
+      ],
+      "composition_formula": "{logistics_vehicle_trips_trip_cost_usd_currency} / {logistics_vehicle_trips_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "average_trip_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average litres consumed per vehicle_trips?",
+      "canonical_id": "logistics_vehicle_trips_average_litres_consumed_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "logistics_vehicle_trips_litres_consumed_count",
+        "logistics_vehicle_trips_count"
+      ],
+      "composition_formula": "{logistics_vehicle_trips_litres_consumed_count} / {logistics_vehicle_trips_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "average_litres_consumed",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average fuel cost usd per vehicle_trips?",
+      "canonical_id": "logistics_vehicle_trips_average_fuel_cost_usd_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "logistics_vehicle_trips_fuel_cost_usd_currency",
+        "logistics_vehicle_trips_count"
+      ],
+      "composition_formula": "{logistics_vehicle_trips_fuel_cost_usd_currency} / {logistics_vehicle_trips_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "average_fuel_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average co2 kg emitted per vehicle_trips?",
+      "canonical_id": "logistics_vehicle_trips_average_co2_kg_emitted_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "logistics_vehicle_trips_co2_kg_emitted_count",
+        "logistics_vehicle_trips_count"
+      ],
+      "composition_formula": "{logistics_vehicle_trips_co2_kg_emitted_count} / {logistics_vehicle_trips_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "average_co2_kg_emitted",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average cost per km per vehicle_trips?",
+      "canonical_id": "logistics_vehicle_trips_average_cost_per_km_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "logistics_vehicle_trips_cost_per_km_currency",
+        "logistics_vehicle_trips_count"
+      ],
+      "composition_formula": "{logistics_vehicle_trips_cost_per_km_currency} / {logistics_vehicle_trips_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "average_cost_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average revenue per km per vehicle_trips?",
+      "canonical_id": "logistics_vehicle_trips_average_revenue_per_km_currency",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "logistics_vehicle_trips_revenue_per_km_currency",
+        "logistics_vehicle_trips_count"
+      ],
+      "composition_formula": "{logistics_vehicle_trips_revenue_per_km_currency} / {logistics_vehicle_trips_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "average_revenue_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average utilization pct per vehicle_trips?",
+      "canonical_id": "logistics_vehicle_trips_average_utilization_pct_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "logistics_vehicle_trips_utilization_pct_count",
+        "logistics_vehicle_trips_count"
+      ],
+      "composition_formula": "{logistics_vehicle_trips_utilization_pct_count} / {logistics_vehicle_trips_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "average_utilization_pct",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average idle time hrs per vehicle_trips?",
+      "canonical_id": "logistics_vehicle_trips_average_idle_time_hrs_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "logistics_vehicle_trips_idle_time_hrs_count",
+        "logistics_vehicle_trips_count"
+      ],
+      "composition_formula": "{logistics_vehicle_trips_idle_time_hrs_count} / {logistics_vehicle_trips_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "average_idle_time_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average incidents per vehicle_trips?",
+      "canonical_id": "logistics_vehicle_trips_average_incidents_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "logistics_vehicle_trips_incidents_count",
+        "logistics_vehicle_trips_count"
+      ],
+      "composition_formula": "{logistics_vehicle_trips_incidents_count} / {logistics_vehicle_trips_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "average_incidents",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the average driver rating per vehicle_trips?",
+      "canonical_id": "logistics_vehicle_trips_average_driver_rating_count",
+      "complexity": "COMPOSED_1",
+      "depends_on": [
+        "logistics_vehicle_trips_driver_rating_count",
+        "logistics_vehicle_trips_count"
+      ],
+      "composition_formula": "{logistics_vehicle_trips_driver_rating_count} / {logistics_vehicle_trips_count}",
+      "wave": 5,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "average_driver_rating",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    }
+  ]
+}

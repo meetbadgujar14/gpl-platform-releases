@@ -1,0 +1,29 @@
+trip_id,vehicle_id,vehicle_type,driver_id,driver_name,freight_order_id,trip_status,origin_city,origin_state,destination_city,destination_state,distance_km,planned_duration_hrs,actual_duration_hrs,trip_date,trip_cost_usd,fuel_type,litres_consumed,fuel_cost_usd,co2_kg_emitted,cost_per_km,revenue_per_km,utilization_pct,idle_time_hrs,incidents,driver_rating
+TRIP-48273,VEH-7439,18-Wheeler,DRV-4823,James Kowalski,FO-72938,completed,Chicago,IL,Detroit,MI,457.3,5.2,5.2,2024-03-12,1248.75,Diesel,142.6,213.90,379.32,2.73,3.45,87,0.4,0,4.8
+TRIP-61945,VEH-5281,Box Truck,DRV-4418,Priya Mehta,FO-72938,completed,Dallas,TX,Houston,TX,386.2,4.1,4.1,2024-03-15,987.50,Diesel,198.4,311.49,527.75,2.56,3.20,82,0.3,0,4.6
+TRIP-29384,VEH-6193,18-Wheeler,DRV-6239,Marcus Webb,FO-61594,completed,Los Angeles,CA,Phoenix,AZ,598.7,6.8,6.8,2024-04-02,1654.20,Diesel,175.2,245.28,350.40,2.76,3.50,91,0.5,0,4.9
+TRIP-75621,VEH-2041,Refrigerated Truck,DRV-7802,Sofia Espinoza,FO-84931,in_transit,Atlanta,GA,Nashville,TN,412.5,4.6,4.6,2024-11-08,1102.80,LNG,203.5,284.90,407.00,2.67,3.25,78,0.6,0,4.7
+TRIP-83047,VEH-5281,Box Truck,DRV-5047,Liam Torres,FO-23759,completed,New York,NY,Philadelphia,PA,151.8,2.3,2.3,2024-05-19,524.40,Diesel,108.9,171.98,289.68,3.45,4.10,65,0.2,0,4.5
+TRIP-54398,VEH-5281,Box Truck,DRV-9184,Amara Diallo,FO-72938,completed,Seattle,WA,Portland,OR,279.4,3.1,3.1,2024-06-07,742.60,CNG,119.3,155.09,238.30,2.66,3.30,76,0.3,0,4.4
+TRIP-17863,VEH-2041,Refrigerated Truck,DRV-9184,Amara Diallo,FO-72938,cancelled,Miami,FL,Orlando,FL,382.1,4.0,0.0,2024-07-14,0.00,Diesel,0.0,0.00,0.00,0.00,0.00,0,0.0,0,
+TRIP-92471,VEH-5039,Flatbed Truck,DRV-6057,Raj Patel,FO-72938,completed,Denver,CO,Salt Lake City,UT,714.3,7.9,7.9,2024-08-21,1923.50,Diesel,289.3,411.21,769.54,2.69,3.40,94,0.7,0,4.9
+TRIP-36529,VEH-9562,18-Wheeler,DRV-3392,Chen Wei,FO-90483,completed,Minneapolis,MN,Milwaukee,WI,543.6,6.0,6.0,2024-09-03,1478.90,LNG,175.2,245.28,350.40,2.72,3.35,89,0.5,0,4.7
+TRIP-48751,VEH-8612,Tanker,DRV-9875,Olivia Nash,FO-72938,completed,Kansas City,MO,St. Louis,MO,368.9,4.2,4.2,2024-09-17,1015.30,HVO,161.0,254.38,201.25,2.75,3.40,83,0.4,0,4.6
+TRIP-23694,VEH-1064,18-Wheeler,DRV-4823,James Kowalski,FO-90483,completed,Boston,MA,Hartford,CT,175.4,2.1,2.1,2024-10-05,498.60,Diesel,134.5,174.85,268.60,2.84,3.55,71,0.2,0,4.8
+TRIP-67182,VEH-8325,Box Truck,DRV-1396,Elena Vasquez,FO-72938,delayed,Charlotte,NC,Richmond,VA,487.2,6.4,8.2,2024-10-22,1367.80,Diesel,223.7,312.38,595.05,2.81,3.30,68,1.8,1,3.9
+TRIP-81436,VEH-7439,18-Wheeler,DRV-3671,Noah Kimura,FO-51374,completed,Phoenix,AZ,Tucson,AZ,188.6,2.2,2.2,2024-11-01,512.40,CNG,127.4,165.62,254.40,2.72,3.45,74,0.2,0,4.7
+TRIP-59273,VEH-8325,Box Truck,DRV-6239,Marcus Webb,FO-72938,in_transit,San Francisco,CA,Sacramento,CA,142.3,1.8,1.8,2024-11-09,428.70,LNG,189.6,265.44,379.20,3.01,3.65,62,0.2,0,4.5
+TRIP-34817,VEH-2893,Flatbed Truck,DRV-4823,James Kowalski,FO-84931,completed,Columbus,OH,Pittsburgh,PA,312.7,3.7,3.7,2024-07-29,867.90,Diesel,247.8,347.22,659.15,2.77,3.48,85,0.4,0,4.8
+TRIP-72948,VEH-2893,Flatbed Truck,DRV-2984,Isabella Reyes,FO-72938,completed,Indianapolis,IN,Louisville,KY,178.3,2.4,2.4,2024-08-04,523.10,HVO,138.6,221.76,173.25,2.93,3.60,70,0.2,0,4.6
+TRIP-41683,VEH-3847,Refrigerated Truck,DRV-2218,Tom Bridges,FO-72938,completed,Memphis,TN,Little Rock,AR,224.8,2.7,2.7,2024-08-18,638.50,Diesel,256.3,358.82,682.00,2.84,3.50,77,0.3,0,4.5
+TRIP-95372,VEH-6193,18-Wheeler,DRV-5047,Liam Torres,FO-72938,cancelled,Las Vegas,NV,Los Angeles,CA,432.1,4.8,0.0,2024-09-11,0.00,Diesel,0.0,0.00,0.00,0.00,0.00,0,0.0,1,
+TRIP-28461,VEH-3906,Box Truck,DRV-8563,Grace Okonkwo,FO-72938,completed,Portland,OR,Eugene,OR,179.5,2.1,2.1,2024-10-14,487.30,CNG,145.8,189.54,291.30,2.72,3.38,69,0.2,0,4.6
+TRIP-63847,VEH-2893,Flatbed Truck,DRV-7741,Sam Lindqvist,FO-72938,completed,Tampa,FL,Jacksonville,FL,336.8,3.9,3.9,2024-06-25,921.60,Diesel,298.5,427.46,794.21,2.74,3.42,88,0.4,0,4.7
+TRIP-17529,VEH-3847,Refrigerated Truck,DRV-5047,Liam Torres,FO-72938,completed,Albuquerque,NM,El Paso,TX,449.7,5.1,5.1,2024-05-08,1234.80,LNG,211.4,295.96,422.80,2.75,3.45,86,0.5,0,4.8
+TRIP-84293,VEH-5281,Box Truck,DRV-3671,Noah Kimura,FO-72938,delayed,San Antonio,TX,Austin,TX,129.4,1.9,3.1,2024-11-03,398.20,Diesel,153.7,245.92,192.13,3.08,3.30,55,1.2,1,4.0
+TRIP-51736,VEH-3847,Refrigerated Truck,DRV-3671,Noah Kimura,FO-72938,completed,Cincinnati,OH,Lexington,KY,145.2,1.7,1.7,2024-04-17,412.90,Diesel,167.8,251.70,446.55,2.84,3.55,66,0.2,0,4.6
+TRIP-39184,VEH-3847,Refrigerated Truck,DRV-6057,Raj Patel,FO-72938,completed,Omaha,NE,Des Moines,IA,252.6,2.9,2.9,2024-03-28,703.40,HVO,144.9,231.84,181.13,2.78,3.42,80,0.3,0,4.7
+TRIP-76542,VEH-6193,18-Wheeler,DRV-2984,Isabella Reyes,FO-72938,completed,Baltimore,MD,Washington DC,DC,61.4,1.1,1.1,2024-07-03,224.80,Diesel,108.9,171.98,289.68,3.66,4.20,52,0.1,0,4.5
+TRIP-22857,VEH-8325,Box Truck,DRV-6057,Raj Patel,FO-51374,completed,Raleigh,NC,Greensboro,NC,133.7,1.6,1.6,2024-10-30,378.50,CNG,119.3,155.09,238.30,2.83,3.50,64,0.2,0,4.6
+TRIP-68415,VEH-3847,Refrigerated Truck,DRV-9184,Amara Diallo,FO-72938,in_transit,Oklahoma City,OK,Tulsa,OK,184.9,2.2,2.2,2024-11-10,519.60,Diesel,182.9,268.86,486.72,2.81,3.45,71,0.2,0,4.7
+TRIP-43926,VEH-2893,Flatbed Truck,DRV-3671,Noah Kimura,FO-72938,completed,Cleveland,OH,Toledo,OH,198.3,2.4,2.4,2024-05-31,567.10,LNG,203.5,284.90,407.00,2.86,3.50,75,0.3,0,4.7

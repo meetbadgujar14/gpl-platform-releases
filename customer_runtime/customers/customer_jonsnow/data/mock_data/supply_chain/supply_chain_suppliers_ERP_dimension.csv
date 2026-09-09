@@ -1,0 +1,16 @@
+supplier_id,supplier_name,supplier_category,country,region,supplier_tier,status,is_preferred,payment_terms,risk_score,last_audit_date,total_orders,on_time_delivery_rate,quality_acceptance_rate,avg_lead_time_days,total_spend_usd,defect_rate,return_rate,avg_po_value_usd,yoy_spend_change_pct
+SUP-2193,Castillo Metalworks S.L.,Safety & PPE,China,Latin America,Tier 1,Active,True,Net 30,High,2026-08-12,312,96.4,98.7,7,4820000,0.8,1.2,15450,8.3
+SUP-6640,Ironwood Timber & Forest Products,Chemicals,Japan,North America,Tier 2,Inactive,True,Net 45,High,2026-08-03,489,91.2,94.5,18,2340000,2.1,2.8,4785,12.7
+SUP-6640,Sakura Electronics Co. Ltd,Electronic Components,Germany,Europe,Tier 3,Active,False,Net 30,High,2026-07-18,204,97.8,99.1,12,7650000,0.4,0.7,37500,5.1
+SUP-3812,Sakura Electronics Co. Ltd,Packaging,South Africa,Asia-Pacific,Tier 2,Active,True,Net 60,Low,2026-08-20,178,93.6,96.2,9,1120000,1.5,1.9,6295,-2.4
+SUP-8823,Bharati Logistics & Freight,Plastics & Polymers,South Africa,Asia-Pacific,Tier 3,On Hold,False,Net 45,Low,2026-05-14,95,82.3,88.9,25,890000,4.7,5.2,9368,-15.6
+SUP-8390,Bharati Logistics & Freight,Logistics,Canada,MEA,Tier 2,On Hold,False,Net 30,High,2026-08-08,267,95.1,97.8,8,5430000,0.9,1.1,20337,11.2
+SUP-2193,Gulf Coast Petrochemicals Ltd,Agricultural Products,Sweden,Asia-Pacific,Tier 3,Inactive,True,Net 45,High,2026-03-22,134,87.4,91.6,30,640000,3.2,3.8,4776,3.9
+SUP-5538,Highveld Industrial Fasteners,Fasteners & Hardware,South Africa,Asia-Pacific,Tier 3,Active,False,Net 60,Medium,2026-08-15,221,94.7,96.9,14,2980000,1.3,1.6,13484,6.8
+SUP-8390,Bharati Logistics & Freight,Electronic Components,Egypt,North America,Tier 1,Active,True,Net 45,Medium,2025-11-09,42,74.8,82.1,22,185000,6.4,7.1,4405,-38.2
+SUP-2193,Bharati Logistics & Freight,Safety & PPE,Japan,North America,Tier 2,Inactive,False,Net 60,Low,2026-08-22,158,98.2,99.4,16,11200000,0.3,0.5,70886,18.4
+SUP-1475,Adriatic Polymer Industries,MRO Supplies,Spain,Europe,Tier 3,Active,False,Net 30,Low,2026-06-30,310,89.5,93.4,11,1750000,2.6,3.1,5645,1.7
+SUP-4821,Pacific Rim Industrial Supplies,Metal Fabrication,Brazil,North America,Tier 3,On Hold,False,Net 45,Low,2026-08-05,87,96.0,98.2,20,6320000,0.7,0.9,72644,4.5
+SUP-5102,Adriatic Polymer Industries,Chemicals,Egypt,MEA,Tier 2,On Hold,True,Net 45,Low,2025-08-30,56,79.6,85.3,35,420000,5.8,6.3,7500,-22.1
+SUP-7364,Meridian Components GmbH,Metal Fabrication,Egypt,North America,Tier 2,On Hold,False,Net 45,Medium,2026-08-18,193,92.8,97.0,6,980000,1.1,1.4,5078,9.6
+SUP-5102,Maple Leaf Safety Equipment Inc.,Electronic Components,Germany,Asia-Pacific,Tier 3,Active,True,Net 60,Low,2026-02-11,146,88.9,92.7,19,760000,2.9,3.4,5205,0.8

@@ -1,0 +1,16 @@
+supplier_id,supplier_name,supplier_category,country,region,supplier_tier,status,is_preferred,total_orders,on_time_delivery_rate,quality_acceptance_rate,avg_lead_time_days,total_spend_usd,defect_rate,return_rate,avg_po_value_usd,payment_terms,last_audit_date,risk_score,yoy_spend_change_pct
+SUP-4821,Pacific Rim Industrial Supplies,Raw Materials,China,Asia-Pacific,Tier 1,Active,True,290,95.9,98.7,7.3,6145200,1.3,0.8,21190,Net 30,2024-03-15,Low,12.4
+SUP-7364,Meridian Components GmbH,Electronic Components,Germany,Europe,Tier 1,Active,True,213,91.5,98.1,8.9,3875400,1.9,1.2,18196,Net 45,2024-02-20,Low,8.7
+SUP-5538,Nordic Precision Machining AB,Machined Parts,Sweden,Europe,Tier 1,Active,True,178,93.8,97.4,12.6,4312800,2.6,1.5,24228,Net 45,2024-04-10,Low,15.2
+SUP-3812,Gulf Coast Petrochemicals Ltd,Chemicals,United States,North America,Tier 1,Active,True,124,90.3,96.9,9.7,1952700,3.1,2.0,15748,Net 30,2024-01-28,Medium,5.3
+SUP-7781,Sakura Electronics Co. Ltd,Electronic Components,Japan,Asia-Pacific,Tier 1,Active,True,142,94.4,97.8,6.2,2841500,2.2,1.1,20011,Net 45,2024-05-05,Low,9.8
+SUP-2967,Cornerstone MRO Solutions,MRO Supplies,United Kingdom,Europe,Tier 1,Active,True,412,97.2,99.4,3.5,3583100,0.6,0.4,8696,Net 30,2024-04-22,Low,18.6
+SUP-2193,Harborview Packaging Solutions,Packaging,United States,North America,Tier 2,Active,False,305,96.7,99.2,4.1,1874300,0.8,0.5,6145,Net 30,2024-03-30,Low,3.1
+SUP-9057,Andean Textile Exports S.A.,Textiles,Peru,Latin America,Tier 2,Active,False,55,85.5,94.1,22.4,1830600,5.9,3.8,33284,Net 60,2024-02-14,High,22.4
+SUP-4456,Ironwood Timber & Forest Products,Raw Materials,Brazil,Latin America,Tier 2,Active,False,76,79.6,91.8,25.1,1427300,8.2,5.1,18780,Net 30,2024-01-15,High,-4.2
+SUP-5102,Adriatic Polymer Industries,Plastics & Polymers,Croatia,Europe,Tier 2,Active,False,198,89.4,96.2,10.8,2768900,3.8,2.3,13984,Net 45,2024-05-18,Medium,11.0
+SUP-8823,Maple Leaf Safety Equipment Inc.,Safety & PPE,Canada,North America,Tier 2,Active,False,93,92.0,97.1,14.2,2194500,2.9,1.7,23597,Net 30,2024-04-08,Low,7.6
+SUP-6640,Bharati Logistics & Freight,Logistics,India,Asia-Pacific,Tier 2,Active,False,89,88.7,95.3,11.4,1341200,4.7,2.9,15069,Net 30,2024-03-12,Medium,19.3
+SUP-8390,Highveld Industrial Fasteners,Fasteners & Hardware,South Africa,MEA,Tier 3,On Hold,False,38,84.2,92.9,28.6,914800,7.1,4.4,24074,Net 60,2023-11-20,High,-12.7
+SUP-1475,Castillo Metalworks S.L.,Metal Fabrication,Spain,Europe,Tier 3,On Hold,False,61,86.9,95.7,16.8,1402700,4.3,2.6,22995,Net 60,2024-01-05,Medium,-6.8
+SUP-3309,Nile Valley Agricultural Exports,Agricultural Products,Egypt,MEA,Tier 3,Inactive,False,67,82.1,93.6,18.3,621000,6.4,3.9,9269,Net 60,2023-09-14,High,-28.5

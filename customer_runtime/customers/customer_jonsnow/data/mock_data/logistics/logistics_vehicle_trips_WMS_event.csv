@@ -1,0 +1,12 @@
+trip_id,vehicle_id,vehicle_type,driver_id,driver_name,freight_order_id,trip_status,origin_city,origin_state,destination_city,destination_state,distance_km,planned_duration_hrs,actual_duration_hrs,trip_date,trip_cost_usd,fuel_type,litres_consumed,fuel_cost_usd,co2_kg_emitted,cost_per_km,revenue_per_km,utilization_pct,idle_time_hrs,incidents,driver_rating
+TRP-48291,VEH-5039,Box Truck,DRV-7741,Fatima Al-Rashidi,FO-90483,Delayed,Chicago,MO,Tampa,FL,386,4.5,4.8,2026-08-22,1142.5,Diesel,148.2,221.4,394.1,2.96,4.12,87.5,0.6,0,4.7
+TRP-61084,VEH-6193,Semi-Truck,DRV-6057,Marcus Delgado,FO-23759,Delayed,Atlanta,GA,Indianapolis,LA,442,5.0,5.3,2026-08-18,987.2,Gasoline,132.6,198.1,352.7,2.23,3.45,92.0,0.4,0,4.9
+TRP-29543,VEH-6193,Box Truck,DRV-1396,Sofia Herrera,FO-84931,Cancelled,Seattle,PA,Albuquerque,OR,296,3.5,3.9,2026-08-25,874.6,Diesel,112.4,167.9,299.0,2.95,3.8,78.3,0.8,1,4.2
+TRP-53770,VEH-3906,Tanker Truck,DRV-6057,Liam O'Brien,FO-61594,Delayed,Dallas,PA,Nashville,NM,594,6.5,7.1,2026-08-10,2318.75,Diesel,214.8,321.1,571.6,3.9,5.25,95.0,1.1,0,4.8
+TRP-37614,VEH-8325,Van,DRV-9875,Yuki Tanaka,FO-61594,Completed,Dallas,WA,Tampa,LA,344,4.0,4.2,2026-07-14,1056.3,Gasoline,131.9,197.3,350.9,3.07,4.2,88.0,0.3,0,4.6
+TRP-82003,VEH-7439,Semi-Truck,DRV-5047,Marcus Delgado,FO-61594,Delayed,Dallas,MO,Charlotte,OR,452,5.5,5.5,2026-06-03,763.8,Gasoline,98.7,151.2,230.6,1.69,2.5,74.0,0.5,0,4.5
+TRP-14957,VEH-5281,Box Truck,DRV-6239,Liam O'Brien,FO-61594,Completed,Denver,GA,Phoenix,FL,278,3.0,4.6,2026-05-27,1189.4,Diesel,107.3,160.5,285.5,4.28,4.85,65.0,2.1,1,3.8
+TRP-70831,VEH-1064,Semi-Truck,DRV-4823,Chen Wei,FO-72938,Delayed,Memphis,PA,Tampa,TN,511,5.8,6.0,2026-04-09,2645.0,Gasoline,195.4,292.1,520.0,5.18,6.4,100.0,0.2,0,4.9
+TRP-46388,VEH-6193,Semi-Truck,DRV-8563,Yuki Tanaka,FO-84931,Cancelled,Philadelphia,CO,New York,TX,151,2.5,0.0,2026-03-18,145.0,Diesel,12.0,17.9,31.9,0.96,0.0,0.0,0.0,0,3.5
+TRP-91247,VEH-8325,Flatbed Truck,DRV-2984,Sofia Herrera,FO-51374,In Transit,Memphis,CO,New Orleans,LA,371,4.2,4.4,2025-11-05,1098.6,Gasoline,142.3,212.7,378.5,2.96,4.05,83.0,0.5,0,4.6
+TRP-58792,VEH-1064,Semi-Truck,DRV-2984,Chen Wei,FO-72938,Cancelled,Seattle,CA,Tampa,IN,418,4.8,5.0,2025-03-22,1874.3,Gasoline,168.9,252.5,449.5,4.48,5.9,91.5,0.7,0,4.7

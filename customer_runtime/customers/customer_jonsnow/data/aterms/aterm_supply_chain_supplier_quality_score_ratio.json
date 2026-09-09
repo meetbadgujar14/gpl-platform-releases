@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_supplier_quality_score_ratio",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_supplier_quality_score_ratio",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "supplier_quality_score",
+    "measure": "supplier_quality_score",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 40.685878962536016,
+  "formula_line": "supply_chain_supplier_quality_score_ratio = {supply_chain_suppliers_quality_acceptance_rate_percent} / ({supply_chain_suppliers_defect_rate_percent} if {supply_chain_suppliers_defect_rate_percent} != 0 else 1)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-08-25T09:57:33Z",
+  "usage_count": 0,
+  "source_goal": "Ratio of supplier quality acceptance rate to defect rate as a measure of overall supplier quality.",
+  "wave": 9,
+  "depends_on": [
+    "supply_chain_suppliers_quality_acceptance_rate_percent",
+    "supply_chain_suppliers_defect_rate_percent"
+  ],
+  "dep_values": {
+    "supply_chain_suppliers_quality_acceptance_rate_percent": 1411.8,
+    "supply_chain_suppliers_defect_rate_percent": 34.7
+  },
+  "verified_at": "2026-08-25T09:57:37Z"
+}

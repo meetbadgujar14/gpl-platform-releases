@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_suppliers_defect_rate_this_quarter_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_defect_rate_this_quarter_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "defect_rate",
+    "state": "all",
+    "scope": "total",
+    "time": "this_quarter",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 9.1,
+  "formula_line": "MEASURE_QUARTER_FIXED('supply_chain_suppliers_ERP_dimension', 'last_audit_date', 'SUM', 'defect_rate', 'this_quarter', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-08-25T09:49:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total defect rate of supplierss this quarter?",
+  "wave": 3,
+  "operator": "MEASURE_QUARTER_FIXED",
+  "verified_at": "2026-08-25T09:57:36Z"
+}

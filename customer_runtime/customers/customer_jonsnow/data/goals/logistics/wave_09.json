@@ -1,0 +1,117 @@
+{
+  "wave": 9,
+  "goal_count": 5,
+  "generated_at": "2026-08-25T09:40:08Z",
+  "goals": [
+    {
+      "goal": "Percentage of trips completed without delay out of all completed trips.",
+      "canonical_id": "logistics_on_time_delivery_rate_percent",
+      "complexity": "KPI",
+      "depends_on": [
+        "logistics_vehicle_trips_count_completed",
+        "logistics_vehicle_trips_count"
+      ],
+      "composition_formula": "{logistics_vehicle_trips_count_completed} / {logistics_vehicle_trips_count}",
+      "wave": 9,
+      "slots": {
+        "domain": "logistics",
+        "entity": "on_time_delivery_rate",
+        "measure": "on_time_delivery_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "Average cost of delay per delivery event recorded.",
+      "canonical_id": "logistics_average_delay_cost_per_event_currency",
+      "complexity": "KPI",
+      "depends_on": [
+        "logistics_delivery_events_delay_cost_usd_currency",
+        "logistics_delivery_events_count"
+      ],
+      "composition_formula": "{logistics_delivery_events_delay_cost_usd_currency} / {logistics_delivery_events_count}",
+      "wave": 9,
+      "slots": {
+        "domain": "logistics",
+        "entity": "average_delay_cost_per_event",
+        "measure": "average_delay_cost_per_event",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "Average fuel expenditure per kilometre driven across all vehicle trips.",
+      "canonical_id": "logistics_fuel_efficiency_cost_per_km_ratio",
+      "complexity": "KPI",
+      "depends_on": [
+        "logistics_vehicle_trips_fuel_cost_usd_currency",
+        "logistics_vehicle_trips_distance_km_count"
+      ],
+      "composition_formula": "{logistics_vehicle_trips_fuel_cost_usd_currency} / {logistics_vehicle_trips_distance_km_count}",
+      "wave": 9,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fuel_efficiency_cost_per_km",
+        "measure": "fuel_efficiency_cost_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "ratio",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "Ratio of in-transit trips to total trips as a measure of active fleet utilization.",
+      "canonical_id": "logistics_fleet_utilization_rate_percent",
+      "complexity": "KPI",
+      "depends_on": [
+        "logistics_vehicle_trips_count_in_transit",
+        "logistics_vehicle_trips_count"
+      ],
+      "composition_formula": "{logistics_vehicle_trips_count_in_transit} / {logistics_vehicle_trips_count}",
+      "wave": 9,
+      "slots": {
+        "domain": "logistics",
+        "entity": "fleet_utilization_rate",
+        "measure": "fleet_utilization_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "Average number of hours taken to resolve a delivery exception event.",
+      "canonical_id": "logistics_average_exception_resolution_hours_days",
+      "complexity": "KPI",
+      "depends_on": [
+        "logistics_delivery_events_resolution_hours_count",
+        "logistics_delivery_events_count"
+      ],
+      "composition_formula": "{logistics_delivery_events_resolution_hours_count} / {logistics_delivery_events_count}",
+      "wave": 9,
+      "slots": {
+        "domain": "logistics",
+        "entity": "average_exception_resolution_hours",
+        "measure": "average_exception_resolution_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "wave": "A",
+  "goal_count": 6,
+  "generated_at": "2026-08-25T09:49:47Z",
+  "goals": [
+    {
+      "goal": "What is the current on-time delivery rate across all active suppliers?",
+      "canonical_id": "supply_chain_suppliers_on_time_delivery_rate_active_total_percent_scalar_percent",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "on_time_delivery_rate",
+        "state": "Active",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "wave": "A",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the average lead time across all active suppliers this quarter?",
+      "canonical_id": "supply_chain_suppliers_avg_lead_time_days_active_this_quarter_days_scalar_days",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "avg_lead_time_days",
+        "state": "Active",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "wave": "A",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the quality acceptance rate across all active suppliers this month?",
+      "canonical_id": "supply_chain_suppliers_quality_acceptance_rate_active_this_month_percent_scalar_percent",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "quality_acceptance_rate",
+        "state": "Active",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "wave": "A",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the defect rate across all active suppliers this quarter?",
+      "canonical_id": "supply_chain_suppliers_defect_rate_active_this_quarter_percent_scalar_percent",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "defect_rate",
+        "state": "Active",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "wave": "A",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the return rate across all active suppliers year to date?",
+      "canonical_id": "supply_chain_suppliers_return_rate_active_ytd_percent_scalar_percent",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "return_rate",
+        "state": "Active",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "wave": "A",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "How does on-time delivery rate vary across suppliers this quarter?",
+      "canonical_id": "supply_chain_suppliers_on_time_delivery_rate_all_by_supplier_this_quarter_percent_by_supplier_percent",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "on_time_delivery_rate",
+        "state": "Active",
+        "scope": "by_supplier",
+        "time": "this_quarter",
+        "unit": "percent",
+        "series": "by_supplier"
+      },
+      "wave": "A",
+      "complexity": "KPI",
+      "join": null
+    }
+  ]
+}

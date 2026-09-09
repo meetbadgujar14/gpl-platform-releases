@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_suppliers_return_rate_active_ytd_percent_max_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_return_rate_active_ytd_percent_max_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "return_rate",
+    "state": "Active",
+    "scope": "max",
+    "time": "ytd",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 43.115942,
+  "formula_line": "RATIO: MEASURE_YTD('supply_chain_suppliers_ERP_dimension', 'last_audit_date', 'SUM', 'return_rate', [{'field': 'status', 'op': '=', 'value': 'Active'}]) / MEASURE_YTD('supply_chain_suppliers_ERP_dimension', 'last_audit_date', 'SUM', 'return_rate', None) * 100",
+  "exec_formula": "((MEASURE_YTD('supply_chain_suppliers_ERP_dimension', 'last_audit_date', 'SUM', 'return_rate', [{'field': 'status', 'op': '=', 'value': 'Active'}])) / (MEASURE_YTD('supply_chain_suppliers_ERP_dimension', 'last_audit_date', 'SUM', 'return_rate', None)) * 100) if (MEASURE_YTD('supply_chain_suppliers_ERP_dimension', 'last_audit_date', 'SUM', 'return_rate', None)) else 0.0",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_execution_stable",
+  "created_at": "2026-08-25T09:57:03Z",
+  "usage_count": 0,
+  "source_goal": "Which active supplier has the highest return rate year to date?",
+  "wave": "E",
+  "via_llm": true,
+  "llm_reasoning": "wizard/RATIO_FILTERED steps=9",
+  "wizard_steps": 9,
+  "verified_at": "2026-08-25T09:57:37Z"
+}

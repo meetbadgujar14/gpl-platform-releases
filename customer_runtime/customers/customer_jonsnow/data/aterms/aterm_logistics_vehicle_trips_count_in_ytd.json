@@ -1,0 +1,29 @@
+{
+  "id": "aterm:logistics_vehicle_trips_count_in_ytd",
+  "type": "Aterm",
+  "canonical_id": "logistics_vehicle_trips_count_in_ytd",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "vehicle_trips",
+    "measure": "count",
+    "state": "IN",
+    "scope": "total",
+    "time": "ytd",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "MEASURE_YTD('logistics_vehicle_trips_WMS_event', 'trip_date', 'COUNT_DISTINCT', 'trip_id', [{'field': 'destination_state', 'op': '=', 'value': 'IN'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-08-25T09:36:16Z",
+  "usage_count": 0,
+  "source_goal": "How many IN vehicle_tripss are there ytd?",
+  "wave": 3,
+  "operator": "MEASURE_YTD",
+  "verified_at": "2026-08-25T09:57:34Z"
+}

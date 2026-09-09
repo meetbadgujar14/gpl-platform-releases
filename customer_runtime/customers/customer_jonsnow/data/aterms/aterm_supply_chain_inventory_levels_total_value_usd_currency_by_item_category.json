@@ -1,0 +1,37 @@
+{
+  "id": "aterm:supply_chain_inventory_levels_total_value_usd_currency_by_item_category",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_levels_total_value_usd_currency_by_item_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_levels",
+    "measure": "total_value_usd",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_item_category"
+  },
+  "oracle_value": {
+    "Chemicals": 9750.0,
+    "Consumer Electronics": 58552.5,
+    "Hardware": 67412.0,
+    "Machinery Parts": 42293.75,
+    "Mechanical Components": 71925.0,
+    "Medical Supplies": 26342.0,
+    "Warehouse Equipment": 21385.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_inventory_levels_WMS_state', 'SUM', 'total_value_usd', 'item_category', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-08-25T09:49:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total total value usd of inventory_levelss by item category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-08-25T09:57:36Z"
+}

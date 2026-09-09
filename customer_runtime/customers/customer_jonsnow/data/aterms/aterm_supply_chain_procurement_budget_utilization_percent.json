@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_procurement_budget_utilization_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_procurement_budget_utilization_percent",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "procurement_budget_utilization",
+    "measure": "procurement_budget_utilization",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 1.0074716369529984,
+  "formula_line": "supply_chain_procurement_budget_utilization_percent = {supply_chain_procurement_spend_spend_amount_usd_currency} / ({supply_chain_procurement_spend_budget_usd_count} if {supply_chain_procurement_spend_budget_usd_count} != 0 else 1)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-08-25T09:57:33Z",
+  "usage_count": 0,
+  "source_goal": "Percentage of procurement budget consumed by actual spend.",
+  "wave": 9,
+  "depends_on": [
+    "supply_chain_procurement_spend_spend_amount_usd_currency",
+    "supply_chain_procurement_spend_budget_usd_count"
+  ],
+  "dep_values": {
+    "supply_chain_procurement_spend_spend_amount_usd_currency": 3108050.0,
+    "supply_chain_procurement_spend_budget_usd_count": 3085000.0
+  },
+  "verified_at": "2026-08-25T09:57:37Z"
+}

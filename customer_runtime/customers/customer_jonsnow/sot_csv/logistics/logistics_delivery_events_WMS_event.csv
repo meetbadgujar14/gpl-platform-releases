@@ -1,0 +1,32 @@
+event_id,shipment_id,freight_order_id,carrier_name,event_type,exception_category,location_city,location_country,region,transport_mode,is_exception,delay_hours,delay_cost_usd,event_date,resolution_date,resolution_hours,root_cause,impact_level,escalated,sla_breached,shipment_value_usd
+EVT-84721,SHP-47839,FO-64802,OceanBridge Freight,Picked,None,Chicago,USA,North America,Sea,False,0,0,2024-01-15,2024-01-15,0,None,None,False,False,12300
+EVT-39054,SHP-47839,FO-64802,OceanBridge Freight,Departed,Minor Delay,Los Angeles,USA,North America,Sea,False,1.5,225,2024-01-17,2024-01-17,2,Traffic congestion at port,Low,False,False,12300
+EVT-57283,SHP-47839,FO-64802,OceanBridge Freight,In Transit,None,Memphis,USA,North America,Sea,False,0,0,2024-02-03,2024-02-03,0,None,None,False,False,12300
+EVT-12948,SHP-83401,FO-90483,RailLink Express,Customs Hold,Compliance,Frankfurt,Germany,Europe,Air,True,18,4500,2024-02-10,2024-02-11,22,Missing export documentation,High,True,True,1480
+EVT-73619,SHP-47839,FO-64802,OceanBridge Freight,Delivered,None,Paris,France,Europe,Sea,False,0,0,2024-02-14,2024-02-14,0,None,None,False,False,12300
+EVT-45802,SHP-69357,FO-18947,AeroCargo Solutions,Exception - Damaged,Cargo Damage,Rotterdam,Netherlands,Europe,Rail,True,36,12000,2024-02-18,2024-02-21,78,Forklift impact during unloading,Critical,True,True,9900
+EVT-96371,SHP-36285,FO-45821,CrossContinent Rail,Arrived,Minor Delay,Singapore,Singapore,Asia-Pacific,Rail,False,2,500,2024-03-01,2024-03-01,3,Congestion at terminal,Low,False,False,8750
+EVT-28540,SHP-69357,FO-18947,AeroCargo Solutions,Picked,None,Toronto,Canada,North America,Rail,False,0,0,2024-03-05,2024-03-05,0,None,None,False,False,9900
+EVT-61473,SHP-74182,FO-14567,GlobalShip Inc.,Out for Delivery,Minor Delay,Tokyo,Japan,Asia-Pacific,Sea,False,0.5,150,2024-03-12,2024-03-12,1,Address verification,Low,False,False,21500
+EVT-83024,SHP-11748,FO-31896,MetroFreight Co.,Returned,Customs Rejection,Seoul,South Korea,Asia-Pacific,Road,True,48,8500,2024-03-20,2024-03-22,52,Regulatory non-compliance,Critical,True,True,1100
+EVT-14759,SHP-47839,FO-64802,OceanBridge Freight,Departed,Minor Delay,Sydney,Australia,Asia-Pacific,Sea,False,3,600,2024-04-02,2024-04-02,4,Vessel departure delay,Low,False,False,12300
+EVT-50917,SHP-93016,FO-46283,SkyRush Logistics,Customs Cleared,None,Dubai,UAE,Middle East,Sea,False,6,1200,2024-04-08,2024-04-08,7,Standard customs processing,Low,False,False,17800
+EVT-72831,SHP-47839,FO-64802,OceanBridge Freight,Delivered,None,Mexico City,Mexico,Latin America,Sea,False,0,0,2024-04-15,2024-04-15,0,None,None,False,False,12300
+EVT-39248,SHP-76219,FO-28473,OceanBridge Freight,In Transit,Minor Delay,São Paulo,Brazil,Latin America,Road,False,4,800,2024-04-22,2024-04-22,5,Customs queue,Low,False,False,2600
+EVT-86502,SHP-69357,FO-18947,AeroCargo Solutions,Exception - Missing Docs,Compliance,Mumbai,India,Asia-Pacific,Rail,True,24,6000,2024-05-03,2024-05-04,28,Incomplete shipping manifest,High,True,True,9900
+EVT-21674,SHP-87463,FO-34572,OceanBridge Freight,Arrived,None,Johannesburg,South Africa,MEA,Air,False,0,0,2024-05-11,2024-05-11,0,None,None,False,False,4350
+EVT-94385,SHP-43726,FO-56284,GlobalShip Inc.,Picked,None,Dallas,USA,North America,Sea,False,0,0,2024-05-19,2024-05-19,0,None,None,False,False,14500
+EVT-67123,SHP-11748,FO-31896,MetroFreight Co.,Departed,Minor Delay,Amsterdam,Netherlands,Europe,Road,False,1,200,2024-06-01,2024-06-01,2,Loading delay,Low,False,False,1100
+EVT-48906,SHP-69357,FO-18947,AeroCargo Solutions,Exception - Weather Delay,Weather,Miami,USA,North America,Rail,True,12,3000,2024-06-10,2024-06-10,14,Hurricane warning - port closure,Medium,False,True,9900
+EVT-35271,SHP-50934,FO-23759,GlobalShip Inc.,Delivered,None,London,UK,Europe,Road,False,0,0,2024-06-18,2024-06-18,0,None,None,False,False,4101
+EVT-79043,SHP-83401,FO-90483,RailLink Express,Out for Delivery,Minor Delay,Shanghai,China,Asia-Pacific,Road,False,2.5,400,2024-07-04,2024-07-04,3,High delivery volume,Low,False,False,1480
+EVT-52184,SHP-69357,FO-18947,AeroCargo Solutions,Customs Hold,Compliance,Milan,Italy,Europe,Rail,True,30,7500,2024-07-12,2024-07-13,35,Incorrect HS tariff code,High,True,True,9900
+EVT-18637,SHP-36285,FO-45821,CrossContinent Rail,In Transit,None,Houston,USA,North America,Rail,False,0,0,2024-07-22,2024-07-22,0,None,None,False,False,8750
+EVT-63509,SHP-69357,FO-18947,AeroCargo Solutions,Arrived,Minor Delay,Kuala Lumpur,Malaysia,Asia-Pacific,Rail,False,1,250,2024-08-05,2024-08-05,2,Gate congestion,Low,False,False,9900
+EVT-90724,SHP-50934,FO-23759,GlobalShip Inc.,Returned,Regulatory,Vancouver,Canada,North America,Road,True,60,15000,2024-08-14,2024-08-16,52,Import permit expired,Critical,True,True,4101
+EVT-41862,SHP-69357,FO-18947,AeroCargo Solutions,Delivered,None,Phoenix,USA,North America,Rail,False,0,0,2024-08-22,2024-08-22,0,None,None,False,False,9900
+EVT-27395,SHP-50934,FO-23759,GlobalShip Inc.,Exception - Address Error,Delivery,Brussels,Belgium,Europe,Road,True,8,1800,2024-09-03,2024-09-03,10,Incomplete delivery address,Medium,False,False,4101
+EVT-58047,SHP-52843,FO-17563,GlobalShip Inc.,Picked,None,Seattle,USA,North America,Rail,False,0,0,2024-09-15,2024-09-15,0,None,None,False,False,4250
+EVT-33781,SHP-36285,FO-45821,CrossContinent Rail,Departed,Minor Delay,Helsinki,Finland,Europe,Rail,False,2,400,2024-10-01,2024-10-01,3,Track maintenance,Low,False,False,8750
+EVT-75629,SHP-47839,FO-64802,OceanBridge Freight,In Transit,Minor Delay,Guadalajara,Mexico,Latin America,Sea,False,5,750,2024-10-18,2024-10-18,6,Customs backlog,Low,False,False,12300
+EVT-10483,SHP-69357,FO-18947,AeroCargo Solutions,Customs Cleared,None,Antwerp,Belgium,Europe,Rail,False,7,1400,2024-11-05,2024-11-05,8,Standard inspection,Low,False,False,9900

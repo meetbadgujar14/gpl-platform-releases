@@ -1,0 +1,809 @@
+{
+  "logistics_delivery_events_WMS_event": {
+    "description": "Required CSV for event entity",
+    "suggested_filename": "logistics_delivery_events_WMS_event.csv",
+    "grain_keys": [
+      "event_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "event",
+    "required_columns": [
+      {
+        "name": "event_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "shipment_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "freight_order_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "carrier_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "event_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "exception_category",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "location_city",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "location_country",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "region",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "transport_mode",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_exception",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "delay_hours",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "delay_cost_usd",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "event_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "resolution_hours",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "root_cause",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "impact_level",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "escalated",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "sla_breached",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "shipment_value_usd",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "logistics_vehicle_trips_WMS_event": {
+    "description": "Required CSV for event entity",
+    "suggested_filename": "logistics_vehicle_trips_WMS_event.csv",
+    "grain_keys": [
+      "trip_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "event",
+    "required_columns": [
+      {
+        "name": "trip_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "vehicle_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "vehicle_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "driver_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "driver_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "freight_order_id",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "trip_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "origin_city",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "origin_state",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "destination_city",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "destination_state",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "distance_km",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "planned_duration_hrs",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "actual_duration_hrs",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "trip_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "trip_cost_usd",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "fuel_type",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "litres_consumed",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "fuel_cost_usd",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "co2_kg_emitted",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "cost_per_km",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "revenue_per_km",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "utilization_pct",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "idle_time_hrs",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "incidents",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "driver_rating",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_inventory_levels_WMS_state": {
+    "description": "Required CSV for state entity",
+    "suggested_filename": "supply_chain_inventory_levels_WMS_state.csv",
+    "grain_keys": [
+      "item_id",
+      "warehouse_id"
+    ],
+    "dedup_sort_col": "snapshot_date",
+    "record_type": "state",
+    "required_columns": [
+      {
+        "name": "item_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "warehouse_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "snapshot_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "item_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "item_category",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "warehouse_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "warehouse_region",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "aging_bucket",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "stockout_risk",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_below_reorder",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_below_safety_stock",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "slow_moving_flag",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_on_hand",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_reserved",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quantity_available",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "reorder_point",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "safety_stock_qty",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "days_of_supply",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "avg_daily_demand",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "unit_cost_usd",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_value_usd",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "lead_time_days",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_procurement_spend_ERP_record": {
+    "description": "Required CSV for record entity",
+    "suggested_filename": "supply_chain_procurement_spend_ERP_record.csv",
+    "grain_keys": [
+      "period",
+      "supplier_id",
+      "spend_category"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "record",
+    "required_columns": [
+      {
+        "name": "period",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "supplier_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "spend_category",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "month",
+        "role": "time",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "quarter",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "supplier_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "region",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "currency",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "payment_status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "cost_center",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "department",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_strategic_spend",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "spend_amount_usd",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "po_count",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "avg_po_value",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "budget_usd",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "budget_variance_pct",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "discount_captured_usd",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "tax_amount_usd",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  },
+  "supply_chain_suppliers_ERP_dimension": {
+    "description": "Required CSV for dimension entity",
+    "suggested_filename": "supply_chain_suppliers_ERP_dimension.csv",
+    "grain_keys": [
+      "supplier_id"
+    ],
+    "dedup_sort_col": null,
+    "record_type": "dimension",
+    "required_columns": [
+      {
+        "name": "supplier_id",
+        "role": "primary_key",
+        "type": "string",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "supplier_name",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "supplier_category",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "country",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "region",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "supplier_tier",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "status",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "is_preferred",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "payment_terms",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "risk_score",
+        "role": "dimension",
+        "type": "string",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "last_audit_date",
+        "role": "time",
+        "type": "date",
+        "nullable": false,
+        "fk_target": null
+      },
+      {
+        "name": "total_orders",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "on_time_delivery_rate",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "quality_acceptance_rate",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "avg_lead_time_days",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "total_spend_usd",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "defect_rate",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "return_rate",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "avg_po_value_usd",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      },
+      {
+        "name": "yoy_spend_change_pct",
+        "role": "measure",
+        "type": "number",
+        "nullable": true,
+        "fk_target": null
+      }
+    ]
+  }
+}

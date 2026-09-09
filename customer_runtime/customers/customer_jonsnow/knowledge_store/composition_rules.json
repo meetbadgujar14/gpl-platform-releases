@@ -1,0 +1,1214 @@
+{
+  "logistics_delivery_events_average_delay_hours_count": {
+    "formula": "logistics_delivery_events_average_delay_hours_count = {logistics_delivery_events_delay_hours_count} / ({logistics_delivery_events_count} if {logistics_delivery_events_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_delivery_events_delay_hours_count",
+      "logistics_delivery_events_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_delivery_events_delay_hours_count": 498.0,
+      "logistics_delivery_events_count": 15.0
+    },
+    "complexity": "average_delay_hours"
+  },
+  "logistics_delivery_events_average_delay_cost_usd_currency": {
+    "formula": "logistics_delivery_events_average_delay_cost_usd_currency = {logistics_delivery_events_delay_cost_usd_currency} / ({logistics_delivery_events_count} if {logistics_delivery_events_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_delivery_events_delay_cost_usd_currency",
+      "logistics_delivery_events_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_delivery_events_delay_cost_usd_currency": 36385.0,
+      "logistics_delivery_events_count": 15.0
+    },
+    "complexity": "average_delay_cost_usd"
+  },
+  "logistics_delivery_events_average_resolution_hours_count": {
+    "formula": "logistics_delivery_events_average_resolution_hours_count = {logistics_delivery_events_resolution_hours_count} / ({logistics_delivery_events_count} if {logistics_delivery_events_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_delivery_events_resolution_hours_count",
+      "logistics_delivery_events_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_delivery_events_resolution_hours_count": 628.0,
+      "logistics_delivery_events_count": 15.0
+    },
+    "complexity": "average_resolution_hours"
+  },
+  "logistics_delivery_events_average_shipment_value_usd_currency": {
+    "formula": "logistics_delivery_events_average_shipment_value_usd_currency = {logistics_delivery_events_shipment_value_usd_currency} / ({logistics_delivery_events_count} if {logistics_delivery_events_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_delivery_events_shipment_value_usd_currency",
+      "logistics_delivery_events_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_delivery_events_shipment_value_usd_currency": 1474500.0,
+      "logistics_delivery_events_count": 15.0
+    },
+    "complexity": "average_shipment_value_usd"
+  },
+  "logistics_vehicle_trips_average_distance_km_count": {
+    "formula": "logistics_vehicle_trips_average_distance_km_count = {logistics_vehicle_trips_distance_km_count} / ({logistics_vehicle_trips_count} if {logistics_vehicle_trips_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_vehicle_trips_distance_km_count",
+      "logistics_vehicle_trips_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_distance_km_count": 4243.0,
+      "logistics_vehicle_trips_count": 11.0
+    },
+    "complexity": "average_distance_km"
+  },
+  "logistics_vehicle_trips_average_planned_duration_hrs_percent": {
+    "formula": "logistics_vehicle_trips_average_planned_duration_hrs_percent = {logistics_vehicle_trips_planned_duration_hrs_percent} / ({logistics_vehicle_trips_count} if {logistics_vehicle_trips_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_vehicle_trips_planned_duration_hrs_percent",
+      "logistics_vehicle_trips_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_planned_duration_hrs_percent": 49.3,
+      "logistics_vehicle_trips_count": 11.0
+    },
+    "complexity": "average_planned_duration_hrs"
+  },
+  "logistics_vehicle_trips_average_actual_duration_hrs_percent": {
+    "formula": "logistics_vehicle_trips_average_actual_duration_hrs_percent = {logistics_vehicle_trips_actual_duration_hrs_percent} / ({logistics_vehicle_trips_count} if {logistics_vehicle_trips_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_vehicle_trips_actual_duration_hrs_percent",
+      "logistics_vehicle_trips_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_actual_duration_hrs_percent": 50.8,
+      "logistics_vehicle_trips_count": 11.0
+    },
+    "complexity": "average_actual_duration_hrs"
+  },
+  "logistics_vehicle_trips_average_trip_cost_usd_currency": {
+    "formula": "logistics_vehicle_trips_average_trip_cost_usd_currency = {logistics_vehicle_trips_trip_cost_usd_currency} / ({logistics_vehicle_trips_count} if {logistics_vehicle_trips_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_vehicle_trips_trip_cost_usd_currency",
+      "logistics_vehicle_trips_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_trip_cost_usd_currency": 14095.45,
+      "logistics_vehicle_trips_count": 11.0
+    },
+    "complexity": "average_trip_cost_usd"
+  },
+  "logistics_vehicle_trips_average_litres_consumed_count": {
+    "formula": "logistics_vehicle_trips_average_litres_consumed_count = {logistics_vehicle_trips_litres_consumed_count} / ({logistics_vehicle_trips_count} if {logistics_vehicle_trips_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_vehicle_trips_litres_consumed_count",
+      "logistics_vehicle_trips_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_litres_consumed_count": 1464.5,
+      "logistics_vehicle_trips_count": 11.0
+    },
+    "complexity": "average_litres_consumed"
+  },
+  "logistics_vehicle_trips_average_fuel_cost_usd_currency": {
+    "formula": "logistics_vehicle_trips_average_fuel_cost_usd_currency = {logistics_vehicle_trips_fuel_cost_usd_currency} / ({logistics_vehicle_trips_count} if {logistics_vehicle_trips_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_vehicle_trips_fuel_cost_usd_currency",
+      "logistics_vehicle_trips_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_fuel_cost_usd_currency": 2192.7,
+      "logistics_vehicle_trips_count": 11.0
+    },
+    "complexity": "average_fuel_cost_usd"
+  },
+  "logistics_vehicle_trips_average_co2_kg_emitted_count": {
+    "formula": "logistics_vehicle_trips_average_co2_kg_emitted_count = {logistics_vehicle_trips_co2_kg_emitted_count} / ({logistics_vehicle_trips_count} if {logistics_vehicle_trips_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_vehicle_trips_co2_kg_emitted_count",
+      "logistics_vehicle_trips_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_co2_kg_emitted_count": 3864.3,
+      "logistics_vehicle_trips_count": 11.0
+    },
+    "complexity": "average_co2_kg_emitted"
+  },
+  "logistics_vehicle_trips_average_cost_per_km_currency": {
+    "formula": "logistics_vehicle_trips_average_cost_per_km_currency = {logistics_vehicle_trips_cost_per_km_currency} / ({logistics_vehicle_trips_count} if {logistics_vehicle_trips_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_vehicle_trips_cost_per_km_currency",
+      "logistics_vehicle_trips_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_cost_per_km_currency": 34.66,
+      "logistics_vehicle_trips_count": 11.0
+    },
+    "complexity": "average_cost_per_km"
+  },
+  "logistics_vehicle_trips_average_revenue_per_km_currency": {
+    "formula": "logistics_vehicle_trips_average_revenue_per_km_currency = {logistics_vehicle_trips_revenue_per_km_currency} / ({logistics_vehicle_trips_count} if {logistics_vehicle_trips_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_vehicle_trips_revenue_per_km_currency",
+      "logistics_vehicle_trips_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_revenue_per_km_currency": 44.52,
+      "logistics_vehicle_trips_count": 11.0
+    },
+    "complexity": "average_revenue_per_km"
+  },
+  "logistics_vehicle_trips_average_utilization_pct_count": {
+    "formula": "logistics_vehicle_trips_average_utilization_pct_count = {logistics_vehicle_trips_utilization_pct_count} / ({logistics_vehicle_trips_count} if {logistics_vehicle_trips_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_vehicle_trips_utilization_pct_count",
+      "logistics_vehicle_trips_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_utilization_pct_count": 854.3,
+      "logistics_vehicle_trips_count": 11.0
+    },
+    "complexity": "average_utilization_pct"
+  },
+  "logistics_vehicle_trips_average_idle_time_hrs_count": {
+    "formula": "logistics_vehicle_trips_average_idle_time_hrs_count = {logistics_vehicle_trips_idle_time_hrs_count} / ({logistics_vehicle_trips_count} if {logistics_vehicle_trips_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_vehicle_trips_idle_time_hrs_count",
+      "logistics_vehicle_trips_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_idle_time_hrs_count": 7.2,
+      "logistics_vehicle_trips_count": 11.0
+    },
+    "complexity": "average_idle_time_hrs"
+  },
+  "logistics_vehicle_trips_average_incidents_count": {
+    "formula": "logistics_vehicle_trips_average_incidents_count = {logistics_vehicle_trips_incidents_count} / ({logistics_vehicle_trips_count} if {logistics_vehicle_trips_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_vehicle_trips_incidents_count",
+      "logistics_vehicle_trips_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_incidents_count": 2.0,
+      "logistics_vehicle_trips_count": 11.0
+    },
+    "complexity": "average_incidents"
+  },
+  "logistics_vehicle_trips_average_driver_rating_count": {
+    "formula": "logistics_vehicle_trips_average_driver_rating_count = {logistics_vehicle_trips_driver_rating_count} / ({logistics_vehicle_trips_count} if {logistics_vehicle_trips_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_vehicle_trips_driver_rating_count",
+      "logistics_vehicle_trips_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_driver_rating_count": 49.2,
+      "logistics_vehicle_trips_count": 11.0
+    },
+    "complexity": "average_driver_rating"
+  },
+  "logistics_delivery_events_growth_delay_hours_this_month_percent": {
+    "formula": "logistics_delivery_events_growth_delay_hours_this_month_percent = (({logistics_delivery_events_delay_hours_this_month_count} - {logistics_delivery_events_delay_hours_last_month_count}) / abs({logistics_delivery_events_delay_hours_last_month_count}) * 100) if {logistics_delivery_events_delay_hours_last_month_count} != 0 else 0",
+    "depends_on": [
+      "logistics_delivery_events_delay_hours_this_month_count",
+      "logistics_delivery_events_delay_hours_last_month_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_delivery_events_delay_hours_this_month_count": 126.0,
+      "logistics_delivery_events_delay_hours_last_month_count": 48.0
+    },
+    "complexity": "growth_delay_hours"
+  },
+  "logistics_delivery_events_growth_delay_cost_usd_this_month_percent": {
+    "formula": "logistics_delivery_events_growth_delay_cost_usd_this_month_percent = (({logistics_delivery_events_delay_cost_usd_this_month_currency} - {logistics_delivery_events_delay_cost_usd_last_month_currency}) / abs({logistics_delivery_events_delay_cost_usd_last_month_currency}) * 100) if {logistics_delivery_events_delay_cost_usd_last_month_currency} != 0 else 0",
+    "depends_on": [
+      "logistics_delivery_events_delay_cost_usd_this_month_currency",
+      "logistics_delivery_events_delay_cost_usd_last_month_currency"
+    ],
+    "dep_oracle_values": {
+      "logistics_delivery_events_delay_cost_usd_this_month_currency": 7670.0,
+      "logistics_delivery_events_delay_cost_usd_last_month_currency": 3200.0
+    },
+    "complexity": "growth_delay_cost_usd"
+  },
+  "logistics_delivery_events_growth_resolution_hours_this_month_percent": {
+    "formula": "logistics_delivery_events_growth_resolution_hours_this_month_percent = (({logistics_delivery_events_resolution_hours_this_month_count} - {logistics_delivery_events_resolution_hours_last_month_count}) / abs({logistics_delivery_events_resolution_hours_last_month_count}) * 100) if {logistics_delivery_events_resolution_hours_last_month_count} != 0 else 0",
+    "depends_on": [
+      "logistics_delivery_events_resolution_hours_this_month_count",
+      "logistics_delivery_events_resolution_hours_last_month_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_delivery_events_resolution_hours_this_month_count": 168.0,
+      "logistics_delivery_events_resolution_hours_last_month_count": 72.0
+    },
+    "complexity": "growth_resolution_hours"
+  },
+  "logistics_delivery_events_growth_shipment_value_usd_this_month_percent": {
+    "formula": "logistics_delivery_events_growth_shipment_value_usd_this_month_percent = (({logistics_delivery_events_shipment_value_usd_this_month_currency} - {logistics_delivery_events_shipment_value_usd_last_month_currency}) / abs({logistics_delivery_events_shipment_value_usd_last_month_currency}) * 100) if {logistics_delivery_events_shipment_value_usd_last_month_currency} != 0 else 0",
+    "depends_on": [
+      "logistics_delivery_events_shipment_value_usd_this_month_currency",
+      "logistics_delivery_events_shipment_value_usd_last_month_currency"
+    ],
+    "dep_oracle_values": {
+      "logistics_delivery_events_shipment_value_usd_this_month_currency": 379400.0,
+      "logistics_delivery_events_shipment_value_usd_last_month_currency": 180400.0
+    },
+    "complexity": "growth_shipment_value_usd"
+  },
+  "logistics_vehicle_trips_growth_distance_km_this_month_percent": {
+    "formula": "logistics_vehicle_trips_growth_distance_km_this_month_percent = (({logistics_vehicle_trips_distance_km_this_month_count} - {logistics_vehicle_trips_distance_km_last_month_count}) / abs({logistics_vehicle_trips_distance_km_last_month_count}) * 100) if {logistics_vehicle_trips_distance_km_last_month_count} != 0 else 0",
+    "depends_on": [
+      "logistics_vehicle_trips_distance_km_this_month_count",
+      "logistics_vehicle_trips_distance_km_last_month_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_distance_km_this_month_count": 1718.0,
+      "logistics_vehicle_trips_distance_km_last_month_count": 344.0
+    },
+    "complexity": "growth_distance_km"
+  },
+  "logistics_vehicle_trips_growth_planned_duration_hrs_this_month_percent": {
+    "formula": "logistics_vehicle_trips_growth_planned_duration_hrs_this_month_percent = (({logistics_vehicle_trips_planned_duration_hrs_this_month_percent} - {logistics_vehicle_trips_planned_duration_hrs_last_month_percent}) / abs({logistics_vehicle_trips_planned_duration_hrs_last_month_percent}) * 100) if {logistics_vehicle_trips_planned_duration_hrs_last_month_percent} != 0 else 0",
+    "depends_on": [
+      "logistics_vehicle_trips_planned_duration_hrs_this_month_percent",
+      "logistics_vehicle_trips_planned_duration_hrs_last_month_percent"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_planned_duration_hrs_this_month_percent": 19.5,
+      "logistics_vehicle_trips_planned_duration_hrs_last_month_percent": 4.0
+    },
+    "complexity": "growth_planned_duration_hrs"
+  },
+  "logistics_vehicle_trips_growth_actual_duration_hrs_this_month_percent": {
+    "formula": "logistics_vehicle_trips_growth_actual_duration_hrs_this_month_percent = (({logistics_vehicle_trips_actual_duration_hrs_this_month_percent} - {logistics_vehicle_trips_actual_duration_hrs_last_month_percent}) / abs({logistics_vehicle_trips_actual_duration_hrs_last_month_percent}) * 100) if {logistics_vehicle_trips_actual_duration_hrs_last_month_percent} != 0 else 0",
+    "depends_on": [
+      "logistics_vehicle_trips_actual_duration_hrs_this_month_percent",
+      "logistics_vehicle_trips_actual_duration_hrs_last_month_percent"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_actual_duration_hrs_this_month_percent": 21.099999999999998,
+      "logistics_vehicle_trips_actual_duration_hrs_last_month_percent": 4.2
+    },
+    "complexity": "growth_actual_duration_hrs"
+  },
+  "logistics_vehicle_trips_growth_trip_cost_usd_this_month_percent": {
+    "formula": "logistics_vehicle_trips_growth_trip_cost_usd_this_month_percent = (({logistics_vehicle_trips_trip_cost_usd_this_month_currency} - {logistics_vehicle_trips_trip_cost_usd_last_month_currency}) / abs({logistics_vehicle_trips_trip_cost_usd_last_month_currency}) * 100) if {logistics_vehicle_trips_trip_cost_usd_last_month_currency} != 0 else 0",
+    "depends_on": [
+      "logistics_vehicle_trips_trip_cost_usd_this_month_currency",
+      "logistics_vehicle_trips_trip_cost_usd_last_month_currency"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_trip_cost_usd_this_month_currency": 5323.05,
+      "logistics_vehicle_trips_trip_cost_usd_last_month_currency": 1056.3
+    },
+    "complexity": "growth_trip_cost_usd"
+  },
+  "logistics_vehicle_trips_growth_litres_consumed_this_month_percent": {
+    "formula": "logistics_vehicle_trips_growth_litres_consumed_this_month_percent = (({logistics_vehicle_trips_litres_consumed_this_month_count} - {logistics_vehicle_trips_litres_consumed_last_month_count}) / abs({logistics_vehicle_trips_litres_consumed_last_month_count}) * 100) if {logistics_vehicle_trips_litres_consumed_last_month_count} != 0 else 0",
+    "depends_on": [
+      "logistics_vehicle_trips_litres_consumed_this_month_count",
+      "logistics_vehicle_trips_litres_consumed_last_month_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_litres_consumed_this_month_count": 608.0,
+      "logistics_vehicle_trips_litres_consumed_last_month_count": 131.9
+    },
+    "complexity": "growth_litres_consumed"
+  },
+  "logistics_vehicle_trips_growth_fuel_cost_usd_this_month_percent": {
+    "formula": "logistics_vehicle_trips_growth_fuel_cost_usd_this_month_percent = (({logistics_vehicle_trips_fuel_cost_usd_this_month_currency} - {logistics_vehicle_trips_fuel_cost_usd_last_month_currency}) / abs({logistics_vehicle_trips_fuel_cost_usd_last_month_currency}) * 100) if {logistics_vehicle_trips_fuel_cost_usd_last_month_currency} != 0 else 0",
+    "depends_on": [
+      "logistics_vehicle_trips_fuel_cost_usd_this_month_currency",
+      "logistics_vehicle_trips_fuel_cost_usd_last_month_currency"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_fuel_cost_usd_this_month_currency": 908.5,
+      "logistics_vehicle_trips_fuel_cost_usd_last_month_currency": 197.3
+    },
+    "complexity": "growth_fuel_cost_usd"
+  },
+  "logistics_vehicle_trips_growth_co2_kg_emitted_this_month_percent": {
+    "formula": "logistics_vehicle_trips_growth_co2_kg_emitted_this_month_percent = (({logistics_vehicle_trips_co2_kg_emitted_this_month_count} - {logistics_vehicle_trips_co2_kg_emitted_last_month_count}) / abs({logistics_vehicle_trips_co2_kg_emitted_last_month_count}) * 100) if {logistics_vehicle_trips_co2_kg_emitted_last_month_count} != 0 else 0",
+    "depends_on": [
+      "logistics_vehicle_trips_co2_kg_emitted_this_month_count",
+      "logistics_vehicle_trips_co2_kg_emitted_last_month_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_co2_kg_emitted_this_month_count": 1617.4,
+      "logistics_vehicle_trips_co2_kg_emitted_last_month_count": 350.9
+    },
+    "complexity": "growth_co2_kg_emitted"
+  },
+  "logistics_vehicle_trips_growth_cost_per_km_this_month_percent": {
+    "formula": "logistics_vehicle_trips_growth_cost_per_km_this_month_percent = (({logistics_vehicle_trips_cost_per_km_this_month_currency} - {logistics_vehicle_trips_cost_per_km_last_month_currency}) / abs({logistics_vehicle_trips_cost_per_km_last_month_currency}) * 100) if {logistics_vehicle_trips_cost_per_km_last_month_currency} != 0 else 0",
+    "depends_on": [
+      "logistics_vehicle_trips_cost_per_km_this_month_currency",
+      "logistics_vehicle_trips_cost_per_km_last_month_currency"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_cost_per_km_this_month_currency": 12.04,
+      "logistics_vehicle_trips_cost_per_km_last_month_currency": 3.07
+    },
+    "complexity": "growth_cost_per_km"
+  },
+  "logistics_vehicle_trips_growth_revenue_per_km_this_month_percent": {
+    "formula": "logistics_vehicle_trips_growth_revenue_per_km_this_month_percent = (({logistics_vehicle_trips_revenue_per_km_this_month_currency} - {logistics_vehicle_trips_revenue_per_km_last_month_currency}) / abs({logistics_vehicle_trips_revenue_per_km_last_month_currency}) * 100) if {logistics_vehicle_trips_revenue_per_km_last_month_currency} != 0 else 0",
+    "depends_on": [
+      "logistics_vehicle_trips_revenue_per_km_this_month_currency",
+      "logistics_vehicle_trips_revenue_per_km_last_month_currency"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_revenue_per_km_this_month_currency": 16.62,
+      "logistics_vehicle_trips_revenue_per_km_last_month_currency": 4.2
+    },
+    "complexity": "growth_revenue_per_km"
+  },
+  "logistics_vehicle_trips_growth_utilization_pct_this_month_percent": {
+    "formula": "logistics_vehicle_trips_growth_utilization_pct_this_month_percent = (({logistics_vehicle_trips_utilization_pct_this_month_count} - {logistics_vehicle_trips_utilization_pct_last_month_count}) / abs({logistics_vehicle_trips_utilization_pct_last_month_count}) * 100) if {logistics_vehicle_trips_utilization_pct_last_month_count} != 0 else 0",
+    "depends_on": [
+      "logistics_vehicle_trips_utilization_pct_this_month_count",
+      "logistics_vehicle_trips_utilization_pct_last_month_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_utilization_pct_this_month_count": 352.8,
+      "logistics_vehicle_trips_utilization_pct_last_month_count": 88.0
+    },
+    "complexity": "growth_utilization_pct"
+  },
+  "logistics_vehicle_trips_growth_idle_time_hrs_this_month_percent": {
+    "formula": "logistics_vehicle_trips_growth_idle_time_hrs_this_month_percent = (({logistics_vehicle_trips_idle_time_hrs_this_month_count} - {logistics_vehicle_trips_idle_time_hrs_last_month_count}) / abs({logistics_vehicle_trips_idle_time_hrs_last_month_count}) * 100) if {logistics_vehicle_trips_idle_time_hrs_last_month_count} != 0 else 0",
+    "depends_on": [
+      "logistics_vehicle_trips_idle_time_hrs_this_month_count",
+      "logistics_vehicle_trips_idle_time_hrs_last_month_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_idle_time_hrs_this_month_count": 2.9000000000000004,
+      "logistics_vehicle_trips_idle_time_hrs_last_month_count": 0.3
+    },
+    "complexity": "growth_idle_time_hrs"
+  },
+  "logistics_vehicle_trips_growth_incidents_this_month_percent": {
+    "formula": "logistics_vehicle_trips_growth_incidents_this_month_percent = (({logistics_vehicle_trips_incidents_this_month_count} - {logistics_vehicle_trips_incidents_last_month_count}) / abs({logistics_vehicle_trips_incidents_last_month_count}) * 100) if {logistics_vehicle_trips_incidents_last_month_count} != 0 else 0",
+    "depends_on": [
+      "logistics_vehicle_trips_incidents_this_month_count",
+      "logistics_vehicle_trips_incidents_last_month_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_incidents_this_month_count": 1.0,
+      "logistics_vehicle_trips_incidents_last_month_count": 0.0
+    },
+    "complexity": "growth_incidents"
+  },
+  "logistics_vehicle_trips_growth_driver_rating_this_month_percent": {
+    "formula": "logistics_vehicle_trips_growth_driver_rating_this_month_percent = (({logistics_vehicle_trips_driver_rating_this_month_count} - {logistics_vehicle_trips_driver_rating_last_month_count}) / abs({logistics_vehicle_trips_driver_rating_last_month_count}) * 100) if {logistics_vehicle_trips_driver_rating_last_month_count} != 0 else 0",
+    "depends_on": [
+      "logistics_vehicle_trips_driver_rating_this_month_count",
+      "logistics_vehicle_trips_driver_rating_last_month_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_driver_rating_this_month_count": 18.6,
+      "logistics_vehicle_trips_driver_rating_last_month_count": 4.6
+    },
+    "complexity": "growth_driver_rating"
+  },
+  "logistics_average_delay_cost_per_shipment_currency": {
+    "formula": "logistics_average_delay_cost_per_shipment_currency = {logistics_delivery_events_delay_cost_usd_currency} / ({logistics_delivery_events_count} if {logistics_delivery_events_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_delivery_events_delay_cost_usd_currency",
+      "logistics_delivery_events_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_delivery_events_delay_cost_usd_currency": 36385.0,
+      "logistics_delivery_events_count": 15.0
+    },
+    "complexity": "average_delay_cost_per_shipment"
+  },
+  "logistics_on_time_trip_rate_ratio": {
+    "formula": "logistics_on_time_trip_rate_ratio = {logistics_vehicle_trips_count_completed} / ({logistics_vehicle_trips_count} if {logistics_vehicle_trips_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_vehicle_trips_count_completed",
+      "logistics_vehicle_trips_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_count_completed": 4.0,
+      "logistics_vehicle_trips_count": 11.0
+    },
+    "complexity": "on_time_trip_rate"
+  },
+  "logistics_fuel_efficiency_cost_per_km_currency": {
+    "formula": "logistics_fuel_efficiency_cost_per_km_currency = {logistics_vehicle_trips_fuel_cost_usd_currency} / ({logistics_vehicle_trips_distance_km_count} if {logistics_vehicle_trips_distance_km_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_vehicle_trips_fuel_cost_usd_currency",
+      "logistics_vehicle_trips_distance_km_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_fuel_cost_usd_currency": 2192.7,
+      "logistics_vehicle_trips_distance_km_count": 4243.0
+    },
+    "complexity": "fuel_efficiency_cost_per_km"
+  },
+  "logistics_average_resolution_hours_days": {
+    "formula": "logistics_average_resolution_hours_days = {logistics_delivery_events_resolution_hours_count} / ({logistics_delivery_events_count} if {logistics_delivery_events_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_delivery_events_resolution_hours_count",
+      "logistics_delivery_events_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_delivery_events_resolution_hours_count": 628.0,
+      "logistics_delivery_events_count": 15.0
+    },
+    "complexity": "average_resolution_hours"
+  },
+  "logistics_co2_per_km_ratio": {
+    "formula": "logistics_co2_per_km_ratio = {logistics_vehicle_trips_co2_kg_emitted_count} / ({logistics_vehicle_trips_distance_km_count} if {logistics_vehicle_trips_distance_km_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_vehicle_trips_co2_kg_emitted_count",
+      "logistics_vehicle_trips_distance_km_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_co2_kg_emitted_count": 3864.3,
+      "logistics_vehicle_trips_distance_km_count": 4243.0
+    },
+    "complexity": "co2_per_km"
+  },
+  "logistics_on_time_delivery_rate_percent": {
+    "formula": "logistics_on_time_delivery_rate_percent = {logistics_vehicle_trips_count_completed} / ({logistics_vehicle_trips_count} if {logistics_vehicle_trips_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_vehicle_trips_count_completed",
+      "logistics_vehicle_trips_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_count_completed": 4.0,
+      "logistics_vehicle_trips_count": 11.0
+    },
+    "complexity": "on_time_delivery_rate"
+  },
+  "logistics_average_delay_cost_per_event_currency": {
+    "formula": "logistics_average_delay_cost_per_event_currency = {logistics_delivery_events_delay_cost_usd_currency} / ({logistics_delivery_events_count} if {logistics_delivery_events_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_delivery_events_delay_cost_usd_currency",
+      "logistics_delivery_events_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_delivery_events_delay_cost_usd_currency": 36385.0,
+      "logistics_delivery_events_count": 15.0
+    },
+    "complexity": "average_delay_cost_per_event"
+  },
+  "logistics_fuel_efficiency_cost_per_km_ratio": {
+    "formula": "logistics_fuel_efficiency_cost_per_km_ratio = {logistics_vehicle_trips_fuel_cost_usd_currency} / ({logistics_vehicle_trips_distance_km_count} if {logistics_vehicle_trips_distance_km_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_vehicle_trips_fuel_cost_usd_currency",
+      "logistics_vehicle_trips_distance_km_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_fuel_cost_usd_currency": 2192.7,
+      "logistics_vehicle_trips_distance_km_count": 4243.0
+    },
+    "complexity": "fuel_efficiency_cost_per_km"
+  },
+  "logistics_fleet_utilization_rate_percent": {
+    "formula": "logistics_fleet_utilization_rate_percent = {logistics_vehicle_trips_count_in_transit} / ({logistics_vehicle_trips_count} if {logistics_vehicle_trips_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_vehicle_trips_count_in_transit",
+      "logistics_vehicle_trips_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_vehicle_trips_count_in_transit": 0.0,
+      "logistics_vehicle_trips_count": 11.0
+    },
+    "complexity": "fleet_utilization_rate"
+  },
+  "logistics_average_exception_resolution_hours_days": {
+    "formula": "logistics_average_exception_resolution_hours_days = {logistics_delivery_events_resolution_hours_count} / ({logistics_delivery_events_count} if {logistics_delivery_events_count} != 0 else 1)",
+    "depends_on": [
+      "logistics_delivery_events_resolution_hours_count",
+      "logistics_delivery_events_count"
+    ],
+    "dep_oracle_values": {
+      "logistics_delivery_events_resolution_hours_count": 628.0,
+      "logistics_delivery_events_count": 15.0
+    },
+    "complexity": "average_exception_resolution_hours"
+  },
+  "supply_chain_inventory_levels_average_quantity_on_hand_count": {
+    "formula": "supply_chain_inventory_levels_average_quantity_on_hand_count = {supply_chain_inventory_levels_quantity_on_hand_count} / ({supply_chain_inventory_levels_count} if {supply_chain_inventory_levels_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_inventory_levels_quantity_on_hand_count",
+      "supply_chain_inventory_levels_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_quantity_on_hand_count": 26173.0,
+      "supply_chain_inventory_levels_count": 8.0
+    },
+    "complexity": "average_quantity_on_hand"
+  },
+  "supply_chain_inventory_levels_average_quantity_reserved_count": {
+    "formula": "supply_chain_inventory_levels_average_quantity_reserved_count = {supply_chain_inventory_levels_quantity_reserved_count} / ({supply_chain_inventory_levels_count} if {supply_chain_inventory_levels_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_inventory_levels_quantity_reserved_count",
+      "supply_chain_inventory_levels_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_quantity_reserved_count": 6818.0,
+      "supply_chain_inventory_levels_count": 8.0
+    },
+    "complexity": "average_quantity_reserved"
+  },
+  "supply_chain_inventory_levels_average_quantity_available_count": {
+    "formula": "supply_chain_inventory_levels_average_quantity_available_count = {supply_chain_inventory_levels_quantity_available_count} / ({supply_chain_inventory_levels_count} if {supply_chain_inventory_levels_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_inventory_levels_quantity_available_count",
+      "supply_chain_inventory_levels_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_quantity_available_count": 19355.0,
+      "supply_chain_inventory_levels_count": 8.0
+    },
+    "complexity": "average_quantity_available"
+  },
+  "supply_chain_inventory_levels_average_reorder_point_count": {
+    "formula": "supply_chain_inventory_levels_average_reorder_point_count = {supply_chain_inventory_levels_reorder_point_count} / ({supply_chain_inventory_levels_count} if {supply_chain_inventory_levels_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_inventory_levels_reorder_point_count",
+      "supply_chain_inventory_levels_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_reorder_point_count": 12371.0,
+      "supply_chain_inventory_levels_count": 8.0
+    },
+    "complexity": "average_reorder_point"
+  },
+  "supply_chain_inventory_levels_average_safety_stock_qty_count": {
+    "formula": "supply_chain_inventory_levels_average_safety_stock_qty_count = {supply_chain_inventory_levels_safety_stock_qty_count} / ({supply_chain_inventory_levels_count} if {supply_chain_inventory_levels_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_inventory_levels_safety_stock_qty_count",
+      "supply_chain_inventory_levels_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_safety_stock_qty_count": 7320.0,
+      "supply_chain_inventory_levels_count": 8.0
+    },
+    "complexity": "average_safety_stock_qty"
+  },
+  "supply_chain_inventory_levels_average_days_of_supply_days": {
+    "formula": "supply_chain_inventory_levels_average_days_of_supply_days = {supply_chain_inventory_levels_days_of_supply_days} / ({supply_chain_inventory_levels_count} if {supply_chain_inventory_levels_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_inventory_levels_days_of_supply_days",
+      "supply_chain_inventory_levels_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_days_of_supply_days": 361.0,
+      "supply_chain_inventory_levels_count": 8.0
+    },
+    "complexity": "average_days_of_supply"
+  },
+  "supply_chain_inventory_levels_average_avg_daily_demand_count": {
+    "formula": "supply_chain_inventory_levels_average_avg_daily_demand_count = {supply_chain_inventory_levels_avg_daily_demand_count} / ({supply_chain_inventory_levels_count} if {supply_chain_inventory_levels_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_inventory_levels_avg_daily_demand_count",
+      "supply_chain_inventory_levels_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_avg_daily_demand_count": 101.86666666666667,
+      "supply_chain_inventory_levels_count": 8.0
+    },
+    "complexity": "average_avg_daily_demand"
+  },
+  "supply_chain_inventory_levels_average_unit_cost_usd_currency": {
+    "formula": "supply_chain_inventory_levels_average_unit_cost_usd_currency = {supply_chain_inventory_levels_unit_cost_usd_currency} / ({supply_chain_inventory_levels_count} if {supply_chain_inventory_levels_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_inventory_levels_unit_cost_usd_currency",
+      "supply_chain_inventory_levels_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_unit_cost_usd_currency": 4568.76,
+      "supply_chain_inventory_levels_count": 8.0
+    },
+    "complexity": "average_unit_cost_usd"
+  },
+  "supply_chain_inventory_levels_average_total_value_usd_currency": {
+    "formula": "supply_chain_inventory_levels_average_total_value_usd_currency = {supply_chain_inventory_levels_total_value_usd_currency} / ({supply_chain_inventory_levels_count} if {supply_chain_inventory_levels_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_inventory_levels_total_value_usd_currency",
+      "supply_chain_inventory_levels_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_total_value_usd_currency": 288204.0,
+      "supply_chain_inventory_levels_count": 8.0
+    },
+    "complexity": "average_total_value_usd"
+  },
+  "supply_chain_inventory_levels_average_lead_time_days_days": {
+    "formula": "supply_chain_inventory_levels_average_lead_time_days_days = {supply_chain_inventory_levels_lead_time_days_days} / ({supply_chain_inventory_levels_count} if {supply_chain_inventory_levels_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_inventory_levels_lead_time_days_days",
+      "supply_chain_inventory_levels_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_lead_time_days_days": 165.0,
+      "supply_chain_inventory_levels_count": 8.0
+    },
+    "complexity": "average_lead_time_days"
+  },
+  "supply_chain_procurement_spend_average_spend_amount_usd_currency": {
+    "formula": "supply_chain_procurement_spend_average_spend_amount_usd_currency = {supply_chain_procurement_spend_spend_amount_usd_currency} / ({supply_chain_procurement_spend_count} if {supply_chain_procurement_spend_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_procurement_spend_spend_amount_usd_currency",
+      "supply_chain_procurement_spend_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_procurement_spend_spend_amount_usd_currency": 3108050.0,
+      "supply_chain_procurement_spend_count": 12.0
+    },
+    "complexity": "average_spend_amount_usd"
+  },
+  "supply_chain_procurement_spend_average_po_count_count": {
+    "formula": "supply_chain_procurement_spend_average_po_count_count = {supply_chain_procurement_spend_po_count_count} / ({supply_chain_procurement_spend_count} if {supply_chain_procurement_spend_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_procurement_spend_po_count_count",
+      "supply_chain_procurement_spend_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_procurement_spend_po_count_count": 210.0,
+      "supply_chain_procurement_spend_count": 12.0
+    },
+    "complexity": "average_po_count"
+  },
+  "supply_chain_procurement_spend_average_avg_po_value_currency": {
+    "formula": "supply_chain_procurement_spend_average_avg_po_value_currency = {supply_chain_procurement_spend_avg_po_value_currency} / ({supply_chain_procurement_spend_count} if {supply_chain_procurement_spend_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_procurement_spend_avg_po_value_currency",
+      "supply_chain_procurement_spend_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_procurement_spend_avg_po_value_currency": 23818.25125,
+      "supply_chain_procurement_spend_count": 12.0
+    },
+    "complexity": "average_avg_po_value"
+  },
+  "supply_chain_procurement_spend_average_budget_usd_count": {
+    "formula": "supply_chain_procurement_spend_average_budget_usd_count = {supply_chain_procurement_spend_budget_usd_count} / ({supply_chain_procurement_spend_count} if {supply_chain_procurement_spend_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_procurement_spend_budget_usd_count",
+      "supply_chain_procurement_spend_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_procurement_spend_budget_usd_count": 3085000.0,
+      "supply_chain_procurement_spend_count": 12.0
+    },
+    "complexity": "average_budget_usd"
+  },
+  "supply_chain_procurement_spend_average_budget_variance_pct_count": {
+    "formula": "supply_chain_procurement_spend_average_budget_variance_pct_count = {supply_chain_procurement_spend_budget_variance_pct_count} / ({supply_chain_procurement_spend_count} if {supply_chain_procurement_spend_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_procurement_spend_budget_variance_pct_count",
+      "supply_chain_procurement_spend_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_procurement_spend_budget_variance_pct_count": 17.97,
+      "supply_chain_procurement_spend_count": 12.0
+    },
+    "complexity": "average_budget_variance_pct"
+  },
+  "supply_chain_procurement_spend_average_discount_captured_usd_count": {
+    "formula": "supply_chain_procurement_spend_average_discount_captured_usd_count = {supply_chain_procurement_spend_discount_captured_usd_count} / ({supply_chain_procurement_spend_count} if {supply_chain_procurement_spend_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_procurement_spend_discount_captured_usd_count",
+      "supply_chain_procurement_spend_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_procurement_spend_discount_captured_usd_count": 68459.0,
+      "supply_chain_procurement_spend_count": 12.0
+    },
+    "complexity": "average_discount_captured_usd"
+  },
+  "supply_chain_procurement_spend_average_tax_amount_usd_currency": {
+    "formula": "supply_chain_procurement_spend_average_tax_amount_usd_currency = {supply_chain_procurement_spend_tax_amount_usd_currency} / ({supply_chain_procurement_spend_count} if {supply_chain_procurement_spend_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_procurement_spend_tax_amount_usd_currency",
+      "supply_chain_procurement_spend_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_procurement_spend_tax_amount_usd_currency": 248644.0,
+      "supply_chain_procurement_spend_count": 12.0
+    },
+    "complexity": "average_tax_amount_usd"
+  },
+  "supply_chain_suppliers_average_total_orders_currency": {
+    "formula": "supply_chain_suppliers_average_total_orders_currency = {supply_chain_suppliers_total_orders_currency} / ({supply_chain_suppliers_count} if {supply_chain_suppliers_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_suppliers_total_orders_currency",
+      "supply_chain_suppliers_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_total_orders_currency": 2892.0,
+      "supply_chain_suppliers_count": 10.0
+    },
+    "complexity": "average_total_orders"
+  },
+  "supply_chain_suppliers_average_on_time_delivery_rate_percent": {
+    "formula": "supply_chain_suppliers_average_on_time_delivery_rate_percent = {supply_chain_suppliers_on_time_delivery_rate_percent} / ({supply_chain_suppliers_count} if {supply_chain_suppliers_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_suppliers_on_time_delivery_rate_percent",
+      "supply_chain_suppliers_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_on_time_delivery_rate_percent": 1358.3,
+      "supply_chain_suppliers_count": 10.0
+    },
+    "complexity": "average_on_time_delivery_rate"
+  },
+  "supply_chain_suppliers_average_quality_acceptance_rate_percent": {
+    "formula": "supply_chain_suppliers_average_quality_acceptance_rate_percent = {supply_chain_suppliers_quality_acceptance_rate_percent} / ({supply_chain_suppliers_count} if {supply_chain_suppliers_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_suppliers_quality_acceptance_rate_percent",
+      "supply_chain_suppliers_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_quality_acceptance_rate_percent": 1411.8,
+      "supply_chain_suppliers_count": 10.0
+    },
+    "complexity": "average_quality_acceptance_rate"
+  },
+  "supply_chain_suppliers_average_avg_lead_time_days_days": {
+    "formula": "supply_chain_suppliers_average_avg_lead_time_days_days = {supply_chain_suppliers_avg_lead_time_days_days} / ({supply_chain_suppliers_count} if {supply_chain_suppliers_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_suppliers_avg_lead_time_days_days",
+      "supply_chain_suppliers_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_avg_lead_time_days_days": 16.8,
+      "supply_chain_suppliers_count": 10.0
+    },
+    "complexity": "average_avg_lead_time_days"
+  },
+  "supply_chain_suppliers_average_total_spend_usd_currency": {
+    "formula": "supply_chain_suppliers_average_total_spend_usd_currency = {supply_chain_suppliers_total_spend_usd_currency} / ({supply_chain_suppliers_count} if {supply_chain_suppliers_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_suppliers_total_spend_usd_currency",
+      "supply_chain_suppliers_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_total_spend_usd_currency": 47485000.0,
+      "supply_chain_suppliers_count": 10.0
+    },
+    "complexity": "average_total_spend_usd"
+  },
+  "supply_chain_suppliers_average_defect_rate_percent": {
+    "formula": "supply_chain_suppliers_average_defect_rate_percent = {supply_chain_suppliers_defect_rate_percent} / ({supply_chain_suppliers_count} if {supply_chain_suppliers_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_suppliers_defect_rate_percent",
+      "supply_chain_suppliers_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_defect_rate_percent": 34.7,
+      "supply_chain_suppliers_count": 10.0
+    },
+    "complexity": "average_defect_rate"
+  },
+  "supply_chain_suppliers_average_return_rate_percent": {
+    "formula": "supply_chain_suppliers_average_return_rate_percent = {supply_chain_suppliers_return_rate_percent} / ({supply_chain_suppliers_count} if {supply_chain_suppliers_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_suppliers_return_rate_percent",
+      "supply_chain_suppliers_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_return_rate_percent": 41.0,
+      "supply_chain_suppliers_count": 10.0
+    },
+    "complexity": "average_return_rate"
+  },
+  "supply_chain_suppliers_average_avg_po_value_usd_currency": {
+    "formula": "supply_chain_suppliers_average_avg_po_value_usd_currency = {supply_chain_suppliers_avg_po_value_usd_currency} / ({supply_chain_suppliers_count} if {supply_chain_suppliers_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_suppliers_avg_po_value_usd_currency",
+      "supply_chain_suppliers_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_avg_po_value_usd_currency": 18890.533333333333,
+      "supply_chain_suppliers_count": 10.0
+    },
+    "complexity": "average_avg_po_value_usd"
+  },
+  "supply_chain_suppliers_average_yoy_spend_change_pct_currency": {
+    "formula": "supply_chain_suppliers_average_yoy_spend_change_pct_currency = {supply_chain_suppliers_yoy_spend_change_pct_currency} / ({supply_chain_suppliers_count} if {supply_chain_suppliers_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_suppliers_yoy_spend_change_pct_currency",
+      "supply_chain_suppliers_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_yoy_spend_change_pct_currency": 4.699999999999993,
+      "supply_chain_suppliers_count": 10.0
+    },
+    "complexity": "average_yoy_spend_change_pct"
+  },
+  "supply_chain_inventory_levels_growth_quantity_on_hand_this_month_percent": {
+    "formula": "supply_chain_inventory_levels_growth_quantity_on_hand_this_month_percent = (({supply_chain_inventory_levels_quantity_on_hand_this_month_count} - {supply_chain_inventory_levels_quantity_on_hand_last_month_count}) / abs({supply_chain_inventory_levels_quantity_on_hand_last_month_count}) * 100) if {supply_chain_inventory_levels_quantity_on_hand_last_month_count} != 0 else 0",
+    "depends_on": [
+      "supply_chain_inventory_levels_quantity_on_hand_this_month_count",
+      "supply_chain_inventory_levels_quantity_on_hand_last_month_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_quantity_on_hand_this_month_count": 21261.0,
+      "supply_chain_inventory_levels_quantity_on_hand_last_month_count": 85.0
+    },
+    "complexity": "growth_quantity_on_hand"
+  },
+  "supply_chain_inventory_levels_growth_quantity_reserved_this_month_percent": {
+    "formula": "supply_chain_inventory_levels_growth_quantity_reserved_this_month_percent = (({supply_chain_inventory_levels_quantity_reserved_this_month_count} - {supply_chain_inventory_levels_quantity_reserved_last_month_count}) / abs({supply_chain_inventory_levels_quantity_reserved_last_month_count}) * 100) if {supply_chain_inventory_levels_quantity_reserved_last_month_count} != 0 else 0",
+    "depends_on": [
+      "supply_chain_inventory_levels_quantity_reserved_this_month_count",
+      "supply_chain_inventory_levels_quantity_reserved_last_month_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_quantity_reserved_this_month_count": 4829.0,
+      "supply_chain_inventory_levels_quantity_reserved_last_month_count": 60.0
+    },
+    "complexity": "growth_quantity_reserved"
+  },
+  "supply_chain_inventory_levels_growth_quantity_available_this_month_percent": {
+    "formula": "supply_chain_inventory_levels_growth_quantity_available_this_month_percent = (({supply_chain_inventory_levels_quantity_available_this_month_count} - {supply_chain_inventory_levels_quantity_available_last_month_count}) / abs({supply_chain_inventory_levels_quantity_available_last_month_count}) * 100) if {supply_chain_inventory_levels_quantity_available_last_month_count} != 0 else 0",
+    "depends_on": [
+      "supply_chain_inventory_levels_quantity_available_this_month_count",
+      "supply_chain_inventory_levels_quantity_available_last_month_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_quantity_available_this_month_count": 16432.0,
+      "supply_chain_inventory_levels_quantity_available_last_month_count": 25.0
+    },
+    "complexity": "growth_quantity_available"
+  },
+  "supply_chain_inventory_levels_growth_reorder_point_this_month_percent": {
+    "formula": "supply_chain_inventory_levels_growth_reorder_point_this_month_percent = (({supply_chain_inventory_levels_reorder_point_this_month_count} - {supply_chain_inventory_levels_reorder_point_last_month_count}) / abs({supply_chain_inventory_levels_reorder_point_last_month_count}) * 100) if {supply_chain_inventory_levels_reorder_point_last_month_count} != 0 else 0",
+    "depends_on": [
+      "supply_chain_inventory_levels_reorder_point_this_month_count",
+      "supply_chain_inventory_levels_reorder_point_last_month_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_reorder_point_this_month_count": 6613.0,
+      "supply_chain_inventory_levels_reorder_point_last_month_count": 200.0
+    },
+    "complexity": "growth_reorder_point"
+  },
+  "supply_chain_inventory_levels_growth_safety_stock_qty_this_month_percent": {
+    "formula": "supply_chain_inventory_levels_growth_safety_stock_qty_this_month_percent = (({supply_chain_inventory_levels_safety_stock_qty_this_month_count} - {supply_chain_inventory_levels_safety_stock_qty_last_month_count}) / abs({supply_chain_inventory_levels_safety_stock_qty_last_month_count}) * 100) if {supply_chain_inventory_levels_safety_stock_qty_last_month_count} != 0 else 0",
+    "depends_on": [
+      "supply_chain_inventory_levels_safety_stock_qty_this_month_count",
+      "supply_chain_inventory_levels_safety_stock_qty_last_month_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_safety_stock_qty_this_month_count": 7740.0,
+      "supply_chain_inventory_levels_safety_stock_qty_last_month_count": 7740.0
+    },
+    "complexity": "growth_safety_stock_qty"
+  },
+  "supply_chain_inventory_levels_growth_days_of_supply_this_month_percent": {
+    "formula": "supply_chain_inventory_levels_growth_days_of_supply_this_month_percent = (({supply_chain_inventory_levels_days_of_supply_this_month_days} - {supply_chain_inventory_levels_days_of_supply_last_month_days}) / abs({supply_chain_inventory_levels_days_of_supply_last_month_days}) * 100) if {supply_chain_inventory_levels_days_of_supply_last_month_days} != 0 else 0",
+    "depends_on": [
+      "supply_chain_inventory_levels_days_of_supply_this_month_days",
+      "supply_chain_inventory_levels_days_of_supply_last_month_days"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_days_of_supply_this_month_days": 286.0,
+      "supply_chain_inventory_levels_days_of_supply_last_month_days": 4.0
+    },
+    "complexity": "growth_days_of_supply"
+  },
+  "supply_chain_inventory_levels_growth_avg_daily_demand_this_month_percent": {
+    "formula": "supply_chain_inventory_levels_growth_avg_daily_demand_this_month_percent = (({supply_chain_inventory_levels_avg_daily_demand_this_month_count} - {supply_chain_inventory_levels_avg_daily_demand_last_month_count}) / abs({supply_chain_inventory_levels_avg_daily_demand_last_month_count}) * 100) if {supply_chain_inventory_levels_avg_daily_demand_last_month_count} != 0 else 0",
+    "depends_on": [
+      "supply_chain_inventory_levels_avg_daily_demand_this_month_count",
+      "supply_chain_inventory_levels_avg_daily_demand_last_month_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_avg_daily_demand_this_month_count": 640.9,
+      "supply_chain_inventory_levels_avg_daily_demand_last_month_count": 21.5
+    },
+    "complexity": "growth_avg_daily_demand"
+  },
+  "supply_chain_inventory_levels_growth_unit_cost_usd_this_month_percent": {
+    "formula": "supply_chain_inventory_levels_growth_unit_cost_usd_this_month_percent = (({supply_chain_inventory_levels_unit_cost_usd_this_month_currency} - {supply_chain_inventory_levels_unit_cost_usd_last_month_currency}) / abs({supply_chain_inventory_levels_unit_cost_usd_last_month_currency}) * 100) if {supply_chain_inventory_levels_unit_cost_usd_last_month_currency} != 0 else 0",
+    "depends_on": [
+      "supply_chain_inventory_levels_unit_cost_usd_this_month_currency",
+      "supply_chain_inventory_levels_unit_cost_usd_last_month_currency"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_unit_cost_usd_this_month_currency": 2638.38,
+      "supply_chain_inventory_levels_unit_cost_usd_last_month_currency": 18.75
+    },
+    "complexity": "growth_unit_cost_usd"
+  },
+  "supply_chain_inventory_levels_growth_total_value_usd_this_month_percent": {
+    "formula": "supply_chain_inventory_levels_growth_total_value_usd_this_month_percent = (({supply_chain_inventory_levels_total_value_usd_this_month_currency} - {supply_chain_inventory_levels_total_value_usd_last_month_currency}) / abs({supply_chain_inventory_levels_total_value_usd_last_month_currency}) * 100) if {supply_chain_inventory_levels_total_value_usd_last_month_currency} != 0 else 0",
+    "depends_on": [
+      "supply_chain_inventory_levels_total_value_usd_this_month_currency",
+      "supply_chain_inventory_levels_total_value_usd_last_month_currency"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_total_value_usd_this_month_currency": 221407.0,
+      "supply_chain_inventory_levels_total_value_usd_last_month_currency": 1593.75
+    },
+    "complexity": "growth_total_value_usd"
+  },
+  "supply_chain_inventory_levels_growth_lead_time_days_this_month_percent": {
+    "formula": "supply_chain_inventory_levels_growth_lead_time_days_this_month_percent = (({supply_chain_inventory_levels_lead_time_days_this_month_days} - {supply_chain_inventory_levels_lead_time_days_last_month_days}) / abs({supply_chain_inventory_levels_lead_time_days_last_month_days}) * 100) if {supply_chain_inventory_levels_lead_time_days_last_month_days} != 0 else 0",
+    "depends_on": [
+      "supply_chain_inventory_levels_lead_time_days_this_month_days",
+      "supply_chain_inventory_levels_lead_time_days_last_month_days"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_lead_time_days_this_month_days": 105.0,
+      "supply_chain_inventory_levels_lead_time_days_last_month_days": 7.0
+    },
+    "complexity": "growth_lead_time_days"
+  },
+  "supply_chain_procurement_spend_growth_spend_amount_usd_this_month_percent": {
+    "formula": "supply_chain_procurement_spend_growth_spend_amount_usd_this_month_percent = (({supply_chain_procurement_spend_spend_amount_usd_this_month_currency} - {supply_chain_procurement_spend_spend_amount_usd_last_month_currency}) / abs({supply_chain_procurement_spend_spend_amount_usd_last_month_currency}) * 100) if {supply_chain_procurement_spend_spend_amount_usd_last_month_currency} != 0 else 0",
+    "depends_on": [
+      "supply_chain_procurement_spend_spend_amount_usd_this_month_currency",
+      "supply_chain_procurement_spend_spend_amount_usd_last_month_currency"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_procurement_spend_spend_amount_usd_this_month_currency": 0.0,
+      "supply_chain_procurement_spend_spend_amount_usd_last_month_currency": 0.0
+    },
+    "complexity": "growth_spend_amount_usd"
+  },
+  "supply_chain_procurement_spend_growth_po_count_this_month_percent": {
+    "formula": "supply_chain_procurement_spend_growth_po_count_this_month_percent = (({supply_chain_procurement_spend_po_count_this_month_count} - {supply_chain_procurement_spend_po_count_last_month_count}) / abs({supply_chain_procurement_spend_po_count_last_month_count}) * 100) if {supply_chain_procurement_spend_po_count_last_month_count} != 0 else 0",
+    "depends_on": [
+      "supply_chain_procurement_spend_po_count_this_month_count",
+      "supply_chain_procurement_spend_po_count_last_month_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_procurement_spend_po_count_this_month_count": 0.0,
+      "supply_chain_procurement_spend_po_count_last_month_count": 0.0
+    },
+    "complexity": "growth_po_count"
+  },
+  "supply_chain_procurement_spend_growth_avg_po_value_this_month_percent": {
+    "formula": "supply_chain_procurement_spend_growth_avg_po_value_this_month_percent = (({supply_chain_procurement_spend_avg_po_value_this_month_currency} - {supply_chain_procurement_spend_avg_po_value_last_month_currency}) / abs({supply_chain_procurement_spend_avg_po_value_last_month_currency}) * 100) if {supply_chain_procurement_spend_avg_po_value_last_month_currency} != 0 else 0",
+    "depends_on": [
+      "supply_chain_procurement_spend_avg_po_value_this_month_currency",
+      "supply_chain_procurement_spend_avg_po_value_last_month_currency"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_procurement_spend_avg_po_value_this_month_currency": 0.0,
+      "supply_chain_procurement_spend_avg_po_value_last_month_currency": 0.0
+    },
+    "complexity": "growth_avg_po_value"
+  },
+  "supply_chain_procurement_spend_growth_budget_usd_this_month_percent": {
+    "formula": "supply_chain_procurement_spend_growth_budget_usd_this_month_percent = (({supply_chain_procurement_spend_budget_usd_this_month_count} - {supply_chain_procurement_spend_budget_usd_last_month_count}) / abs({supply_chain_procurement_spend_budget_usd_last_month_count}) * 100) if {supply_chain_procurement_spend_budget_usd_last_month_count} != 0 else 0",
+    "depends_on": [
+      "supply_chain_procurement_spend_budget_usd_this_month_count",
+      "supply_chain_procurement_spend_budget_usd_last_month_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_procurement_spend_budget_usd_this_month_count": 0.0,
+      "supply_chain_procurement_spend_budget_usd_last_month_count": 0.0
+    },
+    "complexity": "growth_budget_usd"
+  },
+  "supply_chain_procurement_spend_growth_budget_variance_pct_this_month_percent": {
+    "formula": "supply_chain_procurement_spend_growth_budget_variance_pct_this_month_percent = (({supply_chain_procurement_spend_budget_variance_pct_this_month_count} - {supply_chain_procurement_spend_budget_variance_pct_last_month_count}) / abs({supply_chain_procurement_spend_budget_variance_pct_last_month_count}) * 100) if {supply_chain_procurement_spend_budget_variance_pct_last_month_count} != 0 else 0",
+    "depends_on": [
+      "supply_chain_procurement_spend_budget_variance_pct_this_month_count",
+      "supply_chain_procurement_spend_budget_variance_pct_last_month_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_procurement_spend_budget_variance_pct_this_month_count": 0.0,
+      "supply_chain_procurement_spend_budget_variance_pct_last_month_count": 0.0
+    },
+    "complexity": "growth_budget_variance_pct"
+  },
+  "supply_chain_procurement_spend_growth_discount_captured_usd_this_month_percent": {
+    "formula": "supply_chain_procurement_spend_growth_discount_captured_usd_this_month_percent = (({supply_chain_procurement_spend_discount_captured_usd_this_month_count} - {supply_chain_procurement_spend_discount_captured_usd_last_month_count}) / abs({supply_chain_procurement_spend_discount_captured_usd_last_month_count}) * 100) if {supply_chain_procurement_spend_discount_captured_usd_last_month_count} != 0 else 0",
+    "depends_on": [
+      "supply_chain_procurement_spend_discount_captured_usd_this_month_count",
+      "supply_chain_procurement_spend_discount_captured_usd_last_month_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_procurement_spend_discount_captured_usd_this_month_count": 0.0,
+      "supply_chain_procurement_spend_discount_captured_usd_last_month_count": 0.0
+    },
+    "complexity": "growth_discount_captured_usd"
+  },
+  "supply_chain_procurement_spend_growth_tax_amount_usd_this_month_percent": {
+    "formula": "supply_chain_procurement_spend_growth_tax_amount_usd_this_month_percent = (({supply_chain_procurement_spend_tax_amount_usd_this_month_currency} - {supply_chain_procurement_spend_tax_amount_usd_last_month_currency}) / abs({supply_chain_procurement_spend_tax_amount_usd_last_month_currency}) * 100) if {supply_chain_procurement_spend_tax_amount_usd_last_month_currency} != 0 else 0",
+    "depends_on": [
+      "supply_chain_procurement_spend_tax_amount_usd_this_month_currency",
+      "supply_chain_procurement_spend_tax_amount_usd_last_month_currency"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_procurement_spend_tax_amount_usd_this_month_currency": 0.0,
+      "supply_chain_procurement_spend_tax_amount_usd_last_month_currency": 0.0
+    },
+    "complexity": "growth_tax_amount_usd"
+  },
+  "supply_chain_suppliers_growth_total_orders_this_month_percent": {
+    "formula": "supply_chain_suppliers_growth_total_orders_this_month_percent = (({supply_chain_suppliers_total_orders_this_month_currency} - {supply_chain_suppliers_total_orders_last_month_currency}) / abs({supply_chain_suppliers_total_orders_last_month_currency}) * 100) if {supply_chain_suppliers_total_orders_last_month_currency} != 0 else 0",
+    "depends_on": [
+      "supply_chain_suppliers_total_orders_this_month_currency",
+      "supply_chain_suppliers_total_orders_last_month_currency"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_total_orders_this_month_currency": 1905.0,
+      "supply_chain_suppliers_total_orders_last_month_currency": 204.0
+    },
+    "complexity": "growth_total_orders"
+  },
+  "supply_chain_suppliers_growth_on_time_delivery_rate_this_month_percent": {
+    "formula": "supply_chain_suppliers_growth_on_time_delivery_rate_this_month_percent = (({supply_chain_suppliers_on_time_delivery_rate_this_month_percent} - {supply_chain_suppliers_on_time_delivery_rate_last_month_percent}) / abs({supply_chain_suppliers_on_time_delivery_rate_last_month_percent}) * 100) if {supply_chain_suppliers_on_time_delivery_rate_last_month_percent} != 0 else 0",
+    "depends_on": [
+      "supply_chain_suppliers_on_time_delivery_rate_this_month_percent",
+      "supply_chain_suppliers_on_time_delivery_rate_last_month_percent"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_on_time_delivery_rate_this_month_percent": 758.0,
+      "supply_chain_suppliers_on_time_delivery_rate_last_month_percent": 97.8
+    },
+    "complexity": "growth_on_time_delivery_rate"
+  },
+  "supply_chain_suppliers_growth_quality_acceptance_rate_this_month_percent": {
+    "formula": "supply_chain_suppliers_growth_quality_acceptance_rate_this_month_percent = (({supply_chain_suppliers_quality_acceptance_rate_this_month_percent} - {supply_chain_suppliers_quality_acceptance_rate_last_month_percent}) / abs({supply_chain_suppliers_quality_acceptance_rate_last_month_percent}) * 100) if {supply_chain_suppliers_quality_acceptance_rate_last_month_percent} != 0 else 0",
+    "depends_on": [
+      "supply_chain_suppliers_quality_acceptance_rate_this_month_percent",
+      "supply_chain_suppliers_quality_acceptance_rate_last_month_percent"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_quality_acceptance_rate_this_month_percent": 778.7,
+      "supply_chain_suppliers_quality_acceptance_rate_last_month_percent": 99.1
+    },
+    "complexity": "growth_quality_acceptance_rate"
+  },
+  "supply_chain_suppliers_growth_avg_lead_time_days_this_month_percent": {
+    "formula": "supply_chain_suppliers_growth_avg_lead_time_days_this_month_percent = (({supply_chain_suppliers_avg_lead_time_days_this_month_days} - {supply_chain_suppliers_avg_lead_time_days_last_month_days}) / abs({supply_chain_suppliers_avg_lead_time_days_last_month_days}) * 100) if {supply_chain_suppliers_avg_lead_time_days_last_month_days} != 0 else 0",
+    "depends_on": [
+      "supply_chain_suppliers_avg_lead_time_days_this_month_days",
+      "supply_chain_suppliers_avg_lead_time_days_last_month_days"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_avg_lead_time_days_this_month_days": 12.25,
+      "supply_chain_suppliers_avg_lead_time_days_last_month_days": 12.0
+    },
+    "complexity": "growth_avg_lead_time_days"
+  },
+  "supply_chain_suppliers_growth_total_spend_usd_this_month_percent": {
+    "formula": "supply_chain_suppliers_growth_total_spend_usd_this_month_percent = (({supply_chain_suppliers_total_spend_usd_this_month_currency} - {supply_chain_suppliers_total_spend_usd_last_month_currency}) / abs({supply_chain_suppliers_total_spend_usd_last_month_currency}) * 100) if {supply_chain_suppliers_total_spend_usd_last_month_currency} != 0 else 0",
+    "depends_on": [
+      "supply_chain_suppliers_total_spend_usd_this_month_currency",
+      "supply_chain_suppliers_total_spend_usd_last_month_currency"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_total_spend_usd_this_month_currency": 35190000.0,
+      "supply_chain_suppliers_total_spend_usd_last_month_currency": 7650000.0
+    },
+    "complexity": "growth_total_spend_usd"
+  },
+  "supply_chain_suppliers_growth_defect_rate_this_month_percent": {
+    "formula": "supply_chain_suppliers_growth_defect_rate_this_month_percent = (({supply_chain_suppliers_defect_rate_this_month_percent} - {supply_chain_suppliers_defect_rate_last_month_percent}) / abs({supply_chain_suppliers_defect_rate_last_month_percent}) * 100) if {supply_chain_suppliers_defect_rate_last_month_percent} != 0 else 0",
+    "depends_on": [
+      "supply_chain_suppliers_defect_rate_this_month_percent",
+      "supply_chain_suppliers_defect_rate_last_month_percent"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_defect_rate_this_month_percent": 8.700000000000001,
+      "supply_chain_suppliers_defect_rate_last_month_percent": 0.4
+    },
+    "complexity": "growth_defect_rate"
+  },
+  "supply_chain_suppliers_growth_return_rate_this_month_percent": {
+    "formula": "supply_chain_suppliers_growth_return_rate_this_month_percent = (({supply_chain_suppliers_return_rate_this_month_percent} - {supply_chain_suppliers_return_rate_last_month_percent}) / abs({supply_chain_suppliers_return_rate_last_month_percent}) * 100) if {supply_chain_suppliers_return_rate_last_month_percent} != 0 else 0",
+    "depends_on": [
+      "supply_chain_suppliers_return_rate_this_month_percent",
+      "supply_chain_suppliers_return_rate_last_month_percent"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_return_rate_this_month_percent": 11.4,
+      "supply_chain_suppliers_return_rate_last_month_percent": 0.7
+    },
+    "complexity": "growth_return_rate"
+  },
+  "supply_chain_suppliers_growth_avg_po_value_usd_this_month_percent": {
+    "formula": "supply_chain_suppliers_growth_avg_po_value_usd_this_month_percent = (({supply_chain_suppliers_avg_po_value_usd_this_month_currency} - {supply_chain_suppliers_avg_po_value_usd_last_month_currency}) / abs({supply_chain_suppliers_avg_po_value_usd_last_month_currency}) * 100) if {supply_chain_suppliers_avg_po_value_usd_last_month_currency} != 0 else 0",
+    "depends_on": [
+      "supply_chain_suppliers_avg_po_value_usd_this_month_currency",
+      "supply_chain_suppliers_avg_po_value_usd_last_month_currency"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_avg_po_value_usd_this_month_currency": 26119.875,
+      "supply_chain_suppliers_avg_po_value_usd_last_month_currency": 37500.0
+    },
+    "complexity": "growth_avg_po_value_usd"
+  },
+  "supply_chain_suppliers_growth_yoy_spend_change_pct_this_month_percent": {
+    "formula": "supply_chain_suppliers_growth_yoy_spend_change_pct_this_month_percent = (({supply_chain_suppliers_yoy_spend_change_pct_this_month_currency} - {supply_chain_suppliers_yoy_spend_change_pct_last_month_currency}) / abs({supply_chain_suppliers_yoy_spend_change_pct_last_month_currency}) * 100) if {supply_chain_suppliers_yoy_spend_change_pct_last_month_currency} != 0 else 0",
+    "depends_on": [
+      "supply_chain_suppliers_yoy_spend_change_pct_this_month_currency",
+      "supply_chain_suppliers_yoy_spend_change_pct_last_month_currency"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_yoy_spend_change_pct_this_month_currency": 69.1,
+      "supply_chain_suppliers_yoy_spend_change_pct_last_month_currency": 5.1
+    },
+    "complexity": "growth_yoy_spend_change_pct"
+  },
+  "supply_chain_inventory_turnover_rate_ratio": {
+    "formula": "supply_chain_inventory_turnover_rate_ratio = {supply_chain_inventory_levels_avg_daily_demand_count} / ({supply_chain_inventory_levels_quantity_available_count} if {supply_chain_inventory_levels_quantity_available_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_inventory_levels_avg_daily_demand_count",
+      "supply_chain_inventory_levels_quantity_available_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_avg_daily_demand_count": 101.86666666666667,
+      "supply_chain_inventory_levels_quantity_available_count": 19355.0
+    },
+    "complexity": "inventory_turnover_rate"
+  },
+  "supply_chain_days_of_supply_coverage_days": {
+    "formula": "supply_chain_days_of_supply_coverage_days = {supply_chain_inventory_levels_days_of_supply_days} / ({supply_chain_inventory_levels_lead_time_days_days} if {supply_chain_inventory_levels_lead_time_days_days} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_inventory_levels_days_of_supply_days",
+      "supply_chain_inventory_levels_lead_time_days_days"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_inventory_levels_days_of_supply_days": 361.0,
+      "supply_chain_inventory_levels_lead_time_days_days": 165.0
+    },
+    "complexity": "days_of_supply_coverage"
+  },
+  "supply_chain_procurement_budget_utilization_percent": {
+    "formula": "supply_chain_procurement_budget_utilization_percent = {supply_chain_procurement_spend_spend_amount_usd_currency} / ({supply_chain_procurement_spend_budget_usd_count} if {supply_chain_procurement_spend_budget_usd_count} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_procurement_spend_spend_amount_usd_currency",
+      "supply_chain_procurement_spend_budget_usd_count"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_procurement_spend_spend_amount_usd_currency": 3108050.0,
+      "supply_chain_procurement_spend_budget_usd_count": 3085000.0
+    },
+    "complexity": "procurement_budget_utilization"
+  },
+  "supply_chain_supplier_quality_score_ratio": {
+    "formula": "supply_chain_supplier_quality_score_ratio = {supply_chain_suppliers_quality_acceptance_rate_percent} / ({supply_chain_suppliers_defect_rate_percent} if {supply_chain_suppliers_defect_rate_percent} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_suppliers_quality_acceptance_rate_percent",
+      "supply_chain_suppliers_defect_rate_percent"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_quality_acceptance_rate_percent": 1411.8,
+      "supply_chain_suppliers_defect_rate_percent": 34.7
+    },
+    "complexity": "supplier_quality_score"
+  },
+  "supply_chain_on_time_delivery_rate_percent": {
+    "formula": "supply_chain_on_time_delivery_rate_percent = {supply_chain_suppliers_on_time_delivery_rate_percent} / ({supply_chain_suppliers_total_orders_currency} if {supply_chain_suppliers_total_orders_currency} != 0 else 1)",
+    "depends_on": [
+      "supply_chain_suppliers_on_time_delivery_rate_percent",
+      "supply_chain_suppliers_total_orders_currency"
+    ],
+    "dep_oracle_values": {
+      "supply_chain_suppliers_on_time_delivery_rate_percent": 1358.3,
+      "supply_chain_suppliers_total_orders_currency": 2892.0
+    },
+    "complexity": "on_time_delivery_rate"
+  }
+}

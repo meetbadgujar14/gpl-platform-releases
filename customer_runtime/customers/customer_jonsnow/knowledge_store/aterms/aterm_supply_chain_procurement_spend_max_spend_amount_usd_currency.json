@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_procurement_spend_max_spend_amount_usd_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_procurement_spend_max_spend_amount_usd_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "procurement_spend",
+    "measure": "max_spend_amount_usd",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 567200.0,
+  "formula_line": "MEASURE('supply_chain_procurement_spend_ERP_record', 'MAX', 'spend_amount_usd', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-08-25T09:49:47Z",
+  "usage_count": 0,
+  "source_goal": "What is the max spend amount usd across all procurement_spends?",
+  "wave": 2,
+  "operator": "MEASURE",
+  "verified_at": "2026-08-25T09:57:35Z"
+}

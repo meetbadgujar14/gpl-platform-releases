@@ -1,0 +1,45 @@
+{
+  "wave": "B",
+  "goal_count": 2,
+  "generated_at": "2026-08-25T09:49:47Z",
+  "goals": [
+    {
+      "goal": "Which supplier accounts for the highest total spend year to date?",
+      "canonical_id": "supply_chain_suppliers_total_spend_usd_active_ytd_currency_max_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "total_spend_usd",
+        "state": "Active",
+        "scope": "max",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "How is procurement spend distributed across suppliers this quarter?",
+      "canonical_id": "supply_chain_suppliers_total_spend_usd_all_by_supplier_this_quarter_currency_by_supplier_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "total_spend_usd",
+        "state": "all",
+        "scope": "by_supplier",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "by_supplier"
+      },
+      "wave": "B",
+      "complexity": "KPI",
+      "join": null
+    }
+  ]
+}

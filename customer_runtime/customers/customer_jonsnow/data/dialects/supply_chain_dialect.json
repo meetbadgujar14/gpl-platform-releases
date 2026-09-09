@@ -1,0 +1,2428 @@
+{
+  "domain": "supply_chain",
+  "version": "2.0",
+  "generated_at": "2026-08-25T09:48:36Z",
+  "generated_from_seed": "supply_chain_seed.json",
+  "coverage": 1.0,
+  "vocabulary": {
+    "entity": [
+      {
+        "term": "inventory_levels",
+        "canonical": "inventory_levels",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "current inventory_levels",
+        "canonical": "inventory_levels",
+        "weight": 0.95,
+        "source": "structural"
+      },
+      {
+        "term": "active inventory_levels",
+        "canonical": "inventory_levels",
+        "weight": 0.9,
+        "source": "structural"
+      },
+      {
+        "term": "procurement_spend",
+        "canonical": "procurement_spend",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "procurement_spends",
+        "canonical": "procurement_spend",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "suppliers",
+        "canonical": "suppliers",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "suppliers list",
+        "canonical": "suppliers",
+        "weight": 0.85,
+        "source": "structural"
+      },
+      {
+        "term": "suppliers master",
+        "canonical": "suppliers",
+        "weight": 0.85,
+        "source": "structural"
+      },
+      {
+        "term": "inventory levels",
+        "canonical": "inventory_levels",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "stock levels",
+        "canonical": "inventory_levels",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "current inventory",
+        "canonical": "inventory_levels",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "stock on hand",
+        "canonical": "inventory_levels",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "available inventory",
+        "canonical": "inventory_levels",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "inventory quantities",
+        "canonical": "inventory_levels",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "stock quantities",
+        "canonical": "inventory_levels",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "on-hand inventory",
+        "canonical": "inventory_levels",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "purchasing spend",
+        "canonical": "procurement_spend",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "procurement expenditure",
+        "canonical": "procurement_spend",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "buying spend",
+        "canonical": "procurement_spend",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "purchase spend",
+        "canonical": "procurement_spend",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "sourcing spend",
+        "canonical": "procurement_spend",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "procurement costs",
+        "canonical": "procurement_spend",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "purchasing costs",
+        "canonical": "procurement_spend",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "buying costs",
+        "canonical": "procurement_spend",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "vendor",
+        "canonical": "suppliers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "vendors",
+        "canonical": "suppliers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "supplier",
+        "canonical": "suppliers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "provider",
+        "canonical": "suppliers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "providers",
+        "canonical": "suppliers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "supply partner",
+        "canonical": "suppliers",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "supply partners",
+        "canonical": "suppliers",
+        "weight": 0.95,
+        "source": "ai"
+      }
+    ],
+    "state": [
+      {
+        "term": "disputed",
+        "canonical": "Disputed",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "disputed procurement_spend",
+        "canonical": "Disputed",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "procurement_spend disputed",
+        "canonical": "Disputed",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "paid",
+        "canonical": "Paid",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "paid procurement_spend",
+        "canonical": "Paid",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "procurement_spend paid",
+        "canonical": "Paid",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "pending",
+        "canonical": "Pending",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "pending procurement_spend",
+        "canonical": "Pending",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "procurement_spend pending",
+        "canonical": "Pending",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "active",
+        "canonical": "Active",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "active suppliers",
+        "canonical": "Active",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "suppliers active",
+        "canonical": "Active",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "inactive",
+        "canonical": "Inactive",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "inactive suppliers",
+        "canonical": "Inactive",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "suppliers inactive",
+        "canonical": "Inactive",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "under review",
+        "canonical": "Under Review",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "under review suppliers",
+        "canonical": "Under Review",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "suppliers under review",
+        "canonical": "Under Review",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "challenged",
+        "canonical": "Disputed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "contested",
+        "canonical": "Disputed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "under dispute",
+        "canonical": "Disputed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "in dispute",
+        "canonical": "Disputed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "disagreed",
+        "canonical": "Disputed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "settled",
+        "canonical": "Paid",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "cleared",
+        "canonical": "Paid",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "payment completed",
+        "canonical": "Paid",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "invoiced and paid",
+        "canonical": "Paid",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "awaiting payment",
+        "canonical": "Pending",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "outstanding",
+        "canonical": "Pending",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "unpaid",
+        "canonical": "Pending",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "not yet paid",
+        "canonical": "Pending",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "waiting to be paid",
+        "canonical": "Pending",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "enabled",
+        "canonical": "Active",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "live",
+        "canonical": "Active",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "operational",
+        "canonical": "Active",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "current",
+        "canonical": "Active",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "not active",
+        "canonical": "Inactive",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "deactivated",
+        "canonical": "Inactive",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "disabled",
+        "canonical": "Inactive",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "dormant",
+        "canonical": "Inactive",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "pending review",
+        "canonical": "Under Review",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "being reviewed",
+        "canonical": "Under Review",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "in review",
+        "canonical": "Under Review",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "under evaluation",
+        "canonical": "Under Review",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "being evaluated",
+        "canonical": "Under Review",
+        "weight": 0.9,
+        "source": "ai"
+      }
+    ],
+    "measure": [
+      {
+        "term": "count",
+        "canonical": "count",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "how many",
+        "canonical": "count",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "number of",
+        "canonical": "count",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "total",
+        "canonical": "sum",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "sum",
+        "canonical": "sum",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "amount",
+        "canonical": "sum",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "average",
+        "canonical": "avg",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "avg",
+        "canonical": "avg",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "mean",
+        "canonical": "avg",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "maximum",
+        "canonical": "max",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "max",
+        "canonical": "max",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "highest",
+        "canonical": "max",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "minimum",
+        "canonical": "min",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "min",
+        "canonical": "min",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "lowest",
+        "canonical": "min",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "rate",
+        "canonical": "rate",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "ratio",
+        "canonical": "ratio",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "percent",
+        "canonical": "percent",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "growth",
+        "canonical": "growth",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "change",
+        "canonical": "change",
+        "weight": 1.0,
+        "source": "global"
+      }
+    ],
+    "column_hints": [
+      {
+        "term": "quantity_on_hand",
+        "canonical": "quantity_on_hand",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "quantity on hand",
+        "canonical": "quantity_on_hand",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "quantity_reserved",
+        "canonical": "quantity_reserved",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "quantity reserved",
+        "canonical": "quantity_reserved",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "quantity_available",
+        "canonical": "quantity_available",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "quantity available",
+        "canonical": "quantity_available",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "reorder_point",
+        "canonical": "reorder_point",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "reorder point",
+        "canonical": "reorder_point",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "safety_stock_qty",
+        "canonical": "safety_stock_qty",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "safety stock qty",
+        "canonical": "safety_stock_qty",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "days_of_supply",
+        "canonical": "days_of_supply",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "days of supply",
+        "canonical": "days_of_supply",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "avg_daily_demand",
+        "canonical": "avg_daily_demand",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "avg daily demand",
+        "canonical": "avg_daily_demand",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "unit_cost_usd",
+        "canonical": "unit_cost_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "unit cost usd",
+        "canonical": "unit_cost_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "total_value_usd",
+        "canonical": "total_value_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "total value usd",
+        "canonical": "total_value_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "lead_time",
+        "canonical": "lead_time_days",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "lead time",
+        "canonical": "lead_time_days",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "spend_amount_usd",
+        "canonical": "spend_amount_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "spend amount usd",
+        "canonical": "spend_amount_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "po",
+        "canonical": "po_count",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "avg_po",
+        "canonical": "avg_po_value",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "avg po",
+        "canonical": "avg_po_value",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "budget_usd",
+        "canonical": "budget_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "budget usd",
+        "canonical": "budget_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "budget_variance",
+        "canonical": "budget_variance_pct",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "budget variance",
+        "canonical": "budget_variance_pct",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "discount_captured_usd",
+        "canonical": "discount_captured_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "discount captured usd",
+        "canonical": "discount_captured_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "tax_amount_usd",
+        "canonical": "tax_amount_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "tax amount usd",
+        "canonical": "tax_amount_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "total_orders",
+        "canonical": "total_orders",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "total orders",
+        "canonical": "total_orders",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "on_time_delivery",
+        "canonical": "on_time_delivery_rate",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "on time delivery",
+        "canonical": "on_time_delivery_rate",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "quality_acceptance",
+        "canonical": "quality_acceptance_rate",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "quality acceptance",
+        "canonical": "quality_acceptance_rate",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "avg_lead_time",
+        "canonical": "avg_lead_time_days",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "avg lead time",
+        "canonical": "avg_lead_time_days",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "total_spend_usd",
+        "canonical": "total_spend_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "total spend usd",
+        "canonical": "total_spend_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "defect",
+        "canonical": "defect_rate",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "return",
+        "canonical": "return_rate",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "avg_po_value_usd",
+        "canonical": "avg_po_value_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "avg po value usd",
+        "canonical": "avg_po_value_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "yoy_spend_change",
+        "canonical": "yoy_spend_change_pct",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "yoy spend change",
+        "canonical": "yoy_spend_change_pct",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "current stock",
+        "canonical": "quantity_on_hand",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "stock quantity",
+        "canonical": "quantity_on_hand",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "units on hand",
+        "canonical": "quantity_on_hand",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "on-hand stock",
+        "canonical": "quantity_on_hand",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "reserved quantity",
+        "canonical": "quantity_reserved",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "quantity on hold",
+        "canonical": "quantity_reserved",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "held inventory",
+        "canonical": "quantity_reserved",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "reserved stock",
+        "canonical": "quantity_reserved",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "stock reserved",
+        "canonical": "quantity_reserved",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "units reserved",
+        "canonical": "quantity_reserved",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "inventory on hand",
+        "canonical": "quantity_available",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "units available",
+        "canonical": "quantity_available",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "reorder level",
+        "canonical": "reorder_point",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "reorder threshold",
+        "canonical": "reorder_point",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "replenishment point",
+        "canonical": "reorder_point",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "order trigger point",
+        "canonical": "reorder_point",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "restocking level",
+        "canonical": "reorder_point",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "safety stock quantity",
+        "canonical": "safety_stock_qty",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "safety stock levels",
+        "canonical": "safety_stock_qty",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "safety stock amount",
+        "canonical": "safety_stock_qty",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "minimum stock quantity",
+        "canonical": "safety_stock_qty",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "buffer stock quantity",
+        "canonical": "safety_stock_qty",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "reserve stock levels",
+        "canonical": "safety_stock_qty",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "dos",
+        "canonical": "days_of_supply",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "days on hand",
+        "canonical": "days_of_supply",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "inventory days",
+        "canonical": "days_of_supply",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "days of inventory",
+        "canonical": "days_of_supply",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "supply days",
+        "canonical": "days_of_supply",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "average daily demand",
+        "canonical": "avg_daily_demand",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "mean daily demand",
+        "canonical": "avg_daily_demand",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "daily demand average",
+        "canonical": "avg_daily_demand",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "typical daily demand",
+        "canonical": "avg_daily_demand",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "average demand per day",
+        "canonical": "avg_daily_demand",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "daily consumption rate",
+        "canonical": "avg_daily_demand",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "unit cost",
+        "canonical": "unit_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "cost per unit",
+        "canonical": "unit_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "unit price",
+        "canonical": "unit_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "cost per item",
+        "canonical": "unit_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "per unit cost",
+        "canonical": "unit_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "item cost",
+        "canonical": "unit_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "total inventory value",
+        "canonical": "total_value_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "inventory value in dollars",
+        "canonical": "total_value_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "stock value",
+        "canonical": "total_value_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "total stock worth",
+        "canonical": "total_value_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "inventory worth",
+        "canonical": "total_value_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "value of inventory",
+        "canonical": "total_value_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "lead time in days",
+        "canonical": "lead_time_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "supplier lead time",
+        "canonical": "lead_time_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "delivery lead time",
+        "canonical": "lead_time_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "order lead time",
+        "canonical": "lead_time_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "replenishment lead time",
+        "canonical": "lead_time_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "number of purchase orders",
+        "canonical": "po_count",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "po count",
+        "canonical": "po_count",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "purchase order count",
+        "canonical": "po_count",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "total pos",
+        "canonical": "po_count",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "number of pos",
+        "canonical": "po_count",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "purchase order volume",
+        "canonical": "po_count",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "average purchase order value",
+        "canonical": "avg_po_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "avg po value",
+        "canonical": "avg_po_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "mean purchase order amount",
+        "canonical": "avg_po_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "average order value",
+        "canonical": "avg_po_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "typical po size",
+        "canonical": "avg_po_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "average procurement order value",
+        "canonical": "avg_po_value",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "procurement spend",
+        "canonical": "budget_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "procurement budget",
+        "canonical": "budget_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "purchasing budget",
+        "canonical": "budget_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "supply spend",
+        "canonical": "budget_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "budget variance percentage",
+        "canonical": "budget_variance_pct",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "budget variance percent",
+        "canonical": "budget_variance_pct",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "variance from budget",
+        "canonical": "budget_variance_pct",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "budget deviation percentage",
+        "canonical": "budget_variance_pct",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "spend variance percentage",
+        "canonical": "budget_variance_pct",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "procurement budget variance",
+        "canonical": "budget_variance_pct",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "discount captured",
+        "canonical": "discount_captured_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "discounts captured",
+        "canonical": "discount_captured_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "captured discounts",
+        "canonical": "discount_captured_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "discount savings",
+        "canonical": "discount_captured_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "savings captured",
+        "canonical": "discount_captured_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "captured savings",
+        "canonical": "discount_captured_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "tax amount",
+        "canonical": "tax_amount_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "tax spend",
+        "canonical": "tax_amount_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "tax costs",
+        "canonical": "tax_amount_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "tax expenditure",
+        "canonical": "tax_amount_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "taxes paid",
+        "canonical": "tax_amount_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "tax charges",
+        "canonical": "tax_amount_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "number of orders",
+        "canonical": "total_orders",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "order count",
+        "canonical": "total_orders",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "total purchase orders",
+        "canonical": "total_orders",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "order volume",
+        "canonical": "total_orders",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "how many orders",
+        "canonical": "total_orders",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "on-time delivery rate",
+        "canonical": "on_time_delivery_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "delivery punctuality",
+        "canonical": "on_time_delivery_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "on time delivery performance",
+        "canonical": "on_time_delivery_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "supplier delivery reliability",
+        "canonical": "on_time_delivery_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "delivery timeliness",
+        "canonical": "on_time_delivery_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "punctual delivery rate",
+        "canonical": "on_time_delivery_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "quality acceptance rate",
+        "canonical": "quality_acceptance_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "acceptance rate",
+        "canonical": "quality_acceptance_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "quality pass rate",
+        "canonical": "quality_acceptance_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "supplier quality rate",
+        "canonical": "quality_acceptance_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "parts acceptance rate",
+        "canonical": "quality_acceptance_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "material acceptance rate",
+        "canonical": "quality_acceptance_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "average lead time",
+        "canonical": "avg_lead_time_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "lead time days",
+        "canonical": "avg_lead_time_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "average delivery time",
+        "canonical": "avg_lead_time_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "mean lead time",
+        "canonical": "avg_lead_time_days",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "total spend",
+        "canonical": "total_spend_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "supplier spend",
+        "canonical": "total_spend_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "total supplier spend",
+        "canonical": "total_spend_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "spend amount",
+        "canonical": "total_spend_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "total expenditure",
+        "canonical": "total_spend_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "supplier expenditure",
+        "canonical": "total_spend_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "defect rate",
+        "canonical": "defect_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "defect percentage",
+        "canonical": "defect_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fault rate",
+        "canonical": "defect_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "error rate",
+        "canonical": "defect_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "rejection rate",
+        "canonical": "defect_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "defective goods rate",
+        "canonical": "defect_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "return rate",
+        "canonical": "return_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "supplier return rate",
+        "canonical": "return_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "returns rate",
+        "canonical": "return_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "product return rate",
+        "canonical": "return_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "return percentage",
+        "canonical": "return_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "return ratio",
+        "canonical": "return_rate",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "average order value from suppliers",
+        "canonical": "avg_po_value_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "average vendor order value",
+        "canonical": "avg_po_value_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "year over year spend change",
+        "canonical": "yoy_spend_change_pct",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "annual spend change percentage",
+        "canonical": "yoy_spend_change_pct",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "spend growth rate",
+        "canonical": "yoy_spend_change_pct",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "year on year spend variation",
+        "canonical": "yoy_spend_change_pct",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "supplier spend change",
+        "canonical": "yoy_spend_change_pct",
+        "weight": 0.85,
+        "source": "ai"
+      }
+    ],
+    "time": [
+      {
+        "term": "all_time",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "all time",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "ever",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "total",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "overall",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "all",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "to date",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "this_month",
+        "canonical": "this_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "this month",
+        "canonical": "this_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "current month",
+        "canonical": "this_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "month to date",
+        "canonical": "this_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "mtd",
+        "canonical": "this_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "last_month",
+        "canonical": "last_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "last month",
+        "canonical": "last_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "previous month",
+        "canonical": "last_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "this_quarter",
+        "canonical": "this_quarter",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "this quarter",
+        "canonical": "this_quarter",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "current quarter",
+        "canonical": "this_quarter",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "quarter to date",
+        "canonical": "this_quarter",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "qtd",
+        "canonical": "this_quarter",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "ytd",
+        "canonical": "ytd",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "year to date",
+        "canonical": "ytd",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "this year",
+        "canonical": "ytd",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "current year",
+        "canonical": "ytd",
+        "weight": 1.0,
+        "source": "seed"
+      }
+    ],
+    "scope": [
+      {
+        "term": "by_month",
+        "canonical": "by_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by month",
+        "canonical": "by_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per month",
+        "canonical": "by_month",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by month",
+        "canonical": "by_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_region",
+        "canonical": "by_region",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by region",
+        "canonical": "by_region",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per region",
+        "canonical": "by_region",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by region",
+        "canonical": "by_region",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_segment",
+        "canonical": "by_segment",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by segment",
+        "canonical": "by_segment",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per segment",
+        "canonical": "by_segment",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by segment",
+        "canonical": "by_segment",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_warehouse_region",
+        "canonical": "by_warehouse_region",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by warehouse region",
+        "canonical": "by_warehouse_region",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per warehouse region",
+        "canonical": "by_warehouse_region",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by warehouse region",
+        "canonical": "by_warehouse_region",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_supplier_category",
+        "canonical": "by_supplier_category",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by supplier category",
+        "canonical": "by_supplier_category",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per supplier category",
+        "canonical": "by_supplier_category",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by supplier category",
+        "canonical": "by_supplier_category",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_item_category",
+        "canonical": "by_item_category",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by item category",
+        "canonical": "by_item_category",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per item category",
+        "canonical": "by_item_category",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by item category",
+        "canonical": "by_item_category",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_supplier_tier",
+        "canonical": "by_supplier_tier",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by supplier tier",
+        "canonical": "by_supplier_tier",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per supplier tier",
+        "canonical": "by_supplier_tier",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by supplier tier",
+        "canonical": "by_supplier_tier",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_cost_center",
+        "canonical": "by_cost_center",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by cost center",
+        "canonical": "by_cost_center",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per cost center",
+        "canonical": "by_cost_center",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by cost center",
+        "canonical": "by_cost_center",
+        "weight": 1.0,
+        "source": "seed"
+      }
+    ],
+    "kpi": [
+      {
+        "term": "inventory_turnover_rate",
+        "canonical": "inventory_turnover_rate",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "inventory turnover rate",
+        "canonical": "inventory_turnover_rate",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "days_of_supply_coverage",
+        "canonical": "days_of_supply_coverage",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "days of supply coverage",
+        "canonical": "days_of_supply_coverage",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "procurement_budget_utilization",
+        "canonical": "procurement_budget_utilization",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "procurement budget utilization",
+        "canonical": "procurement_budget_utilization",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "supplier_quality_score",
+        "canonical": "supplier_quality_score",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "supplier quality score",
+        "canonical": "supplier_quality_score",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "on_time_delivery_rate",
+        "canonical": "on_time_delivery_rate",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "on time delivery rate",
+        "canonical": "on_time_delivery_rate",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "what is our inventory turnover rate",
+        "canonical": "inventory_turnover_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "show inventory turnover rate",
+        "canonical": "inventory_turnover_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "get inventory turnover rate",
+        "canonical": "inventory_turnover_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "what is our days of supply coverage",
+        "canonical": "days_of_supply_coverage",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "show days of supply coverage",
+        "canonical": "days_of_supply_coverage",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "get days of supply coverage",
+        "canonical": "days_of_supply_coverage",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "what is our procurement budget utilization",
+        "canonical": "procurement_budget_utilization",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "show procurement budget utilization",
+        "canonical": "procurement_budget_utilization",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "get procurement budget utilization",
+        "canonical": "procurement_budget_utilization",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "what is our supplier quality score",
+        "canonical": "supplier_quality_score",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "show supplier quality score",
+        "canonical": "supplier_quality_score",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "get supplier quality score",
+        "canonical": "supplier_quality_score",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "what is our on time delivery rate",
+        "canonical": "on_time_delivery_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "show on time delivery rate",
+        "canonical": "on_time_delivery_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "get on time delivery rate",
+        "canonical": "on_time_delivery_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      }
+    ]
+  },
+  "aliases": {
+    "entity_aliases": {
+      "inventory_levels": [
+        "inventory levels",
+        "stock levels",
+        "current inventory",
+        "stock on hand",
+        "available inventory",
+        "inventory quantities",
+        "stock quantities",
+        "on-hand inventory"
+      ],
+      "procurement_spend": [
+        "purchasing spend",
+        "procurement expenditure",
+        "buying spend",
+        "purchase spend",
+        "sourcing spend",
+        "procurement costs",
+        "purchasing costs",
+        "buying costs"
+      ],
+      "suppliers": [
+        "vendor",
+        "vendors",
+        "supplier",
+        "provider",
+        "providers",
+        "supply partner",
+        "supply partners"
+      ]
+    },
+    "state_synonyms": {
+      "Disputed": [
+        "challenged",
+        "contested",
+        "under dispute",
+        "in dispute",
+        "disagreed"
+      ],
+      "Paid": [
+        "settled",
+        "cleared",
+        "payment completed",
+        "invoiced and paid"
+      ],
+      "Pending": [
+        "awaiting payment",
+        "outstanding",
+        "unpaid",
+        "not yet paid",
+        "waiting to be paid"
+      ],
+      "Active": [
+        "enabled",
+        "live",
+        "operational",
+        "current"
+      ],
+      "Inactive": [
+        "not active",
+        "deactivated",
+        "disabled",
+        "dormant"
+      ],
+      "Under Review": [
+        "pending review",
+        "being reviewed",
+        "in review",
+        "under evaluation",
+        "being evaluated"
+      ]
+    },
+    "measure_synonyms": {
+      "quantity_on_hand": [
+        "current stock",
+        "stock quantity",
+        "units on hand",
+        "on-hand stock"
+      ],
+      "quantity_reserved": [
+        "reserved quantity",
+        "quantity on hold",
+        "held inventory",
+        "reserved stock",
+        "stock reserved",
+        "units reserved"
+      ],
+      "quantity_available": [
+        "inventory on hand",
+        "units available"
+      ],
+      "reorder_point": [
+        "reorder level",
+        "reorder threshold",
+        "replenishment point",
+        "order trigger point",
+        "restocking level"
+      ],
+      "safety_stock_qty": [
+        "safety stock quantity",
+        "safety stock levels",
+        "safety stock amount",
+        "minimum stock quantity",
+        "buffer stock quantity",
+        "reserve stock levels"
+      ],
+      "days_of_supply": [
+        "dos",
+        "days on hand",
+        "inventory days",
+        "days of inventory",
+        "supply days"
+      ],
+      "avg_daily_demand": [
+        "average daily demand",
+        "mean daily demand",
+        "daily demand average",
+        "typical daily demand",
+        "average demand per day",
+        "daily consumption rate"
+      ],
+      "unit_cost_usd": [
+        "unit cost",
+        "cost per unit",
+        "unit price",
+        "cost per item",
+        "per unit cost",
+        "item cost"
+      ],
+      "total_value_usd": [
+        "total inventory value",
+        "inventory value in dollars",
+        "stock value",
+        "total stock worth",
+        "inventory worth",
+        "value of inventory"
+      ],
+      "lead_time_days": [
+        "lead time in days",
+        "supplier lead time",
+        "delivery lead time",
+        "order lead time",
+        "replenishment lead time"
+      ],
+      "po_count": [
+        "number of purchase orders",
+        "po count",
+        "purchase order count",
+        "total pos",
+        "number of pos",
+        "purchase order volume"
+      ],
+      "avg_po_value": [
+        "average purchase order value",
+        "avg po value",
+        "mean purchase order amount",
+        "average order value",
+        "typical po size",
+        "average procurement order value"
+      ],
+      "budget_usd": [
+        "procurement spend",
+        "procurement budget",
+        "purchasing budget",
+        "supply spend"
+      ],
+      "budget_variance_pct": [
+        "budget variance percentage",
+        "budget variance percent",
+        "variance from budget",
+        "budget deviation percentage",
+        "spend variance percentage",
+        "procurement budget variance"
+      ],
+      "discount_captured_usd": [
+        "discount captured",
+        "discounts captured",
+        "captured discounts",
+        "discount savings",
+        "savings captured",
+        "captured savings"
+      ],
+      "tax_amount_usd": [
+        "tax amount",
+        "tax spend",
+        "tax costs",
+        "tax expenditure",
+        "taxes paid",
+        "tax charges"
+      ],
+      "total_orders": [
+        "number of orders",
+        "order count",
+        "total purchase orders",
+        "order volume",
+        "how many orders"
+      ],
+      "on_time_delivery_rate": [
+        "on-time delivery rate",
+        "delivery punctuality",
+        "on time delivery performance",
+        "supplier delivery reliability",
+        "delivery timeliness",
+        "punctual delivery rate"
+      ],
+      "quality_acceptance_rate": [
+        "quality acceptance rate",
+        "acceptance rate",
+        "quality pass rate",
+        "supplier quality rate",
+        "parts acceptance rate",
+        "material acceptance rate"
+      ],
+      "avg_lead_time_days": [
+        "average lead time",
+        "lead time days",
+        "average delivery time",
+        "mean lead time"
+      ],
+      "total_spend_usd": [
+        "total spend",
+        "supplier spend",
+        "total supplier spend",
+        "spend amount",
+        "total expenditure",
+        "supplier expenditure"
+      ],
+      "defect_rate": [
+        "defect rate",
+        "defect percentage",
+        "fault rate",
+        "error rate",
+        "rejection rate",
+        "defective goods rate"
+      ],
+      "return_rate": [
+        "return rate",
+        "supplier return rate",
+        "returns rate",
+        "product return rate",
+        "return percentage",
+        "return ratio"
+      ],
+      "avg_po_value_usd": [
+        "average order value from suppliers",
+        "average vendor order value"
+      ],
+      "yoy_spend_change_pct": [
+        "year over year spend change",
+        "annual spend change percentage",
+        "spend growth rate",
+        "year on year spend variation",
+        "supplier spend change"
+      ]
+    }
+  },
+  "meta": {
+    "phase_a_entries": 357,
+    "grounding_violations": 0,
+    "total_entries": 357,
+    "coverage": 1.0
+  }
+}

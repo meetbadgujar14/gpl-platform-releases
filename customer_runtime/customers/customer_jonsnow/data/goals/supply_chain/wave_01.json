@@ -1,0 +1,672 @@
+{
+  "wave": 1,
+  "goal_count": 35,
+  "generated_at": "2026-08-25T09:48:36Z",
+  "goals": [
+    {
+      "goal": "How many inventory_levelss are there?",
+      "canonical_id": "supply_chain_inventory_levels_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity on hand of inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_quantity_on_hand_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "quantity_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity reserved of inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_quantity_reserved_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "quantity_reserved",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quantity available of inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_quantity_available_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "quantity_available",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total reorder point of inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_reorder_point_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "reorder_point",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total safety stock qty of inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_safety_stock_qty_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "safety_stock_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total days of supply of inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_days_of_supply_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "days_of_supply",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total avg daily demand of inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_avg_daily_demand_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "avg_daily_demand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total unit cost usd of inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_unit_cost_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "unit_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total value usd of inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_total_value_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "total_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total lead time days of inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_lead_time_days_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many procurement_spends are there?",
+      "canonical_id": "supply_chain_procurement_spend_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Disputed procurement_spends are there?",
+      "canonical_id": "supply_chain_procurement_spend_count_disputed",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "count",
+        "state": "Disputed",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Paid procurement_spends are there?",
+      "canonical_id": "supply_chain_procurement_spend_count_paid",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "count",
+        "state": "Paid",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Pending procurement_spends are there?",
+      "canonical_id": "supply_chain_procurement_spend_count_pending",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "count",
+        "state": "Pending",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total spend amount usd of procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_spend_amount_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "spend_amount_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total po count of procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_po_count_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "po_count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total avg po value of procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_avg_po_value_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "avg_po_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total budget usd of procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_budget_usd_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "budget_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total budget variance pct of procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_budget_variance_pct_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "budget_variance_pct",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total discount captured usd of procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_discount_captured_usd_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "discount_captured_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total tax amount usd of procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_tax_amount_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "tax_amount_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many supplierss are there?",
+      "canonical_id": "supply_chain_suppliers_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Active supplierss are there?",
+      "canonical_id": "supply_chain_suppliers_count_active",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "count",
+        "state": "Active",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Inactive supplierss are there?",
+      "canonical_id": "supply_chain_suppliers_count_inactive",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "count",
+        "state": "Inactive",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many Under Review supplierss are there?",
+      "canonical_id": "supply_chain_suppliers_count_under_review",
+      "complexity": "FILTERED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "count",
+        "state": "Under Review",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total orders of supplierss?",
+      "canonical_id": "supply_chain_suppliers_total_orders_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "total_orders",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total on time delivery rate of supplierss?",
+      "canonical_id": "supply_chain_suppliers_on_time_delivery_rate_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "on_time_delivery_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total quality acceptance rate of supplierss?",
+      "canonical_id": "supply_chain_suppliers_quality_acceptance_rate_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "quality_acceptance_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total avg lead time days of supplierss?",
+      "canonical_id": "supply_chain_suppliers_avg_lead_time_days_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "avg_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total total spend usd of supplierss?",
+      "canonical_id": "supply_chain_suppliers_total_spend_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "total_spend_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total defect rate of supplierss?",
+      "canonical_id": "supply_chain_suppliers_defect_rate_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "defect_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total return rate of supplierss?",
+      "canonical_id": "supply_chain_suppliers_return_rate_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "return_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total avg po value usd of supplierss?",
+      "canonical_id": "supply_chain_suppliers_avg_po_value_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "avg_po_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total yoy spend change pct of supplierss?",
+      "canonical_id": "supply_chain_suppliers_yoy_spend_change_pct_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 1,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "yoy_spend_change_pct",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    }
+  ]
+}

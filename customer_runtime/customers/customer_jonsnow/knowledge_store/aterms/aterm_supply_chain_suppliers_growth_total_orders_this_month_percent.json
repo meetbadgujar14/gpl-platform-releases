@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_suppliers_growth_total_orders_this_month_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_growth_total_orders_this_month_percent",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "growth_total_orders",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 833.8235294117646,
+  "formula_line": "supply_chain_suppliers_growth_total_orders_this_month_percent = (({supply_chain_suppliers_total_orders_this_month_currency} - {supply_chain_suppliers_total_orders_last_month_currency}) / abs({supply_chain_suppliers_total_orders_last_month_currency}) * 100) if {supply_chain_suppliers_total_orders_last_month_currency} != 0 else 0",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-08-25T09:57:32Z",
+  "usage_count": 0,
+  "source_goal": "What is the month over month growth in total orders for supplierss?",
+  "wave": 6,
+  "depends_on": [
+    "supply_chain_suppliers_total_orders_this_month_currency",
+    "supply_chain_suppliers_total_orders_last_month_currency"
+  ],
+  "dep_values": {
+    "supply_chain_suppliers_total_orders_this_month_currency": 1905.0,
+    "supply_chain_suppliers_total_orders_last_month_currency": 204.0
+  },
+  "verified_at": "2026-08-25T09:57:37Z"
+}

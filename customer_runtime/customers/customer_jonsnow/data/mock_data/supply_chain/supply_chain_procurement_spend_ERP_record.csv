@@ -1,0 +1,17 @@
+period,supplier_id,spend_category,month,quarter,supplier_name,region,currency,payment_status,cost_center,department,is_strategic_spend,spend_amount_usd,po_count,avg_po_value,budget_usd,budget_variance_pct,discount_captured_usd,tax_amount_usd
+2024-07,SUP-8823,IT Services,April,Q3,Sakura Electronics Co. Ltd,Latin America,EUR,Paid,CC-9415,Admin,True,482500,14,34464.29,500000,-3.5,9650,38600
+2024-08,SUP-4821,Professional Services,October,Q1,Harborview Packaging Solutions,North America,EUR,Overdue,CC-9415,Logistics,True,215300,22,9786.36,200000,7.65,3200,17224
+2024-10,SUP-9057,IT Services,December,Q1,Highveld Industrial Fasteners,North America,USD,Paid,CC-8839,Safety,False,134750,8,16843.75,150000,-10.17,6737,10780
+2024-12,SUP-3309,Packaging Materials,November,Q2,Nile Valley Agricultural Exports,Latin America,GBP,Overdue,CC-1953,Logistics,False,87400,19,4600,90000,-2.89,1748,6992
+2024-03,SUP-9057,Professional Services,November,Q4,Bharati Logistics & Freight,North America,GBP,Pending,CC-9415,Procurement,True,62100,7,8871.43,65000,-4.46,1242,4968
+2024-04,SUP-2193,Safety Equipment,January,Q3,Meridian Components GmbH,North America,USD,Overdue,CC-5507,Maintenance,False,43800,31,1412.9,40000,9.5,876,3504
+2024-06,SUP-7781,Facilities Management,December,Q2,Highveld Industrial Fasteners,North America,GBP,Pending,CC-2688,Admin,False,378900,11,34445.45,380000,-0.29,7578,30312
+2024-05,SUP-4821,MRO Supplies,February,Q2,Andean Textile Exports,MEA,GBP,Overdue,CC-1953,Safety,True,225000,5,45000,220000,2.27,0,18000
+2024-02,SUP-7781,Raw Materials,June,Q2,Sakura Electronics Co. Ltd,Latin America,USD,Paid,CC-4821,Operations,False,310000,3,103333.33,300000,3.33,15500,24800
+2024-01,SUP-5538,Chemical Supplies,May,Q1,Meridian Components GmbH,Asia-Pacific,EUR,Overdue,CC-4821,Operations,False,567200,16,35450,550000,3.13,11344,45376
+2024-08,SUP-7781,Logistics & Freight,August,Q4,Nile Valley Agricultural Exports,Latin America,EUR,Pending,CC-9415,Admin,True,145600,9,16177.78,140000,4.0,2912,11648
+2024-11,SUP-8390,Chemical Supplies,October,Q3,Bharati Logistics & Freight,North America,USD,Overdue,CC-5507,Logistics,True,98700,24,4112.5,100000,-1.3,1974,7896
+2024-01,SUP-6640,Packaging Materials,May,Q1,Nile Valley Agricultural Exports,North America,USD,Paid,CC-1953,Maintenance,True,78400,6,13066.67,80000,-2.0,3920,6272
+2025-02,SUP-8823,Raw Materials,May,Q3,Andean Textile Exports,Europe,USD,Paid,CC-1953,Logistics,False,32100,18,1783.33,30000,7.0,642,2568
+2024-05,SUP-3309,Industrial Equipment,December,Q2,Ironwood Timber & Forest Products,Latin America,GBP,Overdue,CC-6142,IT,False,56800,13,4369.23,55000,3.27,1136,4544
+2024-02,SUP-2967,Safety Equipment,August,Q4,Sakura Electronics Co. Ltd,Europe,GBP,Paid,CC-2688,Facilities,False,189500,4,47375,185000,2.43,0,15160

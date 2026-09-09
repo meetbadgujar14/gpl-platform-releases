@@ -1,0 +1,2895 @@
+{
+  "wave": 3,
+  "goal_count": 152,
+  "generated_at": "2026-08-25T09:40:08Z",
+  "goals": [
+    {
+      "goal": "How many delivery_eventss are there this month?",
+      "canonical_id": "logistics_delivery_events_count_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay hours of delivery_eventss this month?",
+      "canonical_id": "logistics_delivery_events_delay_hours_this_month_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay cost usd of delivery_eventss this month?",
+      "canonical_id": "logistics_delivery_events_delay_cost_usd_this_month_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total resolution hours of delivery_eventss this month?",
+      "canonical_id": "logistics_delivery_events_resolution_hours_this_month_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "resolution_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total shipment value usd of delivery_eventss this month?",
+      "canonical_id": "logistics_delivery_events_shipment_value_usd_this_month_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "shipment_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many delivery_eventss are there last month?",
+      "canonical_id": "logistics_delivery_events_count_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay hours of delivery_eventss last month?",
+      "canonical_id": "logistics_delivery_events_delay_hours_last_month_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay cost usd of delivery_eventss last month?",
+      "canonical_id": "logistics_delivery_events_delay_cost_usd_last_month_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total resolution hours of delivery_eventss last month?",
+      "canonical_id": "logistics_delivery_events_resolution_hours_last_month_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "resolution_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total shipment value usd of delivery_eventss last month?",
+      "canonical_id": "logistics_delivery_events_shipment_value_usd_last_month_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "shipment_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many delivery_eventss are there this quarter?",
+      "canonical_id": "logistics_delivery_events_count_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay hours of delivery_eventss this quarter?",
+      "canonical_id": "logistics_delivery_events_delay_hours_this_quarter_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay cost usd of delivery_eventss this quarter?",
+      "canonical_id": "logistics_delivery_events_delay_cost_usd_this_quarter_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total resolution hours of delivery_eventss this quarter?",
+      "canonical_id": "logistics_delivery_events_resolution_hours_this_quarter_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "resolution_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total shipment value usd of delivery_eventss this quarter?",
+      "canonical_id": "logistics_delivery_events_shipment_value_usd_this_quarter_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "shipment_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many delivery_eventss are there ytd?",
+      "canonical_id": "logistics_delivery_events_count_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay hours of delivery_eventss ytd?",
+      "canonical_id": "logistics_delivery_events_delay_hours_ytd_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay cost usd of delivery_eventss ytd?",
+      "canonical_id": "logistics_delivery_events_delay_cost_usd_ytd_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total resolution hours of delivery_eventss ytd?",
+      "canonical_id": "logistics_delivery_events_resolution_hours_ytd_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "resolution_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total shipment value usd of delivery_eventss ytd?",
+      "canonical_id": "logistics_delivery_events_shipment_value_usd_ytd_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "shipment_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many cancelled vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_cancelled_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "cancelled",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many completed vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_completed_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "completed",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many delayed vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_delayed_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "delayed",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many in_transit vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_in_transit_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "in_transit",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many CA vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_ca_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "CA",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many CO vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_co_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "CO",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many FL vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_fl_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "FL",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many GA vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_ga_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "GA",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many IL vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_il_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "IL",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many MO vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_mo_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "MO",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many PA vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_pa_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "PA",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many TN vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_tn_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "TN",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many TX vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_tx_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "TX",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many WA vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_wa_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "WA",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many AR vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_ar_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "AR",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many MI vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_mi_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "MI",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many NC vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_nc_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "NC",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many OH vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_oh_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "OH",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many WI vehicle_tripss are there this month?",
+      "canonical_id": "logistics_vehicle_trips_count_wi_this_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "WI",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of vehicle_tripss this month?",
+      "canonical_id": "logistics_vehicle_trips_distance_km_this_month_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total planned duration hrs of vehicle_tripss this month?",
+      "canonical_id": "logistics_vehicle_trips_planned_duration_hrs_this_month_percent",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "planned_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total actual duration hrs of vehicle_tripss this month?",
+      "canonical_id": "logistics_vehicle_trips_actual_duration_hrs_this_month_percent",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "actual_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total trip cost usd of vehicle_tripss this month?",
+      "canonical_id": "logistics_vehicle_trips_trip_cost_usd_this_month_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "trip_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total litres consumed of vehicle_tripss this month?",
+      "canonical_id": "logistics_vehicle_trips_litres_consumed_this_month_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "litres_consumed",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total fuel cost usd of vehicle_tripss this month?",
+      "canonical_id": "logistics_vehicle_trips_fuel_cost_usd_this_month_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "fuel_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total co2 kg emitted of vehicle_tripss this month?",
+      "canonical_id": "logistics_vehicle_trips_co2_kg_emitted_this_month_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "co2_kg_emitted",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total cost per km of vehicle_tripss this month?",
+      "canonical_id": "logistics_vehicle_trips_cost_per_km_this_month_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "cost_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total revenue per km of vehicle_tripss this month?",
+      "canonical_id": "logistics_vehicle_trips_revenue_per_km_this_month_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "revenue_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total utilization pct of vehicle_tripss this month?",
+      "canonical_id": "logistics_vehicle_trips_utilization_pct_this_month_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "utilization_pct",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total idle time hrs of vehicle_tripss this month?",
+      "canonical_id": "logistics_vehicle_trips_idle_time_hrs_this_month_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "idle_time_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total incidents of vehicle_tripss this month?",
+      "canonical_id": "logistics_vehicle_trips_incidents_this_month_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "incidents",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total driver rating of vehicle_tripss this month?",
+      "canonical_id": "logistics_vehicle_trips_driver_rating_this_month_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "driver_rating",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many cancelled vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_cancelled_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "cancelled",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many completed vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_completed_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "completed",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many delayed vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_delayed_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "delayed",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many in_transit vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_in_transit_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "in_transit",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many CA vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_ca_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "CA",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many CO vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_co_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "CO",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many FL vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_fl_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "FL",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many GA vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_ga_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "GA",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many IL vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_il_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "IL",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many MO vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_mo_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "MO",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many PA vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_pa_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "PA",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many TN vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_tn_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "TN",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many TX vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_tx_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "TX",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many WA vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_wa_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "WA",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many AR vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_ar_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "AR",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many MI vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_mi_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "MI",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many NC vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_nc_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "NC",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many OH vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_oh_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "OH",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many WI vehicle_tripss are there last month?",
+      "canonical_id": "logistics_vehicle_trips_count_wi_last_month",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "WI",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of vehicle_tripss last month?",
+      "canonical_id": "logistics_vehicle_trips_distance_km_last_month_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total planned duration hrs of vehicle_tripss last month?",
+      "canonical_id": "logistics_vehicle_trips_planned_duration_hrs_last_month_percent",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "planned_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total actual duration hrs of vehicle_tripss last month?",
+      "canonical_id": "logistics_vehicle_trips_actual_duration_hrs_last_month_percent",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "actual_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total trip cost usd of vehicle_tripss last month?",
+      "canonical_id": "logistics_vehicle_trips_trip_cost_usd_last_month_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "trip_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total litres consumed of vehicle_tripss last month?",
+      "canonical_id": "logistics_vehicle_trips_litres_consumed_last_month_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "litres_consumed",
+        "state": "all",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total fuel cost usd of vehicle_tripss last month?",
+      "canonical_id": "logistics_vehicle_trips_fuel_cost_usd_last_month_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "fuel_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total co2 kg emitted of vehicle_tripss last month?",
+      "canonical_id": "logistics_vehicle_trips_co2_kg_emitted_last_month_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "co2_kg_emitted",
+        "state": "all",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total cost per km of vehicle_tripss last month?",
+      "canonical_id": "logistics_vehicle_trips_cost_per_km_last_month_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "cost_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total revenue per km of vehicle_tripss last month?",
+      "canonical_id": "logistics_vehicle_trips_revenue_per_km_last_month_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "revenue_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total utilization pct of vehicle_tripss last month?",
+      "canonical_id": "logistics_vehicle_trips_utilization_pct_last_month_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "utilization_pct",
+        "state": "all",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total idle time hrs of vehicle_tripss last month?",
+      "canonical_id": "logistics_vehicle_trips_idle_time_hrs_last_month_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "idle_time_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total incidents of vehicle_tripss last month?",
+      "canonical_id": "logistics_vehicle_trips_incidents_last_month_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "incidents",
+        "state": "all",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total driver rating of vehicle_tripss last month?",
+      "canonical_id": "logistics_vehicle_trips_driver_rating_last_month_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "driver_rating",
+        "state": "all",
+        "scope": "total",
+        "time": "last_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many cancelled vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_cancelled_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "cancelled",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many completed vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_completed_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "completed",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many delayed vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_delayed_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "delayed",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many in_transit vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_in_transit_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "in_transit",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many CA vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_ca_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "CA",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many CO vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_co_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "CO",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many FL vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_fl_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "FL",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many GA vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_ga_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "GA",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many IL vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_il_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "IL",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many MO vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_mo_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "MO",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many PA vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_pa_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "PA",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many TN vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_tn_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "TN",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many TX vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_tx_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "TX",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many WA vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_wa_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "WA",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many AR vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_ar_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "AR",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many MI vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_mi_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "MI",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many NC vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_nc_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "NC",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many OH vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_oh_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "OH",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many WI vehicle_tripss are there this quarter?",
+      "canonical_id": "logistics_vehicle_trips_count_wi_this_quarter",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "WI",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of vehicle_tripss this quarter?",
+      "canonical_id": "logistics_vehicle_trips_distance_km_this_quarter_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total planned duration hrs of vehicle_tripss this quarter?",
+      "canonical_id": "logistics_vehicle_trips_planned_duration_hrs_this_quarter_percent",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "planned_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total actual duration hrs of vehicle_tripss this quarter?",
+      "canonical_id": "logistics_vehicle_trips_actual_duration_hrs_this_quarter_percent",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "actual_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total trip cost usd of vehicle_tripss this quarter?",
+      "canonical_id": "logistics_vehicle_trips_trip_cost_usd_this_quarter_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "trip_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total litres consumed of vehicle_tripss this quarter?",
+      "canonical_id": "logistics_vehicle_trips_litres_consumed_this_quarter_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "litres_consumed",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total fuel cost usd of vehicle_tripss this quarter?",
+      "canonical_id": "logistics_vehicle_trips_fuel_cost_usd_this_quarter_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "fuel_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total co2 kg emitted of vehicle_tripss this quarter?",
+      "canonical_id": "logistics_vehicle_trips_co2_kg_emitted_this_quarter_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "co2_kg_emitted",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total cost per km of vehicle_tripss this quarter?",
+      "canonical_id": "logistics_vehicle_trips_cost_per_km_this_quarter_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "cost_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total revenue per km of vehicle_tripss this quarter?",
+      "canonical_id": "logistics_vehicle_trips_revenue_per_km_this_quarter_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "revenue_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total utilization pct of vehicle_tripss this quarter?",
+      "canonical_id": "logistics_vehicle_trips_utilization_pct_this_quarter_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "utilization_pct",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total idle time hrs of vehicle_tripss this quarter?",
+      "canonical_id": "logistics_vehicle_trips_idle_time_hrs_this_quarter_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "idle_time_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total incidents of vehicle_tripss this quarter?",
+      "canonical_id": "logistics_vehicle_trips_incidents_this_quarter_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "incidents",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total driver rating of vehicle_tripss this quarter?",
+      "canonical_id": "logistics_vehicle_trips_driver_rating_this_quarter_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "driver_rating",
+        "state": "all",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many cancelled vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_cancelled_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "cancelled",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many completed vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_completed_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "completed",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many delayed vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_delayed_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "delayed",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many in_transit vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_in_transit_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "in_transit",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many CA vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_ca_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "CA",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many CO vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_co_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "CO",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many FL vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_fl_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "FL",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many GA vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_ga_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "GA",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many IL vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_il_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "IL",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many MO vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_mo_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "MO",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many PA vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_pa_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "PA",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many TN vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_tn_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "TN",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many TX vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_tx_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "TX",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many WA vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_wa_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "WA",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many AR vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_ar_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "AR",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many MI vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_mi_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "MI",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many NC vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_nc_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "NC",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many OH vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_oh_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "OH",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many WI vehicle_tripss are there ytd?",
+      "canonical_id": "logistics_vehicle_trips_count_wi_ytd",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "WI",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of vehicle_tripss ytd?",
+      "canonical_id": "logistics_vehicle_trips_distance_km_ytd_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total planned duration hrs of vehicle_tripss ytd?",
+      "canonical_id": "logistics_vehicle_trips_planned_duration_hrs_ytd_percent",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "planned_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total actual duration hrs of vehicle_tripss ytd?",
+      "canonical_id": "logistics_vehicle_trips_actual_duration_hrs_ytd_percent",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "actual_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total trip cost usd of vehicle_tripss ytd?",
+      "canonical_id": "logistics_vehicle_trips_trip_cost_usd_ytd_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "trip_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total litres consumed of vehicle_tripss ytd?",
+      "canonical_id": "logistics_vehicle_trips_litres_consumed_ytd_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "litres_consumed",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total fuel cost usd of vehicle_tripss ytd?",
+      "canonical_id": "logistics_vehicle_trips_fuel_cost_usd_ytd_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "fuel_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total co2 kg emitted of vehicle_tripss ytd?",
+      "canonical_id": "logistics_vehicle_trips_co2_kg_emitted_ytd_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "co2_kg_emitted",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total cost per km of vehicle_tripss ytd?",
+      "canonical_id": "logistics_vehicle_trips_cost_per_km_ytd_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "cost_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total revenue per km of vehicle_tripss ytd?",
+      "canonical_id": "logistics_vehicle_trips_revenue_per_km_ytd_currency",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "revenue_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total utilization pct of vehicle_tripss ytd?",
+      "canonical_id": "logistics_vehicle_trips_utilization_pct_ytd_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "utilization_pct",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total idle time hrs of vehicle_tripss ytd?",
+      "canonical_id": "logistics_vehicle_trips_idle_time_hrs_ytd_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "idle_time_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total incidents of vehicle_tripss ytd?",
+      "canonical_id": "logistics_vehicle_trips_incidents_ytd_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "incidents",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total driver rating of vehicle_tripss ytd?",
+      "canonical_id": "logistics_vehicle_trips_driver_rating_ytd_count",
+      "complexity": "TIME_SCOPED",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 3,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "driver_rating",
+        "state": "all",
+        "scope": "total",
+        "time": "ytd",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    }
+  ]
+}

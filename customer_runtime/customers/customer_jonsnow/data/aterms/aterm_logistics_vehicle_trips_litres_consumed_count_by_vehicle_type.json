@@ -1,0 +1,35 @@
+{
+  "id": "aterm:logistics_vehicle_trips_litres_consumed_count_by_vehicle_type",
+  "type": "Aterm",
+  "canonical_id": "logistics_vehicle_trips_litres_consumed_count_by_vehicle_type",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "vehicle_trips",
+    "measure": "litres_consumed",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_vehicle_type"
+  },
+  "oracle_value": {
+    "18-Wheeler": 112.4,
+    "Box Truck": 119.3,
+    "Flatbed Truck": 148.2,
+    "Refrigerated Truck": 568.3000000000001,
+    "Tanker": 516.3
+  },
+  "formula_line": "MEASURE_GROUPED('logistics_vehicle_trips_WMS_event', 'SUM', 'litres_consumed', 'vehicle_type', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-08-25T09:36:17Z",
+  "usage_count": 0,
+  "source_goal": "What is the total litres consumed of vehicle_tripss by vehicle type?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-08-25T09:57:34Z"
+}

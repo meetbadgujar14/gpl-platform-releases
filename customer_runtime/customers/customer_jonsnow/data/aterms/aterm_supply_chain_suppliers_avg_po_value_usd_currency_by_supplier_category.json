@@ -1,0 +1,40 @@
+{
+  "id": "aterm:supply_chain_suppliers_avg_po_value_usd_currency_by_supplier_category",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_avg_po_value_usd_currency_by_supplier_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "avg_po_value_usd",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_supplier_category"
+  },
+  "oracle_value": {
+    "Agricultural Products": 4776.0,
+    "Chemicals": 6142.5,
+    "Electronic Components": 15703.333333333334,
+    "Fasteners & Hardware": 13484.0,
+    "Logistics": 20337.0,
+    "MRO Supplies": 5645.0,
+    "Metal Fabrication": 38861.0,
+    "Packaging": 6295.0,
+    "Plastics & Polymers": 9368.0,
+    "Safety & PPE": 43168.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_suppliers_ERP_dimension', 'AVG', 'avg_po_value_usd', 'supplier_category', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-08-25T09:49:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total avg po value usd of supplierss by supplier category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-08-25T09:57:37Z"
+}

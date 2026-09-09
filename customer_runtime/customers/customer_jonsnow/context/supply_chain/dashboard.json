@@ -1,0 +1,148 @@
+{
+  "context_id": "supply_chain",
+  "context_name": "Supply Chain",
+  "generated_at": "2026-08-25T09:41:58.599636+00:00",
+  "primary_date_field": {
+    "table": "supply_chain_inventory_levels_WMS_state",
+    "column": "snapshot_date"
+  },
+  "filters": [
+    {
+      "id": "period",
+      "type": "date_range",
+      "table": "supply_chain_inventory_levels_WMS_state",
+      "column": "snapshot_date"
+    }
+  ],
+  "kpis": [
+    {
+      "id": "total_supply_chain_inventory_levels_WMS_state",
+      "title": "Total Inventory Levels",
+      "type": "simple",
+      "table": "supply_chain_inventory_levels_WMS_state",
+      "column": "item_id",
+      "aggregation": "count",
+      "format": "number"
+    },
+    {
+      "id": "total_quantity_available_supply_chain_inventory_levels_WMS_state",
+      "title": "Total Quantity Available",
+      "type": "simple",
+      "table": "supply_chain_inventory_levels_WMS_state",
+      "column": "quantity_available",
+      "aggregation": "sum",
+      "format": "number"
+    },
+    {
+      "id": "false_rate_supply_chain_inventory_levels_WMS_state",
+      "title": "False Rate",
+      "type": "ratio",
+      "table": "supply_chain_inventory_levels_WMS_state",
+      "numerator": {
+        "column": "item_id",
+        "aggregation": "count_where",
+        "filter_column": "is_below_reorder",
+        "filter_value": "False"
+      },
+      "denominator": {
+        "column": "item_id",
+        "aggregation": "count"
+      },
+      "format": "percent"
+    },
+    {
+      "id": "false_rate_supply_chain_inventory_levels_WMS_state",
+      "title": "False Rate",
+      "type": "ratio",
+      "table": "supply_chain_inventory_levels_WMS_state",
+      "numerator": {
+        "column": "item_id",
+        "aggregation": "count_where",
+        "filter_column": "is_below_safety_stock",
+        "filter_value": "False"
+      },
+      "denominator": {
+        "column": "item_id",
+        "aggregation": "count"
+      },
+      "format": "percent"
+    },
+    {
+      "id": "total_supply_chain_procurement_spend_ERP_record",
+      "title": "Total Procurement Spend",
+      "type": "simple",
+      "table": "supply_chain_procurement_spend_ERP_record",
+      "column": "supplier_id",
+      "aggregation": "count",
+      "format": "number"
+    },
+    {
+      "id": "total_supply_chain_suppliers_ERP_dimension",
+      "title": "Total Suppliers",
+      "type": "simple",
+      "table": "supply_chain_suppliers_ERP_dimension",
+      "column": "supplier_id",
+      "aggregation": "count",
+      "format": "number"
+    },
+    {
+      "id": "tier_1_rate_supply_chain_suppliers_ERP_dimension",
+      "title": "Tier 1 Rate",
+      "type": "ratio",
+      "table": "supply_chain_suppliers_ERP_dimension",
+      "numerator": {
+        "column": "supplier_id",
+        "aggregation": "count_where",
+        "filter_column": "supplier_tier",
+        "filter_value": "Tier 1"
+      },
+      "denominator": {
+        "column": "supplier_id",
+        "aggregation": "count"
+      },
+      "format": "percent"
+    }
+  ],
+  "charts": [
+    {
+      "id": "supply_chain_inventory_levels_WMS_state_over_time",
+      "title": "Inventory Levels Over Time",
+      "type": "line",
+      "table": "supply_chain_inventory_levels_WMS_state",
+      "dimension": "snapshot_date",
+      "dimension_type": "date",
+      "measure": "item_id",
+      "aggregation": "count"
+    },
+    {
+      "id": "is_below_reorder_distribution_supply_chain_inventory_levels_WMS_state",
+      "title": "Is Below Reorder Distribution",
+      "type": "donut",
+      "table": "supply_chain_inventory_levels_WMS_state",
+      "dimension": "is_below_reorder",
+      "dimension_type": "status",
+      "measure": "item_id",
+      "aggregation": "count"
+    },
+    {
+      "id": "supply_chain_procurement_spend_ERP_record_over_time",
+      "title": "Procurement Spend Over Time",
+      "type": "line",
+      "table": "supply_chain_procurement_spend_ERP_record",
+      "dimension": "transaction_date",
+      "dimension_type": "date",
+      "measure": "supplier_id",
+      "aggregation": "count"
+    },
+    {
+      "id": "total_spend_usd_by_supplier_name_supply_chain_suppliers_ERP_dimension",
+      "title": "Total Spend Usd by Supplier Name",
+      "type": "bar",
+      "table": "supply_chain_suppliers_ERP_dimension",
+      "dimension": "supplier_name",
+      "dimension_type": "category",
+      "measure": "total_spend_usd",
+      "aggregation": "sum"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "aterm:logistics_delivery_events_shipment_value_usd_ytd_currency",
+  "type": "Aterm",
+  "canonical_id": "logistics_delivery_events_shipment_value_usd_ytd_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "delivery_events",
+    "measure": "shipment_value_usd",
+    "state": "all",
+    "scope": "total",
+    "time": "ytd",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 1336700.0,
+  "formula_line": "MEASURE_YTD('logistics_delivery_events_WMS_event', 'event_date', 'SUM', 'shipment_value_usd', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-08-25T09:36:16Z",
+  "usage_count": 0,
+  "source_goal": "What is the total shipment value usd of delivery_eventss ytd?",
+  "wave": 3,
+  "operator": "MEASURE_YTD",
+  "verified_at": "2026-08-25T09:57:33Z"
+}

@@ -1,0 +1,579 @@
+{
+  "wave": 6,
+  "goal_count": 26,
+  "generated_at": "2026-08-25T09:48:36Z",
+  "goals": [
+    {
+      "goal": "What is the month over month growth in quantity on hand for inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_growth_quantity_on_hand_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_inventory_levels_quantity_on_hand_this_month_count",
+        "supply_chain_inventory_levels_quantity_on_hand_last_month_count"
+      ],
+      "composition_formula": "(({supply_chain_inventory_levels_quantity_on_hand_this_month_count} - {supply_chain_inventory_levels_quantity_on_hand_last_month_count}) / abs({supply_chain_inventory_levels_quantity_on_hand_last_month_count}) * 100) if {supply_chain_inventory_levels_quantity_on_hand_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "growth_quantity_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in quantity reserved for inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_growth_quantity_reserved_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_inventory_levels_quantity_reserved_this_month_count",
+        "supply_chain_inventory_levels_quantity_reserved_last_month_count"
+      ],
+      "composition_formula": "(({supply_chain_inventory_levels_quantity_reserved_this_month_count} - {supply_chain_inventory_levels_quantity_reserved_last_month_count}) / abs({supply_chain_inventory_levels_quantity_reserved_last_month_count}) * 100) if {supply_chain_inventory_levels_quantity_reserved_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "growth_quantity_reserved",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in quantity available for inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_growth_quantity_available_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_inventory_levels_quantity_available_this_month_count",
+        "supply_chain_inventory_levels_quantity_available_last_month_count"
+      ],
+      "composition_formula": "(({supply_chain_inventory_levels_quantity_available_this_month_count} - {supply_chain_inventory_levels_quantity_available_last_month_count}) / abs({supply_chain_inventory_levels_quantity_available_last_month_count}) * 100) if {supply_chain_inventory_levels_quantity_available_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "growth_quantity_available",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in reorder point for inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_growth_reorder_point_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_inventory_levels_reorder_point_this_month_count",
+        "supply_chain_inventory_levels_reorder_point_last_month_count"
+      ],
+      "composition_formula": "(({supply_chain_inventory_levels_reorder_point_this_month_count} - {supply_chain_inventory_levels_reorder_point_last_month_count}) / abs({supply_chain_inventory_levels_reorder_point_last_month_count}) * 100) if {supply_chain_inventory_levels_reorder_point_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "growth_reorder_point",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in safety stock qty for inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_growth_safety_stock_qty_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_inventory_levels_safety_stock_qty_this_month_count",
+        "supply_chain_inventory_levels_safety_stock_qty_last_month_count"
+      ],
+      "composition_formula": "(({supply_chain_inventory_levels_safety_stock_qty_this_month_count} - {supply_chain_inventory_levels_safety_stock_qty_last_month_count}) / abs({supply_chain_inventory_levels_safety_stock_qty_last_month_count}) * 100) if {supply_chain_inventory_levels_safety_stock_qty_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "growth_safety_stock_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in days of supply for inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_growth_days_of_supply_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_inventory_levels_days_of_supply_this_month_days",
+        "supply_chain_inventory_levels_days_of_supply_last_month_days"
+      ],
+      "composition_formula": "(({supply_chain_inventory_levels_days_of_supply_this_month_days} - {supply_chain_inventory_levels_days_of_supply_last_month_days}) / abs({supply_chain_inventory_levels_days_of_supply_last_month_days}) * 100) if {supply_chain_inventory_levels_days_of_supply_last_month_days} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "growth_days_of_supply",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in avg daily demand for inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_growth_avg_daily_demand_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_inventory_levels_avg_daily_demand_this_month_count",
+        "supply_chain_inventory_levels_avg_daily_demand_last_month_count"
+      ],
+      "composition_formula": "(({supply_chain_inventory_levels_avg_daily_demand_this_month_count} - {supply_chain_inventory_levels_avg_daily_demand_last_month_count}) / abs({supply_chain_inventory_levels_avg_daily_demand_last_month_count}) * 100) if {supply_chain_inventory_levels_avg_daily_demand_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "growth_avg_daily_demand",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in unit cost usd for inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_growth_unit_cost_usd_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_inventory_levels_unit_cost_usd_this_month_currency",
+        "supply_chain_inventory_levels_unit_cost_usd_last_month_currency"
+      ],
+      "composition_formula": "(({supply_chain_inventory_levels_unit_cost_usd_this_month_currency} - {supply_chain_inventory_levels_unit_cost_usd_last_month_currency}) / abs({supply_chain_inventory_levels_unit_cost_usd_last_month_currency}) * 100) if {supply_chain_inventory_levels_unit_cost_usd_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "growth_unit_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in total value usd for inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_growth_total_value_usd_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_inventory_levels_total_value_usd_this_month_currency",
+        "supply_chain_inventory_levels_total_value_usd_last_month_currency"
+      ],
+      "composition_formula": "(({supply_chain_inventory_levels_total_value_usd_this_month_currency} - {supply_chain_inventory_levels_total_value_usd_last_month_currency}) / abs({supply_chain_inventory_levels_total_value_usd_last_month_currency}) * 100) if {supply_chain_inventory_levels_total_value_usd_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "growth_total_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in lead time days for inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_growth_lead_time_days_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_inventory_levels_lead_time_days_this_month_days",
+        "supply_chain_inventory_levels_lead_time_days_last_month_days"
+      ],
+      "composition_formula": "(({supply_chain_inventory_levels_lead_time_days_this_month_days} - {supply_chain_inventory_levels_lead_time_days_last_month_days}) / abs({supply_chain_inventory_levels_lead_time_days_last_month_days}) * 100) if {supply_chain_inventory_levels_lead_time_days_last_month_days} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "growth_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in spend amount usd for procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_growth_spend_amount_usd_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_procurement_spend_spend_amount_usd_this_month_currency",
+        "supply_chain_procurement_spend_spend_amount_usd_last_month_currency"
+      ],
+      "composition_formula": "(({supply_chain_procurement_spend_spend_amount_usd_this_month_currency} - {supply_chain_procurement_spend_spend_amount_usd_last_month_currency}) / abs({supply_chain_procurement_spend_spend_amount_usd_last_month_currency}) * 100) if {supply_chain_procurement_spend_spend_amount_usd_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "growth_spend_amount_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in po count for procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_growth_po_count_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_procurement_spend_po_count_this_month_count",
+        "supply_chain_procurement_spend_po_count_last_month_count"
+      ],
+      "composition_formula": "(({supply_chain_procurement_spend_po_count_this_month_count} - {supply_chain_procurement_spend_po_count_last_month_count}) / abs({supply_chain_procurement_spend_po_count_last_month_count}) * 100) if {supply_chain_procurement_spend_po_count_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "growth_po_count",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in avg po value for procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_growth_avg_po_value_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_procurement_spend_avg_po_value_this_month_currency",
+        "supply_chain_procurement_spend_avg_po_value_last_month_currency"
+      ],
+      "composition_formula": "(({supply_chain_procurement_spend_avg_po_value_this_month_currency} - {supply_chain_procurement_spend_avg_po_value_last_month_currency}) / abs({supply_chain_procurement_spend_avg_po_value_last_month_currency}) * 100) if {supply_chain_procurement_spend_avg_po_value_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "growth_avg_po_value",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in budget usd for procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_growth_budget_usd_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_procurement_spend_budget_usd_this_month_count",
+        "supply_chain_procurement_spend_budget_usd_last_month_count"
+      ],
+      "composition_formula": "(({supply_chain_procurement_spend_budget_usd_this_month_count} - {supply_chain_procurement_spend_budget_usd_last_month_count}) / abs({supply_chain_procurement_spend_budget_usd_last_month_count}) * 100) if {supply_chain_procurement_spend_budget_usd_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "growth_budget_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in budget variance pct for procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_growth_budget_variance_pct_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_procurement_spend_budget_variance_pct_this_month_count",
+        "supply_chain_procurement_spend_budget_variance_pct_last_month_count"
+      ],
+      "composition_formula": "(({supply_chain_procurement_spend_budget_variance_pct_this_month_count} - {supply_chain_procurement_spend_budget_variance_pct_last_month_count}) / abs({supply_chain_procurement_spend_budget_variance_pct_last_month_count}) * 100) if {supply_chain_procurement_spend_budget_variance_pct_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "growth_budget_variance_pct",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in discount captured usd for procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_growth_discount_captured_usd_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_procurement_spend_discount_captured_usd_this_month_count",
+        "supply_chain_procurement_spend_discount_captured_usd_last_month_count"
+      ],
+      "composition_formula": "(({supply_chain_procurement_spend_discount_captured_usd_this_month_count} - {supply_chain_procurement_spend_discount_captured_usd_last_month_count}) / abs({supply_chain_procurement_spend_discount_captured_usd_last_month_count}) * 100) if {supply_chain_procurement_spend_discount_captured_usd_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "growth_discount_captured_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in tax amount usd for procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_growth_tax_amount_usd_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_procurement_spend_tax_amount_usd_this_month_currency",
+        "supply_chain_procurement_spend_tax_amount_usd_last_month_currency"
+      ],
+      "composition_formula": "(({supply_chain_procurement_spend_tax_amount_usd_this_month_currency} - {supply_chain_procurement_spend_tax_amount_usd_last_month_currency}) / abs({supply_chain_procurement_spend_tax_amount_usd_last_month_currency}) * 100) if {supply_chain_procurement_spend_tax_amount_usd_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "growth_tax_amount_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in total orders for supplierss?",
+      "canonical_id": "supply_chain_suppliers_growth_total_orders_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_suppliers_total_orders_this_month_currency",
+        "supply_chain_suppliers_total_orders_last_month_currency"
+      ],
+      "composition_formula": "(({supply_chain_suppliers_total_orders_this_month_currency} - {supply_chain_suppliers_total_orders_last_month_currency}) / abs({supply_chain_suppliers_total_orders_last_month_currency}) * 100) if {supply_chain_suppliers_total_orders_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "growth_total_orders",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in on time delivery rate for supplierss?",
+      "canonical_id": "supply_chain_suppliers_growth_on_time_delivery_rate_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_suppliers_on_time_delivery_rate_this_month_percent",
+        "supply_chain_suppliers_on_time_delivery_rate_last_month_percent"
+      ],
+      "composition_formula": "(({supply_chain_suppliers_on_time_delivery_rate_this_month_percent} - {supply_chain_suppliers_on_time_delivery_rate_last_month_percent}) / abs({supply_chain_suppliers_on_time_delivery_rate_last_month_percent}) * 100) if {supply_chain_suppliers_on_time_delivery_rate_last_month_percent} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "growth_on_time_delivery_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in quality acceptance rate for supplierss?",
+      "canonical_id": "supply_chain_suppliers_growth_quality_acceptance_rate_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_suppliers_quality_acceptance_rate_this_month_percent",
+        "supply_chain_suppliers_quality_acceptance_rate_last_month_percent"
+      ],
+      "composition_formula": "(({supply_chain_suppliers_quality_acceptance_rate_this_month_percent} - {supply_chain_suppliers_quality_acceptance_rate_last_month_percent}) / abs({supply_chain_suppliers_quality_acceptance_rate_last_month_percent}) * 100) if {supply_chain_suppliers_quality_acceptance_rate_last_month_percent} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "growth_quality_acceptance_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in avg lead time days for supplierss?",
+      "canonical_id": "supply_chain_suppliers_growth_avg_lead_time_days_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_suppliers_avg_lead_time_days_this_month_days",
+        "supply_chain_suppliers_avg_lead_time_days_last_month_days"
+      ],
+      "composition_formula": "(({supply_chain_suppliers_avg_lead_time_days_this_month_days} - {supply_chain_suppliers_avg_lead_time_days_last_month_days}) / abs({supply_chain_suppliers_avg_lead_time_days_last_month_days}) * 100) if {supply_chain_suppliers_avg_lead_time_days_last_month_days} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "growth_avg_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in total spend usd for supplierss?",
+      "canonical_id": "supply_chain_suppliers_growth_total_spend_usd_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_suppliers_total_spend_usd_this_month_currency",
+        "supply_chain_suppliers_total_spend_usd_last_month_currency"
+      ],
+      "composition_formula": "(({supply_chain_suppliers_total_spend_usd_this_month_currency} - {supply_chain_suppliers_total_spend_usd_last_month_currency}) / abs({supply_chain_suppliers_total_spend_usd_last_month_currency}) * 100) if {supply_chain_suppliers_total_spend_usd_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "growth_total_spend_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in defect rate for supplierss?",
+      "canonical_id": "supply_chain_suppliers_growth_defect_rate_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_suppliers_defect_rate_this_month_percent",
+        "supply_chain_suppliers_defect_rate_last_month_percent"
+      ],
+      "composition_formula": "(({supply_chain_suppliers_defect_rate_this_month_percent} - {supply_chain_suppliers_defect_rate_last_month_percent}) / abs({supply_chain_suppliers_defect_rate_last_month_percent}) * 100) if {supply_chain_suppliers_defect_rate_last_month_percent} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "growth_defect_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in return rate for supplierss?",
+      "canonical_id": "supply_chain_suppliers_growth_return_rate_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_suppliers_return_rate_this_month_percent",
+        "supply_chain_suppliers_return_rate_last_month_percent"
+      ],
+      "composition_formula": "(({supply_chain_suppliers_return_rate_this_month_percent} - {supply_chain_suppliers_return_rate_last_month_percent}) / abs({supply_chain_suppliers_return_rate_last_month_percent}) * 100) if {supply_chain_suppliers_return_rate_last_month_percent} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "growth_return_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in avg po value usd for supplierss?",
+      "canonical_id": "supply_chain_suppliers_growth_avg_po_value_usd_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_suppliers_avg_po_value_usd_this_month_currency",
+        "supply_chain_suppliers_avg_po_value_usd_last_month_currency"
+      ],
+      "composition_formula": "(({supply_chain_suppliers_avg_po_value_usd_this_month_currency} - {supply_chain_suppliers_avg_po_value_usd_last_month_currency}) / abs({supply_chain_suppliers_avg_po_value_usd_last_month_currency}) * 100) if {supply_chain_suppliers_avg_po_value_usd_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "growth_avg_po_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in yoy spend change pct for supplierss?",
+      "canonical_id": "supply_chain_suppliers_growth_yoy_spend_change_pct_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "supply_chain_suppliers_yoy_spend_change_pct_this_month_currency",
+        "supply_chain_suppliers_yoy_spend_change_pct_last_month_currency"
+      ],
+      "composition_formula": "(({supply_chain_suppliers_yoy_spend_change_pct_this_month_currency} - {supply_chain_suppliers_yoy_spend_change_pct_last_month_currency}) / abs({supply_chain_suppliers_yoy_spend_change_pct_last_month_currency}) * 100) if {supply_chain_suppliers_yoy_spend_change_pct_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "growth_yoy_spend_change_pct",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    }
+  ]
+}

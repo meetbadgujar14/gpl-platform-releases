@@ -1,0 +1,381 @@
+{
+  "wave": 6,
+  "goal_count": 17,
+  "generated_at": "2026-08-25T09:40:08Z",
+  "goals": [
+    {
+      "goal": "What is the month over month growth in delay hours for delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_growth_delay_hours_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_delivery_events_delay_hours_this_month_count",
+        "logistics_delivery_events_delay_hours_last_month_count"
+      ],
+      "composition_formula": "(({logistics_delivery_events_delay_hours_this_month_count} - {logistics_delivery_events_delay_hours_last_month_count}) / abs({logistics_delivery_events_delay_hours_last_month_count}) * 100) if {logistics_delivery_events_delay_hours_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "growth_delay_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in delay cost usd for delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_growth_delay_cost_usd_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_delivery_events_delay_cost_usd_this_month_currency",
+        "logistics_delivery_events_delay_cost_usd_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_delivery_events_delay_cost_usd_this_month_currency} - {logistics_delivery_events_delay_cost_usd_last_month_currency}) / abs({logistics_delivery_events_delay_cost_usd_last_month_currency}) * 100) if {logistics_delivery_events_delay_cost_usd_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "growth_delay_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in resolution hours for delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_growth_resolution_hours_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_delivery_events_resolution_hours_this_month_count",
+        "logistics_delivery_events_resolution_hours_last_month_count"
+      ],
+      "composition_formula": "(({logistics_delivery_events_resolution_hours_this_month_count} - {logistics_delivery_events_resolution_hours_last_month_count}) / abs({logistics_delivery_events_resolution_hours_last_month_count}) * 100) if {logistics_delivery_events_resolution_hours_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "growth_resolution_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in shipment value usd for delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_growth_shipment_value_usd_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_delivery_events_shipment_value_usd_this_month_currency",
+        "logistics_delivery_events_shipment_value_usd_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_delivery_events_shipment_value_usd_this_month_currency} - {logistics_delivery_events_shipment_value_usd_last_month_currency}) / abs({logistics_delivery_events_shipment_value_usd_last_month_currency}) * 100) if {logistics_delivery_events_shipment_value_usd_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "growth_shipment_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in distance km for vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_growth_distance_km_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_vehicle_trips_distance_km_this_month_count",
+        "logistics_vehicle_trips_distance_km_last_month_count"
+      ],
+      "composition_formula": "(({logistics_vehicle_trips_distance_km_this_month_count} - {logistics_vehicle_trips_distance_km_last_month_count}) / abs({logistics_vehicle_trips_distance_km_last_month_count}) * 100) if {logistics_vehicle_trips_distance_km_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "growth_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in planned duration hrs for vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_growth_planned_duration_hrs_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_vehicle_trips_planned_duration_hrs_this_month_percent",
+        "logistics_vehicle_trips_planned_duration_hrs_last_month_percent"
+      ],
+      "composition_formula": "(({logistics_vehicle_trips_planned_duration_hrs_this_month_percent} - {logistics_vehicle_trips_planned_duration_hrs_last_month_percent}) / abs({logistics_vehicle_trips_planned_duration_hrs_last_month_percent}) * 100) if {logistics_vehicle_trips_planned_duration_hrs_last_month_percent} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "growth_planned_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in actual duration hrs for vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_growth_actual_duration_hrs_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_vehicle_trips_actual_duration_hrs_this_month_percent",
+        "logistics_vehicle_trips_actual_duration_hrs_last_month_percent"
+      ],
+      "composition_formula": "(({logistics_vehicle_trips_actual_duration_hrs_this_month_percent} - {logistics_vehicle_trips_actual_duration_hrs_last_month_percent}) / abs({logistics_vehicle_trips_actual_duration_hrs_last_month_percent}) * 100) if {logistics_vehicle_trips_actual_duration_hrs_last_month_percent} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "growth_actual_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in trip cost usd for vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_growth_trip_cost_usd_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_vehicle_trips_trip_cost_usd_this_month_currency",
+        "logistics_vehicle_trips_trip_cost_usd_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_vehicle_trips_trip_cost_usd_this_month_currency} - {logistics_vehicle_trips_trip_cost_usd_last_month_currency}) / abs({logistics_vehicle_trips_trip_cost_usd_last_month_currency}) * 100) if {logistics_vehicle_trips_trip_cost_usd_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "growth_trip_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in litres consumed for vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_growth_litres_consumed_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_vehicle_trips_litres_consumed_this_month_count",
+        "logistics_vehicle_trips_litres_consumed_last_month_count"
+      ],
+      "composition_formula": "(({logistics_vehicle_trips_litres_consumed_this_month_count} - {logistics_vehicle_trips_litres_consumed_last_month_count}) / abs({logistics_vehicle_trips_litres_consumed_last_month_count}) * 100) if {logistics_vehicle_trips_litres_consumed_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "growth_litres_consumed",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in fuel cost usd for vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_growth_fuel_cost_usd_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_vehicle_trips_fuel_cost_usd_this_month_currency",
+        "logistics_vehicle_trips_fuel_cost_usd_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_vehicle_trips_fuel_cost_usd_this_month_currency} - {logistics_vehicle_trips_fuel_cost_usd_last_month_currency}) / abs({logistics_vehicle_trips_fuel_cost_usd_last_month_currency}) * 100) if {logistics_vehicle_trips_fuel_cost_usd_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "growth_fuel_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in co2 kg emitted for vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_growth_co2_kg_emitted_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_vehicle_trips_co2_kg_emitted_this_month_count",
+        "logistics_vehicle_trips_co2_kg_emitted_last_month_count"
+      ],
+      "composition_formula": "(({logistics_vehicle_trips_co2_kg_emitted_this_month_count} - {logistics_vehicle_trips_co2_kg_emitted_last_month_count}) / abs({logistics_vehicle_trips_co2_kg_emitted_last_month_count}) * 100) if {logistics_vehicle_trips_co2_kg_emitted_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "growth_co2_kg_emitted",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in cost per km for vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_growth_cost_per_km_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_vehicle_trips_cost_per_km_this_month_currency",
+        "logistics_vehicle_trips_cost_per_km_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_vehicle_trips_cost_per_km_this_month_currency} - {logistics_vehicle_trips_cost_per_km_last_month_currency}) / abs({logistics_vehicle_trips_cost_per_km_last_month_currency}) * 100) if {logistics_vehicle_trips_cost_per_km_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "growth_cost_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in revenue per km for vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_growth_revenue_per_km_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_vehicle_trips_revenue_per_km_this_month_currency",
+        "logistics_vehicle_trips_revenue_per_km_last_month_currency"
+      ],
+      "composition_formula": "(({logistics_vehicle_trips_revenue_per_km_this_month_currency} - {logistics_vehicle_trips_revenue_per_km_last_month_currency}) / abs({logistics_vehicle_trips_revenue_per_km_last_month_currency}) * 100) if {logistics_vehicle_trips_revenue_per_km_last_month_currency} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "growth_revenue_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in utilization pct for vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_growth_utilization_pct_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_vehicle_trips_utilization_pct_this_month_count",
+        "logistics_vehicle_trips_utilization_pct_last_month_count"
+      ],
+      "composition_formula": "(({logistics_vehicle_trips_utilization_pct_this_month_count} - {logistics_vehicle_trips_utilization_pct_last_month_count}) / abs({logistics_vehicle_trips_utilization_pct_last_month_count}) * 100) if {logistics_vehicle_trips_utilization_pct_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "growth_utilization_pct",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in idle time hrs for vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_growth_idle_time_hrs_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_vehicle_trips_idle_time_hrs_this_month_count",
+        "logistics_vehicle_trips_idle_time_hrs_last_month_count"
+      ],
+      "composition_formula": "(({logistics_vehicle_trips_idle_time_hrs_this_month_count} - {logistics_vehicle_trips_idle_time_hrs_last_month_count}) / abs({logistics_vehicle_trips_idle_time_hrs_last_month_count}) * 100) if {logistics_vehicle_trips_idle_time_hrs_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "growth_idle_time_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in incidents for vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_growth_incidents_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_vehicle_trips_incidents_this_month_count",
+        "logistics_vehicle_trips_incidents_last_month_count"
+      ],
+      "composition_formula": "(({logistics_vehicle_trips_incidents_this_month_count} - {logistics_vehicle_trips_incidents_last_month_count}) / abs({logistics_vehicle_trips_incidents_last_month_count}) * 100) if {logistics_vehicle_trips_incidents_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "growth_incidents",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the month over month growth in driver rating for vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_growth_driver_rating_this_month_percent",
+      "complexity": "COMPOSED_2",
+      "depends_on": [
+        "logistics_vehicle_trips_driver_rating_this_month_count",
+        "logistics_vehicle_trips_driver_rating_last_month_count"
+      ],
+      "composition_formula": "(({logistics_vehicle_trips_driver_rating_this_month_count} - {logistics_vehicle_trips_driver_rating_last_month_count}) / abs({logistics_vehicle_trips_driver_rating_last_month_count}) * 100) if {logistics_vehicle_trips_driver_rating_last_month_count} != 0 else 0",
+      "wave": 6,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "growth_driver_rating",
+        "state": "all",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    }
+  ]
+}

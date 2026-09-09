@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_procurement_spend_spend_amount_usd_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_procurement_spend_spend_amount_usd_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "procurement_spend",
+    "measure": "spend_amount_usd",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 3108050.0,
+  "formula_line": "MEASURE('supply_chain_procurement_spend_ERP_record', 'SUM', 'spend_amount_usd', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-08-25T09:49:47Z",
+  "usage_count": 0,
+  "source_goal": "What is the total spend amount usd of procurement_spends?",
+  "wave": 1,
+  "operator": "MEASURE",
+  "verified_at": "2026-08-25T09:57:35Z"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "aterm:logistics_vehicle_trips_count_by_month",
+  "type": "Aterm",
+  "canonical_id": "logistics_vehicle_trips_count_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "vehicle_trips",
+    "measure": "count",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2025-03": 1.0,
+    "2025-11": 1.0,
+    "2026-03": 1.0,
+    "2026-04": 1.0,
+    "2026-05": 1.0,
+    "2026-06": 1.0,
+    "2026-07": 1.0,
+    "2026-08": 4.0
+  },
+  "formula_line": "MEASURE_GROUPED('logistics_vehicle_trips_WMS_event', 'COUNT_DISTINCT', 'trip_id', None, [], None, None, None, {'date_col': 'trip_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-08-25T09:36:17Z",
+  "usage_count": 0,
+  "source_goal": "How many vehicle_tripss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-08-25T09:57:34Z"
+}

@@ -1,0 +1,121 @@
+{
+  "wave": "E",
+  "goal_count": 6,
+  "generated_at": "2026-08-25T09:49:47Z",
+  "goals": [
+    {
+      "goal": "Which active supplier has the highest defect rate this quarter?",
+      "canonical_id": "supply_chain_suppliers_defect_rate_active_this_quarter_percent_max_percent",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "defect_rate",
+        "state": "Active",
+        "scope": "max",
+        "time": "this_quarter",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "wave": "E",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "Which active supplier has the lowest on-time delivery rate this quarter?",
+      "canonical_id": "supply_chain_suppliers_on_time_delivery_rate_active_this_quarter_percent_min_percent",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "on_time_delivery_rate",
+        "state": "Active",
+        "scope": "min",
+        "time": "this_quarter",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "wave": "E",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "Which active supplier has the longest average lead time this quarter?",
+      "canonical_id": "supply_chain_suppliers_avg_lead_time_days_active_this_quarter_days_max_days",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "avg_lead_time_days",
+        "state": "Active",
+        "scope": "max",
+        "time": "this_quarter",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "wave": "E",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "Which active supplier has the highest return rate year to date?",
+      "canonical_id": "supply_chain_suppliers_return_rate_active_ytd_percent_max_percent",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "return_rate",
+        "state": "Active",
+        "scope": "max",
+        "time": "ytd",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "wave": "E",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "Which active supplier has the largest year-over-year spend increase?",
+      "canonical_id": "supply_chain_suppliers_yoy_spend_change_pct_active_ytd_percent_max_percent",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "yoy_spend_change_pct",
+        "state": "Active",
+        "scope": "max",
+        "time": "ytd",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "wave": "E",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "Which active supplier has the lowest quality acceptance rate this quarter?",
+      "canonical_id": "supply_chain_suppliers_quality_acceptance_rate_active_this_quarter_percent_min_percent",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "quality_acceptance_rate",
+        "state": "Active",
+        "scope": "min",
+        "time": "this_quarter",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "wave": "E",
+      "complexity": "KPI",
+      "join": null
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "aterm:logistics_delivery_events_max_shipment_value_usd_currency",
+  "type": "Aterm",
+  "canonical_id": "logistics_delivery_events_max_shipment_value_usd_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "delivery_events",
+    "measure": "max_shipment_value_usd",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 390000.0,
+  "formula_line": "MEASURE('logistics_delivery_events_WMS_event', 'MAX', 'shipment_value_usd', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-08-25T09:36:16Z",
+  "usage_count": 0,
+  "source_goal": "What is the max shipment value usd across all delivery_eventss?",
+  "wave": 2,
+  "operator": "MEASURE",
+  "verified_at": "2026-08-25T09:57:33Z"
+}

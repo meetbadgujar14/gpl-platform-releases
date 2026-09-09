@@ -1,0 +1,1280 @@
+{
+  "wave": 8,
+  "goal_count": 67,
+  "generated_at": "2026-08-25T09:40:08Z",
+  "goals": [
+    {
+      "goal": "How many delivery_eventss by month?",
+      "canonical_id": "logistics_delivery_events_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay hours of delivery_eventss by month?",
+      "canonical_id": "logistics_delivery_events_delay_hours_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay cost usd of delivery_eventss by month?",
+      "canonical_id": "logistics_delivery_events_delay_cost_usd_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total resolution hours of delivery_eventss by month?",
+      "canonical_id": "logistics_delivery_events_resolution_hours_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "resolution_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total shipment value usd of delivery_eventss by month?",
+      "canonical_id": "logistics_delivery_events_shipment_value_usd_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "shipment_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many delivery_eventss by region?",
+      "canonical_id": "logistics_delivery_events_count_by_region",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_region"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay hours of delivery_eventss by region?",
+      "canonical_id": "logistics_delivery_events_delay_hours_count_by_region",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_region"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay cost usd of delivery_eventss by region?",
+      "canonical_id": "logistics_delivery_events_delay_cost_usd_currency_by_region",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_region"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total resolution hours of delivery_eventss by region?",
+      "canonical_id": "logistics_delivery_events_resolution_hours_count_by_region",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "resolution_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_region"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total shipment value usd of delivery_eventss by region?",
+      "canonical_id": "logistics_delivery_events_shipment_value_usd_currency_by_region",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "shipment_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_region"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many delivery_eventss by transport mode?",
+      "canonical_id": "logistics_delivery_events_count_by_transport_mode",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_transport_mode"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay hours of delivery_eventss by transport mode?",
+      "canonical_id": "logistics_delivery_events_delay_hours_count_by_transport_mode",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_transport_mode"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay cost usd of delivery_eventss by transport mode?",
+      "canonical_id": "logistics_delivery_events_delay_cost_usd_currency_by_transport_mode",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_transport_mode"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total resolution hours of delivery_eventss by transport mode?",
+      "canonical_id": "logistics_delivery_events_resolution_hours_count_by_transport_mode",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "resolution_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_transport_mode"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total shipment value usd of delivery_eventss by transport mode?",
+      "canonical_id": "logistics_delivery_events_shipment_value_usd_currency_by_transport_mode",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "shipment_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_transport_mode"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many delivery_eventss by exception category?",
+      "canonical_id": "logistics_delivery_events_count_by_exception_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_exception_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay hours of delivery_eventss by exception category?",
+      "canonical_id": "logistics_delivery_events_delay_hours_count_by_exception_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_exception_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay cost usd of delivery_eventss by exception category?",
+      "canonical_id": "logistics_delivery_events_delay_cost_usd_currency_by_exception_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_exception_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total resolution hours of delivery_eventss by exception category?",
+      "canonical_id": "logistics_delivery_events_resolution_hours_count_by_exception_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "resolution_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_exception_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total shipment value usd of delivery_eventss by exception category?",
+      "canonical_id": "logistics_delivery_events_shipment_value_usd_currency_by_exception_category",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "shipment_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_exception_category"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many delivery_eventss by impact level?",
+      "canonical_id": "logistics_delivery_events_count_by_impact_level",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_impact_level"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay hours of delivery_eventss by impact level?",
+      "canonical_id": "logistics_delivery_events_delay_hours_count_by_impact_level",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_impact_level"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total delay cost usd of delivery_eventss by impact level?",
+      "canonical_id": "logistics_delivery_events_delay_cost_usd_currency_by_impact_level",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "delay_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_impact_level"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total resolution hours of delivery_eventss by impact level?",
+      "canonical_id": "logistics_delivery_events_resolution_hours_count_by_impact_level",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "resolution_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_impact_level"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total shipment value usd of delivery_eventss by impact level?",
+      "canonical_id": "logistics_delivery_events_shipment_value_usd_currency_by_impact_level",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "shipment_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_impact_level"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many vehicle_tripss by month?",
+      "canonical_id": "logistics_vehicle_trips_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of vehicle_tripss by month?",
+      "canonical_id": "logistics_vehicle_trips_distance_km_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total planned duration hrs of vehicle_tripss by month?",
+      "canonical_id": "logistics_vehicle_trips_planned_duration_hrs_percent_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "planned_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total actual duration hrs of vehicle_tripss by month?",
+      "canonical_id": "logistics_vehicle_trips_actual_duration_hrs_percent_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "actual_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total trip cost usd of vehicle_tripss by month?",
+      "canonical_id": "logistics_vehicle_trips_trip_cost_usd_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "trip_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total litres consumed of vehicle_tripss by month?",
+      "canonical_id": "logistics_vehicle_trips_litres_consumed_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "litres_consumed",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total fuel cost usd of vehicle_tripss by month?",
+      "canonical_id": "logistics_vehicle_trips_fuel_cost_usd_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "fuel_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total co2 kg emitted of vehicle_tripss by month?",
+      "canonical_id": "logistics_vehicle_trips_co2_kg_emitted_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "co2_kg_emitted",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total cost per km of vehicle_tripss by month?",
+      "canonical_id": "logistics_vehicle_trips_cost_per_km_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "cost_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total revenue per km of vehicle_tripss by month?",
+      "canonical_id": "logistics_vehicle_trips_revenue_per_km_currency_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "revenue_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total utilization pct of vehicle_tripss by month?",
+      "canonical_id": "logistics_vehicle_trips_utilization_pct_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "utilization_pct",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total idle time hrs of vehicle_tripss by month?",
+      "canonical_id": "logistics_vehicle_trips_idle_time_hrs_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "idle_time_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total incidents of vehicle_tripss by month?",
+      "canonical_id": "logistics_vehicle_trips_incidents_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "incidents",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total driver rating of vehicle_tripss by month?",
+      "canonical_id": "logistics_vehicle_trips_driver_rating_count_by_month",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "driver_rating",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_month"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many vehicle_tripss by vehicle type?",
+      "canonical_id": "logistics_vehicle_trips_count_by_vehicle_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_vehicle_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of vehicle_tripss by vehicle type?",
+      "canonical_id": "logistics_vehicle_trips_distance_km_count_by_vehicle_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_vehicle_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total planned duration hrs of vehicle_tripss by vehicle type?",
+      "canonical_id": "logistics_vehicle_trips_planned_duration_hrs_percent_by_vehicle_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "planned_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_vehicle_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total actual duration hrs of vehicle_tripss by vehicle type?",
+      "canonical_id": "logistics_vehicle_trips_actual_duration_hrs_percent_by_vehicle_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "actual_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_vehicle_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total trip cost usd of vehicle_tripss by vehicle type?",
+      "canonical_id": "logistics_vehicle_trips_trip_cost_usd_currency_by_vehicle_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "trip_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_vehicle_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total litres consumed of vehicle_tripss by vehicle type?",
+      "canonical_id": "logistics_vehicle_trips_litres_consumed_count_by_vehicle_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "litres_consumed",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_vehicle_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total fuel cost usd of vehicle_tripss by vehicle type?",
+      "canonical_id": "logistics_vehicle_trips_fuel_cost_usd_currency_by_vehicle_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "fuel_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_vehicle_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total co2 kg emitted of vehicle_tripss by vehicle type?",
+      "canonical_id": "logistics_vehicle_trips_co2_kg_emitted_count_by_vehicle_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "co2_kg_emitted",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_vehicle_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total cost per km of vehicle_tripss by vehicle type?",
+      "canonical_id": "logistics_vehicle_trips_cost_per_km_currency_by_vehicle_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "cost_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_vehicle_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total revenue per km of vehicle_tripss by vehicle type?",
+      "canonical_id": "logistics_vehicle_trips_revenue_per_km_currency_by_vehicle_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "revenue_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_vehicle_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total utilization pct of vehicle_tripss by vehicle type?",
+      "canonical_id": "logistics_vehicle_trips_utilization_pct_count_by_vehicle_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "utilization_pct",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_vehicle_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total idle time hrs of vehicle_tripss by vehicle type?",
+      "canonical_id": "logistics_vehicle_trips_idle_time_hrs_count_by_vehicle_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "idle_time_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_vehicle_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total incidents of vehicle_tripss by vehicle type?",
+      "canonical_id": "logistics_vehicle_trips_incidents_count_by_vehicle_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "incidents",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_vehicle_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total driver rating of vehicle_tripss by vehicle type?",
+      "canonical_id": "logistics_vehicle_trips_driver_rating_count_by_vehicle_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "driver_rating",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_vehicle_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "How many vehicle_tripss by fuel type?",
+      "canonical_id": "logistics_vehicle_trips_count_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total distance km of vehicle_tripss by fuel type?",
+      "canonical_id": "logistics_vehicle_trips_distance_km_count_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total planned duration hrs of vehicle_tripss by fuel type?",
+      "canonical_id": "logistics_vehicle_trips_planned_duration_hrs_percent_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "planned_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total actual duration hrs of vehicle_tripss by fuel type?",
+      "canonical_id": "logistics_vehicle_trips_actual_duration_hrs_percent_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "actual_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total trip cost usd of vehicle_tripss by fuel type?",
+      "canonical_id": "logistics_vehicle_trips_trip_cost_usd_currency_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "trip_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total litres consumed of vehicle_tripss by fuel type?",
+      "canonical_id": "logistics_vehicle_trips_litres_consumed_count_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "litres_consumed",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total fuel cost usd of vehicle_tripss by fuel type?",
+      "canonical_id": "logistics_vehicle_trips_fuel_cost_usd_currency_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "fuel_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total co2 kg emitted of vehicle_tripss by fuel type?",
+      "canonical_id": "logistics_vehicle_trips_co2_kg_emitted_count_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "co2_kg_emitted",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total cost per km of vehicle_tripss by fuel type?",
+      "canonical_id": "logistics_vehicle_trips_cost_per_km_currency_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "cost_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total revenue per km of vehicle_tripss by fuel type?",
+      "canonical_id": "logistics_vehicle_trips_revenue_per_km_currency_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "revenue_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total utilization pct of vehicle_tripss by fuel type?",
+      "canonical_id": "logistics_vehicle_trips_utilization_pct_count_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "utilization_pct",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total idle time hrs of vehicle_tripss by fuel type?",
+      "canonical_id": "logistics_vehicle_trips_idle_time_hrs_count_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "idle_time_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total incidents of vehicle_tripss by fuel type?",
+      "canonical_id": "logistics_vehicle_trips_incidents_count_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "incidents",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the total driver rating of vehicle_tripss by fuel type?",
+      "canonical_id": "logistics_vehicle_trips_driver_rating_count_by_fuel_type",
+      "complexity": "SERIES",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 8,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "driver_rating",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "by_fuel_type"
+      },
+      "join": null
+    }
+  ]
+}

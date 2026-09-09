@@ -1,0 +1,64 @@
+{
+  "wave": "C",
+  "goal_count": 3,
+  "generated_at": "2026-08-25T09:49:47Z",
+  "goals": [
+    {
+      "goal": "What is the combined supplier performance summary showing on-time delivery, defect rate, and return rate for all active suppliers this quarter?",
+      "canonical_id": "supply_chain_suppliers_quality_acceptance_rate_active_by_supplier_this_quarter_percent_by_supplier_percent",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "quality_acceptance_rate",
+        "state": "Active",
+        "scope": "by_supplier",
+        "time": "this_quarter",
+        "unit": "percent",
+        "series": "by_supplier"
+      },
+      "wave": "C",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the monthly trend of supplier count by status year to date?",
+      "canonical_id": "supply_chain_suppliers_count_all_by_state_ytd_count_by_status_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "count",
+        "state": "all",
+        "scope": "by_state",
+        "time": "ytd",
+        "unit": "count",
+        "series": "by_status"
+      },
+      "wave": "C",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "How does average lead time compare across active vs under-review suppliers this quarter?",
+      "canonical_id": "supply_chain_suppliers_avg_lead_time_days_all_by_state_this_quarter_days_by_status_days",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "avg_lead_time_days",
+        "state": "all",
+        "scope": "by_state",
+        "time": "this_quarter",
+        "unit": "days",
+        "series": "by_status"
+      },
+      "wave": "C",
+      "complexity": "KPI",
+      "join": null
+    }
+  ]
+}

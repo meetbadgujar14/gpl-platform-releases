@@ -1,0 +1,38 @@
+{
+  "id": "aterm:logistics_vehicle_trips_idle_time_hrs_count_by_month",
+  "type": "Aterm",
+  "canonical_id": "logistics_vehicle_trips_idle_time_hrs_count_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "vehicle_trips",
+    "measure": "idle_time_hrs",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2025-03": 0.7,
+    "2025-11": 0.5,
+    "2026-03": 0.0,
+    "2026-04": 0.2,
+    "2026-05": 2.1,
+    "2026-06": 0.5,
+    "2026-07": 0.3,
+    "2026-08": 2.9000000000000004
+  },
+  "formula_line": "MEASURE_GROUPED('logistics_vehicle_trips_WMS_event', 'SUM', 'idle_time_hrs', None, [], None, None, None, {'date_col': 'trip_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-08-25T09:36:17Z",
+  "usage_count": 0,
+  "source_goal": "What is the total idle time hrs of vehicle_tripss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-08-25T09:57:34Z"
+}

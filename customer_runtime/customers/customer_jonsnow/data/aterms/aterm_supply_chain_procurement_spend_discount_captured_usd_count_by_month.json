@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_procurement_spend_discount_captured_usd_count_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_procurement_spend_discount_captured_usd_count_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "procurement_spend",
+    "measure": "discount_captured_usd",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_month"
+  },
+  "oracle_value": {},
+  "formula_line": "MEASURE_GROUPED('supply_chain_procurement_spend_ERP_record', 'SUM', 'discount_captured_usd', None, [], None, None, None, {'date_col': 'month', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-08-25T09:49:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total discount captured usd of procurement_spends by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-08-25T09:57:36Z"
+}

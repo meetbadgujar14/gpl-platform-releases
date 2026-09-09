@@ -1,0 +1,38 @@
+{
+  "id": "aterm:supply_chain_suppliers_total_spend_usd_active_ytd_currency_max_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_total_spend_usd_active_ytd_currency_max_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "total_spend_usd",
+    "state": "Active",
+    "scope": "max",
+    "time": "ytd",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "Electronic Components": 8410000.0,
+    "Fasteners & Hardware": 2980000.0,
+    "MRO Supplies": 1750000.0,
+    "Packaging": 1120000.0,
+    "Safety & PPE": 4820000.0
+  },
+  "formula_line": "MEASURE_GROUPED_YTD('supply_chain_suppliers_ERP_dimension', 'last_audit_date', 'SUM', 'total_spend_usd', group_by_col='supplier_category', filters=[{'field': 'status', 'op': '=', 'value': 'Active'}])",
+  "exec_formula": "MEASURE_GROUPED_YTD('supply_chain_suppliers_ERP_dimension', 'last_audit_date', 'SUM', 'total_spend_usd', group_by_col='supplier_category', filters=[{'field': 'status', 'op': '=', 'value': 'Active'}])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-08-25T09:55:13Z",
+  "usage_count": 0,
+  "source_goal": "Which supplier accounts for the highest total spend year to date?",
+  "wave": "B",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_GROUPED_YTD steps=7",
+  "wizard_steps": 7,
+  "verified_at": "2026-08-25T09:57:37Z"
+}

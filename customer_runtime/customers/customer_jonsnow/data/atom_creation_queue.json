@@ -1,0 +1,1410 @@
+[
+  {
+    "entry_id": "c9f0c5de-8f1a-4176-9948-dc8cba16155c",
+    "customer_id": "customer_jonsnow",
+    "table_name": "log_delivery_exceptions_dashboard",
+    "vertical": "logistics",
+    "columns": [
+      {
+        "name": "event_id",
+        "type": "string"
+      },
+      {
+        "name": "shipment_id",
+        "type": "string"
+      },
+      {
+        "name": "freight_order_id",
+        "type": "string"
+      },
+      {
+        "name": "carrier_name",
+        "type": "string"
+      },
+      {
+        "name": "event_type",
+        "type": "string"
+      },
+      {
+        "name": "exception_category",
+        "type": "string"
+      },
+      {
+        "name": "location_city",
+        "type": "string"
+      },
+      {
+        "name": "location_country",
+        "type": "string"
+      },
+      {
+        "name": "region",
+        "type": "string"
+      },
+      {
+        "name": "transport_mode",
+        "type": "string"
+      },
+      {
+        "name": "is_exception",
+        "type": "string"
+      },
+      {
+        "name": "delay_hours",
+        "type": "number"
+      },
+      {
+        "name": "delay_cost_usd",
+        "type": "number"
+      },
+      {
+        "name": "event_date",
+        "type": "date"
+      },
+      {
+        "name": "resolution_date",
+        "type": "date"
+      },
+      {
+        "name": "resolution_hours",
+        "type": "number"
+      },
+      {
+        "name": "root_cause",
+        "type": "string"
+      },
+      {
+        "name": "impact_level",
+        "type": "string"
+      },
+      {
+        "name": "escalated",
+        "type": "string"
+      },
+      {
+        "name": "sla_breached",
+        "type": "string"
+      },
+      {
+        "name": "shipment_value_usd",
+        "type": "number"
+      }
+    ],
+    "enums": {
+      "shipment_id": [
+        "SHP-11748",
+        "SHP-36285",
+        "SHP-43726",
+        "SHP-47839",
+        "SHP-50934",
+        "SHP-52843",
+        "SHP-69357",
+        "SHP-74182",
+        "SHP-76219",
+        "SHP-83401",
+        "SHP-87463",
+        "SHP-93016"
+      ],
+      "freight_order_id": [
+        "FO-14567",
+        "FO-17563",
+        "FO-18947",
+        "FO-23759",
+        "FO-28473",
+        "FO-31896",
+        "FO-34572",
+        "FO-45821",
+        "FO-46283",
+        "FO-56284",
+        "FO-64802",
+        "FO-90483"
+      ],
+      "carrier_name": [
+        "AeroCargo Solutions",
+        "CrossContinent Rail",
+        "GlobalShip Inc.",
+        "MetroFreight Co.",
+        "OceanBridge Freight",
+        "RailLink Express",
+        "SkyRush Logistics"
+      ],
+      "event_type": [
+        "Arrived",
+        "Customs Cleared",
+        "Customs Hold",
+        "Delivered",
+        "Departed",
+        "Exception - Address Error",
+        "Exception - Damaged",
+        "Exception - Missing Docs",
+        "Exception - Weather Delay",
+        "In Transit",
+        "Out for Delivery",
+        "Picked",
+        "Returned"
+      ],
+      "exception_category": [
+        "Cargo Damage",
+        "Compliance",
+        "Customs Rejection",
+        "Delivery",
+        "Minor Delay",
+        "None",
+        "Regulatory",
+        "Weather"
+      ],
+      "location_country": [
+        "Australia",
+        "Belgium",
+        "Brazil",
+        "Canada",
+        "China",
+        "Finland",
+        "France",
+        "Germany",
+        "India",
+        "Italy",
+        "Japan",
+        "Malaysia",
+        "Mexico",
+        "Netherlands",
+        "Singapore",
+        "South Africa",
+        "South Korea",
+        "UAE",
+        "UK",
+        "USA"
+      ],
+      "region": [
+        "Asia-Pacific",
+        "Europe",
+        "Latin America",
+        "MEA",
+        "Middle East",
+        "North America"
+      ],
+      "transport_mode": [
+        "Air",
+        "Rail",
+        "Road",
+        "Sea"
+      ],
+      "is_exception": [
+        "False",
+        "True"
+      ],
+      "impact_level": [
+        "Critical",
+        "High",
+        "Low",
+        "Medium",
+        "None"
+      ],
+      "escalated": [
+        "False",
+        "True"
+      ],
+      "sla_breached": [
+        "False",
+        "True"
+      ]
+    },
+    "row_count": 31,
+    "queued_at": "2026-08-25T09:29:51Z",
+    "attempts": 20,
+    "last_attempt": "2026-08-26T04:52:48Z",
+    "status": "failed",
+    "error": "No module named 'httpx'"
+  },
+  {
+    "entry_id": "8785d799-38d4-4455-8e15-c8762c2964c8",
+    "customer_id": "customer_jonsnow",
+    "table_name": "log_fleet_operations_dashboard",
+    "vertical": "logistics",
+    "columns": [
+      {
+        "name": "trip_id",
+        "type": "string"
+      },
+      {
+        "name": "vehicle_id",
+        "type": "string"
+      },
+      {
+        "name": "vehicle_type",
+        "type": "string"
+      },
+      {
+        "name": "driver_id",
+        "type": "string"
+      },
+      {
+        "name": "driver_name",
+        "type": "string"
+      },
+      {
+        "name": "freight_order_id",
+        "type": "string"
+      },
+      {
+        "name": "trip_status",
+        "type": "string"
+      },
+      {
+        "name": "origin_city",
+        "type": "string"
+      },
+      {
+        "name": "origin_state",
+        "type": "string"
+      },
+      {
+        "name": "destination_city",
+        "type": "string"
+      },
+      {
+        "name": "destination_state",
+        "type": "string"
+      },
+      {
+        "name": "distance_km",
+        "type": "number"
+      },
+      {
+        "name": "planned_duration_hrs",
+        "type": "number"
+      },
+      {
+        "name": "actual_duration_hrs",
+        "type": "number"
+      },
+      {
+        "name": "trip_date",
+        "type": "date"
+      },
+      {
+        "name": "trip_cost_usd",
+        "type": "number"
+      },
+      {
+        "name": "fuel_type",
+        "type": "string"
+      },
+      {
+        "name": "litres_consumed",
+        "type": "number"
+      },
+      {
+        "name": "fuel_cost_usd",
+        "type": "number"
+      },
+      {
+        "name": "co2_kg_emitted",
+        "type": "number"
+      },
+      {
+        "name": "cost_per_km",
+        "type": "number"
+      },
+      {
+        "name": "revenue_per_km",
+        "type": "number"
+      },
+      {
+        "name": "utilization_pct",
+        "type": "number"
+      },
+      {
+        "name": "idle_time_hrs",
+        "type": "number"
+      },
+      {
+        "name": "incidents",
+        "type": "number"
+      },
+      {
+        "name": "driver_rating",
+        "type": "number"
+      }
+    ],
+    "enums": {
+      "vehicle_id": [
+        "VEH-1064",
+        "VEH-2041",
+        "VEH-2893",
+        "VEH-3847",
+        "VEH-3906",
+        "VEH-5039",
+        "VEH-5281",
+        "VEH-6193",
+        "VEH-7439",
+        "VEH-8325",
+        "VEH-8612",
+        "VEH-9562"
+      ],
+      "vehicle_type": [
+        "18-Wheeler",
+        "Box Truck",
+        "Flatbed Truck",
+        "Refrigerated Truck",
+        "Tanker"
+      ],
+      "driver_id": [
+        "DRV-1396",
+        "DRV-2218",
+        "DRV-2984",
+        "DRV-3392",
+        "DRV-3671",
+        "DRV-4418",
+        "DRV-4823",
+        "DRV-5047",
+        "DRV-6057",
+        "DRV-6239",
+        "DRV-7741",
+        "DRV-7802",
+        "DRV-8563",
+        "DRV-9184",
+        "DRV-9875"
+      ],
+      "driver_name": [
+        "Amara Diallo",
+        "Chen Wei",
+        "Elena Vasquez",
+        "Grace Okonkwo",
+        "Isabella Reyes",
+        "James Kowalski",
+        "Liam Torres",
+        "Marcus Webb",
+        "Noah Kimura",
+        "Olivia Nash",
+        "Priya Mehta",
+        "Raj Patel",
+        "Sam Lindqvist",
+        "Sofia Espinoza",
+        "Tom Bridges"
+      ],
+      "freight_order_id": [
+        "FO-23759",
+        "FO-51374",
+        "FO-61594",
+        "FO-72938",
+        "FO-84931",
+        "FO-90483"
+      ],
+      "trip_status": [
+        "cancelled",
+        "completed",
+        "delayed",
+        "in_transit"
+      ],
+      "destination_state": [
+        "AR",
+        "AZ",
+        "CA",
+        "CT",
+        "DC",
+        "FL",
+        "IA",
+        "KY",
+        "MI",
+        "MO",
+        "NC",
+        "OH",
+        "OK",
+        "OR",
+        "PA",
+        "TN",
+        "TX",
+        "UT",
+        "VA",
+        "WI"
+      ],
+      "fuel_type": [
+        "CNG",
+        "Diesel",
+        "HVO",
+        "LNG"
+      ]
+    },
+    "row_count": 28,
+    "queued_at": "2026-08-25T09:29:51Z",
+    "attempts": 20,
+    "last_attempt": "2026-08-26T04:52:48Z",
+    "status": "failed",
+    "error": "No module named 'httpx'"
+  },
+  {
+    "entry_id": "253c27ed-2ae3-4541-afa0-d26472475aa5",
+    "customer_id": "customer_jonsnow",
+    "table_name": "log_route_cost_analysis_dashboard",
+    "vertical": "logistics",
+    "columns": [
+      {
+        "name": "route_id",
+        "type": "string"
+      },
+      {
+        "name": "freight_order_id",
+        "type": "string"
+      },
+      {
+        "name": "carrier_id",
+        "type": "string"
+      },
+      {
+        "name": "carrier_name",
+        "type": "string"
+      },
+      {
+        "name": "origin_city",
+        "type": "string"
+      },
+      {
+        "name": "origin_country",
+        "type": "string"
+      },
+      {
+        "name": "destination_city",
+        "type": "string"
+      },
+      {
+        "name": "destination_country",
+        "type": "string"
+      },
+      {
+        "name": "transport_mode",
+        "type": "string"
+      },
+      {
+        "name": "order_date",
+        "type": "date"
+      },
+      {
+        "name": "order_status",
+        "type": "string"
+      },
+      {
+        "name": "distance_km",
+        "type": "number"
+      },
+      {
+        "name": "agreed_cost_usd",
+        "type": "number"
+      },
+      {
+        "name": "actual_cost_usd",
+        "type": "number"
+      },
+      {
+        "name": "cost_variance_usd",
+        "type": "number"
+      },
+      {
+        "name": "cost_variance_pct",
+        "type": "number"
+      },
+      {
+        "name": "cost_per_km_actual",
+        "type": "number"
+      },
+      {
+        "name": "industry_benchmark_per_km",
+        "type": "number"
+      },
+      {
+        "name": "benchmark_variance_pct",
+        "type": "number"
+      },
+      {
+        "name": "vehicle_type",
+        "type": "string"
+      },
+      {
+        "name": "load_weight_kg",
+        "type": "number"
+      },
+      {
+        "name": "load_capacity_kg",
+        "type": "number"
+      },
+      {
+        "name": "load_utilization_pct",
+        "type": "number"
+      },
+      {
+        "name": "transit_days",
+        "type": "number"
+      },
+      {
+        "name": "fuel_surcharge_usd",
+        "type": "number"
+      },
+      {
+        "name": "toll_cost_usd",
+        "type": "number"
+      },
+      {
+        "name": "handling_cost_usd",
+        "type": "number"
+      },
+      {
+        "name": "total_landed_cost_usd",
+        "type": "number"
+      }
+    ],
+    "enums": {
+      "carrier_id": [
+        "CRR-1485",
+        "CRR-4821",
+        "CRR-5130",
+        "CRR-5567",
+        "CRR-6079",
+        "CRR-7364",
+        "CRR-8842",
+        "CRR-9203"
+      ],
+      "carrier_name": [
+        "AeroCargo Solutions",
+        "CrossContinent Rail",
+        "FastFreight Carriers",
+        "GlobalShip Inc.",
+        "MetroFreight Co.",
+        "NationWide Movers",
+        "PrimeHaul Transport",
+        "RailLink Express"
+      ],
+      "origin_country": [
+        "USA"
+      ],
+      "destination_country": [
+        "USA"
+      ],
+      "transport_mode": [
+        "Rail",
+        "Road"
+      ],
+      "order_status": [
+        "Cancelled",
+        "Delivered",
+        "In Transit",
+        "Pending"
+      ],
+      "vehicle_type": [
+        "18-Wheeler",
+        "Box Truck",
+        "Flatbed Truck",
+        "Rail Car",
+        "Refrigerated Truck"
+      ]
+    },
+    "row_count": 28,
+    "queued_at": "2026-08-25T09:37:03Z",
+    "attempts": 20,
+    "last_attempt": "2026-08-26T05:02:53Z",
+    "status": "failed",
+    "error": "No module named 'httpx'"
+  },
+  {
+    "entry_id": "c2c4f0f5-292c-4394-b07d-95e052518ff5",
+    "customer_id": "customer_jonsnow",
+    "table_name": "log_shipment_performance_dashboard",
+    "vertical": "logistics",
+    "columns": [
+      {
+        "name": "shipment_id",
+        "type": "string"
+      },
+      {
+        "name": "freight_order_id",
+        "type": "string"
+      },
+      {
+        "name": "carrier_id",
+        "type": "string"
+      },
+      {
+        "name": "carrier_name",
+        "type": "string"
+      },
+      {
+        "name": "route_id",
+        "type": "string"
+      },
+      {
+        "name": "origin_city",
+        "type": "string"
+      },
+      {
+        "name": "origin_country",
+        "type": "string"
+      },
+      {
+        "name": "destination_city",
+        "type": "string"
+      },
+      {
+        "name": "destination_country",
+        "type": "string"
+      },
+      {
+        "name": "transport_mode",
+        "type": "string"
+      },
+      {
+        "name": "shipment_status",
+        "type": "string"
+      },
+      {
+        "name": "booked_date",
+        "type": "date"
+      },
+      {
+        "name": "planned_departure",
+        "type": "date"
+      },
+      {
+        "name": "actual_departure",
+        "type": "date"
+      },
+      {
+        "name": "planned_arrival",
+        "type": "date"
+      },
+      {
+        "name": "actual_arrival",
+        "type": "date"
+      },
+      {
+        "name": "planned_transit_days",
+        "type": "number"
+      },
+      {
+        "name": "actual_transit_days",
+        "type": "number"
+      },
+      {
+        "name": "delay_days",
+        "type": "number"
+      },
+      {
+        "name": "is_late",
+        "type": "string"
+      },
+      {
+        "name": "is_hazardous",
+        "type": "string"
+      },
+      {
+        "name": "total_weight_kg",
+        "type": "number"
+      },
+      {
+        "name": "freight_cost_usd",
+        "type": "number"
+      },
+      {
+        "name": "insurance_cost_usd",
+        "type": "number"
+      },
+      {
+        "name": "cost_per_kg",
+        "type": "number"
+      },
+      {
+        "name": "distance_km",
+        "type": "number"
+      },
+      {
+        "name": "on_time_flag",
+        "type": "string"
+      }
+    ],
+    "enums": {
+      "carrier_id": [
+        "CRR-1485",
+        "CRR-2957",
+        "CRR-3316",
+        "CRR-4821",
+        "CRR-5567",
+        "CRR-6079",
+        "CRR-7364",
+        "CRR-8842"
+      ],
+      "carrier_name": [
+        "AeroCargo Solutions",
+        "CrossContinent Rail",
+        "FastFreight Carriers",
+        "GlobalShip Inc.",
+        "MetroFreight Co.",
+        "OceanBridge Freight",
+        "RailLink Express",
+        "SkyRush Logistics"
+      ],
+      "route_id": [
+        "RTE-2195",
+        "RTE-4821",
+        "RTE-5517",
+        "RTE-7364",
+        "RTE-7581",
+        "RTE-8826",
+        "RTE-9154"
+      ],
+      "origin_city": [
+        "Albuquerque",
+        "Charlotte",
+        "Chicago",
+        "Cincinnati",
+        "Cleveland",
+        "Dallas",
+        "Los Angeles",
+        "Memphis",
+        "Miami",
+        "Minneapolis",
+        "Nashville",
+        "New Orleans",
+        "New York",
+        "Portland",
+        "Richmond",
+        "Seattle",
+        "Tampa"
+      ],
+      "origin_country": [
+        "USA"
+      ],
+      "destination_country": [
+        "Canada",
+        "China",
+        "France",
+        "Japan",
+        "Netherlands",
+        "Singapore",
+        "UK",
+        "USA"
+      ],
+      "transport_mode": [
+        "Air",
+        "Rail",
+        "Road",
+        "Sea"
+      ],
+      "shipment_status": [
+        "Cancelled",
+        "Delayed",
+        "Delivered",
+        "In Transit",
+        "Processing"
+      ],
+      "is_late": [
+        "False",
+        "True"
+      ],
+      "is_hazardous": [
+        "False",
+        "True"
+      ],
+      "on_time_flag": [
+        "False",
+        "True"
+      ]
+    },
+    "row_count": 25,
+    "queued_at": "2026-08-25T09:37:03Z",
+    "attempts": 20,
+    "last_attempt": "2026-08-26T05:02:53Z",
+    "status": "failed",
+    "error": "No module named 'httpx'"
+  },
+  {
+    "entry_id": "9f10767a-4c11-4f01-b518-0c3536fd30e8",
+    "customer_id": "customer_jonsnow",
+    "table_name": "sc_inventory_health_dashboard",
+    "vertical": "supply_chain",
+    "columns": [
+      {
+        "name": "snapshot_date",
+        "type": "date"
+      },
+      {
+        "name": "item_id",
+        "type": "string"
+      },
+      {
+        "name": "item_name",
+        "type": "string"
+      },
+      {
+        "name": "item_category",
+        "type": "string"
+      },
+      {
+        "name": "warehouse_id",
+        "type": "string"
+      },
+      {
+        "name": "warehouse_name",
+        "type": "string"
+      },
+      {
+        "name": "warehouse_region",
+        "type": "string"
+      },
+      {
+        "name": "quantity_on_hand",
+        "type": "number"
+      },
+      {
+        "name": "quantity_reserved",
+        "type": "number"
+      },
+      {
+        "name": "quantity_available",
+        "type": "number"
+      },
+      {
+        "name": "reorder_point",
+        "type": "number"
+      },
+      {
+        "name": "safety_stock_qty",
+        "type": "number"
+      },
+      {
+        "name": "days_of_supply",
+        "type": "number"
+      },
+      {
+        "name": "is_below_reorder",
+        "type": "string"
+      },
+      {
+        "name": "is_below_safety_stock",
+        "type": "string"
+      },
+      {
+        "name": "avg_daily_demand",
+        "type": "number"
+      },
+      {
+        "name": "unit_cost_usd",
+        "type": "number"
+      },
+      {
+        "name": "total_value_usd",
+        "type": "number"
+      },
+      {
+        "name": "aging_bucket",
+        "type": "string"
+      },
+      {
+        "name": "slow_moving_flag",
+        "type": "string"
+      },
+      {
+        "name": "stockout_risk",
+        "type": "string"
+      },
+      {
+        "name": "last_receipt_date",
+        "type": "date"
+      },
+      {
+        "name": "next_po_expected_date",
+        "type": "date"
+      },
+      {
+        "name": "lead_time_days",
+        "type": "number"
+      }
+    ],
+    "enums": {
+      "item_id": [
+        "ITM-1247",
+        "ITM-2056",
+        "ITM-2931",
+        "ITM-3648",
+        "ITM-4821",
+        "ITM-5067",
+        "ITM-5812",
+        "ITM-6389",
+        "ITM-7394",
+        "ITM-8740",
+        "ITM-9173"
+      ],
+      "item_name": [
+        "Alkaline Battery Pack AA",
+        "Electronic Control Module",
+        "Forklift Propane Cylinder",
+        "Heavy Duty Conveyor Belt",
+        "Industrial Hydraulic Pump",
+        "Medical Grade Latex Gloves",
+        "Pharmaceutical Grade Ethanol",
+        "Polymer Resin Pellets",
+        "Precision Ball Bearing 6205",
+        "Safety Hardhat Type II",
+        "Stainless Steel Fastener Set"
+      ],
+      "item_category": [
+        "Chemicals",
+        "Consumer Electronics",
+        "Electronics",
+        "Hardware",
+        "Industrial Equipment",
+        "Machinery Parts",
+        "Mechanical Components",
+        "Medical Supplies",
+        "Raw Materials",
+        "Safety Equipment",
+        "Warehouse Equipment"
+      ],
+      "warehouse_id": [
+        "WH-2095",
+        "WH-4821",
+        "WH-5537",
+        "WH-7364",
+        "WH-9142"
+      ],
+      "warehouse_name": [
+        "Atlanta Fulfillment Center",
+        "Chicago Central Warehouse",
+        "Dallas Regional Depot",
+        "Detroit Distribution Hub",
+        "Memphis Logistics Park"
+      ],
+      "warehouse_region": [
+        "North America"
+      ],
+      "is_below_reorder": [
+        "False",
+        "True"
+      ],
+      "is_below_safety_stock": [
+        "False",
+        "True"
+      ],
+      "aging_bucket": [
+        "0-30 days",
+        "31-60 days"
+      ],
+      "slow_moving_flag": [
+        "False",
+        "True"
+      ],
+      "stockout_risk": [
+        "Critical",
+        "High",
+        "Low",
+        "Medium"
+      ]
+    },
+    "row_count": 28,
+    "queued_at": "2026-08-25T09:41:52Z",
+    "attempts": 20,
+    "last_attempt": "2026-08-26T05:12:54Z",
+    "status": "failed",
+    "error": "No module named 'httpx'"
+  },
+  {
+    "entry_id": "4ab6e3d9-75e2-4afa-b7e6-76278d548283",
+    "customer_id": "customer_jonsnow",
+    "table_name": "sc_procurement_spend_dashboard",
+    "vertical": "supply_chain",
+    "columns": [
+      {
+        "name": "period",
+        "type": "string"
+      },
+      {
+        "name": "month",
+        "type": "string"
+      },
+      {
+        "name": "quarter",
+        "type": "string"
+      },
+      {
+        "name": "spend_category",
+        "type": "string"
+      },
+      {
+        "name": "supplier_id",
+        "type": "string"
+      },
+      {
+        "name": "supplier_name",
+        "type": "string"
+      },
+      {
+        "name": "region",
+        "type": "string"
+      },
+      {
+        "name": "currency",
+        "type": "string"
+      },
+      {
+        "name": "spend_amount_usd",
+        "type": "number"
+      },
+      {
+        "name": "po_count",
+        "type": "number"
+      },
+      {
+        "name": "avg_po_value",
+        "type": "number"
+      },
+      {
+        "name": "budget_usd",
+        "type": "number"
+      },
+      {
+        "name": "budget_variance_pct",
+        "type": "number"
+      },
+      {
+        "name": "payment_status",
+        "type": "string"
+      },
+      {
+        "name": "discount_captured_usd",
+        "type": "number"
+      },
+      {
+        "name": "tax_amount_usd",
+        "type": "number"
+      },
+      {
+        "name": "cost_center",
+        "type": "string"
+      },
+      {
+        "name": "department",
+        "type": "string"
+      },
+      {
+        "name": "is_strategic_spend",
+        "type": "string"
+      }
+    ],
+    "enums": {
+      "period": [
+        "2024-01",
+        "2024-02",
+        "2024-03",
+        "2024-04",
+        "2024-05",
+        "2024-06",
+        "2024-07",
+        "2024-08",
+        "2024-09",
+        "2024-10",
+        "2024-11",
+        "2024-12",
+        "2025-01",
+        "2025-02"
+      ],
+      "month": [
+        "April",
+        "August",
+        "December",
+        "February",
+        "January",
+        "July",
+        "June",
+        "March",
+        "May",
+        "November",
+        "October",
+        "September"
+      ],
+      "quarter": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "spend_category": [
+        "Chemical Supplies",
+        "Facilities Management",
+        "IT Equipment",
+        "IT Services",
+        "Industrial Equipment",
+        "Logistics & Freight",
+        "MRO Supplies",
+        "Office Supplies",
+        "Packaging Materials",
+        "Professional Services",
+        "Raw Materials",
+        "Safety Equipment"
+      ],
+      "supplier_id": [
+        "SUP-2193",
+        "SUP-2967",
+        "SUP-3309",
+        "SUP-4456",
+        "SUP-4821",
+        "SUP-5538",
+        "SUP-6640",
+        "SUP-7364",
+        "SUP-7781",
+        "SUP-8390",
+        "SUP-8823",
+        "SUP-9057"
+      ],
+      "supplier_name": [
+        "Andean Textile Exports",
+        "Bharati Logistics & Freight",
+        "Cornerstone MRO Solutions",
+        "Harborview Packaging Solutions",
+        "Highveld Industrial Fasteners",
+        "Ironwood Timber & Forest Products",
+        "Maple Leaf Safety Equipment",
+        "Meridian Components GmbH",
+        "Nile Valley Agricultural Exports",
+        "Nordic Precision Machining AB",
+        "Pacific Rim Industrial Supplies",
+        "Sakura Electronics Co. Ltd"
+      ],
+      "region": [
+        "Asia-Pacific",
+        "Europe",
+        "Latin America",
+        "MEA",
+        "North America"
+      ],
+      "currency": [
+        "EUR",
+        "GBP",
+        "USD"
+      ],
+      "payment_status": [
+        "Overdue",
+        "Paid",
+        "Pending"
+      ],
+      "cost_center": [
+        "CC-1953",
+        "CC-2688",
+        "CC-4821",
+        "CC-5507",
+        "CC-6142",
+        "CC-8839",
+        "CC-9415"
+      ],
+      "department": [
+        "Admin",
+        "Facilities",
+        "IT",
+        "Logistics",
+        "Maintenance",
+        "Manufacturing",
+        "Operations",
+        "Procurement",
+        "Safety"
+      ],
+      "is_strategic_spend": [
+        "False",
+        "True"
+      ]
+    },
+    "row_count": 28,
+    "queued_at": "2026-08-25T09:41:52Z",
+    "attempts": 20,
+    "last_attempt": "2026-08-26T05:12:54Z",
+    "status": "failed",
+    "error": "No module named 'httpx'"
+  },
+  {
+    "entry_id": "cb1fe94c-16d2-4e8e-83dd-d3319faa87d1",
+    "customer_id": "customer_jonsnow",
+    "table_name": "sc_supplier_performance_dashboard",
+    "vertical": "supply_chain",
+    "columns": [
+      {
+        "name": "supplier_id",
+        "type": "string"
+      },
+      {
+        "name": "supplier_name",
+        "type": "string"
+      },
+      {
+        "name": "supplier_category",
+        "type": "string"
+      },
+      {
+        "name": "country",
+        "type": "string"
+      },
+      {
+        "name": "region",
+        "type": "string"
+      },
+      {
+        "name": "supplier_tier",
+        "type": "string"
+      },
+      {
+        "name": "status",
+        "type": "string"
+      },
+      {
+        "name": "is_preferred",
+        "type": "string"
+      },
+      {
+        "name": "total_orders",
+        "type": "number"
+      },
+      {
+        "name": "on_time_delivery_rate",
+        "type": "number"
+      },
+      {
+        "name": "quality_acceptance_rate",
+        "type": "number"
+      },
+      {
+        "name": "avg_lead_time_days",
+        "type": "number"
+      },
+      {
+        "name": "total_spend_usd",
+        "type": "number"
+      },
+      {
+        "name": "defect_rate",
+        "type": "number"
+      },
+      {
+        "name": "return_rate",
+        "type": "number"
+      },
+      {
+        "name": "avg_po_value_usd",
+        "type": "number"
+      },
+      {
+        "name": "payment_terms",
+        "type": "string"
+      },
+      {
+        "name": "last_audit_date",
+        "type": "date"
+      },
+      {
+        "name": "risk_score",
+        "type": "string"
+      },
+      {
+        "name": "yoy_spend_change_pct",
+        "type": "number"
+      }
+    ],
+    "enums": {
+      "supplier_id": [
+        "SUP-1475",
+        "SUP-2193",
+        "SUP-2967",
+        "SUP-3309",
+        "SUP-3812",
+        "SUP-4456",
+        "SUP-4821",
+        "SUP-5102",
+        "SUP-5538",
+        "SUP-6640",
+        "SUP-7364",
+        "SUP-7781",
+        "SUP-8390",
+        "SUP-8823",
+        "SUP-9057"
+      ],
+      "supplier_name": [
+        "Adriatic Polymer Industries",
+        "Andean Textile Exports S.A.",
+        "Bharati Logistics & Freight",
+        "Castillo Metalworks S.L.",
+        "Cornerstone MRO Solutions",
+        "Gulf Coast Petrochemicals Ltd",
+        "Harborview Packaging Solutions",
+        "Highveld Industrial Fasteners",
+        "Ironwood Timber & Forest Products",
+        "Maple Leaf Safety Equipment Inc.",
+        "Meridian Components GmbH",
+        "Nile Valley Agricultural Exports",
+        "Nordic Precision Machining AB",
+        "Pacific Rim Industrial Supplies",
+        "Sakura Electronics Co. Ltd"
+      ],
+      "supplier_category": [
+        "Agricultural Products",
+        "Chemicals",
+        "Electronic Components",
+        "Fasteners & Hardware",
+        "Logistics",
+        "MRO Supplies",
+        "Machined Parts",
+        "Metal Fabrication",
+        "Packaging",
+        "Plastics & Polymers",
+        "Raw Materials",
+        "Safety & PPE",
+        "Textiles"
+      ],
+      "country": [
+        "Brazil",
+        "Canada",
+        "China",
+        "Croatia",
+        "Egypt",
+        "Germany",
+        "India",
+        "Japan",
+        "Peru",
+        "South Africa",
+        "Spain",
+        "Sweden",
+        "United Kingdom",
+        "United States"
+      ],
+      "region": [
+        "Asia-Pacific",
+        "Europe",
+        "Latin America",
+        "MEA",
+        "North America"
+      ],
+      "supplier_tier": [
+        "Tier 1",
+        "Tier 2",
+        "Tier 3"
+      ],
+      "status": [
+        "Active",
+        "Inactive",
+        "On Hold"
+      ],
+      "is_preferred": [
+        "False",
+        "True"
+      ],
+      "payment_terms": [
+        "Net 30",
+        "Net 45",
+        "Net 60"
+      ],
+      "risk_score": [
+        "High",
+        "Low",
+        "Medium"
+      ]
+    },
+    "row_count": 15,
+    "queued_at": "2026-08-25T09:41:52Z",
+    "attempts": 20,
+    "last_attempt": "2026-08-26T05:12:54Z",
+    "status": "failed",
+    "error": "No module named 'httpx'"
+  }
+]

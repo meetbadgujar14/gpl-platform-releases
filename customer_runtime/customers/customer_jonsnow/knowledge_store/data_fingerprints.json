@@ -1,0 +1,32 @@
+{
+  "logistics_delivery_events_WMS_event": {
+    "sha256": "db211356b4ed3ef4033b87b691886b0e1facf78e0c2e2281c022a103345ee4db",
+    "vertical": "logistics",
+    "row_count": 15,
+    "generated_at": "2026-08-25T09:38:03Z"
+  },
+  "logistics_vehicle_trips_WMS_event": {
+    "sha256": "3a85ef1171ee5b057a6dfd000089e3e2e538deca180758dd6af692f4980a16af",
+    "vertical": "logistics",
+    "row_count": 11,
+    "generated_at": "2026-08-25T09:38:03Z"
+  },
+  "supply_chain_suppliers_ERP_dimension": {
+    "sha256": "e970d50d057b6aa34f0e7a69d56d8a7b48c29bc30b18137074dd86c831b4d373",
+    "vertical": "supply_chain",
+    "row_count": 15,
+    "generated_at": "2026-08-25T09:46:07Z"
+  },
+  "supply_chain_inventory_levels_WMS_state": {
+    "sha256": "9eb5d1cfb8427876c35fcf80730a058e5036b3f659d0f2effb58b7417e0280b4",
+    "vertical": "supply_chain",
+    "row_count": 14,
+    "generated_at": "2026-08-25T09:46:07Z"
+  },
+  "supply_chain_procurement_spend_ERP_record": {
+    "sha256": "2b690b5042e164426f2106f50b589046d48ba32c4dbeae024cb86a7ea4513b60",
+    "vertical": "supply_chain",
+    "row_count": 16,
+    "generated_at": "2026-08-25T09:46:07Z"
+  }
+}

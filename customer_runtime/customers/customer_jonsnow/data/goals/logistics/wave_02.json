@@ -1,0 +1,653 @@
+{
+  "wave": 2,
+  "goal_count": 34,
+  "generated_at": "2026-08-25T09:40:08Z",
+  "goals": [
+    {
+      "goal": "What is the max delay hours across all delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_max_delay_hours_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "max_delay_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min delay hours across all delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_min_delay_hours_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "min_delay_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max delay cost usd across all delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_max_delay_cost_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "max_delay_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min delay cost usd across all delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_min_delay_cost_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "min_delay_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max resolution hours across all delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_max_resolution_hours_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "max_resolution_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min resolution hours across all delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_min_resolution_hours_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "min_resolution_hours",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max shipment value usd across all delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_max_shipment_value_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "max_shipment_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min shipment value usd across all delivery_eventss?",
+      "canonical_id": "logistics_delivery_events_min_shipment_value_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "delivery_events",
+        "measure": "min_shipment_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max distance km across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_max_distance_km_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "max_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min distance km across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_min_distance_km_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "min_distance_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max planned duration hrs across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_max_planned_duration_hrs_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "max_planned_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min planned duration hrs across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_min_planned_duration_hrs_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "min_planned_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max actual duration hrs across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_max_actual_duration_hrs_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "max_actual_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min actual duration hrs across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_min_actual_duration_hrs_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "min_actual_duration_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max trip cost usd across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_max_trip_cost_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "max_trip_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min trip cost usd across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_min_trip_cost_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "min_trip_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max litres consumed across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_max_litres_consumed_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "max_litres_consumed",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min litres consumed across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_min_litres_consumed_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "min_litres_consumed",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max fuel cost usd across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_max_fuel_cost_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "max_fuel_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min fuel cost usd across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_min_fuel_cost_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "min_fuel_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max co2 kg emitted across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_max_co2_kg_emitted_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "max_co2_kg_emitted",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min co2 kg emitted across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_min_co2_kg_emitted_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "min_co2_kg_emitted",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max cost per km across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_max_cost_per_km_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "max_cost_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min cost per km across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_min_cost_per_km_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "min_cost_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max revenue per km across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_max_revenue_per_km_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "max_revenue_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min revenue per km across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_min_revenue_per_km_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "min_revenue_per_km",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max utilization pct across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_max_utilization_pct_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "max_utilization_pct",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min utilization pct across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_min_utilization_pct_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "min_utilization_pct",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max idle time hrs across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_max_idle_time_hrs_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "max_idle_time_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min idle time hrs across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_min_idle_time_hrs_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "min_idle_time_hrs",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max incidents across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_max_incidents_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "max_incidents",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min incidents across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_min_incidents_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "min_incidents",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max driver rating across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_max_driver_rating_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "max_driver_rating",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min driver rating across all vehicle_tripss?",
+      "canonical_id": "logistics_vehicle_trips_min_driver_rating_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "logistics",
+        "entity": "vehicle_trips",
+        "measure": "min_driver_rating",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    }
+  ]
+}

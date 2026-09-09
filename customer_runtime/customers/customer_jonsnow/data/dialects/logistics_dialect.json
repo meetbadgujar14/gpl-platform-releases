@@ -1,0 +1,2332 @@
+{
+  "domain": "logistics",
+  "version": "2.0",
+  "generated_at": "2026-08-25T09:40:08Z",
+  "generated_from_seed": "logistics_seed.json",
+  "coverage": 1.0,
+  "vocabulary": {
+    "entity": [
+      {
+        "term": "delivery_events",
+        "canonical": "delivery_events",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "vehicle_trips",
+        "canonical": "vehicle_trips",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "delivery events",
+        "canonical": "delivery_events",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "shipment events",
+        "canonical": "delivery_events",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "delivery occurrences",
+        "canonical": "delivery_events",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "delivery activities",
+        "canonical": "delivery_events",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "shipping events",
+        "canonical": "delivery_events",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "package events",
+        "canonical": "delivery_events",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "delivery milestones",
+        "canonical": "delivery_events",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "shipment milestones",
+        "canonical": "delivery_events",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "trips",
+        "canonical": "vehicle_trips",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "vehicle trips",
+        "canonical": "vehicle_trips",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "truck trips",
+        "canonical": "vehicle_trips",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "delivery trips",
+        "canonical": "vehicle_trips",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "shipment trips",
+        "canonical": "vehicle_trips",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "transport trips",
+        "canonical": "vehicle_trips",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "routes",
+        "canonical": "vehicle_trips",
+        "weight": 0.95,
+        "source": "ai"
+      },
+      {
+        "term": "vehicle routes",
+        "canonical": "vehicle_trips",
+        "weight": 0.95,
+        "source": "ai"
+      }
+    ],
+    "state": [
+      {
+        "term": "cancelled",
+        "canonical": "cancelled",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "cancelled vehicle_trips",
+        "canonical": "cancelled",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips cancelled",
+        "canonical": "cancelled",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "completed",
+        "canonical": "completed",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "completed vehicle_trips",
+        "canonical": "completed",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips completed",
+        "canonical": "completed",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "delayed",
+        "canonical": "delayed",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "delayed vehicle_trips",
+        "canonical": "delayed",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips delayed",
+        "canonical": "delayed",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "in_transit",
+        "canonical": "in_transit",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "in_transit vehicle_trips",
+        "canonical": "in_transit",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips in_transit",
+        "canonical": "in_transit",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "ca",
+        "canonical": "CA",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "ca vehicle_trips",
+        "canonical": "CA",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips ca",
+        "canonical": "CA",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "co",
+        "canonical": "CO",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "co vehicle_trips",
+        "canonical": "CO",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips co",
+        "canonical": "CO",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "fl",
+        "canonical": "FL",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "fl vehicle_trips",
+        "canonical": "FL",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips fl",
+        "canonical": "FL",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "ga",
+        "canonical": "GA",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "ga vehicle_trips",
+        "canonical": "GA",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips ga",
+        "canonical": "GA",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "il",
+        "canonical": "IL",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "il vehicle_trips",
+        "canonical": "IL",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips il",
+        "canonical": "IL",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "mo",
+        "canonical": "MO",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "mo vehicle_trips",
+        "canonical": "MO",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips mo",
+        "canonical": "MO",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "pa",
+        "canonical": "PA",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "pa vehicle_trips",
+        "canonical": "PA",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips pa",
+        "canonical": "PA",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "tn",
+        "canonical": "TN",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "tn vehicle_trips",
+        "canonical": "TN",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips tn",
+        "canonical": "TN",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "tx",
+        "canonical": "TX",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "tx vehicle_trips",
+        "canonical": "TX",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips tx",
+        "canonical": "TX",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "wa",
+        "canonical": "WA",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "wa vehicle_trips",
+        "canonical": "WA",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips wa",
+        "canonical": "WA",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "ar",
+        "canonical": "AR",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "ar vehicle_trips",
+        "canonical": "AR",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips ar",
+        "canonical": "AR",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "mi",
+        "canonical": "MI",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "mi vehicle_trips",
+        "canonical": "MI",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips mi",
+        "canonical": "MI",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "nc",
+        "canonical": "NC",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "nc vehicle_trips",
+        "canonical": "NC",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips nc",
+        "canonical": "NC",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "oh",
+        "canonical": "OH",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "oh vehicle_trips",
+        "canonical": "OH",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips oh",
+        "canonical": "OH",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "wi",
+        "canonical": "WI",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "wi vehicle_trips",
+        "canonical": "WI",
+        "weight": 1.0,
+        "source": "field_values"
+      },
+      {
+        "term": "vehicle_trips wi",
+        "canonical": "WI",
+        "weight": 0.95,
+        "source": "field_values"
+      },
+      {
+        "term": "canceled",
+        "canonical": "cancelled",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "cancel",
+        "canonical": "cancelled",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "trip cancelled",
+        "canonical": "cancelled",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "trip canceled",
+        "canonical": "cancelled",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "complete",
+        "canonical": "completed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "finished",
+        "canonical": "completed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "done",
+        "canonical": "completed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "delivered",
+        "canonical": "completed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "late",
+        "canonical": "delayed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "behind schedule",
+        "canonical": "delayed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "running late",
+        "canonical": "delayed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "postponed",
+        "canonical": "delayed",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "in transit",
+        "canonical": "in_transit",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "on the way",
+        "canonical": "in_transit",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "en route",
+        "canonical": "in_transit",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "moving",
+        "canonical": "in_transit",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "traveling",
+        "canonical": "in_transit",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "colorado",
+        "canonical": "CO",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "florida",
+        "canonical": "FL",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "fl state",
+        "canonical": "FL",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "florida state",
+        "canonical": "FL",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "georgia",
+        "canonical": "GA",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "illinois",
+        "canonical": "IL",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "missouri",
+        "canonical": "MO",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "mo state",
+        "canonical": "MO",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "missouri state",
+        "canonical": "MO",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "tennessee",
+        "canonical": "TN",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "tn state",
+        "canonical": "TN",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "tennessee state",
+        "canonical": "TN",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "texas",
+        "canonical": "TX",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "tx state",
+        "canonical": "TX",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "texas state",
+        "canonical": "TX",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "washington",
+        "canonical": "WA",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "washington state",
+        "canonical": "WA",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "wa state",
+        "canonical": "WA",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "michigan",
+        "canonical": "MI",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "mi state",
+        "canonical": "MI",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "michigan state",
+        "canonical": "MI",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "north carolina",
+        "canonical": "NC",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "ohio",
+        "canonical": "OH",
+        "weight": 0.9,
+        "source": "ai"
+      },
+      {
+        "term": "wisconsin",
+        "canonical": "WI",
+        "weight": 0.9,
+        "source": "ai"
+      }
+    ],
+    "measure": [
+      {
+        "term": "count",
+        "canonical": "count",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "how many",
+        "canonical": "count",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "number of",
+        "canonical": "count",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "total",
+        "canonical": "sum",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "sum",
+        "canonical": "sum",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "amount",
+        "canonical": "sum",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "average",
+        "canonical": "avg",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "avg",
+        "canonical": "avg",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "mean",
+        "canonical": "avg",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "maximum",
+        "canonical": "max",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "max",
+        "canonical": "max",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "highest",
+        "canonical": "max",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "minimum",
+        "canonical": "min",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "min",
+        "canonical": "min",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "lowest",
+        "canonical": "min",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "rate",
+        "canonical": "rate",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "ratio",
+        "canonical": "ratio",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "percent",
+        "canonical": "percent",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "growth",
+        "canonical": "growth",
+        "weight": 1.0,
+        "source": "global"
+      },
+      {
+        "term": "change",
+        "canonical": "change",
+        "weight": 1.0,
+        "source": "global"
+      }
+    ],
+    "column_hints": [
+      {
+        "term": "delay",
+        "canonical": "delay_hours",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "delay_cost_usd",
+        "canonical": "delay_cost_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "delay cost usd",
+        "canonical": "delay_cost_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "resolution",
+        "canonical": "resolution_hours",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "shipment_value_usd",
+        "canonical": "shipment_value_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "shipment value usd",
+        "canonical": "shipment_value_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "distance_km",
+        "canonical": "distance_km",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "distance km",
+        "canonical": "distance_km",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "planned_duration_hrs",
+        "canonical": "planned_duration_hrs",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "planned duration hrs",
+        "canonical": "planned_duration_hrs",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "actual_duration_hrs",
+        "canonical": "actual_duration_hrs",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "actual duration hrs",
+        "canonical": "actual_duration_hrs",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "trip_cost_usd",
+        "canonical": "trip_cost_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "trip cost usd",
+        "canonical": "trip_cost_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "litres_consumed",
+        "canonical": "litres_consumed",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "litres consumed",
+        "canonical": "litres_consumed",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "fuel_cost_usd",
+        "canonical": "fuel_cost_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "fuel cost usd",
+        "canonical": "fuel_cost_usd",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "co2_kg_emitted",
+        "canonical": "co2_kg_emitted",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "co2 kg emitted",
+        "canonical": "co2_kg_emitted",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "cost_per_km",
+        "canonical": "cost_per_km",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "cost per km",
+        "canonical": "cost_per_km",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "revenue_per_km",
+        "canonical": "revenue_per_km",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "revenue per km",
+        "canonical": "revenue_per_km",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "utilization",
+        "canonical": "utilization_pct",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "idle_time_hrs",
+        "canonical": "idle_time_hrs",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "idle time hrs",
+        "canonical": "idle_time_hrs",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "incidents",
+        "canonical": "incidents",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "driver_rating",
+        "canonical": "driver_rating",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "driver rating",
+        "canonical": "driver_rating",
+        "weight": 1.0,
+        "source": "structural"
+      },
+      {
+        "term": "delay hours",
+        "canonical": "delay_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "delivery delay",
+        "canonical": "delay_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "late hours",
+        "canonical": "delay_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "hours delayed",
+        "canonical": "delay_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "delivery lateness",
+        "canonical": "delay_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "shipment delay",
+        "canonical": "delay_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "delay cost",
+        "canonical": "delay_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "delivery delay cost",
+        "canonical": "delay_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "late delivery cost",
+        "canonical": "delay_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "delay expenses",
+        "canonical": "delay_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "delay charges",
+        "canonical": "delay_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "cost of delays",
+        "canonical": "delay_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "resolution time",
+        "canonical": "resolution_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "time to resolve",
+        "canonical": "resolution_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "hours to resolve",
+        "canonical": "resolution_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "resolution duration",
+        "canonical": "resolution_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "time to close",
+        "canonical": "resolution_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "closure time",
+        "canonical": "resolution_hours",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "shipment value",
+        "canonical": "shipment_value_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "shipment worth",
+        "canonical": "shipment_value_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "delivery value",
+        "canonical": "shipment_value_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "package value",
+        "canonical": "shipment_value_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "shipment amount",
+        "canonical": "shipment_value_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "delivery amount",
+        "canonical": "shipment_value_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "distance traveled",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "kilometers driven",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "trip distance",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "distance covered",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "km traveled",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "mileage",
+        "canonical": "distance_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "planned duration",
+        "canonical": "planned_duration_hrs",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "planned trip duration",
+        "canonical": "planned_duration_hrs",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "expected duration",
+        "canonical": "planned_duration_hrs",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "scheduled duration",
+        "canonical": "planned_duration_hrs",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "planned hours",
+        "canonical": "planned_duration_hrs",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "trip duration hours",
+        "canonical": "planned_duration_hrs",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "actual duration hours",
+        "canonical": "actual_duration_hrs",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "actual trip duration",
+        "canonical": "actual_duration_hrs",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "actual travel time",
+        "canonical": "actual_duration_hrs",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "trip duration in hours",
+        "canonical": "actual_duration_hrs",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "actual hours traveled",
+        "canonical": "actual_duration_hrs",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "real trip time",
+        "canonical": "actual_duration_hrs",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "trip cost",
+        "canonical": "trip_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "cost per trip",
+        "canonical": "trip_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "trip expense",
+        "canonical": "trip_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "transportation cost",
+        "canonical": "trip_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "trip fee",
+        "canonical": "trip_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "journey cost",
+        "canonical": "trip_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel consumed",
+        "canonical": "litres_consumed",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel usage",
+        "canonical": "litres_consumed",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "litres used",
+        "canonical": "litres_consumed",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel consumption",
+        "canonical": "litres_consumed",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel burned",
+        "canonical": "litres_consumed",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel spent",
+        "canonical": "litres_consumed",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel cost",
+        "canonical": "fuel_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel expenses",
+        "canonical": "fuel_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel spend",
+        "canonical": "fuel_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fuel expenditure",
+        "canonical": "fuel_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "gasoline cost",
+        "canonical": "fuel_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "gas cost",
+        "canonical": "fuel_cost_usd",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "co2 emissions",
+        "canonical": "co2_kg_emitted",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "carbon emissions",
+        "canonical": "co2_kg_emitted",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "carbon dioxide emitted",
+        "canonical": "co2_kg_emitted",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "co2 output",
+        "canonical": "co2_kg_emitted",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "emissions",
+        "canonical": "co2_kg_emitted",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "carbon output",
+        "canonical": "co2_kg_emitted",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "cost per kilometer",
+        "canonical": "cost_per_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "cost per kilometre",
+        "canonical": "cost_per_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "rate per km",
+        "canonical": "cost_per_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "per km cost",
+        "canonical": "cost_per_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "kilometer cost",
+        "canonical": "cost_per_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "revenue per kilometer",
+        "canonical": "revenue_per_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "income per kilometer",
+        "canonical": "revenue_per_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "earnings per km",
+        "canonical": "revenue_per_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "earnings per kilometer",
+        "canonical": "revenue_per_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "revenue by distance",
+        "canonical": "revenue_per_km",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "utilization rate",
+        "canonical": "utilization_pct",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "utilization percentage",
+        "canonical": "utilization_pct",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "vehicle utilization",
+        "canonical": "utilization_pct",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "fleet utilization",
+        "canonical": "utilization_pct",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "asset utilization",
+        "canonical": "utilization_pct",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "capacity utilization",
+        "canonical": "utilization_pct",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "idle time",
+        "canonical": "idle_time_hrs",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "idling hours",
+        "canonical": "idle_time_hrs",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "idle hours",
+        "canonical": "idle_time_hrs",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "vehicle idle time",
+        "canonical": "idle_time_hrs",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "truck idle time",
+        "canonical": "idle_time_hrs",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "idling time",
+        "canonical": "idle_time_hrs",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "incident count",
+        "canonical": "incidents",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "number of incidents",
+        "canonical": "incidents",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "total incidents",
+        "canonical": "incidents",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "incident occurrences",
+        "canonical": "incidents",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "reported incidents",
+        "canonical": "incidents",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "driver score",
+        "canonical": "driver_rating",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "driver performance rating",
+        "canonical": "driver_rating",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "driver feedback score",
+        "canonical": "driver_rating",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "driver evaluation",
+        "canonical": "driver_rating",
+        "weight": 0.85,
+        "source": "ai"
+      },
+      {
+        "term": "driver review score",
+        "canonical": "driver_rating",
+        "weight": 0.85,
+        "source": "ai"
+      }
+    ],
+    "time": [
+      {
+        "term": "all_time",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "all time",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "ever",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "total",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "overall",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "all",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "to date",
+        "canonical": "all_time",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "this_month",
+        "canonical": "this_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "this month",
+        "canonical": "this_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "current month",
+        "canonical": "this_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "month to date",
+        "canonical": "this_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "mtd",
+        "canonical": "this_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "last_month",
+        "canonical": "last_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "last month",
+        "canonical": "last_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "previous month",
+        "canonical": "last_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "this_quarter",
+        "canonical": "this_quarter",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "this quarter",
+        "canonical": "this_quarter",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "current quarter",
+        "canonical": "this_quarter",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "quarter to date",
+        "canonical": "this_quarter",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "qtd",
+        "canonical": "this_quarter",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "ytd",
+        "canonical": "ytd",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "year to date",
+        "canonical": "ytd",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "this year",
+        "canonical": "ytd",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "current year",
+        "canonical": "ytd",
+        "weight": 1.0,
+        "source": "seed"
+      }
+    ],
+    "scope": [
+      {
+        "term": "by_month",
+        "canonical": "by_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by month",
+        "canonical": "by_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per month",
+        "canonical": "by_month",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by month",
+        "canonical": "by_month",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_region",
+        "canonical": "by_region",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by region",
+        "canonical": "by_region",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per region",
+        "canonical": "by_region",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by region",
+        "canonical": "by_region",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_carrier_name",
+        "canonical": "by_carrier_name",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by carrier name",
+        "canonical": "by_carrier_name",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per carrier name",
+        "canonical": "by_carrier_name",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by carrier name",
+        "canonical": "by_carrier_name",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_transport_mode",
+        "canonical": "by_transport_mode",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by transport mode",
+        "canonical": "by_transport_mode",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per transport mode",
+        "canonical": "by_transport_mode",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by transport mode",
+        "canonical": "by_transport_mode",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_vehicle_type",
+        "canonical": "by_vehicle_type",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by vehicle type",
+        "canonical": "by_vehicle_type",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per vehicle type",
+        "canonical": "by_vehicle_type",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by vehicle type",
+        "canonical": "by_vehicle_type",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_fuel_type",
+        "canonical": "by_fuel_type",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by fuel type",
+        "canonical": "by_fuel_type",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per fuel type",
+        "canonical": "by_fuel_type",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by fuel type",
+        "canonical": "by_fuel_type",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_exception_category",
+        "canonical": "by_exception_category",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by exception category",
+        "canonical": "by_exception_category",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per exception category",
+        "canonical": "by_exception_category",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by exception category",
+        "canonical": "by_exception_category",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by_impact_level",
+        "canonical": "by_impact_level",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "by impact level",
+        "canonical": "by_impact_level",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "per impact level",
+        "canonical": "by_impact_level",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grouped by impact level",
+        "canonical": "by_impact_level",
+        "weight": 1.0,
+        "source": "seed"
+      }
+    ],
+    "kpi": [
+      {
+        "term": "on_time_delivery_rate",
+        "canonical": "on_time_delivery_rate",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "on time delivery rate",
+        "canonical": "on_time_delivery_rate",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "average_delay_cost_per_event",
+        "canonical": "average_delay_cost_per_event",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "average delay cost per event",
+        "canonical": "average_delay_cost_per_event",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "fuel_efficiency_cost_per_km",
+        "canonical": "fuel_efficiency_cost_per_km",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "fuel efficiency cost per km",
+        "canonical": "fuel_efficiency_cost_per_km",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "fleet_utilization_rate",
+        "canonical": "fleet_utilization_rate",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "fleet utilization rate",
+        "canonical": "fleet_utilization_rate",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "average_exception_resolution_hours",
+        "canonical": "average_exception_resolution_hours",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "average exception resolution hours",
+        "canonical": "average_exception_resolution_hours",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "what is our on time delivery rate",
+        "canonical": "on_time_delivery_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "show on time delivery rate",
+        "canonical": "on_time_delivery_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "get on time delivery rate",
+        "canonical": "on_time_delivery_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "what is our average delay cost per event",
+        "canonical": "average_delay_cost_per_event",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "show average delay cost per event",
+        "canonical": "average_delay_cost_per_event",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "get average delay cost per event",
+        "canonical": "average_delay_cost_per_event",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "what is our fuel efficiency cost per km",
+        "canonical": "fuel_efficiency_cost_per_km",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "show fuel efficiency cost per km",
+        "canonical": "fuel_efficiency_cost_per_km",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "get fuel efficiency cost per km",
+        "canonical": "fuel_efficiency_cost_per_km",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "what is our fleet utilization rate",
+        "canonical": "fleet_utilization_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "show fleet utilization rate",
+        "canonical": "fleet_utilization_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "get fleet utilization rate",
+        "canonical": "fleet_utilization_rate",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "what is our average exception resolution hours",
+        "canonical": "average_exception_resolution_hours",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "show average exception resolution hours",
+        "canonical": "average_exception_resolution_hours",
+        "weight": 0.7,
+        "source": "predicted"
+      },
+      {
+        "term": "get average exception resolution hours",
+        "canonical": "average_exception_resolution_hours",
+        "weight": 0.7,
+        "source": "predicted"
+      }
+    ]
+  },
+  "aliases": {
+    "entity_aliases": {
+      "delivery_events": [
+        "delivery events",
+        "shipment events",
+        "delivery occurrences",
+        "delivery activities",
+        "shipping events",
+        "package events",
+        "delivery milestones",
+        "shipment milestones"
+      ],
+      "vehicle_trips": [
+        "trips",
+        "vehicle trips",
+        "truck trips",
+        "delivery trips",
+        "shipment trips",
+        "transport trips",
+        "routes",
+        "vehicle routes"
+      ]
+    },
+    "state_synonyms": {
+      "cancelled": [
+        "canceled",
+        "cancel",
+        "trip cancelled",
+        "trip canceled"
+      ],
+      "completed": [
+        "complete",
+        "finished",
+        "done",
+        "delivered"
+      ],
+      "delayed": [
+        "late",
+        "behind schedule",
+        "running late",
+        "postponed"
+      ],
+      "in_transit": [
+        "in transit",
+        "on the way",
+        "en route",
+        "moving",
+        "traveling"
+      ],
+      "CO": [
+        "colorado"
+      ],
+      "FL": [
+        "florida",
+        "fl state",
+        "florida state"
+      ],
+      "GA": [
+        "georgia"
+      ],
+      "IL": [
+        "illinois"
+      ],
+      "MO": [
+        "missouri",
+        "mo state",
+        "missouri state"
+      ],
+      "TN": [
+        "tennessee",
+        "tn state",
+        "tennessee state"
+      ],
+      "TX": [
+        "texas",
+        "tx state",
+        "texas state"
+      ],
+      "WA": [
+        "washington",
+        "washington state",
+        "wa state"
+      ],
+      "MI": [
+        "michigan",
+        "mi state",
+        "michigan state"
+      ],
+      "NC": [
+        "north carolina"
+      ],
+      "OH": [
+        "ohio"
+      ],
+      "WI": [
+        "wisconsin"
+      ]
+    },
+    "measure_synonyms": {
+      "delay_hours": [
+        "delay hours",
+        "delivery delay",
+        "late hours",
+        "hours delayed",
+        "delivery lateness",
+        "shipment delay"
+      ],
+      "delay_cost_usd": [
+        "delay cost",
+        "delivery delay cost",
+        "late delivery cost",
+        "delay expenses",
+        "delay charges",
+        "cost of delays"
+      ],
+      "resolution_hours": [
+        "resolution time",
+        "time to resolve",
+        "hours to resolve",
+        "resolution duration",
+        "time to close",
+        "closure time"
+      ],
+      "shipment_value_usd": [
+        "shipment value",
+        "shipment worth",
+        "delivery value",
+        "package value",
+        "shipment amount",
+        "delivery amount"
+      ],
+      "distance_km": [
+        "distance traveled",
+        "kilometers driven",
+        "trip distance",
+        "distance covered",
+        "km traveled",
+        "mileage"
+      ],
+      "planned_duration_hrs": [
+        "planned duration",
+        "planned trip duration",
+        "expected duration",
+        "scheduled duration",
+        "planned hours",
+        "trip duration hours"
+      ],
+      "actual_duration_hrs": [
+        "actual duration hours",
+        "actual trip duration",
+        "actual travel time",
+        "trip duration in hours",
+        "actual hours traveled",
+        "real trip time"
+      ],
+      "trip_cost_usd": [
+        "trip cost",
+        "cost per trip",
+        "trip expense",
+        "transportation cost",
+        "trip fee",
+        "journey cost"
+      ],
+      "litres_consumed": [
+        "fuel consumed",
+        "fuel usage",
+        "litres used",
+        "fuel consumption",
+        "fuel burned",
+        "fuel spent"
+      ],
+      "fuel_cost_usd": [
+        "fuel cost",
+        "fuel expenses",
+        "fuel spend",
+        "fuel expenditure",
+        "gasoline cost",
+        "gas cost"
+      ],
+      "co2_kg_emitted": [
+        "co2 emissions",
+        "carbon emissions",
+        "carbon dioxide emitted",
+        "co2 output",
+        "emissions",
+        "carbon output"
+      ],
+      "cost_per_km": [
+        "cost per kilometer",
+        "cost per kilometre",
+        "rate per km",
+        "per km cost",
+        "kilometer cost"
+      ],
+      "revenue_per_km": [
+        "revenue per kilometer",
+        "income per kilometer",
+        "earnings per km",
+        "earnings per kilometer",
+        "revenue by distance"
+      ],
+      "utilization_pct": [
+        "utilization rate",
+        "utilization percentage",
+        "vehicle utilization",
+        "fleet utilization",
+        "asset utilization",
+        "capacity utilization"
+      ],
+      "idle_time_hrs": [
+        "idle time",
+        "idling hours",
+        "idle hours",
+        "vehicle idle time",
+        "truck idle time",
+        "idling time"
+      ],
+      "incidents": [
+        "incident count",
+        "number of incidents",
+        "total incidents",
+        "incident occurrences",
+        "reported incidents"
+      ],
+      "driver_rating": [
+        "driver score",
+        "driver performance rating",
+        "driver feedback score",
+        "driver evaluation",
+        "driver review score"
+      ]
+    }
+  },
+  "meta": {
+    "phase_a_entries": 345,
+    "grounding_violations": 0,
+    "total_entries": 345,
+    "coverage": 1.0
+  }
+}

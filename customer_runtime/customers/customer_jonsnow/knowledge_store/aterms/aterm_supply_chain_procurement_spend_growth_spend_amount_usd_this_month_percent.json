@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_procurement_spend_growth_spend_amount_usd_this_month_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_procurement_spend_growth_spend_amount_usd_this_month_percent",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "procurement_spend",
+    "measure": "growth_spend_amount_usd",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 0.0,
+  "formula_line": "supply_chain_procurement_spend_growth_spend_amount_usd_this_month_percent = (({supply_chain_procurement_spend_spend_amount_usd_this_month_currency} - {supply_chain_procurement_spend_spend_amount_usd_last_month_currency}) / abs({supply_chain_procurement_spend_spend_amount_usd_last_month_currency}) * 100) if {supply_chain_procurement_spend_spend_amount_usd_last_month_currency} != 0 else 0",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "ZERO_PROVEN",
+  "created_at": "2026-08-25T09:57:32Z",
+  "usage_count": 0,
+  "source_goal": "What is the month over month growth in spend amount usd for procurement_spends?",
+  "wave": 6,
+  "depends_on": [
+    "supply_chain_procurement_spend_spend_amount_usd_this_month_currency",
+    "supply_chain_procurement_spend_spend_amount_usd_last_month_currency"
+  ],
+  "dep_values": {
+    "supply_chain_procurement_spend_spend_amount_usd_this_month_currency": 0.0,
+    "supply_chain_procurement_spend_spend_amount_usd_last_month_currency": 0.0
+  },
+  "verified_at": "2026-08-25T09:57:37Z"
+}

@@ -1,0 +1,15 @@
+item_id,warehouse_id,snapshot_date,item_name,item_category,warehouse_name,warehouse_region,aging_bucket,stockout_risk,is_below_reorder,is_below_safety_stock,slow_moving_flag,quantity_on_hand,quantity_reserved,quantity_available,reorder_point,safety_stock_qty,days_of_supply,avg_daily_demand,unit_cost_usd,total_value_usd,lead_time_days
+ITM-1247,WH-9142,2026-08-20,Stainless Steel Fastener Set,Consumer Electronics,Dallas Regional Depot,North America,0-30 days,High,True,True,True,148,32,116,75,40,24,6.2,342.5,50690.0,14
+ITM-5067,WH-9142,2026-08-22,Polymer Resin Pellets,Mechanical Components,Memphis Logistics Park,North America,0-30 days,High,False,False,False,210,45,165,80,50,33,6.4,342.5,71925.0,14
+ITM-1247,WH-7364,2026-07-15,Safety Hardhat Type II,Machinery Parts,Atlanta Fulfillment Center,North America,31-60 days,Medium,False,False,False,85,60,25,200,120,4,21.5,18.75,1593.75,7
+ITM-1247,WH-7364,2026-08-10,Heavy Duty Conveyor Belt,Chemicals,Chicago Central Warehouse,North America,31-60 days,Low,True,True,False,520,110,410,200,120,19,27.2,18.75,9750.0,7
+ITM-9173,WH-4821,2026-08-25,Forklift Propane Cylinder,Hardware,Chicago Central Warehouse,North America,31-60 days,Low,False,True,False,3400,200,3200,500,300,113,30.0,4.25,14450.0,10
+ITM-5067,WH-2095,2026-06-30,Industrial Hydraulic Pump,Consumer Electronics,Memphis Logistics Park,North America,0-30 days,Medium,True,True,False,1850,50,1800,500,300,61,30.3,4.25,7862.5,10
+ITM-6389,WH-9142,2026-03-14,Electronic Control Module,Warehouse Equipment,Memphis Logistics Park,North America,0-30 days,Critical,False,False,True,310,95,215,350,150,15,20.5,67.9,21049.0,21
+ITM-2056,WH-2095,2026-08-18,Stainless Steel Fastener Set,Hardware,Detroit Distribution Hub,North America,0-30 days,Medium,False,False,False,780,140,640,350,150,38,20.5,67.9,52962.0,21
+ITM-3648,WH-9142,2025-11-08,Precision Ball Bearing 6205,Machinery Parts,Chicago Central Warehouse,North America,0-30 days,Low,True,True,True,22,4,18,8,5,44,0.5,1850.0,40700.0,30
+ITM-5067,WH-2095,2026-08-05,Alkaline Battery Pack AA,Medical Supplies,Memphis Logistics Park,North America,0-30 days,High,False,True,False,3,2,1,8,5,5,0.6,1850.0,5550.0,30
+ITM-5812,WH-9142,2026-08-14,Alkaline Battery Pack AA,Medical Supplies,Detroit Distribution Hub,North America,31-60 days,High,True,True,True,1200,300,900,400,250,24,50.0,12.4,14880.0,5
+ITM-2931,WH-5537,2026-04-22,Polymer Resin Pellets,Medical Supplies,Atlanta Fulfillment Center,North America,31-60 days,Medium,False,True,True,380,90,290,400,250,8,48.5,12.4,4712.0,5
+ITM-6389,WH-4821,2026-08-22,Heavy Duty Conveyor Belt,Medical Supplies,Detroit Distribution Hub,North America,31-60 days,Critical,True,True,True,15000,4000,11000,5000,3000,30,500.0,0.08,1200.0,4
+ITM-5067,WH-5537,2025-09-03,Electronic Control Module,Warehouse Equipment,Chicago Central Warehouse,North America,0-30 days,High,True,False,False,4200,1800,2400,5000,3000,8,512.0,0.08,336.0,4

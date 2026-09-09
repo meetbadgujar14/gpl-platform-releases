@@ -1,0 +1,40 @@
+{
+  "id": "aterm:supply_chain_suppliers_quality_acceptance_rate_percent_by_supplier_category",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_quality_acceptance_rate_percent_by_supplier_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "quality_acceptance_rate",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "by_supplier_category"
+  },
+  "oracle_value": {
+    "Agricultural Products": 91.6,
+    "Chemicals": 179.8,
+    "Electronic Components": 273.9,
+    "Fasteners & Hardware": 96.9,
+    "Logistics": 97.8,
+    "MRO Supplies": 93.4,
+    "Metal Fabrication": 195.2,
+    "Packaging": 96.2,
+    "Plastics & Polymers": 88.9,
+    "Safety & PPE": 198.10000000000002
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_suppliers_ERP_dimension', 'SUM', 'quality_acceptance_rate', 'supplier_category', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-08-25T09:49:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quality acceptance rate of supplierss by supplier category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-08-25T09:57:36Z"
+}

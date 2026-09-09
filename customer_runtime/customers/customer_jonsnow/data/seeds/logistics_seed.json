@@ -1,0 +1,162 @@
+{
+  "domain": "logistics",
+  "version": "1.0",
+  "generated_at": "2026-08-25T09:38:11Z",
+  "generated_from_atoms": [
+    "logistics_delivery_events_WMS_event",
+    "logistics_vehicle_trips_WMS_event"
+  ],
+  "entities": {
+    "delivery_events": {
+      "atom": "logistics_delivery_events_WMS_event",
+      "record_type": "event",
+      "grain_key": "event_id",
+      "time_col": "event_date",
+      "measures": [
+        "delay_hours",
+        "delay_cost_usd",
+        "resolution_hours",
+        "shipment_value_usd"
+      ],
+      "states": [],
+      "dimensions": [
+        "shipment_id",
+        "freight_order_id",
+        "carrier_name",
+        "event_type",
+        "exception_category",
+        "location_city",
+        "location_country",
+        "region",
+        "transport_mode",
+        "is_exception",
+        "root_cause",
+        "impact_level",
+        "escalated",
+        "sla_breached"
+      ]
+    },
+    "vehicle_trips": {
+      "atom": "logistics_vehicle_trips_WMS_event",
+      "record_type": "event",
+      "grain_key": "trip_id",
+      "time_col": "trip_date",
+      "measures": [
+        "distance_km",
+        "planned_duration_hrs",
+        "actual_duration_hrs",
+        "trip_cost_usd",
+        "litres_consumed",
+        "fuel_cost_usd",
+        "co2_kg_emitted",
+        "cost_per_km",
+        "revenue_per_km",
+        "utilization_pct",
+        "idle_time_hrs",
+        "incidents",
+        "driver_rating"
+      ],
+      "states": [
+        "cancelled",
+        "completed",
+        "delayed",
+        "in_transit",
+        "CA",
+        "CO",
+        "FL",
+        "GA",
+        "IL",
+        "MO",
+        "PA",
+        "TN",
+        "TX",
+        "WA",
+        "AR",
+        "MI",
+        "NC",
+        "OH",
+        "WI"
+      ],
+      "dimensions": [
+        "vehicle_id",
+        "vehicle_type",
+        "driver_id",
+        "driver_name",
+        "freight_order_id",
+        "origin_city",
+        "destination_city",
+        "fuel_type"
+      ]
+    }
+  },
+  "cross_domain_refs": [],
+  "kpi_definitions": [
+    {
+      "name": "on_time_delivery_rate",
+      "description": "Percentage of trips completed without delay out of all completed trips.",
+      "formula": "{logistics_vehicle_trips_count_completed} / {logistics_vehicle_trips_count}",
+      "unit": "percent",
+      "depends_on": [
+        "logistics_vehicle_trips_count_completed",
+        "logistics_vehicle_trips_count"
+      ]
+    },
+    {
+      "name": "average_delay_cost_per_event",
+      "description": "Average cost of delay per delivery event recorded.",
+      "formula": "{logistics_delivery_events_delay_cost_usd_currency} / {logistics_delivery_events_count}",
+      "unit": "currency",
+      "depends_on": [
+        "logistics_delivery_events_delay_cost_usd_currency",
+        "logistics_delivery_events_count"
+      ]
+    },
+    {
+      "name": "fuel_efficiency_cost_per_km",
+      "description": "Average fuel expenditure per kilometre driven across all vehicle trips.",
+      "formula": "{logistics_vehicle_trips_fuel_cost_usd_currency} / {logistics_vehicle_trips_distance_km_count}",
+      "unit": "ratio",
+      "depends_on": [
+        "logistics_vehicle_trips_fuel_cost_usd_currency",
+        "logistics_vehicle_trips_distance_km_count"
+      ]
+    },
+    {
+      "name": "fleet_utilization_rate",
+      "description": "Ratio of in-transit trips to total trips as a measure of active fleet utilization.",
+      "formula": "{logistics_vehicle_trips_count_in_transit} / {logistics_vehicle_trips_count}",
+      "unit": "percent",
+      "depends_on": [
+        "logistics_vehicle_trips_count_in_transit",
+        "logistics_vehicle_trips_count"
+      ]
+    },
+    {
+      "name": "average_exception_resolution_hours",
+      "description": "Average number of hours taken to resolve a delivery exception event.",
+      "formula": "{logistics_delivery_events_resolution_hours_count} / {logistics_delivery_events_count}",
+      "unit": "days",
+      "depends_on": [
+        "logistics_delivery_events_resolution_hours_count",
+        "logistics_delivery_events_count"
+      ]
+    }
+  ],
+  "time_scopes": [
+    "all_time",
+    "this_month",
+    "last_month",
+    "this_quarter",
+    "ytd"
+  ],
+  "series_axes": [
+    "by_month",
+    "by_region",
+    "by_carrier_name",
+    "by_transport_mode",
+    "by_vehicle_type",
+    "by_fuel_type",
+    "by_exception_category",
+    "by_impact_level"
+  ]
+}

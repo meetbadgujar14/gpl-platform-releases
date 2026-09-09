@@ -1,0 +1,36 @@
+{
+  "id": "aterm:logistics_average_resolution_hours_days",
+  "type": "Aterm",
+  "canonical_id": "logistics_average_resolution_hours_days",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "average_resolution_hours",
+    "measure": "average_resolution_hours",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 41.86666666666667,
+  "formula_line": "logistics_average_resolution_hours_days = {logistics_delivery_events_resolution_hours_count} / ({logistics_delivery_events_count} if {logistics_delivery_events_count} != 0 else 1)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-08-25T09:36:17Z",
+  "usage_count": 0,
+  "source_goal": "Mean time taken to resolve delivery exceptions, indicating operational responsiveness.",
+  "wave": 9,
+  "depends_on": [
+    "logistics_delivery_events_resolution_hours_count",
+    "logistics_delivery_events_count"
+  ],
+  "dep_values": {
+    "logistics_delivery_events_resolution_hours_count": 628.0,
+    "logistics_delivery_events_count": 15.0
+  },
+  "verified_at": "2026-08-25T09:57:34Z"
+}

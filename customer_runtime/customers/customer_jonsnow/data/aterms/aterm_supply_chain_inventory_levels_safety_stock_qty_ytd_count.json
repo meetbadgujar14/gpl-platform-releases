@@ -1,0 +1,34 @@
+{
+  "id": "aterm:supply_chain_inventory_levels_safety_stock_qty_ytd_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_levels_safety_stock_qty_ytd_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_levels",
+    "measure": "safety_stock_qty",
+    "state": "all",
+    "scope": "total",
+    "time": "ytd",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": {
+    "safety_stock_qty": 7740.0
+  },
+  "formula_line": "MEASURE_MULTI('supply_chain_inventory_levels_WMS_state', [('SUM', 'safety_stock_qty')], None)",
+  "exec_formula": "MEASURE_MULTI('supply_chain_inventory_levels_WMS_state', [('SUM', 'safety_stock_qty')], None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-08-25T09:53:25Z",
+  "usage_count": 0,
+  "source_goal": "What is the total safety stock qty of inventory_levelss ytd?",
+  "wave": 3,
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_MULTI steps=5",
+  "wizard_steps": 5,
+  "verified_at": "2026-08-25T09:57:37Z"
+}

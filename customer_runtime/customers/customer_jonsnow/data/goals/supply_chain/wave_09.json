@@ -1,0 +1,117 @@
+{
+  "wave": 9,
+  "goal_count": 5,
+  "generated_at": "2026-08-25T09:48:36Z",
+  "goals": [
+    {
+      "goal": "Measures how efficiently inventory is being used relative to total available quantity and demand.",
+      "canonical_id": "supply_chain_inventory_turnover_rate_ratio",
+      "complexity": "KPI",
+      "depends_on": [
+        "supply_chain_inventory_levels_avg_daily_demand_count",
+        "supply_chain_inventory_levels_quantity_available_count"
+      ],
+      "composition_formula": "{supply_chain_inventory_levels_avg_daily_demand_count} / {supply_chain_inventory_levels_quantity_available_count}",
+      "wave": 9,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_turnover_rate",
+        "measure": "inventory_turnover_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "ratio",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "Average number of days current inventory can cover demand before stockout.",
+      "canonical_id": "supply_chain_days_of_supply_coverage_days",
+      "complexity": "KPI",
+      "depends_on": [
+        "supply_chain_inventory_levels_days_of_supply_days",
+        "supply_chain_inventory_levels_lead_time_days_days"
+      ],
+      "composition_formula": "{supply_chain_inventory_levels_days_of_supply_days} / {supply_chain_inventory_levels_lead_time_days_days}",
+      "wave": 9,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "days_of_supply_coverage",
+        "measure": "days_of_supply_coverage",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "Percentage of procurement budget consumed by actual spend.",
+      "canonical_id": "supply_chain_procurement_budget_utilization_percent",
+      "complexity": "KPI",
+      "depends_on": [
+        "supply_chain_procurement_spend_spend_amount_usd_currency",
+        "supply_chain_procurement_spend_budget_usd_count"
+      ],
+      "composition_formula": "{supply_chain_procurement_spend_spend_amount_usd_currency} / {supply_chain_procurement_spend_budget_usd_count}",
+      "wave": 9,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_budget_utilization",
+        "measure": "procurement_budget_utilization",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "Ratio of supplier quality acceptance rate to defect rate as a measure of overall supplier quality.",
+      "canonical_id": "supply_chain_supplier_quality_score_ratio",
+      "complexity": "KPI",
+      "depends_on": [
+        "supply_chain_suppliers_quality_acceptance_rate_percent",
+        "supply_chain_suppliers_defect_rate_percent"
+      ],
+      "composition_formula": "{supply_chain_suppliers_quality_acceptance_rate_percent} / {supply_chain_suppliers_defect_rate_percent}",
+      "wave": 9,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "supplier_quality_score",
+        "measure": "supplier_quality_score",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "ratio",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "Proportion of supplier orders delivered on time relative to total orders placed.",
+      "canonical_id": "supply_chain_on_time_delivery_rate_percent",
+      "complexity": "KPI",
+      "depends_on": [
+        "supply_chain_suppliers_on_time_delivery_rate_percent",
+        "supply_chain_suppliers_total_orders_currency"
+      ],
+      "composition_formula": "{supply_chain_suppliers_on_time_delivery_rate_percent} / {supply_chain_suppliers_total_orders_currency}",
+      "wave": 9,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "on_time_delivery_rate",
+        "measure": "on_time_delivery_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    }
+  ]
+}

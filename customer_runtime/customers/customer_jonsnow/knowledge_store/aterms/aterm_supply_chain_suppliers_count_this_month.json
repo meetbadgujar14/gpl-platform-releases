@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_suppliers_count_this_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_count_this_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "count",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 7.0,
+  "formula_line": "MEASURE_MONTH_FIXED('supply_chain_suppliers_ERP_dimension', 'last_audit_date', 'COUNT_DISTINCT', 'supplier_id', 'this_month', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-08-25T09:49:48Z",
+  "usage_count": 0,
+  "source_goal": "How many supplierss are there this month?",
+  "wave": 3,
+  "operator": "MEASURE_MONTH_FIXED",
+  "verified_at": "2026-08-25T09:57:36Z"
+}

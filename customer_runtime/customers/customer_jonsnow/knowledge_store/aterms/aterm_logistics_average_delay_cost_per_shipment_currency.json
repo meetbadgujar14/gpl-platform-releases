@@ -1,0 +1,36 @@
+{
+  "id": "aterm:logistics_average_delay_cost_per_shipment_currency",
+  "type": "Aterm",
+  "canonical_id": "logistics_average_delay_cost_per_shipment_currency",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "average_delay_cost_per_shipment",
+    "measure": "average_delay_cost_per_shipment",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 2425.6666666666665,
+  "formula_line": "logistics_average_delay_cost_per_shipment_currency = {logistics_delivery_events_delay_cost_usd_currency} / ({logistics_delivery_events_count} if {logistics_delivery_events_count} != 0 else 1)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-08-25T09:36:17Z",
+  "usage_count": 0,
+  "source_goal": "Average delay cost incurred per delivery event to track financial impact of disruptions.",
+  "wave": 9,
+  "depends_on": [
+    "logistics_delivery_events_delay_cost_usd_currency",
+    "logistics_delivery_events_count"
+  ],
+  "dep_values": {
+    "logistics_delivery_events_delay_cost_usd_currency": 36385.0,
+    "logistics_delivery_events_count": 15.0
+  },
+  "verified_at": "2026-08-25T09:57:34Z"
+}

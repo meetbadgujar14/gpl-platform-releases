@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_suppliers_on_time_delivery_rate_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_on_time_delivery_rate_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "on_time_delivery_rate",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 1358.3,
+  "formula_line": "MEASURE('supply_chain_suppliers_ERP_dimension', 'SUM', 'on_time_delivery_rate', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-08-25T09:49:47Z",
+  "usage_count": 0,
+  "source_goal": "What is the total on time delivery rate of supplierss?",
+  "wave": 1,
+  "operator": "MEASURE",
+  "verified_at": "2026-08-25T09:57:35Z"
+}

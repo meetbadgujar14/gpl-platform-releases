@@ -1,0 +1,21 @@
+{
+  "vertical": "supply_chain",
+  "domain": "supply_chain",
+  "generated_at": "2026-08-25T09:49:47Z",
+  "total_goals": 402,
+  "waves": {
+    "wave_01": 35,
+    "wave_02": 52,
+    "wave_03": 140,
+    "wave_05": 26,
+    "wave_06": 26,
+    "wave_07": 0,
+    "wave_08": 97,
+    "wave_09": 5,
+    "wave_A": 6,
+    "wave_B": 2,
+    "wave_C": 3,
+    "wave_D": 4,
+    "wave_E": 6
+  }
+}

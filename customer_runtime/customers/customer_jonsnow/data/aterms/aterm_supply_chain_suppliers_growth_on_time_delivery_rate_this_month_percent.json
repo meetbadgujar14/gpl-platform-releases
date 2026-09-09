@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_suppliers_growth_on_time_delivery_rate_this_month_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_growth_on_time_delivery_rate_this_month_percent",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "growth_on_time_delivery_rate",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 675.0511247443764,
+  "formula_line": "supply_chain_suppliers_growth_on_time_delivery_rate_this_month_percent = (({supply_chain_suppliers_on_time_delivery_rate_this_month_percent} - {supply_chain_suppliers_on_time_delivery_rate_last_month_percent}) / abs({supply_chain_suppliers_on_time_delivery_rate_last_month_percent}) * 100) if {supply_chain_suppliers_on_time_delivery_rate_last_month_percent} != 0 else 0",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-08-25T09:57:32Z",
+  "usage_count": 0,
+  "source_goal": "What is the month over month growth in on time delivery rate for supplierss?",
+  "wave": 6,
+  "depends_on": [
+    "supply_chain_suppliers_on_time_delivery_rate_this_month_percent",
+    "supply_chain_suppliers_on_time_delivery_rate_last_month_percent"
+  ],
+  "dep_values": {
+    "supply_chain_suppliers_on_time_delivery_rate_this_month_percent": 758.0,
+    "supply_chain_suppliers_on_time_delivery_rate_last_month_percent": 97.8
+  },
+  "verified_at": "2026-08-25T09:57:37Z"
+}

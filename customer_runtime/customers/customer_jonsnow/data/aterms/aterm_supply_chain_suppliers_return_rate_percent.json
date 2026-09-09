@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_suppliers_return_rate_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_return_rate_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "return_rate",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 41.0,
+  "formula_line": "MEASURE('supply_chain_suppliers_ERP_dimension', 'SUM', 'return_rate', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-08-25T09:49:47Z",
+  "usage_count": 0,
+  "source_goal": "What is the total return rate of supplierss?",
+  "wave": 1,
+  "operator": "MEASURE",
+  "verified_at": "2026-08-25T09:57:35Z"
+}

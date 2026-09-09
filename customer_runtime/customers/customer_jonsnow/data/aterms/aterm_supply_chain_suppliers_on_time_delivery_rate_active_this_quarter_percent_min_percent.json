@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_suppliers_on_time_delivery_rate_active_this_quarter_percent_min_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_on_time_delivery_rate_active_this_quarter_percent_min_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "on_time_delivery_rate",
+    "state": "Active",
+    "scope": "min",
+    "time": "this_quarter",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 44.695022,
+  "formula_line": "RATIO: MEASURE_QUARTER_FIXED('supply_chain_suppliers_ERP_dimension', 'last_audit_date', 'SUM', 'on_time_delivery_rate', 'this_quarter', [{'field': 'status', 'op': '=', 'value': 'Active'}]) / MEASURE_QUARTER_FIXED('supply_chain_suppliers_ERP_dimension', 'last_audit_date', 'SUM', 'on_time_delivery_rate', 'this_quarter', None) * 100",
+  "exec_formula": "((MEASURE_QUARTER_FIXED('supply_chain_suppliers_ERP_dimension', 'last_audit_date', 'SUM', 'on_time_delivery_rate', 'this_quarter', [{'field': 'status', 'op': '=', 'value': 'Active'}])) / (MEASURE_QUARTER_FIXED('supply_chain_suppliers_ERP_dimension', 'last_audit_date', 'SUM', 'on_time_delivery_rate', 'this_quarter', None)) * 100) if (MEASURE_QUARTER_FIXED('supply_chain_suppliers_ERP_dimension', 'last_audit_date', 'SUM', 'on_time_delivery_rate', 'this_quarter', None)) else 0.0",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_execution_stable",
+  "created_at": "2026-08-25T09:56:43Z",
+  "usage_count": 0,
+  "source_goal": "Which active supplier has the lowest on-time delivery rate this quarter?",
+  "wave": "E",
+  "via_llm": true,
+  "llm_reasoning": "wizard/RATIO_FILTERED steps=9",
+  "wizard_steps": 9,
+  "verified_at": "2026-08-25T09:57:37Z"
+}

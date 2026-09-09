@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_inventory_levels_min_days_of_supply_days",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_levels_min_days_of_supply_days",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_levels",
+    "measure": "min_days_of_supply",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": 5.0,
+  "formula_line": "MEASURE_SNAPSHOT_DEDUPED('supply_chain_inventory_levels_WMS_state', 'snapshot_date', ['item_id', 'warehouse_id'], 'MIN', 'days_of_supply', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-08-25T09:49:47Z",
+  "usage_count": 0,
+  "source_goal": "What is the min days of supply across all inventory_levelss?",
+  "wave": 2,
+  "operator": "MEASURE_SNAPSHOT_DEDUPED",
+  "verified_at": "2026-08-25T09:57:35Z"
+}

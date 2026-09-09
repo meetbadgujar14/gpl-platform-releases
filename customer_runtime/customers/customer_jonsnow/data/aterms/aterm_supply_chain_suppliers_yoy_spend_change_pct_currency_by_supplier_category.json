@@ -1,0 +1,40 @@
+{
+  "id": "aterm:supply_chain_suppliers_yoy_spend_change_pct_currency_by_supplier_category",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_yoy_spend_change_pct_currency_by_supplier_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "yoy_spend_change_pct",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_supplier_category"
+  },
+  "oracle_value": {
+    "Agricultural Products": 3.9,
+    "Chemicals": -9.400000000000002,
+    "Electronic Components": -32.300000000000004,
+    "Fasteners & Hardware": 6.8,
+    "Logistics": 11.2,
+    "MRO Supplies": 1.7,
+    "Metal Fabrication": 14.1,
+    "Packaging": -2.4,
+    "Plastics & Polymers": -15.6,
+    "Safety & PPE": 26.7
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_suppliers_ERP_dimension', 'SUM', 'yoy_spend_change_pct', 'supplier_category', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-08-25T09:49:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total yoy spend change pct of supplierss by supplier category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-08-25T09:57:37Z"
+}

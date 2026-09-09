@@ -1,0 +1,29 @@
+{
+  "id": "aterm:supply_chain_suppliers_avg_po_value_usd_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_avg_po_value_usd_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "avg_po_value_usd",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 18890.533333333333,
+  "formula_line": "MEASURE('supply_chain_suppliers_ERP_dimension', 'AVG', 'avg_po_value_usd', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-08-25T09:49:47Z",
+  "usage_count": 0,
+  "source_goal": "What is the total avg po value usd of supplierss?",
+  "wave": 1,
+  "operator": "MEASURE",
+  "verified_at": "2026-08-25T09:57:35Z"
+}

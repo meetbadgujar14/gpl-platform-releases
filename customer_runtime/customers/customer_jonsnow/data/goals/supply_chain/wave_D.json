@@ -1,0 +1,83 @@
+{
+  "wave": "D",
+  "goal_count": 4,
+  "generated_at": "2026-08-25T09:49:47Z",
+  "goals": [
+    {
+      "goal": "How many suppliers are currently Under Review this month?",
+      "canonical_id": "supply_chain_suppliers_count_under_review_this_month_count_scalar_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "count",
+        "state": "Under Review",
+        "scope": "total",
+        "time": "this_month",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "wave": "D",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "What is the total spend associated with suppliers currently Under Review this quarter?",
+      "canonical_id": "supply_chain_suppliers_total_spend_usd_under_review_this_quarter_currency_scalar_currency",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "total_spend_usd",
+        "state": "Under Review",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "wave": "D",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "How many suppliers are currently Inactive this quarter?",
+      "canonical_id": "supply_chain_suppliers_count_inactive_this_quarter_count_scalar_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "count",
+        "state": "Inactive",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "wave": "D",
+      "complexity": "KPI",
+      "join": null
+    },
+    {
+      "goal": "How many total orders were placed with suppliers currently Under Review this quarter?",
+      "canonical_id": "supply_chain_suppliers_total_orders_under_review_this_quarter_count_scalar_count",
+      "depends_on": [],
+      "composition_formula": "",
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "total_orders",
+        "state": "Under Review",
+        "scope": "total",
+        "time": "this_quarter",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "wave": "D",
+      "complexity": "KPI",
+      "join": null
+    }
+  ]
+}

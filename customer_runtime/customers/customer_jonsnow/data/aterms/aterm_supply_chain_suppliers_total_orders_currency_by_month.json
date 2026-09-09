@@ -1,0 +1,38 @@
+{
+  "id": "aterm:supply_chain_suppliers_total_orders_currency_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_total_orders_currency_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "total_orders",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2025-08": 56.0,
+    "2025-11": 42.0,
+    "2026-02": 146.0,
+    "2026-03": 134.0,
+    "2026-05": 95.0,
+    "2026-06": 310.0,
+    "2026-07": 204.0,
+    "2026-08": 1905.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_suppliers_ERP_dimension', 'SUM', 'total_orders', None, [], None, None, None, {'date_col': 'last_audit_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-08-25T09:49:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total total orders of supplierss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-08-25T09:57:36Z"
+}

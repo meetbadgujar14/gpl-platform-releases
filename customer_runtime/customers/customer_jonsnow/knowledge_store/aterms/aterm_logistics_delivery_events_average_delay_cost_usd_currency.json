@@ -1,0 +1,36 @@
+{
+  "id": "aterm:logistics_delivery_events_average_delay_cost_usd_currency",
+  "type": "Aterm",
+  "canonical_id": "logistics_delivery_events_average_delay_cost_usd_currency",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "delivery_events",
+    "measure": "average_delay_cost_usd",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "scalar"
+  },
+  "oracle_value": 2425.6666666666665,
+  "formula_line": "logistics_delivery_events_average_delay_cost_usd_currency = {logistics_delivery_events_delay_cost_usd_currency} / ({logistics_delivery_events_count} if {logistics_delivery_events_count} != 0 else 1)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-08-25T09:36:17Z",
+  "usage_count": 0,
+  "source_goal": "What is the average delay cost usd per delivery_events?",
+  "wave": 5,
+  "depends_on": [
+    "logistics_delivery_events_delay_cost_usd_currency",
+    "logistics_delivery_events_count"
+  ],
+  "dep_values": {
+    "logistics_delivery_events_delay_cost_usd_currency": 36385.0,
+    "logistics_delivery_events_count": 15.0
+  },
+  "verified_at": "2026-08-25T09:57:34Z"
+}

@@ -1,0 +1,173 @@
+{
+  "domain": "supply_chain",
+  "version": "1.0",
+  "generated_at": "2026-08-25T09:46:15Z",
+  "generated_from_atoms": [
+    "supply_chain_inventory_levels_WMS_state",
+    "supply_chain_procurement_spend_ERP_record",
+    "supply_chain_suppliers_ERP_dimension"
+  ],
+  "entities": {
+    "inventory_levels": {
+      "atom": "supply_chain_inventory_levels_WMS_state",
+      "record_type": "state",
+      "grain_key": "item_id",
+      "time_col": "snapshot_date",
+      "measures": [
+        "quantity_on_hand",
+        "quantity_reserved",
+        "quantity_available",
+        "reorder_point",
+        "safety_stock_qty",
+        "days_of_supply",
+        "avg_daily_demand",
+        "unit_cost_usd",
+        "total_value_usd",
+        "lead_time_days"
+      ],
+      "states": [],
+      "dimensions": [
+        "item_name",
+        "item_category",
+        "warehouse_name",
+        "warehouse_region",
+        "aging_bucket",
+        "stockout_risk",
+        "is_below_reorder",
+        "is_below_safety_stock",
+        "slow_moving_flag"
+      ]
+    },
+    "procurement_spend": {
+      "atom": "supply_chain_procurement_spend_ERP_record",
+      "record_type": "record",
+      "grain_key": "period",
+      "time_col": "month",
+      "measures": [
+        "spend_amount_usd",
+        "po_count",
+        "avg_po_value",
+        "budget_usd",
+        "budget_variance_pct",
+        "discount_captured_usd",
+        "tax_amount_usd"
+      ],
+      "states": [
+        "Disputed",
+        "Paid",
+        "Pending"
+      ],
+      "dimensions": [
+        "quarter",
+        "supplier_name",
+        "region",
+        "currency",
+        "cost_center",
+        "department",
+        "is_strategic_spend"
+      ]
+    },
+    "suppliers": {
+      "atom": "supply_chain_suppliers_ERP_dimension",
+      "record_type": "dimension",
+      "grain_key": "supplier_id",
+      "time_col": "last_audit_date",
+      "measures": [
+        "total_orders",
+        "on_time_delivery_rate",
+        "quality_acceptance_rate",
+        "avg_lead_time_days",
+        "total_spend_usd",
+        "defect_rate",
+        "return_rate",
+        "avg_po_value_usd",
+        "yoy_spend_change_pct"
+      ],
+      "states": [
+        "Active",
+        "Inactive",
+        "Under Review"
+      ],
+      "dimensions": [
+        "supplier_name",
+        "supplier_category",
+        "country",
+        "region",
+        "supplier_tier",
+        "is_preferred",
+        "payment_terms",
+        "risk_score"
+      ]
+    }
+  },
+  "cross_domain_refs": [],
+  "kpi_definitions": [
+    {
+      "name": "inventory_turnover_rate",
+      "description": "Measures how efficiently inventory is being used relative to total available quantity and demand.",
+      "formula": "{supply_chain_inventory_levels_avg_daily_demand_count} / {supply_chain_inventory_levels_quantity_available_count}",
+      "unit": "ratio",
+      "depends_on": [
+        "supply_chain_inventory_levels_avg_daily_demand_count",
+        "supply_chain_inventory_levels_quantity_available_count"
+      ]
+    },
+    {
+      "name": "days_of_supply_coverage",
+      "description": "Average number of days current inventory can cover demand before stockout.",
+      "formula": "{supply_chain_inventory_levels_days_of_supply_days} / {supply_chain_inventory_levels_lead_time_days_days}",
+      "unit": "days",
+      "depends_on": [
+        "supply_chain_inventory_levels_days_of_supply_days",
+        "supply_chain_inventory_levels_lead_time_days_days"
+      ]
+    },
+    {
+      "name": "procurement_budget_utilization",
+      "description": "Percentage of procurement budget consumed by actual spend.",
+      "formula": "{supply_chain_procurement_spend_spend_amount_usd_currency} / {supply_chain_procurement_spend_budget_usd_count}",
+      "unit": "percent",
+      "depends_on": [
+        "supply_chain_procurement_spend_spend_amount_usd_currency",
+        "supply_chain_procurement_spend_budget_usd_count"
+      ]
+    },
+    {
+      "name": "supplier_quality_score",
+      "description": "Ratio of supplier quality acceptance rate to defect rate as a measure of overall supplier quality.",
+      "formula": "{supply_chain_suppliers_quality_acceptance_rate_percent} / {supply_chain_suppliers_defect_rate_percent}",
+      "unit": "ratio",
+      "depends_on": [
+        "supply_chain_suppliers_quality_acceptance_rate_percent",
+        "supply_chain_suppliers_defect_rate_percent"
+      ]
+    },
+    {
+      "name": "on_time_delivery_rate",
+      "description": "Proportion of supplier orders delivered on time relative to total orders placed.",
+      "formula": "{supply_chain_suppliers_on_time_delivery_rate_percent} / {supply_chain_suppliers_total_orders_currency}",
+      "unit": "percent",
+      "depends_on": [
+        "supply_chain_suppliers_on_time_delivery_rate_percent",
+        "supply_chain_suppliers_total_orders_currency"
+      ]
+    }
+  ],
+  "time_scopes": [
+    "all_time",
+    "this_month",
+    "last_month",
+    "this_quarter",
+    "ytd"
+  ],
+  "series_axes": [
+    "by_month",
+    "by_region",
+    "by_segment",
+    "by_warehouse_region",
+    "by_supplier_category",
+    "by_item_category",
+    "by_supplier_tier",
+    "by_cost_center"
+  ]
+}

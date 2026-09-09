@@ -1,0 +1,37 @@
+{
+  "id": "aterm:supply_chain_inventory_levels_reorder_point_count_by_item_category",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_levels_reorder_point_count_by_item_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_levels",
+    "measure": "reorder_point",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_item_category"
+  },
+  "oracle_value": {
+    "Chemicals": 200.0,
+    "Consumer Electronics": 575.0,
+    "Hardware": 850.0,
+    "Machinery Parts": 208.0,
+    "Mechanical Components": 80.0,
+    "Medical Supplies": 5808.0,
+    "Warehouse Equipment": 5350.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_inventory_levels_WMS_state', 'SUM', 'reorder_point', 'item_category', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-08-25T09:49:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total reorder point of inventory_levelss by item category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-08-25T09:57:36Z"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "aterm:supply_chain_suppliers_yoy_spend_change_pct_currency_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_yoy_spend_change_pct_currency_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "yoy_spend_change_pct",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2025-08": -22.1,
+    "2025-11": -38.2,
+    "2026-02": 0.8,
+    "2026-03": 3.9,
+    "2026-05": -15.6,
+    "2026-06": 1.7,
+    "2026-07": 5.1,
+    "2026-08": 69.1
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_suppliers_ERP_dimension', 'SUM', 'yoy_spend_change_pct', None, [], None, None, None, {'date_col': 'last_audit_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-08-25T09:49:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total yoy spend change pct of supplierss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-08-25T09:57:36Z"
+}

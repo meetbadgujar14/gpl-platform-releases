@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_suppliers_total_spend_usd_all_by_supplier_this_quarter_currency_by_supplier_currency",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_total_spend_usd_all_by_supplier_this_quarter_currency_by_supplier_currency",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "total_spend_usd",
+    "state": "all",
+    "scope": "by_supplier",
+    "time": "this_quarter",
+    "unit": "currency",
+    "series": "by_supplier"
+  },
+  "oracle_value": {},
+  "formula_line": "MEASURE_GROUPED('supply_chain_suppliers_ERP_dimension', 'SUM', 'total_spend_usd', group_by_col='supplier', filters=None)",
+  "exec_formula": "MEASURE_GROUPED('supply_chain_suppliers_ERP_dimension', 'SUM', 'total_spend_usd', group_by_col='supplier', filters=None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-08-25T09:55:17Z",
+  "usage_count": 0,
+  "source_goal": "How is procurement spend distributed across suppliers this quarter?",
+  "wave": "B",
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_GROUPED steps=5",
+  "wizard_steps": 5,
+  "verified_at": "2026-08-25T09:57:37Z"
+}

@@ -1,0 +1,995 @@
+{
+  "wave": 2,
+  "goal_count": 52,
+  "generated_at": "2026-08-25T09:48:36Z",
+  "goals": [
+    {
+      "goal": "What is the max quantity on hand across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_max_quantity_on_hand_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "max_quantity_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min quantity on hand across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_min_quantity_on_hand_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "min_quantity_on_hand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max quantity reserved across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_max_quantity_reserved_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "max_quantity_reserved",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min quantity reserved across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_min_quantity_reserved_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "min_quantity_reserved",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max quantity available across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_max_quantity_available_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "max_quantity_available",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min quantity available across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_min_quantity_available_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "min_quantity_available",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max reorder point across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_max_reorder_point_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "max_reorder_point",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min reorder point across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_min_reorder_point_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "min_reorder_point",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max safety stock qty across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_max_safety_stock_qty_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "max_safety_stock_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min safety stock qty across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_min_safety_stock_qty_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "min_safety_stock_qty",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max days of supply across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_max_days_of_supply_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "max_days_of_supply",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min days of supply across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_min_days_of_supply_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "min_days_of_supply",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max avg daily demand across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_max_avg_daily_demand_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "max_avg_daily_demand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min avg daily demand across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_min_avg_daily_demand_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "min_avg_daily_demand",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max unit cost usd across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_max_unit_cost_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "max_unit_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min unit cost usd across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_min_unit_cost_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "min_unit_cost_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max total value usd across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_max_total_value_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "max_total_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min total value usd across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_min_total_value_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "min_total_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max lead time days across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_max_lead_time_days_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "max_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min lead time days across all inventory_levelss?",
+      "canonical_id": "supply_chain_inventory_levels_min_lead_time_days_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "inventory_levels",
+        "measure": "min_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max spend amount usd across all procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_max_spend_amount_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "max_spend_amount_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min spend amount usd across all procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_min_spend_amount_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "min_spend_amount_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max po count across all procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_max_po_count_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "max_po_count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min po count across all procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_min_po_count_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "min_po_count",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max avg po value across all procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_max_avg_po_value_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "max_avg_po_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min avg po value across all procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_min_avg_po_value_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "min_avg_po_value",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max budget usd across all procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_max_budget_usd_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "max_budget_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min budget usd across all procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_min_budget_usd_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "min_budget_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max budget variance pct across all procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_max_budget_variance_pct_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "max_budget_variance_pct",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min budget variance pct across all procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_min_budget_variance_pct_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "min_budget_variance_pct",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max discount captured usd across all procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_max_discount_captured_usd_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "max_discount_captured_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min discount captured usd across all procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_min_discount_captured_usd_count",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "min_discount_captured_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "count",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max tax amount usd across all procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_max_tax_amount_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "max_tax_amount_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min tax amount usd across all procurement_spends?",
+      "canonical_id": "supply_chain_procurement_spend_min_tax_amount_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "procurement_spend",
+        "measure": "min_tax_amount_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max total orders across all supplierss?",
+      "canonical_id": "supply_chain_suppliers_max_total_orders_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "max_total_orders",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min total orders across all supplierss?",
+      "canonical_id": "supply_chain_suppliers_min_total_orders_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "min_total_orders",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max on time delivery rate across all supplierss?",
+      "canonical_id": "supply_chain_suppliers_max_on_time_delivery_rate_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "max_on_time_delivery_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min on time delivery rate across all supplierss?",
+      "canonical_id": "supply_chain_suppliers_min_on_time_delivery_rate_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "min_on_time_delivery_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max quality acceptance rate across all supplierss?",
+      "canonical_id": "supply_chain_suppliers_max_quality_acceptance_rate_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "max_quality_acceptance_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min quality acceptance rate across all supplierss?",
+      "canonical_id": "supply_chain_suppliers_min_quality_acceptance_rate_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "min_quality_acceptance_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max avg lead time days across all supplierss?",
+      "canonical_id": "supply_chain_suppliers_max_avg_lead_time_days_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "max_avg_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min avg lead time days across all supplierss?",
+      "canonical_id": "supply_chain_suppliers_min_avg_lead_time_days_days",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "min_avg_lead_time_days",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "days",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max total spend usd across all supplierss?",
+      "canonical_id": "supply_chain_suppliers_max_total_spend_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "max_total_spend_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min total spend usd across all supplierss?",
+      "canonical_id": "supply_chain_suppliers_min_total_spend_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "min_total_spend_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max defect rate across all supplierss?",
+      "canonical_id": "supply_chain_suppliers_max_defect_rate_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "max_defect_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min defect rate across all supplierss?",
+      "canonical_id": "supply_chain_suppliers_min_defect_rate_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "min_defect_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max return rate across all supplierss?",
+      "canonical_id": "supply_chain_suppliers_max_return_rate_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "max_return_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min return rate across all supplierss?",
+      "canonical_id": "supply_chain_suppliers_min_return_rate_percent",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "min_return_rate",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "percent",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max avg po value usd across all supplierss?",
+      "canonical_id": "supply_chain_suppliers_max_avg_po_value_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "max_avg_po_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min avg po value usd across all supplierss?",
+      "canonical_id": "supply_chain_suppliers_min_avg_po_value_usd_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "min_avg_po_value_usd",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the max yoy spend change pct across all supplierss?",
+      "canonical_id": "supply_chain_suppliers_max_yoy_spend_change_pct_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "max_yoy_spend_change_pct",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    },
+    {
+      "goal": "What is the min yoy spend change pct across all supplierss?",
+      "canonical_id": "supply_chain_suppliers_min_yoy_spend_change_pct_currency",
+      "complexity": "PRIMITIVE",
+      "depends_on": [],
+      "composition_formula": "",
+      "wave": 2,
+      "slots": {
+        "domain": "supply_chain",
+        "entity": "suppliers",
+        "measure": "min_yoy_spend_change_pct",
+        "state": "all",
+        "scope": "total",
+        "time": "all_time",
+        "unit": "currency",
+        "series": "scalar"
+      },
+      "join": null
+    }
+  ]
+}

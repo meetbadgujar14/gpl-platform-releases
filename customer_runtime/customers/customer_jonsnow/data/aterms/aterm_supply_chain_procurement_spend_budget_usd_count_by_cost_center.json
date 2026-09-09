@@ -1,0 +1,37 @@
+{
+  "id": "aterm:supply_chain_procurement_spend_budget_usd_count_by_cost_center",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_procurement_spend_budget_usd_count_by_cost_center",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "procurement_spend",
+    "measure": "budget_usd",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_cost_center"
+  },
+  "oracle_value": {
+    "CC-1953": 420000.0,
+    "CC-2688": 565000.0,
+    "CC-4821": 850000.0,
+    "CC-5507": 140000.0,
+    "CC-6142": 55000.0,
+    "CC-8839": 150000.0,
+    "CC-9415": 905000.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_procurement_spend_ERP_record', 'SUM', 'budget_usd', 'cost_center', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-08-25T09:49:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total budget usd of procurement_spends by cost center?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-08-25T09:57:36Z"
+}

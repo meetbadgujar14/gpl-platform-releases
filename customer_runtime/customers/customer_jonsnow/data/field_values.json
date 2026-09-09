@@ -1,0 +1,661 @@
+{
+  "logistics_delivery_events_WMS_event": {
+    "carrier_name": [
+      "AeroCargo Solutions",
+      "CrossContinent Rail",
+      "GlobalShip Inc.",
+      "MetroFreight Co.",
+      "OceanBridge Freight",
+      "RailLink Express",
+      "SkyRush Logistics"
+    ],
+    "event_type": [
+      "Arrived",
+      "Customs Cleared",
+      "Customs Hold",
+      "Departed",
+      "Exception - Weather Delay",
+      "In Transit",
+      "Out for Delivery",
+      "Picked",
+      "Returned"
+    ],
+    "exception_category": [
+      "Cargo Damage",
+      "Customs Rejection",
+      "Delivery",
+      "Minor Delay",
+      "None",
+      "Regulatory",
+      "Weather"
+    ],
+    "location_city": [
+      "Chicago",
+      "Dallas",
+      "Dubai",
+      "Frankfurt",
+      "Johannesburg",
+      "Los Angeles",
+      "Lyon",
+      "Mumbai",
+      "Nairobi",
+      "Rotterdam",
+      "Shanghai",
+      "Singapore",
+      "São Paulo",
+      "Tokyo",
+      "Toronto"
+    ],
+    "location_country": [
+      "Australia",
+      "Belgium",
+      "Brazil",
+      "Canada",
+      "France",
+      "Germany",
+      "India",
+      "Japan",
+      "Malaysia",
+      "Netherlands",
+      "Singapore"
+    ],
+    "region": [
+      "Asia-Pacific",
+      "Europe",
+      "Latin America",
+      "MEA",
+      "Middle East",
+      "North America"
+    ],
+    "transport_mode": [
+      "Air",
+      "Rail",
+      "Road",
+      "Sea"
+    ],
+    "is_exception": [
+      "false",
+      "true"
+    ],
+    "root_cause": [
+      "Airway bill discrepancy flagged by customs authority",
+      "Improper packaging and handling during transit",
+      "Incorrect HS tariff code on commercial invoice",
+      "Incorrect shipping address provided by customer",
+      "Minor berth allocation delay at Durban port",
+      "Minor traffic congestion on I-405",
+      "Missing certificate of origin documentation",
+      "None",
+      "Port congestion due to labor strike at Yangshan terminal",
+      "Severe thunderstorm grounded flights at DFW",
+      "Shipment mislabeled and routed to incorrect destination",
+      "Truck engine failure on BR-116 highway"
+    ],
+    "impact_level": [
+      "Critical",
+      "High",
+      "Low",
+      "Medium",
+      "None"
+    ],
+    "escalated": [
+      "false",
+      "true"
+    ],
+    "sla_breached": [
+      "false",
+      "true"
+    ]
+  },
+  "logistics_vehicle_trips_WMS_event": {
+    "vehicle_type": [
+      "18-Wheeler",
+      "Box Truck",
+      "Flatbed Truck",
+      "Refrigerated Truck",
+      "Tanker"
+    ],
+    "driver_name": [
+      "Elena Vasquez",
+      "Grace Okonkwo",
+      "James Kowalski",
+      "Noah Kimura",
+      "Olivia Nash",
+      "Raj Patel",
+      "Sofia Espinoza"
+    ],
+    "trip_status": [
+      "cancelled",
+      "completed",
+      "delayed",
+      "in_transit"
+    ],
+    "origin_city": [
+      "Atlanta",
+      "Chicago",
+      "Dallas",
+      "Denver",
+      "Houston",
+      "Kansas City",
+      "Los Angeles",
+      "Memphis",
+      "Miami",
+      "Philadelphia",
+      "Seattle"
+    ],
+    "origin_state": [
+      "CA",
+      "CO",
+      "FL",
+      "GA",
+      "IL",
+      "MO",
+      "PA",
+      "TN",
+      "TX",
+      "WA"
+    ],
+    "destination_city": [
+      "Albuquerque",
+      "Charlotte",
+      "Houston",
+      "Indianapolis",
+      "Nashville",
+      "New Orleans",
+      "New York",
+      "Phoenix",
+      "Portland",
+      "St. Louis",
+      "Tampa"
+    ],
+    "destination_state": [
+      "AR",
+      "FL",
+      "MI",
+      "MO",
+      "NC",
+      "OH",
+      "TN",
+      "TX",
+      "WI"
+    ],
+    "fuel_type": [
+      "CNG",
+      "Diesel",
+      "HVO",
+      "LNG"
+    ]
+  },
+  "supply_chain_inventory_levels_WMS_state": {
+    "item_id": [
+      "ITM-1247",
+      "ITM-2056",
+      "ITM-2931",
+      "ITM-3648",
+      "ITM-4821",
+      "ITM-5067",
+      "ITM-5812",
+      "ITM-6389",
+      "ITM-7394",
+      "ITM-8740",
+      "ITM-9173"
+    ],
+    "item_name": [
+      "Alkaline Battery Pack AA",
+      "Electronic Control Module",
+      "Forklift Propane Cylinder",
+      "Heavy Duty Conveyor Belt",
+      "Industrial Hydraulic Pump",
+      "Medical Grade Latex Gloves",
+      "Pharmaceutical Grade Ethanol",
+      "Polymer Resin Pellets",
+      "Precision Ball Bearing 6205",
+      "Safety Hardhat Type II",
+      "Stainless Steel Fastener Set"
+    ],
+    "item_category": [
+      "Chemicals",
+      "Consumer Electronics",
+      "Electronics",
+      "Hardware",
+      "Industrial Equipment",
+      "Machinery Parts",
+      "Mechanical Components",
+      "Medical Supplies",
+      "Raw Materials",
+      "Safety Equipment",
+      "Warehouse Equipment"
+    ],
+    "warehouse_id": [
+      "WH-2095",
+      "WH-4821",
+      "WH-5537",
+      "WH-7364",
+      "WH-9142"
+    ],
+    "warehouse_name": [
+      "Atlanta Fulfillment Center",
+      "Chicago Central Warehouse",
+      "Dallas Regional Depot",
+      "Detroit Distribution Hub",
+      "Memphis Logistics Park"
+    ],
+    "warehouse_region": [
+      "North America"
+    ],
+    "is_below_reorder": [
+      "False",
+      "True"
+    ],
+    "is_below_safety_stock": [
+      "False",
+      "True"
+    ],
+    "aging_bucket": [
+      "0-30 days",
+      "31-60 days"
+    ],
+    "slow_moving_flag": [
+      "False",
+      "True"
+    ],
+    "stockout_risk": [
+      "Critical",
+      "High",
+      "Low",
+      "Medium"
+    ]
+  },
+  "supply_chain_procurement_spend_ERP_record": {
+    "period": [
+      "2024-01",
+      "2024-02",
+      "2024-03",
+      "2024-04",
+      "2024-05",
+      "2024-06",
+      "2024-07",
+      "2024-08",
+      "2024-09",
+      "2024-10",
+      "2024-11",
+      "2024-12",
+      "2025-01",
+      "2025-02"
+    ],
+    "month": [
+      "April",
+      "August",
+      "December",
+      "February",
+      "January",
+      "July",
+      "June",
+      "March",
+      "May",
+      "November",
+      "October",
+      "September"
+    ],
+    "quarter": [
+      "Q1",
+      "Q2",
+      "Q3",
+      "Q4"
+    ],
+    "spend_category": [
+      "Chemical Supplies",
+      "Facilities Management",
+      "IT Equipment",
+      "IT Services",
+      "Industrial Equipment",
+      "Logistics & Freight",
+      "MRO Supplies",
+      "Office Supplies",
+      "Packaging Materials",
+      "Professional Services",
+      "Raw Materials",
+      "Safety Equipment"
+    ],
+    "supplier_id": [
+      "SUP-2193",
+      "SUP-2967",
+      "SUP-3309",
+      "SUP-4456",
+      "SUP-4821",
+      "SUP-5538",
+      "SUP-6640",
+      "SUP-7364",
+      "SUP-7781",
+      "SUP-8390",
+      "SUP-8823",
+      "SUP-9057"
+    ],
+    "supplier_name": [
+      "Andean Textile Exports",
+      "Bharati Logistics & Freight",
+      "Cornerstone MRO Solutions",
+      "Harborview Packaging Solutions",
+      "Highveld Industrial Fasteners",
+      "Ironwood Timber & Forest Products",
+      "Maple Leaf Safety Equipment",
+      "Meridian Components GmbH",
+      "Nile Valley Agricultural Exports",
+      "Nordic Precision Machining AB",
+      "Pacific Rim Industrial Supplies",
+      "Sakura Electronics Co. Ltd"
+    ],
+    "region": [
+      "Asia-Pacific",
+      "Europe",
+      "Latin America",
+      "MEA",
+      "North America"
+    ],
+    "currency": [
+      "EUR",
+      "GBP",
+      "USD"
+    ],
+    "payment_status": [
+      "Overdue",
+      "Paid",
+      "Pending"
+    ],
+    "cost_center": [
+      "CC-1953",
+      "CC-2688",
+      "CC-4821",
+      "CC-5507",
+      "CC-6142",
+      "CC-8839",
+      "CC-9415"
+    ],
+    "department": [
+      "Admin",
+      "Facilities",
+      "IT",
+      "Logistics",
+      "Maintenance",
+      "Manufacturing",
+      "Operations",
+      "Procurement",
+      "Safety"
+    ],
+    "is_strategic_spend": [
+      "False",
+      "True"
+    ]
+  },
+  "supply_chain_suppliers_ERP_dimension": {
+    "supplier_id": [
+      "SUP-1475",
+      "SUP-2193",
+      "SUP-2967",
+      "SUP-3309",
+      "SUP-3812",
+      "SUP-4456",
+      "SUP-4821",
+      "SUP-5102",
+      "SUP-5538",
+      "SUP-6640",
+      "SUP-7364",
+      "SUP-7781",
+      "SUP-8390",
+      "SUP-8823",
+      "SUP-9057"
+    ],
+    "supplier_name": [
+      "Adriatic Polymer Industries",
+      "Andean Textile Exports S.A.",
+      "Bharati Logistics & Freight",
+      "Castillo Metalworks S.L.",
+      "Cornerstone MRO Solutions",
+      "Gulf Coast Petrochemicals Ltd",
+      "Harborview Packaging Solutions",
+      "Highveld Industrial Fasteners",
+      "Ironwood Timber & Forest Products",
+      "Maple Leaf Safety Equipment Inc.",
+      "Meridian Components GmbH",
+      "Nile Valley Agricultural Exports",
+      "Nordic Precision Machining AB",
+      "Pacific Rim Industrial Supplies",
+      "Sakura Electronics Co. Ltd"
+    ],
+    "supplier_category": [
+      "Agricultural Products",
+      "Chemicals",
+      "Electronic Components",
+      "Fasteners & Hardware",
+      "Logistics",
+      "MRO Supplies",
+      "Machined Parts",
+      "Metal Fabrication",
+      "Packaging",
+      "Plastics & Polymers",
+      "Raw Materials",
+      "Safety & PPE",
+      "Textiles"
+    ],
+    "country": [
+      "Brazil",
+      "Canada",
+      "China",
+      "Croatia",
+      "Egypt",
+      "Germany",
+      "India",
+      "Japan",
+      "Peru",
+      "South Africa",
+      "Spain",
+      "Sweden",
+      "United Kingdom",
+      "United States"
+    ],
+    "region": [
+      "Asia-Pacific",
+      "Europe",
+      "Latin America",
+      "MEA",
+      "North America"
+    ],
+    "supplier_tier": [
+      "Tier 1",
+      "Tier 2",
+      "Tier 3"
+    ],
+    "status": [
+      "Active",
+      "Inactive",
+      "On Hold"
+    ],
+    "is_preferred": [
+      "False",
+      "True"
+    ],
+    "payment_terms": [
+      "Net 30",
+      "Net 45",
+      "Net 60"
+    ],
+    "risk_score": [
+      "High",
+      "Low",
+      "Medium"
+    ]
+  },
+  "supply_chain_inventory_levels_WMS_state.item_name": [
+    "Forklift Battery 48V",
+    "Industrial Hydraulic Pump",
+    "LED Panel Light 40W",
+    "Nitrile Gloves (Box/100)",
+    "Polypropylene Stretch Wrap 18in",
+    "Stainless Steel Fastener Set",
+    "Thermal Transfer Label 4x6"
+  ],
+  "supply_chain_inventory_levels_WMS_state.item_category": [
+    "Electrical & Lighting",
+    "Hardware & Fasteners",
+    "Labeling & Barcoding",
+    "Machinery Components",
+    "Material Handling Equipment",
+    "Packaging Materials",
+    "Safety & PPE"
+  ],
+  "supply_chain_inventory_levels_WMS_state.warehouse_name": [
+    "Meridian Midwest Fulfillment Hub",
+    "Northeast Cold Storage & Logistics",
+    "Pacific Rim Distribution Center",
+    "Southeastern Logistics Park"
+  ],
+  "supply_chain_inventory_levels_WMS_state.warehouse_region": [
+    "Midwest",
+    "Northeast",
+    "Southeast",
+    "West"
+  ],
+  "supply_chain_inventory_levels_WMS_state.aging_bucket": [
+    "0-30 days",
+    "181+ days",
+    "31-60 days",
+    "61-90 days",
+    "91-180 days"
+  ],
+  "supply_chain_inventory_levels_WMS_state.stockout_risk": [
+    "High",
+    "Low",
+    "Medium"
+  ],
+  "supply_chain_inventory_levels_WMS_state.is_below_reorder": [
+    "false",
+    "true"
+  ],
+  "supply_chain_inventory_levels_WMS_state.is_below_safety_stock": [
+    "false",
+    "true"
+  ],
+  "supply_chain_inventory_levels_WMS_state.slow_moving_flag": [
+    "false",
+    "true"
+  ],
+  "supply_chain_procurement_spend_ERP_record.quarter": [
+    "Q1-2026",
+    "Q2-2026",
+    "Q3-2025",
+    "Q3-2026",
+    "Q4-2025"
+  ],
+  "supply_chain_procurement_spend_ERP_record.supplier_name": [
+    "Apex Steel & Alloys Ltd",
+    "GreenWrap Industries",
+    "Harrington Industrial Supply",
+    "Meridian Tech Solutions",
+    "Pacific Rim Logistics",
+    "Trentham Chemical Works",
+    "Vantage Consulting Group"
+  ],
+  "supply_chain_procurement_spend_ERP_record.region": [
+    "Asia-Pacific",
+    "Europe",
+    "North America"
+  ],
+  "supply_chain_procurement_spend_ERP_record.currency": [
+    "USD"
+  ],
+  "supply_chain_procurement_spend_ERP_record.payment_status": [
+    "Disputed",
+    "Paid",
+    "Pending"
+  ],
+  "supply_chain_procurement_spend_ERP_record.department": [
+    "Facilities",
+    "Finance",
+    "Information Technology",
+    "Manufacturing",
+    "Operations",
+    "Supply Chain"
+  ],
+  "supply_chain_procurement_spend_ERP_record.is_strategic_spend": [
+    "false",
+    "true"
+  ],
+  "supply_chain_suppliers_ERP_dimension.supplier_name": [
+    "Apex Industrial Components",
+    "Atlas Hydraulics & Pneumatics",
+    "Belmont Precision Metals",
+    "Cascade Semiconductor Technologies",
+    "Eurocraft Plastics S.A.",
+    "Green Valley Agro Commodities",
+    "Harborview MRO Supplies",
+    "Ironclad Fasteners Corp.",
+    "Meridian Electronic Parts GmbH",
+    "Northstar Packaging Co.",
+    "Orinoco Rubber & Seals",
+    "Pacific Rim Logistics Solutions",
+    "Quantum Safety Systems Inc.",
+    "Solaris Chemical Industries",
+    "Vantage Textiles Ltd."
+  ],
+  "supply_chain_suppliers_ERP_dimension.supplier_category": [
+    "Agricultural Inputs",
+    "Chemicals",
+    "Electronics",
+    "Hardware & Fasteners",
+    "Industrial Equipment",
+    "Logistics & Freight",
+    "MRO",
+    "Packaging",
+    "Plastics & Polymers",
+    "Raw Materials",
+    "Rubber & Gaskets",
+    "Safety & PPE",
+    "Textiles"
+  ],
+  "supply_chain_suppliers_ERP_dimension.country": [
+    "Bangladesh",
+    "Brazil",
+    "Canada",
+    "China",
+    "France",
+    "Germany",
+    "India",
+    "Italy",
+    "Malaysia",
+    "Mexico",
+    "South Korea",
+    "United Kingdom",
+    "United States"
+  ],
+  "supply_chain_suppliers_ERP_dimension.region": [
+    "Asia Pacific",
+    "Europe",
+    "Latin America",
+    "North America"
+  ],
+  "supply_chain_suppliers_ERP_dimension.supplier_tier": [
+    "Tier 1",
+    "Tier 2",
+    "Tier 3"
+  ],
+  "supply_chain_suppliers_ERP_dimension.status": [
+    "Active",
+    "Inactive",
+    "Under Review"
+  ],
+  "supply_chain_suppliers_ERP_dimension.is_preferred": [
+    "false",
+    "true"
+  ],
+  "supply_chain_suppliers_ERP_dimension.payment_terms": [
+    "Net 30",
+    "Net 45",
+    "Net 60",
+    "Net 90"
+  ],
+  "supply_chain_suppliers_ERP_dimension.risk_score": [
+    "High",
+    "Low",
+    "Medium"
+  ]
+}

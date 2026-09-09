@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_on_time_delivery_rate_percent",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_on_time_delivery_rate_percent",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "on_time_delivery_rate",
+    "measure": "on_time_delivery_rate",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 0.4696749654218534,
+  "formula_line": "supply_chain_on_time_delivery_rate_percent = {supply_chain_suppliers_on_time_delivery_rate_percent} / ({supply_chain_suppliers_total_orders_currency} if {supply_chain_suppliers_total_orders_currency} != 0 else 1)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-08-25T09:57:33Z",
+  "usage_count": 0,
+  "source_goal": "Proportion of supplier orders delivered on time relative to total orders placed.",
+  "wave": 9,
+  "depends_on": [
+    "supply_chain_suppliers_on_time_delivery_rate_percent",
+    "supply_chain_suppliers_total_orders_currency"
+  ],
+  "dep_values": {
+    "supply_chain_suppliers_on_time_delivery_rate_percent": 1358.3,
+    "supply_chain_suppliers_total_orders_currency": 2892.0
+  },
+  "verified_at": "2026-08-25T09:57:37Z"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "aterm:supply_chain_suppliers_quality_acceptance_rate_percent_by_region",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_quality_acceptance_rate_percent_by_region",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "quality_acceptance_rate",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "percent",
+    "series": "by_region"
+  },
+  "oracle_value": {
+    "Asia-Pacific": 466.3,
+    "Europe": 192.5,
+    "Latin America": 98.7,
+    "MEA": 183.1,
+    "North America": 471.2
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_suppliers_ERP_dimension', 'SUM', 'quality_acceptance_rate', 'region', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-08-25T09:49:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quality acceptance rate of supplierss by region?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-08-25T09:57:36Z"
+}

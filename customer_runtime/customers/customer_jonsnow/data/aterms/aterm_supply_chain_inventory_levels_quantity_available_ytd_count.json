@@ -1,0 +1,32 @@
+{
+  "id": "aterm:supply_chain_inventory_levels_quantity_available_ytd_count",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_levels_quantity_available_ytd_count",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_levels",
+    "measure": "quantity_available",
+    "state": "all",
+    "scope": "total",
+    "time": "ytd",
+    "unit": "count",
+    "series": "scalar"
+  },
+  "oracle_value": 16937.0,
+  "formula_line": "MEASURE_SNAPSHOT_DEDUPED_YTD('supply_chain_inventory_levels_WMS_state', 'snapshot_date', 'snapshot_date', ['item_id', 'warehouse_id'], 'SUM', 'quantity_available', None)",
+  "exec_formula": "MEASURE_SNAPSHOT_DEDUPED_YTD('supply_chain_inventory_levels_WMS_state', 'snapshot_date', 'snapshot_date', ['item_id', 'warehouse_id'], 'SUM', 'quantity_available', None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "llm_wizard",
+  "verify_reason": "VERIFY_wizard_execution",
+  "created_at": "2026-08-25T09:53:16Z",
+  "usage_count": 0,
+  "source_goal": "What is the total quantity available of inventory_levelss ytd?",
+  "wave": 3,
+  "via_llm": true,
+  "llm_reasoning": "wizard/MEASURE_SNAPSHOT_DEDUPED_YTD steps=5",
+  "wizard_steps": 5,
+  "verified_at": "2026-08-25T09:57:37Z"
+}

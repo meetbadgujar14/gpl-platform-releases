@@ -1,0 +1,123 @@
+{
+  "context_id": "logistics",
+  "context_name": "Logistics Operations",
+  "generated_at": "2026-08-25T09:37:09.687944+00:00",
+  "primary_date_field": {
+    "table": "logistics_delivery_events_WMS_event",
+    "column": "exception_category"
+  },
+  "filters": [
+    {
+      "id": "period",
+      "type": "date_range",
+      "table": "logistics_delivery_events_WMS_event",
+      "column": "exception_category"
+    }
+  ],
+  "kpis": [
+    {
+      "id": "arrived_rate_logistics_delivery_events_WMS_event",
+      "title": "Arrived Rate",
+      "type": "ratio",
+      "table": "logistics_delivery_events_WMS_event",
+      "numerator": {
+        "column": "event_id",
+        "aggregation": "count_where",
+        "filter_column": "event_type",
+        "filter_value": "Arrived"
+      },
+      "denominator": {
+        "column": "event_id",
+        "aggregation": "count"
+      },
+      "format": "percent"
+    },
+    {
+      "id": "total_logistics_freight_orders_ERP_record",
+      "title": "Total Freight Orders",
+      "type": "simple",
+      "table": "logistics_freight_orders_ERP_record",
+      "column": "route_id",
+      "aggregation": "count",
+      "format": "number"
+    },
+    {
+      "id": "total_actual_cost_usd_logistics_freight_orders_ERP_record",
+      "title": "Total Actual Cost Usd",
+      "type": "simple",
+      "table": "logistics_freight_orders_ERP_record",
+      "column": "actual_cost_usd",
+      "aggregation": "sum",
+      "format": "currency"
+    },
+    {
+      "id": "total_cost_variance_usd_logistics_freight_orders_ERP_record",
+      "title": "Total Cost Variance Usd",
+      "type": "simple",
+      "table": "logistics_freight_orders_ERP_record",
+      "column": "cost_variance_usd",
+      "aggregation": "sum",
+      "format": "currency"
+    },
+    {
+      "id": "total_logistics_shipments_ERP_record",
+      "title": "Total Shipments",
+      "type": "simple",
+      "table": "logistics_shipments_ERP_record",
+      "column": "shipment_id",
+      "aggregation": "count",
+      "format": "number"
+    },
+    {
+      "id": "total_delay_days_logistics_shipments_ERP_record",
+      "title": "Total Delay Days",
+      "type": "simple",
+      "table": "logistics_shipments_ERP_record",
+      "column": "delay_days",
+      "aggregation": "sum",
+      "format": "number"
+    }
+  ],
+  "charts": [
+    {
+      "id": "delay_cost_usd_by_carrier_name_logistics_delivery_events_WMS_event",
+      "title": "Delay Cost Usd by Carrier Name",
+      "type": "bar",
+      "table": "logistics_delivery_events_WMS_event",
+      "dimension": "carrier_name",
+      "dimension_type": "category",
+      "measure": "delay_cost_usd",
+      "aggregation": "sum"
+    },
+    {
+      "id": "delay_hours_by_root_cause_logistics_delivery_events_WMS_event",
+      "title": "Delay Hours by Root Cause",
+      "type": "bar",
+      "table": "logistics_delivery_events_WMS_event",
+      "dimension": "root_cause",
+      "dimension_type": "category",
+      "measure": "delay_hours",
+      "aggregation": "sum"
+    },
+    {
+      "id": "transport_mode_distribution_logistics_freight_orders_ERP_record",
+      "title": "Transport Mode Distribution",
+      "type": "donut",
+      "table": "logistics_freight_orders_ERP_record",
+      "dimension": "transport_mode",
+      "dimension_type": "status",
+      "measure": "route_id",
+      "aggregation": "count"
+    },
+    {
+      "id": "logistics_shipments_ERP_record_over_time",
+      "title": "Shipments Over Time",
+      "type": "line",
+      "table": "logistics_delivery_events_WMS_event",
+      "dimension": "event_date",
+      "dimension_type": "date",
+      "measure": "shipment_id",
+      "aggregation": "count"
+    }
+  ]
+}

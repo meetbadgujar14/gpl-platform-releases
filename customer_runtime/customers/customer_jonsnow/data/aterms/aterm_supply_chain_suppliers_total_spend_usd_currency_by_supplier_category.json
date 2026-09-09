@@ -1,0 +1,40 @@
+{
+  "id": "aterm:supply_chain_suppliers_total_spend_usd_currency_by_supplier_category",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_suppliers_total_spend_usd_currency_by_supplier_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "suppliers",
+    "measure": "total_spend_usd",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "currency",
+    "series": "by_supplier_category"
+  },
+  "oracle_value": {
+    "Agricultural Products": 640000.0,
+    "Chemicals": 2760000.0,
+    "Electronic Components": 8595000.0,
+    "Fasteners & Hardware": 2980000.0,
+    "Logistics": 5430000.0,
+    "MRO Supplies": 1750000.0,
+    "Metal Fabrication": 7300000.0,
+    "Packaging": 1120000.0,
+    "Plastics & Polymers": 890000.0,
+    "Safety & PPE": 16020000.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_suppliers_ERP_dimension', 'SUM', 'total_spend_usd', 'supplier_category', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-08-25T09:49:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total total spend usd of supplierss by supplier category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-08-25T09:57:37Z"
+}

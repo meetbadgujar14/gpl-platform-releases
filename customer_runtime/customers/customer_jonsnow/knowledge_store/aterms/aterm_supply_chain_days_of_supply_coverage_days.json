@@ -1,0 +1,36 @@
+{
+  "id": "aterm:supply_chain_days_of_supply_coverage_days",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_days_of_supply_coverage_days",
+  "kind": "composed",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "days_of_supply_coverage",
+    "measure": "days_of_supply_coverage",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "days",
+    "series": "scalar"
+  },
+  "oracle_value": 2.187878787878788,
+  "formula_line": "supply_chain_days_of_supply_coverage_days = {supply_chain_inventory_levels_days_of_supply_days} / ({supply_chain_inventory_levels_lead_time_days_days} if {supply_chain_inventory_levels_lead_time_days_days} != 0 else 1)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "composition",
+  "verify_reason": "COMPOSED_verified",
+  "created_at": "2026-08-25T09:57:33Z",
+  "usage_count": 0,
+  "source_goal": "Average number of days current inventory can cover demand before stockout.",
+  "wave": 9,
+  "depends_on": [
+    "supply_chain_inventory_levels_days_of_supply_days",
+    "supply_chain_inventory_levels_lead_time_days_days"
+  ],
+  "dep_values": {
+    "supply_chain_inventory_levels_days_of_supply_days": 361.0,
+    "supply_chain_inventory_levels_lead_time_days_days": 165.0
+  },
+  "verified_at": "2026-08-25T09:57:37Z"
+}

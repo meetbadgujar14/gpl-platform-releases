@@ -1,0 +1,16 @@
+event_id,shipment_id,freight_order_id,carrier_name,event_type,exception_category,location_city,location_country,region,transport_mode,is_exception,delay_hours,delay_cost_usd,event_date,resolution_hours,root_cause,impact_level,escalated,sla_breached,shipment_value_usd
+EVT-84721,SHP-74182,FO-14567,Kuehne+Nagel,Package Damaged,None,Toronto,Netherlands,Middle East,Ocean,true,18,420,2026-08-22,24,Incorrect HS tariff code on commercial invoice,None,true,false,14200
+EVT-61093,SHP-43726,FO-64802,Agility Logistics,Delivery Attempted,Weather Disruption,Chicago,USA,Middle East,Road,false,36,1850,2026-08-18,48,Incorrect shipping address provided by customer,Low,false,true,87500
+EVT-29548,SHP-87463,FO-64802,Ceva Logistics,Vehicle Breakdown,Documentation Error,Los Angeles,Kenya,Middle East,Road,true,72,5400,2026-08-10,96,Minor berth allocation delay at Durban port,Medium,true,true,245000
+EVT-37814,SHP-87463,FO-28473,Panalpina World Transport,Delivered,Cargo Damage,Nairobi,Singapore,North America,Ocean,true,0,0,2026-08-05,0,Incorrect HS tariff code on commercial invoice,Low,true,false,32700
+EVT-53902,SHP-83401,FO-46283,FedEx Freight,Lost Shipment,Weather Disruption,Toronto,Germany,Africa,Air,true,48,3200,2026-07-28,72,Minor traffic congestion on I-405,Critical,false,false,62000
+EVT-41267,SHP-50934,FO-17563,Bollore Logistics,In Transit,Regulatory Compliance,Johannesburg,Germany,Europe,Road,false,0,0,2026-07-14,0,None,Low,true,true,118400
+EVT-76543,SHP-43726,FO-34572,Ceva Logistics,Customs Hold,Cargo Damage,Rotterdam,Kenya,Europe,Air,false,96,8700,2026-06-30,120,Minor traffic congestion on I-405,Medium,false,false,390000
+EVT-18472,SHP-83401,FO-28473,Bollore Logistics,Package Damaged,Weather Disruption,Rotterdam,Germany,Middle East,Air,true,4,95,2026-06-12,4,Improper packaging and handling during transit,Critical,true,false,21300
+EVT-92018,SHP-43726,FO-46283,DSV Air & Sea,Customs Hold,Documentation Error,Singapore,USA,Asia Pacific,Air,true,144,12500,2026-05-19,168,Truck engine failure on BR-116 highway,Critical,true,false,175000
+EVT-64830,SHP-11748,FO-28473,Bollore Logistics,In Transit,Port Congestion,Singapore,UAE,Europe,Ocean,true,0,0,2026-04-08,0,Minor berth allocation delay at Durban port,Medium,true,false,47800
+EVT-55219,SHP-76219,FO-46283,Kuehne+Nagel,Vehicle Breakdown,None,Frankfurt,UAE,Latin America,Road,true,30,2100,2026-03-24,36,Airway bill discrepancy flagged by customs authority,Medium,false,false,53600
+EVT-80347,SHP-50934,FO-18947,Maersk Logistics,Vehicle Breakdown,Cargo Damage,Mumbai,South Africa,Middle East,Road,false,12,380,2026-02-15,12,Missing certificate of origin documentation,None,true,true,89200
+EVT-23694,SHP-47839,FO-31896,Ceva Logistics,Delivered,Address Not Found,Shanghai,France,Europe,Air,true,22,760,2025-11-07,28,Minor berth allocation delay at Durban port,High,true,false,38900
+EVT-47182,SHP-93016,FO-90483,Nippon Express,Delivered,Cargo Loss,Frankfurt,Netherlands,Asia Pacific,Road,true,16,980,2025-06-22,20,Airway bill discrepancy flagged by customs authority,None,true,false,71500
+EVT-39015,SHP-69357,FO-28473,Kuehne+Nagel,In Transit,Port Congestion,Toronto,Brazil,Africa,Road,false,0,0,2024-12-03,0,Missing certificate of origin documentation,High,false,true,27400

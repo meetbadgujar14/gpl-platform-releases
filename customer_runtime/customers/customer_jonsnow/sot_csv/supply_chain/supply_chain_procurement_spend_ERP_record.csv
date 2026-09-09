@@ -1,0 +1,29 @@
+period,month,quarter,spend_category,supplier_id,supplier_name,region,currency,spend_amount_usd,po_count,avg_po_value,budget_usd,budget_variance_pct,payment_status,discount_captured_usd,tax_amount_usd,cost_center,department,is_strategic_spend
+2024-01,January,Q1,Raw Materials,SUP-4821,Pacific Rim Industrial Supplies,Asia-Pacific,USD,48750,4,12188,52000,-6.3,Paid,975,3900,CC-4821,Manufacturing,True
+2024-01,January,Q1,Logistics & Freight,SUP-8823,Maple Leaf Safety Equipment,North America,USD,12300,2,6150,14000,-12.1,Paid,246,984,CC-4821,Logistics,False
+2024-02,February,Q1,MRO Supplies,SUP-2193,Harborview Packaging Solutions,North America,EUR,8912,3,2971,9500,-6.2,Paid,0,714,CC-6142,Operations,False
+2024-02,February,Q1,Packaging Materials,SUP-4821,Pacific Rim Industrial Supplies,Asia-Pacific,USD,23400,3,7800,22000,6.4,Paid,468,1872,CC-4821,Manufacturing,True
+2024-03,March,Q1,IT Equipment,SUP-8823,Maple Leaf Safety Equipment,North America,USD,95600,6,15933,90000,6.2,Pending,4780,7648,CC-6142,IT,False
+2024-03,March,Q1,Professional Services,SUP-2193,Harborview Packaging Solutions,North America,USD,34500,4,8625,36000,-4.2,Paid,690,2760,CC-4821,Procurement,False
+2024-04,April,Q2,Facilities Management,SUP-3309,Nile Valley Agricultural Exports,MEA,GBP,23813,2,11907,25000,-4.7,Paid,0,4763,CC-4821,Facilities,False
+2024-04,April,Q2,Raw Materials,SUP-8823,Maple Leaf Safety Equipment,North America,USD,72300,5,14460,75000,-3.6,Paid,1446,5784,CC-4821,Manufacturing,True
+2024-05,May,Q2,Office Supplies,SUP-7364,Meridian Components GmbH,Europe,USD,3240,8,405,3500,-7.4,Paid,65,259,CC-5507,Admin,False
+2024-05,May,Q2,Chemical Supplies,SUP-2193,Harborview Packaging Solutions,North America,USD,41800,4,10450,42000,-0.5,Paid,836,3344,CC-6142,Operations,True
+2024-06,June,Q2,Logistics & Freight,SUP-4821,Pacific Rim Industrial Supplies,Asia-Pacific,USD,15900,2,7950,16000,-0.6,Overdue,318,1272,CC-6142,Logistics,False
+2024-07,July,Q3,Industrial Equipment,SUP-4456,Ironwood Timber & Forest Products,Latin America,EUR,146331,8,18291,150000,-2.4,Paid,7316,29266,CC-4821,Manufacturing,True
+2024-07,July,Q3,MRO Supplies,SUP-8390,Highveld Industrial Fasteners,MEA,USD,9670,3,3223,10000,-3.3,Paid,0,774,CC-6142,Maintenance,False
+2024-07,July,Q3,Packaging Materials,SUP-7781,Sakura Electronics Co. Ltd,Asia-Pacific,USD,31200,4,7800,30000,4.0,Pending,624,2496,CC-8839,Manufacturing,True
+2024-08,August,Q3,Safety Equipment,SUP-9057,Andean Textile Exports,Latin America,USD,18450,3,6150,18000,2.5,Paid,369,1476,CC-2688,Safety,False
+2024-08,August,Q3,Raw Materials,SUP-5538,Nordic Precision Machining AB,Europe,USD,64800,5,12960,65000,-0.3,Paid,1296,5184,CC-6142,Manufacturing,True
+2024-09,September,Q3,IT Services,SUP-3309,Nile Valley Agricultural Exports,MEA,USD,42000,4,10500,40000,5.0,Paid,2100,3360,CC-4821,IT,False
+2024-09,September,Q3,Facilities Management,SUP-2967,Cornerstone MRO Solutions,Europe,GBP,28699,2,14350,28000,2.5,Paid,0,5740,CC-4821,Facilities,False
+2024-10,October,Q4,Chemical Supplies,SUP-2193,Harborview Packaging Solutions,North America,USD,53700,4,13425,55000,-2.4,Paid,1074,4296,CC-5507,Operations,True
+2024-10,October,Q4,Professional Services,SUP-3309,Nile Valley Agricultural Exports,MEA,USD,28500,3,9500,28000,1.8,Pending,570,2280,CC-5507,Procurement,False
+2024-11,November,Q4,Office Supplies,SUP-9057,Andean Textile Exports,Latin America,USD,5120,6,853,5500,-6.9,Paid,102,410,CC-9415,Admin,False
+2024-11,November,Q4,Industrial Equipment,SUP-8823,Maple Leaf Safety Equipment,North America,EUR,99395,7,14199,100000,-0.6,Paid,4970,19879,CC-4821,Manufacturing,True
+2024-12,December,Q4,Safety Equipment,SUP-7781,Sakura Electronics Co. Ltd,Asia-Pacific,USD,14200,2,7100,14500,-2.1,Overdue,284,1136,CC-4821,Safety,False
+2024-12,December,Q4,Logistics & Freight,SUP-8823,Maple Leaf Safety Equipment,North America,USD,19850,2,9925,20000,-0.8,Paid,397,1588,CC-4821,Logistics,False
+2025-01,January,Q1,Raw Materials,SUP-3309,Nile Valley Agricultural Exports,MEA,USD,91500,6,15250,90000,1.7,Paid,1830,7320,CC-6142,Manufacturing,True
+2025-01,January,Q1,IT Equipment,SUP-4456,Ironwood Timber & Forest Products,Latin America,USD,67400,5,13480,70000,-3.7,Pending,3370,5392,CC-1953,IT,False
+2025-02,February,Q1,Packaging Materials,SUP-2193,Harborview Packaging Solutions,North America,USD,26800,4,6700,27500,-2.5,Paid,536,2144,CC-5507,Manufacturing,True
+2025-02,February,Q1,MRO Supplies,SUP-6640,Bharati Logistics & Freight,Asia-Pacific,USD,11350,3,3783,12000,-5.4,Paid,227,908,CC-6142,Operations,False

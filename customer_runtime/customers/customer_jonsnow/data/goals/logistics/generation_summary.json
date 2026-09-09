@@ -1,0 +1,21 @@
+{
+  "vertical": "logistics",
+  "domain": "logistics",
+  "generated_at": "2026-08-25T09:41:28Z",
+  "total_goals": 330,
+  "waves": {
+    "wave_01": 38,
+    "wave_02": 34,
+    "wave_03": 152,
+    "wave_05": 17,
+    "wave_06": 17,
+    "wave_07": 0,
+    "wave_08": 67,
+    "wave_09": 5,
+    "wave_A": 0,
+    "wave_B": 0,
+    "wave_C": 0,
+    "wave_D": 0,
+    "wave_E": 0
+  }
+}

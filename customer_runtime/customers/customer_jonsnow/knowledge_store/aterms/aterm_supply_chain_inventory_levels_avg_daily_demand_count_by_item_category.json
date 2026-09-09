@@ -1,0 +1,37 @@
+{
+  "id": "aterm:supply_chain_inventory_levels_avg_daily_demand_count_by_item_category",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_levels_avg_daily_demand_count_by_item_category",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_levels",
+    "measure": "avg_daily_demand",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_item_category"
+  },
+  "oracle_value": {
+    "Chemicals": 27.2,
+    "Consumer Electronics": 18.25,
+    "Hardware": 25.25,
+    "Machinery Parts": 11.0,
+    "Mechanical Components": 6.4,
+    "Medical Supplies": 149.775,
+    "Warehouse Equipment": 266.25
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_inventory_levels_WMS_state', 'AVG', 'avg_daily_demand', 'item_category', [], None, None, None, None)",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-08-25T09:49:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total avg daily demand of inventory_levelss by item category?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-08-25T09:57:36Z"
+}

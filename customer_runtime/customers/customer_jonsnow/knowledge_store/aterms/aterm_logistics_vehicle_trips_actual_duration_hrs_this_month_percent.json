@@ -1,0 +1,29 @@
+{
+  "id": "aterm:logistics_vehicle_trips_actual_duration_hrs_this_month_percent",
+  "type": "Aterm",
+  "canonical_id": "logistics_vehicle_trips_actual_duration_hrs_this_month_percent",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "logistics",
+    "entity": "vehicle_trips",
+    "measure": "actual_duration_hrs",
+    "state": "all",
+    "scope": "total",
+    "time": "this_month",
+    "unit": "percent",
+    "series": "scalar"
+  },
+  "oracle_value": 21.099999999999998,
+  "formula_line": "MEASURE_MONTH_FIXED('logistics_vehicle_trips_WMS_event', 'trip_date', 'SUM', 'actual_duration_hrs', 'this_month', [])",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_execution",
+  "created_at": "2026-08-25T09:36:16Z",
+  "usage_count": 0,
+  "source_goal": "What is the total actual duration hrs of vehicle_tripss this month?",
+  "wave": 3,
+  "operator": "MEASURE_MONTH_FIXED",
+  "verified_at": "2026-08-25T09:57:33Z"
+}

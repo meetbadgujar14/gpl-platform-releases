@@ -1,0 +1,37 @@
+{
+  "id": "aterm:supply_chain_inventory_levels_safety_stock_qty_count_by_month",
+  "type": "Aterm",
+  "canonical_id": "supply_chain_inventory_levels_safety_stock_qty_count_by_month",
+  "kind": "operator",
+  "version": 1,
+  "slots": {
+    "domain": "supply_chain",
+    "entity": "inventory_levels",
+    "measure": "safety_stock_qty",
+    "state": "all",
+    "scope": "total",
+    "time": "all_time",
+    "unit": "count",
+    "series": "by_month"
+  },
+  "oracle_value": {
+    "2025-09": 3000.0,
+    "2025-11": 5.0,
+    "2026-03": 150.0,
+    "2026-04": 250.0,
+    "2026-06": 300.0,
+    "2026-07": 120.0,
+    "2026-08": 3915.0
+  },
+  "formula_line": "MEASURE_GROUPED('supply_chain_inventory_levels_WMS_state', 'SUM', 'safety_stock_qty', None, [], None, None, None, {'date_col': 'snapshot_date', 'granularity': 'month'})",
+  "verified": true,
+  "ai_locked": true,
+  "lock_method": "combinatoric_algebraic",
+  "verify_reason": "VERIFY_grouped_oracle",
+  "created_at": "2026-08-25T09:49:48Z",
+  "usage_count": 0,
+  "source_goal": "What is the total safety stock qty of inventory_levelss by month?",
+  "wave": 8,
+  "operator": "MEASURE_GROUPED",
+  "verified_at": "2026-08-25T09:57:36Z"
+}
