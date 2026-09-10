@@ -30,6 +30,19 @@ for folder in ("data", "mock_data", "customer_runtime", "static"):
     if src.exists():
         datas.append((str(src), folder))
 
+# Explicitly include run.py and run_customer.py at the bundle root
+# These are the ASGI app entry points — uvicorn imports them by name
+for pyfile in ("run.py", "run_customer.py"):
+    src = REPO_ROOT / pyfile
+    if src.exists():
+        datas.append((str(src), "."))
+
+# Include all Python source packages so uvicorn can import them
+for pkg in ("core", "routers", "agents", "compiler", "customer", "services"):
+    src = REPO_ROOT / pkg
+    if src.exists():
+        datas.append((str(src), pkg))
+
 # wkhtmltopdf binary (must be downloaded before building — see CI workflow)
 wkhtmltopdf_src = DESKTOP_DIR / "packaging" / "wkhtmltopdf" / "wkhtmltopdf.exe"
 if wkhtmltopdf_src.exists():
@@ -92,7 +105,11 @@ hiddenimports = [
 # ── Analysis ──────────────────────────────────────────────────────────────────
 
 a = Analysis(
-    [str(DESKTOP_DIR / "packaging" / "entry.py")],
+    [
+        str(DESKTOP_DIR / "packaging" / "entry.py"),
+        str(REPO_ROOT / "run.py"),
+        str(REPO_ROOT / "run_customer.py"),
+    ],
     pathex=[str(REPO_ROOT)],
     binaries=pyside6_binaries,
     datas=datas,
