@@ -62,3 +62,12 @@ if __name__ == "__main__":
 @app.get("/ui/customer")
 async def customer_ui():
     return FileResponse(os.path.join(_STATIC, "customer", "customer.html"))
+
+
+@app.get("/version")
+async def get_version():
+    try:
+        from desktop.version import APP_VERSION
+        return {"version": APP_VERSION}
+    except ImportError:
+        return {"version": "dev"}
