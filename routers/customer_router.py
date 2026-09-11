@@ -1770,10 +1770,12 @@ async def reset(
     x_session_token: Optional[str] = Header(default=None),
     token:           Optional[str] = Query(default=None),
 ):
-    """Wipe this customer's runtime data for a fresh start."""
+    """Wipe this customer's runtime data AND remove them from customers.json for a fresh start."""
     customer_id = get_customer_id(_resolve_token(x_session_token, token))
     cpaths      = get_customer_paths(customer_id)
     cleared     = []
+
+    # 1. Wipe knowledge store, SOT data, packages
     for key in ["KNOWLEDGE_DIR", "SOT_DIR", "PACKAGES_DIR"]:
         d = cpaths[key]
         if d.exists():
@@ -1781,19 +1783,36 @@ async def reset(
             d.mkdir(parents=True, exist_ok=True)
             cleared.append(str(d))
 
-    # Wipe and fully recreate customer data dir + all subdirectories
-    from core.paths import (
-        CUSTOMER_DATA_DIR, CUSTOMER_MOCK_DATA_DIR, CUSTOMER_SEEDS_DIR,
-        CUSTOMER_DIALECTS_DIR, CUSTOMER_GOALS_DIR, CUSTOMER_ATERMS_DIR,
-    )
-    if CUSTOMER_DATA_DIR.exists():
-        shutil.rmtree(CUSTOMER_DATA_DIR)
-    for d in [
-        CUSTOMER_DATA_DIR, CUSTOMER_MOCK_DATA_DIR, CUSTOMER_SEEDS_DIR,
-        CUSTOMER_DIALECTS_DIR, CUSTOMER_GOALS_DIR, CUSTOMER_ATERMS_DIR,
-    ]:
-        d.mkdir(parents=True, exist_ok=True)
-    cleared.append(str(CUSTOMER_DATA_DIR.relative_to(CUSTOMER_RUNTIME_DIR)))
+    # 2. Wipe the entire per-customer data dir (atoms, schema, goals, aterms, etc.)
+    data_dir = cpaths["DATA_DIR"]
+    if data_dir.exists():
+        shutil.rmtree(data_dir)
+        data_dir.mkdir(parents=True, exist_ok=True)
+    cleared.append("data/")
+
+    # 3. Recreate expected subdirectories
+    for sub in ["mock_data", "seeds", "dialects", "goals", "aterms"]:
+        (data_dir / sub).mkdir(parents=True, exist_ok=True)
+
+    # 4. Remove customer from customers.json (wipes login + session)
+    _customers_file = Path(__file__).parent.parent / "customers.json"
+    try:
+        if _customers_file.exists():
+            db = json.loads(_customers_file.read_text(encoding="utf-8"))
+            # Remove the customer entry
+            db.pop(customer_id, None)
+            # Also remove any session tokens belonging to this customer
+            sessions = db.get("__sessions__", {})
+            stale_tokens = [t for t, cid in sessions.items() if cid == customer_id]
+            for t in stale_tokens:
+                sessions.pop(t, None)
+            db["__sessions__"] = sessions
+            _customers_file.write_text(
+                json.dumps(db, indent=2, ensure_ascii=False), encoding="utf-8"
+            )
+            cleared.append("customers.json")
+    except Exception as e:
+        log.warning(f"[reset] Could not update customers.json: {e}")
 
     return JSONResponse({"status": "reset", "cleared": cleared})
 

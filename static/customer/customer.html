@@ -3066,11 +3066,12 @@ function renderUploadResult(data) {
 }
 
 async function doReset() {
-  if (!confirm('Wipe all customer runtime data? This cannot be undone.')) return;
+  if (!confirm('Wipe all customer runtime data AND your account? You will be signed out. This cannot be undone.')) return;
   const banner = document.getElementById('reset-banner');
   try {
     await authFetch(API + '/api/customer/reset', { method: 'DELETE' });
-    setBanner(banner, 'ok', '✓ Reset complete. Ready for fresh upload.');
+
+    // Upload page
     document.getElementById('upload-result').style.display = 'none';
     document.getElementById('upload-log').innerHTML = '';
     document.getElementById('upload-log').classList.remove('show');
@@ -3080,9 +3081,47 @@ async function doReset() {
     debugDetectedVerticals = []; renderDebugVerticalBadges();
     renderDebugStagedTables([]);
     renderPendingMulti([]);
-    loadStatus();
+
+    // Dashboard page
+    dbContextId = null;
+    dbContexts  = [];
+    var kpiStrip = document.getElementById('db-kpis');
+    if (kpiStrip) kpiStrip.innerHTML = '<div class="db-empty db-loading" style="grid-column:1/-1">No data — upload to get started.</div>';
+    var chartsRow = document.getElementById('db-charts-row');
+    if (chartsRow) chartsRow.innerHTML = '';
+    var botRow = document.getElementById('db-bot-row');
+    if (botRow) { botRow.style.display = 'none'; botRow.innerHTML = ''; }
+    var alertsBadge = document.getElementById('db-alerts-badge');
+    if (alertsBadge) alertsBadge.style.display = 'none';
+
+    // Numbers page
+    NUM_INITED = false;
+    NUM_G = null;
+    var numStage = document.getElementById('num-stage');
+    if (numStage) numStage.innerHTML = '<div class="num-loading">No metrics yet — upload your data first.</div>';
+
+    // Query page status counters
+    var qsMetrics = document.getElementById('qs-metrics');
+    var qsLocked  = document.getElementById('qs-locked');
+    var qsSot     = document.getElementById('qs-sot');
+    var qsRate    = document.getElementById('qs-rate');
+    if (qsMetrics) qsMetrics.textContent = '0';
+    if (qsLocked)  qsLocked.textContent  = '0';
+    if (qsSot)     qsSot.textContent     = '0';
+    if (qsRate)    qsRate.textContent    = '—';
+
+    // Debug page
     if (debugInited) resetDebugCards();
-  } catch(e) { setBanner(banner, 'err', '✗ ' + e.message); }
+
+    // Account deleted — sign out and go back to login
+    setBanner(banner, 'ok', 'Reset complete. Signing you out…');
+    setTimeout(function() {
+      localStorage.removeItem('gpl_session_token');
+      sessionStorage.removeItem('gpl_session_token');
+      window.location.reload();
+    }, 1500);
+
+  } catch(e) { setBanner(banner, 'err', 'Failed: ' + e.message); }
 }
 
 // ═══════════════════════════════════════════════════════
